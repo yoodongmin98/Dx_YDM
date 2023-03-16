@@ -23,6 +23,9 @@
     <ClCompile Include="GameEngineRandom.cpp">
       <Filter>Math</Filter>
     </ClCompile>
+    <ClCompile Include="GameEngineSerializer.cpp">
+      <Filter>IO%28File%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameEngineDebug.h">
@@ -46,6 +49,9 @@
     <ClInclude Include="GameEngineTime.h" />
     <ClInclude Include="GameEngineRandom.h">
       <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngineSerializer.h">
+      <Filter>IO%28File%29</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
