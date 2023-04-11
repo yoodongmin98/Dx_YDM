@@ -1,0 +1,58 @@
+4월11일
+
+렌더링 파이프라인.
+
+mesh-> vertex, index buffer
+눈에 보이는건 mesh 
+mesh의개념>>색이 입혀지지않은 점과 면이 어떻게 이루어져있는가를 표현하는것
+(색을 칠해야하는 범위를 지정해주는 역할)
+색표현 >meterial
+
+level of detail
+vertex buffer + index buffer를 단계에따라서n개만든다
+
+hull shader>>버텍스를 쪼개기위한 표시를 새기고
+tesellator >> 쪼갠다.
+(거리에따라 매쉬의 단계를 나눠 렌더링하는구조)
+domain shader 입자처리
+Geometry shader 인스턴싱
+
+랜더링 파이프라인 순서
+inputAssembler
+VertexShader
+inputAssembler2
+
+Hullshader//안씀
+tesellator //안씀
+domain shader //안씀
+Geometry shader//안씀
+
+Rasterizer 
+Pixelshader
+outputmerger
+
+
+///////////////////////////////////////////////
+
+
+//점에대한 정보를 준비하고
+inputAssembler
+
+//로컬에 존재하는 점을 우리가 만든 행렬을 통해서 변환
+//버텍스1개가들어가는 함수
+☆VertexShader
+
+//여기에서 곱해진다.
+inputAssembler2
+
+//여기서w나누기+VIewport곱하기+화면컬링+픽셀을 해준다
+//(0과1사이로 보내기)
+//화면컬링>>화면밖으로 나간 점을 잘라주는 역할
+Rasterizer 
+
+//픽셀 한개가 인자로 들어가는 함수라고 생각하면된다
+//픽셀한개에대한 정보를 갖고 색을 얼만큼 칠해야할지를 정한다.
+☆Pixelshader
+
+//특정 RenderTarget을 하나 골라서 찍으라고 전달해준다.
+outputmerger
