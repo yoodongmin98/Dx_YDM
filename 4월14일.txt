@@ -1,0 +1,4 @@
+4월14일
+
+vertex를 만들때 position,color순서를 지켜야한다>>layout순서대로
+값이없으면 vertex에서 에러뜸
