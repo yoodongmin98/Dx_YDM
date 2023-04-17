@@ -15,7 +15,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	GameEngineCore::Start(hInstance,
 		GameCore::GameStart,
 		GameCore::GameEnd,
-		{ 2000, 0 }
+		{ 0, 0 }
 	);
 }
 

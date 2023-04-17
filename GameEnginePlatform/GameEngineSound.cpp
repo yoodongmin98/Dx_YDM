@@ -1,3 +1,4 @@
+#include "PrecompileHeader.h"
 #include "GameEngineSound.h"
 #include <GameEngineBase/GameEngineDebug.h>
 #include <GameEngineBase/GameEngineString.h>
@@ -10,7 +11,7 @@
 #ifdef _DEBUG
 #pragma comment(lib, "..\\GameEnginePlatform\\ThirdParty\\FMOD\\lib\\x64\\fmodL_vc.lib")
 #else
-#pragma comment(lib, "GameEnginePlatform\\ThirdParty\\FMOD\\lib\\x64\\fmod_vc.lib")
+#pragma comment(lib, "..\\GameEnginePlatform\\ThirdParty\\FMOD\\lib\\x64\\fmod_vc.lib")
 #endif
 
 // FMOD는 자신들의 기능을 이용할수 있게 해주는 클래스의 포인터를 주고

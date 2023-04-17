@@ -29,12 +29,12 @@ public:
 	GameEngineCore& operator=(const GameEngineCore& _Other) = delete;
 	GameEngineCore& operator=(GameEngineCore&& _Other) noexcept = delete;
 
-	static void Start(HINSTANCE _instance, std::function<void()> _Start, std::function<void()> _End, float4 _Pos = { 0, 0 }, float4 _Size = { 1280, 720 });
+	static void Start(HINSTANCE _instance, std::function<void()> _Start, std::function<void()> _End, float4 _Pos = {0, 0}, float4 _Size = { 1280, 720 });
 
 	template<typename LevelType>
 	static std::shared_ptr<LevelType> CreateLevel(const std::string_view& _Name = "")
 	{
-		std::shared_ptr<GameEngineLevel> NewLevel = std::make_shared<LevelType>();
+		std::shared_ptr<GameEngineLevel> NewLevel =  std::make_shared<LevelType>();
 
 		std::string Name = _Name.data();
 
@@ -63,6 +63,9 @@ public:
 protected:
 
 private:
+	static void CoreResourcesInit();
+	static void CoreResourcesEnd();
+
 	static void LevelInit(std::shared_ptr<GameEngineLevel> _Level);
 
 	static void EngineStart(std::function<void()> __ContentsStart);
