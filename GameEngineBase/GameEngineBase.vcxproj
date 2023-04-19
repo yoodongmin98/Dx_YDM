@@ -165,7 +165,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\GameEnginePlatform\PrecompileHeader.cpp" />
     <ClCompile Include="GameEngineDebug.cpp" />
     <ClCompile Include="GameEngineDirectory.cpp">
       <SubType>
@@ -211,7 +210,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\GameEnginePlatform\PrecompileHeader.h" />
     <ClInclude Include="GameEngineDebug.h" />
     <ClInclude Include="GameEngineDirectory.h">
       <SubType>

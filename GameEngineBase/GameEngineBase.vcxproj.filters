@@ -32,7 +32,6 @@
       <Filter>Time</Filter>
     </ClCompile>
     <ClCompile Include="PrecompileHeader.cpp" />
-    <ClCompile Include="..\GameEnginePlatform\PrecompileHeader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameEngineDebug.h">
@@ -66,7 +65,6 @@
       <Filter>Time</Filter>
     </ClInclude>
     <ClInclude Include="PrecompileHeader.h" />
-    <ClInclude Include="..\GameEnginePlatform\PrecompileHeader.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Debug">
