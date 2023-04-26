@@ -16,8 +16,14 @@
     <ClCompile Include="Chain.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
+    <ClCompile Include="LetterBase.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\LetterBase</Filter>
+    </ClCompile>
     <ClCompile Include="C_0Letter_T.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
+      <Filter>Chapter0_MainMenu\Actor\Letter\AllLetter</Filter>
+    </ClCompile>
+    <ClCompile Include="AlphaCircle.cpp">
+      <Filter>CommonUI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,8 +42,14 @@
     <ClInclude Include="Chain.h">
       <Filter>CommonUI</Filter>
     </ClInclude>
+    <ClInclude Include="LetterBase.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\LetterBase</Filter>
+    </ClInclude>
     <ClInclude Include="C_0Letter_T.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
+      <Filter>Chapter0_MainMenu\Actor\Letter\AllLetter</Filter>
+    </ClInclude>
+    <ClInclude Include="AlphaCircle.h">
+      <Filter>CommonUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +82,12 @@
     </Filter>
     <Filter Include="Chapter0_MainMenu\Actor\Letter">
       <UniqueIdentifier>{96d1166d-5a38-44ac-8b4a-53ae5921a4f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\Letter\LetterBase">
+      <UniqueIdentifier>{f08d63eb-6546-4111-9ec1-bce96660e041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\Letter\AllLetter">
+      <UniqueIdentifier>{5bb68ce9-17af-4e0d-a7cb-488395cb1abf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

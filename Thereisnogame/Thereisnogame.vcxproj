@@ -163,6 +163,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AlphaCircle.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="ContentsCore.h">
       <SubType>
@@ -170,10 +171,12 @@
     </ClInclude>
     <ClInclude Include="C_0BackGround.h" />
     <ClInclude Include="C_0Letter_T.h" />
+    <ClInclude Include="LetterBase.h" />
     <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="PrecompileHeader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlphaCircle.cpp" />
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="ContentsCore.cpp">
       <SubType>
@@ -181,6 +184,7 @@
     </ClCompile>
     <ClCompile Include="C_0BackGround.cpp" />
     <ClCompile Include="C_0Letter_T.cpp" />
+    <ClCompile Include="LetterBase.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="PrecompileHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

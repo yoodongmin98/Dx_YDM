@@ -18,20 +18,26 @@ C_Letter_T::~C_Letter_T()
 {
 }
 
-
-
-
 void C_Letter_T::Start()
 {
-	Letter_T = CreateComponent<GameEngineSpriteRenderer>();
-	Letter_T->SetTexture("Letter01.png");
-	Letter_T->GetTransform()->SetLocalScale({ 140.0f, 458.0f,1.0f });
-	Letter_T->GetTransform()->SetLocalPosition({ 0.0f,600.0f,0.0f });
+	Init(Letter_T, "Letter01.png", { 140,458,1 }, { -200,200,0 });
+	Init(Letter_H, "Letter02.png", { 140,458,1 }, { -150,200,0 });
+	Init(Letter_E, "Letter03.png", { 140,458,1 }, { -100,200,0 });
+	Init(Letter_R, "Letter04.png", { 140,458,1 }, { -50,200,0 });
+	Init(Letter_e, "Letter05.png", { 140,458,1 }, {  0,200,0 });
+	Init(Letter_I, "Letter06.png", { 140,458,1 }, { 50,200,0 });
+	Init(Letter_S, "Letter07.png", { 140,458,1 }, { 100,200,0 });
+	/*Init(Letter_N, "Letter08.png", { 140,458,1 }, { 150,200,0 });
+	Init(Letter_O, "Letter09.png", { 140,458,1 }, { 200,200,0 });
+	Init(Letter_G, "Letter010.png", { 140,458,1 }, { -150,200,0 });
+	Init(Letter_A, "Letter11.png", { 140,458,1 }, { -150,200,0 });
+	Init(Letter_M, "Letter12.png", { 140,458,1 }, { -150,200,0 });
+	Init(Letter_E2, "Letter13.png", { 140,458,1 }, { -150,200,0 });*/
 }
 
 void C_Letter_T::Update(float _DeltaTime)
 {
-	TestTime += _DeltaTime;
+	
 	
 
 
