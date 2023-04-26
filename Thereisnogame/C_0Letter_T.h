@@ -24,6 +24,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Letter_T;
 	
+	float TestTime = 0.0f;
 
 };
 

@@ -17,7 +17,7 @@
       <Filter>CommonUI</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_T.cpp">
-      <Filter>Chapter0_MainMenu\Actor</Filter>
+      <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,7 +37,7 @@
       <Filter>CommonUI</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_T.h">
-      <Filter>Chapter0_MainMenu\Actor</Filter>
+      <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +67,9 @@
     </Filter>
     <Filter Include="CommonUI">
       <UniqueIdentifier>{2e5e51e2-2dd0-4f04-81b7-8d7ad33f3c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\Letter">
+      <UniqueIdentifier>{96d1166d-5a38-44ac-8b4a-53ae5921a4f6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
