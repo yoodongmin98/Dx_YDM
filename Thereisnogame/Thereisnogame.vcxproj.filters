@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ContentsCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="PrecompileHeader.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuLevel.cpp">
+      <Filter>Chapter0_MainMenu\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0BackGround.cpp">
+      <Filter>Chapter0_MainMenu\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Chain.cpp">
+      <Filter>CommonUI</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_T.cpp">
+      <Filter>Chapter0_MainMenu\Actor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ContentsCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="PrecompileHeader.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuLevel.h">
+      <Filter>Chapter0_MainMenu\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0BackGround.h">
+      <Filter>Chapter0_MainMenu\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Chain.h">
+      <Filter>CommonUI</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_T.h">
+      <Filter>Chapter0_MainMenu\Actor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{b7b02c0f-43ab-4d10-8e35-019d887e1390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu">
+      <UniqueIdentifier>{cb46ad1a-422b-4787-8c23-f8a2c834579e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1_Play within a play">
+      <UniqueIdentifier>{81fb460f-8f12-4cd6-a645-7b095595a39d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.5_Program Loading">
+      <UniqueIdentifier>{d050acc6-b76c-4a3c-9fe0-cf3095bf48ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2_Fake Program">
+      <UniqueIdentifier>{0d1587da-ee20-4381-8476-d7820d86efcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor Base">
+      <UniqueIdentifier>{ac088f94-cd95-4886-a858-94f9a7d1a8b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Level">
+      <UniqueIdentifier>{857133b8-212c-4f02-9ec2-2266fe1edb27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor">
+      <UniqueIdentifier>{a81ac9fe-7dae-43a3-8669-2524a87f3b3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommonUI">
+      <UniqueIdentifier>{2e5e51e2-2dd0-4f04-81b7-8d7ad33f3c60}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
