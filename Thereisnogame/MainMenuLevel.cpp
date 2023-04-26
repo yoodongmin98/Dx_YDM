@@ -10,8 +10,14 @@
 #include <GameEngineCore/GameEngineVideo.h>
 
 //Actor
+
+
+
+
+//Actor
 #include "C_0BackGround.h"
 #include "C_0Letter_T.h"
+#include "AlphaCircle.h"
 
 MainMenuLevel::MainMenuLevel()
 {
@@ -45,8 +51,13 @@ void MainMenuLevel::Start()
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
-	CreateActor<C_0BackGround>();
-	CreateActor<C_Letter_T>();
+	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
+	{
+		CreateActor<C_0BackGround>();
+		CreateActor<C_Letter_T>();
+		CreateActor<AlphaCircle>();
+	}
+	
 
 
 	if (false == GameEngineInput::IsKey("PlayerMoveLeft"))
