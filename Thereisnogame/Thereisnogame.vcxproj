@@ -152,15 +152,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="GameCore.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayLevel.h" />
-    <ClInclude Include="TitleLevel.h" />
+    <ClInclude Include="MenuLevel.h" />
+    <ClInclude Include="PrecompileHeader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameCore.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayLevel.cpp" />
-    <ClCompile Include="TitleLevel.cpp" />
+    <ClCompile Include="MenuLevel.h.cpp" />
+    <ClCompile Include="PrecompileHeader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
