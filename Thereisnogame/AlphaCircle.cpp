@@ -32,6 +32,6 @@ void AlphaCircle::Start()
 }
 void AlphaCircle::Update(float _DeltaTime)
 {
-
+	//
 
 }
