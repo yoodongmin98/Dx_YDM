@@ -37,6 +37,9 @@
     <ClCompile Include="Fake Program Level.cpp">
       <Filter>CHapter2_Fake Program\Level</Filter>
     </ClCompile>
+    <ClCompile Include="Arrow.cpp">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -74,6 +77,9 @@
     </ClInclude>
     <ClInclude Include="Fake Program Level.h">
       <Filter>CHapter2_Fake Program\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow.h">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

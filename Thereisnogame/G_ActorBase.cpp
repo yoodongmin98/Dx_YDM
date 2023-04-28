@@ -30,17 +30,20 @@ void G_ActorBase::Update(float _DeltaTime)
 
 void G_ActorBase::Repeat(float _MoveValue,float _DeltaTime)
 {
-	ReverseTime += _DeltaTime;
-	if (ReverseTime < 1.0f)
+	if (false == DownCheck && false == UpCheck)
 	{
-		GetTransform()->AddLocalPosition({ _MoveValue,0,0 });
-	}
-	if (ReverseTime > 1.0f)
-	{
-		GetTransform()->AddLocalPosition({ -_MoveValue,0,0 });
-		if (ReverseTime > 2.0f)
+		ReverseTime += _DeltaTime;
+		if (ReverseTime < 1.0f)
 		{
-			ReverseTime = 0.0f;
+			GetTransform()->AddLocalPosition({ _MoveValue,0,0 });
+		}
+		if (ReverseTime > 1.0f)
+		{
+			GetTransform()->AddLocalPosition({ -_MoveValue,0,0 });
+			if (ReverseTime > 2.0f)
+			{
+				ReverseTime = 0.0f;
+			}
 		}
 	}
 }
@@ -59,6 +62,9 @@ void G_ActorBase::Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const 
 void G_ActorBase::Down(float _EndYvalue,float _DeltaTime)
 {
 	DownTime += _DeltaTime;
-	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), {0,_EndYvalue}, _DeltaTime));
+	if (true == DownCheck)
+	{
+		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,_EndYvalue }, _DeltaTime));
+	}
 }
 

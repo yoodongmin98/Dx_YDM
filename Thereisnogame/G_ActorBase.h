@@ -23,12 +23,15 @@ public:
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
-	
+
 
 private:
 	float ReverseTime = 0.0f;
 	float DownTime = 0.0f;
 
 	float4 EndPos = float4::Zero;
-};
 
+
+	bool DownCheck = true;
+	bool UpCheck = true;
+};

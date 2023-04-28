@@ -14,6 +14,7 @@
 #include "C_0Letter_T.h"
 #include "AlphaCircle.h"
 #include "SelectBox.h"
+#include "Arrow.h"
 
 MainMenuLevel::MainMenuLevel()
 {
@@ -52,6 +53,7 @@ void MainMenuLevel::Start()
 		CreateActor<BackCurtain>();
 		CreateActor<C_Letter_T>();
 		CreateActor<SelectBox>();
+		CreateActor<Arrow>();
 		CreateActor<AlphaCircle>();
 	}
 	
