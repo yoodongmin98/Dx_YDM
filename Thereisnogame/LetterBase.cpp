@@ -28,7 +28,7 @@ void LetterBase::Update(float _DeltaTime)
 }
 
 
-void LetterBase::LetterRepeat(float _MoveValue,float _DeltaTime)
+void LetterBase::Repeat(float _MoveValue,float _DeltaTime)
 {
 	//if (true == DownCheck)
 	{
@@ -59,13 +59,9 @@ void LetterBase::Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const s
 	_Render->GetTransform()->SetLocalPosition(_Position);
 }
 
-//void LetterBase::LetterDown(float _EndYvalue,float _DeltaTime)
-//{
-//	LetterDownTime += _DeltaTime;
-//	SetPos(float4::LerpClamp(GetPos(), {0,_EndYvalue }, _DeltaTime));
-//	if (LetterDownTime > 1.0f)
-//	{
-//		DownCheck = true;
-//	}
-//}
+void LetterBase::Down(float _EndYvalue,float _DeltaTime)
+{
+	DownTime += _DeltaTime;
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), {0,_EndYvalue}, _DeltaTime));
+}
 

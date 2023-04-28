@@ -15,7 +15,7 @@
 
 
 //Actor
-#include "C_0BackGround.h"
+#include "C_0BackCurtain.h"
 #include "C_0Letter_T.h"
 #include "AlphaCircle.h"
 
@@ -53,7 +53,7 @@ void MainMenuLevel::Start()
 
 	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
-		CreateActor<C_0BackGround>();
+		CreateActor<C_0BackCurtain>();
 		CreateActor<C_Letter_T>();
 		CreateActor<AlphaCircle>();
 	}

@@ -169,11 +169,12 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="C_0BackGround.h" />
+    <ClInclude Include="C_0BackCurtain.h" />
     <ClInclude Include="C_0Letter_T.h" />
     <ClInclude Include="LetterBase.h" />
     <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="PrecompileHeader.h" />
+    <ClInclude Include="SelectBox.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AlphaCircle.cpp" />
@@ -182,7 +183,7 @@
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="C_0BackGround.cpp" />
+    <ClCompile Include="C_0BackCurtain.cpp" />
     <ClCompile Include="C_0Letter_T.cpp" />
     <ClCompile Include="LetterBase.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
@@ -192,6 +193,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SelectBox.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

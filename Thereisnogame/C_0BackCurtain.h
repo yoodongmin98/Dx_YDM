@@ -2,18 +2,18 @@
 #include <GameEngineCore/GameEngineActor.h>
 
 // Ό³Έν :
-class C_0BackGround : public GameEngineActor
+class C_0BackCurtain : public GameEngineActor
 {
 public:
 	// constrcuter destructer
-	C_0BackGround();
-	~C_0BackGround();
+	C_0BackCurtain();
+	~C_0BackCurtain();
 
 	// delete Function
-	C_0BackGround(const C_0BackGround& _Other) = delete;
-	C_0BackGround(C_0BackGround&& _Other) noexcept = delete;
-	C_0BackGround& operator=(const C_0BackGround& _Other) = delete;
-	C_0BackGround& operator=(C_0BackGround&& _Other) noexcept = delete;
+	C_0BackCurtain(const C_0BackCurtain& _Other) = delete;
+	C_0BackCurtain(C_0BackCurtain&& _Other) noexcept = delete;
+	C_0BackCurtain& operator=(const C_0BackCurtain& _Other) = delete;
+	C_0BackCurtain& operator=(C_0BackCurtain&& _Other) noexcept = delete;
 
 protected:
 	void Start();
