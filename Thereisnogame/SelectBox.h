@@ -1,8 +1,8 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
-
+#include "G_ActorBase.h"
 // Ό³Έν :
-class SelectBox : public GameEngineActor
+class SelectBox : public G_ActorBase
 {
 public:
 	// constrcuter destructer

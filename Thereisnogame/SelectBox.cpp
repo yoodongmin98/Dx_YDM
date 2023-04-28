@@ -20,8 +20,9 @@ SelectBox::~SelectBox()
 
 void SelectBox::Start()
 {
-	
-
+	Init(Box_1, "MenuPrincipal_Panel_Jeu.png", { 312,276,1 }, { -330,-270,0 });
+	Init(Box_2, "MenuPrincipal_Panel_Options.png", {315,246,1 }, { 0,-280,0 });
+	Init(Box_3, "MenuPrincipal_Panel_Quit.png", { 315,300,1 }, { 330,-250,0 });
 }
 
 void SelectBox::Update(float _DeltaTime)

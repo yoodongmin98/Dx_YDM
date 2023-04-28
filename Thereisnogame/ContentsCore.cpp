@@ -6,7 +6,9 @@
 
 //Level
 #include "MainMenuLevel.h"
-
+#include "Program Loading Level.h"
+#include "Play within a play Level.h"
+#include "Fake Program Level.h"
 
 ContentsCore::ContentsCore() 
 {
@@ -27,6 +29,10 @@ void ContentsCore::GameStart()
 {
 	new int();
 	GameEngineCore::CreateLevel<MainMenuLevel>();
+	GameEngineCore::CreateLevel<PlaywithinaplayLevel>();
+	GameEngineCore::CreateLevel<ProgramLoadingLevel>();
+	GameEngineCore::CreateLevel<FakeProgramLevel>();
+
 	GameEngineCore::ChangeLevel("MainMenuLevel");
 }
 

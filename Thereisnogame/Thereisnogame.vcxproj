@@ -169,11 +169,14 @@
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="C_0BackCurtain.h" />
+    <ClInclude Include="BackCurtain.h" />
     <ClInclude Include="C_0Letter_T.h" />
-    <ClInclude Include="LetterBase.h" />
+    <ClInclude Include="Fake Program Level.h" />
+    <ClInclude Include="G_ActorBase.h" />
     <ClInclude Include="MainMenuLevel.h" />
+    <ClInclude Include="Play within a play Level.h" />
     <ClInclude Include="PrecompileHeader.h" />
+    <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="SelectBox.h" />
   </ItemGroup>
   <ItemGroup>
@@ -183,16 +186,19 @@
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="C_0BackCurtain.cpp" />
+    <ClCompile Include="BackCurtain.cpp" />
     <ClCompile Include="C_0Letter_T.cpp" />
-    <ClCompile Include="LetterBase.cpp" />
+    <ClCompile Include="Fake Program Level.cpp" />
+    <ClCompile Include="G_ActorBase.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
+    <ClCompile Include="Play within a play Level.cpp" />
     <ClCompile Include="PrecompileHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="SelectBox.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

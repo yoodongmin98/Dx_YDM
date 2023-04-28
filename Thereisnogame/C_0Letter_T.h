@@ -1,9 +1,9 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
-#include "LetterBase.h"
+#include "G_ActorBase.h"
 
 // Ό³Έν :
-class C_Letter_T : public LetterBase
+class C_Letter_T : public G_ActorBase
 {
 public:
 	// constrcuter destructer

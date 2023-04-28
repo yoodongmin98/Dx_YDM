@@ -3,18 +3,18 @@
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 
 
-class LetterBase : public GameEngineActor
+class G_ActorBase : public GameEngineActor
 {
 public:
 
-	LetterBase();
-	~LetterBase();
+	G_ActorBase();
+	~G_ActorBase();
 
 
-	LetterBase(const LetterBase& _Other) = delete;
-	LetterBase(LetterBase&& _Other) noexcept = delete;
-	LetterBase& operator=(const LetterBase& _Other) = delete;
-	LetterBase& operator=(LetterBase&& _Other) noexcept = delete;
+	G_ActorBase(const G_ActorBase& _Other) = delete;
+	G_ActorBase(G_ActorBase&& _Other) noexcept = delete;
+	G_ActorBase& operator=(const G_ActorBase& _Other) = delete;
+	G_ActorBase& operator=(G_ActorBase&& _Other) noexcept = delete;
 
 	void Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const std::string_view& _ImageName, float4 _Scale, float4 _Position);
 	void Repeat(float _MoveValue, float _DeltaTime);

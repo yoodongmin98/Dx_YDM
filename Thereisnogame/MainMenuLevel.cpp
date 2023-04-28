@@ -7,17 +7,13 @@
 //Core
 #include <GameEngineCore/GameEngineCamera.h>
 #include <GameEngineCore/GameEngineTexture.h>
-#include <GameEngineCore/GameEngineVideo.h>
-
-//Actor
-
-
 
 
 //Actor
-#include "C_0BackCurtain.h"
+#include "BackCurtain.h"
 #include "C_0Letter_T.h"
 #include "AlphaCircle.h"
+#include "SelectBox.h"
 
 MainMenuLevel::MainMenuLevel()
 {
@@ -53,8 +49,9 @@ void MainMenuLevel::Start()
 
 	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
-		CreateActor<C_0BackCurtain>();
+		CreateActor<BackCurtain>();
 		CreateActor<C_Letter_T>();
+		CreateActor<SelectBox>();
 		CreateActor<AlphaCircle>();
 	}
 	

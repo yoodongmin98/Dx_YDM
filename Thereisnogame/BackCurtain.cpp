@@ -1,5 +1,5 @@
 #include "PrecompileHeader.h"
-#include "C_0BackCurtain.h"
+#include "BackCurtain.h"
 
 //PlatForm
 #include <GameEnginePlatform/GameEngineInput.h>
@@ -10,18 +10,18 @@
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 
-C_0BackCurtain::C_0BackCurtain()
+BackCurtain::BackCurtain()
 {
 }
 
-C_0BackCurtain::~C_0BackCurtain()
+BackCurtain::~BackCurtain()
 {
 }
 
 
 
 
-void C_0BackCurtain::Start()
+void BackCurtain::Start()
 {
 	LeftCurtain = CreateComponent<GameEngineSpriteRenderer>();
 	LeftCurtain->SetTexture("Rideaux.png");
@@ -37,12 +37,21 @@ void C_0BackCurtain::Start()
 	
 }
 
-void C_0BackCurtain::Update(float _DeltaTime)
+void BackCurtain::Update(float _DeltaTime)
 {
 	
 }
 
-void C_0BackCurtain::Render(float _Delta)
+void BackCurtain::Render(float _Delta)
 {
 	
 };
+
+void BackCurtain::CurtainOpen(int _Speed)
+{
+
+}
+void BackCurtain::CurtainClose(int _Speed)
+{
+
+}

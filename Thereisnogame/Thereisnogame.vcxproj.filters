@@ -10,9 +10,6 @@
     <ClCompile Include="MainMenuLevel.cpp">
       <Filter>Chapter0_MainMenu\Level</Filter>
     </ClCompile>
-    <ClCompile Include="C_0BackCurtain.cpp">
-      <Filter>Chapter0_MainMenu\Actor</Filter>
-    </ClCompile>
     <ClCompile Include="Chain.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
@@ -22,11 +19,23 @@
     <ClCompile Include="SelectBox.cpp">
       <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
     </ClCompile>
-    <ClCompile Include="LetterBase.cpp">
+    <ClCompile Include="G_ActorBase.cpp">
       <Filter>Actor Base</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_T.cpp">
       <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
+    </ClCompile>
+    <ClCompile Include="BackCurtain.cpp">
+      <Filter>CommonUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Program Loading Level.cpp">
+      <Filter>Chapter1.5_Program Loading\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Play within a play Level.cpp">
+      <Filter>Chapter1_Play within a play\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="Fake Program Level.cpp">
+      <Filter>CHapter2_Fake Program\Level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,9 +48,6 @@
     <ClInclude Include="MainMenuLevel.h">
       <Filter>Chapter0_MainMenu\Level</Filter>
     </ClInclude>
-    <ClInclude Include="C_0BackCurtain.h">
-      <Filter>Chapter0_MainMenu\Actor</Filter>
-    </ClInclude>
     <ClInclude Include="Chain.h">
       <Filter>CommonUI</Filter>
     </ClInclude>
@@ -51,11 +57,23 @@
     <ClInclude Include="SelectBox.h">
       <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
     </ClInclude>
-    <ClInclude Include="LetterBase.h">
+    <ClInclude Include="G_ActorBase.h">
       <Filter>Actor Base</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_T.h">
       <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
+    </ClInclude>
+    <ClInclude Include="BackCurtain.h">
+      <Filter>CommonUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Program Loading Level.h">
+      <Filter>Chapter1.5_Program Loading\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Play within a play Level.h">
+      <Filter>Chapter1_Play within a play\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Fake Program Level.h">
+      <Filter>CHapter2_Fake Program\Level</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +109,15 @@
     </Filter>
     <Filter Include="Chapter0_MainMenu\Actor\SelectBox">
       <UniqueIdentifier>{f05b8f29-b651-4ebf-ab8d-028b3b1cb7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.5_Program Loading\Level">
+      <UniqueIdentifier>{5dc152a1-daef-46bb-b47a-ffb51159f739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1_Play within a play\Level">
+      <UniqueIdentifier>{7919d00b-24e4-41c5-8f3c-62bb4e95d26d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2_Fake Program\Level">
+      <UniqueIdentifier>{a9d32771-3e43-4815-9495-bfd57d377e06}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
