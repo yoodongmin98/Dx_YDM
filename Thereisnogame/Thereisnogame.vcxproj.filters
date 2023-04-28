@@ -92,9 +92,6 @@
     <Filter Include="Chapter1_Play within a play">
       <UniqueIdentifier>{81fb460f-8f12-4cd6-a645-7b095595a39d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Chapter1.5_Program Loading">
-      <UniqueIdentifier>{d050acc6-b76c-4a3c-9fe0-cf3095bf48ad}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CHapter2_Fake Program">
       <UniqueIdentifier>{0d1587da-ee20-4381-8476-d7820d86efcf}</UniqueIdentifier>
     </Filter>
@@ -116,14 +113,17 @@
     <Filter Include="Chapter0_MainMenu\Actor\SelectBox">
       <UniqueIdentifier>{f05b8f29-b651-4ebf-ab8d-028b3b1cb7b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Chapter1.5_Program Loading\Level">
-      <UniqueIdentifier>{5dc152a1-daef-46bb-b47a-ffb51159f739}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Chapter1_Play within a play\Level">
       <UniqueIdentifier>{7919d00b-24e4-41c5-8f3c-62bb4e95d26d}</UniqueIdentifier>
     </Filter>
     <Filter Include="CHapter2_Fake Program\Level">
       <UniqueIdentifier>{a9d32771-3e43-4815-9495-bfd57d377e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.5_Program Loading">
+      <UniqueIdentifier>{d050acc6-b76c-4a3c-9fe0-cf3095bf48ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.5_Program Loading\Level">
+      <UniqueIdentifier>{5dc152a1-daef-46bb-b47a-ffb51159f739}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
