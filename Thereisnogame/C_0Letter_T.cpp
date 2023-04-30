@@ -38,6 +38,7 @@ void C_Letter_T::Start()
 
 	Init(Letter_I, "Letter06.png", { 88,434,1 }, { 170,610,-10 });
 	Init(Letter_S, "Letter07.png", { 103,436,1 }, { 200,590,-10 });
+	
 }
 
 void C_Letter_T::Update(float _DeltaTime)
