@@ -15,7 +15,8 @@ public:
 	MainMenuLevel& operator=(const MainMenuLevel& _Other) = delete;
 	MainMenuLevel& operator=(MainMenuLevel&& _Other) noexcept = delete;
 
-
+	void CreateMainMenuArrow();
+	
 
 protected:
 	void Start() override;

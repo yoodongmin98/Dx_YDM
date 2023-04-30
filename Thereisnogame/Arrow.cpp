@@ -20,24 +20,33 @@ Arrow::~Arrow()
 
 void Arrow::Start()
 {
-	Init(Arrow_LightOn, "ArrowLightOn.png", { 241,129,1 }, { 250,40,-10 });
-	Init(Arrow_LightOff, "ArrowLightOff.png", { 188,73,1 }, { 250,0,-10 });
-	GetTransform()->AddLocalRotation({ 0,0,-50 });
+
+	Arrow_LightOn = CreateComponent<GameEngineSpriteRenderer>();
+	Arrow_LightOn->SetTexture("ArrowLightOn.png");
+	Arrow_LightOn->GetTransform()->SetLocalScale({ 241,129,1 });
+	Arrow_LightOn->GetTransform()->SetLocalPosition({ 0,5,-10 });
+	Arrow_LightOn->Off();
+
+	Arrow_LightOff = CreateComponent<GameEngineSpriteRenderer>();
+	Arrow_LightOff->SetTexture("ArrowLightOff.png");
+	Arrow_LightOff->GetTransform()->SetLocalScale({ 188,73,1 });
+	Arrow_LightOff->GetTransform()->SetLocalPosition({ 5,0,-10 });
+	Arrow_LightOff->On();
 }
 void Arrow::Update(float _DeltaTime)
 {
 	ArrowTestTime += _DeltaTime;
-	/*if (ArrowTestTime > 1.0f)
+	if (ArrowTestTime > 1.5f)
 	{
-		Arrow_LightOff->Off();
 		Arrow_LightOn->On();
+		Arrow_LightOff->Off();
 	}
 	if (ArrowTestTime > 2.0f)
 	{
-		Arrow_LightOff->On();
 		Arrow_LightOn->Off();
+		Arrow_LightOff->On();
 		ArrowTestTime = 0.0f;
-	}*/
+	}
 	
 }
 

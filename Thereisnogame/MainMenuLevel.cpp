@@ -23,7 +23,29 @@ MainMenuLevel::MainMenuLevel()
 MainMenuLevel::~MainMenuLevel()
 {
 }
+void MainMenuLevel::CreateMainMenuArrow()
+{
+	std::shared_ptr<Arrow> Arrow1 = CreateActor<Arrow>();
+	Arrow1->GetTransform()->SetLocalPosition({ 140 ,-205,0 });
+	Arrow1->GetTransform()->SetLocalRotation({ 0, 0, -40 });
 
+	std::shared_ptr<Arrow> Arrow2 = CreateActor<Arrow>();
+	Arrow2->GetTransform()->SetLocalPosition({ 230 ,-155,0 });
+	Arrow2->GetTransform()->SetLocalRotation({ 0, 0, -85 });
+
+	std::shared_ptr<Arrow> Arrow3 = CreateActor<Arrow>();
+	Arrow3->GetTransform()->SetLocalPosition({ 440 ,-160,0 });
+	Arrow3->GetTransform()->SetLocalRotation({ 0, 0, -120 });
+
+	std::shared_ptr<Arrow> Arrow4 = CreateActor<Arrow>();
+	Arrow4->GetTransform()->SetLocalPosition({ 500 ,-220,0 });
+	Arrow4->GetTransform()->SetLocalRotation({ 0, 0, -150 });
+
+	std::shared_ptr<Arrow> Arrow5 = CreateActor<Arrow>();
+	Arrow5->GetTransform()->SetLocalPosition({ 500 ,-360,0 });
+	Arrow5->GetTransform()->SetLocalRotation({ 0, 0, -200 });
+
+}
 
 
 void MainMenuLevel::Start()
@@ -53,7 +75,7 @@ void MainMenuLevel::Start()
 		CreateActor<BackCurtain>();
 		CreateActor<C_Letter_T>();
 		CreateActor<SelectBox>();
-		CreateActor<Arrow>();
+		CreateMainMenuArrow();
 		CreateActor<AlphaCircle>();
 	}
 	
@@ -180,3 +202,4 @@ void MainMenuLevel::Update(float _DeltaTime)
 		GetTransform()->AddLocalScale({ -ScaleSpeed * _DeltaTime, 0.0f, 0.0f });
 	}
 }
+

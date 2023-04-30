@@ -15,6 +15,10 @@ public:
 	Arrow& operator=(const Arrow& _Other) = delete;
 	Arrow& operator=(Arrow&& _Other) noexcept = delete;
 
+	void SetArrowRotation(float _Value)
+	{
+		RotationValue = _Value;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -25,7 +29,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Arrow_LightOn;
 	std::shared_ptr<class GameEngineSpriteRenderer> Arrow_LightOff;
 
-
+	float RotationValue = 0.0f;
 	float ArrowTestTime=0.0f;
 };
 

@@ -30,8 +30,8 @@ void G_ActorBase::Update(float _DeltaTime)
 
 void G_ActorBase::Repeat(float _MoveValue,float _DeltaTime)
 {
-	if (false == DownCheck && false == UpCheck)
-	{
+	/*if (false == DownCheck && false == UpCheck)
+	{*/
 		ReverseTime += _DeltaTime;
 		if (ReverseTime < 1.0f)
 		{
@@ -45,7 +45,7 @@ void G_ActorBase::Repeat(float _MoveValue,float _DeltaTime)
 				ReverseTime = 0.0f;
 			}
 		}
-	}
+	//}
 }
 
 void G_ActorBase::Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const std::string_view& _ImageName,float4 _Scale, float4 _Position)

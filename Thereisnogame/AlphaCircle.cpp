@@ -27,7 +27,7 @@ void AlphaCircle::Start()
 	AlphaCircles = CreateComponent<GameEngineSpriteRenderer>();
 	AlphaCircles->SetTexture("IndiaTitleVignette.png");
 	AlphaCircles->GetTransform()->SetLocalScale({ 1281.0f, 720.0f , 1.0f });
-	
+	AlphaCircles->GetTransform()->SetLocalPosition({ 0,0,-20 });
 
 }
 void AlphaCircle::Update(float _DeltaTime)
