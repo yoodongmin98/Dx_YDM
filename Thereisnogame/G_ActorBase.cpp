@@ -68,3 +68,12 @@ void G_ActorBase::Down(float _EndYvalue,float _DeltaTime)
 	}
 }
 
+void G_ActorBase::Up(float _EndYvalue, float _DeltaTime)
+{
+	Uptime += _DeltaTime;
+	if (true == DownCheck)
+	{
+		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,_EndYvalue }, _DeltaTime));
+	}
+}
+

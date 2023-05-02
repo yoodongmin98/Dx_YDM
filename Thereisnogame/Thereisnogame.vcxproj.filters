@@ -76,6 +76,9 @@
     <ClCompile Include="C_0Letter_e2.cpp">
       <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
+    <ClCompile Include="MainMenuLevelState.cpp">
+      <Filter>Chapter0_MainMenu\Level</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -202,6 +205,12 @@
     </Filter>
     <Filter Include="Chapter0_MainMenu\Actor\Letter\No game">
       <UniqueIdentifier>{5e8b31f4-5bc1-4fdb-a8b7-ac2ea91cf3ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\Flag">
+      <UniqueIdentifier>{336a1a97-912f-41b9-bc14-467575274a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\Panel">
+      <UniqueIdentifier>{cce30c6e-e22e-445e-a612-33c5f7f9d203}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

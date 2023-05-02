@@ -217,6 +217,7 @@
     <ClCompile Include="Fake Program Level.cpp" />
     <ClCompile Include="G_ActorBase.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
+    <ClCompile Include="MainMenuLevelState.cpp" />
     <ClCompile Include="Play within a play Level.cpp" />
     <ClCompile Include="PrecompileHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
