@@ -14,6 +14,7 @@
 #include "AlphaCircle.h"
 #include "SelectBox.h"
 #include "Arrow.h"
+#include "Panel_Continue.h"
 
 //Letter
 #include "C_0Letter_T.h"
@@ -64,7 +65,8 @@ void MainMenuLevel::Start()
 	{
 		CreateActor<BackCurtain>();
 		CreateLetter();
-		CreateActor<SelectBox>();
+		CreateActor<Panel_Continue>();
+		//CreateActor<SelectBox>();
 		CreateMainMenuArrow();
 		CreateActor<AlphaCircle>();
 	}
@@ -73,7 +75,9 @@ void MainMenuLevel::Start()
 
 	if (false == GameEngineInput::IsKey("PlayerMoveLeft"))
 	{
-		GameEngineInput::CreateKey("CameraSet", '0');
+		GameEngineInput::CreateKey("CameraSet", '0'); //¾ËÆÄºª
+		GameEngineInput::CreateKey("PanelTestkey", '1');
+		GameEngineInput::CreateKey("PanelTestkey2", '2');
 	}
 }
 

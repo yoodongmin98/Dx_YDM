@@ -20,7 +20,6 @@ public:
 	void Repeat(float _MoveValue, float _DeltaTime);
 	void Down(float _EndYvalue, float _DeltaTime);
 	void Up(float _EndYvalue, float _DeltaTime);
-
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

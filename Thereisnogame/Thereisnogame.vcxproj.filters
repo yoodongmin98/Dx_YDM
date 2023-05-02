@@ -79,6 +79,9 @@
     <ClCompile Include="MainMenuLevelState.cpp">
       <Filter>Chapter0_MainMenu\Level</Filter>
     </ClCompile>
+    <ClCompile Include="Panel_Continue.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -155,6 +158,9 @@
     </ClInclude>
     <ClInclude Include="C_0Letter_e2.h">
       <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel_Continue.h">
+      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
