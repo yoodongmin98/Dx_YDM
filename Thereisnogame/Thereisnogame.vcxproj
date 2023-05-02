@@ -171,6 +171,18 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="BackCurtain.h" />
+    <ClInclude Include="C_0Letter_A.h" />
+    <ClInclude Include="C_0Letter_E.h" />
+    <ClInclude Include="C_0Letter_e2.h" />
+    <ClInclude Include="C_0Letter_G.h" />
+    <ClInclude Include="C_0Letter_H .h" />
+    <ClInclude Include="C_0Letter_I.h" />
+    <ClInclude Include="C_0Letter_M.h" />
+    <ClInclude Include="C_0Letter_N.h" />
+    <ClInclude Include="C_0Letter_O.h" />
+    <ClInclude Include="C_0Letter_R.h" />
+    <ClInclude Include="C_0Letter_S.h" />
+    <ClInclude Include="C_0Letter_sE.h" />
     <ClInclude Include="C_0Letter_T.h" />
     <ClInclude Include="Fake Program Level.h" />
     <ClInclude Include="G_ActorBase.h" />
@@ -189,6 +201,18 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="BackCurtain.cpp" />
+    <ClCompile Include="C_0Letter_A.cpp" />
+    <ClCompile Include="C_0Letter_E.cpp" />
+    <ClCompile Include="C_0Letter_e2.cpp" />
+    <ClCompile Include="C_0Letter_G.cpp" />
+    <ClCompile Include="C_0Letter_H .cpp" />
+    <ClCompile Include="C_0Letter_I.cpp" />
+    <ClCompile Include="C_0Letter_M.cpp" />
+    <ClCompile Include="C_0Letter_N.cpp" />
+    <ClCompile Include="C_0Letter_O.cpp" />
+    <ClCompile Include="C_0Letter_R.cpp" />
+    <ClCompile Include="C_0Letter_S.cpp" />
+    <ClCompile Include="C_0Letter_sE.cpp" />
     <ClCompile Include="C_0Letter_T.cpp" />
     <ClCompile Include="Fake Program Level.cpp" />
     <ClCompile Include="G_ActorBase.cpp" />

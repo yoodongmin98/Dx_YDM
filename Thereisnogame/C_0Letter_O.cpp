@@ -1,5 +1,5 @@
 #include "PrecompileHeader.h"
-#include "C_0Letter_T.h"
+#include "C_0Letter_O.h"
 
 //PlatForm
 #include <GameEnginePlatform/GameEngineInput.h>
@@ -10,27 +10,26 @@
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 
-C_Letter_T::C_Letter_T()
+C_Letter_O::C_Letter_O()
 {
 }
 
-C_Letter_T::~C_Letter_T()
+C_Letter_O::~C_Letter_O()
 {
 }
 
-void C_Letter_T::Start()
+void C_Letter_O::Start()
 {
-
-	Init(Letter_T, "Letter01.png", { 140,458,1 }, { -180,620,-10 });
+	Init(Letter_O, "Letter09.png", { 124,468,1 }, { -70,500,0 });
 }
 
-void C_Letter_T::Update(float _DeltaTime)
+void C_Letter_O::Update(float _DeltaTime)
 {
-	Repeat(5, _DeltaTime*0.7f);
+	Repeat(7, _DeltaTime * 0.8f);
 	Down(-300.0f, _DeltaTime);
 }
 
-void C_Letter_T::Render(float _Delta)
+void C_Letter_O::Render(float _Delta)
 {
 
 };

@@ -16,6 +16,7 @@ public:
 	MainMenuLevel& operator=(MainMenuLevel&& _Other) noexcept = delete;
 
 	void CreateMainMenuArrow();
+	void CreateLetter();
 	
 
 protected:

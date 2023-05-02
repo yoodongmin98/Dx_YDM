@@ -35,11 +35,11 @@ void G_ActorBase::Repeat(float _MoveValue,float _DeltaTime)
 		ReverseTime += _DeltaTime;
 		if (ReverseTime < 1.0f)
 		{
-			GetTransform()->AddLocalPosition({ _MoveValue,0,0 });
+			GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { _MoveValue,GetTransform()->GetLocalPosition().y}, _DeltaTime));
 		}
 		if (ReverseTime > 1.0f)
 		{
-			GetTransform()->AddLocalPosition({ -_MoveValue,0,0 });
+			GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(),{-_MoveValue,GetTransform()->GetLocalPosition().y }, _DeltaTime));
 			if (ReverseTime > 2.0f)
 			{
 				ReverseTime = 0.0f;

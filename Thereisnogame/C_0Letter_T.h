@@ -24,12 +24,9 @@ protected:
 
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Letter_T;
-	std::shared_ptr<class GameEngineSpriteRenderer> Letter_H;
-	std::shared_ptr<class GameEngineSpriteRenderer> Letter_E;
-	std::shared_ptr<class GameEngineSpriteRenderer> Letter_R;
-	std::shared_ptr<class GameEngineSpriteRenderer> Letter_e;
-	std::shared_ptr<class GameEngineSpriteRenderer> Letter_I;
-	std::shared_ptr<class GameEngineSpriteRenderer> Letter_S;
+
+
+
 	std::shared_ptr<class GameEngineSpriteRenderer> Letter_N;
 	std::shared_ptr<class GameEngineSpriteRenderer> Letter_O;
 	std::shared_ptr<class GameEngineSpriteRenderer> Letter_G;

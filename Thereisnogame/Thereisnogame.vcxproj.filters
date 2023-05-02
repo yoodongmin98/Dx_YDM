@@ -22,9 +22,6 @@
     <ClCompile Include="G_ActorBase.cpp">
       <Filter>Actor Base</Filter>
     </ClCompile>
-    <ClCompile Include="C_0Letter_T.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
-    </ClCompile>
     <ClCompile Include="BackCurtain.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
@@ -39,6 +36,45 @@
     </ClCompile>
     <ClCompile Include="Arrow.cpp">
       <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_E.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_H .cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_I.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_R.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_S.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_sE.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_T.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_N.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_O.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_G.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_A.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_M.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClCompile>
+    <ClCompile Include="C_0Letter_e2.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,9 +99,6 @@
     <ClInclude Include="G_ActorBase.h">
       <Filter>Actor Base</Filter>
     </ClInclude>
-    <ClInclude Include="C_0Letter_T.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter</Filter>
-    </ClInclude>
     <ClInclude Include="BackCurtain.h">
       <Filter>CommonUI</Filter>
     </ClInclude>
@@ -80,6 +113,45 @@
     </ClInclude>
     <ClInclude Include="Arrow.h">
       <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_E.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_H .h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_I.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_R.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_S.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_sE.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_T.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_N.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_O.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_G.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_A.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_M.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+    </ClInclude>
+    <ClInclude Include="C_0Letter_e2.h">
+      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +196,12 @@
     </Filter>
     <Filter Include="Chapter1.5_Program Loading\Level">
       <UniqueIdentifier>{5dc152a1-daef-46bb-b47a-ffb51159f739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\Letter\There is">
+      <UniqueIdentifier>{879b0f4c-a531-41f2-b9ff-256aa6210f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\Letter\No game">
+      <UniqueIdentifier>{5e8b31f4-5bc1-4fdb-a8b7-ac2ea91cf3ce}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
