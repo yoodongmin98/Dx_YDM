@@ -29,7 +29,5 @@ protected:
 private:
 
 	std::shared_ptr<class GameEngineSpriteRenderer> Panel_Continues;
-
-	float SettingValue = 0;
 };
 

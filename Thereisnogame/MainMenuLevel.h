@@ -40,6 +40,9 @@ private:
 	MainMenuState StateValue = MainMenuState::Flag;
 
 	std::shared_ptr<class Panel_Continue> PanelContinuePtr = nullptr;
+	std::shared_ptr<class Panel_Back> PanelBackPtr = nullptr;
+	std::shared_ptr<class SelectBox> SelectBoxPtr = nullptr;
+	std::shared_ptr<class Arrow> ArrowPtr = nullptr;
 
 	void FlagStart();
 	void FlagUpdate(float _DeltaTime);
@@ -58,7 +61,8 @@ private:
 	void SelectEnd();
 
 
-	std::vector<std::shared_ptr<class G_ActorBase>> ActorVector;
+	std::vector<std::shared_ptr<class G_ActorBase>> LetterVector;
+	std::vector<std::shared_ptr<class G_ActorBase>> ArrowVector;
 
 
 };

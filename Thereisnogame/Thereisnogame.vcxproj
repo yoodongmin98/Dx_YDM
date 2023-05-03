@@ -187,6 +187,7 @@
     <ClInclude Include="Fake Program Level.h" />
     <ClInclude Include="G_ActorBase.h" />
     <ClInclude Include="MainMenuLevel.h" />
+    <ClInclude Include="Panel_Back.h" />
     <ClInclude Include="Panel_Continue.h" />
     <ClInclude Include="Play within a play Level.h" />
     <ClInclude Include="PrecompileHeader.h" />
@@ -219,6 +220,7 @@
     <ClCompile Include="G_ActorBase.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="MainMenuLevelState.cpp" />
+    <ClCompile Include="Panel_Back.cpp" />
     <ClCompile Include="Panel_Continue.cpp" />
     <ClCompile Include="Play within a play Level.cpp" />
     <ClCompile Include="PrecompileHeader.cpp">

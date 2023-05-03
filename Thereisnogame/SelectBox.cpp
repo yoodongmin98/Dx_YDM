@@ -27,7 +27,6 @@ void SelectBox::Start()
 
 void SelectBox::Update(float _DeltaTime)
 {
-	Up(300, _DeltaTime);
 
 }
 

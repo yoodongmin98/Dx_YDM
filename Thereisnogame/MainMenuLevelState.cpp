@@ -4,6 +4,9 @@
 #include <functional>
 
 #include "Panel_Continue.h"
+#include "Panel_Back.h"
+#include "SelectBox.h"
+#include "Arrow.h"
 
 
 
@@ -81,7 +84,13 @@ void MainMenuLevel::FlagUpdate(float _DeltaTime)
 
 	std::function<void(float)> FlagFunctional;
 
-	FlagFunctional = std::bind(&Panel_Continue::ZRotations, PanelContinuePtr.get(), std::placeholders::_1);
+	FlagFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
+	FlagFunctional(_DeltaTime);
+
+	FlagFunctional = std::bind(&Panel_Back::RZRotations, PanelBackPtr.get(), std::placeholders::_1);
+	FlagFunctional(_DeltaTime);
+
+	FlagFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
 	FlagFunctional(_DeltaTime);
 }
 void MainMenuLevel::FlagEnd()
@@ -99,9 +108,14 @@ void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 	LetterUpfunction(_DeltaTime);
 	std::function<void(float)> DrawaPixelFunctional;
 
-	DrawaPixelFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
+	DrawaPixelFunctional = std::bind(&Panel_Continue::ZRotations, PanelContinuePtr.get(), std::placeholders::_1);
 	DrawaPixelFunctional(_DeltaTime);
 
+	DrawaPixelFunctional = std::bind(&Panel_Back::ZRotations, PanelBackPtr.get(), std::placeholders::_1);
+	DrawaPixelFunctional(_DeltaTime);
+
+	DrawaPixelFunctional = std::bind(&SelectBox::Down, SelectBoxPtr.get(), std::placeholders::_1);
+	DrawaPixelFunctional(_DeltaTime);
 }
 void MainMenuLevel::DrawaPixelEnd()
 {

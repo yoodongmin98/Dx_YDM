@@ -15,6 +15,7 @@
 #include "SelectBox.h"
 #include "Arrow.h"
 #include "Panel_Continue.h"
+#include "Panel_Back.h"
 
 //Letter
 #include "C_0Letter_T.h"
@@ -66,9 +67,10 @@ void MainMenuLevel::Start()
 		CreateActor<BackCurtain>();
 		CreateLetter();
 		PanelContinuePtr = CreateActor<Panel_Continue>();
-		CreateActor<SelectBox>();
+		PanelBackPtr=CreateActor<Panel_Back>();
+		SelectBoxPtr=CreateActor<SelectBox>();
 		CreateMainMenuArrow();
-		CreateActor<AlphaCircle>();
+		//CreateActor<AlphaCircle>();
 	}
 	
 
@@ -108,57 +110,61 @@ void MainMenuLevel::CreateMainMenuArrow()
 	std::shared_ptr<Arrow> Arrow1 = CreateActor<Arrow>();
 	Arrow1->GetTransform()->SetLocalPosition({ 140 ,-205,0 });
 	Arrow1->GetTransform()->SetLocalRotation({ 0, 0, -40 });
+	ArrowVector.push_back(Arrow1);
 
 	std::shared_ptr<Arrow> Arrow2 = CreateActor<Arrow>();
 	Arrow2->GetTransform()->SetLocalPosition({ 230 ,-155,0 });
 	Arrow2->GetTransform()->SetLocalRotation({ 0, 0, -85 });
+	ArrowVector.push_back(Arrow2);
 
 	std::shared_ptr<Arrow> Arrow3 = CreateActor<Arrow>();
 	Arrow3->GetTransform()->SetLocalPosition({ 440 ,-160,0 });
 	Arrow3->GetTransform()->SetLocalRotation({ 0, 0, -120 });
+	ArrowVector.push_back(Arrow3);
 
 	std::shared_ptr<Arrow> Arrow4 = CreateActor<Arrow>();
 	Arrow4->GetTransform()->SetLocalPosition({ 500 ,-220,0 });
 	Arrow4->GetTransform()->SetLocalRotation({ 0, 0, -150 });
+	ArrowVector.push_back(Arrow4);
 
 	std::shared_ptr<Arrow> Arrow5 = CreateActor<Arrow>();
 	Arrow5->GetTransform()->SetLocalPosition({ 500 ,-360,0 });
 	Arrow5->GetTransform()->SetLocalRotation({ 0, 0, -200 });
-
+	ArrowVector.push_back(Arrow5);
 }
 
 void MainMenuLevel::CreateLetter()
 {
-	ActorVector.push_back(CreateActor<C_Letter_O>());
-	ActorVector.push_back(CreateActor<C_Letter_N>());
-
-	ActorVector.push_back(CreateActor<C_Letter_A>());
-	ActorVector.push_back(CreateActor<C_Letter_G>());
-	ActorVector.push_back(CreateActor<C_Letter_e2>());
-	ActorVector.push_back(CreateActor<C_Letter_M>());
-
-	ActorVector.push_back(CreateActor<C_Letter_H>());
-	ActorVector.push_back(CreateActor<C_Letter_T>());
-	ActorVector.push_back(CreateActor<C_Letter_R>());
-	ActorVector.push_back(CreateActor<C_Letter_E>());
-	ActorVector.push_back(CreateActor<C_Letter_sE>());
-
-	ActorVector.push_back(CreateActor<C_Letter_S>());
-	ActorVector.push_back(CreateActor<C_Letter_I>());
+	LetterVector.push_back(CreateActor<C_Letter_O>());
+	LetterVector.push_back(CreateActor<C_Letter_N>());
+	
+	LetterVector.push_back(CreateActor<C_Letter_A>());
+	LetterVector.push_back(CreateActor<C_Letter_G>());
+	LetterVector.push_back(CreateActor<C_Letter_e2>());
+	LetterVector.push_back(CreateActor<C_Letter_M>());
+	
+	LetterVector.push_back(CreateActor<C_Letter_H>());
+	LetterVector.push_back(CreateActor<C_Letter_T>());
+	LetterVector.push_back(CreateActor<C_Letter_R>());
+	LetterVector.push_back(CreateActor<C_Letter_E>());
+	LetterVector.push_back(CreateActor<C_Letter_sE>());
+	
+	LetterVector.push_back(CreateActor<C_Letter_S>());
+	LetterVector.push_back(CreateActor<C_Letter_I>());
 }
 
 void MainMenuLevel::LetterDownfunction(float _DeltaTime)
 {
-	for (size_t i = 0; i < ActorVector.size(); i++)
+	for (size_t i = 0; i < LetterVector.size(); i++)
 	{
-		ActorVector[i].get()->Down(-300, _DeltaTime);
+		LetterVector[i].get()->Down(_DeltaTime);
 	}
 }
 
 void MainMenuLevel::LetterUpfunction(float _DeltaTime)
 {
-	for (size_t i = 0; i < ActorVector.size(); i++)
+	for (size_t i = 0; i < LetterVector.size(); i++)
 	{
-		ActorVector[i].get()->Up(300, _DeltaTime);
+		LetterVector[i].get()->Up(_DeltaTime);
 	}
 }
