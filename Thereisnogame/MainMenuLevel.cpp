@@ -65,8 +65,8 @@ void MainMenuLevel::Start()
 	{
 		CreateActor<BackCurtain>();
 		CreateLetter();
-		CreateActor<Panel_Continue>();
-		//CreateActor<SelectBox>();
+		PanelContinuePtr = CreateActor<Panel_Continue>();
+		CreateActor<SelectBox>();
 		CreateMainMenuArrow();
 		CreateActor<AlphaCircle>();
 	}
@@ -79,14 +79,18 @@ void MainMenuLevel::Start()
 		GameEngineInput::CreateKey("PanelTestkey", '1');
 		GameEngineInput::CreateKey("PanelTestkey2", '2');
 	}
+	ChangeState(MainMenuState::Flag);
+
 }
 
 void MainMenuLevel::Update(float _DeltaTime)
 {
+	UpdateState(_DeltaTime);
 	if (GameEngineInput::IsDown("CameraSet"))
 	{
 		GetMainCamera()->SetProjectionType(CameraType::Perspective);
 	}
+	
 }
 
 void MainMenuLevel::CreateMainMenuArrow()

@@ -16,8 +16,8 @@ public:
 	Panel_Continue& operator=(const Panel_Continue& _Other) = delete;
 	Panel_Continue& operator=(Panel_Continue&& _Other) noexcept = delete;
 
-	void ZRotations(float RotationValue, float _DeltaTime);
-	void RZRotations(float RotationValue, float _DeltaTime);
+	void ZRotations(float _DeltaTime);
+	void RZRotations(float _DeltaTime);
 	
 
 protected:
