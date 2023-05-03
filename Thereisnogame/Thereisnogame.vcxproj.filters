@@ -34,9 +34,6 @@
     <ClCompile Include="Fake Program Level.cpp">
       <Filter>CHapter2_Fake Program\Level</Filter>
     </ClCompile>
-    <ClCompile Include="Arrow.cpp">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
-    </ClCompile>
     <ClCompile Include="C_0Letter_E.cpp">
       <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
@@ -85,6 +82,21 @@
     <ClCompile Include="Panel_Back.cpp">
       <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
     </ClCompile>
+    <ClCompile Include="Arrow.cpp">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Arrow1.cpp">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Arrow2.cpp">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Arrow3.cpp">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Arrow4.cpp">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -119,9 +131,6 @@
     </ClInclude>
     <ClInclude Include="Fake Program Level.h">
       <Filter>CHapter2_Fake Program\Level</Filter>
-    </ClInclude>
-    <ClInclude Include="Arrow.h">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_E.h">
       <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
@@ -167,6 +176,21 @@
     </ClInclude>
     <ClInclude Include="Panel_Back.h">
       <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow.h">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow1.h">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow2.h">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow3.h">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrow4.h">
+      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +247,9 @@
     </Filter>
     <Filter Include="Chapter0_MainMenu\Actor\Panel">
       <UniqueIdentifier>{cce30c6e-e22e-445e-a612-33c5f7f9d203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\SelectBox\Arrow">
+      <UniqueIdentifier>{e3671a76-1e5e-4e01-9aef-a63613c2be96}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

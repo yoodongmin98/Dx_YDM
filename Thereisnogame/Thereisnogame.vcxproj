@@ -165,6 +165,10 @@
   <ItemGroup>
     <ClInclude Include="AlphaCircle.h" />
     <ClInclude Include="Arrow.h" />
+    <ClInclude Include="Arrow1.h" />
+    <ClInclude Include="Arrow2.h" />
+    <ClInclude Include="Arrow3.h" />
+    <ClInclude Include="Arrow4.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="ContentsCore.h">
       <SubType>
@@ -197,6 +201,10 @@
   <ItemGroup>
     <ClCompile Include="AlphaCircle.cpp" />
     <ClCompile Include="Arrow.cpp" />
+    <ClCompile Include="Arrow1.cpp" />
+    <ClCompile Include="Arrow2.cpp" />
+    <ClCompile Include="Arrow3.cpp" />
+    <ClCompile Include="Arrow4.cpp" />
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="ContentsCore.cpp">
       <SubType>

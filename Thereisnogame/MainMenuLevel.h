@@ -31,6 +31,8 @@ public:
 
 	void LetterDownfunction(float _DeltaTime);
 	void LetterUpfunction(float _DeltaTime);
+	void ArrowDownfunction(float _DeltaTime);
+	void ArrowUpfunction(float _DeltaTime);
 	
 protected:
 	void Start() override;

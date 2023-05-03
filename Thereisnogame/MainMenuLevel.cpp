@@ -13,7 +13,6 @@
 #include "BackCurtain.h"
 #include "AlphaCircle.h"
 #include "SelectBox.h"
-#include "Arrow.h"
 #include "Panel_Continue.h"
 #include "Panel_Back.h"
 
@@ -31,6 +30,13 @@
 #include "C_0Letter_A.h"
 #include "C_0Letter_M.h"
 #include "C_0Letter_e2.h"
+
+//Arrow
+#include "Arrow.h"
+#include "Arrow1.h"
+#include "Arrow2.h"
+#include "Arrow3.h"
+#include "Arrow4.h"
 
 MainMenuLevel::MainMenuLevel()
 {
@@ -107,30 +113,11 @@ void MainMenuLevel::Update(float _DeltaTime)
 
 void MainMenuLevel::CreateMainMenuArrow()
 {
-	std::shared_ptr<Arrow> Arrow1 = CreateActor<Arrow>();
-	Arrow1->GetTransform()->SetLocalPosition({ 140 ,-205,0 });
-	Arrow1->GetTransform()->SetLocalRotation({ 0, 0, -40 });
-	ArrowVector.push_back(Arrow1);
-
-	std::shared_ptr<Arrow> Arrow2 = CreateActor<Arrow>();
-	Arrow2->GetTransform()->SetLocalPosition({ 230 ,-155,0 });
-	Arrow2->GetTransform()->SetLocalRotation({ 0, 0, -85 });
-	ArrowVector.push_back(Arrow2);
-
-	std::shared_ptr<Arrow> Arrow3 = CreateActor<Arrow>();
-	Arrow3->GetTransform()->SetLocalPosition({ 440 ,-160,0 });
-	Arrow3->GetTransform()->SetLocalRotation({ 0, 0, -120 });
-	ArrowVector.push_back(Arrow3);
-
-	std::shared_ptr<Arrow> Arrow4 = CreateActor<Arrow>();
-	Arrow4->GetTransform()->SetLocalPosition({ 500 ,-220,0 });
-	Arrow4->GetTransform()->SetLocalRotation({ 0, 0, -150 });
-	ArrowVector.push_back(Arrow4);
-
-	std::shared_ptr<Arrow> Arrow5 = CreateActor<Arrow>();
-	Arrow5->GetTransform()->SetLocalPosition({ 500 ,-360,0 });
-	Arrow5->GetTransform()->SetLocalRotation({ 0, 0, -200 });
-	ArrowVector.push_back(Arrow5);
+	ArrowVector.push_back(CreateActor<Arrow>());
+	ArrowVector.push_back(CreateActor<Arrow1>());
+	ArrowVector.push_back(CreateActor<Arrow2>());
+	ArrowVector.push_back(CreateActor<Arrow3>());
+	ArrowVector.push_back(CreateActor<Arrow4>());
 }
 
 void MainMenuLevel::CreateLetter()
@@ -166,5 +153,21 @@ void MainMenuLevel::LetterUpfunction(float _DeltaTime)
 	for (size_t i = 0; i < LetterVector.size(); i++)
 	{
 		LetterVector[i].get()->Up(_DeltaTime);
+	}
+}
+
+void MainMenuLevel::ArrowDownfunction(float _DeltaTime)
+{
+	for (size_t i = 0; i < ArrowVector.size(); i++)
+	{
+		ArrowVector[i].get()->Down(_DeltaTime);
+	}
+}
+
+void MainMenuLevel::ArrowUpfunction(float _DeltaTime)
+{
+	for (size_t i = 0; i < ArrowVector.size(); i++)
+	{
+		ArrowVector[i].get()->Up(_DeltaTime);
 	}
 }

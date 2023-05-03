@@ -58,20 +58,14 @@ void G_ActorBase::Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const 
 
 void G_ActorBase::Down(float _DeltaTime)
 {
-	DownTime += _DeltaTime;
-	if (true == DownCheck)
-	{
-		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-300}, _DeltaTime));
-	}
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-300}, _DeltaTime));
+	
 }
 
 void G_ActorBase::Up(float _DeltaTime)
 {
-	Uptime += _DeltaTime;
-	if (true == UpCheck)
-	{
-		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,300 }, _DeltaTime));
-	}
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,300 }, _DeltaTime));
+	
 }
 
 

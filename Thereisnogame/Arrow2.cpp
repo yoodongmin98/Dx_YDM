@@ -1,5 +1,5 @@
 #include "PrecompileHeader.h"
-#include "Arrow.h"
+#include "Arrow2.h"
 
 //PlatForm
 #include <GameEnginePlatform/GameEngineInput.h>
@@ -10,32 +10,32 @@
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 
-Arrow::Arrow()
+Arrow2::Arrow2()
 {
 }
 
-Arrow::~Arrow()
+Arrow2::~Arrow2()
 {
 }
 
-void Arrow::Start()
+void Arrow2::Start()
 {
 
 	Arrow_LightOn = CreateComponent<GameEngineSpriteRenderer>();
 	Arrow_LightOn->SetTexture("ArrowLightOn.png");
 	Arrow_LightOn->GetTransform()->SetLocalScale({ 241,129,1 });
-	Arrow_LightOn->GetTransform()->SetLocalPosition({ 144,-498,-10 });
-	Arrow_LightOn->GetTransform()->SetLocalRotation({ 0, 0, -40 });
+	Arrow_LightOn->GetTransform()->SetLocalPosition({ 452,-458,-10 });
+	Arrow_LightOn->GetTransform()->SetLocalRotation({ 0, 0, -120 });
 	Arrow_LightOn->Off();
 
 	Arrow_LightOff = CreateComponent<GameEngineSpriteRenderer>();
 	Arrow_LightOff->SetTexture("ArrowLightOff.png");
 	Arrow_LightOff->GetTransform()->SetLocalScale({ 188,73,1 });
-	Arrow_LightOff->GetTransform()->SetLocalPosition({ 145,-506,-10 });
-	Arrow_LightOff->GetTransform()->SetLocalRotation({ 0, 0, -40 });
+	Arrow_LightOff->GetTransform()->SetLocalPosition({ 445,-460,-10 });
+	Arrow_LightOff->GetTransform()->SetLocalRotation({ 0, 0, -120 });
 	Arrow_LightOff->On();
 }
-void Arrow::Update(float _DeltaTime)
+void Arrow2::Update(float _DeltaTime)
 {
 	ArrowBlinkTime += _DeltaTime;
 	if (ArrowBlinkTime > 1.5f)
@@ -51,7 +51,7 @@ void Arrow::Update(float _DeltaTime)
 	}
 }
 
-void Arrow::Render(float _Delta)
+void Arrow2::Render(float _Delta)
 {
 
 };

@@ -27,12 +27,5 @@ protected:
 
 private:
 	float ReverseTime = 0.0f;
-	float DownTime = 0.0f;
-	float Uptime = 0.0f;
-
 	float4 EndPos = float4::Zero;
-
-
-	bool DownCheck = true;
-	bool UpCheck = true;
 };

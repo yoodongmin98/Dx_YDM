@@ -2,18 +2,18 @@
 #include <GameEngineCore/GameEngineActor.h>
 #include "G_ActorBase.h"
 // Ό³Έν :
-class Arrow : public G_ActorBase
+class Arrow3 : public G_ActorBase
 {
 public:
 	// constrcuter destructer
-	Arrow();
-	~Arrow();
+	Arrow3();
+	~Arrow3();
 
 	// delete Function
-	Arrow(const Arrow& _Other) = delete;
-	Arrow(Arrow&& _Other) noexcept = delete;
-	Arrow& operator=(const Arrow& _Other) = delete;
-	Arrow& operator=(Arrow&& _Other) noexcept = delete;
+	Arrow3(const Arrow3& _Other) = delete;
+	Arrow3(Arrow3&& _Other) noexcept = delete;
+	Arrow3& operator=(const Arrow3& _Other) = delete;
+	Arrow3& operator=(Arrow3&& _Other) noexcept = delete;
 
 protected:
 	void Start();
