@@ -27,7 +27,7 @@ void Panel_Continue::Start()
 
 void Panel_Continue::Update(float _DeltaTime)
 {
-	//ZRotations(_DeltaTime);
+
 }
 
 void Panel_Continue::Render(float _Delta)

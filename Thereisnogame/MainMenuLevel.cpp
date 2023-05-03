@@ -89,6 +89,16 @@ void MainMenuLevel::Update(float _DeltaTime)
 	if (GameEngineInput::IsDown("CameraSet"))
 	{
 		GetMainCamera()->SetProjectionType(CameraType::Perspective);
+		
+	}
+	//테스트용
+	if (GameEngineInput::IsDown("PanelTestkey2"))
+	{
+		ChangeState(MainMenuState::DrawaPixel);
+	}
+	if (GameEngineInput::IsDown("PanelTestkey"))
+	{
+		ChangeState(MainMenuState::Flag);
 	}
 	
 }
@@ -119,20 +129,36 @@ void MainMenuLevel::CreateMainMenuArrow()
 
 void MainMenuLevel::CreateLetter()
 {
-	CreateActor<C_Letter_O>();
-	CreateActor<C_Letter_N>();
+	ActorVector.push_back(CreateActor<C_Letter_O>());
+	ActorVector.push_back(CreateActor<C_Letter_N>());
 
-	CreateActor<C_Letter_A>();
-	CreateActor<C_Letter_G>();
-	CreateActor<C_Letter_e2>();
-	CreateActor<C_Letter_M>();
+	ActorVector.push_back(CreateActor<C_Letter_A>());
+	ActorVector.push_back(CreateActor<C_Letter_G>());
+	ActorVector.push_back(CreateActor<C_Letter_e2>());
+	ActorVector.push_back(CreateActor<C_Letter_M>());
 
-	CreateActor<C_Letter_H>();
-	CreateActor<C_Letter_T>();
-	CreateActor<C_Letter_R>();
-	CreateActor<C_Letter_E>();
-	CreateActor<C_Letter_sE>();
+	ActorVector.push_back(CreateActor<C_Letter_H>());
+	ActorVector.push_back(CreateActor<C_Letter_T>());
+	ActorVector.push_back(CreateActor<C_Letter_R>());
+	ActorVector.push_back(CreateActor<C_Letter_E>());
+	ActorVector.push_back(CreateActor<C_Letter_sE>());
 
-	CreateActor<C_Letter_S>();
-	CreateActor<C_Letter_I>();
+	ActorVector.push_back(CreateActor<C_Letter_S>());
+	ActorVector.push_back(CreateActor<C_Letter_I>());
+}
+
+void MainMenuLevel::LetterDownfunction(float _DeltaTime)
+{
+	for (size_t i = 0; i < ActorVector.size(); i++)
+	{
+		ActorVector[i].get()->Down(-300, _DeltaTime);
+	}
+}
+
+void MainMenuLevel::LetterUpfunction(float _DeltaTime)
+{
+	for (size_t i = 0; i < ActorVector.size(); i++)
+	{
+		ActorVector[i].get()->Up(300, _DeltaTime);
+	}
 }

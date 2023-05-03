@@ -77,6 +77,8 @@ void MainMenuLevel::FlagStart()
 }
 void MainMenuLevel::FlagUpdate(float _DeltaTime)
 {
+	LetterDownfunction(_DeltaTime);
+
 	std::function<void(float)> FlagFunctional;
 
 	FlagFunctional = std::bind(&Panel_Continue::ZRotations, PanelContinuePtr.get(), std::placeholders::_1);
@@ -94,6 +96,11 @@ void MainMenuLevel::DrawaPixelStart()
 }
 void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 {
+	LetterUpfunction(_DeltaTime);
+	std::function<void(float)> DrawaPixelFunctional;
+
+	DrawaPixelFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
+	DrawaPixelFunctional(_DeltaTime);
 
 }
 void MainMenuLevel::DrawaPixelEnd()

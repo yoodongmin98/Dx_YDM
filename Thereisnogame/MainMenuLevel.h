@@ -28,6 +28,9 @@ public:
 	
 	void ChangeState(MainMenuState _State);
 	void UpdateState(float _DeltaTime);
+
+	void LetterDownfunction(float _DeltaTime);
+	void LetterUpfunction(float _DeltaTime);
 	
 protected:
 	void Start() override;
@@ -55,7 +58,7 @@ private:
 	void SelectEnd();
 
 
-	
+	std::vector<std::shared_ptr<class G_ActorBase>> ActorVector;
 
 
 };

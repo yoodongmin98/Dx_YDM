@@ -26,7 +26,6 @@ void C_Letter_e2::Start()
 void C_Letter_e2::Update(float _DeltaTime)
 {
 	Repeat(8, _DeltaTime * 0.5f);
-	Down(-300.0f, _DeltaTime);
 }
 
 void C_Letter_e2::Render(float _Delta)
