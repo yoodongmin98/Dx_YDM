@@ -29,10 +29,9 @@ public:
 	void ChangeState(MainMenuState _State);
 	void UpdateState(float _DeltaTime);
 
-	void LetterDownfunction(float _DeltaTime);
-	void LetterUpfunction(float _DeltaTime);
-	void ArrowDownfunction(float _DeltaTime);
-	void ArrowUpfunction(float _DeltaTime);
+	void Letterfunction(float _DeltaTime);
+	void Arrowfunction(float _DeltaTime);
+
 	
 protected:
 	void Start() override;

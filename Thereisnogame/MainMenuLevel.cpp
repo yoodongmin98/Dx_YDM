@@ -102,11 +102,11 @@ void MainMenuLevel::Update(float _DeltaTime)
 	//테스트용
 	if (GameEngineInput::IsDown("PanelTestkey2"))
 	{
-		ChangeState(MainMenuState::DrawaPixel);
+		ChangeState(MainMenuState::Menu);
 	}
 	if (GameEngineInput::IsDown("PanelTestkey"))
 	{
-		ChangeState(MainMenuState::Flag);
+		ChangeState(MainMenuState::Select);
 	}
 	
 }
@@ -140,34 +140,47 @@ void MainMenuLevel::CreateLetter()
 	LetterVector.push_back(CreateActor<C_Letter_I>());
 }
 
-void MainMenuLevel::LetterDownfunction(float _DeltaTime)
+void MainMenuLevel::Letterfunction(float _DeltaTime)
 {
-	for (size_t i = 0; i < LetterVector.size(); i++)
+	switch (StateValue)
 	{
-		LetterVector[i].get()->Down(_DeltaTime);
+	case MainMenuState::Menu:
+		for (size_t i = 0; i < LetterVector.size(); i++)
+		{
+			LetterVector[i].get()->Down(_DeltaTime);
+		}
+		break;
+	case MainMenuState::Select:
+		for (size_t i = 0; i < LetterVector.size(); i++)
+		{
+			LetterVector[i].get()->Up(_DeltaTime);
+		}
+		break;
+	default:
+		break;
+	}
+	
+}
+
+
+void MainMenuLevel::Arrowfunction(float _DeltaTime)
+{
+	switch (StateValue)
+	{
+	case MainMenuState::Menu:
+		for (size_t i = 0; i < ArrowVector.size(); i++)
+		{
+			ArrowVector[i].get()->Up(_DeltaTime);
+		}
+		break;
+	case MainMenuState::Select:
+		for (size_t i = 0; i < ArrowVector.size(); i++)
+		{
+			ArrowVector[i].get()->Down(_DeltaTime);
+		}
+		break;
+	default:
+		break;
 	}
 }
 
-void MainMenuLevel::LetterUpfunction(float _DeltaTime)
-{
-	for (size_t i = 0; i < LetterVector.size(); i++)
-	{
-		LetterVector[i].get()->Up(_DeltaTime);
-	}
-}
-
-void MainMenuLevel::ArrowDownfunction(float _DeltaTime)
-{
-	for (size_t i = 0; i < ArrowVector.size(); i++)
-	{
-		ArrowVector[i].get()->Down(_DeltaTime);
-	}
-}
-
-void MainMenuLevel::ArrowUpfunction(float _DeltaTime)
-{
-	for (size_t i = 0; i < ArrowVector.size(); i++)
-	{
-		ArrowVector[i].get()->Up(_DeltaTime);
-	}
-}

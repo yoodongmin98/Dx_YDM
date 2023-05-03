@@ -97,6 +97,36 @@
     <ClCompile Include="Arrow4.cpp">
       <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClCompile>
+    <ClCompile Include="F_Korea.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Japan.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Chinese.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_English.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_French.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Italian.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_German.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Spanish.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Russian.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Brazilian.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -191,6 +221,36 @@
     </ClInclude>
     <ClInclude Include="Arrow4.h">
       <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Korea.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Japan.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Chinese.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_English.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_French.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Italian.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_German.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Spanish.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Russian.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Brazilian.h">
+      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
