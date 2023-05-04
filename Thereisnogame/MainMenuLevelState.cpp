@@ -80,7 +80,7 @@ void MainMenuLevel::FlagStart()
 }
 void MainMenuLevel::FlagUpdate(float _DeltaTime)
 {
-	
+	Flagfunction(_DeltaTime);
 }
 void MainMenuLevel::FlagEnd()
 {
@@ -94,7 +94,7 @@ void MainMenuLevel::DrawaPixelStart()
 }
 void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 {
-	
+	Flagfunction(_DeltaTime);
 }
 void MainMenuLevel::DrawaPixelEnd()
 {

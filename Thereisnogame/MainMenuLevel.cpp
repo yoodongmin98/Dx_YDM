@@ -98,10 +98,12 @@ void MainMenuLevel::Start()
 	if (false == GameEngineInput::IsKey("PlayerMoveLeft"))
 	{
 		GameEngineInput::CreateKey("CameraSet", '0'); //알파벳
-		GameEngineInput::CreateKey("PanelTestkey", '1');
-		GameEngineInput::CreateKey("PanelTestkey2", '2');
+		GameEngineInput::CreateKey("TestKey1", '1');
+		GameEngineInput::CreateKey("TestKey2", '2');
+		GameEngineInput::CreateKey("TestKey3", '3');
+		GameEngineInput::CreateKey("TestKey4", '4');
 	}
-	ChangeState(MainMenuState::Flag);
+	ChangeState(MainMenuState::None);
 
 }
 
@@ -114,11 +116,19 @@ void MainMenuLevel::Update(float _DeltaTime)
 		
 	}
 	//테스트용
-	if (GameEngineInput::IsDown("PanelTestkey2"))
+	if (GameEngineInput::IsDown("TestKey1"))
+	{
+		ChangeState(MainMenuState::Flag);
+	}
+	if (GameEngineInput::IsDown("TestKey2"))
+	{
+		ChangeState(MainMenuState::DrawaPixel);
+	}
+	if (GameEngineInput::IsDown("TestKey3"))
 	{
 		ChangeState(MainMenuState::Menu);
 	}
-	if (GameEngineInput::IsDown("PanelTestkey"))
+	if (GameEngineInput::IsDown("TestKey4"))
 	{
 		ChangeState(MainMenuState::Select);
 	}
@@ -213,3 +223,103 @@ void MainMenuLevel::Arrowfunction(float _DeltaTime)
 	}
 }
 
+void MainMenuLevel::Flagfunction(float _DeltaTime)
+{
+	switch (StateValue)
+	{
+	case MainMenuState::Flag:
+		for (size_t i = 0; i < FlagVector.size(); i++)
+		{
+			float FlagValue=FlagValueSet(i);
+			FlagVector[i].get()->FlagDown(FlagValue,_DeltaTime);
+		}
+		break;
+	case MainMenuState::DrawaPixel:
+		for (size_t i = 0; i < FlagVector.size(); i++)
+		{
+			float FlagLeftValue = FlagLeftValueSet(i);
+			FlagVector[i].get()->FlagLeft(FlagLeftValue,_DeltaTime);
+		}
+		break;
+	default:
+		break;
+	}
+}
+
+float MainMenuLevel::FlagValueSet(int _iValue)
+{
+	switch (_iValue)
+	{
+	case 0:
+		return 730.0f;
+		break;
+	case 1:
+		return 670.0f;
+		break;
+	case 2:
+		return 730.0f;
+		break;
+	case 3:
+		return 530.0f;
+		break;
+	case 4:
+		return 480.0f;
+		break;
+	case 5:
+		return 570.0f;
+		break;
+	case 6:
+		return 500.0f;
+		break;
+	case 7:
+		return 300.0f;
+		break;
+	case 8:
+		return 300.0f;
+		break;
+	case 9:
+		return 380.0f;
+		break;
+	default:
+		break;
+	}
+}
+
+float MainMenuLevel::FlagLeftValueSet(int _iValue)
+{
+	switch (_iValue)
+	{
+	case 0:
+		return 330.0f;
+		break;
+	case 1:
+		return 50.0f;
+		break;
+	case 2:
+		return -340.0f;
+		break;
+	case 3:
+		return 420.0f;
+		break;
+	case 4:
+		return 180.0f;
+		break;
+	case 5:
+		return -170.0f;
+		break;
+	case 6:
+		return -400.0f;
+		break;
+	case 7:
+		return 330.0f;
+		break;
+	case 8:
+		return -310.0f;
+		break;
+	case 9:
+		return -70.0f;
+		break;
+	default:
+		break;
+	}
+}

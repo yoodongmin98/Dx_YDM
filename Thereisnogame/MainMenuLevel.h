@@ -33,6 +33,10 @@ public:
 
 	void Letterfunction(float _DeltaTime);
 	void Arrowfunction(float _DeltaTime);
+	void Flagfunction(float _DeltaTime);
+
+	float FlagValueSet(int _iValue);
+	float FlagLeftValueSet(int _iValue);
 
 	
 protected:
