@@ -159,7 +159,6 @@ void MainMenuLevel::Letterfunction(float _DeltaTime)
 	default:
 		break;
 	}
-	
 }
 
 
