@@ -110,6 +110,7 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 {
 	Letterfunction(_DeltaTime);
 	Arrowfunction(_DeltaTime);
+	Flagfunction(_DeltaTime);
 
 	std::function<void(float)> FlagFunctional;
 
@@ -136,6 +137,7 @@ void MainMenuLevel::SelectUpdate(float _DeltaTime)
 {
 	Letterfunction(_DeltaTime);
 	Arrowfunction(_DeltaTime);
+	Flagfunction(_DeltaTime);
 	std::function<void(float)> DrawaPixelFunctional;
 
 	DrawaPixelFunctional = std::bind(&Panel_Continue::ZRotations, PanelContinuePtr.get(), std::placeholders::_1);

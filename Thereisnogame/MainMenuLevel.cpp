@@ -212,6 +212,8 @@ void MainMenuLevel::Arrowfunction(float _DeltaTime)
 			ArrowVector[i].get()->Up(_DeltaTime);
 		}
 		break;
+	case MainMenuState::Flag:
+	case MainMenuState::DrawaPixel:
 	case MainMenuState::Select:
 		for (size_t i = 0; i < ArrowVector.size(); i++)
 		{
@@ -235,6 +237,8 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 		}
 		break;
 	case MainMenuState::DrawaPixel:
+	case MainMenuState::Menu:
+	case MainMenuState::Select:
 		for (size_t i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagLeftValue = FlagLeftValueSet(i);
