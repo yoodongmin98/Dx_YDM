@@ -74,7 +74,7 @@ void G_ActorBase::FlagDown(float _EndValue,float _DeltaTime)
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-_EndValue }, _DeltaTime));
 }
 
-void G_ActorBase::FlagLeft(float _FlagXValue,float _DeltaTime)
+void G_ActorBase::FlagUp(float _DeltaTime)
 {
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), float4::Zero, _DeltaTime));
 }

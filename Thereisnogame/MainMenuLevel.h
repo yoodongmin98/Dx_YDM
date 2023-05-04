@@ -50,6 +50,7 @@ private:
 	std::shared_ptr<class Panel_Back> PanelBackPtr = nullptr;
 	std::shared_ptr<class SelectBox> SelectBoxPtr = nullptr;
 	std::shared_ptr<class Arrow> ArrowPtr = nullptr;
+	std::shared_ptr<class Panel_DrawaPixel> PixelPtr = nullptr;
 
 	void FlagStart();
 	void FlagUpdate(float _DeltaTime);

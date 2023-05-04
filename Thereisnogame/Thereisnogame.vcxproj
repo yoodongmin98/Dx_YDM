@@ -190,6 +190,7 @@
     <ClInclude Include="C_0Letter_S.h" />
     <ClInclude Include="C_0Letter_sE.h" />
     <ClInclude Include="C_0Letter_T.h" />
+    <ClInclude Include="DrawaPixel.h" />
     <ClInclude Include="Fake Program Level.h" />
     <ClInclude Include="F_Brazilian.h" />
     <ClInclude Include="F_Chinese.h" />
@@ -236,6 +237,7 @@
     <ClCompile Include="C_0Letter_S.cpp" />
     <ClCompile Include="C_0Letter_sE.cpp" />
     <ClCompile Include="C_0Letter_T.cpp" />
+    <ClCompile Include="DrawaPixel.cpp" />
     <ClCompile Include="Fake Program Level.cpp" />
     <ClCompile Include="F_Brazilian.cpp" />
     <ClCompile Include="F_Chinese.cpp" />

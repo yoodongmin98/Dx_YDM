@@ -7,6 +7,7 @@
 #include "Panel_Back.h"
 #include "SelectBox.h"
 #include "Arrow.h"
+#include "DrawaPixel.h"
 
 
 
@@ -95,6 +96,15 @@ void MainMenuLevel::DrawaPixelStart()
 void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 {
 	Flagfunction(_DeltaTime);
+
+	std::function<void(float)> PixelFunctional;
+
+	PixelFunctional = std::bind(&Panel_DrawaPixel::Down,PixelPtr.get(),std::placeholders::_1);
+	PixelFunctional(_DeltaTime);
+	//3초뒤
+	/*PixelFunctional = std::bind(&Panel_DrawaPixel::Up, PixelPtr.get(), std::placeholders::_1);
+	PixelFunctional(_DeltaTime);*/
+
 }
 void MainMenuLevel::DrawaPixelEnd()
 {
@@ -114,6 +124,10 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 
 	std::function<void(float)> FlagFunctional;
 
+	//디버깅용
+	//FlagFunctional = std::bind(&Panel_DrawaPixel::Up, PixelPtr.get(), std::placeholders::_1);
+	//FlagFunctional(_DeltaTime);
+	//
 	FlagFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
 	FlagFunctional(_DeltaTime);
 

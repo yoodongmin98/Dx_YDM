@@ -15,6 +15,7 @@
 #include "SelectBox.h"
 #include "Panel_Continue.h"
 #include "Panel_Back.h"
+#include "DrawaPixel.h"
 
 //Letter
 #include "C_0Letter_T.h"
@@ -90,6 +91,7 @@ void MainMenuLevel::Start()
 		PanelBackPtr=CreateActor<Panel_Back>();
 		SelectBoxPtr=CreateActor<SelectBox>();
 		CreateMainMenuArrow();
+		CreateActor<Panel_DrawaPixel>();
 		CreateActor<AlphaCircle>();
 	}
 	
@@ -241,8 +243,7 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 	case MainMenuState::Select:
 		for (size_t i = 0; i < FlagVector.size(); i++)
 		{
-			float FlagLeftValue = FlagLeftValueSet(i);
-			FlagVector[i].get()->FlagLeft(FlagLeftValue,_DeltaTime);
+			FlagVector[i].get()->FlagUp(_DeltaTime);
 		}
 		break;
 	default:
@@ -283,45 +284,6 @@ float MainMenuLevel::FlagValueSet(int _iValue)
 		break;
 	case 9:
 		return 380.0f;
-		break;
-	default:
-		break;
-	}
-}
-
-float MainMenuLevel::FlagLeftValueSet(int _iValue)
-{
-	switch (_iValue)
-	{
-	case 0:
-		return 330.0f;
-		break;
-	case 1:
-		return 50.0f;
-		break;
-	case 2:
-		return -340.0f;
-		break;
-	case 3:
-		return 420.0f;
-		break;
-	case 4:
-		return 180.0f;
-		break;
-	case 5:
-		return -170.0f;
-		break;
-	case 6:
-		return -400.0f;
-		break;
-	case 7:
-		return 330.0f;
-		break;
-	case 8:
-		return -310.0f;
-		break;
-	case 9:
-		return -70.0f;
 		break;
 	default:
 		break;

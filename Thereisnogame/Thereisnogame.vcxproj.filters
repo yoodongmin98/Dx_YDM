@@ -127,6 +127,9 @@
     <ClCompile Include="F_Brazilian.cpp">
       <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
+    <ClCompile Include="DrawaPixel.cpp">
+      <Filter>Chapter0_MainMenu\Actor\DrawaPixel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -252,6 +255,9 @@
     <ClInclude Include="F_Brazilian.h">
       <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
+    <ClInclude Include="DrawaPixel.h">
+      <Filter>Chapter0_MainMenu\Actor\DrawaPixel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -310,6 +316,9 @@
     </Filter>
     <Filter Include="Chapter0_MainMenu\Actor\SelectBox\Arrow">
       <UniqueIdentifier>{e3671a76-1e5e-4e01-9aef-a63613c2be96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0_MainMenu\Actor\DrawaPixel">
+      <UniqueIdentifier>{ac402e5a-38d6-44b8-a652-8f864d07c5f8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
