@@ -20,7 +20,7 @@ C_Letter_M::~C_Letter_M()
 
 void C_Letter_M::Start()
 {
-	Init(Letter_M, "Letter12.png", { 161,459,1 }, { 160,480,-10 });
+	Init(Letter_M, "Letter12.png", { 161,459,1 }, { 160,580,-10 });
 }
 
 void C_Letter_M::Update(float _DeltaTime)

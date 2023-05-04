@@ -25,6 +25,8 @@ public:
 
 	void CreateMainMenuArrow();
 	void CreateLetter();
+	void CreateFlag();
+
 	
 	void ChangeState(MainMenuState _State);
 	void UpdateState(float _DeltaTime);
@@ -64,6 +66,7 @@ private:
 
 	std::vector<std::shared_ptr<class G_ActorBase>> LetterVector;
 	std::vector<std::shared_ptr<class G_ActorBase>> ArrowVector;
+	std::vector<std::shared_ptr<class G_ActorBase>> FlagVector;
 
 
 };

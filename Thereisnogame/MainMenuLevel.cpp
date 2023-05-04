@@ -38,6 +38,19 @@
 #include "Arrow3.h"
 #include "Arrow4.h"
 
+//Flag
+#include "F_Brazilian.h"
+#include "F_Chinese.h"
+#include "F_English.h"
+#include "F_French.h"
+#include "F_German.h"
+#include "F_Italian.h"
+#include "F_Japan.h"
+#include "F_Korea.h"
+#include "F_Russian.h"
+#include "F_Spanish.h"
+
+
 MainMenuLevel::MainMenuLevel()
 {
 }
@@ -71,12 +84,13 @@ void MainMenuLevel::Start()
 	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
 		CreateActor<BackCurtain>();
+		CreateFlag();
 		CreateLetter();
 		PanelContinuePtr = CreateActor<Panel_Continue>();
 		PanelBackPtr=CreateActor<Panel_Back>();
 		SelectBoxPtr=CreateActor<SelectBox>();
 		CreateMainMenuArrow();
-		//CreateActor<AlphaCircle>();
+		CreateActor<AlphaCircle>();
 	}
 	
 
@@ -109,6 +123,22 @@ void MainMenuLevel::Update(float _DeltaTime)
 		ChangeState(MainMenuState::Select);
 	}
 	
+}
+
+void MainMenuLevel::CreateFlag()
+{
+	FlagVector.push_back(CreateActor<F_Chinese>());
+	FlagVector.push_back(CreateActor<F_French>());
+	FlagVector.push_back(CreateActor<F_Japan>());
+
+	FlagVector.push_back(CreateActor<F_Italian>());
+	FlagVector.push_back(CreateActor<F_German>());
+	FlagVector.push_back(CreateActor<F_Brazilian>());
+	FlagVector.push_back(CreateActor<F_Russian>());
+
+	FlagVector.push_back(CreateActor<F_Korea>());
+	FlagVector.push_back(CreateActor<F_Spanish>());
+	FlagVector.push_back(CreateActor<F_English>());
 }
 
 void MainMenuLevel::CreateMainMenuArrow()

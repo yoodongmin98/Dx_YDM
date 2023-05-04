@@ -19,6 +19,7 @@ public:
 	void Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const std::string_view& _ImageName, float4 _Scale, float4 _Position);
 	void Repeat(float _MoveValue, float _DeltaTime);
 	void Down(float _DeltaTime);
+	void FlagDown(float _EndValue, float _DeltaTime);
 	void Up(float _DeltaTime);
 protected:
 	void Start() override;
