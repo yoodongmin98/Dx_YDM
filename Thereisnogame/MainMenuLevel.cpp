@@ -91,7 +91,7 @@ void MainMenuLevel::Start()
 		PanelBackPtr=CreateActor<Panel_Back>();
 		SelectBoxPtr=CreateActor<SelectBox>();
 		CreateMainMenuArrow();
-		CreateActor<Panel_DrawaPixel>();
+		PixelPtr=CreateActor<Panel_DrawaPixel>();
 		CreateActor<AlphaCircle>();
 	}
 	

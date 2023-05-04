@@ -29,7 +29,7 @@ void Panel_DrawaPixel::Start()
 
 void Panel_DrawaPixel::Update(float _DeltaTime)
 {
-
+	Repeat(5, _DeltaTime);
 }
 
 void Panel_DrawaPixel::Render(float _Delta)

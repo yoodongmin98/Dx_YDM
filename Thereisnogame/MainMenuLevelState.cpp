@@ -124,9 +124,9 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 
 	std::function<void(float)> FlagFunctional;
 
-	//디버깅용
-	//FlagFunctional = std::bind(&Panel_DrawaPixel::Up, PixelPtr.get(), std::placeholders::_1);
-	//FlagFunctional(_DeltaTime);
+	//임시로 올리기용
+	FlagFunctional = std::bind(&Panel_DrawaPixel::Up, PixelPtr.get(), std::placeholders::_1);
+	FlagFunctional(_DeltaTime);
 	//
 	FlagFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
 	FlagFunctional(_DeltaTime);
