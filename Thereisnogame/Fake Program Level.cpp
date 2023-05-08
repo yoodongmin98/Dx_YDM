@@ -9,8 +9,10 @@
 #include <GameEngineCore/GameEngineTexture.h>
 
 
-
 //Actor
+#include "AlphaCircle.h"
+#include "C2_BackGround.h"
+
 
 FakeProgramLevel::FakeProgramLevel()
 {
@@ -46,7 +48,8 @@ void FakeProgramLevel::Start()
 
 	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
-
+		CreateActor<C2_BackGround>();
+		//CreateActor<AlphaCircle>();
 	}
 
 }

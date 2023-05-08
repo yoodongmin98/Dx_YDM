@@ -171,6 +171,7 @@
     <ClInclude Include="Arrow2.h" />
     <ClInclude Include="Arrow3.h" />
     <ClInclude Include="Arrow4.h" />
+    <ClInclude Include="C2_BackGround.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="ContentsCore.h">
       <SubType>
@@ -219,6 +220,7 @@
     <ClCompile Include="Arrow2.cpp" />
     <ClCompile Include="Arrow3.cpp" />
     <ClCompile Include="Arrow4.cpp" />
+    <ClCompile Include="C2_BackGround.cpp" />
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="ContentsCore.cpp">
       <SubType>

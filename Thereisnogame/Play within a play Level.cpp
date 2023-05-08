@@ -12,6 +12,7 @@
 
 //Actor
 
+
 PlaywithinaplayLevel::PlaywithinaplayLevel()
 {
 }
@@ -46,7 +47,7 @@ void PlaywithinaplayLevel::Start()
 
 	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
-
+		
 	}
 
 }

@@ -133,6 +133,9 @@
     <ClCompile Include="StartPictures.cpp">
       <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
     </ClCompile>
+    <ClCompile Include="C2_BackGround.cpp">
+      <Filter>CHapter2_Fake Program\Level\BackGround</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -264,6 +267,9 @@
     <ClInclude Include="StartPictures.h">
       <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
     </ClInclude>
+    <ClInclude Include="C2_BackGround.h">
+      <Filter>CHapter2_Fake Program\Level\BackGround</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -325,6 +331,12 @@
     </Filter>
     <Filter Include="Chapter0_MainMenu\Actor\DrawaPixel">
       <UniqueIdentifier>{ac402e5a-38d6-44b8-a652-8f864d07c5f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1_Play within a play\Actor">
+      <UniqueIdentifier>{5b23c842-8373-4d30-9045-c120aba982bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2_Fake Program\Level\BackGround">
+      <UniqueIdentifier>{d7ad261a-27d8-426a-8076-d4f557c190a4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
