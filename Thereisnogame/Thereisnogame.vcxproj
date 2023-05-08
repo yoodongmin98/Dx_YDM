@@ -211,6 +211,10 @@
     <ClInclude Include="PrecompileHeader.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="SelectBox.h" />
+    <ClInclude Include="squirrel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="StartPictures.h" />
   </ItemGroup>
   <ItemGroup>
@@ -266,7 +270,14 @@
     </ClCompile>
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="SelectBox.cpp" />
+    <ClCompile Include="squirrel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="StartPictures.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\구조 메모장.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

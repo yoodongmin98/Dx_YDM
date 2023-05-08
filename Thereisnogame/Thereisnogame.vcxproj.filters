@@ -8,7 +8,7 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="MainMenuLevel.cpp">
-      <Filter>Chapter0_MainMenu\Level</Filter>
+      <Filter>Chapter0.0_MainMenu\Level</Filter>
     </ClCompile>
     <ClCompile Include="Chain.cpp">
       <Filter>CommonUI</Filter>
@@ -17,7 +17,7 @@
       <Filter>CommonUI</Filter>
     </ClCompile>
     <ClCompile Include="SelectBox.cpp">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox</Filter>
     </ClCompile>
     <ClCompile Include="G_ActorBase.cpp">
       <Filter>Actor Base</Filter>
@@ -29,112 +29,115 @@
       <Filter>Chapter1.5_Program Loading\Level</Filter>
     </ClCompile>
     <ClCompile Include="Play within a play Level.cpp">
-      <Filter>Chapter1_Play within a play\Level</Filter>
+      <Filter>Chapter1.0_Play within a play\Level</Filter>
     </ClCompile>
     <ClCompile Include="Fake Program Level.cpp">
-      <Filter>CHapter2_Fake Program\Level</Filter>
+      <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_E.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_H .cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_I.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_R.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_S.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_sE.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_T.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_N.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_O.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_G.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_A.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_M.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_e2.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClCompile>
     <ClCompile Include="MainMenuLevelState.cpp">
-      <Filter>Chapter0_MainMenu\Level</Filter>
+      <Filter>Chapter0.0_MainMenu\Level</Filter>
     </ClCompile>
     <ClCompile Include="Panel_Continue.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClCompile>
     <ClCompile Include="Panel_Back.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClCompile>
     <ClCompile Include="Arrow.cpp">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClCompile>
     <ClCompile Include="Arrow1.cpp">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClCompile>
     <ClCompile Include="Arrow2.cpp">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClCompile>
     <ClCompile Include="Arrow3.cpp">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClCompile>
     <ClCompile Include="Arrow4.cpp">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClCompile>
     <ClCompile Include="F_Korea.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_Japan.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_Chinese.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_English.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_French.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_Italian.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_German.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_Spanish.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_Russian.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="F_Brazilian.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClCompile>
     <ClCompile Include="DrawaPixel.cpp">
-      <Filter>Chapter0_MainMenu\Actor\DrawaPixel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\DrawaPixel</Filter>
     </ClCompile>
     <ClCompile Include="StartPictures.cpp">
-      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClCompile>
     <ClCompile Include="C2_BackGround.cpp">
-      <Filter>CHapter2_Fake Program\Level\BackGround</Filter>
+      <Filter>CHapter2.0_Fake Program\Level\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="squirrel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -145,7 +148,7 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuLevel.h">
-      <Filter>Chapter0_MainMenu\Level</Filter>
+      <Filter>Chapter0.0_MainMenu\Level</Filter>
     </ClInclude>
     <ClInclude Include="Chain.h">
       <Filter>CommonUI</Filter>
@@ -154,7 +157,7 @@
       <Filter>CommonUI</Filter>
     </ClInclude>
     <ClInclude Include="SelectBox.h">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox</Filter>
     </ClInclude>
     <ClInclude Include="G_ActorBase.h">
       <Filter>Actor Base</Filter>
@@ -166,147 +169,123 @@
       <Filter>Chapter1.5_Program Loading\Level</Filter>
     </ClInclude>
     <ClInclude Include="Play within a play Level.h">
-      <Filter>Chapter1_Play within a play\Level</Filter>
+      <Filter>Chapter1.0_Play within a play\Level</Filter>
     </ClInclude>
     <ClInclude Include="Fake Program Level.h">
-      <Filter>CHapter2_Fake Program\Level</Filter>
+      <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_E.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_H .h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_I.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_R.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_S.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_sE.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_T.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\There is</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_N.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_O.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_G.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_A.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_M.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_e2.h">
-      <Filter>Chapter0_MainMenu\Actor\Letter\No game</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Letter\No game</Filter>
     </ClInclude>
     <ClInclude Include="Panel_Continue.h">
-      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClInclude>
     <ClInclude Include="Panel_Back.h">
-      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClInclude>
     <ClInclude Include="Arrow.h">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClInclude>
     <ClInclude Include="Arrow1.h">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClInclude>
     <ClInclude Include="Arrow2.h">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClInclude>
     <ClInclude Include="Arrow3.h">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClInclude>
     <ClInclude Include="Arrow4.h">
-      <Filter>Chapter0_MainMenu\Actor\SelectBox\Arrow</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\Arrow</Filter>
     </ClInclude>
     <ClInclude Include="F_Korea.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_Japan.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_Chinese.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_English.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_French.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_Italian.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_German.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_Spanish.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_Russian.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="F_Brazilian.h">
-      <Filter>Chapter0_MainMenu\Actor\Flag</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Flag</Filter>
     </ClInclude>
     <ClInclude Include="DrawaPixel.h">
-      <Filter>Chapter0_MainMenu\Actor\DrawaPixel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\DrawaPixel</Filter>
     </ClInclude>
     <ClInclude Include="StartPictures.h">
-      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+      <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClInclude>
     <ClInclude Include="C2_BackGround.h">
-      <Filter>CHapter2_Fake Program\Level\BackGround</Filter>
+      <Filter>CHapter2.0_Fake Program\Level\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="squirrel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
       <UniqueIdentifier>{b7b02c0f-43ab-4d10-8e35-019d887e1390}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Chapter0_MainMenu">
-      <UniqueIdentifier>{cb46ad1a-422b-4787-8c23-f8a2c834579e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter1_Play within a play">
-      <UniqueIdentifier>{81fb460f-8f12-4cd6-a645-7b095595a39d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2_Fake Program">
-      <UniqueIdentifier>{0d1587da-ee20-4381-8476-d7820d86efcf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Actor Base">
       <UniqueIdentifier>{ac088f94-cd95-4886-a858-94f9a7d1a8b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Chapter0_MainMenu\Level">
-      <UniqueIdentifier>{857133b8-212c-4f02-9ec2-2266fe1edb27}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor">
-      <UniqueIdentifier>{a81ac9fe-7dae-43a3-8669-2524a87f3b3e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CommonUI">
       <UniqueIdentifier>{2e5e51e2-2dd0-4f04-81b7-8d7ad33f3c60}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\Letter">
-      <UniqueIdentifier>{96d1166d-5a38-44ac-8b4a-53ae5921a4f6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\SelectBox">
-      <UniqueIdentifier>{f05b8f29-b651-4ebf-ab8d-028b3b1cb7b9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter1_Play within a play\Level">
-      <UniqueIdentifier>{7919d00b-24e4-41c5-8f3c-62bb4e95d26d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2_Fake Program\Level">
-      <UniqueIdentifier>{a9d32771-3e43-4815-9495-bfd57d377e06}</UniqueIdentifier>
     </Filter>
     <Filter Include="Chapter1.5_Program Loading">
       <UniqueIdentifier>{d050acc6-b76c-4a3c-9fe0-cf3095bf48ad}</UniqueIdentifier>
@@ -314,29 +293,70 @@
     <Filter Include="Chapter1.5_Program Loading\Level">
       <UniqueIdentifier>{5dc152a1-daef-46bb-b47a-ffb51159f739}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\Letter\There is">
-      <UniqueIdentifier>{879b0f4c-a531-41f2-b9ff-256aa6210f79}</UniqueIdentifier>
+    <Filter Include="Chapter1.0_Play within a play">
+      <UniqueIdentifier>{81fb460f-8f12-4cd6-a645-7b095595a39d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\Letter\No game">
-      <UniqueIdentifier>{5e8b31f4-5bc1-4fdb-a8b7-ac2ea91cf3ce}</UniqueIdentifier>
+    <Filter Include="Chapter1.0_Play within a play\Level">
+      <UniqueIdentifier>{7919d00b-24e4-41c5-8f3c-62bb4e95d26d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\Flag">
-      <UniqueIdentifier>{336a1a97-912f-41b9-bc14-467575274a76}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\Panel">
-      <UniqueIdentifier>{cce30c6e-e22e-445e-a612-33c5f7f9d203}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\SelectBox\Arrow">
-      <UniqueIdentifier>{e3671a76-1e5e-4e01-9aef-a63613c2be96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter0_MainMenu\Actor\DrawaPixel">
-      <UniqueIdentifier>{ac402e5a-38d6-44b8-a652-8f864d07c5f8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Chapter1_Play within a play\Actor">
+    <Filter Include="Chapter1.0_Play within a play\Actor">
       <UniqueIdentifier>{5b23c842-8373-4d30-9045-c120aba982bd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHapter2_Fake Program\Level\BackGround">
+    <Filter Include="Chapter0.0_MainMenu">
+      <UniqueIdentifier>{cb46ad1a-422b-4787-8c23-f8a2c834579e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Level">
+      <UniqueIdentifier>{857133b8-212c-4f02-9ec2-2266fe1edb27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor">
+      <UniqueIdentifier>{a81ac9fe-7dae-43a3-8669-2524a87f3b3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\Letter">
+      <UniqueIdentifier>{96d1166d-5a38-44ac-8b4a-53ae5921a4f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\Letter\There is">
+      <UniqueIdentifier>{879b0f4c-a531-41f2-b9ff-256aa6210f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\Letter\No game">
+      <UniqueIdentifier>{5e8b31f4-5bc1-4fdb-a8b7-ac2ea91cf3ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\SelectBox">
+      <UniqueIdentifier>{f05b8f29-b651-4ebf-ab8d-028b3b1cb7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\SelectBox\Arrow">
+      <UniqueIdentifier>{e3671a76-1e5e-4e01-9aef-a63613c2be96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\Flag">
+      <UniqueIdentifier>{336a1a97-912f-41b9-bc14-467575274a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\Panel">
+      <UniqueIdentifier>{cce30c6e-e22e-445e-a612-33c5f7f9d203}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\DrawaPixel">
+      <UniqueIdentifier>{ac402e5a-38d6-44b8-a652-8f864d07c5f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program">
+      <UniqueIdentifier>{0d1587da-ee20-4381-8476-d7820d86efcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Level">
+      <UniqueIdentifier>{a9d32771-3e43-4815-9495-bfd57d377e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Level\BackGround">
       <UniqueIdentifier>{d7ad261a-27d8-426a-8076-d4f557c190a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor">
+      <UniqueIdentifier>{3d541356-c62a-4ad2-9f98-6f67442f8c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder">
+      <UniqueIdentifier>{1766bcde-a63a-4db1-8c53-98a39b093da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Backetc">
+      <UniqueIdentifier>{1f658f27-2485-4ba0-8aae-e138973c9ca6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\구조 메모장.txt">
+      <Filter>Core</Filter>
+    </Text>
   </ItemGroup>
 </Project>
