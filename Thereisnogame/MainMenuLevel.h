@@ -35,7 +35,7 @@ public:
 	void Arrowfunction(float _DeltaTime);
 	void Flagfunction(float _DeltaTime);
 
-	float FlagValueSet(int _iValue);
+	float FlagValueSet(int SetValue,int _iValue);
 	float FlagLeftValueSet(int _iValue);
 
 	
@@ -72,6 +72,10 @@ private:
 	std::vector<std::shared_ptr<class G_ActorBase>> LetterVector;
 	std::vector<std::shared_ptr<class G_ActorBase>> ArrowVector;
 	std::vector<std::shared_ptr<class G_ActorBase>> FlagVector;
+
+	float FlagTime = 0.0f;
+	float DrawaPixelTime = 0.0f;
+	
 
 
 };

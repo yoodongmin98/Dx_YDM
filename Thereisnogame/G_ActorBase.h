@@ -21,7 +21,7 @@ public:
 	void Down(float _DeltaTime);
 	void Up(float _DeltaTime);
 	void FlagDown(float _EndValue, float _DeltaTime);
-	void FlagUp(float _DeltaTime);
+	void FlagUp(float _PlusXvalue,float _DeltaTime);
 
 protected:
 	void Start() override;

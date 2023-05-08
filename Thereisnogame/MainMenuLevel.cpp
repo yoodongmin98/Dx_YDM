@@ -92,7 +92,7 @@ void MainMenuLevel::Start()
 		SelectBoxPtr=CreateActor<SelectBox>();
 		CreateMainMenuArrow();
 		PixelPtr=CreateActor<Panel_DrawaPixel>();
-		CreateActor<AlphaCircle>();
+		//CreateActor<AlphaCircle>();
 	}
 	
 
@@ -234,7 +234,7 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 	case MainMenuState::Flag:
 		for (size_t i = 0; i < FlagVector.size(); i++)
 		{
-			float FlagValue=FlagValueSet(i);
+			float FlagValue=FlagValueSet(1,i);
 			FlagVector[i].get()->FlagDown(FlagValue,_DeltaTime);
 		}
 		break;
@@ -243,7 +243,8 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 	case MainMenuState::Select:
 		for (size_t i = 0; i < FlagVector.size(); i++)
 		{
-			FlagVector[i].get()->FlagUp(_DeltaTime);
+			float FlagValues = FlagValueSet(2, i);
+			FlagVector[i].get()->FlagUp(FlagValues,_DeltaTime);
 		}
 		break;
 	default:
@@ -251,41 +252,83 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 	}
 }
 
-float MainMenuLevel::FlagValueSet(int _iValue)
+float MainMenuLevel::FlagValueSet(int SetValue,int _iValue)
 {
-	switch (_iValue)
+	if (1 == SetValue)
 	{
-	case 0:
-		return 730.0f;
-		break;
-	case 1:
-		return 670.0f;
-		break;
-	case 2:
-		return 730.0f;
-		break;
-	case 3:
-		return 530.0f;
-		break;
-	case 4:
-		return 480.0f;
-		break;
-	case 5:
-		return 570.0f;
-		break;
-	case 6:
-		return 500.0f;
-		break;
-	case 7:
-		return 300.0f;
-		break;
-	case 8:
-		return 300.0f;
-		break;
-	case 9:
-		return 380.0f;
-		break;
-	default:
-		break;
+		switch (_iValue)
+		{
+		case 0:
+			return 730.0f;
+			break;
+		case 1:
+			return 670.0f;
+			break;
+		case 2:
+			return 730.0f;
+			break;
+		case 3:
+			return 530.0f;
+			break;
+		case 4:
+			return 480.0f;
+			break;
+		case 5:
+			return 570.0f;
+			break;
+		case 6:
+			return 500.0f;
+			break;
+		case 7:
+			return 300.0f;
+			break;
+		case 8:
+			return 300.0f;
+			break;
+		case 9:
+			return 380.0f;
+			break;
+		default:
+			break;
+		}
 	}
+	if (2 == SetValue)
+	{
+		switch (_iValue)
+		{
+		case 0:
+			return 330.0f;
+			break;
+		case 1:
+			return 50.0f;
+			break;
+		case 2:
+			return -480.0f;
+			break;
+		case 3:
+			return 920.0f;
+			break;
+		case 4:
+			return 480.0f;
+			break;
+		case 5:
+			return -370.0f;
+			break;
+		case 6:
+			return -600.0f;
+			break;
+		case 7:
+			return 530.0f; 
+			break;
+		case 8:
+			return -510.0f;
+			break;
+		case 9:
+			return -70.0f;
+			break;
+		default:
+			break;
+		}
+	}
+	
 }
