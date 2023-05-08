@@ -229,7 +229,7 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 	switch (StateValue)
 	{
 	case MainMenuState::Flag:
-		for (size_t i = 0; i < FlagVector.size(); i++)
+		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValue=FlagValueSet(1,i);
 			FlagVector[i].get()->FlagDown(FlagValue,_DeltaTime);
@@ -238,7 +238,7 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 	case MainMenuState::DrawaPixel:
 	case MainMenuState::Menu:
 	case MainMenuState::Select:
-		for (size_t i = 0; i < FlagVector.size(); i++)
+		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValues = FlagValueSet(2, i);
 			FlagVector[i].get()->FlagUp(FlagValues,_DeltaTime);
@@ -289,7 +289,7 @@ float MainMenuLevel::FlagValueSet(int SetValue,int _iValue)
 			break;
 		}
 	}
-	if (2 == SetValue)
+	else if (2 == SetValue)
 	{
 		switch (_iValue)
 		{
@@ -327,5 +327,8 @@ float MainMenuLevel::FlagValueSet(int SetValue,int _iValue)
 			break;
 		}
 	}
-	
+	else
+	{
+		MsgAssert("FlagValueSet에서올바르지 않은 인수가 들어왔습니다")
+	}
 }

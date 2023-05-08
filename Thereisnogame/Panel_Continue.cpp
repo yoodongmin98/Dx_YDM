@@ -44,5 +44,5 @@ void Panel_Continue::ZRotations(float _DeltaTime)
 void Panel_Continue::RZRotations(float _DeltaTime)
 {
 	GetTransform()->SetLocalRotation(float4::LerpClamp(GetTransform()->GetLocalRotation(), { 0,0,-90.0f }, _DeltaTime));
-	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), float4::Zero, _DeltaTime*1.5));
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), float4::Zero, _DeltaTime*1.5f));
 }
