@@ -130,6 +130,9 @@
     <ClCompile Include="DrawaPixel.cpp">
       <Filter>Chapter0_MainMenu\Actor\DrawaPixel</Filter>
     </ClCompile>
+    <ClCompile Include="StartPictures.cpp">
+      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -257,6 +260,9 @@
     </ClInclude>
     <ClInclude Include="DrawaPixel.h">
       <Filter>Chapter0_MainMenu\Actor\DrawaPixel</Filter>
+    </ClInclude>
+    <ClInclude Include="StartPictures.h">
+      <Filter>Chapter0_MainMenu\Actor\Panel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

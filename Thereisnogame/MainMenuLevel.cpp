@@ -16,6 +16,7 @@
 #include "Panel_Continue.h"
 #include "Panel_Back.h"
 #include "DrawaPixel.h"
+#include "StartPictures.h"
 
 //Letter
 #include "C_0Letter_T.h"
@@ -92,6 +93,7 @@ void MainMenuLevel::Start()
 		SelectBoxPtr=CreateActor<SelectBox>();
 		CreateMainMenuArrow();
 		PixelPtr=CreateActor<Panel_DrawaPixel>();
+		PicturesPtr=CreateActor<StartPictures>();
 		//CreateActor<AlphaCircle>();
 	}
 	

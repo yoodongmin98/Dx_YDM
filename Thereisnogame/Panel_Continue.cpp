@@ -22,7 +22,7 @@ Panel_Continue::~Panel_Continue()
 void Panel_Continue::Start()
 {
 	GetTransform()->SetLocalRotation({ 0,0,-90 });
-	Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 600,315,-50 });
+	Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 600,315,-10 });
 }
 
 void Panel_Continue::Update(float _DeltaTime)

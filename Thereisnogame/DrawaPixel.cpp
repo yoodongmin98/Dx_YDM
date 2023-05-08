@@ -23,8 +23,8 @@ void Panel_DrawaPixel::Start()
 {
 	Init(Panel_CNC, "CNC.png", { 342*0.9,547*0.9,1 }, { 450,900,0 });//y300
 	Init(Panel_Book, "M_DrawMeAPixelBook01.png", { 597,807,1 }, { 0,750,0 });//y150
-	//Init(Panel_Box, "BoxMenu.png", { 378,523,1 }, { -380,300,0 });
-	//얘는 나중에 이미지 찾기
+	Init(Panel_Box, "NotAgameBy_Panel.png", { 354,422,1 }, { -380,900,0 });
+	
 }
 
 void Panel_DrawaPixel::Update(float _DeltaTime)

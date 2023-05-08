@@ -66,7 +66,6 @@ void G_ActorBase::Down(float _DeltaTime)
 void G_ActorBase::Up(float _DeltaTime)
 {
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,300 }, _DeltaTime));
-	
 }
 
 void G_ActorBase::FlagDown(float _EndValue,float _DeltaTime)

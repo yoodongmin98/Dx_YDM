@@ -8,6 +8,7 @@
 #include "SelectBox.h"
 #include "Arrow.h"
 #include "DrawaPixel.h"
+#include "StartPictures.h"
 
 
 
@@ -140,18 +141,21 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 	Arrowfunction(_DeltaTime);
 	Flagfunction(_DeltaTime);
 
-	std::function<void(float)> FlagFunctional;
+	std::function<void(float)> MenuFunctional;
 
-	FlagFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
-	FlagFunctional(_DeltaTime);
+	MenuFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
+	MenuFunctional(_DeltaTime);
 
-	FlagFunctional = std::bind(&Panel_Back::RZRotations, PanelBackPtr.get(), std::placeholders::_1);
-	FlagFunctional(_DeltaTime);
+	MenuFunctional = std::bind(&Panel_Back::RZRotations, PanelBackPtr.get(), std::placeholders::_1);
+	MenuFunctional(_DeltaTime);
+
+	MenuFunctional = std::bind(&StartPictures::PictureUp, PicturesPtr.get(), std::placeholders::_1);
+	MenuFunctional(_DeltaTime);
 	//if(마우스왼쪽버튼을 누른다면)으로 바꾸기
 	if (MenuTime > 6.0f)
 	{
-		FlagFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
-		FlagFunctional(_DeltaTime);
+		MenuFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
+		MenuFunctional(_DeltaTime);
 	}
 	
 }
@@ -170,16 +174,19 @@ void MainMenuLevel::SelectUpdate(float _DeltaTime)
 	Letterfunction(_DeltaTime);
 	Arrowfunction(_DeltaTime);
 	Flagfunction(_DeltaTime);
-	std::function<void(float)> DrawaPixelFunctional;
+	std::function<void(float)> SelectFunctional;
 
-	DrawaPixelFunctional = std::bind(&Panel_Continue::ZRotations, PanelContinuePtr.get(), std::placeholders::_1);
-	DrawaPixelFunctional(_DeltaTime);
+	SelectFunctional = std::bind(&Panel_Continue::ZRotations, PanelContinuePtr.get(), std::placeholders::_1);
+	SelectFunctional(_DeltaTime);
 
-	DrawaPixelFunctional = std::bind(&Panel_Back::ZRotations, PanelBackPtr.get(), std::placeholders::_1);
-	DrawaPixelFunctional(_DeltaTime);
+	SelectFunctional = std::bind(&Panel_Back::ZRotations, PanelBackPtr.get(), std::placeholders::_1);
+	SelectFunctional(_DeltaTime);
 
-	DrawaPixelFunctional = std::bind(&SelectBox::Down, SelectBoxPtr.get(), std::placeholders::_1);
-	DrawaPixelFunctional(_DeltaTime);
+	SelectFunctional = std::bind(&SelectBox::Down, SelectBoxPtr.get(), std::placeholders::_1);
+	SelectFunctional(_DeltaTime);
+
+	SelectFunctional = std::bind(&StartPictures::PictureDown, PicturesPtr.get(), std::placeholders::_1);
+	SelectFunctional(_DeltaTime);
 }
 void MainMenuLevel::SelectEnd()
 {

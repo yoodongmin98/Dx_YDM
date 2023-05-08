@@ -210,6 +210,7 @@
     <ClInclude Include="PrecompileHeader.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="SelectBox.h" />
+    <ClInclude Include="StartPictures.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AlphaCircle.cpp" />
@@ -263,6 +264,7 @@
     </ClCompile>
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="SelectBox.cpp" />
+    <ClCompile Include="StartPictures.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
