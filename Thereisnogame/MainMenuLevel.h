@@ -75,6 +75,7 @@ private:
 
 	float FlagTime = 0.0f;
 	float DrawaPixelTime = 0.0f;
+	float MenuTime = 0.0f;
 	
 
 

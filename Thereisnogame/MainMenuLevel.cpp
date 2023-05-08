@@ -105,7 +105,7 @@ void MainMenuLevel::Start()
 		GameEngineInput::CreateKey("TestKey3", '3');
 		GameEngineInput::CreateKey("TestKey4", '4');
 	}
-	ChangeState(MainMenuState::None);
+	ChangeState(MainMenuState::Flag);
 
 }
 
@@ -118,14 +118,6 @@ void MainMenuLevel::Update(float _DeltaTime)
 		
 	}
 	//테스트용
-	if (GameEngineInput::IsDown("TestKey1"))
-	{
-		ChangeState(MainMenuState::Flag);
-	}
-	if (GameEngineInput::IsDown("TestKey2"))
-	{
-		ChangeState(MainMenuState::DrawaPixel);
-	}
 	if (GameEngineInput::IsDown("TestKey3"))
 	{
 		ChangeState(MainMenuState::Menu);
@@ -211,7 +203,10 @@ void MainMenuLevel::Arrowfunction(float _DeltaTime)
 	case MainMenuState::Menu:
 		for (size_t i = 0; i < ArrowVector.size(); i++)
 		{
-			ArrowVector[i].get()->Up(_DeltaTime);
+			if (MenuTime > 6.0f)
+			{
+				ArrowVector[i].get()->Up(_DeltaTime);
+			}
 		}
 		break;
 	case MainMenuState::Flag:

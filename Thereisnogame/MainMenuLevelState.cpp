@@ -81,7 +81,16 @@ void MainMenuLevel::FlagStart()
 }
 void MainMenuLevel::FlagUpdate(float _DeltaTime)
 {
-	Flagfunction(_DeltaTime);
+	FlagTime += _DeltaTime; //Phase Time
+
+	if (FlagTime > 1.0f)
+	{
+		Flagfunction(_DeltaTime);
+		if (FlagTime > 7.0f) //바꿔야할 부분(if mouse<->Collision이 충돌(클릭)을 한다면)
+		{
+			ChangeState(MainMenuState::DrawaPixel);
+		}
+	}
 }
 void MainMenuLevel::FlagEnd()
 {
@@ -95,16 +104,24 @@ void MainMenuLevel::DrawaPixelStart()
 }
 void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 {
+	DrawaPixelTime += _DeltaTime; //Phase Time
 	Flagfunction(_DeltaTime);
 
 	std::function<void(float)> PixelFunctional;
-
-	PixelFunctional = std::bind(&Panel_DrawaPixel::Down,PixelPtr.get(),std::placeholders::_1);
-	PixelFunctional(_DeltaTime);
-	//3초뒤
-	/*PixelFunctional = std::bind(&Panel_DrawaPixel::Up, PixelPtr.get(), std::placeholders::_1);
-	PixelFunctional(_DeltaTime);*/
-
+	if (DrawaPixelTime > 3.0f)
+	{
+		PixelFunctional = std::bind(&Panel_DrawaPixel::Down, PixelPtr.get(), std::placeholders::_1);
+		PixelFunctional(_DeltaTime);
+		if (DrawaPixelTime > 7.0f)
+		{
+			PixelFunctional = std::bind(&Panel_DrawaPixel::Up, PixelPtr.get(), std::placeholders::_1);
+			PixelFunctional(_DeltaTime);
+			if (DrawaPixelTime > 10.0f)
+			{
+				ChangeState(MainMenuState::Menu);
+			}
+		}
+	}
 }
 void MainMenuLevel::DrawaPixelEnd()
 {
@@ -118,24 +135,25 @@ void MainMenuLevel::MenuStart()
 }
 void MainMenuLevel::MenuUpdate(float _DeltaTime)
 {
+	MenuTime += _DeltaTime;
 	Letterfunction(_DeltaTime);
 	Arrowfunction(_DeltaTime);
 	Flagfunction(_DeltaTime);
 
 	std::function<void(float)> FlagFunctional;
 
-	//임시로 올리기용
-	FlagFunctional = std::bind(&Panel_DrawaPixel::Up, PixelPtr.get(), std::placeholders::_1);
-	FlagFunctional(_DeltaTime);
-	//
 	FlagFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
 	FlagFunctional(_DeltaTime);
 
 	FlagFunctional = std::bind(&Panel_Back::RZRotations, PanelBackPtr.get(), std::placeholders::_1);
 	FlagFunctional(_DeltaTime);
-	//if(마우스왼쪽버튼을 누른다면)
-	FlagFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
-	FlagFunctional(_DeltaTime);
+	//if(마우스왼쪽버튼을 누른다면)으로 바꾸기
+	if (MenuTime > 6.0f)
+	{
+		FlagFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
+		FlagFunctional(_DeltaTime);
+	}
+	
 }
 void MainMenuLevel::MenuEnd()
 {
