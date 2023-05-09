@@ -169,6 +169,18 @@
     <ClCompile Include="TrashcanTop.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
+    <ClCompile Include="MediaPlayer.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaPause.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaPlay.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -336,6 +348,18 @@
     <ClInclude Include="TrashcanTop.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
+    <ClInclude Include="MediaPlayer.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaPause.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaPlay.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaPicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -421,6 +445,12 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI">
       <UniqueIdentifier>{a308f3c2-8bdc-4cae-8a3d-5a82713d82df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder">
+      <UniqueIdentifier>{d1d9a76c-744f-4296-8563-eec0f9c313f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note">
+      <UniqueIdentifier>{e023be9c-a5e9-43d3-96d4-0d5ef754ed0e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

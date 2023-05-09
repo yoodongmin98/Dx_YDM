@@ -208,6 +208,10 @@
     <ClInclude Include="G_ActorBase.h" />
     <ClInclude Include="LockFolder.h" />
     <ClInclude Include="MainMenuLevel.h" />
+    <ClInclude Include="MediaPause.h" />
+    <ClInclude Include="MediaPicture.h" />
+    <ClInclude Include="MediaPlay.h" />
+    <ClInclude Include="MediaPlayer.h" />
     <ClInclude Include="MusicFolder.h" />
     <ClInclude Include="Panel_Back.h" />
     <ClInclude Include="Panel_Continue.h" />
@@ -272,6 +276,10 @@
     <ClCompile Include="LockFolder.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="MainMenuLevelState.cpp" />
+    <ClCompile Include="MediaPause.cpp" />
+    <ClCompile Include="MediaPicture.cpp" />
+    <ClCompile Include="MediaPlay.cpp" />
+    <ClCompile Include="MediaPlayer.cpp" />
     <ClCompile Include="MusicFolder.cpp" />
     <ClCompile Include="Panel_Back.cpp" />
     <ClCompile Include="Panel_Continue.cpp" />
