@@ -94,7 +94,7 @@ void MainMenuLevel::Start()
 		CreateMainMenuArrow();
 		PixelPtr=CreateActor<Panel_DrawaPixel>();
 		PicturesPtr=CreateActor<StartPictures>();
-		//CreateActor<AlphaCircle>();
+		CreateActor<AlphaCircle>();
 	}
 	
 

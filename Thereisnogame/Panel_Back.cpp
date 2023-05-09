@@ -22,7 +22,7 @@ Panel_Back::~Panel_Back()
 void Panel_Back::Start()
 {
 	//GetTransform()->SetLocalRotation({ 0,0,-90 });
-	Init(Panel_Backs, "MenuOptions_BackPanel.png", { 228,195,1 }, { 0,-750,-10 });
+	Init(Panel_Backs, "MenuOptions_BackPanel.png", { 228,195,1 }, { -300,-750,-10 });
 }
 
 void Panel_Back::Update(float _DeltaTime)
@@ -38,7 +38,7 @@ void Panel_Back::Render(float _Delta)
 void Panel_Back::ZRotations(float _DeltaTime)
 {
 	GetTransform()->SetLocalRotation(float4::LerpClamp(GetTransform()->GetLocalRotation(), float4::Zero, _DeltaTime));
-	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { -530,900,0 }, _DeltaTime));
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { -230,900,0 }, _DeltaTime));
 }
 
 void Panel_Back::RZRotations(float _DeltaTime)

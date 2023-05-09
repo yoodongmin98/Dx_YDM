@@ -38,11 +38,11 @@ void Panel_Continue::Render(float _Delta)
 void Panel_Continue::ZRotations(float _DeltaTime)
 {
 	GetTransform()->SetLocalRotation(float4::LerpClamp(GetTransform()->GetLocalRotation(), float4::Zero, _DeltaTime));
-	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), {0,315,0}, _DeltaTime));
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), {0,305,0}, _DeltaTime));
 }
 
 void Panel_Continue::RZRotations(float _DeltaTime)
 {
 	GetTransform()->SetLocalRotation(float4::LerpClamp(GetTransform()->GetLocalRotation(), { 0,0,-90.0f }, _DeltaTime));
-	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), float4::Zero, _DeltaTime*1.5f));
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-615,-10 }, _DeltaTime*1.5f));
 }
