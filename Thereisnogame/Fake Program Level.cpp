@@ -14,6 +14,10 @@
 #include "C2_BackGround.h"
 #include "squirrel.h"
 
+//Folder
+#include "SkiteFolder.h"
+#include "ZipWipFolder.h"
+
 
 FakeProgramLevel::FakeProgramLevel()
 {
@@ -51,12 +55,19 @@ void FakeProgramLevel::Start()
 	{
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
-		//CreateActor<AlphaCircle>();
+		FolderCreate();
+		CreateActor<AlphaCircle>();
 	}
 
 }
 
 void FakeProgramLevel::Update(float _DeltaTime)
 {
+	
+}
 
+void FakeProgramLevel::FolderCreate()
+{
+	CreateActor<SkiteFolder>();
+	CreateActor<ZipWipFolder>();
 }

@@ -139,6 +139,12 @@
     <ClCompile Include="squirrel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
+    <ClCompile Include="SkiteFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
+    </ClCompile>
+    <ClCompile Include="ZipWipFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -275,6 +281,12 @@
     </ClInclude>
     <ClInclude Include="squirrel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClInclude>
+    <ClInclude Include="SkiteFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipWipFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
