@@ -173,6 +173,7 @@
     <ClInclude Include="Arrow4.h" />
     <ClInclude Include="C2_BackGround.h" />
     <ClInclude Include="Chain.h" />
+    <ClInclude Include="ClockFolder.h" />
     <ClInclude Include="ContentsCore.h">
       <SubType>
       </SubType>
@@ -193,6 +194,7 @@
     <ClInclude Include="C_0Letter_T.h" />
     <ClInclude Include="DrawaPixel.h" />
     <ClInclude Include="Fake Program Level.h" />
+    <ClInclude Include="FolderBackGround.h" />
     <ClInclude Include="F_Brazilian.h" />
     <ClInclude Include="F_Chinese.h" />
     <ClInclude Include="F_English.h" />
@@ -204,11 +206,15 @@
     <ClInclude Include="F_Russian.h" />
     <ClInclude Include="F_Spanish.h" />
     <ClInclude Include="G_ActorBase.h" />
+    <ClInclude Include="LockFolder.h" />
     <ClInclude Include="MainMenuLevel.h" />
+    <ClInclude Include="MusicFolder.h" />
     <ClInclude Include="Panel_Back.h" />
     <ClInclude Include="Panel_Continue.h" />
+    <ClInclude Include="PictureFolder.h" />
     <ClInclude Include="Play within a play Level.h" />
     <ClInclude Include="PrecompileHeader.h" />
+    <ClInclude Include="PrivateFolder.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="SelectBox.h" />
     <ClInclude Include="SkiteFolder.h" />
@@ -217,6 +223,8 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="StartPictures.h" />
+    <ClInclude Include="TrashcanFolder.h" />
+    <ClInclude Include="TrashcanTop.h" />
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +236,7 @@
     <ClCompile Include="Arrow4.cpp" />
     <ClCompile Include="C2_BackGround.cpp" />
     <ClCompile Include="Chain.cpp" />
+    <ClCompile Include="ClockFolder.cpp" />
     <ClCompile Include="ContentsCore.cpp">
       <SubType>
       </SubType>
@@ -248,6 +257,7 @@
     <ClCompile Include="C_0Letter_T.cpp" />
     <ClCompile Include="DrawaPixel.cpp" />
     <ClCompile Include="Fake Program Level.cpp" />
+    <ClCompile Include="FolderBackGround.cpp" />
     <ClCompile Include="F_Brazilian.cpp" />
     <ClCompile Include="F_Chinese.cpp" />
     <ClCompile Include="F_English.cpp" />
@@ -259,10 +269,13 @@
     <ClCompile Include="F_Russian.cpp" />
     <ClCompile Include="F_Spanish.cpp" />
     <ClCompile Include="G_ActorBase.cpp" />
+    <ClCompile Include="LockFolder.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="MainMenuLevelState.cpp" />
+    <ClCompile Include="MusicFolder.cpp" />
     <ClCompile Include="Panel_Back.cpp" />
     <ClCompile Include="Panel_Continue.cpp" />
+    <ClCompile Include="PictureFolder.cpp" />
     <ClCompile Include="Play within a play Level.cpp" />
     <ClCompile Include="PrecompileHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -270,6 +283,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="PrivateFolder.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="SelectBox.cpp" />
     <ClCompile Include="SkiteFolder.cpp" />
@@ -278,6 +292,8 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="StartPictures.cpp" />
+    <ClCompile Include="TrashcanFolder.cpp" />
+    <ClCompile Include="TrashcanTop.cpp" />
     <ClCompile Include="ZipWipFolder.cpp" />
   </ItemGroup>
   <ItemGroup>

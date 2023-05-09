@@ -139,11 +139,35 @@
     <ClCompile Include="squirrel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
+    <ClCompile Include="FolderBackGround.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="LockFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="PictureFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivateFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClCompile>
     <ClCompile Include="SkiteFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="ZipWipFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="TrashcanFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="TrashcanTop.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -282,11 +306,35 @@
     <ClInclude Include="squirrel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
+    <ClInclude Include="FolderBackGround.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="LockFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClInclude>
     <ClInclude Include="SkiteFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="ZipWipFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="TrashcanFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="TrashcanTop.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -364,6 +412,15 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Backetc">
       <UniqueIdentifier>{1f658f27-2485-4ba0-8aae-e138973c9ca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\OutFolder">
+      <UniqueIdentifier>{b180e55e-6584-4e44-9842-cfab917fc3a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder">
+      <UniqueIdentifier>{8ee0afa6-df38-4539-9294-b579d4e1d8e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI">
+      <UniqueIdentifier>{a308f3c2-8bdc-4cae-8a3d-5a82713d82df}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

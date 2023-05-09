@@ -17,6 +17,13 @@
 //Folder
 #include "SkiteFolder.h"
 #include "ZipWipFolder.h"
+#include "MusicFolder.h"
+#include "PictureFolder.h"
+#include "PrivateFolder.h"
+#include "LockFolder.h"
+#include "ClockFolder.h"
+#include "TrashcanFolder.h"
+#include "TrashcanTop.h"
 
 
 FakeProgramLevel::FakeProgramLevel()
@@ -56,7 +63,7 @@ void FakeProgramLevel::Start()
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		FolderCreate();
-		CreateActor<AlphaCircle>();
+	//	CreateActor<AlphaCircle>();
 	}
 
 }
@@ -70,4 +77,11 @@ void FakeProgramLevel::FolderCreate()
 {
 	CreateActor<SkiteFolder>();
 	CreateActor<ZipWipFolder>();
+	CreateActor<MusicFolder>();
+	CreateActor<PictureFolder>();
+	CreateActor<PrivateFolder>();
+	CreateActor<LockFolder>();
+	CreateActor<ClockFolder>();
+	CreateActor<TrashcanFolder>();
+	CreateActor<TrashcanTop>();
 }
