@@ -187,6 +187,18 @@
     <ClCompile Include="BoxCroix.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
     </ClCompile>
+    <ClCompile Include="MusicNote_Walnut.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicNote_Archive.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicNote_Rain.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicNote_Radio.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -371,6 +383,18 @@
     </ClInclude>
     <ClInclude Include="BoxCroix.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicNote_Walnut.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicNote_Archive.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicNote_Rain.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicNote_Radio.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

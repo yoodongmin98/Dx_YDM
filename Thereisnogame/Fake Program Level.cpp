@@ -31,6 +31,11 @@
 #include "MediaPause.h"
 #include "MusicFolderPanel.h"
 #include "BoxCroix.h"
+#include "MediaPicture.h"
+#include "MusicNote_Archive.h"
+#include "MusicNote_Radio.h"
+#include "MusicNote_Rain.h"
+#include "MusicNote_Walnut.h"
 
 FakeProgramLevel::FakeProgramLevel()
 {
@@ -69,7 +74,6 @@ void FakeProgramLevel::Start()
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		FolderCreate();
-	//	CreateActor<AlphaCircle>();
 	}
 	//미리 Create하지않는 확인용 Actor들
 	{
@@ -77,7 +81,17 @@ void FakeProgramLevel::Start()
 		CreateActor<MediaPlay>();
 		CreateActor<MediaPause>();
 		CreateActor<MusicFolderPanel>();
+		CreateActor<MediaPicture>();
+
+		CreateActor<MusicNote_Archive>();
+		//CreateActor<MusicNote_Radio>();
+		//CreateActor<MusicNote_Rain>();
+		CreateActor<MusicNote_Walnut>();
+
+
+		
 	}
+		CreateActor<AlphaCircle>();
 }
 
 void FakeProgramLevel::Update(float _DeltaTime)

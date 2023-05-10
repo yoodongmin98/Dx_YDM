@@ -215,6 +215,10 @@
     <ClInclude Include="MediaPlayer.h" />
     <ClInclude Include="MusicFolder.h" />
     <ClInclude Include="MusicFolderPanel.h" />
+    <ClInclude Include="MusicNote_Archive.h" />
+    <ClInclude Include="MusicNote_Radio.h" />
+    <ClInclude Include="MusicNote_Rain.h" />
+    <ClInclude Include="MusicNote_Walnut.h" />
     <ClInclude Include="Panel_Back.h" />
     <ClInclude Include="Panel_Continue.h" />
     <ClInclude Include="PictureFolder.h" />
@@ -285,6 +289,10 @@
     <ClCompile Include="MediaPlayer.cpp" />
     <ClCompile Include="MusicFolder.cpp" />
     <ClCompile Include="MusicFolderPanel.cpp" />
+    <ClCompile Include="MusicNote_Archive.cpp" />
+    <ClCompile Include="MusicNote_Radio.cpp" />
+    <ClCompile Include="MusicNote_Rain.cpp" />
+    <ClCompile Include="MusicNote_Walnut.cpp" />
     <ClCompile Include="Panel_Back.cpp" />
     <ClCompile Include="Panel_Continue.cpp" />
     <ClCompile Include="PictureFolder.cpp" />
