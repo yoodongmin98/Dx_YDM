@@ -171,6 +171,7 @@
     <ClInclude Include="Arrow2.h" />
     <ClInclude Include="Arrow3.h" />
     <ClInclude Include="Arrow4.h" />
+    <ClInclude Include="BoxCroix.h" />
     <ClInclude Include="C2_BackGround.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="ClockFolder.h" />
@@ -213,6 +214,7 @@
     <ClInclude Include="MediaPlay.h" />
     <ClInclude Include="MediaPlayer.h" />
     <ClInclude Include="MusicFolder.h" />
+    <ClInclude Include="MusicFolderPanel.h" />
     <ClInclude Include="Panel_Back.h" />
     <ClInclude Include="Panel_Continue.h" />
     <ClInclude Include="PictureFolder.h" />
@@ -238,6 +240,7 @@
     <ClCompile Include="Arrow2.cpp" />
     <ClCompile Include="Arrow3.cpp" />
     <ClCompile Include="Arrow4.cpp" />
+    <ClCompile Include="BoxCroix.cpp" />
     <ClCompile Include="C2_BackGround.cpp" />
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="ClockFolder.cpp" />
@@ -281,6 +284,7 @@
     <ClCompile Include="MediaPlay.cpp" />
     <ClCompile Include="MediaPlayer.cpp" />
     <ClCompile Include="MusicFolder.cpp" />
+    <ClCompile Include="MusicFolderPanel.cpp" />
     <ClCompile Include="Panel_Back.cpp" />
     <ClCompile Include="Panel_Continue.cpp" />
     <ClCompile Include="PictureFolder.cpp" />

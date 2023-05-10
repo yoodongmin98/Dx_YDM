@@ -25,6 +25,12 @@
 #include "TrashcanFolder.h"
 #include "TrashcanTop.h"
 
+//Test용
+#include "MediaPlayer.h"
+#include "MediaPlay.h"
+#include "MediaPause.h"
+#include "MusicFolderPanel.h"
+#include "BoxCroix.h"
 
 FakeProgramLevel::FakeProgramLevel()
 {
@@ -65,7 +71,13 @@ void FakeProgramLevel::Start()
 		FolderCreate();
 	//	CreateActor<AlphaCircle>();
 	}
-
+	//미리 Create하지않는 확인용 Actor들
+	{
+		CreateActor<MediaPlayer>();
+		CreateActor<MediaPlay>();
+		CreateActor<MediaPause>();
+		CreateActor<MusicFolderPanel>();
+	}
 }
 
 void FakeProgramLevel::Update(float _DeltaTime)

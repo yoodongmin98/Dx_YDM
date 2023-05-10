@@ -181,6 +181,12 @@
     <ClCompile Include="MediaPicture.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
     </ClCompile>
+    <ClCompile Include="MusicFolderPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -359,6 +365,12 @@
     </ClInclude>
     <ClInclude Include="MediaPicture.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicFolderPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
