@@ -37,6 +37,8 @@
 #include "MusicNote_Rain.h"
 #include "MusicNote_Walnut.h"
 
+#include "Chain.h"
+
 FakeProgramLevel::FakeProgramLevel()
 {
 }
@@ -88,10 +90,10 @@ void FakeProgramLevel::Start()
 		//CreateActor<MusicNote_Rain>();
 		CreateActor<MusicNote_Walnut>();
 
-
+		CreateActor<Chain>();
 		
 	}
-		CreateActor<AlphaCircle>();
+		//CreateActor<AlphaCircle>();
 }
 
 void FakeProgramLevel::Update(float _DeltaTime)
