@@ -488,6 +488,21 @@
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note">
       <UniqueIdentifier>{e023be9c-a5e9-43d3-96d4-0d5ef754ed0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite">
+      <UniqueIdentifier>{6033a441-6262-4de1-88ec-76f2dddd7f67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock">
+      <UniqueIdentifier>{6371abdb-cbfe-4a2b-ab75-2cd41db665c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture">
+      <UniqueIdentifier>{ea88ec9f-113d-43f7-a3c7-84fb9ca0b1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private">
+      <UniqueIdentifier>{ebb29a65-e5bb-43db-8d21-f32d8fd18515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan">
+      <UniqueIdentifier>{4ee7fe16-cf07-49f2-9e7c-19e2d6f5b8c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\구조 메모장.txt">
