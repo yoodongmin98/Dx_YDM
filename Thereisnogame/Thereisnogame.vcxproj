@@ -227,7 +227,10 @@
     <ClInclude Include="PrivateFolder.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="SelectBox.h" />
+    <ClInclude Include="Skite.h" />
+    <ClInclude Include="SkiteBanner.h" />
     <ClInclude Include="SkiteFolder.h" />
+    <ClInclude Include="SkiteIcon.h" />
     <ClInclude Include="squirrel.h">
       <SubType>
       </SubType>
@@ -306,7 +309,10 @@
     <ClCompile Include="PrivateFolder.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="SelectBox.cpp" />
+    <ClCompile Include="Skite.cpp" />
+    <ClCompile Include="SkiteBanner.cpp" />
     <ClCompile Include="SkiteFolder.cpp" />
+    <ClCompile Include="SkiteIcon.cpp" />
     <ClCompile Include="squirrel.cpp">
       <SubType>
       </SubType>

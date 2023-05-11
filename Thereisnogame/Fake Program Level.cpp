@@ -36,6 +36,10 @@
 #include "MusicNote_Radio.h"
 #include "MusicNote_Rain.h"
 #include "MusicNote_Walnut.h"
+//Skite
+#include "Skite.h"
+#include "SkiteBanner.h"
+
 
 #include "Chain.h"
 
@@ -79,7 +83,8 @@ void FakeProgramLevel::Start()
 	}
 	//미리 Create하지않는 확인용 Actor들
 	{
-		CreateActor<MediaPlayer>();
+		//Media
+	/*	CreateActor<MediaPlayer>();
 		CreateActor<MediaPlay>();
 		CreateActor<MediaPause>();
 		CreateActor<MusicFolderPanel>();
@@ -88,7 +93,11 @@ void FakeProgramLevel::Start()
 		CreateActor<MusicNote_Archive>();
 		CreateActor<MusicNote_Radio>();
 		CreateActor<MusicNote_Rain>();
-		CreateActor<MusicNote_Walnut>();
+		CreateActor<MusicNote_Walnut>();*/
+
+		//Skite
+		CreateActor<Skite>();
+		CreateActor<SkiteBanner>();
 
 		
 		

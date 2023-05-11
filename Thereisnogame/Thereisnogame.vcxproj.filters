@@ -199,6 +199,15 @@
     <ClCompile Include="MusicNote_Radio.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClCompile>
+    <ClCompile Include="Skite.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiteBanner.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiteIcon.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -395,6 +404,15 @@
     </ClInclude>
     <ClInclude Include="MusicNote_Radio.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+    </ClInclude>
+    <ClInclude Include="Skite.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClInclude>
+    <ClInclude Include="SkiteBanner.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClInclude>
+    <ClInclude Include="SkiteIcon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
