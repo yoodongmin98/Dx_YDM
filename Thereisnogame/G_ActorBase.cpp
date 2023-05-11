@@ -56,6 +56,26 @@ void G_ActorBase::Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const 
 	_Render->GetTransform()->SetLocalPosition(_Position);
 }
 
+std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(
+	std::shared_ptr<GameEngineSpriteRenderer> _Render,
+	const std::string_view& _ImageName,
+	float4 _Scale,
+	float4 _Position,
+	const std::string_view& _AnimationName,
+	const std::string_view& _FileName,
+	float _InterTime)
+{
+	_Render = CreateComponent<GameEngineSpriteRenderer>();
+	_Render->SetScaleToTexture(_ImageName);
+	_Render->GetTransform()->SetLocalScale(_Scale);
+	_Render->GetTransform()->SetLocalPosition(_Position);
+	_Render->CreateAnimation(_AnimationName, _FileName, _InterTime);
+	_Render->ChangeAnimation(_AnimationName);
+
+	return _Render;
+
+}
+
 void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
 {
 	GameEngineDirectory NewDir;

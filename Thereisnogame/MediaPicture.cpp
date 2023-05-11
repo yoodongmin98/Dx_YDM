@@ -17,7 +17,7 @@ MediaPicture::~MediaPicture()
 void MediaPicture::Start()
 {
 	//아마 애니메이션으로 바꿀듯
-	Init(MediaPictures, "MediaVignetteMusic01_00.png", { 366,204 }, { 197,-65,0 });
+	//Init(MediaPictures, "MediaVignetteMusic01_00.png", { 366,204 }, { 197,-65,0 });
 }
 
 void MediaPicture::Update(float _DeltaTime)
