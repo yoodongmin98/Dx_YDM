@@ -86,8 +86,8 @@ void FakeProgramLevel::Start()
 		CreateActor<MediaPicture>();
 
 		CreateActor<MusicNote_Archive>();
-		//CreateActor<MusicNote_Radio>();
-		//CreateActor<MusicNote_Rain>();
+		CreateActor<MusicNote_Radio>();
+		CreateActor<MusicNote_Rain>();
 		CreateActor<MusicNote_Walnut>();
 
 		

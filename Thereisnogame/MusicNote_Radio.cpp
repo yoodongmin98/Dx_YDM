@@ -17,7 +17,7 @@ MusicNote_Radio::~MusicNote_Radio()
 
 void MusicNote_Radio::Start()
 {
-	Init(MusicNote_Radios, "Note.png", { 100,110 }, { 0,0,0 });
+	Init(MusicNote_Radios, "Note.png", { 100,110 }, { -245,-150,0 });
 }
 
 void MusicNote_Radio::Update(float _DeltaTime)
