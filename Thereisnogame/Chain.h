@@ -3,7 +3,7 @@
 #include "G_ActorBase.h"
 
 // Ό³Έν :
-class Chain : public GameEngineActor
+class Chain : public G_ActorBase
 {
 public:
 	// constrcuter destructer

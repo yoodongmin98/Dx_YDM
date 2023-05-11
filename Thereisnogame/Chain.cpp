@@ -14,16 +14,13 @@ Chain::Chain()
 Chain::~Chain()
 {
 }
-
+bool ChainLoad = true;
 void Chain::Start()
 {
+	if(true==ChainLoad)
 	{
-		GameEngineDirectory NewDir;
-		NewDir.MoveParentToDirectory("ThereisnogameResource");
-		NewDir.Move("ThereisnogameResource");
-		NewDir.Move("Animation");
-	
-		GameEngineSprite::LoadFolder(NewDir.GetPlusFileName("Chain").GetFullPath());
+		AnimationImageLoad("Chain");
+		ChainLoad = false;
 	}
 	LeftChain = CreateComponent<GameEngineSpriteRenderer>();
 	LeftChain->SetScaleToTexture("BandePellicule0.png");

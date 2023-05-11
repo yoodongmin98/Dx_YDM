@@ -90,7 +90,7 @@ void FakeProgramLevel::Start()
 		//CreateActor<MusicNote_Rain>();
 		CreateActor<MusicNote_Walnut>();
 
-		CreateActor<Chain>();
+		
 		
 	}
 		//CreateActor<AlphaCircle>();
@@ -98,7 +98,10 @@ void FakeProgramLevel::Start()
 
 void FakeProgramLevel::Update(float _DeltaTime)
 {
-	
+	if (GameEngineInput::IsDown("TestKey3"))
+	{
+		CreateActor<Chain>();
+	}
 }
 
 void FakeProgramLevel::FolderCreate()

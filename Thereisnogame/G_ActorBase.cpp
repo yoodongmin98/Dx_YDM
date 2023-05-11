@@ -51,9 +51,19 @@ void G_ActorBase::Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const 
 	_Render = CreateComponent<GameEngineSpriteRenderer>();
 	
 	
-	_Render->SetTexture(_ImageName);
+	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
+}
+
+void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
+{
+	GameEngineDirectory NewDir;
+	NewDir.MoveParentToDirectory("ThereisnogameResource");
+	NewDir.Move("ThereisnogameResource");
+	NewDir.Move("Animation");
+
+	GameEngineSprite::LoadFolder(NewDir.GetPlusFileName(_FileName).GetFullPath());
 }
 
 void G_ActorBase::Down(float _DeltaTime)
