@@ -19,22 +19,12 @@ BackCurtain::~BackCurtain()
 }
 
 
-
-
 void BackCurtain::Start()
 {
-	LeftCurtain = CreateComponent<GameEngineSpriteRenderer>();
-	LeftCurtain->SetTexture("Rideaux.png");
-	LeftCurtain->GetTransform()->SetLocalScale({ 708.0f, 720.0f,1.0f });
-	LeftCurtain->GetTransform()->SetLocalPosition({-290.0f,0.0f,0.0f});
+	LeftCurtain = Init(LeftCurtain, "Rideaux.png", { 708.0f, 720.0f,1.0f }, { -290.0f,0.0f,0.0f });
 
-	RightCurtain = CreateComponent<GameEngineSpriteRenderer>();
-	RightCurtain->SetTexture("Rideaux.png");
-	RightCurtain->GetTransform()->SetLocalScale({ 708.0f, 720.0f , 1.0f });
-	RightCurtain->GetTransform()->SetLocalPosition({ 290.0f,0.0f,0.0f });
+	RightCurtain = Init(RightCurtain, "Rideaux.png", { 708.0f, 720.0f,1.0f }, { 290.0f,0.0f,0.0f });
 	RightCurtain->SetFlipX();
-	
-	
 }
 
 void BackCurtain::Update(float _DeltaTime)
@@ -47,6 +37,7 @@ void BackCurtain::Render(float _Delta)
 	
 };
 
+//Functional È£Ãâ¿ë(Chapter1)
 void BackCurtain::CurtainOpen(int _Speed)
 {
 

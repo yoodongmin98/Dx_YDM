@@ -1,8 +1,8 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
+#include "G_ActorBase.h"
 
-
-class AlphaCircle :public GameEngineActor
+class AlphaCircle :public G_ActorBase
 {
 public:
 	AlphaCircle();

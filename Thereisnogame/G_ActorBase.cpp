@@ -53,7 +53,7 @@ void G_ActorBase::Repeat(float _MoveValue,float _DeltaTime)
 	}
 }
 
-void G_ActorBase::Init(
+std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::Init(
 	std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	const std::string_view& _ImageName,
 	float4 _Scale,
@@ -64,6 +64,8 @@ void G_ActorBase::Init(
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
+
+	return _Render;
 }
 
 std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(

@@ -1,8 +1,9 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
+#include "G_ActorBase.h"
 
 // Ό³Έν :
-class BackCurtain : public GameEngineActor
+class BackCurtain : public G_ActorBase
 {
 public:
 	// constrcuter destructer

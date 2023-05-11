@@ -16,7 +16,11 @@ public:
 	G_ActorBase& operator=(const G_ActorBase& _Other) = delete;
 	G_ActorBase& operator=(G_ActorBase&& _Other) noexcept = delete;
 
-	void Init(std::shared_ptr<GameEngineSpriteRenderer> _Render, const std::string_view& _ImageName, float4 _Scale, float4 _Position);
+	std::shared_ptr<GameEngineSpriteRenderer> Init(
+		std::shared_ptr<GameEngineSpriteRenderer> _Render,
+		const std::string_view& _ImageName,
+		float4 _Scale,
+		float4 _Position);
 	void AnimationImageLoad(const std::string_view& _FileName);
 	std::shared_ptr<GameEngineSpriteRenderer> AnimationInit(
 		std::shared_ptr<GameEngineSpriteRenderer> _Render,
