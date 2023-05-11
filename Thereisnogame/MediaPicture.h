@@ -22,7 +22,9 @@ protected:
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
-	std::shared_ptr<class GameEngineSpriteRenderer> MediaPictures;
-
+	std::shared_ptr<class GameEngineSpriteRenderer> WalnutPicture;
+	std::shared_ptr<class GameEngineSpriteRenderer> ArchivePicture;
+	std::shared_ptr<class GameEngineSpriteRenderer> RainPicture;
+	std::shared_ptr<class GameEngineSpriteRenderer> RadioPicture;
 };
 

@@ -22,22 +22,11 @@ void Chain::Start()
 		AnimationImageLoad("Chain");
 		ChainLoad = false;
 	}
-	//LeftChain = CreateComponent<GameEngineSpriteRenderer>();
-	//LeftChain->SetScaleToTexture("BandePellicule0.png");
-	//LeftChain->GetTransform()->SetLocalScale({121,720});
-	//LeftChain->GetTransform()->SetLocalPosition({-700,0});//-580
-	//LeftChain->CreateAnimation("ChainMove","Chain",0.05f);
-	//LeftChain->ChangeAnimation("ChainMove");
 
 	LeftChain=AnimationInit(LeftChain, "BandePellicule0.png", { 121,720 }, { -700,0 }, "ChainMove", "Chain", 0.05f);
-
-	RightChain = CreateComponent<GameEngineSpriteRenderer>();
-	RightChain->SetScaleToTexture("BandePellicule0.png");
-	RightChain->GetTransform()->SetLocalScale({ 121,720 });
-	RightChain->GetTransform()->SetLocalPosition({ 700,0 });//580
-	RightChain->CreateAnimation("ChainMove", "Chain", 0.05f);
-	RightChain->ChangeAnimation("ChainMove");
+	RightChain = AnimationInit(RightChain, "BandePellicule0.png", { 121,720 }, { 700,0 }, "ChainMove", "Chain", 0.05f);
 	RightChain->SetFlipX();
+
 
 
 	LStartPos = LeftChain->GetTransform()->GetLocalPosition();
