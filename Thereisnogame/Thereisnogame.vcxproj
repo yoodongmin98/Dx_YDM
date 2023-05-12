@@ -175,6 +175,8 @@
     <ClInclude Include="C2_BackGround.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="ClockFolder.h" />
+    <ClInclude Include="CodeIcon.h" />
+    <ClInclude Include="CodePicture.h" />
     <ClInclude Include="ContentsCore.h">
       <SubType>
       </SubType>
@@ -197,6 +199,8 @@
     <ClInclude Include="DayPicture.h" />
     <ClInclude Include="DayTree.h" />
     <ClInclude Include="DrawaPixel.h" />
+    <ClInclude Include="DrawerIcon.h" />
+    <ClInclude Include="DrawerPicture.h" />
     <ClInclude Include="Fake Program Level.h" />
     <ClInclude Include="FolderBackGround.h" />
     <ClInclude Include="F_Brazilian.h" />
@@ -230,6 +234,8 @@
     <ClInclude Include="PrecompileHeader.h" />
     <ClInclude Include="PrivateFolder.h" />
     <ClInclude Include="Program Loading Level.h" />
+    <ClInclude Include="PurpleTextBox.h" />
+    <ClInclude Include="Rotate.h" />
     <ClInclude Include="SelectBox.h" />
     <ClInclude Include="Skite.h" />
     <ClInclude Include="SkiteBanner.h" />
@@ -257,6 +263,8 @@
     <ClCompile Include="C2_BackGround.cpp" />
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="ClockFolder.cpp" />
+    <ClCompile Include="CodeIcon.cpp" />
+    <ClCompile Include="CodePicture.cpp" />
     <ClCompile Include="ContentsCore.cpp">
       <SubType>
       </SubType>
@@ -279,6 +287,8 @@
     <ClCompile Include="DayPicture.cpp" />
     <ClCompile Include="DayTree.cpp" />
     <ClCompile Include="DrawaPixel.cpp" />
+    <ClCompile Include="DrawerIcon.cpp" />
+    <ClCompile Include="DrawerPicture.cpp" />
     <ClCompile Include="Fake Program Level.cpp" />
     <ClCompile Include="FolderBackGround.cpp" />
     <ClCompile Include="F_Brazilian.cpp" />
@@ -318,6 +328,8 @@
     </ClCompile>
     <ClCompile Include="PrivateFolder.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
+    <ClCompile Include="PurpleTextBox.cpp" />
+    <ClCompile Include="Rotate.cpp" />
     <ClCompile Include="SelectBox.cpp" />
     <ClCompile Include="Skite.cpp" />
     <ClCompile Include="SkiteBanner.cpp" />

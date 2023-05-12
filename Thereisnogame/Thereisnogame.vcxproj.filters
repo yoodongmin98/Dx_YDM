@@ -214,9 +214,6 @@
     <ClCompile Include="SkiteCallingMissed.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
-    <ClCompile Include="PictureFolderPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
-    </ClCompile>
     <ClCompile Include="DayIcon.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClCompile>
@@ -225,6 +222,27 @@
     </ClCompile>
     <ClCompile Include="DayTree.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClCompile>
+    <ClCompile Include="Rotate.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+    </ClCompile>
+    <ClCompile Include="PictureFolderPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="PurpleTextBox.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawerIcon.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawerPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeIcon.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
+    </ClCompile>
+    <ClCompile Include="CodePicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -438,9 +456,6 @@
     <ClInclude Include="SkiteCallingMissed.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
-    <ClInclude Include="PictureFolderPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
-    </ClInclude>
     <ClInclude Include="DayIcon.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClInclude>
@@ -449,6 +464,27 @@
     </ClInclude>
     <ClInclude Include="DayTree.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClInclude>
+    <ClInclude Include="Rotate.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureFolderPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="PurpleTextBox.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawerIcon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawerPicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeIcon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="CodePicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -536,12 +572,6 @@
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI">
       <UniqueIdentifier>{a308f3c2-8bdc-4cae-8a3d-5a82713d82df}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder">
-      <UniqueIdentifier>{d1d9a76c-744f-4296-8563-eec0f9c313f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note">
-      <UniqueIdentifier>{e023be9c-a5e9-43d3-96d4-0d5ef754ed0e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite">
       <UniqueIdentifier>{6033a441-6262-4de1-88ec-76f2dddd7f67}</UniqueIdentifier>
     </Filter>
@@ -565,6 +595,15 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code">
       <UniqueIdentifier>{c72242e6-6b6e-451a-be23-1b927d1c37cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder">
+      <UniqueIdentifier>{d1d9a76c-744f-4296-8563-eec0f9c313f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note">
+      <UniqueIdentifier>{e023be9c-a5e9-43d3-96d4-0d5ef754ed0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI">
+      <UniqueIdentifier>{58fcb3b0-1c16-4a1a-a71c-7e80d26043a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
