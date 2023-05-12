@@ -21,6 +21,7 @@ BackCurtain::~BackCurtain()
 
 void BackCurtain::Start()
 {
+	//distortion shader적용해야함
 	LeftCurtain = Init(LeftCurtain, "Rideaux.png", { 708.0f, 720.0f,1.0f }, { -290.0f,0.0f,0.0f });
 
 	RightCurtain = Init(RightCurtain, "Rideaux.png", { 708.0f, 720.0f,1.0f }, { 290.0f,0.0f,0.0f });
