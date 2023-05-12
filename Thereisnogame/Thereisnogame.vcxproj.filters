@@ -244,6 +244,18 @@
     <ClCompile Include="CodePicture.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClCompile>
+    <ClCompile Include="ClockPaddle1.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle2.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle3.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -486,6 +498,18 @@
     <ClInclude Include="CodePicture.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClInclude>
+    <ClInclude Include="ClockPaddle1.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle2.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle3.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -604,6 +628,15 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI">
       <UniqueIdentifier>{58fcb3b0-1c16-4a1a-a71c-7e80d26043a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle">
+      <UniqueIdentifier>{17c82583-1299-4c39-93a8-5d5a7163c238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI">
+      <UniqueIdentifier>{ec6dd253-3bfc-474e-9eb8-fd3eb3e48109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.5_Program Loading\Actor">
+      <UniqueIdentifier>{b918024b-13e6-489c-88d4-9a7a6597c019}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

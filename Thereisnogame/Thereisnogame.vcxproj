@@ -175,6 +175,10 @@
     <ClInclude Include="C2_BackGround.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="ClockFolder.h" />
+    <ClInclude Include="ClockPaddle1.h" />
+    <ClInclude Include="ClockPaddle2.h" />
+    <ClInclude Include="ClockPaddle3.h" />
+    <ClInclude Include="ClockPanel.h" />
     <ClInclude Include="CodeIcon.h" />
     <ClInclude Include="CodePicture.h" />
     <ClInclude Include="ContentsCore.h">
@@ -263,6 +267,10 @@
     <ClCompile Include="C2_BackGround.cpp" />
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="ClockFolder.cpp" />
+    <ClCompile Include="ClockPaddle1.cpp" />
+    <ClCompile Include="ClockPaddle2.cpp" />
+    <ClCompile Include="ClockPaddle3.cpp" />
+    <ClCompile Include="ClockPanel.cpp" />
     <ClCompile Include="CodeIcon.cpp" />
     <ClCompile Include="CodePicture.cpp" />
     <ClCompile Include="ContentsCore.cpp">
