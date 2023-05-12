@@ -214,6 +214,18 @@
     <ClCompile Include="SkiteCallingMissed.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
+    <ClCompile Include="PictureFolderPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="DayIcon.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClCompile>
+    <ClCompile Include="DayPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClCompile>
+    <ClCompile Include="DayTree.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -426,6 +438,18 @@
     <ClInclude Include="SkiteCallingMissed.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
+    <ClInclude Include="PictureFolderPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="DayIcon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClInclude>
+    <ClInclude Include="DayPicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClInclude>
+    <ClInclude Include="DayTree.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -532,6 +556,15 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan">
       <UniqueIdentifier>{4ee7fe16-cf07-49f2-9e7c-19e2d6f5b8c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day">
+      <UniqueIdentifier>{7a6ae1f3-4681-4bcd-addb-5e0a48eea306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer">
+      <UniqueIdentifier>{1165bab7-807d-4dd5-a7e4-60c78175f965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code">
+      <UniqueIdentifier>{c72242e6-6b6e-451a-be23-1b927d1c37cb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

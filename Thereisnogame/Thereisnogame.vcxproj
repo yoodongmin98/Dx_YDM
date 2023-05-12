@@ -193,6 +193,9 @@
     <ClInclude Include="C_0Letter_S.h" />
     <ClInclude Include="C_0Letter_sE.h" />
     <ClInclude Include="C_0Letter_T.h" />
+    <ClInclude Include="DayIcon.h" />
+    <ClInclude Include="DayPicture.h" />
+    <ClInclude Include="DayTree.h" />
     <ClInclude Include="DrawaPixel.h" />
     <ClInclude Include="Fake Program Level.h" />
     <ClInclude Include="FolderBackGround.h" />
@@ -222,6 +225,7 @@
     <ClInclude Include="Panel_Back.h" />
     <ClInclude Include="Panel_Continue.h" />
     <ClInclude Include="PictureFolder.h" />
+    <ClInclude Include="PictureFolderPanel.h" />
     <ClInclude Include="Play within a play Level.h" />
     <ClInclude Include="PrecompileHeader.h" />
     <ClInclude Include="PrivateFolder.h" />
@@ -271,6 +275,9 @@
     <ClCompile Include="C_0Letter_S.cpp" />
     <ClCompile Include="C_0Letter_sE.cpp" />
     <ClCompile Include="C_0Letter_T.cpp" />
+    <ClCompile Include="DayIcon.cpp" />
+    <ClCompile Include="DayPicture.cpp" />
+    <ClCompile Include="DayTree.cpp" />
     <ClCompile Include="DrawaPixel.cpp" />
     <ClCompile Include="Fake Program Level.cpp" />
     <ClCompile Include="FolderBackGround.cpp" />
@@ -301,6 +308,7 @@
     <ClCompile Include="Panel_Back.cpp" />
     <ClCompile Include="Panel_Continue.cpp" />
     <ClCompile Include="PictureFolder.cpp" />
+    <ClCompile Include="PictureFolderPanel.cpp" />
     <ClCompile Include="Play within a play Level.cpp" />
     <ClCompile Include="PrecompileHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
