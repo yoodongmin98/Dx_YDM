@@ -208,6 +208,12 @@
     <ClCompile Include="SkiteIcon.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
+    <ClCompile Include="SkiteCalling.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClCompile>
+    <ClCompile Include="SkiteCallingMissed.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -412,6 +418,12 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
     <ClInclude Include="SkiteIcon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClInclude>
+    <ClInclude Include="SkiteCalling.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClInclude>
+    <ClInclude Include="SkiteCallingMissed.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
   </ItemGroup>

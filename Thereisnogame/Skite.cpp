@@ -17,6 +17,7 @@ Skite::~Skite()
 
 void Skite::Start()
 {
+	//¾ê°¡ SkiteIcon Create
 	Init(Skites, "SkiteMain.png", { 357,501 }, { 300,0,0 });
 }
 

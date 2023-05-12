@@ -16,6 +16,11 @@ public:
 	BoxCroix(BoxCroix&& _Other) noexcept = delete;
 	BoxCroix& operator=(const BoxCroix& _Other) = delete;
 	BoxCroix& operator=(BoxCroix&& _Other) noexcept = delete;
+
+	void SetPosition(float4 _BoxPosition)
+	{
+		Position = _BoxPosition;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;

@@ -229,6 +229,8 @@
     <ClInclude Include="SelectBox.h" />
     <ClInclude Include="Skite.h" />
     <ClInclude Include="SkiteBanner.h" />
+    <ClInclude Include="SkiteCalling.h" />
+    <ClInclude Include="SkiteCallingMissed.h" />
     <ClInclude Include="SkiteFolder.h" />
     <ClInclude Include="SkiteIcon.h" />
     <ClInclude Include="squirrel.h">
@@ -311,6 +313,8 @@
     <ClCompile Include="SelectBox.cpp" />
     <ClCompile Include="Skite.cpp" />
     <ClCompile Include="SkiteBanner.cpp" />
+    <ClCompile Include="SkiteCalling.cpp" />
+    <ClCompile Include="SkiteCallingMissed.cpp" />
     <ClCompile Include="SkiteFolder.cpp" />
     <ClCompile Include="SkiteIcon.cpp" />
     <ClCompile Include="squirrel.cpp">
