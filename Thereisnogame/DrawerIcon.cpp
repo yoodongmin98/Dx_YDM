@@ -18,7 +18,7 @@ DrawerIcon::~DrawerIcon()
 void DrawerIcon::Start()
 {
 	//¾ê°¡ DrawerPicture Create
-	Init(DrawerIcons, "Picture02a.png", { 90,93 }, { -170,20 });
+	Init(DrawerIcons, "Picture02a.png", { 90,93 }, { -180,20 });
 }
 
 void DrawerIcon::Update(float _DeltaTime)

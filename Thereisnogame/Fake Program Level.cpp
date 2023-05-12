@@ -47,6 +47,9 @@
 #include "DayPicture.h"
 #include "DayIcon.h"
 #include "DrawerIcon.h"
+#include "DrawerPicture.h"
+#include "CodeIcon.h"
+#include "CodePicture.h"
 
 #include "Chain.h"
 
@@ -114,6 +117,9 @@ void FakeProgramLevel::Start()
 		//CreateActor<DayPicture>();
 		CreateActor<DayIcon>();
 		CreateActor<DrawerIcon>();
+		//CreateActor<DrawerPicture>();
+		CreateActor<CodeIcon>();
+		//CreateActor<CodePicture>();
 		
 	}
 		//CreateActor<AlphaCircle>();
