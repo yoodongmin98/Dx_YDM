@@ -175,10 +175,19 @@
     <ClInclude Include="C2_BackGround.h" />
     <ClInclude Include="Chain.h" />
     <ClInclude Include="ClockFolder.h" />
+    <ClInclude Include="ClockPaddle0.h" />
     <ClInclude Include="ClockPaddle1.h" />
     <ClInclude Include="ClockPaddle2.h" />
     <ClInclude Include="ClockPaddle3.h" />
+    <ClInclude Include="ClockPaddle4.h" />
+    <ClInclude Include="ClockPaddle5.h" />
+    <ClInclude Include="ClockPaddle6.h" />
+    <ClInclude Include="ClockPaddle7.h" />
+    <ClInclude Include="ClockPaddle8.h" />
+    <ClInclude Include="ClockPaddle9.h" />
     <ClInclude Include="ClockPanel.h" />
+    <ClInclude Include="ClockState.h" />
+    <ClInclude Include="ClockUnderBar.h" />
     <ClInclude Include="CodeIcon.h" />
     <ClInclude Include="CodePicture.h" />
     <ClInclude Include="ContentsCore.h">
@@ -206,6 +215,7 @@
     <ClInclude Include="DrawerIcon.h" />
     <ClInclude Include="DrawerPicture.h" />
     <ClInclude Include="Fake Program Level.h" />
+    <ClInclude Include="FakeProgramLevelManager.h" />
     <ClInclude Include="FolderBackGround.h" />
     <ClInclude Include="F_Brazilian.h" />
     <ClInclude Include="F_Chinese.h" />
@@ -237,6 +247,7 @@
     <ClInclude Include="Play within a play Level.h" />
     <ClInclude Include="PrecompileHeader.h" />
     <ClInclude Include="PrivateFolder.h" />
+    <ClInclude Include="PrivatePanel.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
     <ClInclude Include="Rotate.h" />
@@ -267,10 +278,19 @@
     <ClCompile Include="C2_BackGround.cpp" />
     <ClCompile Include="Chain.cpp" />
     <ClCompile Include="ClockFolder.cpp" />
+    <ClCompile Include="ClockPaddle0.cpp" />
     <ClCompile Include="ClockPaddle1.cpp" />
     <ClCompile Include="ClockPaddle2.cpp" />
     <ClCompile Include="ClockPaddle3.cpp" />
+    <ClCompile Include="ClockPaddle4.cpp" />
+    <ClCompile Include="ClockPaddle5.cpp" />
+    <ClCompile Include="ClockPaddle6.cpp" />
+    <ClCompile Include="ClockPaddle7.cpp" />
+    <ClCompile Include="ClockPaddle8.cpp" />
+    <ClCompile Include="ClockPaddle9.cpp" />
     <ClCompile Include="ClockPanel.cpp" />
+    <ClCompile Include="ClockState.cpp" />
+    <ClCompile Include="ClockUnderBar.cpp" />
     <ClCompile Include="CodeIcon.cpp" />
     <ClCompile Include="CodePicture.cpp" />
     <ClCompile Include="ContentsCore.cpp">
@@ -298,6 +318,7 @@
     <ClCompile Include="DrawerIcon.cpp" />
     <ClCompile Include="DrawerPicture.cpp" />
     <ClCompile Include="Fake Program Level.cpp" />
+    <ClCompile Include="FakeProgramLevelManager.cpp" />
     <ClCompile Include="FolderBackGround.cpp" />
     <ClCompile Include="F_Brazilian.cpp" />
     <ClCompile Include="F_Chinese.cpp" />
@@ -335,6 +356,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PrivateFolder.cpp" />
+    <ClCompile Include="PrivatePanel.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />
     <ClCompile Include="Rotate.cpp" />

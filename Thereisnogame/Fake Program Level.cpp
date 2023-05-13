@@ -50,6 +50,19 @@
 #include "DrawerPicture.h"
 #include "CodeIcon.h"
 #include "CodePicture.h"
+//Clock
+#include "ClockPanel.h"
+#include "ClockPaddle0.h"
+#include "ClockPaddle1.h"
+#include "ClockPaddle2.h"
+#include "ClockPaddle3.h"
+#include "ClockPaddle4.h"
+#include "ClockPaddle5.h"
+#include "ClockPaddle6.h"
+#include "ClockPaddle7.h"
+#include "ClockPaddle8.h"
+#include "ClockPaddle9.h"
+
 
 #include "Chain.h"
 
@@ -112,15 +125,28 @@ void FakeProgramLevel::Start()
 		CreateActor<SkiteCallingMissed>();*/
 
 		//Picture
-		CreateActor<PictureFolderPanel>();
+		//CreateActor<PictureFolderPanel>();
 		//CreateActor<DayTree>();
 		//CreateActor<DayPicture>();
-		CreateActor<DayIcon>();
-		CreateActor<DrawerIcon>();
+		//CreateActor<DayIcon>();
+		//CreateActor<DrawerIcon>();
 		//CreateActor<DrawerPicture>();
-		CreateActor<CodeIcon>();
+		//CreateActor<CodeIcon>();
 		//CreateActor<CodePicture>();
 		
+		//Clock
+		//CreateActor<ClockPanel>();
+		CreateActor<ClockPaddle1>();
+		CreateActor<ClockPaddle2>();
+		CreateActor<ClockPaddle3>();
+		CreateActor<ClockPaddle4>();
+		CreateActor<ClockPaddle5>();
+		CreateActor<ClockPaddle6>();
+		CreateActor<ClockPaddle7>();
+		CreateActor<ClockPaddle8>();
+		CreateActor<ClockPaddle9>();
+		CreateActor<ClockPaddle0>();
+
 	}
 		//CreateActor<AlphaCircle>();
 }
