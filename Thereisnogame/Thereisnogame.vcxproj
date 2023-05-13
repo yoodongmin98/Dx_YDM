@@ -217,6 +217,7 @@
     <ClInclude Include="Fake Program Level.h" />
     <ClInclude Include="FakeProgramLevelManager.h" />
     <ClInclude Include="FolderBackGround.h" />
+    <ClInclude Include="FRMissIcon.h" />
     <ClInclude Include="F_Brazilian.h" />
     <ClInclude Include="F_Chinese.h" />
     <ClInclude Include="F_English.h" />
@@ -227,13 +228,16 @@
     <ClInclude Include="F_Korea.h" />
     <ClInclude Include="F_Russian.h" />
     <ClInclude Include="F_Spanish.h" />
+    <ClInclude Include="GigaPrivate.h" />
     <ClInclude Include="G_ActorBase.h" />
+    <ClInclude Include="JPMissIcon.h" />
     <ClInclude Include="LockFolder.h" />
     <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="MediaPause.h" />
     <ClInclude Include="MediaPicture.h" />
     <ClInclude Include="MediaPlay.h" />
     <ClInclude Include="MediaPlayer.h" />
+    <ClInclude Include="MissPicture.h" />
     <ClInclude Include="MusicFolder.h" />
     <ClInclude Include="MusicFolderPanel.h" />
     <ClInclude Include="MusicNote_Archive.h" />
@@ -247,6 +251,7 @@
     <ClInclude Include="Play within a play Level.h" />
     <ClInclude Include="PrecompileHeader.h" />
     <ClInclude Include="PrivateFolder.h" />
+    <ClInclude Include="PrivateNote.h" />
     <ClInclude Include="PrivatePanel.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
@@ -263,8 +268,14 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="StartPictures.h" />
+    <ClInclude Include="SuperPrivate.h" />
     <ClInclude Include="TrashcanFolder.h" />
     <ClInclude Include="TrashcanTop.h" />
+    <ClInclude Include="Truth1Icon.h" />
+    <ClInclude Include="Truth2Icon.h" />
+    <ClInclude Include="Truth3Icon.h" />
+    <ClInclude Include="UltraPrivate.h" />
+    <ClInclude Include="USMissIcon.h" />
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +331,7 @@
     <ClCompile Include="Fake Program Level.cpp" />
     <ClCompile Include="FakeProgramLevelManager.cpp" />
     <ClCompile Include="FolderBackGround.cpp" />
+    <ClCompile Include="FRMissIcon.cpp" />
     <ClCompile Include="F_Brazilian.cpp" />
     <ClCompile Include="F_Chinese.cpp" />
     <ClCompile Include="F_English.cpp" />
@@ -330,7 +342,9 @@
     <ClCompile Include="F_Korea.cpp" />
     <ClCompile Include="F_Russian.cpp" />
     <ClCompile Include="F_Spanish.cpp" />
+    <ClCompile Include="GigaPrivate.cpp" />
     <ClCompile Include="G_ActorBase.cpp" />
+    <ClCompile Include="JPMissIcon.cpp" />
     <ClCompile Include="LockFolder.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="MainMenuLevelState.cpp" />
@@ -338,6 +352,7 @@
     <ClCompile Include="MediaPicture.cpp" />
     <ClCompile Include="MediaPlay.cpp" />
     <ClCompile Include="MediaPlayer.cpp" />
+    <ClCompile Include="MissPicture.cpp" />
     <ClCompile Include="MusicFolder.cpp" />
     <ClCompile Include="MusicFolderPanel.cpp" />
     <ClCompile Include="MusicNote_Archive.cpp" />
@@ -356,6 +371,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PrivateFolder.cpp" />
+    <ClCompile Include="PrivateNote.cpp" />
     <ClCompile Include="PrivatePanel.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />
@@ -372,8 +388,14 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="StartPictures.cpp" />
+    <ClCompile Include="SuperPrivate.cpp" />
     <ClCompile Include="TrashcanFolder.cpp" />
     <ClCompile Include="TrashcanTop.cpp" />
+    <ClCompile Include="Truth1Icon.cpp" />
+    <ClCompile Include="Truth2Icon.cpp" />
+    <ClCompile Include="Truth3Icon.cpp" />
+    <ClCompile Include="UltraPrivate.cpp" />
+    <ClCompile Include="USMissIcon.cpp" />
     <ClCompile Include="ZipWipFolder.cpp" />
   </ItemGroup>
   <ItemGroup>

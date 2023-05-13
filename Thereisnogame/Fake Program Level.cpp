@@ -62,6 +62,8 @@
 #include "ClockPaddle7.h"
 #include "ClockPaddle8.h"
 #include "ClockPaddle9.h"
+//Private
+//TrashCan
 
 
 #include "Chain.h"
@@ -135,7 +137,7 @@ void FakeProgramLevel::Start()
 		//CreateActor<CodePicture>();
 		
 		//Clock
-		//CreateActor<ClockPanel>();
+		/*CreateActor<ClockPanel>();
 		CreateActor<ClockPaddle1>();
 		CreateActor<ClockPaddle2>();
 		CreateActor<ClockPaddle3>();
@@ -145,7 +147,10 @@ void FakeProgramLevel::Start()
 		CreateActor<ClockPaddle7>();
 		CreateActor<ClockPaddle8>();
 		CreateActor<ClockPaddle9>();
-		CreateActor<ClockPaddle0>();
+		CreateActor<ClockPaddle0>();*/
+		
+		//Private Folder
+		//CreateActor<ClockPanel>();
 
 	}
 		//CreateActor<AlphaCircle>();
