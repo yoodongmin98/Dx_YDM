@@ -293,34 +293,34 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI</Filter>
     </ClCompile>
     <ClCompile Include="Truth1Icon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\Truth</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
     <ClCompile Include="Truth2Icon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\Truth</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
     <ClCompile Include="Truth3Icon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\Truth</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
     <ClCompile Include="USMissIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClCompile>
     <ClCompile Include="FRMissIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClCompile>
     <ClCompile Include="JPMissIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClCompile>
     <ClCompile Include="MissPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss\MissPicture</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture</Filter>
     </ClCompile>
     <ClCompile Include="SuperPrivate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\File</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
     <ClCompile Include="UltraPrivate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\File</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
     <ClCompile Include="GigaPrivate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\File</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -613,34 +613,34 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI</Filter>
     </ClInclude>
     <ClInclude Include="Truth1Icon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\Truth</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
     <ClInclude Include="Truth2Icon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\Truth</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
     <ClInclude Include="Truth3Icon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\Truth</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
     <ClInclude Include="USMissIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClInclude>
     <ClInclude Include="FRMissIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClInclude>
     <ClInclude Include="JPMissIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClInclude>
     <ClInclude Include="MissPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss\MissPicture</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture</Filter>
     </ClInclude>
     <ClInclude Include="SuperPrivate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\File</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
     <ClInclude Include="UltraPrivate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\File</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
     <ClInclude Include="GigaPrivate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\File</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -773,20 +773,20 @@
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI">
       <UniqueIdentifier>{d24fc3d6-cd87-49d7-97d7-49c4b8c03448}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile">
-      <UniqueIdentifier>{8b4b9b23-d1c9-401c-973d-f4886899661a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss">
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss">
       <UniqueIdentifier>{027fc8bf-dc69-4481-8351-84aa8bff6e22}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\Truth">
-      <UniqueIdentifier>{90b583d3-bf92-41fe-a5d3-7c03a95437d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\18+Miss\MissPicture">
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture">
       <UniqueIdentifier>{3a0962eb-e827-4af9-86ba-8ba698493b41}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateFile\File">
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File">
       <UniqueIdentifier>{58812e5f-ae68-4db2-911a-ae3b1d78de84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth">
+      <UniqueIdentifier>{90b583d3-bf92-41fe-a5d3-7c03a95437d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay">
+      <UniqueIdentifier>{4c6c6f13-963b-4584-810c-8ce2e1e058c0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
