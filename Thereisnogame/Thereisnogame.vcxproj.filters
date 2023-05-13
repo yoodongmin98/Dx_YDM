@@ -286,9 +286,6 @@
     <ClCompile Include="FakeProgramLevelManager.cpp">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClCompile>
-    <ClCompile Include="PrivateNote.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI</Filter>
-    </ClCompile>
     <ClCompile Include="Truth1Icon.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
@@ -333,6 +330,48 @@
     </ClCompile>
     <ClCompile Include="PictureFolderPanel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderNote.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
+    </ClCompile>
+    <ClCompile Include="PasswordIcon.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+    </ClCompile>
+    <ClCompile Include="GoodbyeIcon.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_BackGround.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_Ball.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_Bumper50.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_Racket.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_SideTable.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_Icon.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_Score.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_HaloCup.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_Bumper100.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_LeftBoxFond.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClCompile>
+    <ClCompile Include="PinBall_RightBoxFond.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -618,9 +657,6 @@
     <ClInclude Include="FakeProgramLevelManager.h">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClInclude>
-    <ClInclude Include="PrivateNote.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI</Filter>
-    </ClInclude>
     <ClInclude Include="Truth1Icon.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
@@ -665,6 +701,48 @@
     </ClInclude>
     <ClInclude Include="PictureFolderPanel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderNote.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
+    </ClInclude>
+    <ClInclude Include="PasswordIcon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+    </ClInclude>
+    <ClInclude Include="GoodbyeIcon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_BackGround.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_Ball.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_Bumper50.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_Racket.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_SideTable.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_Icon.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_Score.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_HaloCup.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_Bumper100.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_LeftBoxFond.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClInclude>
+    <ClInclude Include="PinBall_RightBoxFond.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -811,6 +889,21 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay">
       <UniqueIdentifier>{4c6c6f13-963b-4584-810c-8ce2e1e058c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall">
+      <UniqueIdentifier>{a9f38c08-a8df-44cb-88d4-1b07292490b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File">
+      <UniqueIdentifier>{afb8f9b7-183c-482b-9afa-a6fc77daceb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction">
+      <UniqueIdentifier>{a3e9167a-1b0c-4ea6-9192-a1216f197ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back">
+      <UniqueIdentifier>{fc44acb5-9bf1-462c-88cd-74342b2821f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc">
+      <UniqueIdentifier>{4bdeeaf5-5277-47ed-b252-714ccda2a44b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

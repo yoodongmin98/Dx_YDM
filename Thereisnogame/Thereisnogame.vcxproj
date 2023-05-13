@@ -168,6 +168,19 @@
     <ClInclude Include="ClockBranch.h" />
     <ClInclude Include="ClockDay.h" />
     <ClInclude Include="ClockNight.h" />
+    <ClInclude Include="GoodbyeIcon.h" />
+    <ClInclude Include="PasswordIcon.h" />
+    <ClInclude Include="PinBall_BackGround.h" />
+    <ClInclude Include="PinBall_Ball.h" />
+    <ClInclude Include="PinBall_Bumper100.h" />
+    <ClInclude Include="PinBall_Bumper50.h" />
+    <ClInclude Include="PinBall_HaloCup.h" />
+    <ClInclude Include="PinBall_Icon.h" />
+    <ClInclude Include="PinBall_LeftBoxFond.h" />
+    <ClInclude Include="PinBall_Racket.h" />
+    <ClInclude Include="PinBall_RightBoxFond.h" />
+    <ClInclude Include="PinBall_Score.h" />
+    <ClInclude Include="PinBall_SideTable.h" />
     <ClInclude Include="Private18.h" />
     <ClInclude Include="AlphaCircle.h" />
     <ClInclude Include="Arrow.h" />
@@ -255,7 +268,7 @@
     <ClInclude Include="Play within a play Level.h" />
     <ClInclude Include="PrecompileHeader.h" />
     <ClInclude Include="PrivateFolder.h" />
-    <ClInclude Include="PrivateNote.h" />
+    <ClInclude Include="FolderNote.h" />
     <ClInclude Include="PrivatePanel.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
@@ -286,6 +299,19 @@
     <ClCompile Include="ClockBranch.cpp" />
     <ClCompile Include="ClockDay.cpp" />
     <ClCompile Include="ClockNight.cpp" />
+    <ClCompile Include="GoodbyeIcon.cpp" />
+    <ClCompile Include="PasswordIcon.cpp" />
+    <ClCompile Include="PinBall_BackGround.cpp" />
+    <ClCompile Include="PinBall_Ball.cpp" />
+    <ClCompile Include="PinBall_Bumper100.cpp" />
+    <ClCompile Include="PinBall_Bumper50.cpp" />
+    <ClCompile Include="PinBall_HaloCup.cpp" />
+    <ClCompile Include="PinBall_Icon.cpp" />
+    <ClCompile Include="PinBall_LeftBoxFond.cpp" />
+    <ClCompile Include="PinBall_Racket.cpp" />
+    <ClCompile Include="PinBall_RightBoxFond.cpp" />
+    <ClCompile Include="PinBall_Score.cpp" />
+    <ClCompile Include="PinBall_SideTable.cpp" />
     <ClCompile Include="Private18.cpp" />
     <ClCompile Include="AlphaCircle.cpp" />
     <ClCompile Include="Arrow.cpp" />
@@ -379,7 +405,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PrivateFolder.cpp" />
-    <ClCompile Include="PrivateNote.cpp" />
+    <ClCompile Include="FolderNote.cpp" />
     <ClCompile Include="PrivatePanel.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />
