@@ -16,6 +16,7 @@ SuperPrivate::~SuperPrivate()
 
 void SuperPrivate::Start()
 {
+	//UltraPrivate,Truth2Icon,Panel,Croix Create
 	Init(SuperPrivates, "Folder.png", { 96,87 }, float4::Zero);
 }
 

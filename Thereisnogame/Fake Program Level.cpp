@@ -64,6 +64,7 @@
 #include "ClockPaddle9.h"
 //Private
 #include "PrivatePanel.h"
+#include "PrivateNote.h"
 //TrashCan
 
 
@@ -152,6 +153,7 @@ void FakeProgramLevel::Start()
 		
 		//Private Folder
 		CreateActor<PrivatePanel>();
+		CreateActor<PrivateNote>();
 
 	}
 		//CreateActor<AlphaCircle>();
