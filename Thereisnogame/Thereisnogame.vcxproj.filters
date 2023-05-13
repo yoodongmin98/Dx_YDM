@@ -226,9 +226,6 @@
     <ClCompile Include="Rotate.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClCompile>
-    <ClCompile Include="PictureFolderPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
-    </ClCompile>
     <ClCompile Include="PurpleTextBox.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClCompile>
@@ -321,6 +318,21 @@
     </ClCompile>
     <ClCompile Include="GigaPrivate.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Private18.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockDay.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockNight.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockBranch.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+    </ClCompile>
+    <ClCompile Include="PictureFolderPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -546,9 +558,6 @@
     <ClInclude Include="Rotate.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
-    <ClInclude Include="PictureFolderPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
-    </ClInclude>
     <ClInclude Include="PurpleTextBox.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
@@ -641,6 +650,21 @@
     </ClInclude>
     <ClInclude Include="GigaPrivate.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Private18.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockDay.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockNight.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockBranch.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureFolderPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
