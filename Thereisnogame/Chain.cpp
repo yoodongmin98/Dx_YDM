@@ -23,8 +23,8 @@ void Chain::Start()
 		ChainLoad = false;
 	}
 
-	LeftChain=AnimationInit(LeftChain, "BandePellicule0.png", { 121,720 }, { -700,0 }, "ChainMove", "Chain", 0.05f);
-	RightChain = AnimationInit(RightChain, "BandePellicule0.png", { 121,720 }, { 700,0 }, "ChainMove", "Chain", 0.05f);
+	LeftChain=AnimationInit(LeftChain, "BandePellicule0.png", { 121,720 }, { -700,0 }, "ChainMove", "Chain",3, 0.05f);
+	RightChain = AnimationInit(RightChain, "BandePellicule0.png", { 121,720 }, { 700,0 }, "ChainMove", "Chain",3, 0.05f);
 	RightChain->SetFlipX();
 
 

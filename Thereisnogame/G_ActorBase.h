@@ -29,6 +29,7 @@ public:
 		float4 _Position,
 		const std::string_view& _AnimationName,
 		const std::string_view& _FileName,
+		size_t _AnimationCount,
 		float _InterTime);
 	void Repeat(float _MoveValue, float _DeltaTime);
 	void Down(float _DeltaTime);

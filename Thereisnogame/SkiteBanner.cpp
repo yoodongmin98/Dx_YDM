@@ -22,7 +22,7 @@ void SkiteBanner::Start()
 		AnimationImageLoad("Banner");
 		SkiteBannerImageLoad = false;
 	}
-	AnimationInit(SkiteBanners, "SkiteAd01_00.png", { 246,87 }, { 335,-190,0 },"BannerAd","Banner",2.0f);
+	AnimationInit(SkiteBanners, "SkiteAd01_00.png", { 246,87 }, { 335,-190,0 },"BannerAd","Banner",14,3.0f);
 }
 
 void SkiteBanner::Update(float _DeltaTime)

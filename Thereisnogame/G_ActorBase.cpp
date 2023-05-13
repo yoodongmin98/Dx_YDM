@@ -2,6 +2,7 @@
 #include "G_ActorBase.h"
 //Base
 #include <GameEngineBase/GameEngineString.h>
+#include <GameEngineBase/GameEngineMath.h>
 //PlatForm
 //Core
 #include <GameEngineCore/GameEngineRenderer.h>
@@ -60,7 +61,6 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::Init(
 	float4 _Position)
 {
 	_Render = CreateComponent<GameEngineSpriteRenderer>();
-	
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
@@ -75,15 +75,23 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(
 	float4 _Position,
 	const std::string_view& _AnimationName,
 	const std::string_view& _FileName,
+	size_t _AnimationCount,
 	float _InterTime)
 {
 	_Render = CreateComponent<GameEngineSpriteRenderer>();
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
-	_Render->CreateAnimation(_AnimationName, _FileName, _InterTime);
+	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime });
 	_Render->ChangeAnimation(_AnimationName);
 
+	/*std::string_view AnimationName = "";
+	std::string_view SpriteName = "";
+	size_t Start = static_cast<size_t>(-1);
+	size_t End = static_cast<size_t>(-1);
+	float FrameInter = 0.1f;
+	bool Loop = true;
+	bool ScaleToTexture = false;*/
 	return _Render;
 
 }
