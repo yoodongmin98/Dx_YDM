@@ -905,6 +905,9 @@
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc">
       <UniqueIdentifier>{4bdeeaf5-5277-47ed-b252-714ccda2a44b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\ScreenActor">
+      <UniqueIdentifier>{14b735ee-00cd-45bd-b2c4-11eae1c63805}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\구조 메모장.txt">

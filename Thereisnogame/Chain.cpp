@@ -52,7 +52,7 @@ void Chain::Update(float _DeltaTime)
 		RightChain->GetTransform()->SetLocalPosition(float4::LerpClamp(RStartPos, REndPos, LerfTime));
 	}
 	
-	if (GetLiveTime() > 5.0f)
+	if (GetLiveTime() > 4.5f)
 	{
 		DeathCheck = true;
 	}
