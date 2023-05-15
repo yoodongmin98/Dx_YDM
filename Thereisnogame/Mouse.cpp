@@ -19,7 +19,7 @@ Mouse::~Mouse()
 void Mouse::Start()
 {
 	GameEngineInput::MouseCursorOff();
-
+	
 	MouseIdle = Init(MouseIdle, "Idle.png", {108,108},float4::Zero);
 	MouseInteractable = Init(MouseInteractable, "Interactable.png", { 108,108 }, float4::Zero);
 	MouseHand = Init(MouseHand, "Hand.png", { 108,108 }, float4::Zero);
@@ -32,12 +32,12 @@ void Mouse::Start()
 	Mousesituation.push_back(MouseHandtake);
 	Mousesituation.push_back(MouseUnavailable);
 
-	ChangeMouse(MouseIdle);
+	whatisMouse=ChangeMouse(MouseIdle);
 }
 
 void Mouse::Update(float _DeltaTime)
 {
-	MouseIdle->GetTransform()->SetLocalPosition({ GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().x,GameEngineInput::GetMousePosition().y - GameEngineWindow::GetScreenSize().y });
+	MousePositionUpdate(whatisMouse);
 }
 
 void Mouse::Render(float _Delta)
@@ -45,7 +45,10 @@ void Mouse::Render(float _Delta)
 
 };
 
-void Mouse::ChangeMouse(std::shared_ptr<class GameEngineSpriteRenderer> _MouseOnRender)
+
+
+
+std::shared_ptr<GameEngineSpriteRenderer> Mouse::ChangeMouse(std::shared_ptr<class GameEngineSpriteRenderer> _MouseOnRender)
 {
 	if (nullptr == _MouseOnRender)
 	{
@@ -59,5 +62,11 @@ void Mouse::ChangeMouse(std::shared_ptr<class GameEngineSpriteRenderer> _MouseOn
 			Mousesituation[i]->On();
 		}
 	}
+	return _MouseOnRender;
+}
 
+void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse)
+{
+	MousePos = { GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().half().x ,-GameEngineInput::GetMousePosition().y + GameEngineWindow::GetScreenSize().half().y };
+	_Mouse->GetTransform()->SetLocalPosition(MousePos);
 }

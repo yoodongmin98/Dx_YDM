@@ -17,8 +17,13 @@ public:
 	Mouse& operator=(const Mouse& _Other) = delete;
 	Mouse& operator=(Mouse&& _Other) noexcept = delete;
 
-	void ChangeMouse(std::shared_ptr<class GameEngineSpriteRenderer> _MouseOnRender);
+	std::shared_ptr<GameEngineSpriteRenderer> ChangeMouse(std::shared_ptr<class GameEngineSpriteRenderer> _MouseOnRender);
+	void MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse);
 
+	float4 GetMousePos()
+	{
+		return MousePos;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -31,8 +36,10 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MouseHandtake;
 	std::shared_ptr<class GameEngineSpriteRenderer> MouseUnavailable;
 
+	std::shared_ptr<class GameEngineSpriteRenderer> whatisMouse;
+
 	std::vector<std::shared_ptr<class GameEngineSpriteRenderer>> Mousesituation;
 
-
+	float4 MousePos = float4::Zero;
 };
 

@@ -376,6 +376,9 @@
     <ClCompile Include="Mouse.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
+    <ClCompile Include="MouseState.cpp">
+      <Filter>CommonUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">

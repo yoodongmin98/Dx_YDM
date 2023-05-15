@@ -302,6 +302,7 @@
     <ClCompile Include="ClockNight.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
     <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="MouseState.cpp" />
     <ClCompile Include="PasswordIcon.cpp" />
     <ClCompile Include="PinBall_BackGround.cpp" />
     <ClCompile Include="PinBall_Ball.cpp" />
