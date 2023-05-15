@@ -400,6 +400,18 @@
     <ClCompile Include="Cup_Full.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
+    <ClCompile Include="LoadBarTXT.cpp">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadBarBack.cpp">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadRedBar.cpp">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadErrorPaper.cpp">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -794,6 +806,18 @@
     </ClInclude>
     <ClInclude Include="Cup_Full.h">
       <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadBarTXT.h">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadBarBack.h">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadRedBar.h">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadErrorPaper.h">
+      <Filter>Chapter1.5_Program Loading\Actor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
