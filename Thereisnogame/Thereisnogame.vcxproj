@@ -169,6 +169,7 @@
     <ClInclude Include="ClockDay.h" />
     <ClInclude Include="ClockNight.h" />
     <ClInclude Include="GoodbyeIcon.h" />
+    <ClInclude Include="Mouse.h" />
     <ClInclude Include="PasswordIcon.h" />
     <ClInclude Include="PinBall_BackGround.h" />
     <ClInclude Include="PinBall_Ball.h" />
@@ -300,6 +301,7 @@
     <ClCompile Include="ClockDay.cpp" />
     <ClCompile Include="ClockNight.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
+    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="PasswordIcon.cpp" />
     <ClCompile Include="PinBall_BackGround.cpp" />
     <ClCompile Include="PinBall_Ball.cpp" />

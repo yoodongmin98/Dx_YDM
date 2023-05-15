@@ -373,6 +373,9 @@
     <ClCompile Include="PinBall_RightBoxFond.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>CommonUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -743,6 +746,9 @@
     </ClInclude>
     <ClInclude Include="PinBall_RightBoxFond.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>CommonUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

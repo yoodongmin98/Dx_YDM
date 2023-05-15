@@ -9,6 +9,7 @@
 #include <GameEngineCore/GameEngineTexture.h>
 
 
+#include "Mouse.h"
 //Actor
 #include "AlphaCircle.h"
 #include "C2_BackGround.h"
@@ -107,6 +108,7 @@ void FakeProgramLevel::Start()
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		FolderCreate();
+		CreateActor<Mouse>();
 	}
 	//미리 Create하지않는 확인용 Actor들
 	{
@@ -152,8 +154,8 @@ void FakeProgramLevel::Start()
 		CreateActor<ClockPaddle0>();*/
 		
 		//Private Folder
-		CreateActor<PrivatePanel>();
-		CreateActor<FolderNote>();
+		//CreateActor<PrivatePanel>();
+		//CreateActor<FolderNote>();
 
 	}
 		//CreateActor<AlphaCircle>();
