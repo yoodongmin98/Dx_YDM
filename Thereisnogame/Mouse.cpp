@@ -9,6 +9,7 @@ Mouse* Mouse::MainMouse;
 
 Mouse::Mouse()
 {
+	MainMouse = this;
 }
 
 Mouse::~Mouse()
@@ -71,3 +72,4 @@ void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse
 
 	_Mouse->GetTransform()->SetLocalPosition(MousePos);
 }
+

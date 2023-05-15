@@ -33,6 +33,7 @@ public:
 		float _InterTime);
 	
 	void Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render, float _ImageHalfScale, float _DeltaTime);
+	void CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render);
 
 protected:
 	void Start() override;

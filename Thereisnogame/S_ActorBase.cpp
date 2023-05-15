@@ -1,13 +1,15 @@
 #include "PrecompileHeader.h"
 #include "S_ActorBase.h"
+
 //Base
-#include <GameEngineBase/GameEngineString.h>
-#include <GameEngineBase/GameEngineMath.h>
 //PlatForm
+#include <GameEnginePlatform/GameEngineInput.h>
 //Core
-#include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
-#include <GameEngineCore/GameEngineActor.h>
+
+
+//Actor
+#include "Mouse.h"
 
 
 S_ActorBase::S_ActorBase()
@@ -83,4 +85,13 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,float _
 		MoveDir = float4::Zero;
 	}
 	_Render->GetTransform()->AddLocalPosition(MoveDir);
+}
+
+void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render)
+{
+	if (GameEngineInput::IsPress("LeftMouse"))//Collision추가 응애
+	{
+		float4 MousePos = Mouse::MainMouse->GetMousePos();
+		_Render->GetTransform()->SetLocalPosition(MousePos);
+	}
 }
