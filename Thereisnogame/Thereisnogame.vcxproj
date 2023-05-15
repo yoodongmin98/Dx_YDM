@@ -169,6 +169,7 @@
     <ClInclude Include="ClockDay.h" />
     <ClInclude Include="ClockNight.h" />
     <ClInclude Include="Cup.h" />
+    <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Decapsuleur.h" />
     <ClInclude Include="GoodbyeIcon.h" />
     <ClInclude Include="Mouse.h" />
@@ -307,6 +308,7 @@
     <ClCompile Include="ClockDay.cpp" />
     <ClCompile Include="ClockNight.cpp" />
     <ClCompile Include="Cup.cpp" />
+    <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
     <ClCompile Include="Mouse.cpp" />

@@ -16,12 +16,12 @@ public:
 	Cup& operator=(const Cup& _Other) = delete;
 	Cup& operator=(Cup&& _Other) noexcept = delete;
 
-	//Text를 받을수있는 함수추가
 protected:
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Cups;
+	std::shared_ptr<class GameEngineSpriteRenderer> Cups_Overlap;
 };
 

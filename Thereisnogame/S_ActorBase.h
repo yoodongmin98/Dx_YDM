@@ -31,18 +31,15 @@ public:
 		const std::string_view& _FileName,
 		size_t _AnimationCount,
 		float _InterTime);
-	void Repeat(float _MoveValue, float _DeltaTime);
-	void Down(float _DeltaTime);
-	void Up(float _DeltaTime);
-	void FlagDown(float _EndValue, float _DeltaTime);
-	void FlagUp(float _PlusXvalue, float _DeltaTime);
+	
+	void Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render, float _ImageHalfScale, float _DeltaTime);
 
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
-
-
 private:
-	float ReverseTime = 0.0f;
-	float4 EndPos = float4::Zero;
+	float ScreenSizeX = GameEngineWindow::GetScreenSize().half().x;
+	float ScreenSizeY = GameEngineWindow::GetScreenSize().half().y;
+
+	float FallSpeed = 500.0f;
 };

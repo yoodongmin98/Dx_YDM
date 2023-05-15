@@ -20,3 +20,4 @@ Collision,animation전까지는 일단 노가다작업 해놓기(Actor만들기 
 Collision Group으로 만들어지면 ScreenActor Test 해봐야할덧?
 
 
+

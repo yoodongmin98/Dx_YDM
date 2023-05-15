@@ -67,6 +67,8 @@
 #include "PrivatePanel.h"
 #include "FolderNote.h"
 //TrashCan
+//ScreenActor
+#include "Cup.h"
 
 
 #include "Chain.h"
@@ -108,7 +110,7 @@ void FakeProgramLevel::Start()
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		FolderCreate();
-		CreateActor<Mouse>();
+		
 	}
 	//미리 Create하지않는 확인용 Actor들
 	{
@@ -157,8 +159,11 @@ void FakeProgramLevel::Start()
 		//CreateActor<PrivatePanel>();
 		//CreateActor<FolderNote>();
 
+		//ScreenActor
+		CreateActor<Cup>();
 	}
 		//CreateActor<AlphaCircle>();
+	CreateActor<Mouse>();
 }
 
 void FakeProgramLevel::Update(float _DeltaTime)

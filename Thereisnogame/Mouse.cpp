@@ -68,5 +68,6 @@ std::shared_ptr<GameEngineSpriteRenderer> Mouse::ChangeMouse(std::shared_ptr<cla
 void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse)
 {
 	MousePos = { GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().half().x ,-GameEngineInput::GetMousePosition().y + GameEngineWindow::GetScreenSize().half().y };
+
 	_Mouse->GetTransform()->SetLocalPosition(MousePos);
 }
