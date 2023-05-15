@@ -17,4 +17,6 @@ level을 fsm기반으로짜고 큰 단막마다의 state를설정하기>folder�
 
 Collision,animation전까지는 일단 노가다작업 해놓기(Actor만들기 등등)
 
+Collision Group으로 만들어지면 ScreenActor Test 해봐야할덧?
+
 

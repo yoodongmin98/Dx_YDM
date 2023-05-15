@@ -168,8 +168,12 @@
     <ClInclude Include="ClockBranch.h" />
     <ClInclude Include="ClockDay.h" />
     <ClInclude Include="ClockNight.h" />
+    <ClInclude Include="Cup.h" />
+    <ClInclude Include="Decapsuleur.h" />
     <ClInclude Include="GoodbyeIcon.h" />
     <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Nut_Close.h" />
+    <ClInclude Include="Nut_Open.h" />
     <ClInclude Include="PasswordIcon.h" />
     <ClInclude Include="PinBall_BackGround.h" />
     <ClInclude Include="PinBall_Ball.h" />
@@ -285,8 +289,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="SquirrelKey.h" />
     <ClInclude Include="StartPictures.h" />
     <ClInclude Include="SuperPrivate.h" />
+    <ClInclude Include="S_ActorBase.h" />
     <ClInclude Include="TrashcanFolder.h" />
     <ClInclude Include="TrashcanTop.h" />
     <ClInclude Include="Truth1Icon.h" />
@@ -300,9 +306,13 @@
     <ClCompile Include="ClockBranch.cpp" />
     <ClCompile Include="ClockDay.cpp" />
     <ClCompile Include="ClockNight.cpp" />
+    <ClCompile Include="Cup.cpp" />
+    <ClCompile Include="Decapsuleur.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="MouseState.cpp" />
+    <ClCompile Include="Nut_Close.cpp" />
+    <ClCompile Include="Nut_Open.cpp" />
     <ClCompile Include="PasswordIcon.cpp" />
     <ClCompile Include="PinBall_BackGround.cpp" />
     <ClCompile Include="PinBall_Ball.cpp" />
@@ -424,8 +434,10 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="SquirrelKey.cpp" />
     <ClCompile Include="StartPictures.cpp" />
     <ClCompile Include="SuperPrivate.cpp" />
+    <ClCompile Include="S_ActorBase.cpp" />
     <ClCompile Include="TrashcanFolder.cpp" />
     <ClCompile Include="TrashcanTop.cpp" />
     <ClCompile Include="Truth1Icon.cpp" />

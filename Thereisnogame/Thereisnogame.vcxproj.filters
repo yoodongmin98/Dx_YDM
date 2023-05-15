@@ -379,6 +379,24 @@
     <ClCompile Include="MouseState.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
+    <ClCompile Include="Cup.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Decapsuleur.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Nut_Open.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Nut_Close.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="S_ActorBase.cpp">
+      <Filter>Actor Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SquirrelKey.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -752,6 +770,24 @@
     </ClInclude>
     <ClInclude Include="Mouse.h">
       <Filter>CommonUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Cup.h">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Decapsuleur.h">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Nut_Open.h">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Nut_Close.h">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="S_ActorBase.h">
+      <Filter>Actor Base</Filter>
+    </ClInclude>
+    <ClInclude Include="SquirrelKey.h">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
