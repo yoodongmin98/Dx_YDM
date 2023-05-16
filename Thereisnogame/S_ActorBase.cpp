@@ -30,7 +30,7 @@ void S_ActorBase::Update(float _DeltaTime)
 {
 
 }
-//얘는 떨어져야하기때문에 기본적으로 윈도우좌표계 기준으로 넣을예정
+
 std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::Init(
 	std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	const std::string_view& _ImageName,
@@ -40,7 +40,7 @@ std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::Init(
 	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::ScreenActor);
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
-	_Render->GetTransform()->SetLocalPosition({ _Position.x - ScreenSizeX,_Position.y + ScreenSizeY });
+	_Render->GetTransform()->SetLocalPosition({ _Position.x /*- ScreenSizeX*/,_Position.y /*+ ScreenSizeY*/ });
 
 	return _Render;
 }
@@ -85,12 +85,12 @@ std::shared_ptr<GameEngineCollision> S_ActorBase::CollisionInit(
 {
 	_Collision = CreateComponent<GameEngineCollision>(ActorTypeEnum::ScreenActor);
 	_Collision->GetTransform()->SetLocalScale(_Scale);
-	_Collision->GetTransform()->SetLocalPosition({ _Position.x - ScreenSizeX,_Position.y + ScreenSizeY });
+	_Collision->GetTransform()->SetLocalPosition({ _Position.x,_Position.y });
 
 	return _Collision;
 }
 
-void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,float _ImageHalfScale,float _DeltaTime)
+void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::shared_ptr<GameEngineCollision> _Collision,float _ImageHalfScale,float _DeltaTime)
 {
 	float4 MoveDir = float4::Down * _DeltaTime * FallSpeed;
 	
@@ -99,13 +99,16 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,float _
 		MoveDir = float4::Zero;
 	}
 	_Render->GetTransform()->AddLocalPosition(MoveDir);
+	_Collision->GetTransform()->AddLocalPosition(MoveDir);
 }
 
-void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render)
+void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::shared_ptr<GameEngineCollision> _Collision)
 {
-	if (GameEngineInput::IsPress("LeftMouse"))//Collision추가
+	//아마 제일많이 수정해야할부분?
+	if (true==Mouse::MainMouse->InteractableCheck()&&GameEngineInput::IsPress("LeftMouse"))//Collision추가
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();
 		_Render->GetTransform()->SetLocalPosition(MousePos);
+		_Collision->GetTransform()->SetLocalPosition(MousePos);
 	}
 }
