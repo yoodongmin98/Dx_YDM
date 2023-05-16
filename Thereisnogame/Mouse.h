@@ -18,7 +18,7 @@ public:
 	Mouse& operator=(Mouse&& _Other) noexcept = delete;
 
 	std::shared_ptr<GameEngineSpriteRenderer> ChangeMouse(std::shared_ptr<class GameEngineSpriteRenderer> _MouseOnRender);
-	void MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse);
+	void MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse, std::shared_ptr<GameEngineCollision> _MouseCollision);
 	bool InteractableCheck();
 	float4 GetMousePos()
 	{
@@ -41,8 +41,11 @@ private:
 
 	std::vector<std::shared_ptr<class GameEngineSpriteRenderer>> Mousesituation;
 
+	std::shared_ptr<class GameEngineCollision> MouseCollision = nullptr;
+
+
 	float4 MousePos = float4::Zero;
 
-	bool IsInteractable = false;
+	
 };
 

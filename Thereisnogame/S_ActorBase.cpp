@@ -1,5 +1,6 @@
 #include "PrecompileHeader.h"
 #include "S_ActorBase.h"
+#include "ActorTypeEnum.h"
 
 //Base
 //PlatForm
@@ -36,7 +37,7 @@ std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::Init(
 	float4 _Scale,
 	float4 _Position)
 {
-	_Render = CreateComponent<GameEngineSpriteRenderer>();
+	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::ScreenActor);
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition({ _Position.x - ScreenSizeX,_Position.y + ScreenSizeY });
@@ -75,6 +76,19 @@ std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::Init(
 //
 //	GameEngineSprite::LoadFolder(NewDir.GetPlusFileName(_FileName).GetFullPath());
 //}
+
+
+std::shared_ptr<GameEngineCollision> S_ActorBase::CollisionInit(
+	std::shared_ptr<GameEngineCollision> _Collision,
+	float4 _Scale,
+	float4 _Position)
+{
+	_Collision = CreateComponent<GameEngineCollision>(ActorTypeEnum::ScreenActor);
+	_Collision->GetTransform()->SetLocalScale(_Scale);
+	_Collision->GetTransform()->SetLocalPosition({ _Position.x - ScreenSizeX,_Position.y + ScreenSizeY });
+
+	return _Collision;
+}
 
 void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,float _ImageHalfScale,float _DeltaTime)
 {

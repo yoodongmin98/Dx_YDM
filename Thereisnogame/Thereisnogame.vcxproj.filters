@@ -819,6 +819,9 @@
     <ClInclude Include="LoadErrorPaper.h">
       <Filter>Chapter1.5_Program Loading\Actor</Filter>
     </ClInclude>
+    <ClInclude Include="ActorTypeEnum.h">
+      <Filter>CommonUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

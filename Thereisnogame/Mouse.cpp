@@ -1,9 +1,12 @@
 #include "PrecompileHeader.h"
 #include "Mouse.h"
+#include "ActorTypeEnum.h"
+
 
 //PlatForm
 #include <GameEnginePlatform/GameEngineInput.h>
 //Core
+#include <GameEngineCore/GameEngineCollision.h>
 
 Mouse* Mouse::MainMouse;
 
@@ -33,13 +36,21 @@ void Mouse::Start()
 	Mousesituation.push_back(MouseHandtake);
 	Mousesituation.push_back(MouseUnavailable);
 
+
+
+	MouseCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Mouse);
+	MouseCollision->GetTransform()->SetLocalScale({ 108,108 });
+
+
 	whatisMouse=ChangeMouse(MouseIdle);
+
 }
 
 void Mouse::Update(float _DeltaTime)
 {
-	MousePositionUpdate(whatisMouse);
+	MousePositionUpdate(whatisMouse, MouseCollision);
 	InteractableCheck();
+	//float4 asdq = MouseCollision->GetTransform()->GetLocalPosition();
 }
 
 void Mouse::Render(float _Delta)
@@ -67,12 +78,13 @@ std::shared_ptr<GameEngineSpriteRenderer> Mouse::ChangeMouse(std::shared_ptr<cla
 	return _MouseOnRender;
 }
 
-void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse)
+void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse, std::shared_ptr<GameEngineCollision> _MouseCollision)
 {
 	MousePos = { GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().half().x ,
 				-GameEngineInput::GetMousePosition().y + GameEngineWindow::GetScreenSize().half().y };
 
 	_Mouse->GetTransform()->SetLocalPosition(MousePos);
+	_MouseCollision->GetTransform()->SetLocalPosition(MousePos);
 }
 
 bool Mouse::InteractableCheck()

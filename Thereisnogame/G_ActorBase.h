@@ -1,6 +1,7 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
+#include <GameEngineCore/GameEngineCollision.h>
 
 
 class G_ActorBase : public GameEngineActor
@@ -31,6 +32,9 @@ public:
 		const std::string_view& _FileName,
 		size_t _AnimationCount,
 		float _InterTime);
+	std::shared_ptr<GameEngineCollision> CollisionInit(
+		std::shared_ptr<GameEngineCollision> _Collision);
+
 	void Repeat(float _MoveValue, float _DeltaTime);
 	void Down(float _DeltaTime);
 	void Up(float _DeltaTime);

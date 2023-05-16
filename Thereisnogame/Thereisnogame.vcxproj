@@ -165,6 +165,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ActorTypeEnum.h" />
     <ClInclude Include="ClockBranch.h" />
     <ClInclude Include="ClockDay.h" />
     <ClInclude Include="ClockNight.h" />

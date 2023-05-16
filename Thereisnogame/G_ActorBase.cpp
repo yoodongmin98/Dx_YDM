@@ -1,5 +1,6 @@
 #include "PrecompileHeader.h"
 #include "G_ActorBase.h"
+#include "ActorTypeEnum.h"
 //Base
 #include <GameEngineBase/GameEngineString.h>
 #include <GameEngineBase/GameEngineMath.h>
@@ -60,7 +61,7 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::Init(
 	float4 _Scale,
 	float4 _Position)
 {
-	_Render = CreateComponent<GameEngineSpriteRenderer>();
+	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
@@ -85,16 +86,14 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(
 	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime });
 	_Render->ChangeAnimation(_AnimationName);
 
-	/*std::string_view AnimationName = "";
-	std::string_view SpriteName = "";
-	size_t Start = static_cast<size_t>(-1);
-	size_t End = static_cast<size_t>(-1);
-	float FrameInter = 0.1f;
-	bool Loop = true;
-	bool ScaleToTexture = false;*/
 	return _Render;
 
 }
+
+//std::shared_ptr<GameEngineCollision> G_ActorBase::CollisionInit()
+//{
+//
+//}
 
 void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
 {

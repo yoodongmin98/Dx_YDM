@@ -23,5 +23,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Cups;
 	std::shared_ptr<class GameEngineSpriteRenderer> Cups_Overlap;
+
+	std::shared_ptr<class GameEngineCollision> CupCollision;
 };
 
