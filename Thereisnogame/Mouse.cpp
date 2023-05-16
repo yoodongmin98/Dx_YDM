@@ -39,6 +39,7 @@ void Mouse::Start()
 void Mouse::Update(float _DeltaTime)
 {
 	MousePositionUpdate(whatisMouse);
+	InteractableCheck();
 }
 
 void Mouse::Render(float _Delta)
@@ -68,8 +69,21 @@ std::shared_ptr<GameEngineSpriteRenderer> Mouse::ChangeMouse(std::shared_ptr<cla
 
 void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse)
 {
-	MousePos = { GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().half().x ,-GameEngineInput::GetMousePosition().y + GameEngineWindow::GetScreenSize().half().y };
+	MousePos = { GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().half().x ,
+				-GameEngineInput::GetMousePosition().y + GameEngineWindow::GetScreenSize().half().y };
 
 	_Mouse->GetTransform()->SetLocalPosition(MousePos);
+}
+
+bool Mouse::InteractableCheck()
+{
+	if (GameEngineInput::IsPress("LeftMouse"))
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
 }
 

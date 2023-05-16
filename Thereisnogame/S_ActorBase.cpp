@@ -89,7 +89,7 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,float _
 
 void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render)
 {
-	if (GameEngineInput::IsPress("LeftMouse"))//Collision추가 응애
+	if (GameEngineInput::IsPress("LeftMouse"))//Collision추가
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();
 		_Render->GetTransform()->SetLocalPosition(MousePos);

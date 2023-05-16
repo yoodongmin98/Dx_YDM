@@ -101,9 +101,6 @@ void MainMenuLevel::Start()
 
 	if (false == GameEngineInput::IsKey("PlayerMoveLeft"))
 	{
-		GameEngineInput::CreateKey("CameraSet", '0'); //¾ËÆÄºª
-		GameEngineInput::CreateKey("TestKey1", '1');
-		GameEngineInput::CreateKey("TestKey2", '2');
 		GameEngineInput::CreateKey("TestKey3", '3');
 		GameEngineInput::CreateKey("TestKey4", '4');
 		GameEngineInput::CreateKey("LeftMouse", VK_LBUTTON);
