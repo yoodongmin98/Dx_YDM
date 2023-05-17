@@ -40,9 +40,14 @@ public:
 		float4 _Scale,
 		float4 _Position);
 
-	
-	void Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::shared_ptr<GameEngineCollision> _Collision, float _ImageHalfScale, float _DeltaTime);
-	void CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::shared_ptr<GameEngineCollision> _Collision);
+	void Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
+		std::shared_ptr<GameEngineSpriteRenderer> _Render2,
+		std::shared_ptr<GameEngineCollision> _Collision,
+		float _ImageHalfScale, float _DeltaTime);
+
+	void CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
+		std::shared_ptr<GameEngineSpriteRenderer> _Render2,
+		std::shared_ptr<GameEngineCollision> _Collision);
 
 protected:
 	void Start() override;

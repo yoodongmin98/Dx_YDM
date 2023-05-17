@@ -86,27 +86,36 @@ void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse
 	_MouseCollision->GetTransform()->SetLocalPosition(MousePos);
 }
 
-void Mouse::MouseStateCheck()
+void Mouse::InteractableCheck()
 {
-	if (true == Interactable)
+	if (GameEngineInput::IsPress("LeftMouse"))
 	{
-		if (MouseCollision->Collision(ActorTypeEnum::ScreenActor, ColType::AABBBOX2D, ColType::AABBBOX2D))
-		{
-			whatisMouse = ChangeMouse(MouseHand);
-			if (GameEngineInput::IsPress("LeftMouse"))
-			{
-				//¿©±âºÎÅÍ °íÃÄ¶ó ´×°Õ
-				
-				whatisMouse = ChangeMouse(MouseHandtake);
-			}
-		}
-		else if (MouseCollision->Collision(ActorTypeEnum::BackActor, ColType::AABBBOX2D, ColType::AABBBOX2D))
-		{
-			whatisMouse = ChangeMouse(MouseInteractable);
-		}
-		else
-		{
-			whatisMouse = ChangeMouse(MouseIdle);
-		}
+		Interactable = false;
+	}
+	else
+	{
+		Interactable = true;
 	}
 }
+
+void Mouse::MouseStateCheck()
+{
+
+	if (MouseCollision->Collision(ActorTypeEnum::ScreenActor, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	{
+		whatisMouse = ChangeMouse(MouseHand);
+		if (GameEngineInput::IsPress("LeftMouse"))
+		{
+			whatisMouse = ChangeMouse(MouseHandtake);
+		}
+	}
+	else if (MouseCollision->Collision(ActorTypeEnum::BackActor, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	{
+		whatisMouse = ChangeMouse(MouseInteractable);
+	}
+	else
+	{
+		whatisMouse = ChangeMouse(MouseIdle);
+	}
+}
+

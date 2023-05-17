@@ -20,6 +20,7 @@ public:
 	std::shared_ptr<GameEngineSpriteRenderer> ChangeMouse(std::shared_ptr<class GameEngineSpriteRenderer> _MouseOnRender);
 	void MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse, std::shared_ptr<GameEngineCollision> _MouseCollision);
 	void MouseStateCheck();
+	void InteractableCheck();
 	float4 GetMousePos()
 	{
 		return MousePos;

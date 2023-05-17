@@ -40,43 +40,10 @@ std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::Init(
 	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::ScreenActor);
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
-	_Render->GetTransform()->SetLocalPosition({ _Position.x /*- ScreenSizeX*/,_Position.y /*+ ScreenSizeY*/ });
+	_Render->GetTransform()->SetLocalPosition({ _Position.x,_Position.y});
 
 	return _Render;
 }
-
-//아마 안쓸듯?
-//std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::AnimationInit(
-//	std::shared_ptr<GameEngineSpriteRenderer> _Render,
-//	const std::string_view& _ImageName,
-//	float4 _Scale,
-//	float4 _Position,
-//	const std::string_view& _AnimationName,
-//	const std::string_view& _FileName,
-//	size_t _AnimationCount,
-//	float _InterTime)
-//{
-//	_Render = CreateComponent<GameEngineSpriteRenderer>();
-//	_Render->SetScaleToTexture(_ImageName);
-//	_Render->GetTransform()->SetLocalScale(_Scale);
-//	_Render->GetTransform()->SetLocalPosition(_Position);
-//	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime });
-//	_Render->ChangeAnimation(_AnimationName);
-//
-//	return _Render;
-//
-//}
-
-//void S_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
-//{
-//	GameEngineDirectory NewDir;
-//	NewDir.MoveParentToDirectory("ThereisnogameResource");
-//	NewDir.Move("ThereisnogameResource");
-//	NewDir.Move("Animation");
-//
-//	GameEngineSprite::LoadFolder(NewDir.GetPlusFileName(_FileName).GetFullPath());
-//}
-
 
 std::shared_ptr<GameEngineCollision> S_ActorBase::CollisionInit(
 	std::shared_ptr<GameEngineCollision> _Collision,
@@ -90,7 +57,10 @@ std::shared_ptr<GameEngineCollision> S_ActorBase::CollisionInit(
 	return _Collision;
 }
 
-void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::shared_ptr<GameEngineCollision> _Collision,float _ImageHalfScale,float _DeltaTime)
+void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
+	std::shared_ptr<GameEngineSpriteRenderer> _Render2,
+	std::shared_ptr<GameEngineCollision> _Collision,
+	float _ImageHalfScale,float _DeltaTime)
 {
 	float4 MoveDir = float4::Down * _DeltaTime * FallSpeed;
 	
@@ -99,16 +69,32 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::s
 		MoveDir = float4::Zero;
 	}
 	_Render->GetTransform()->AddLocalPosition(MoveDir);
+	_Render2->GetTransform()->AddLocalPosition(MoveDir);
 	_Collision->GetTransform()->AddLocalPosition(MoveDir);
 }
 
-void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::shared_ptr<GameEngineCollision> _Collision)
+void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
+	std::shared_ptr<GameEngineSpriteRenderer> _Render2,
+	std::shared_ptr<GameEngineCollision> _Collision)
 {
-	//아마 제일많이 수정해야할부분?
-	if (GameEngineInput::IsPress("LeftMouse"))//Collision추가
+	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	{
+		_Render->Off();
+		_Render2->On();
+	}
+	else
+	{
+		_Render->On();
+		_Render2->Off();
+	}
+	//마우스 속도(?)때문인지는 모르겠는데 빠르게 움직이면 놓쳐버림
+	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&&true==Mouse::MainMouse->IsInteractable()
+		&&GameEngineInput::IsPress("LeftMouse"))
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();
 		_Render->GetTransform()->SetLocalPosition(MousePos);
+		_Render2->GetTransform()->SetLocalPosition({ MousePos.x - 3,MousePos.y + 3 });
 		_Collision->GetTransform()->SetLocalPosition(MousePos);
 	}
 }
