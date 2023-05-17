@@ -169,21 +169,6 @@
     <ClCompile Include="TrashcanTop.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
-    <ClCompile Include="MediaPlayer.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClCompile>
-    <ClCompile Include="MediaPause.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClCompile>
-    <ClCompile Include="MediaPlay.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClCompile>
-    <ClCompile Include="MediaPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClCompile>
-    <ClCompile Include="MusicFolderPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClCompile>
     <ClCompile Include="BoxCroix.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
     </ClCompile>
@@ -412,6 +397,21 @@
     <ClCompile Include="LoadErrorPaper.cpp">
       <Filter>Chapter1.5_Program Loading\Actor</Filter>
     </ClCompile>
+    <ClCompile Include="MediaPause.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaPlay.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaPlayer.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicFolderPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -578,21 +578,6 @@
     </ClInclude>
     <ClInclude Include="TrashcanTop.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
-    </ClInclude>
-    <ClInclude Include="MediaPlayer.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClInclude>
-    <ClInclude Include="MediaPause.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClInclude>
-    <ClInclude Include="MediaPlay.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClInclude>
-    <ClInclude Include="MediaPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
-    </ClInclude>
-    <ClInclude Include="MusicFolderPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
@@ -822,6 +807,21 @@
     <ClInclude Include="ActorTypeEnum.h">
       <Filter>CommonUI</Filter>
     </ClInclude>
+    <ClInclude Include="MediaPause.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaPicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaPlay.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaPlayer.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicFolderPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -985,6 +985,9 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\ScreenActor">
       <UniqueIdentifier>{14b735ee-00cd-45bd-b2c4-11eae1c63805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor">
+      <UniqueIdentifier>{3f3b6f27-e2df-46d6-a7d0-8b20d1aad969}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

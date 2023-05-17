@@ -11,7 +11,11 @@
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 #include <GameEngineCore/GameEngineActor.h>
+#include <GameEngineCore/GameEngineLevel.h>
 
+
+//Actor
+#include "BoxCroix.h"
 
 G_ActorBase::G_ActorBase()
 {
@@ -122,6 +126,18 @@ bool G_ActorBase::ClickCheck(std::shared_ptr<GameEngineCollision> _Collision)
 	{
 		return true;
 	}
+}
+
+std::shared_ptr<GameEngineCollision> G_ActorBase::BoxCroixCreate(
+	std::shared_ptr<BoxCroix> _BoxCroix,
+	float4 _Position)
+{
+	_BoxCroix = GetLevel()->CreateActor<BoxCroix>();
+	_BoxCroix->SetPosition(_Position);
+	std::shared_ptr<GameEngineCollision> CroixCollision;
+	CroixCollision=CollisionInit(CroixCollision, { 48,54 }, _Position);
+
+	return CroixCollision;
 }
 
 

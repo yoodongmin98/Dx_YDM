@@ -1,11 +1,10 @@
 #include "PrecompileHeader.h"
 #include "MusicFolderPanel.h"
-
+#include "ActorTypeEnum.h"
 //PlatForm
 //Core
-#include <GameEngineCore/GameEngineLevel.h>
 //Actor
-#include "BoxCroix.h"
+
 
 
 MusicFolderPanel::MusicFolderPanel()
@@ -23,8 +22,9 @@ void MusicFolderPanel::Start()
 
 
 	//아직 Depth조절이 안된듯
-	Croix=GetLevel()->CreateActor<BoxCroix>();
-	Croix->SetPosition({-158,110,-1});
+	/*Croix=GetLevel()->CreateActor<BoxCroix>();
+	Croix->SetPosition({-158,110,-1});*/
+	
 }
 
 void MusicFolderPanel::Update(float _DeltaTime)

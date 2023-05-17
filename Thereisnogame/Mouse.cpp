@@ -24,11 +24,11 @@ void Mouse::Start()
 {
 	GameEngineInput::MouseCursorOff();
 	
-	MouseIdle = Init(MouseIdle, "Idle.png", {108,108},float4::Zero);
-	MouseInteractable = Init(MouseInteractable, "Interactable.png", { 108,108 }, float4::Zero);
-	MouseHand = Init(MouseHand, "Hand.png", { 108,108 }, float4::Zero);
-	MouseHandtake = Init(MouseHandtake, "HandTakeOver.png", { 108,108 }, float4::Zero);
-	MouseUnavailable = Init(MouseUnavailable, "UnavailableIndicator.png", { 55,55 }, float4::Zero);
+	MouseIdle = Init(MouseIdle, "Idle.png", {108,108,-15},float4::Zero);
+	MouseInteractable = Init(MouseInteractable, "Interactable.png", { 108,108,-15 }, float4::Zero);
+	MouseHand = Init(MouseHand, "Hand.png", { 108,108,-15 }, float4::Zero);
+	MouseHandtake = Init(MouseHandtake, "HandTakeOver.png", { 108,108,-15 }, float4::Zero);
+	MouseUnavailable = Init(MouseUnavailable, "UnavailableIndicator.png", { 55,55,-15 }, float4::Zero);
 
 	Mousesituation.push_back(MouseIdle);
 	Mousesituation.push_back(MouseInteractable);

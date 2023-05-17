@@ -27,6 +27,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> BoxCroixs;
+	std::shared_ptr<class GameEngineCollision> BoxCroixsCollision;
 
 	float4 Position;
 
