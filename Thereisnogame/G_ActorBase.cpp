@@ -1,10 +1,12 @@
 #include "PrecompileHeader.h"
 #include "G_ActorBase.h"
 #include "ActorTypeEnum.h"
+#include "Mouse.h"
 //Base
 #include <GameEngineBase/GameEngineString.h>
 #include <GameEngineBase/GameEngineMath.h>
 //PlatForm
+#include <GameEnginePlatform/GameEngineInput.h>
 //Core
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
@@ -90,10 +92,17 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(
 
 }
 
-//std::shared_ptr<GameEngineCollision> G_ActorBase::CollisionInit()
-//{
-//
-//}
+std::shared_ptr<GameEngineCollision> G_ActorBase::CollisionInit(
+	std::shared_ptr<GameEngineCollision> _Collision,
+	float4 _Scale,
+	float4 _Position)
+{
+	_Collision = CreateComponent<GameEngineCollision>(ActorTypeEnum::BackActor);
+	_Collision->GetTransform()->SetLocalScale(_Scale);
+	_Collision->GetTransform()->SetLocalPosition({ _Position.x,_Position.y });
+
+	return _Collision;
+}
 
 void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
 {
@@ -105,10 +114,15 @@ void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
 	GameEngineSprite::LoadFolder(NewDir.GetPlusFileName(_FileName).GetFullPath());
 }
 
-
-
-
-
+bool G_ActorBase::ClickCheck(std::shared_ptr<GameEngineCollision> _Collision)
+{
+	//마우스 속도(?)때문인지는 모르겠는데 빠르게 움직이면 놓쳐버림
+	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& GameEngineInput::IsDown("LeftMouse"))
+	{
+		return true;
+	}
+}
 
 
 void G_ActorBase::Down(float _DeltaTime)

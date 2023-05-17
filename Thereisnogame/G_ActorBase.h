@@ -32,8 +32,13 @@ public:
 		const std::string_view& _FileName,
 		size_t _AnimationCount,
 		float _InterTime);
+
 	std::shared_ptr<GameEngineCollision> CollisionInit(
-		std::shared_ptr<GameEngineCollision> _Collision);
+		std::shared_ptr<GameEngineCollision> _Collision,
+		float4 _Scale,
+		float4 _Position);
+
+	bool ClickCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
 	void Repeat(float _MoveValue, float _DeltaTime);
 	void Down(float _DeltaTime);
