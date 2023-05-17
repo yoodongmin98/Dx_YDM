@@ -49,7 +49,6 @@ void Mouse::Start()
 void Mouse::Update(float _DeltaTime)
 {
 	MousePositionUpdate(whatisMouse, MouseCollision);
-	InteractableCheck();
 	MouseStateCheck();
 }
 
@@ -97,7 +96,7 @@ void Mouse::MouseStateCheck()
 			if (GameEngineInput::IsPress("LeftMouse"))
 			{
 				//¿©±âºÎÅÍ °íÃÄ¶ó ´×°Õ
-				Interactable = false;
+				
 				whatisMouse = ChangeMouse(MouseHandtake);
 			}
 		}

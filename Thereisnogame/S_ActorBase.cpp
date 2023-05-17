@@ -105,7 +105,7 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::s
 void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render, std::shared_ptr<GameEngineCollision> _Collision)
 {
 	//아마 제일많이 수정해야할부분?
-	if (true==Mouse::MainMouse->InteractableCheck()&&GameEngineInput::IsPress("LeftMouse"))//Collision추가
+	if (GameEngineInput::IsPress("LeftMouse"))//Collision추가
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();
 		_Render->GetTransform()->SetLocalPosition(MousePos);
