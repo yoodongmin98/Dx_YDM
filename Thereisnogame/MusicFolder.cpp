@@ -15,6 +15,10 @@
 #include "MusicNote_Radio.h"
 #include "MusicNote_Rain.h"
 #include "MusicNote_Walnut.h"
+#include "MediaPlayer.h"
+#include "MediaPause.h"
+#include "MediaPlay.h"
+#include "MediaPicture.h"
 
 
 MusicFolder::MusicFolder()
@@ -40,9 +44,14 @@ void MusicFolder::Update(float _DeltaTime)
 		GetLevel()->CreateActor<MusicNote_Radio>();
 		GetLevel()->CreateActor<MusicNote_Rain>();
 		GetLevel()->CreateActor<MusicNote_Walnut>();
+		GetLevel()->CreateActor<MediaPlayer>();
+		GetLevel()->CreateActor<MediaPlay>();
+		GetLevel()->CreateActor<MediaPause>();
+		GetLevel()->CreateActor<MediaPicture>();
 		BoxCroixsCollision=BoxCroixCreate(Croix, { -158,110,-1 });
 
 		//여기하고있다
+		float4 asdasd=BoxCroixsCollision->GetTransform()->GetLocalPosition();
 		if (BoxCroixsCollision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
 		{
 			int a = 0;
