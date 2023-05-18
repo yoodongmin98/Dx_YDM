@@ -48,8 +48,8 @@ void Mouse::Start()
 
 void Mouse::Update(float _DeltaTime)
 {
-	MousePositionUpdate(whatisMouse, MouseCollision);
 	MouseStateCheck();
+	MousePositionUpdate(whatisMouse, MouseCollision);
 }
 
 void Mouse::Render(float _Delta)
