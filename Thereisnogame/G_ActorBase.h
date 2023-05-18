@@ -41,7 +41,7 @@ public:
 	bool ClickCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
 	std::shared_ptr<GameEngineCollision> BoxCroixCreate(
-		std::shared_ptr<class BoxCroix> _BoxCroix,
+		std::shared_ptr<class BoxCroix_Music> _BoxCroix,
 		float4 _Position);
 
 	void Repeat(float _MoveValue, float _DeltaTime);

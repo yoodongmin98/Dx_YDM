@@ -25,7 +25,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> PictureFolderPanels;
 	std::shared_ptr<class GameEngineSpriteRenderer> PictureTopFolderPanels;
 
-	std::shared_ptr<class BoxCroix> Croix;
+	std::shared_ptr<class BoxCroix_Music> Croix;
 
 };
 

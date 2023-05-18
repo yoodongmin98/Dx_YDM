@@ -1,31 +1,31 @@
 #include "PrecompileHeader.h"
-#include "BoxCroix.h"
+#include "BoxCroix_Music.h"
 #include "ActorTypeEnum.h"
+#include <functional>
 
 //PlatForm
 //Core
 
 #include "MusicFolderPanel.h"
 
-BoxCroix::BoxCroix()
+BoxCroix_Music::BoxCroix_Music()
 {
 
 }
 
-BoxCroix::~BoxCroix()
+BoxCroix_Music::~BoxCroix_Music()
 {
 }
 
-void BoxCroix::Start()
+void BoxCroix_Music::Start()
 {
 	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { -158,110,0 });
 	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { -158,110,0 });
 	
 }
 
-void BoxCroix::Update(float _DeltaTime)
+void BoxCroix_Music::Update(float _DeltaTime)
 {
-	//¿©±â
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
 		BoxCroixsCollision->Death();
@@ -33,7 +33,7 @@ void BoxCroix::Update(float _DeltaTime)
 	}
 }
 
-void BoxCroix::Render(float _Delta)
+void BoxCroix_Music::Render(float _Delta)
 {
 
 };

@@ -19,8 +19,9 @@
 #include "MediaPause.h"
 #include "MediaPlay.h"
 #include "MediaPicture.h"
-#include "BoxCroix.h"
+#include "BoxCroix_Music.h"
 
+#include <GameEnginePlatform/GameEngineInput.h>
 
 MusicFolder::MusicFolder()
 {
@@ -38,19 +39,25 @@ void MusicFolder::Start()
 
 void MusicFolder::Update(float _DeltaTime)
 {
-	/////////////////////////////////////////////////
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
-		GetLevel()->CreateActor<MusicFolderPanel>();
-		GetLevel()->CreateActor<MusicNote_Archive>();
-		GetLevel()->CreateActor<MusicNote_Radio>();
-		GetLevel()->CreateActor<MusicNote_Rain>();
-		GetLevel()->CreateActor<MusicNote_Walnut>();
-		GetLevel()->CreateActor<MediaPlayer>();
-		GetLevel()->CreateActor<MediaPlay>();
-		GetLevel()->CreateActor<MediaPause>();
-		GetLevel()->CreateActor<MediaPicture>();
-		BoxCroixs=GetLevel()->CreateActor<BoxCroix>();
+		MusicFolderPanelPtr=GetLevel()->CreateActor<MusicFolderPanel>();
+		MusicNote_ArchivePtr=GetLevel()->CreateActor<MusicNote_Archive>();
+		MusicNote_RadioPtr=GetLevel()->CreateActor<MusicNote_Radio>();
+		MusicNote_RainPtr=GetLevel()->CreateActor<MusicNote_Rain>();
+		MusicNote_WalnutPtr=GetLevel()->CreateActor<MusicNote_Walnut>();
+		MediaPlayerPtr=GetLevel()->CreateActor<MediaPlayer>();
+		MediaPlayPtr=GetLevel()->CreateActor<MediaPlay>();
+		MediaPausePtr=GetLevel()->CreateActor<MediaPause>();
+		MediaPicturePtr=GetLevel()->CreateActor<MediaPicture>();
+		BoxCroixPtr=GetLevel()->CreateActor<BoxCroix_Music>();
+	}
+	if (nullptr != BoxCroixPtr)
+	{
+		//얘 왜 안됨?
+		MusicFoldersCollision->Off();
+		//
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -58,3 +65,20 @@ void MusicFolder::Render(float _Delta)
 {
 
 };
+
+void MusicFolder::BoxCroixDeathCheck()
+{
+	//BoxCroix가 죽었다는 상태가 확인이 된다면
+	if (true==BoxCroixPtr->IsDeath())
+	{
+		MusicFolderPanelPtr.get()->Death();
+		MusicNote_ArchivePtr.get()->Death();
+		MusicNote_RadioPtr.get()->Death();
+		MusicNote_RainPtr.get()->Death();
+		MusicNote_WalnutPtr.get()->Death();
+		MediaPlayerPtr.get()->Death();
+		MediaPlayPtr.get()->Death();
+		MediaPausePtr.get()->Death();
+		MediaPicturePtr.get()->Death();
+	}
+}

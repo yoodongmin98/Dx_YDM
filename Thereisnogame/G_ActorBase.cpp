@@ -13,10 +13,6 @@
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineLevel.h>
 
-
-//Actor
-#include "BoxCroix.h"
-
 G_ActorBase::G_ActorBase()
 {
 

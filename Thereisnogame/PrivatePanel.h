@@ -25,7 +25,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> PrivatePanels;
 	std::shared_ptr<class GameEngineSpriteRenderer> PrivateTopPanels;
 
-	std::shared_ptr<class BoxCroix> Croix;
+	std::shared_ptr<class BoxCroix_Music> Croix;
 
 };
 
