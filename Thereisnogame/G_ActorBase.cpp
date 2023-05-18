@@ -125,6 +125,10 @@ bool G_ActorBase::ClickCheck(std::shared_ptr<GameEngineCollision> _Collision)
 	{
 		return true;
 	}
+	else
+	{
+		return false;
+	}
 }
 
 void G_ActorBase::Down(float _DeltaTime)

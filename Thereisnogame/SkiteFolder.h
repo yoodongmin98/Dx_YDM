@@ -23,6 +23,6 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SkiteFolders;
-
+	std::shared_ptr<class GameEngineCollision> SkiteFoldersCollision;
 };
 

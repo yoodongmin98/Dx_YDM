@@ -100,69 +100,16 @@ void FakeProgramLevel::Start()
 		}
 	}
 
-
-
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
-	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		FolderCreate();
-		
 	}
-	//미리 Create하지않는 확인용 Actor들
-	{
-		//Media
-		/*CreateActor<MediaPlayer>();
-		CreateActor<MediaPlay>();
-		CreateActor<MediaPause>();
-		CreateActor<MusicFolderPanel>();
-		CreateActor<MediaPicture>();
-
-		CreateActor<MusicNote_Archive>();
-		CreateActor<MusicNote_Radio>();
-		CreateActor<MusicNote_Rain>();
-		CreateActor<MusicNote_Walnut>();*/
-
-		//Skite
-		/*CreateActor<Skite>();
-		CreateActor<SkiteBanner>();
-		CreateActor<SkiteCalling>();
-		CreateActor<SkiteCallingMissed>();*/
-
-		//Picture
-		//CreateActor<PictureFolderPanel>();
-		//CreateActor<DayTree>();
-		//CreateActor<DayPicture>();
-		//CreateActor<DayIcon>();
-		//CreateActor<DrawerIcon>();
-		//CreateActor<DrawerPicture>();
-		//CreateActor<CodeIcon>();
-		//CreateActor<CodePicture>();
-		
-		//Clock
-		/*CreateActor<ClockPanel>();
-		CreateActor<ClockPaddle1>();
-		CreateActor<ClockPaddle2>();
-		CreateActor<ClockPaddle3>();
-		CreateActor<ClockPaddle4>();
-		CreateActor<ClockPaddle5>();
-		CreateActor<ClockPaddle6>();
-		CreateActor<ClockPaddle7>();
-		CreateActor<ClockPaddle8>();
-		CreateActor<ClockPaddle9>();
-		CreateActor<ClockPaddle0>();*/
-		
-		//Private Folder
-		//CreateActor<PrivatePanel>();
-		//CreateActor<FolderNote>();
-
-		//ScreenActor
-		CreateActor<Cup>();
-	}
-		//CreateActor<AlphaCircle>();
+	CreateActor<Cup>(); //Test용
+	//CreateActor<AlphaCircle>();
 	CreateActor<Mouse>();
 }
 

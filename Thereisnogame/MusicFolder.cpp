@@ -38,6 +38,7 @@ void MusicFolder::Start()
 
 void MusicFolder::Update(float _DeltaTime)
 {
+	/////////////////////////////////////////////////
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
 		GetLevel()->CreateActor<MusicFolderPanel>();
@@ -49,10 +50,8 @@ void MusicFolder::Update(float _DeltaTime)
 		GetLevel()->CreateActor<MediaPlay>();
 		GetLevel()->CreateActor<MediaPause>();
 		GetLevel()->CreateActor<MediaPicture>();
-		GetLevel()->CreateActor<BoxCroix>();
+		BoxCroixs=GetLevel()->CreateActor<BoxCroix>();
 	}
-	
-	
 }
 
 void MusicFolder::Render(float _Delta)

@@ -169,9 +169,6 @@
     <ClCompile Include="TrashcanTop.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
-    <ClCompile Include="BoxCroix.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
-    </ClCompile>
     <ClCompile Include="MusicNote_Walnut.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClCompile>
@@ -412,6 +409,9 @@
     <ClCompile Include="MusicFolderPanel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -578,9 +578,6 @@
     </ClInclude>
     <ClInclude Include="TrashcanTop.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
-    </ClInclude>
-    <ClInclude Include="BoxCroix.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
     </ClInclude>
     <ClInclude Include="MusicNote_Walnut.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
@@ -822,6 +819,9 @@
     <ClInclude Include="MusicFolderPanel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
+    <ClInclude Include="BoxCroix.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -988,6 +988,9 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor">
       <UniqueIdentifier>{3f3b6f27-e2df-46d6-a7d0-8b20d1aad969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix">
+      <UniqueIdentifier>{83ab74f4-c102-4d7b-956d-fd71accc3d37}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
