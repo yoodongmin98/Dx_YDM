@@ -55,7 +55,7 @@ void MusicFolder::Update(float _DeltaTime)
 	if (nullptr != BoxCroixPtr)
 	{
 		//¾ê ¿Ö ¾ÈµÊ?
-		MusicFoldersCollision->Off();
+		//MusicFoldersCollision->Off();
 		//
 		BoxCroixDeathCheck();
 	}

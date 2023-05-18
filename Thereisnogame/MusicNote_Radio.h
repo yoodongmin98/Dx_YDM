@@ -23,6 +23,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MusicNote_Radios;
+	std::shared_ptr<class GameEngineCollision> MusicNote_RadiosCollision;
 
 };
 

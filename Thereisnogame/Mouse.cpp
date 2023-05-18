@@ -101,7 +101,6 @@ void Mouse::InteractableCheck()
 
 void Mouse::MouseStateCheck()
 {
-
 	if (MouseCollision->Collision(ActorTypeEnum::ScreenActor, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		whatisMouse = ChangeMouse(MouseHand);
