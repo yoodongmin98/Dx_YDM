@@ -1,5 +1,6 @@
 #include "PrecompileHeader.h"
 #include "BoxCroix.h"
+#include "ActorTypeEnum.h"
 
 //PlatForm
 //Core
@@ -9,28 +10,31 @@ BoxCroix::BoxCroix()
 
 }
 
-BoxCroix::BoxCroix(float4 _Position)
-	: Position(_Position)
-{
-}
-
 BoxCroix::~BoxCroix()
 {
 }
 
 void BoxCroix::Start()
 {
-	BoxCroixs = Init(BoxCroixs, "BoxCroix.png", { 48,54 }, {0,0,0});
-	//BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54 }, { 0,0,0 });
+	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { -158,110,0 });
+	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { -158,110,0 });
 }
 
 void BoxCroix::Update(float _DeltaTime)
 {
-	if (Position != float4::Zero)
+	//¿©±â
+	if (true == ClickCheck(BoxCroixsCollision))
 	{
-		float4 asd = Position;
-		BoxCroixs->GetTransform()->SetLocalPosition(Position);
-		//BoxCroixsCollision->GetTransform()->SetLocalPosition(Position);
+		int a = 0;
+		MusicFolderPanels.get()
+		//MusicNote_Archives;
+		//MusicNote_Radios;
+		//MusicNote_Rains;
+		//MusicNote_Walnuts;
+		//MediaPlayers;
+		//MediaPlays;
+		//MediaPauses;
+		//MediaPictures;
 	}
 }
 

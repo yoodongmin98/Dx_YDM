@@ -24,9 +24,5 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MusicFolders;
 	std::shared_ptr<class GameEngineCollision> MusicFoldersCollision;
-
-	std::shared_ptr<class BoxCroix> Croix;
-	std::shared_ptr<class GameEngineCollision> BoxCroixsCollision=nullptr;
-
 };
 

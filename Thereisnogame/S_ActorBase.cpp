@@ -87,14 +87,16 @@ void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 		_Render->On();
 		_Render2->Off();
 	}
+	
 	//마우스 속도(?)때문인지는 모르겠는데 빠르게 움직이면 놓쳐버림
-	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D)
-		&&true==Mouse::MainMouse->IsInteractable()
-		&&GameEngineInput::IsPress("LeftMouse"))
+	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();
-		_Render->GetTransform()->SetLocalPosition(MousePos);
-		_Render2->GetTransform()->SetLocalPosition({ MousePos.x - 3,MousePos.y + 3 });
-		_Collision->GetTransform()->SetLocalPosition(MousePos);
+		if (false == Mouse::MainMouse->IsInteractable())
+		{
+			_Render->GetTransform()->SetLocalPosition(MousePos);
+			_Render2->GetTransform()->SetLocalPosition({ MousePos.x - 3,MousePos.y + 3 });
+			_Collision->GetTransform()->SetLocalPosition(MousePos);
+		}
 	}
 }

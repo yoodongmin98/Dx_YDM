@@ -49,6 +49,7 @@ void Mouse::Start()
 void Mouse::Update(float _DeltaTime)
 {
 	MouseStateCheck();
+	InteractableCheck();
 	MousePositionUpdate(whatisMouse, MouseCollision);
 }
 

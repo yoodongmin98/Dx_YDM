@@ -120,26 +120,12 @@ void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
 
 bool G_ActorBase::ClickCheck(std::shared_ptr<GameEngineCollision> _Collision)
 {
-	//마우스 속도(?)때문인지는 모르겠는데 빠르게 움직이면 놓쳐버림
 	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& GameEngineInput::IsDown("LeftMouse"))
 	{
 		return true;
 	}
 }
-
-std::shared_ptr<GameEngineCollision> G_ActorBase::BoxCroixCreate(
-	std::shared_ptr<BoxCroix> _BoxCroix,
-	float4 _Position)
-{
-	_BoxCroix = GetLevel()->CreateActor<BoxCroix>();
-	_BoxCroix->SetPosition(_Position);
-	std::shared_ptr<GameEngineCollision> CroixCollision;
-	CroixCollision=CollisionInit(CroixCollision, { 48,54 }, _Position);
-
-	return CroixCollision;
-}
-
 
 void G_ActorBase::Down(float _DeltaTime)
 {

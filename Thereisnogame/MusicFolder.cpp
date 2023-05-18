@@ -19,6 +19,7 @@
 #include "MediaPause.h"
 #include "MediaPlay.h"
 #include "MediaPicture.h"
+#include "BoxCroix.h"
 
 
 MusicFolder::MusicFolder()
@@ -32,7 +33,7 @@ MusicFolder::~MusicFolder()
 void MusicFolder::Start()
 {
 	Init(MusicFolders, "Folder.png", { 96,87 }, { -425,-200,0 });
-	MusicFoldersCollision = CollisionInit(MusicFoldersCollision, { 96,87 }, { -425,-200,0 });
+	MusicFoldersCollision = CollisionInit(MusicFoldersCollision, { 96,87,1 }, { -425,-200,0 });
 }
 
 void MusicFolder::Update(float _DeltaTime)
@@ -48,14 +49,7 @@ void MusicFolder::Update(float _DeltaTime)
 		GetLevel()->CreateActor<MediaPlay>();
 		GetLevel()->CreateActor<MediaPause>();
 		GetLevel()->CreateActor<MediaPicture>();
-		BoxCroixsCollision=BoxCroixCreate(Croix, { -158,110,-1 });
-
-		//여기하고있다
-		float4 asdasd=BoxCroixsCollision->GetTransform()->GetLocalPosition();
-		if (BoxCroixsCollision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
-		{
-			int a = 0;
-		}
+		GetLevel()->CreateActor<BoxCroix>();
 	}
 	
 	
