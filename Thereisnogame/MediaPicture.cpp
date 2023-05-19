@@ -41,7 +41,7 @@ void MediaPicture::Start()
 	PictureSelectVector.push_back(RainPicture);
 	PictureSelectVector.push_back(RadioPicture);
 
-	WhatisPicture = ChangeMusicRender(RadioPicture);
+	WhatisPicture = ChangeMusicRender(WalnutPicture);
 }
 
 void MediaPicture::Update(float _DeltaTime)
