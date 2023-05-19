@@ -88,7 +88,7 @@ void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 		_Render2->Off();
 	}
 	
-	//마우스 속도(?)때문인지는 모르겠는데 빠르게 움직이면 놓쳐버림
+	//마우스 속도(?)때문인지는 모르겠는데 콜리전을 놓치는건지(?) 빠르게 움직이면 놓쳐버림
 	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();

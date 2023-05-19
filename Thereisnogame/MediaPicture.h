@@ -6,7 +6,6 @@
 class MediaPicture : public G_ActorBase
 {
 public:
-
 	static MediaPicture* MainMediaPicture;
 	// constrcuter destructer
 	MediaPicture();
@@ -20,6 +19,7 @@ public:
 
 	std::shared_ptr<GameEngineSpriteRenderer> ChangeMusicRender(std::shared_ptr<class GameEngineSpriteRenderer> _PictureRender);
 	void ChangeMusicPicture(int _Value);
+	void SetPlayandPause(const std::string_view& _PlayandPause);
 protected:
 	void Start();
 	void Update(float _Delta) override;

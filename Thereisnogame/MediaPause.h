@@ -6,6 +6,7 @@
 class MediaPause : public G_ActorBase
 {
 public:
+	static MediaPause* MainMediaPause;
 	// constrcuter destructer
 	MediaPause();
 	~MediaPause();
@@ -16,6 +17,7 @@ public:
 	MediaPause& operator=(const MediaPause& _Other) = delete;
 	MediaPause& operator=(MediaPause&& _Other) noexcept = delete;
 
+	void SetMediaPauseoff();
 
 protected:
 	void Start();
@@ -23,6 +25,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MediaPauses;
-
+	std::shared_ptr<class GameEngineSpriteRenderer> MediaPauseoffs;
+	std::shared_ptr<class GameEngineCollision> MediaPausesCollision;
 };
 

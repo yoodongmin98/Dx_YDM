@@ -31,7 +31,4 @@ void MusicFolderPanel::Render(float _Delta)
 
 };
 
-void MusicFolderPanel::DeathFunction()
-{
-	this->Death();
-}
+

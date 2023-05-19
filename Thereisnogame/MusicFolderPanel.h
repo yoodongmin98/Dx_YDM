@@ -16,8 +16,6 @@ public:
 	MusicFolderPanel& operator=(const MusicFolderPanel& _Other) = delete;
 	MusicFolderPanel& operator=(MusicFolderPanel&& _Other) noexcept = delete;
 
-	void DeathFunction();
-
 protected:
 	void Start();
 	void Update(float _Delta) override;

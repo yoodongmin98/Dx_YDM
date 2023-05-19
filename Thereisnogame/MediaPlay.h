@@ -6,6 +6,7 @@
 class MediaPlay : public G_ActorBase
 {
 public:
+	static MediaPlay* MainMediaPlay;
 	// constrcuter destructer
 	MediaPlay();
 	~MediaPlay();
@@ -16,6 +17,7 @@ public:
 	MediaPlay& operator=(const MediaPlay& _Other) = delete;
 	MediaPlay& operator=(MediaPlay&& _Other) noexcept = delete;
 
+	void SetMediaPlayoff(int _Value);
 
 protected:
 	void Start();
@@ -23,6 +25,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MediaPlays;
-
+	std::shared_ptr<class GameEngineSpriteRenderer> MediaPlayoffs;
+	std::shared_ptr<class GameEngineCollision> MediaPlaysCollision;
 };
 
