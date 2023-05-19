@@ -22,7 +22,7 @@ void ZipWipFolder::Start()
 
 void ZipWipFolder::Update(float _DeltaTime)
 {
-
+	ManagedCollision(ZipWipFoldersCollision, 0);
 }
 
 void ZipWipFolder::Render(float _Delta)

@@ -21,6 +21,7 @@ void TrashcanFolder::Start()
 
 void TrashcanFolder::Update(float _DeltaTime)
 {
+	//ManagedCollision(SkiteFoldersCollision, 0);
 
 }
 

@@ -22,6 +22,7 @@ void ClockFolder::Start()
 
 void ClockFolder::Update(float _DeltaTime)
 {
+	ManagedCollision(ClockFoldersCollision, 0);
 	if (true == ClickCheck(ClockFoldersCollision))
 	{
 		int a = 0;

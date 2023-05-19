@@ -6,6 +6,8 @@
 //PlatForm
 //Core
 
+//Actor
+#include "ColManager.h"
 
 
 BoxCroix_DrawerPicture::BoxCroix_DrawerPicture()
@@ -28,6 +30,7 @@ void BoxCroix_DrawerPicture::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
+		ColManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();
 	}

@@ -6,6 +6,7 @@
 //PlatForm
 //Core
 
+#include "ColManager.h"
 
 
 BoxCroix_PictureFolder::BoxCroix_PictureFolder()
@@ -26,8 +27,10 @@ void BoxCroix_PictureFolder::Start()
 
 void BoxCroix_PictureFolder::Update(float _DeltaTime)
 {
+	ManagedCollision(BoxCroixsCollision, 1);
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
+		ColManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();
 	}

@@ -18,8 +18,8 @@ RightRotate::~RightRotate()
 
 void RightRotate::Start()
 {
-	RightRotates=Init(RightRotates, "Rotate.png", { 84,72 }, { 380,-10 });
-	RightRotatesCollision = CollisionInit(RightRotatesCollision, { 84,72,1 }, { 380,-10 });
+	RightRotates=Init(RightRotates, "Rotate.png", { 84,72 }, { 430,-10 });
+	RightRotatesCollision = CollisionInit(RightRotatesCollision, { 84,72,1 }, { 430,-10 });
 
 	HowManyClick = 0;
 }

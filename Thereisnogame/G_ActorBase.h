@@ -45,6 +45,7 @@ public:
 		float4 _Position);
 
 	void RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render);
+	void ManagedCollision(std::shared_ptr<GameEngineCollision> _Collision, int Value);
 	void Repeat(float _MoveValue, float _DeltaTime);
 	void Down(float _DeltaTime);
 	void Up(float _DeltaTime);

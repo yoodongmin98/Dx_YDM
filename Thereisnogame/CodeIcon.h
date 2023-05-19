@@ -28,5 +28,7 @@ private:
 
 	std::shared_ptr<class CodePicture> CodePicturePtr;
 	std::shared_ptr<class BoxCroix_CodePicture> BoxCroix_CodePicturePtr;
+	std::shared_ptr<class LeftRotate> LeftRotatePtr;
+	std::shared_ptr<class RightRotate> RightRotatePtr;
 };
 

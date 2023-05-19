@@ -20,9 +20,9 @@ LeftRotate::~LeftRotate()
 
 void LeftRotate::Start()
 {
-	LeftRotates=Init(LeftRotates, "Rotate.png", { 84,72 }, { -380,-10 });
+	LeftRotates=Init(LeftRotates, "Rotate.png", { 84,72 }, { -430,-10 });
 	LeftRotates->SetFlipX();
-	LeftRotatesCollision = CollisionInit(LeftRotatesCollision, { 84,72,1 }, { -380,-10 });
+	LeftRotatesCollision = CollisionInit(LeftRotatesCollision, { 84,72,1 }, { -430,-10 });
 }
 
 void LeftRotate::Update(float _DeltaTime)

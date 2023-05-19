@@ -11,6 +11,7 @@
 #include "CodeIcon.h"
 #include "PictureFolderPanel.h"
 #include "BoxCroix_PictureFolder.h"
+#include "ColManager.h"
 
 PictureFolder::PictureFolder()
 {
@@ -28,16 +29,15 @@ void PictureFolder::Start()
 
 void PictureFolder::Update(float _DeltaTime)
 {
+	ManagedCollision(PictureFoldersCollision, 0);
 	if (true == ClickCheck(PictureFoldersCollision))
 	{
+		ColManager::MG->PlusCollisionValue();
 		PictureFolderPanelPtr=GetLevel()->CreateActor<PictureFolderPanel>();
 		DayIconPtr=GetLevel()->CreateActor<DayIcon>();
 		DrawerIconPtr=GetLevel()->CreateActor<DrawerIcon>();
 		CodeIconPtr=GetLevel()->CreateActor<CodeIcon>();
 		BoxCroix_PictureFolderPtr= GetLevel()->CreateActor<BoxCroix_PictureFolder>();
-		//임시용 off
-		PictureFoldersCollision->Off();
-		//
 	}
 	if (nullptr != BoxCroix_PictureFolderPtr)
 	{
@@ -59,7 +59,5 @@ void PictureFolder::BoxCroixDeathCheck()
 		DayIconPtr.get()->Death();
 		DrawerIconPtr.get()->Death();
 		CodeIconPtr.get()->Death();
-		//임시
-		PictureFoldersCollision->On();
 	}
 }

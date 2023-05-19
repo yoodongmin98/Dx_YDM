@@ -22,6 +22,7 @@ void SkiteFolder::Start()
 
 void SkiteFolder::Update(float _DeltaTime)
 {
+	ManagedCollision(SkiteFoldersCollision, 0);
 	if (true == ClickCheck(SkiteFoldersCollision))
 	{
 		int a = 0;

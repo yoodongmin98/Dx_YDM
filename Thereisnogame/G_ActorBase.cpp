@@ -15,6 +15,7 @@
 
 //StaticActor
 #include "RightRotate.h"
+#include "ColManager.h"
 
 G_ActorBase::G_ActorBase()
 {
@@ -127,6 +128,19 @@ bool G_ActorBase::ClickCheck(std::shared_ptr<GameEngineCollision> _Collision)
 	else
 	{
 		return false;
+	}
+}
+
+void G_ActorBase::ManagedCollision(std::shared_ptr<GameEngineCollision> _Collision,int Value)
+{
+	int asd = ColManager::MG->GetCollisionValue();
+	if (Value == ColManager::MG->GetCollisionValue())
+	{
+		_Collision->On();
+	}
+	else
+	{
+		_Collision->Off();
 	}
 }
 

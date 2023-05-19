@@ -22,6 +22,7 @@ void PrivateFolder::Start()
 
 void PrivateFolder::Update(float _DeltaTime)
 {
+	ManagedCollision(PrivateFoldersCollision, 0);
 	if (true == ClickCheck(PrivateFoldersCollision))
 	{
 		int a = 0;

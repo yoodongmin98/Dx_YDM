@@ -8,6 +8,9 @@
 //Actor
 #include "CodePicture.h"
 #include "BoxCroix_CodePicture.h"
+#include "ColManager.h"
+#include "RightRotate.h"
+#include "LeftRotate.h"
 
 CodeIcon::CodeIcon()
 {
@@ -26,15 +29,17 @@ void CodeIcon::Start()
 
 void CodeIcon::Update(float _DeltaTime)
 {
+	ManagedCollision(CodeIconsCollision, 1);
 	if (true == ClickCheck(CodeIconsCollision))
 	{
+		ColManager::MG->PlusCollisionValue();
 		CodePicturePtr = GetLevel()->CreateActor<CodePicture>();
 		BoxCroix_CodePicturePtr= GetLevel()->CreateActor<BoxCroix_CodePicture>();
+		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();
+		RightRotatePtr = GetLevel()->CreateActor<RightRotate>();
 	}
 	if (nullptr != BoxCroix_CodePicturePtr)
 	{
-		//¾ê ¿Ö ¾ÈµÊ?
-		//MusicFoldersCollision->Off();
 		BoxCroixDeathCheck();
 	}
 }
@@ -49,5 +54,7 @@ void CodeIcon::BoxCroixDeathCheck()
 	if (true == BoxCroix_CodePicturePtr->IsDeath())
 	{
 		CodePicturePtr.get()->Death();
+		LeftRotatePtr.get()->Death();
+		RightRotatePtr.get()->Death();
 	}
 }

@@ -205,9 +205,6 @@
     <ClCompile Include="DayTree.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClCompile>
-    <ClCompile Include="Rotate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
-    </ClCompile>
     <ClCompile Include="PurpleTextBox.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClCompile>
@@ -430,8 +427,8 @@
     <ClCompile Include="LeftRotate.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClCompile>
-    <ClCompile Include="PictureColManager.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
+    <ClCompile Include="ColManager.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -635,9 +632,6 @@
     </ClInclude>
     <ClInclude Include="DayTree.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
-    </ClInclude>
-    <ClInclude Include="Rotate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
     <ClInclude Include="PurpleTextBox.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
@@ -861,8 +855,8 @@
     <ClInclude Include="LeftRotate.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClInclude>
-    <ClInclude Include="PictureColManager.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
+    <ClInclude Include="ColManager.h">
+      <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

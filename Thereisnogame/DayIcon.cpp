@@ -11,6 +11,7 @@
 #include "BoxCroix_DayPicture.h"
 #include "LeftRotate.h"
 #include "RightRotate.h"
+#include "ColManager.h"
 
 DayIcon::DayIcon()
 {
@@ -38,6 +39,7 @@ void DayIcon::Start()
 
 void DayIcon::Update(float _DeltaTime)
 {
+	ManagedCollision(DayIconCollision, 1);
 	if (true == ClickCheck(DayIconCollision))
 	{
 		DayPicturePtr=GetLevel()->CreateActor<DayPicture>();
@@ -45,8 +47,8 @@ void DayIcon::Update(float _DeltaTime)
 		LeftRotatePtr=GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr=GetLevel()->CreateActor<RightRotate>();
 		BoxCroix_DayPicturePtr = GetLevel()->CreateActor<BoxCroix_DayPicture>();
-		//임시
-		DayIconCollision->Off();
+		
+		ColManager::MG->PlusCollisionValue();
 	}
 	if (nullptr != BoxCroix_DayPicturePtr)
 	{
@@ -67,7 +69,5 @@ void DayIcon::BoxCroixDeathCheck()
 		DayTreePtr.get()->Death();
 		LeftRotatePtr.get()->Death();
 		RightRotatePtr.get()->Death();
-		//임시
-		DayIconCollision->On();
 	}
 }

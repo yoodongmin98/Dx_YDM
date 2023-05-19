@@ -4,6 +4,7 @@
 
 //Base
 //PlatForm
+#include <GameEnginePlatform/GameEngineInput.h>
 //Core
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineLevel.h>
@@ -20,8 +21,8 @@
 #include "MediaPlay.h"
 #include "MediaPicture.h"
 #include "BoxCroix_Music.h"
+#include "ColManager.h"
 
-#include <GameEnginePlatform/GameEngineInput.h>
 
 MusicFolder::MusicFolder()
 {
@@ -39,6 +40,7 @@ void MusicFolder::Start()
 
 void MusicFolder::Update(float _DeltaTime)
 {
+	ManagedCollision(MusicFoldersCollision, 0);
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
 		MusicFolderPanelPtr=GetLevel()->CreateActor<MusicFolderPanel>();
@@ -51,9 +53,7 @@ void MusicFolder::Update(float _DeltaTime)
 		MediaPausePtr=GetLevel()->CreateActor<MediaPause>();
 		MediaPicturePtr=GetLevel()->CreateActor<MediaPicture>();
 		BoxCroixPtr=GetLevel()->CreateActor<BoxCroix_Music>();
-		//임시용 off
-		MusicFoldersCollision->Off();
-		//
+		ColManager::MG->PlusCollisionValue();
 	}
 	if (nullptr != BoxCroixPtr)
 	{
@@ -80,7 +80,5 @@ void MusicFolder::BoxCroixDeathCheck()
 		MediaPlayPtr.get()->Death();
 		MediaPausePtr.get()->Death();
 		MediaPicturePtr.get()->Death();
-		//임시용 On
-		MusicFoldersCollision->On();
 	}
 }

@@ -5,6 +5,8 @@
 //PlatForm
 //Core
 
+#include "ColManager.h"
+
 BoxCroix_Music::BoxCroix_Music()
 {
 
@@ -25,6 +27,7 @@ void BoxCroix_Music::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
+		ColManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();
 	}

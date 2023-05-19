@@ -15,6 +15,7 @@
 #include "squirrel.h"
 #include "Mouse.h"
 #include "Chain.h"
+#include "ColManager.h"
 
 //Folder
 #include "SkiteFolder.h"
@@ -63,6 +64,7 @@ void FakeProgramLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
 	{
+		CreateActor<ColManager>();
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		FolderCreate();
