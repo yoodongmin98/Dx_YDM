@@ -403,21 +403,6 @@
     <ClCompile Include="MusicFolderPanel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClCompile>
-    <ClCompile Include="BoxCroix_Music.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClCompile>
-    <ClCompile Include="BoxCroix_PictureFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClCompile>
-    <ClCompile Include="BoxCroix_DayPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClCompile>
-    <ClCompile Include="BoxCroix_DrawerPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClCompile>
-    <ClCompile Include="BoxCroix_CodePicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClCompile>
     <ClCompile Include="FolderNote.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClCompile>
@@ -430,8 +415,26 @@
     <ClCompile Include="ColManager.cpp">
       <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix_Music.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
+    </ClCompile>
     <ClCompile Include="BoxCroix_Skite.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_CodePicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_DayPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_DrawerPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_PictureFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_PR_Super.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -834,21 +837,6 @@
     <ClInclude Include="MusicFolderPanel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
-    <ClInclude Include="BoxCroix_Music.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClInclude>
-    <ClInclude Include="BoxCroix_PictureFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClInclude>
-    <ClInclude Include="BoxCroix_DayPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClInclude>
-    <ClInclude Include="BoxCroix_DrawerPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClInclude>
-    <ClInclude Include="BoxCroix_CodePicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
-    </ClInclude>
     <ClInclude Include="FolderNote.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClInclude>
@@ -861,8 +849,26 @@
     <ClInclude Include="ColManager.h">
       <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClInclude>
+    <ClInclude Include="BoxCroix_Music.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
+    </ClInclude>
     <ClInclude Include="BoxCroix_Skite.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_CodePicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_DayPicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_DrawerPicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_PictureFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_PR_Super.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1039,6 +1045,18 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote">
       <UniqueIdentifier>{032df8b2-f4f4-431a-846e-822e46ed0b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music">
+      <UniqueIdentifier>{08047a24-fb99-4e81-89b6-6471a851d773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private">
+      <UniqueIdentifier>{080f9e7e-4cda-42c9-8b3a-4510d2de591f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture">
+      <UniqueIdentifier>{9c4e8795-9609-4ef5-a28b-7022403643d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite">
+      <UniqueIdentifier>{59c82167-25ca-45de-901d-639ae7589e46}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

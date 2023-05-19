@@ -23,6 +23,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SuperPrivates;
+	std::shared_ptr<class GameEngineCollision> SuperPrivatesCollision;
 
 };
 

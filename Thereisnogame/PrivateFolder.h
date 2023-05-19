@@ -16,6 +16,7 @@ public:
 	PrivateFolder& operator=(const PrivateFolder& _Other) = delete;
 	PrivateFolder& operator=(PrivateFolder&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,11 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> PrivateFolders;
 	std::shared_ptr<class GameEngineCollision> PrivateFoldersCollision;
+
+	std::shared_ptr<class SuperPrivate> SuperPrivatePtr;
+	std::shared_ptr<class Truth1Icon> Truth1IconPtr;
+	std::shared_ptr<class PrivatePanel> PrivatePanelPtr;
+	std::shared_ptr<class BoxCroix_PR_Super> BoxCroix_PR_SuperPtr;
+
 };
 
