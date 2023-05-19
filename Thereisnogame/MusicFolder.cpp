@@ -51,12 +51,12 @@ void MusicFolder::Update(float _DeltaTime)
 		MediaPausePtr=GetLevel()->CreateActor<MediaPause>();
 		MediaPicturePtr=GetLevel()->CreateActor<MediaPicture>();
 		BoxCroixPtr=GetLevel()->CreateActor<BoxCroix_Music>();
+		//юс╫ц©К off
+		MusicFoldersCollision->Off();
+		//
 	}
 	if (nullptr != BoxCroixPtr)
 	{
-		//╬Й ©ж ╬х╣й?
-		//MusicFoldersCollision->Off();
-		//
 		BoxCroixDeathCheck();
 	}
 }
@@ -80,5 +80,7 @@ void MusicFolder::BoxCroixDeathCheck()
 		MediaPlayPtr.get()->Death();
 		MediaPausePtr.get()->Death();
 		MediaPicturePtr.get()->Death();
+		//юс╫ц©К On
+		MusicFoldersCollision->On();
 	}
 }

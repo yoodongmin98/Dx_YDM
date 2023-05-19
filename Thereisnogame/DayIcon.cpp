@@ -45,11 +45,11 @@ void DayIcon::Update(float _DeltaTime)
 		LeftRotatePtr=GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr=GetLevel()->CreateActor<RightRotate>();
 		BoxCroix_DayPicturePtr = GetLevel()->CreateActor<BoxCroix_DayPicture>();
+		//юс╫ц
+		DayIconCollision->Off();
 	}
 	if (nullptr != BoxCroix_DayPicturePtr)
 	{
-		//╬Й ©ж ╬х╣й?
-		//MusicFoldersCollision->Off();
 		BoxCroixDeathCheck();
 	}
 }
@@ -67,5 +67,7 @@ void DayIcon::BoxCroixDeathCheck()
 		DayTreePtr.get()->Death();
 		LeftRotatePtr.get()->Death();
 		RightRotatePtr.get()->Death();
+		//юс╫ц
+		DayIconCollision->On();
 	}
 }

@@ -430,6 +430,9 @@
     <ClCompile Include="LeftRotate.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClCompile>
+    <ClCompile Include="PictureColManager.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -857,6 +860,9 @@
     </ClInclude>
     <ClInclude Include="LeftRotate.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureColManager.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

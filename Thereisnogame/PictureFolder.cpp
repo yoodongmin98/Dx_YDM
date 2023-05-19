@@ -35,11 +35,12 @@ void PictureFolder::Update(float _DeltaTime)
 		DrawerIconPtr=GetLevel()->CreateActor<DrawerIcon>();
 		CodeIconPtr=GetLevel()->CreateActor<CodeIcon>();
 		BoxCroix_PictureFolderPtr= GetLevel()->CreateActor<BoxCroix_PictureFolder>();
+		//юс╫ц©К off
+		PictureFoldersCollision->Off();
+		//
 	}
 	if (nullptr != BoxCroix_PictureFolderPtr)
 	{
-		//╬Й ©ж ╬х╣й?
-		//MusicFoldersCollision->Off();
 		BoxCroixDeathCheck();
 	}
 }
@@ -58,5 +59,7 @@ void PictureFolder::BoxCroixDeathCheck()
 		DayIconPtr.get()->Death();
 		DrawerIconPtr.get()->Death();
 		CodeIconPtr.get()->Death();
+		//юс╫ц
+		PictureFoldersCollision->On();
 	}
 }

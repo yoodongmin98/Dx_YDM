@@ -34,11 +34,11 @@ void DrawerIcon::Update(float _DeltaTime)
 		BoxCroix_DrawerPicturePtr = GetLevel()->CreateActor<BoxCroix_DrawerPicture>();
 		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr = GetLevel()->CreateActor<RightRotate>();
+		//юс╫ц
+		DrawerIconsCollision->Off();
 	}
 	if (nullptr != BoxCroix_DrawerPicturePtr)
 	{
-		//╬Й ©ж ╬х╣й?
-		//MusicFoldersCollision->Off();
 		BoxCroixDeathCheck();
 	}
 }
@@ -55,5 +55,7 @@ void DrawerIcon::BoxCroixDeathCheck()
 		DrawerPicturePtr.get()->Death();
 		LeftRotatePtr.get()->Death();
 		RightRotatePtr.get()->Death();
+		//юс╫ц
+		DrawerIconsCollision->On();
 	}
 }
