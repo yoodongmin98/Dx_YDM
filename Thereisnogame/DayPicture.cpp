@@ -6,7 +6,6 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 
-
 DayPicture::DayPicture()
 {
 }
@@ -27,7 +26,8 @@ void DayPicture::Start()
 
 void DayPicture::Update(float _DeltaTime)
 {
-
+	RenderRotateCheck(Picture_Day);
+	RenderRotateCheck(Picture_Night);
 }
 
 void DayPicture::Render(float _Delta)

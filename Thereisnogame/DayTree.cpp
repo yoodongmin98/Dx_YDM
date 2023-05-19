@@ -31,7 +31,10 @@ void DayTree::Start()
 
 void DayTree::Update(float _DeltaTime)
 {
-
+	RenderRotateCheck(Tree_BigDay);
+	RenderRotateCheck(Tree_BigNight);
+	RenderRotateCheck(Tree_SmallDay);
+	RenderRotateCheck(Tree_SmallNight);
 }
 
 void DayTree::Render(float _Delta)

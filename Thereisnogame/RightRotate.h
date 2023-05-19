@@ -6,6 +6,7 @@
 class RightRotate : public G_ActorBase
 {
 public:
+	static RightRotate* MainRightRotate;
 	// constrcuter destructer
 	RightRotate();
 	~RightRotate();
@@ -16,12 +17,26 @@ public:
 	RightRotate& operator=(const RightRotate& _Other) = delete;
 	RightRotate& operator=(RightRotate&& _Other) noexcept = delete;
 
-	//Text를 받을수있는 함수추가
+	void ClearClickValue();
+
+	void MinusHowManyClick()
+	{
+		HowManyClick -= 1;
+	}
+
+	int GetHowManyClick()
+	{
+		return HowManyClick;
+	}
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> RightRotates;
+	std::shared_ptr<class GameEngineCollision> RightRotatesCollision;
+
+	int HowManyClick = 0;
 };
 

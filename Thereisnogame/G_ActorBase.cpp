@@ -13,6 +13,9 @@
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineLevel.h>
 
+//StaticActor
+#include "RightRotate.h"
+
 G_ActorBase::G_ActorBase()
 {
 
@@ -124,6 +127,31 @@ bool G_ActorBase::ClickCheck(std::shared_ptr<GameEngineCollision> _Collision)
 	else
 	{
 		return false;
+	}
+}
+
+void G_ActorBase::RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render)
+{
+	int ClickValue = RightRotate::MainRightRotate->GetHowManyClick();
+	switch (ClickValue)
+	{
+	case 0:
+	case 4:
+		_Render->GetTransform()->SetLocalRotation(float4::Zero);
+		break;
+	case 1:
+	case -3:
+		_Render->GetTransform()->SetLocalRotation({0,0,-90});
+		break;
+	case 2:
+	case -2:
+		_Render->GetTransform()->SetLocalRotation({ 0,0,-180 });
+		break;
+	case -1:
+	case 3:
+		_Render->GetTransform()->SetLocalRotation({ 0,0,-270 });
+	default:
+		break;
 	}
 }
 

@@ -44,6 +44,7 @@ public:
 		std::shared_ptr<class BoxCroix_Music> _BoxCroix,
 		float4 _Position);
 
+	void RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render);
 	void Repeat(float _MoveValue, float _DeltaTime);
 	void Down(float _DeltaTime);
 	void Up(float _DeltaTime);

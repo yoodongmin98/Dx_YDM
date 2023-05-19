@@ -112,11 +112,7 @@ void MainMenuLevel::Start()
 void MainMenuLevel::Update(float _DeltaTime)
 {
 	UpdateState(_DeltaTime);
-	if (GameEngineInput::IsDown("CameraSet"))
-	{
-		GetMainCamera()->SetProjectionType(CameraType::Perspective);
-		
-	}
+	
 	//테스트용
 	if (GameEngineInput::IsDown("TestKey3"))
 	{
