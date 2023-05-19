@@ -412,6 +412,9 @@
     <ClCompile Include="BoxCroix_Music.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix_PictureFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -820,6 +823,9 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_Music.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_PictureFolder.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
     </ClInclude>
   </ItemGroup>

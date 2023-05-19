@@ -1,12 +1,9 @@
 #include "PrecompileHeader.h"
 #include "BoxCroix_Music.h"
 #include "ActorTypeEnum.h"
-#include <functional>
 
 //PlatForm
 //Core
-
-#include "MusicFolderPanel.h"
 
 BoxCroix_Music::BoxCroix_Music()
 {

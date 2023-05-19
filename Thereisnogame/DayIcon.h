@@ -27,5 +27,10 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Icon_SmallDay;
 	std::shared_ptr<class GameEngineSpriteRenderer> Icon_SmallNight;
 
+	std::shared_ptr<class GameEngineCollision> DayIconCollision;
+
+	std::shared_ptr<class DayPicture> DayPicturePtr;
+	std::shared_ptr<class DayTree> DayTreePtr;
+
 };
 
