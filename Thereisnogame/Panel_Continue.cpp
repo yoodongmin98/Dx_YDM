@@ -21,7 +21,6 @@ Panel_Continue::~Panel_Continue()
 
 void Panel_Continue::Start()
 {
-	//GetTransform()->SetLocalRotation({ 0,0,-90 });
 	Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 0,-615,-10 });
 }
 

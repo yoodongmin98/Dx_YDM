@@ -50,7 +50,6 @@ void PrivateFolder::Render(float _Delta)
 
 void PrivateFolder::BoxCroixDeathCheck()
 {
-	//BoxCroix가 죽었다는 상태가 확인이 된다면
 	if (true == BoxCroix_PR_SuperPtr->IsDeath())
 	{
 		PrivatePanelPtr.get()->Death();

@@ -21,7 +21,6 @@ Panel_Back::~Panel_Back()
 
 void Panel_Back::Start()
 {
-	//GetTransform()->SetLocalRotation({ 0,0,-90 });
 	Init(Panel_Backs, "MenuOptions_BackPanel.png", { 228,195,1 }, { -300,-750,-10 });
 }
 

@@ -43,6 +43,7 @@ void MusicFolder::Update(float _DeltaTime)
 	ManagedCollision(MusicFoldersCollision, 0);
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
+		ColManager::MG->PlusCollisionValue();
 		MusicFolderPanelPtr=GetLevel()->CreateActor<MusicFolderPanel>();
 		MusicNote_ArchivePtr=GetLevel()->CreateActor<MusicNote_Archive>();
 		MusicNote_RadioPtr=GetLevel()->CreateActor<MusicNote_Radio>();
@@ -53,7 +54,6 @@ void MusicFolder::Update(float _DeltaTime)
 		MediaPausePtr=GetLevel()->CreateActor<MediaPause>();
 		MediaPicturePtr=GetLevel()->CreateActor<MediaPicture>();
 		BoxCroixPtr=GetLevel()->CreateActor<BoxCroix_Music>();
-		ColManager::MG->PlusCollisionValue();
 	}
 	if (nullptr != BoxCroixPtr)
 	{
@@ -68,7 +68,6 @@ void MusicFolder::Render(float _Delta)
 
 void MusicFolder::BoxCroixDeathCheck()
 {
-	//BoxCroix가 죽었다는 상태가 확인이 된다면
 	if (true==BoxCroixPtr->IsDeath())
 	{
 		MusicFolderPanelPtr.get()->Death();

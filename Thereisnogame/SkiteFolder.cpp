@@ -23,7 +23,7 @@ SkiteFolder::~SkiteFolder()
 
 void SkiteFolder::Start()
 {
-	Init(SkiteFolders, "Skite.png", { 103,102 }, { -420,200,0 });
+	SkiteFolders=Init(SkiteFolders, "Skite.png", { 103,102 }, { -420,200,0 });
 	SkiteFoldersCollision = CollisionInit(SkiteFoldersCollision, { 103,102 }, { -420,200,0 });
 }
 

@@ -42,13 +42,12 @@ void DayIcon::Update(float _DeltaTime)
 	ManagedCollision(DayIconCollision, 1);
 	if (true == ClickCheck(DayIconCollision))
 	{
+		ColManager::MG->PlusCollisionValue();
 		DayPicturePtr=GetLevel()->CreateActor<DayPicture>();
 		DayTreePtr=GetLevel()->CreateActor<DayTree>();
 		LeftRotatePtr=GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr=GetLevel()->CreateActor<RightRotate>();
 		BoxCroix_DayPicturePtr = GetLevel()->CreateActor<BoxCroix_DayPicture>();
-		
-		ColManager::MG->PlusCollisionValue();
 	}
 	if (nullptr != BoxCroix_DayPicturePtr)
 	{
