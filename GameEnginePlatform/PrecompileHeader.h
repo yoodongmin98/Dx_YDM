@@ -10,4 +10,5 @@
 #include <GameEngineBase/GameEnginePath.h>
 #include <GameEngineBase/GameEngineTimeEvent.h>
 #include <GameEngineBase/GameEngineString.h>
+#include <functional>
 

@@ -22,7 +22,7 @@ Mouse::~Mouse()
 
 void Mouse::Start()
 {
-	GameEngineInput::MouseCursorOff();
+	//GameEngineInput::MouseCursorOff();
 	
 	MouseIdle = Init(MouseIdle, "Idle.png", {108,108},float4::Zero);
 	MouseInteractable = Init(MouseInteractable, "Interactable.png", { 108,108 }, float4::Zero);

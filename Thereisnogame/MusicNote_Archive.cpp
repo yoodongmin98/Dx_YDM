@@ -4,7 +4,8 @@
 //PlatForm
 //Core
 
-
+//Actor
+#include "MediaPicture.h"
 
 
 MusicNote_Archive::MusicNote_Archive()
@@ -18,12 +19,15 @@ MusicNote_Archive::~MusicNote_Archive()
 void MusicNote_Archive::Start()
 {
 	Init(MusicNote_Archives, "Note.png", { 100,110 }, { -245,30,0 });
-	MusicNote_ArchivesCollision = CollisionInit(MusicNote_ArchivesCollision, { 100,110 }, { -245,30,0 });
+	MusicNote_ArchivesCollision = CollisionInit(MusicNote_ArchivesCollision, { 100,110,1 }, { -245,30,0 });
 }
 
 void MusicNote_Archive::Update(float _DeltaTime)
 {
-
+	if (true == ClickCheck(MusicNote_ArchivesCollision))
+	{
+		MediaPicture::MainMediaPicture->ChangeMusicPicture(2);
+	}
 }
 
 void MusicNote_Archive::Render(float _Delta)

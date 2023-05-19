@@ -5,9 +5,11 @@
 //Core
 
 
+MediaPicture* MediaPicture::MainMediaPicture;
 
 MediaPicture::MediaPicture()
 {
+	MainMediaPicture = this;
 }
 
 MediaPicture::~MediaPicture()
@@ -28,7 +30,7 @@ void MediaPicture::Start()
 	WalnutPicture = AnimationInit(WalnutPicture, "MediaVignetteMusic01_00.png", { 366,204 }, { 197,-65,0 }, "WalnutPicture", "Walnut",1, 0.5f);
 	ArchivePicture = AnimationInit(ArchivePicture, "MediaVignetteMusic02_00.png", { 366,204 }, { 197,-65,0 }, "ArchivePicture", "Archive",1, 0.5f);
 	RainPicture = AnimationInit(RainPicture, "MediaVignetteMusic03_00.png", { 366,204 }, { 197,-65,0 }, "RainPicture", "Rain",2, 0.1f);
-	RadioPicture = AnimationInit(RadioPicture, "MediaVignetteMusic04_00.png", { 366,204 }, { 197,-65,0 }, "RadioPicture", "Radio",2, 0.5f);
+	RadioPicture = AnimationInit(RadioPicture, "MediaVignetteMusic04_00.png", { 366,204 }, { 197,-65,0 }, "RadioPicture", "Radio",2, 0.3f);
 
 	//조건에 따라 On off 바꾸기
 	PictureSelectVector.push_back(WalnutPicture);
@@ -68,9 +70,23 @@ std::shared_ptr<GameEngineSpriteRenderer> MediaPicture::ChangeMusicRender(std::s
 
 void MediaPicture::ChangeMusicPicture(int _Value)
 {
-	/*switch (_Value)
+	int SetPictureValue = _Value;
+	switch (SetPictureValue)
 	{
 	case 1:
+		WhatisPicture = ChangeMusicRender(WalnutPicture);
 		break;
-	}*/
+	case 2:
+		WhatisPicture = ChangeMusicRender(ArchivePicture);
+		break;
+	case 3:
+		WhatisPicture = ChangeMusicRender(RainPicture);
+		break;
+	case 4:
+		WhatisPicture = ChangeMusicRender(RadioPicture);
+		break;
+	default:
+		MsgAssert("MusicPicture에 이상한 숫자 넣지마라 인간아");
+		break;
+	}
 }

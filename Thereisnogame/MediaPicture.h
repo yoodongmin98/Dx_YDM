@@ -6,6 +6,8 @@
 class MediaPicture : public G_ActorBase
 {
 public:
+
+	static MediaPicture* MainMediaPicture;
 	// constrcuter destructer
 	MediaPicture();
 	~MediaPicture();
