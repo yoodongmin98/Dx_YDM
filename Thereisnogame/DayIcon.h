@@ -33,5 +33,7 @@ private:
 	std::shared_ptr<class DayPicture> DayPicturePtr;
 	std::shared_ptr<class DayTree> DayTreePtr;
 	std::shared_ptr<class BoxCroix_DayPicture> BoxCroix_DayPicturePtr;
+	std::shared_ptr<class LeftRotate> LeftRotatePtr;
+	std::shared_ptr<class RightRotate> RightRotatePtr;
 };
 

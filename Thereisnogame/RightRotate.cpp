@@ -17,7 +17,7 @@ RightRotate::~RightRotate()
 
 void RightRotate::Start()
 {
-	RightRotates=Init(RightRotates, "Rotate.png", { 84,72 }, { 300,0 });
+	RightRotates=Init(RightRotates, "Rotate.png", { 84,72 }, { 380,-10 });
 }
 
 void RightRotate::Update(float _DeltaTime)

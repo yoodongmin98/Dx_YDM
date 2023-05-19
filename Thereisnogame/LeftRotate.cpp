@@ -17,7 +17,7 @@ LeftRotate::~LeftRotate()
 
 void LeftRotate::Start()
 {
-	LeftRotates=Init(LeftRotates, "Rotate.png", { 84,72 }, { -300,0 });
+	LeftRotates=Init(LeftRotates, "Rotate.png", { 84,72 }, { -380,-10 });
 	LeftRotates->SetFlipX();
 }
 

@@ -9,6 +9,8 @@
 #include "DayPicture.h"
 #include "DayTree.h"
 #include "BoxCroix_DayPicture.h"
+#include "LeftRotate.h"
+#include "RightRotate.h"
 
 DayIcon::DayIcon()
 {
@@ -40,6 +42,8 @@ void DayIcon::Update(float _DeltaTime)
 	{
 		DayPicturePtr=GetLevel()->CreateActor<DayPicture>();
 		DayTreePtr=GetLevel()->CreateActor<DayTree>();
+		LeftRotatePtr=GetLevel()->CreateActor<LeftRotate>();
+		RightRotatePtr=GetLevel()->CreateActor<RightRotate>();
 		BoxCroix_DayPicturePtr = GetLevel()->CreateActor<BoxCroix_DayPicture>();
 	}
 	if (nullptr != BoxCroix_DayPicturePtr)
@@ -61,5 +65,7 @@ void DayIcon::BoxCroixDeathCheck()
 	{
 		DayPicturePtr.get()->Death();
 		DayTreePtr.get()->Death();
+		LeftRotatePtr.get()->Death();
+		RightRotatePtr.get()->Death();
 	}
 }
