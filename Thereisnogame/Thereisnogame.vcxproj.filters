@@ -418,6 +418,9 @@
     <ClCompile Include="BoxCroix_DayPicture.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix_DrawerPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -832,6 +835,9 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_DayPicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_DrawerPicture.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
     </ClInclude>
   </ItemGroup>

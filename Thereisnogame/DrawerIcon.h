@@ -23,5 +23,9 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> DrawerIcons;
+	std::shared_ptr<class GameEngineCollision> DrawerIconsCollision;
+
+	std::shared_ptr<class DrawerPicture> DrawerPicturePtr;
+	//박스 머시기머시기
 };
 
