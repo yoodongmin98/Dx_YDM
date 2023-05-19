@@ -24,5 +24,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> DrawerOpen;
 	std::shared_ptr<class GameEngineSpriteRenderer> DrawerClose;
+
+	std::shared_ptr<class GameEngineCollision> DrawerCollision;
 };
 

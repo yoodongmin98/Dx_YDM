@@ -28,5 +28,7 @@ private:
 
 	std::shared_ptr<class DrawerPicture> DrawerPicturePtr;
 	std::shared_ptr<class BoxCroix_DrawerPicture> BoxCroix_DrawerPicturePtr;
+	std::shared_ptr<class LeftRotate> LeftRotatePtr;
+	std::shared_ptr<class RightRotate> RightRotatePtr;
 };
 

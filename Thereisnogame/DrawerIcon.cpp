@@ -8,6 +8,8 @@
 //Actor
 #include "DrawerPicture.h"
 #include "BoxCroix_DrawerPicture.h"
+#include "RightRotate.h"
+#include "LeftRotate.h"
 
 DrawerIcon::DrawerIcon()
 {
@@ -30,6 +32,8 @@ void DrawerIcon::Update(float _DeltaTime)
 	{
 		DrawerPicturePtr = GetLevel()->CreateActor<DrawerPicture>();
 		BoxCroix_DrawerPicturePtr = GetLevel()->CreateActor<BoxCroix_DrawerPicture>();
+		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();
+		RightRotatePtr = GetLevel()->CreateActor<RightRotate>();
 	}
 	if (nullptr != BoxCroix_DrawerPicturePtr)
 	{
@@ -49,5 +53,7 @@ void DrawerIcon::BoxCroixDeathCheck()
 	if (true == BoxCroix_DrawerPicturePtr->IsDeath())
 	{
 		DrawerPicturePtr.get()->Death();
+		LeftRotatePtr.get()->Death();
+		RightRotatePtr.get()->Death();
 	}
 }
