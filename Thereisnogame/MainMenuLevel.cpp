@@ -195,7 +195,6 @@ void MainMenuLevel::Letterfunction(float _DeltaTime)
 	}
 }
 
-
 void MainMenuLevel::Arrowfunction(float _DeltaTime)
 {
 	switch (StateValue)

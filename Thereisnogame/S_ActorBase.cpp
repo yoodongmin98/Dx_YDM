@@ -92,7 +92,7 @@ void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();
-		if (false == Mouse::MainMouse->IsInteractable())
+		if (false == Mouse::MainMouse->IsInteractable())//마우스를 꾹 누르고있을때(다른것과의 상호작용이 불가할 때)
 		{
 			_Render->GetTransform()->SetLocalPosition(MousePos);
 			_Render2->GetTransform()->SetLocalPosition({ MousePos.x - 3,MousePos.y + 3 });

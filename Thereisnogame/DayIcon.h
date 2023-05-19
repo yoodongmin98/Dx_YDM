@@ -16,6 +16,7 @@ public:
 	DayIcon& operator=(const DayIcon& _Other) = delete;
 	DayIcon& operator=(DayIcon&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -31,6 +32,6 @@ private:
 
 	std::shared_ptr<class DayPicture> DayPicturePtr;
 	std::shared_ptr<class DayTree> DayTreePtr;
-
+	std::shared_ptr<class BoxCroix_DayPicture> BoxCroix_DayPicturePtr;
 };
 

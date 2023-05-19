@@ -8,6 +8,7 @@
 //Actor
 #include "DayPicture.h"
 #include "DayTree.h"
+#include "BoxCroix_DayPicture.h"
 
 DayIcon::DayIcon()
 {
@@ -39,6 +40,13 @@ void DayIcon::Update(float _DeltaTime)
 	{
 		DayPicturePtr=GetLevel()->CreateActor<DayPicture>();
 		DayTreePtr=GetLevel()->CreateActor<DayTree>();
+		BoxCroix_DayPicturePtr = GetLevel()->CreateActor<BoxCroix_DayPicture>();
+	}
+	if (nullptr != BoxCroix_DayPicturePtr)
+	{
+		//¾ê ¿Ö ¾ÈµÊ?
+		//MusicFoldersCollision->Off();
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -46,3 +54,12 @@ void DayIcon::Render(float _Delta)
 {
 
 };
+
+void DayIcon::BoxCroixDeathCheck()
+{
+	if (true == BoxCroix_DayPicturePtr->IsDeath())
+	{
+		DayPicturePtr.get()->Death();
+		DayTreePtr.get()->Death();
+	}
+}
