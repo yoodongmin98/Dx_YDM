@@ -3,6 +3,13 @@
 
 //PlatForm
 //Core
+#include <GameEngineCore/GameEngineLevel.h>
+
+//Actor
+#include "Skite.h"
+#include "SkiteBanner.h"
+#include "BoxCroix_Skite.h"
+#include "ColManager.h"
 
 
 
@@ -25,7 +32,14 @@ void SkiteFolder::Update(float _DeltaTime)
 	ManagedCollision(SkiteFoldersCollision, 0);
 	if (true == ClickCheck(SkiteFoldersCollision))
 	{
-		int a = 0;
+		ColManager::MG->PlusCollisionValue();
+		SkitePtr=GetLevel()->CreateActor<Skite>();
+		SkiteBannerPtr=GetLevel()->CreateActor<SkiteBanner>();
+		BoxCroix_SkitePtr= GetLevel()->CreateActor<BoxCroix_Skite>();
+	}
+	if (nullptr != BoxCroix_SkitePtr)
+	{
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -33,3 +47,12 @@ void SkiteFolder::Render(float _Delta)
 {
 
 };
+
+void SkiteFolder::BoxCroixDeathCheck()
+{
+	if (true == BoxCroix_SkitePtr->IsDeath())
+	{
+		SkitePtr.get()->Death();
+		SkiteBannerPtr.get()->Death();
+	}
+}

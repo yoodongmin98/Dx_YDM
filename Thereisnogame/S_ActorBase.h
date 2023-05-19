@@ -56,5 +56,5 @@ private:
 	float ScreenSizeX = GameEngineWindow::GetScreenSize().half().x;
 	float ScreenSizeY = GameEngineWindow::GetScreenSize().half().y;
 
-	float FallSpeed = 500.0f;
+	float FallSpeed = 700.0f;
 };

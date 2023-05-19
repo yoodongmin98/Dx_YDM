@@ -430,6 +430,9 @@
     <ClCompile Include="ColManager.cpp">
       <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix_Skite.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -857,6 +860,9 @@
     </ClInclude>
     <ClInclude Include="ColManager.h">
       <Filter>CHapter2.0_Fake Program\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_Skite.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

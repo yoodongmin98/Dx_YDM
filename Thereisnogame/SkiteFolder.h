@@ -16,6 +16,7 @@ public:
 	SkiteFolder& operator=(const SkiteFolder& _Other) = delete;
 	SkiteFolder& operator=(SkiteFolder&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,9 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SkiteFolders;
 	std::shared_ptr<class GameEngineCollision> SkiteFoldersCollision;
+
+	std::shared_ptr<class Skite> SkitePtr;
+	std::shared_ptr<class SkiteBanner> SkiteBannerPtr;
+	std::shared_ptr<class BoxCroix_Skite> BoxCroix_SkitePtr;
 };
 
