@@ -166,6 +166,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
+    <ClInclude Include="BoxCroix_CodePicture.h" />
     <ClInclude Include="BoxCroix_DayPicture.h" />
     <ClInclude Include="BoxCroix_DrawerPicture.h" />
     <ClInclude Include="BoxCroix_PictureFolder.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Decapsuleur.h" />
     <ClInclude Include="GoodbyeIcon.h" />
+    <ClInclude Include="LeftRotate.h" />
     <ClInclude Include="LoadBarBack.h" />
     <ClInclude Include="LoadBarTXT.h" />
     <ClInclude Include="LoadErrorPaper.h" />
@@ -286,6 +288,7 @@
     <ClInclude Include="PrivatePanel.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
+    <ClInclude Include="RightRotate.h" />
     <ClInclude Include="Rotate.h" />
     <ClInclude Include="SelectBox.h" />
     <ClInclude Include="Skite.h" />
@@ -312,6 +315,7 @@
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BoxCroix_CodePicture.cpp" />
     <ClCompile Include="BoxCroix_DayPicture.cpp" />
     <ClCompile Include="BoxCroix_DrawerPicture.cpp" />
     <ClCompile Include="BoxCroix_PictureFolder.cpp" />
@@ -322,6 +326,7 @@
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
+    <ClCompile Include="LeftRotate.cpp" />
     <ClCompile Include="LoadBarBack.cpp" />
     <ClCompile Include="LoadBarTXT.cpp" />
     <ClCompile Include="LoadErrorPaper.cpp" />
@@ -439,6 +444,7 @@
     <ClCompile Include="PrivatePanel.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />
+    <ClCompile Include="RightRotate.cpp" />
     <ClCompile Include="Rotate.cpp" />
     <ClCompile Include="SelectBox.cpp" />
     <ClCompile Include="Skite.cpp" />

@@ -7,6 +7,7 @@
 
 //Actor
 #include "DrawerPicture.h"
+#include "BoxCroix_DrawerPicture.h"
 
 DrawerIcon::DrawerIcon()
 {
@@ -28,6 +29,13 @@ void DrawerIcon::Update(float _DeltaTime)
 	if (true == ClickCheck(DrawerIconsCollision))
 	{
 		DrawerPicturePtr = GetLevel()->CreateActor<DrawerPicture>();
+		BoxCroix_DrawerPicturePtr = GetLevel()->CreateActor<BoxCroix_DrawerPicture>();
+	}
+	if (nullptr != BoxCroix_DrawerPicturePtr)
+	{
+		//¾ê ¿Ö ¾ÈµÊ?
+		//MusicFoldersCollision->Off();
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -35,3 +43,11 @@ void DrawerIcon::Render(float _Delta)
 {
 
 };
+
+void DrawerIcon::BoxCroixDeathCheck()
+{
+	if (true == BoxCroix_DrawerPicturePtr->IsDeath())
+	{
+		DrawerPicturePtr.get()->Death();
+	}
+}

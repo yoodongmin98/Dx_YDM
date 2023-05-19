@@ -28,10 +28,10 @@ void DayIcon::Start()
 
 	DayIconCollision = CollisionInit(DayIconCollision, { 90,93,1 }, { -340,20 });
 
-	Icon_BigDay->On();
+	Icon_BigDay->Off();
 	Icon_BigNight->Off();
 	Icon_SmallDay->Off();
-	Icon_SmallNight->Off();
+	Icon_SmallNight->On();
 }
 
 void DayIcon::Update(float _DeltaTime)

@@ -313,9 +313,6 @@
     <ClCompile Include="PictureFolderPanel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClCompile>
-    <ClCompile Include="FolderNote.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
-    </ClCompile>
     <ClCompile Include="PasswordIcon.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClCompile>
@@ -420,6 +417,18 @@
     </ClCompile>
     <ClCompile Include="BoxCroix_DrawerPicture.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_CodePicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderNote.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClCompile>
+    <ClCompile Include="RightRotate.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
+    </ClCompile>
+    <ClCompile Include="LeftRotate.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -732,9 +741,6 @@
     <ClInclude Include="PictureFolderPanel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
-    <ClInclude Include="FolderNote.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI</Filter>
-    </ClInclude>
     <ClInclude Include="PasswordIcon.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClInclude>
@@ -839,6 +845,18 @@
     </ClInclude>
     <ClInclude Include="BoxCroix_DrawerPicture.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_CodePicture.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderNote.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClInclude>
+    <ClInclude Include="RightRotate.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftRotate.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1009,6 +1027,12 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix">
       <UniqueIdentifier>{83ab74f4-c102-4d7b-956d-fd71accc3d37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate">
+      <UniqueIdentifier>{21569e5a-4070-46ea-9a87-9bea83a31d13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote">
+      <UniqueIdentifier>{032df8b2-f4f4-431a-846e-822e46ed0b70}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

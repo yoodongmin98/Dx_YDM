@@ -16,6 +16,7 @@ public:
 	DrawerIcon& operator=(const DrawerIcon& _Other) = delete;
 	DrawerIcon& operator=(DrawerIcon&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -26,6 +27,6 @@ private:
 	std::shared_ptr<class GameEngineCollision> DrawerIconsCollision;
 
 	std::shared_ptr<class DrawerPicture> DrawerPicturePtr;
-	//박스 머시기머시기
+	std::shared_ptr<class BoxCroix_DrawerPicture> BoxCroix_DrawerPicturePtr;
 };
 

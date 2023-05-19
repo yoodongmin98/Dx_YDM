@@ -16,6 +16,7 @@ public:
 	CodeIcon& operator=(const CodeIcon& _Other) = delete;
 	CodeIcon& operator=(CodeIcon&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -23,5 +24,9 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> CodeIcons;
+	std::shared_ptr<class GameEngineCollision> CodeIconsCollision;
+
+	std::shared_ptr<class CodePicture> CodePicturePtr;
+	std::shared_ptr<class BoxCroix_CodePicture> BoxCroix_CodePicturePtr;
 };
 
