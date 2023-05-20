@@ -16,6 +16,7 @@ public:
 	FRMissIcon& operator=(const FRMissIcon& _Other) = delete;
 	FRMissIcon& operator=(FRMissIcon&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,10 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> FRMissIcons;
 	std::shared_ptr<class GameEngineCollision> FRMissIconsCollision;
+
+	std::shared_ptr<class MissPicture> MissPicturePtr;
+	std::shared_ptr<class BoxCroix_PR_MissPicture> BoxCroix_PR_MissPicturePtr;
+	std::shared_ptr<class LeftRotate> LeftRotatePtr;
+	std::shared_ptr<class RightRotate> RightRotatePtr;
 };
 

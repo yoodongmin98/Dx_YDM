@@ -460,6 +460,9 @@
     <ClCompile Include="BoxCroix_PR_Miss.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix_PR_MissPicture.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -916,6 +919,9 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_Miss.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_PR_MissPicture.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClInclude>
   </ItemGroup>

@@ -6,6 +6,7 @@
 class MissPicture : public G_ActorBase
 {
 public:
+	static MissPicture* MP;
 	// constrcuter destructer
 	MissPicture();
 	~MissPicture();

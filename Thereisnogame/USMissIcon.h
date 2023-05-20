@@ -16,6 +16,7 @@ public:
 	USMissIcon& operator=(const USMissIcon& _Other) = delete;
 	USMissIcon& operator=(USMissIcon&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,10 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> USMissIcons;
 	std::shared_ptr<class GameEngineCollision> USMissIconsCollision;
+	
+	std::shared_ptr<class MissPicture> MissPicturePtr;
+	std::shared_ptr<class BoxCroix_PR_MissPicture> BoxCroix_PR_MissPicturePtr;
+	std::shared_ptr<class LeftRotate> LeftRotatePtr;
+	std::shared_ptr<class RightRotate> RightRotatePtr;
 };
 

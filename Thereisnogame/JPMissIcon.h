@@ -16,6 +16,7 @@ public:
 	JPMissIcon& operator=(const JPMissIcon& _Other) = delete;
 	JPMissIcon& operator=(JPMissIcon&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,10 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> JPMissIcons;
 	std::shared_ptr<class GameEngineCollision> JPMissIconsCollision;
+
+	std::shared_ptr<class MissPicture> MissPicturePtr;
+	std::shared_ptr<class BoxCroix_PR_MissPicture> BoxCroix_PR_MissPicturePtr;
+	std::shared_ptr<class LeftRotate> LeftRotatePtr;
+	std::shared_ptr<class RightRotate> RightRotatePtr;
 };
 
