@@ -38,6 +38,7 @@ void JPMissIcon::Update(float _DeltaTime)
 		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr = GetLevel()->CreateActor<RightRotate>();
 		BoxCroix_PR_MissPicturePtr = GetLevel()->CreateActor<BoxCroix_PR_MissPicture>();
+		MissPicture::MP->ChangeMissPicture(3);
 	}
 	if (nullptr != BoxCroix_PR_MissPicturePtr)
 	{

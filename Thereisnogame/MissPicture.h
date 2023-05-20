@@ -17,6 +17,8 @@ public:
 	MissPicture& operator=(const MissPicture& _Other) = delete;
 	MissPicture& operator=(MissPicture&& _Other) noexcept = delete;
 
+	std::shared_ptr<GameEngineSpriteRenderer> ChangeMissPictureRender(std::shared_ptr<class GameEngineSpriteRenderer> _PictureRender);
+	void ChangeMissPicture(int _Value);
 
 protected:
 	void Start();
@@ -26,5 +28,9 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MissFR;
 	std::shared_ptr<class GameEngineSpriteRenderer> MissUS;
 	std::shared_ptr<class GameEngineSpriteRenderer> MissJP;
+
+	std::shared_ptr<class GameEngineSpriteRenderer> WhatisPicture;
+
+	std::vector<std::shared_ptr<class GameEngineSpriteRenderer>> PictureSelectVector;
 };
 
