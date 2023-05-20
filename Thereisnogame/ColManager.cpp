@@ -23,15 +23,15 @@ void ColManager::Start()
 
 void ColManager::Update(float _DeltaTime)
 {
-	
+	CollisionValue = NextCollisionValue; //클릭했을때 한 프레임을 벌기위해서 Order를 뒤로미루고,맨 마지막에 update
 }
 
 void ColManager::PlusCollisionValue()
 {
-	CollisionValue += 1;
+	NextCollisionValue = CollisionValue + 1;
 }
 
 void ColManager::MinusCollisionValue()
 {
-	CollisionValue -= 1;
+	NextCollisionValue = CollisionValue - 1;
 }

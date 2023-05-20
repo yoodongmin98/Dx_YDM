@@ -28,5 +28,6 @@ protected:
 	
 private:
 	int CollisionValue = 0;
+	int NextCollisionValue = 0;
 };
 

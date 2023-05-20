@@ -64,7 +64,7 @@ void FakeProgramLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
 	{
-		CreateActor<ColManager>();
+		CreateActor<ColManager>(1000);
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		FolderCreate();

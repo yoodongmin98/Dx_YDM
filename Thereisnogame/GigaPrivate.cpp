@@ -5,6 +5,9 @@
 //Core
 
 //Actor
+#include "ColManager.h"
+#include "Private18.h"
+
 
 Gigaprivate::Gigaprivate()
 {
