@@ -22,8 +22,8 @@ Gigaprivate::~Gigaprivate()
 
 void Gigaprivate::Start()
 {
-	Init(Gigaprivates, "Folder.png", { 96,87 }, { -180,20 });
-	GigaprivatesCollision = CollisionInit(GigaprivatesCollision, { 96,87,1 }, { -180,20 });
+	Init(Gigaprivates, "Folder.png", { 96,87 }, { -200,20 });
+	GigaprivatesCollision = CollisionInit(GigaprivatesCollision, { 96,87,1 }, { -200,20 });
 }
 
 void Gigaprivate::Update(float _DeltaTime)

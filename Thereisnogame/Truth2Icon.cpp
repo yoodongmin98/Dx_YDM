@@ -18,8 +18,8 @@ Truth2Icon::~Truth2Icon()
 void Truth2Icon::Start()
 {
 	//Scale¡∂¡§
-	Truth2Icons = Init(Truth2Icons, "Document.png", { 75,93 }, {-70,20});
-	Truth2IconsCollision = CollisionInit(Truth2IconsCollision, { 75,93,1 }, { -70,20 });
+	Truth2Icons = Init(Truth2Icons, "Document.png", { 75,93 }, {-80,20});
+	Truth2IconsCollision = CollisionInit(Truth2IconsCollision, { 75,93,1 }, { -80,20 });
 }
 
 void Truth2Icon::Update(float _DeltaTime)

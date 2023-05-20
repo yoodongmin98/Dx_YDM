@@ -18,8 +18,8 @@ PrivatePanel_Ultra::~PrivatePanel_Ultra()
 
 void PrivatePanel_Ultra::Start()
 {
-	PrivateTopPanels = Init(PrivateTopPanels, "Panel03.png", { 329,73 }, { -160,95,0 });
-	PrivatePanel_Ultras = Init(PrivatePanel_Ultras, "Panel01.png", { 380,310 }, { -135,-70,0 });
+	PrivateTopPanels = Init(PrivateTopPanels, "Panel03.png", { 329,73 }, { -170,95,0 });
+	PrivatePanel_Ultras = Init(PrivatePanel_Ultras, "Panel01.png", { 380,310 }, { -145,-70,0 });
 }
 
 void PrivatePanel_Ultra::Update(float _DeltaTime)

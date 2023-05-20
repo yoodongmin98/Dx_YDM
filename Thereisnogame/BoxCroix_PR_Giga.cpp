@@ -18,8 +18,8 @@ BoxCroix_PR_Giga::~BoxCroix_PR_Giga()
 
 void BoxCroix_PR_Giga::Start()
 {
-	BoxCroixs=Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 60,80,0 });
-	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 60,80,0 });
+	BoxCroixs=Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 40,80,0 });
+	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 40,80,0 });
 }
 
 void BoxCroix_PR_Giga::Update(float _DeltaTime)

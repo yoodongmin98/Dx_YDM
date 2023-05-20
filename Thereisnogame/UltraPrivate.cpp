@@ -22,8 +22,8 @@ UltraPrivate::~UltraPrivate()
 
 void UltraPrivate::Start()
 {
-	UltraPrivates = Init(UltraPrivates, "Folder.png", { 96,87 }, {-220,20});
-	UltraPrivatesCollision = CollisionInit(UltraPrivatesCollision, { 96,87,1 }, { -220,20 });
+	UltraPrivates = Init(UltraPrivates, "Folder.png", { 96,87 }, {-230,20});
+	UltraPrivatesCollision = CollisionInit(UltraPrivatesCollision, { 96,87,1 }, { -230,20 });
 }
 
 void UltraPrivate::Update(float _DeltaTime)

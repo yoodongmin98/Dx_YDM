@@ -18,8 +18,8 @@ BoxCroix_PR_Ultra::~BoxCroix_PR_Ultra()
 
 void BoxCroix_PR_Ultra::Start()
 {
-	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 20,80,0 });
-	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 20,80,0 });
+	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 10,80,0 });
+	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 10,80,0 });
 }
 
 void BoxCroix_PR_Ultra::Update(float _DeltaTime)
