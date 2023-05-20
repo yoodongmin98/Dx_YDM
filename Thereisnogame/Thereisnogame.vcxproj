@@ -170,6 +170,7 @@
     <ClInclude Include="BoxCroix_DayPicture.h" />
     <ClInclude Include="BoxCroix_DrawerPicture.h" />
     <ClInclude Include="BoxCroix_PictureFolder.h" />
+    <ClInclude Include="BoxCroix_PR_Giga.h" />
     <ClInclude Include="BoxCroix_PR_Super.h" />
     <ClInclude Include="BoxCroix_PR_Ultra.h" />
     <ClInclude Include="BoxCroix_Skite.h" />
@@ -290,6 +291,7 @@
     <ClInclude Include="PrivateFolder.h" />
     <ClInclude Include="FolderNote.h" />
     <ClInclude Include="PrivatePanel.h" />
+    <ClInclude Include="PrivatePanel_Giga.h" />
     <ClInclude Include="PrivatePanel_Ultra.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
@@ -323,6 +325,7 @@
     <ClCompile Include="BoxCroix_DayPicture.cpp" />
     <ClCompile Include="BoxCroix_DrawerPicture.cpp" />
     <ClCompile Include="BoxCroix_PictureFolder.cpp" />
+    <ClCompile Include="BoxCroix_PR_Giga.cpp" />
     <ClCompile Include="BoxCroix_PR_Super.cpp" />
     <ClCompile Include="BoxCroix_PR_Ultra.cpp" />
     <ClCompile Include="BoxCroix_Skite.cpp" />
@@ -450,6 +453,7 @@
     <ClCompile Include="PrivateFolder.cpp" />
     <ClCompile Include="FolderNote.cpp" />
     <ClCompile Include="PrivatePanel.cpp" />
+    <ClCompile Include="PrivatePanel_Giga.cpp" />
     <ClCompile Include="PrivatePanel_Ultra.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />

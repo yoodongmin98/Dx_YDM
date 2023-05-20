@@ -442,6 +442,12 @@
     <ClCompile Include="BoxCroix_PR_Ultra.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix_PR_Giga.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivatePanel_Giga.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -881,6 +887,12 @@
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_Ultra.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_PR_Giga.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivatePanel_Giga.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

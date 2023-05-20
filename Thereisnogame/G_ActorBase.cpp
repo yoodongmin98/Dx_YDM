@@ -133,8 +133,8 @@ bool G_ActorBase::ClickCheck(std::shared_ptr<GameEngineCollision> _Collision)
 
 void G_ActorBase::ManagedCollision(std::shared_ptr<GameEngineCollision> _Collision,int Value)
 {
-	int asd = ColManager::MG->GetCollisionValue();
-	if (Value == ColManager::MG->GetCollisionValue())
+	int CollisionManageValue = ColManager::MG->GetCollisionValue();
+	if (Value == CollisionManageValue)
 	{
 		_Collision->On();
 	}

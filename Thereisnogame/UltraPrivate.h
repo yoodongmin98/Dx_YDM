@@ -16,6 +16,7 @@ public:
 	UltraPrivate& operator=(const UltraPrivate& _Other) = delete;
 	UltraPrivate& operator=(UltraPrivate&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,10 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> UltraPrivates;
 	std::shared_ptr<class GameEngineCollision> UltraPrivatesCollision;
+
+	std::shared_ptr<class Gigaprivate> GigaprivatePtr;
+	std::shared_ptr<class Truth3Icon> Truth3IconPtr;
+	std::shared_ptr<class PrivatePanel_Giga> PrivatePanel_GigaPtr;
+	std::shared_ptr<class BoxCroix_PR_Giga> BoxCroix_PR_GigaPtr;
 };
 

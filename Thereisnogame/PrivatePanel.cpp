@@ -18,7 +18,6 @@ PrivatePanel::~PrivatePanel()
 
 void PrivatePanel::Start()
 {
-	//Scale¡∂¡§
 	PrivateTopPanels=Init(PrivateTopPanels, "Panel03.png", { 329,73 }, { -200,95,0 });
 	PrivatePanels = Init(PrivatePanels, "Panel01.png", { 380,310 }, { -175,-70,0 });
 }
