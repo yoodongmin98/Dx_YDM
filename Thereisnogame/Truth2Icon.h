@@ -23,5 +23,6 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Truth2Icons;
+	std::shared_ptr<class GameEngineCollision> Truth2IconsCollision;
 };
 

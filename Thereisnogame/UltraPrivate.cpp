@@ -16,13 +16,17 @@ UltraPrivate::~UltraPrivate()
 
 void UltraPrivate::Start()
 {
-	//GigaPrivate,Truth3Icon,Panel,Croix Create
-	Init(UltraPrivates, "Folder.png", { 96,87 }, float4::Zero);
+	UltraPrivates = Init(UltraPrivates, "Folder.png", { 96,87 }, {-220,20});
+	UltraPrivatesCollision = CollisionInit(UltraPrivatesCollision, { 96,87,1 }, { -220,20 });
 }
 
 void UltraPrivate::Update(float _DeltaTime)
 {
-
+	ManagedCollision(UltraPrivatesCollision, 2);
+	if (true == ClickCheck(UltraPrivatesCollision))
+	{
+		//Create¾îÂ¼±¸ÀúÂ¼±¸
+	}
 }
 
 void UltraPrivate::Render(float _Delta)

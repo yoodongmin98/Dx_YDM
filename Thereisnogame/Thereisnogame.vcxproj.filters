@@ -259,9 +259,6 @@
     <ClCompile Include="ClockState.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock</Filter>
     </ClCompile>
-    <ClCompile Include="PrivatePanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI</Filter>
-    </ClCompile>
     <ClCompile Include="FakeProgramLevelManager.cpp">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClCompile>
@@ -434,6 +431,15 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PR_Super.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivatePanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivatePanel_Ultra.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_PR_Ultra.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
     </ClCompile>
   </ItemGroup>
@@ -693,9 +699,6 @@
     <ClInclude Include="ClockState.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock</Filter>
     </ClInclude>
-    <ClInclude Include="PrivatePanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI</Filter>
-    </ClInclude>
     <ClInclude Include="FakeProgramLevelManager.h">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClInclude>
@@ -868,6 +871,15 @@
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_Super.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivatePanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivatePanel_Ultra.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_PR_Ultra.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1057,6 +1069,9 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite">
       <UniqueIdentifier>{59c82167-25ca-45de-901d-639ae7589e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel">
+      <UniqueIdentifier>{8f3a87a4-a788-4fd8-8355-4367e780dcc4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
