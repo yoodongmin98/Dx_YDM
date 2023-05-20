@@ -16,6 +16,7 @@ public:
 	Gigaprivate& operator=(const Gigaprivate& _Other) = delete;
 	Gigaprivate& operator=(Gigaprivate&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,9 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Gigaprivates;
 	std::shared_ptr<class GameEngineCollision> GigaprivatesCollision;
+
+	std::shared_ptr<class PrivatePanel_18> PrivatePanel_18Ptr;
+	std::shared_ptr<class BoxCroix_PR_18> BoxCroix_PR_18Ptr;
+	std::shared_ptr<class Private18> Private18Ptr;
 };
 

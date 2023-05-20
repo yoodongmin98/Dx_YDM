@@ -3,10 +3,13 @@
 
 //PlatForm
 //Core
+#include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
 #include "ColManager.h"
 #include "Private18.h"
+#include "BoxCroix_PR_18.h"
+#include "PrivatePanel_18.h"
 
 
 Gigaprivate::Gigaprivate()
@@ -28,7 +31,14 @@ void Gigaprivate::Update(float _DeltaTime)
 	ManagedCollision(GigaprivatesCollision, 3);
 	if (true == ClickCheck(GigaprivatesCollision))
 	{
-		//Create¾îÂ¼±¸ÀúÂ¼±¸
+		ColManager::MG->PlusCollisionValue();
+		PrivatePanel_18Ptr = GetLevel()->CreateActor<PrivatePanel_18>();
+		BoxCroix_PR_18Ptr = GetLevel()->CreateActor<BoxCroix_PR_18>();
+		Private18Ptr = GetLevel()->CreateActor<Private18>();
+	}
+	if (nullptr != BoxCroix_PR_18Ptr)
+	{
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -36,3 +46,12 @@ void Gigaprivate::Render(float _Delta)
 {
 
 };
+
+void Gigaprivate::BoxCroixDeathCheck()
+{
+	if (true == BoxCroix_PR_18Ptr->IsDeath())
+	{
+		PrivatePanel_18Ptr.get()->Death();
+		Private18Ptr.get()->Death();
+	}
+}
