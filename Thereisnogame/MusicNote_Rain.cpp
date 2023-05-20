@@ -24,6 +24,7 @@ void MusicNote_Rain::Start()
 
 void MusicNote_Rain::Update(float _DeltaTime)
 {
+	ManagedCollision(MusicNote_RainsCollision, 1);
 	if (true == ClickCheck(MusicNote_RainsCollision))
 	{
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(3);

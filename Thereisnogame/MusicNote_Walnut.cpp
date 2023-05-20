@@ -24,6 +24,7 @@ void MusicNote_Walnut::Start()
 
 void MusicNote_Walnut::Update(float _DeltaTime)
 {
+	ManagedCollision(MusicNote_WalnutsCollision, 1);
 	if (true == ClickCheck(MusicNote_WalnutsCollision))
 	{
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(1);

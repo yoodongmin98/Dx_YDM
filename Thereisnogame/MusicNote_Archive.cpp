@@ -24,6 +24,7 @@ void MusicNote_Archive::Start()
 
 void MusicNote_Archive::Update(float _DeltaTime)
 {
+	ManagedCollision(MusicNote_ArchivesCollision, 1);
 	if (true == ClickCheck(MusicNote_ArchivesCollision))
 	{
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(2);

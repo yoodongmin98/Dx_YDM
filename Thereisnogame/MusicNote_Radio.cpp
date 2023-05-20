@@ -24,6 +24,7 @@ void MusicNote_Radio::Start()
 
 void MusicNote_Radio::Update(float _DeltaTime)
 {
+	ManagedCollision(MusicNote_RadiosCollision, 1);
 	if (true == ClickCheck(MusicNote_RadiosCollision))
 	{
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(4);
