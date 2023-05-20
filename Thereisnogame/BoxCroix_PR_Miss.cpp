@@ -19,7 +19,7 @@ BoxCroix_PR_Miss::~BoxCroix_PR_Miss()
 void BoxCroix_PR_Miss::Start()
 {
 	BoxCroixs = Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 260,80,0 });
-	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 230,80,0 });
+	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 260,80,0 });
 }
 
 void BoxCroix_PR_Miss::Update(float _DeltaTime)

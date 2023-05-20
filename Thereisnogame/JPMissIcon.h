@@ -23,5 +23,6 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> JPMissIcons;
+	std::shared_ptr<class GameEngineCollision> JPMissIconsCollision;
 };
 
