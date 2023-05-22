@@ -4,7 +4,8 @@
 //PlatForm
 //Core
 
-
+//Actor
+#include "ClockUnderBar.h"
 
 
 ClockPaddle3::ClockPaddle3()
@@ -23,7 +24,10 @@ void ClockPaddle3::Start()
 
 void ClockPaddle3::Update(float _DeltaTime)
 {
-
+	if (true == ClickCheck(ClockPaddle3sCollision))
+	{
+		ClockUnderBar::CM->ClockPasswordPush(3);
+	}
 }
 
 void ClockPaddle3::Render(float _Delta)

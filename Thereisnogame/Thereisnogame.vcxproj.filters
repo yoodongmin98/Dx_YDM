@@ -220,38 +220,8 @@
     <ClCompile Include="CodePicture.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClCompile>
-    <ClCompile Include="ClockPaddle1.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle2.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle3.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
     <ClCompile Include="ClockPanel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle4.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle5.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle6.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle7.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle8.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle9.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockPaddle0.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockUnderBar.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
@@ -481,6 +451,36 @@
     <ClCompile Include="BoxCroix_ClockPanel.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClCompile>
+    <ClCompile Include="ClockPaddle0.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle1.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle2.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle3.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle4.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle5.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle6.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle7.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle8.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockPaddle9.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -699,38 +699,8 @@
     <ClInclude Include="CodePicture.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClInclude>
-    <ClInclude Include="ClockPaddle1.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle2.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle3.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
     <ClInclude Include="ClockPanel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle4.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle5.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle6.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle7.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle8.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle9.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockPaddle0.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockUnderBar.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
@@ -960,6 +930,36 @@
     <ClInclude Include="BoxCroix_ClockPanel.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClInclude>
+    <ClInclude Include="ClockPaddle0.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle1.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle2.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle3.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle4.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle5.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle6.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle7.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle8.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockPaddle9.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1162,6 +1162,12 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock">
       <UniqueIdentifier>{30fe0d18-d057-4eea-9570-9f80dfcd2200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle">
+      <UniqueIdentifier>{05a4b6cb-79e3-4b9d-bba6-1f00e2b4dd65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\UnderBarNumber">
+      <UniqueIdentifier>{934b9186-4fc4-4f22-af64-191dc02337ce}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

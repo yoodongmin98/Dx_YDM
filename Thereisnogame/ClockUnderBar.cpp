@@ -31,14 +31,28 @@ void ClockUnderBar::Start()
 	PasswordUnderBar.push_back(ClockUnderBars4);
 	PasswordUnderBar.push_back(ClockUnderBars5);
 	PasswordUnderBar.push_back(ClockUnderBars6);
+
+	PasswordSet(0,1,2,3,4,5);
 }
 
 void ClockUnderBar::Update(float _DeltaTime)
 {
-	if (1==PassWordCheck.size())
+	if (0!=PassWordCheck.size())
 	{
-		int i = PassWordCheck[0];
-		PasswordUnderBar[0].get()->Off();
+		for (size_t i = 0; i < PassWordCheck.size(); i++)
+		{
+			PasswordUnderBar[i].get()->Off();
+			//Create ³Ñ¹ö ¾îÂ¼±¸
+		}
+	}
+	if (true == PasswordCheck())
+	{
+		//Create¾îÂ¼±¸ ÀúÂ¼±¸
+		int a = 0;
+	}
+	if (6==PassWordCheck.size()&&false == PasswordCheck())
+	{
+		int a = 0;
 	}
 }
 
@@ -47,11 +61,24 @@ void ClockUnderBar::Render(float _Delta)
 
 };
 
-void ClockUnderBar::PushIntCheck(int _Value)
+bool ClockUnderBar::PasswordCheck()
 {
-	/*switch (_Value)
+	if (PassWord == PassWordCheck)
 	{
-	case 1:
-		ClockUnderBars1
-	}*/
+		return true;
+	}
+	else
+	{
+		false;
+	}
+}
+
+void ClockUnderBar::PasswordSet(int _Value1, int _Value2, int _Value3, int _Value4, int _Value5, int _Value6)
+{
+	PassWord.push_back(_Value1);
+	PassWord.push_back(_Value2);
+	PassWord.push_back(_Value3);
+	PassWord.push_back(_Value4);
+	PassWord.push_back(_Value5);
+	PassWord.push_back(_Value6);
 }

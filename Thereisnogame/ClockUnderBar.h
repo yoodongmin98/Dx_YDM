@@ -22,7 +22,8 @@ public:
 		PassWordCheck.push_back(_Number);
 	}
 
-	void PushIntCheck(int _Value);
+	bool PasswordCheck();
+	void PasswordSet(int _Value1, int Value2, int Value3, int Value4, int Value5, int Value6);
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -35,9 +36,12 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> ClockUnderBars5;
 	std::shared_ptr<class GameEngineSpriteRenderer> ClockUnderBars6;
 
-	std::vector<int> PassWordCheck;
+	std::vector<int> PassWordCheck;//paddle을 눌러서 받은값의 vector
+	std::vector<int> PassWord;
+
 	std::vector<std::shared_ptr<GameEngineSpriteRenderer>> PasswordUnderBar;
 
-	float4 NumberPosition = float4::Zero;
+	/*float4 NumberPosition = float4::Zero;*/
+	
 };
 

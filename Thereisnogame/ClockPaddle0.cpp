@@ -24,7 +24,10 @@ void ClockPaddle0::Start()
 
 void ClockPaddle0::Update(float _DeltaTime)
 {
-	
+	if (true == ClickCheck(ClockPaddle0sCollision))
+	{
+		ClockUnderBar::CM->ClockPasswordPush(0);
+	}
 }
 
 void ClockPaddle0::Render(float _Delta)
