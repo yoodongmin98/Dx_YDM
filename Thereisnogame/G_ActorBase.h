@@ -40,10 +40,6 @@ public:
 
 	bool ClickCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
-	std::shared_ptr<GameEngineCollision> BoxCroixCreate(
-		std::shared_ptr<class BoxCroix_Music> _BoxCroix,
-		float4 _Position);
-
 	void RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render);
 	void ManagedCollision(std::shared_ptr<GameEngineCollision> _Collision, int Value);
 	void Repeat(float _MoveValue, float _DeltaTime);

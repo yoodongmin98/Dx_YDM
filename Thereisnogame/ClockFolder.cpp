@@ -22,6 +22,7 @@
 #include "ClockUnderBar.h"
 #include "ClockDayandNight.h"
 #include "BoxCroix_ClockDay.h"
+#include "ClockBranch.h"
 
 ClockFolder::ClockFolder()
 {
@@ -61,6 +62,10 @@ void ClockFolder::Update(float _DeltaTime)
 		ColManager::MG->PlusCollisionValue();
 		ClockDayandNightPtr = GetLevel()->CreateActor<ClockDayandNight>();
 		BoxCroix_ClockDayPtr = GetLevel()->CreateActor<BoxCroix_ClockDay>();
+		if (2 != ColManager::MG->GetClockValue())
+		{
+			ClockBranchPtr = GetLevel()->CreateActor<ClockBranch>();
+		}
 	}
 	if (nullptr != BoxCroix_ClockPanelPtr)
 	{
@@ -96,6 +101,8 @@ void ClockFolder::BoxCroixDeathCheck()
 			&& true == BoxCroix_ClockDayPtr->IsDeath())
 		{
 			ClockDayandNightPtr.get()->Death();
+			ClockBranchPtr.get()->Death();
 		}
+
 	}
 }

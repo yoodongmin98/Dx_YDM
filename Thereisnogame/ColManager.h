@@ -28,7 +28,7 @@ public:
 	}
 	void SetClockValue()
 	{
-		ClockValue = 1;
+		ClockValue += 1;
 	}
 protected:
 	void Start() override;

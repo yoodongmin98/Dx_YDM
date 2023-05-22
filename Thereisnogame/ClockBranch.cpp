@@ -5,7 +5,7 @@
 //Core
 
 
-
+#include "ColManager.h"
 
 ClockBranch::ClockBranch()
 {
@@ -14,16 +14,35 @@ ClockBranch::ClockBranch()
 ClockBranch::~ClockBranch()
 {
 }
-
+bool Branchbool = true;
 void ClockBranch::Start()
 {
-	//Animation으로 Init하기
-	//ClockBranchs = AnimationInit(ClockBranchs, "Chap04_MapBranchHorizontal.png", { 18,4 }, float4::Zero);
+	if (true == Branchbool)
+	{
+		AnimationImageLoad("Branch");
+		Branchbool = false;
+	}
+	ClockBranchs = AnimationInit(ClockBranchs, "ClockBranch00.png", { 30,40 }, {-230,80}, "shakeBranch", "Branch", 1, 0.15f);
+	ClockBranchsCollision = CollisionInit(ClockBranchsCollision, { 30,40 }, { -230,80 });
+	
 }
 
 void ClockBranch::Update(float _DeltaTime)
 {
-
+	ManagedCollision(ClockBranchsCollision, 1);
+	if (true == ClickCheck(ClockBranchsCollision))
+	{
+		FallCount++;
+		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-5,0 });
+		ClockBranchsCollision->GetTransform()->AddLocalPosition({ 0,-5,0 });
+	}
+	if (FallCount >= 5)
+	{
+		ColManager::MG->SetClockValue();
+		ClockBranchsCollision->Death();
+		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-7,0 });
+	
+	}
 }
 
 void ClockBranch::Render(float _Delta)
