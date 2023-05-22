@@ -3,8 +3,13 @@
 
 //PlatForm
 //Core
-//Actor
+#include <GameEngineCore/GameEngineLevel.h>
 
+
+//Actor
+#include "ColManager.h"
+#include "FolderNote3.h"
+#include "BoxCroix_FN3.h"
 
 
 Truth3Icon::Truth3Icon()
@@ -26,7 +31,13 @@ void Truth3Icon::Update(float _DeltaTime)
 	ManagedCollision(Truth3IconsCollision, 3);
 	if (true == ClickCheck(Truth3IconsCollision))
 	{
-		//Create¾îÂ¼±¸ÀúÂ¼±¸
+		ColManager::MG->PlusCollisionValue();
+		FolderNotePtr = GetLevel()->CreateActor<FolderNote3>();
+		BoxCroix_FN3Ptr = GetLevel()->CreateActor<BoxCroix_FN3>();
+	}
+	if (nullptr != BoxCroix_FN3Ptr)
+	{
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -34,3 +45,11 @@ void Truth3Icon::Render(float _Delta)
 {
 
 };
+
+void Truth3Icon::BoxCroixDeathCheck()
+{
+	if (true == BoxCroix_FN3Ptr->IsDeath())
+	{
+		FolderNotePtr.get()->Death();
+	}
+}

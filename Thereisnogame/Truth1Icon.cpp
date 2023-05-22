@@ -3,11 +3,13 @@
 
 //PlatForm
 //Core
-
+#include <GameEngineCore/GameEngineLevel.h>
  
  
 //Actor
 #include "ColManager.h"
+#include "FolderNote.h"
+#include "BoxCroix_FN1.h"
 
 
 
@@ -31,8 +33,13 @@ void Truth1Icon::Update(float _DeltaTime)
 	ManagedCollision(Truth1IconsCollision, 1);
 	if (true == ClickCheck(Truth1IconsCollision))
 	{
-		//ColManager::MG->PlusCollisionValue();
-		//CreateFolderNote
+		ColManager::MG->PlusCollisionValue();
+		FolderNotePtr = GetLevel()->CreateActor<FolderNote>();
+		BoxCroix_FN1Ptr = GetLevel()->CreateActor<BoxCroix_FN1>();
+	}
+	if (nullptr != BoxCroix_FN1Ptr)
+	{
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -40,3 +47,11 @@ void Truth1Icon::Render(float _Delta)
 {
 
 };
+
+void Truth1Icon::BoxCroixDeathCheck()
+{
+	if (true == BoxCroix_FN1Ptr->IsDeath())
+	{
+		FolderNotePtr.get()->Death();
+	}
+}

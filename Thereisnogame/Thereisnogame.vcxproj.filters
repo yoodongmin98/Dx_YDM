@@ -463,6 +463,21 @@
     <ClCompile Include="BoxCroix_PR_MissPicture.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClCompile>
+    <ClCompile Include="FolderNote2.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderNote3.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_FN1.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_FN2.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_FN3.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -924,6 +939,21 @@
     <ClInclude Include="BoxCroix_PR_MissPicture.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClInclude>
+    <ClInclude Include="FolderNote2.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderNote3.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_FN1.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_FN2.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_FN3.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1120,6 +1150,9 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss">
       <UniqueIdentifier>{7c47faa7-667d-47c6-a284-cbacffdd1bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote">
+      <UniqueIdentifier>{0d7874bd-86d7-48c1-b42d-40ecd66cf897}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -169,6 +169,9 @@
     <ClInclude Include="BoxCroix_CodePicture.h" />
     <ClInclude Include="BoxCroix_DayPicture.h" />
     <ClInclude Include="BoxCroix_DrawerPicture.h" />
+    <ClInclude Include="BoxCroix_FN1.h" />
+    <ClInclude Include="BoxCroix_FN2.h" />
+    <ClInclude Include="BoxCroix_FN3.h" />
     <ClInclude Include="BoxCroix_PictureFolder.h" />
     <ClInclude Include="BoxCroix_PR_18.h" />
     <ClInclude Include="BoxCroix_PR_Giga.h" />
@@ -183,6 +186,8 @@
     <ClInclude Include="Cup.h" />
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="FolderNote2.h" />
+    <ClInclude Include="FolderNote3.h" />
     <ClInclude Include="GoodbyeIcon.h" />
     <ClInclude Include="LeftRotate.h" />
     <ClInclude Include="LoadBarBack.h" />
@@ -329,6 +334,9 @@
     <ClCompile Include="BoxCroix_CodePicture.cpp" />
     <ClCompile Include="BoxCroix_DayPicture.cpp" />
     <ClCompile Include="BoxCroix_DrawerPicture.cpp" />
+    <ClCompile Include="BoxCroix_FN1.cpp" />
+    <ClCompile Include="BoxCroix_FN2.cpp" />
+    <ClCompile Include="BoxCroix_FN3.cpp" />
     <ClCompile Include="BoxCroix_PictureFolder.cpp" />
     <ClCompile Include="BoxCroix_PR_18.cpp" />
     <ClCompile Include="BoxCroix_PR_Giga.cpp" />
@@ -343,6 +351,8 @@
     <ClCompile Include="Cup.cpp" />
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
+    <ClCompile Include="FolderNote2.cpp" />
+    <ClCompile Include="FolderNote3.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
     <ClCompile Include="LeftRotate.cpp" />
     <ClCompile Include="LoadBarBack.cpp" />

@@ -16,6 +16,7 @@ public:
 	Truth3Icon& operator=(const Truth3Icon& _Other) = delete;
 	Truth3Icon& operator=(Truth3Icon&& _Other) noexcept = delete;
 
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();
@@ -24,5 +25,8 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Truth3Icons;
 	std::shared_ptr<class GameEngineCollision> Truth3IconsCollision;
+
+	std::shared_ptr<class FolderNote3> FolderNotePtr;
+	std::shared_ptr<class BoxCroix_FN3> BoxCroix_FN3Ptr;
 };
 
