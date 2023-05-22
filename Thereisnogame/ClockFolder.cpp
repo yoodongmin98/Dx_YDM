@@ -57,7 +57,7 @@ void ClockFolder::Update(float _DeltaTime)
 		ClockUnderBarPtr = GetLevel()->CreateActor<ClockUnderBar>();
 		BoxCroix_ClockPanelPtr=GetLevel()->CreateActor<BoxCroix_ClockPanel>();
 	}
-	if (true == ClickCheck(ClockFoldersCollision) && 1 == ColManager::MG->GetClockValue())
+	if (true == ClickCheck(ClockFoldersCollision) && 1 <= ColManager::MG->GetClockValue())
 	{
 		ColManager::MG->PlusCollisionValue();
 		ClockDayandNightPtr = GetLevel()->CreateActor<ClockDayandNight>();
@@ -97,7 +97,7 @@ void ClockFolder::BoxCroixDeathCheck()
 	}
 	if (nullptr != BoxCroix_ClockDayPtr)
 	{
-		if (1 == ColManager::MG->GetClockValue()
+		if (1 <= ColManager::MG->GetClockValue()
 			&& true == BoxCroix_ClockDayPtr->IsDeath())
 		{
 			ClockDayandNightPtr.get()->Death();
