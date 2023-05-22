@@ -21,7 +21,6 @@ SuperPrivate::~SuperPrivate()
 
 void SuperPrivate::Start()
 {
-	//UltraPrivate,Truth2Icon,Panel,Croix Create
 	SuperPrivates=Init(SuperPrivates, "Folder.png", { 96,87 }, {-260,20});
 	SuperPrivatesCollision = CollisionInit(SuperPrivatesCollision, { 96,87,1 }, { -260,20 });
 }

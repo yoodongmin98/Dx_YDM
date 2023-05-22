@@ -166,6 +166,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
+    <ClInclude Include="BoxCroix_ClockPanel.h" />
     <ClInclude Include="BoxCroix_CodePicture.h" />
     <ClInclude Include="BoxCroix_DayPicture.h" />
     <ClInclude Include="BoxCroix_DrawerPicture.h" />
@@ -331,6 +332,7 @@
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BoxCroix_ClockPanel.cpp" />
     <ClCompile Include="BoxCroix_CodePicture.cpp" />
     <ClCompile Include="BoxCroix_DayPicture.cpp" />
     <ClCompile Include="BoxCroix_DrawerPicture.cpp" />

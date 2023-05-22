@@ -478,6 +478,9 @@
     <ClCompile Include="BoxCroix_FN3.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClCompile>
+    <ClCompile Include="BoxCroix_ClockPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -954,6 +957,9 @@
     <ClInclude Include="BoxCroix_FN3.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClInclude>
+    <ClInclude Include="BoxCroix_ClockPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1153,6 +1159,9 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote">
       <UniqueIdentifier>{0d7874bd-86d7-48c1-b42d-40ecd66cf897}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock">
+      <UniqueIdentifier>{30fe0d18-d057-4eea-9570-9f80dfcd2200}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
