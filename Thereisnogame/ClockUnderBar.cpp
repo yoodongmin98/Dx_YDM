@@ -34,7 +34,7 @@ void ClockUnderBar::Start()
 	PasswordUnderBar.push_back(ClockUnderBars5);
 	PasswordUnderBar.push_back(ClockUnderBars6);
 
-	PasswordSet(0,1,2,3,4,5);
+	PasswordSet(0,0,0,0,0,0);
 }
 
 void ClockUnderBar::Update(float _DeltaTime)
@@ -92,7 +92,6 @@ void ClockUnderBar::UnderBarOffAndCreateNumberRender()
 		for (size_t i = 0; i < PassWordCheck.size(); i++)
 		{
 			PasswordUnderBar[i].get()->Off();
-			//Create ³Ñ¹ö ¾îÂ¼±¸
 		}
 	}
 }

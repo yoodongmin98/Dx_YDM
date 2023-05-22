@@ -90,8 +90,12 @@ void ClockFolder::BoxCroixDeathCheck()
 		ClockUnderBarPtr.get()->Death();
 		BoxCroix_ClockPanelPtr.get()->Death();
 	}
-	if (1 == ColManager::MG->GetClockValue()&&true==BoxCroix_ClockDayPtr->IsDeath())
+	if (nullptr != BoxCroix_ClockDayPtr)
 	{
-		ClockDayandNightPtr.get()->Death();
+		if (1 == ColManager::MG->GetClockValue()
+			&& true == BoxCroix_ClockDayPtr->IsDeath())
+		{
+			ClockDayandNightPtr.get()->Death();
+		}
 	}
 }

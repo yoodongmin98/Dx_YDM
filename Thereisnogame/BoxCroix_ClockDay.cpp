@@ -21,8 +21,8 @@ BoxCroix_ClockDay::~BoxCroix_ClockDay()
 void BoxCroix_ClockDay::Start()
 {
 
-	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 150,170,0 });
-	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 150,170,0 });
+	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { -140,160,0 });
+	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { -140,160,0 });
 }
 
 void BoxCroix_ClockDay::Update(float _DeltaTime)
