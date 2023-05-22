@@ -37,7 +37,7 @@ private:
 	std::shared_ptr<class ClockPaddle8> ClockPaddle8Ptr;
 	std::shared_ptr<class ClockPaddle9> ClockPaddle9Ptr;
 	//언더바
-	//std::shared_ptr<class GameEngineCollision> ClockFoldersCollision;
+	std::shared_ptr<class ClockUnderBar> ClockUnderBarPtr;
 	//박스
 	std::shared_ptr<class BoxCroix_ClockPanel> BoxCroix_ClockPanelPtr;
 	//패널

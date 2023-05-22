@@ -23,6 +23,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> ClockPaddle7s;
+	std::shared_ptr<class GameEngineCollision> ClockPaddle7sCollision;
 
 };
 

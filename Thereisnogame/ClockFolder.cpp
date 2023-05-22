@@ -19,6 +19,7 @@
 #include "ClockPaddle8.h"
 #include "ClockPaddle9.h"
 #include "BoxCroix_ClockPanel.h"
+#include "ClockUnderBar.h"
 
 ClockFolder::ClockFolder()
 {
@@ -50,6 +51,7 @@ void ClockFolder::Update(float _DeltaTime)
 		ClockPaddle7Ptr=GetLevel()->CreateActor<ClockPaddle7>();
 		ClockPaddle8Ptr=GetLevel()->CreateActor<ClockPaddle8>();
 		ClockPaddle9Ptr=GetLevel()->CreateActor<ClockPaddle9>();
+		ClockUnderBarPtr = GetLevel()->CreateActor<ClockUnderBar>();
 		BoxCroix_ClockPanelPtr=GetLevel()->CreateActor<BoxCroix_ClockPanel>();
 	}
 	if (nullptr != BoxCroix_ClockPanelPtr)
@@ -77,5 +79,6 @@ void ClockFolder::BoxCroixDeathCheck()
 		ClockPaddle7Ptr.get()->Death();
 		ClockPaddle8Ptr.get()->Death();
 		ClockPaddle9Ptr.get()->Death();
+		ClockUnderBarPtr.get()->Death();
 	}
 }
