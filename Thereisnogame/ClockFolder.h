@@ -43,5 +43,8 @@ private:
 	//ÆÐ³Î
 	//std::shared_ptr<class GameEngineCollision> ClockFoldersCollision;
 
+
+	std::shared_ptr<class ClockDayandNight> ClockDayandNightPtr;
+	std::shared_ptr<class BoxCroix_ClockDay> BoxCroix_ClockDayPtr;
 };
 

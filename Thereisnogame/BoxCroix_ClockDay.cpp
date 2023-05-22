@@ -1,5 +1,5 @@
 #include "PrecompileHeader.h"
-#include "BoxCroix_ClockPanel.h"
+#include "BoxCroix_ClockDay.h"
 #include "ActorTypeEnum.h"
 
 
@@ -9,23 +9,23 @@
 #include "ColManager.h"
 
 
-BoxCroix_ClockPanel::BoxCroix_ClockPanel()
+BoxCroix_ClockDay::BoxCroix_ClockDay()
 {
 
 }
 
-BoxCroix_ClockPanel::~BoxCroix_ClockPanel()
+BoxCroix_ClockDay::~BoxCroix_ClockDay()
 {
 }
 
-void BoxCroix_ClockPanel::Start()
+void BoxCroix_ClockDay::Start()
 {
 
 	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 150,170,0 });
 	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 150,170,0 });
 }
 
-void BoxCroix_ClockPanel::Update(float _DeltaTime)
+void BoxCroix_ClockDay::Update(float _DeltaTime)
 {
 	ManagedCollision(BoxCroixsCollision, 1);
 	if (true == ClickCheck(BoxCroixsCollision))
@@ -36,7 +36,7 @@ void BoxCroix_ClockPanel::Update(float _DeltaTime)
 	}
 }
 
-void BoxCroix_ClockPanel::Render(float _Delta)
+void BoxCroix_ClockDay::Render(float _Delta)
 {
 
 };

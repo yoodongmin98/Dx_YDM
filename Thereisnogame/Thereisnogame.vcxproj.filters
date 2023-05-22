@@ -226,9 +226,6 @@
     <ClCompile Include="ClockUnderBar.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClCompile>
-    <ClCompile Include="ClockState.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock</Filter>
-    </ClCompile>
     <ClCompile Include="FakeProgramLevelManager.cpp">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClCompile>
@@ -265,10 +262,7 @@
     <ClCompile Include="Private18.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
-    <ClCompile Include="ClockDay.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
-    </ClCompile>
-    <ClCompile Include="ClockNight.cpp">
+    <ClCompile Include="ClockDayandNight.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
     </ClCompile>
     <ClCompile Include="ClockBranch.cpp">
@@ -480,6 +474,9 @@
     </ClCompile>
     <ClCompile Include="ClockPaddle9.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_ClockDay.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -705,9 +702,6 @@
     <ClInclude Include="ClockUnderBar.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClInclude>
-    <ClInclude Include="ClockState.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock</Filter>
-    </ClInclude>
     <ClInclude Include="FakeProgramLevelManager.h">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClInclude>
@@ -744,10 +738,7 @@
     <ClInclude Include="Private18.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
-    <ClInclude Include="ClockDay.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
-    </ClInclude>
-    <ClInclude Include="ClockNight.h">
+    <ClInclude Include="ClockDayandNight.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
     </ClInclude>
     <ClInclude Include="ClockBranch.h">
@@ -959,6 +950,9 @@
     </ClInclude>
     <ClInclude Include="ClockPaddle9.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_ClockDay.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

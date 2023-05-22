@@ -166,6 +166,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
+    <ClInclude Include="BoxCroix_ClockDay.h" />
     <ClInclude Include="BoxCroix_ClockPanel.h" />
     <ClInclude Include="BoxCroix_CodePicture.h" />
     <ClInclude Include="BoxCroix_DayPicture.h" />
@@ -182,8 +183,7 @@
     <ClInclude Include="BoxCroix_PR_Ultra.h" />
     <ClInclude Include="BoxCroix_Skite.h" />
     <ClInclude Include="ClockBranch.h" />
-    <ClInclude Include="ClockDay.h" />
-    <ClInclude Include="ClockNight.h" />
+    <ClInclude Include="ClockDayandNight.h" />
     <ClInclude Include="Cup.h" />
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Decapsuleur.h" />
@@ -233,7 +233,6 @@
     <ClInclude Include="ClockPaddle8.h" />
     <ClInclude Include="ClockPaddle9.h" />
     <ClInclude Include="ClockPanel.h" />
-    <ClInclude Include="ClockState.h" />
     <ClInclude Include="ClockUnderBar.h" />
     <ClInclude Include="CodeIcon.h" />
     <ClInclude Include="CodePicture.h" />
@@ -332,6 +331,7 @@
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BoxCroix_ClockDay.cpp" />
     <ClCompile Include="BoxCroix_ClockPanel.cpp" />
     <ClCompile Include="BoxCroix_CodePicture.cpp" />
     <ClCompile Include="BoxCroix_DayPicture.cpp" />
@@ -348,8 +348,7 @@
     <ClCompile Include="BoxCroix_PR_Ultra.cpp" />
     <ClCompile Include="BoxCroix_Skite.cpp" />
     <ClCompile Include="ClockBranch.cpp" />
-    <ClCompile Include="ClockDay.cpp" />
-    <ClCompile Include="ClockNight.cpp" />
+    <ClCompile Include="ClockDayandNight.cpp" />
     <ClCompile Include="Cup.cpp" />
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
@@ -400,7 +399,6 @@
     <ClCompile Include="ClockPaddle8.cpp" />
     <ClCompile Include="ClockPaddle9.cpp" />
     <ClCompile Include="ClockPanel.cpp" />
-    <ClCompile Include="ClockState.cpp" />
     <ClCompile Include="ClockUnderBar.cpp" />
     <ClCompile Include="CodeIcon.cpp" />
     <ClCompile Include="CodePicture.cpp" />
