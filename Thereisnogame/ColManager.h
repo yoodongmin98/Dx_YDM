@@ -22,6 +22,14 @@ public:
 	{
 		return CollisionValue;
 	}
+	int GetClockValue()
+	{
+		return ClockValue;
+	}
+	void SetClockValue()
+	{
+		ClockValue = 1;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -29,5 +37,7 @@ protected:
 private:
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;
+
+	int ClockValue = 0;
 };
 

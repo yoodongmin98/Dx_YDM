@@ -4,6 +4,8 @@
 //PlatForm
 //Core
 
+//Actor
+#include "ColManager.h"
 
 
 ClockUnderBar* ClockUnderBar::CM;
@@ -37,22 +39,17 @@ void ClockUnderBar::Start()
 
 void ClockUnderBar::Update(float _DeltaTime)
 {
-	if (0!=PassWordCheck.size())
-	{
-		for (size_t i = 0; i < PassWordCheck.size(); i++)
-		{
-			PasswordUnderBar[i].get()->Off();
-			//Create ³Ñ¹ö ¾îÂ¼±¸
-		}
-	}
+	UnderBarOffAndCreateNumberRender();
 	if (true == PasswordCheck())
 	{
-		//Create¾îÂ¼±¸ ÀúÂ¼±¸
-		int a = 0;
+		ColManager::MG->SetClockValue();
+		ColManager::MG->MinusCollisionValue();
+		Death();
 	}
 	if (6==PassWordCheck.size()&&false == PasswordCheck())
 	{
-		int a = 0;
+		ColManager::MG->MinusCollisionValue();
+		Death();
 	}
 }
 
@@ -60,6 +57,11 @@ void ClockUnderBar::Render(float _Delta)
 {
 
 };
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------
 
 bool ClockUnderBar::PasswordCheck()
 {
@@ -69,7 +71,7 @@ bool ClockUnderBar::PasswordCheck()
 	}
 	else
 	{
-		false;
+		return false;
 	}
 }
 
@@ -81,4 +83,16 @@ void ClockUnderBar::PasswordSet(int _Value1, int _Value2, int _Value3, int _Valu
 	PassWord.push_back(_Value4);
 	PassWord.push_back(_Value5);
 	PassWord.push_back(_Value6);
+}
+
+void ClockUnderBar::UnderBarOffAndCreateNumberRender()
+{
+	if (0 != PassWordCheck.size())
+	{
+		for (size_t i = 0; i < PassWordCheck.size(); i++)
+		{
+			PasswordUnderBar[i].get()->Off();
+			//Create ³Ñ¹ö ¾îÂ¼±¸
+		}
+	}
 }

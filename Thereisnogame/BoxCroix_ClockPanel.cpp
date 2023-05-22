@@ -21,7 +21,7 @@ BoxCroix_ClockPanel::~BoxCroix_ClockPanel()
 void BoxCroix_ClockPanel::Start()
 {
 	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 150,170,0 });
-	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 470,205,0 });
+	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 150,170,0 });
 
 }
 

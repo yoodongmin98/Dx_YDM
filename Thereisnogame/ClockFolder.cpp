@@ -38,7 +38,7 @@ void ClockFolder::Start()
 void ClockFolder::Update(float _DeltaTime)
 {
 	ManagedCollision(ClockFoldersCollision, 0);
-	if (true == ClickCheck(ClockFoldersCollision))
+	if (true == ClickCheck(ClockFoldersCollision)&& 0==ColManager::MG->GetClockValue())
 	{
 		ColManager::MG->PlusCollisionValue();
 		ClockPaddle0Ptr=GetLevel()->CreateActor<ClockPaddle0>();
@@ -54,6 +54,10 @@ void ClockFolder::Update(float _DeltaTime)
 		ClockUnderBarPtr = GetLevel()->CreateActor<ClockUnderBar>();
 		BoxCroix_ClockPanelPtr=GetLevel()->CreateActor<BoxCroix_ClockPanel>();
 	}
+	if (true == ClickCheck(ClockFoldersCollision) && 1 == ColManager::MG->GetClockValue())
+	{
+		int a = 0;
+	}
 	if (nullptr != BoxCroix_ClockPanelPtr)
 	{
 		BoxCroixDeathCheck();
@@ -67,7 +71,7 @@ void ClockFolder::Render(float _Delta)
 
 void ClockFolder::BoxCroixDeathCheck()
 {
-	if (true == BoxCroix_ClockPanelPtr->IsDeath())
+	if (true == BoxCroix_ClockPanelPtr->IsDeath()||true== ClockUnderBarPtr->IsDeath())
 	{
 		ClockPaddle0Ptr.get()->Death();
 		ClockPaddle1Ptr.get()->Death();
@@ -80,5 +84,6 @@ void ClockFolder::BoxCroixDeathCheck()
 		ClockPaddle8Ptr.get()->Death();
 		ClockPaddle9Ptr.get()->Death();
 		ClockUnderBarPtr.get()->Death();
+		BoxCroix_ClockPanelPtr.get()->Death();
 	}
 }

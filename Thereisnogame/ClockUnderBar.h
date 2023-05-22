@@ -24,6 +24,7 @@ public:
 
 	bool PasswordCheck();
 	void PasswordSet(int _Value1, int Value2, int Value3, int Value4, int Value5, int Value6);
+	void UnderBarOffAndCreateNumberRender();
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -40,8 +41,5 @@ private:
 	std::vector<int> PassWord;
 
 	std::vector<std::shared_ptr<GameEngineSpriteRenderer>> PasswordUnderBar;
-
-	/*float4 NumberPosition = float4::Zero;*/
-	
 };
 
