@@ -16,7 +16,7 @@ public:
 	DrawerPicture& operator=(const DrawerPicture& _Other) = delete;
 	DrawerPicture& operator=(DrawerPicture&& _Other) noexcept = delete;
 
-
+	void ScreenActorCreateCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;

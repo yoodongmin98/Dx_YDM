@@ -16,7 +16,7 @@ DrawerPicture::DrawerPicture()
 DrawerPicture::~DrawerPicture()
 {
 }
-
+bool CreateBool = true;
 void DrawerPicture::Start()
 {
 	DrawerOpen = Init(DrawerOpen, "Picture02b #75260.png", { 642,642 }, float4::Zero);
@@ -33,15 +33,23 @@ void DrawerPicture::Update(float _DeltaTime)
 	}
 	RenderRotateCheck(DrawerOpen);
 	RenderRotateCheck(DrawerClose);
-	//??
-	if (2 == RightRotate::MainRightRotate->GetHowManyClick()
-		|| -2 == RightRotate::MainRightRotate->GetHowManyClick())
-	{
-		//GetLevel()->CreateActor<Decapsuleur>();
-	}
+	ScreenActorCreateCheck();
 }
 
 void DrawerPicture::Render(float _Delta)
 {
 
 };
+
+void DrawerPicture::ScreenActorCreateCheck()
+{
+	if (2 == RightRotate::MainRightRotate->GetHowManyClick()
+		|| -2 == RightRotate::MainRightRotate->GetHowManyClick())
+	{
+		if (true == CreateBool&& true==DrawerClose->IsDeath())
+		{
+			GetLevel()->CreateActor<Decapsuleur>();
+			CreateBool = false;
+		}
+	}
+}

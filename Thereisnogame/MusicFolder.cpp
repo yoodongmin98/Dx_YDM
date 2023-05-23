@@ -44,6 +44,7 @@ void MusicFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
 		ColManager::MG->PlusCollisionValue();
+		ColManager::MG->SetIsRainfalse();
 		MusicFolderPanelPtr=GetLevel()->CreateActor<MusicFolderPanel>();
 		MusicNote_ArchivePtr=GetLevel()->CreateActor<MusicNote_Archive>();
 		MusicNote_RadioPtr=GetLevel()->CreateActor<MusicNote_Radio>();
