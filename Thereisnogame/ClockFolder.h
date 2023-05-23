@@ -23,7 +23,8 @@ protected:
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
-	std::shared_ptr<class GameEngineSpriteRenderer> ClockFolders;
+	std::shared_ptr<class GameEngineSpriteRenderer> ClockFolder_Night;
+	std::shared_ptr<class GameEngineSpriteRenderer> ClockFolder_Day;
 	std::shared_ptr<class GameEngineCollision> ClockFoldersCollision;
 
 	std::shared_ptr<class ClockPaddle0> ClockPaddle0Ptr;

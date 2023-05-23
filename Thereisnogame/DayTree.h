@@ -19,6 +19,7 @@ public:
 	void RotatePositionSet(std::shared_ptr<GameEngineSpriteRenderer> _Render, float4 _Pos, int _Value);
 	std::shared_ptr<GameEngineSpriteRenderer> ChangeTreeRender(std::shared_ptr<class GameEngineSpriteRenderer> _PictureRender);
 	void WhatisTreeRender();
+	void GetTheNutFunc();
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -35,6 +36,8 @@ private:
 
 	std::shared_ptr<class GameEngineCollision> Tree_SmallCollision;
 	std::shared_ptr<class GameEngineCollision> Tree_BigCollision;
+
+	int GetTheNut = 0;
 
 };
 

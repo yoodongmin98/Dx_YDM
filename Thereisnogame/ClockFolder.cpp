@@ -34,13 +34,21 @@ ClockFolder::~ClockFolder()
 
 void ClockFolder::Start()
 {
-	Init(ClockFolders, "HourOs_Night00.png", { 102,97 }, { 420,200,0 });
+	ClockFolder_Night =Init(ClockFolder_Night, "HourOs_Night00.png", { 102,97 }, { 420,200,0 });
+	ClockFolder_Day = Init(ClockFolder_Day, "HourOs_Day00.png", { 102,97 }, { 420,200,0 });
 	ClockFoldersCollision = CollisionInit(ClockFoldersCollision, { 102,97 }, { 420,200,0 });
+
+	ClockFolder_Day->Off();
 }
 
 void ClockFolder::Update(float _DeltaTime)
 {
 	ManagedCollision(ClockFoldersCollision, 0);
+	if (2 == ColManager::MG->GetClockValue())
+	{
+		ClockFolder_Night->Death();
+		ClockFolder_Day->On();
+	}
 	if (true == ClickCheck(ClockFoldersCollision)&& 0==ColManager::MG->GetClockValue())
 	{
 		ColManager::MG->PlusCollisionValue();
