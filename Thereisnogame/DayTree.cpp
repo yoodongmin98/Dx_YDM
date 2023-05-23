@@ -30,8 +30,16 @@ void DayTree::Start()
 
 	Tree_BigCollision = CollisionInit(Tree_BigCollision, { 597,486 }, { 0,50,0 });
 	Tree_SmallCollision = CollisionInit(Tree_SmallCollision, { 159,108 }, { 70,-132,0 });
-
-	Tree_BigCollision->Off();
+	if (true==ColManager::MG->GetIsBigTree())
+	{
+		Tree_BigCollision->On();		
+		Tree_SmallCollision->Off();
+	}
+	else
+	{
+		Tree_BigCollision->Off();
+		Tree_SmallCollision->On();
+	}
 
 	TreeVector.push_back(Tree_BigDay);
 	TreeVector.push_back(Tree_SmallDay);
@@ -48,8 +56,6 @@ void DayTree::Update(float _DeltaTime)
 		&&true==Mouse::MainMouse->IsInteractable())
 	{
 		ColManager::MG->SetIsBigTreeTrue();
-		Tree_SmallCollision->Death();
-		Tree_BigCollision->On();
 	}
 	WhatisTreeRender();
 	RotatePositionSet(Tree_BigDay,{ 0,50,0 },1);
@@ -164,13 +170,12 @@ void DayTree::WhatisTreeRender()
 
 void DayTree::GetTheNutFunc()
 {
-	if (true == ClickCheck(Tree_BigCollision))
+	if (true == ClickCheck(Tree_BigCollision)&&2==ColManager::MG->GetClockValue())
 	{
 		GetTheNut++;
 	}
 	if (GetTheNut >= 5)
 	{
-		//여기테스트
-		int a = 0;
+		//
 	}
 }
