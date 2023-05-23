@@ -30,6 +30,15 @@ void ClockBranch::Start()
 void ClockBranch::Update(float _DeltaTime)
 {
 	ManagedCollision(ClockBranchsCollision, 1);
+	if (5 <= FallCount)
+	{
+		ClockBranchsCollision->Death();
+		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-1,0 });
+		if (ClockBranchs->GetTransform()->GetLocalPosition().y < -500)
+		{
+			Death();
+		}
+	}
 	if (true == ClickCheck(ClockBranchsCollision))
 	{
 		FallCount++;
@@ -38,15 +47,6 @@ void ClockBranch::Update(float _DeltaTime)
 		if (5 <= FallCount&& true == ClickCheck(ClockBranchsCollision))
 		{
 			ColManager::MG->PlusClockValue();
-		}
-	}
-	if (5 <= FallCount)
-	{
-		ClockBranchsCollision->Death();
-		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-1,0 });
-		if (ClockBranchs->GetTransform()->GetLocalPosition().y < -500)
-		{
-			Death();
 		}
 	}
 }

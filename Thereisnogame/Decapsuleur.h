@@ -23,5 +23,8 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Decapsuleurs;
+	std::shared_ptr<class GameEngineSpriteRenderer> Decapsuleurs_overlap;
+
+	std::shared_ptr<class GameEngineCollision> DecapsuleursCollision;
 };
 
