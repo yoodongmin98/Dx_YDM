@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "MediaPicture.h"
-
+#include "ActorTypeEnum.h"
 //PlatForm
 #include <GameEngineBase/GameEngineString.h>
 //Core
@@ -36,6 +36,12 @@ void MediaPicture::Start()
 	RainPicture = AnimationInit(RainPicture, "MediaVignetteMusic03_00.png", { 366,204 }, { 197,-65,0 }, "RainPicture", "Rain",2, 0.1f);
 	RadioPicture = AnimationInit(RadioPicture, "MediaVignetteMusic04_00.png", { 366,204 }, { 197,-65,0 }, "RadioPicture", "Radio",2, 0.2f);
 	
+	
+	PictureCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::PictureRain);
+	PictureCollision->GetTransform()->SetLocalScale({ 366,204 });
+	PictureCollision->GetTransform()->SetLocalPosition({ 197,-65,0 });
+
+
 	PictureSelectVector.push_back(WalnutPicture);
 	PictureSelectVector.push_back(ArchivePicture);
 	PictureSelectVector.push_back(RainPicture);

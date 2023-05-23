@@ -23,5 +23,8 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Cup_Fulls;
+	std::shared_ptr<class GameEngineSpriteRenderer> Cup_Fulls_overlap;
+
+	std::shared_ptr<class GameEngineCollision> Cup_FullsCollision;
 };
 

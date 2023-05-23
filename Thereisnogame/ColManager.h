@@ -37,7 +37,7 @@ public:
 	{
 		IsRain = false;
 	}
-	void SetIsRantrue()
+	void SetIsRaintrue()
 	{
 		IsRain = true;
 	}

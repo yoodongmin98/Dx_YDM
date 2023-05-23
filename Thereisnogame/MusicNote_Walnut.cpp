@@ -7,6 +7,7 @@
 
 //Actor
 #include "MediaPicture.h"
+#include "ColManager.h"
 
 MusicNote_Walnut::MusicNote_Walnut()
 {
@@ -27,6 +28,7 @@ void MusicNote_Walnut::Update(float _DeltaTime)
 	ManagedCollision(MusicNote_WalnutsCollision, 1);
 	if (true == ClickCheck(MusicNote_WalnutsCollision))
 	{
+		ColManager::MG->SetIsRainfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(1);
 	}
 }
