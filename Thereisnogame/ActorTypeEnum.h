@@ -3,7 +3,9 @@
 enum class ActorTypeEnum
 {
 	BackActor,
-	ScreenActor,
+	ScreenActor,//Render용
+	//상호작용
+	Nut_Close,
 	Cup_Full,
 	Decapsuleur,
 	PictureRain,

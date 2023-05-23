@@ -11,6 +11,7 @@
 #include "RightRotate.h"
 #include "ColManager.h"
 #include "Mouse.h"
+#include "Nut_Close.h"
 
 DayTree::DayTree()
 {
@@ -56,6 +57,8 @@ void DayTree::Update(float _DeltaTime)
 		&&true==Mouse::MainMouse->IsInteractable())
 	{
 		ColManager::MG->SetIsBigTreeTrue();
+		Tree_BigCollision->On();
+		Tree_SmallCollision->Off();
 	}
 	WhatisTreeRender();
 	RotatePositionSet(Tree_BigDay,{ 0,50,0 },1);
@@ -167,7 +170,7 @@ void DayTree::WhatisTreeRender()
 		}
 	}
 }
-
+bool CreateNut = true;
 void DayTree::GetTheNutFunc()
 {
 	if (true == ClickCheck(Tree_BigCollision)&&2==ColManager::MG->GetClockValue())
@@ -176,6 +179,10 @@ void DayTree::GetTheNutFunc()
 	}
 	if (GetTheNut >= 5)
 	{
-		//
+		if (true == CreateNut)
+		{
+			GetLevel()->CreateActor<Nut_Close>();
+			CreateNut = false;
+		}
 	}
 }

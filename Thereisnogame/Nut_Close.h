@@ -23,5 +23,8 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Nut_Closes;
+	std::shared_ptr<class GameEngineSpriteRenderer> Nut_Closes_overlap;
+
+	std::shared_ptr<class GameEngineCollision> Nut_ClosesCollision;
 };
 

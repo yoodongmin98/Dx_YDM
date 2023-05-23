@@ -44,9 +44,10 @@ void ClockBranch::Update(float _DeltaTime)
 		FallCount++;
 		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-5,0 });
 		ClockBranchsCollision->GetTransform()->AddLocalPosition({ 0,-5,0 });
-		if (5 <= FallCount&& true == ClickCheck(ClockBranchsCollision))
+		if (5 == FallCount&& true == ClickCheck(ClockBranchsCollision))
 		{
 			ColManager::MG->PlusClockValue();
+			int asda=ColManager::MG->GetClockValue();
 		}
 	}
 }
