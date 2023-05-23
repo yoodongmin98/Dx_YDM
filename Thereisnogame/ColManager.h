@@ -15,6 +15,7 @@ public:
 	ColManager(ColManager&& _Other) noexcept = delete;
 	ColManager& operator=(const ColManager& _Other) = delete;
 	ColManager& operator=(ColManager&& _Other) noexcept = delete;
+	//값이 1 증가할때마다 폴더가 하나씩 열렸다는 뜻
 	void PlusCollisionValue();
 	void MinusCollisionValue();
 
@@ -22,13 +23,27 @@ public:
 	{
 		return CollisionValue;
 	}
+	//0==상호작용x 1==비밀번호 풀린상태 2==Branch가 떨어진상태
 	int GetClockValue()
 	{
 		return ClockValue;
 	}
-	void SetClockValue()
+	void PlusClockValue()
 	{
 		ClockValue += 1;
+	}
+	//Note에서 현재의 Picture가 Rain인지 체크
+	void SetIsRainfalse()
+	{
+		IsRain = false;
+	}
+	void SetIsRantrue()
+	{
+		IsRain = true;
+	}
+	bool GetIsRain()
+	{
+		return IsRain;
 	}
 protected:
 	void Start() override;
@@ -39,5 +54,7 @@ private:
 	int NextCollisionValue = 0;
 
 	int ClockValue = 0;
+
+	bool IsRain = false;
 };
 

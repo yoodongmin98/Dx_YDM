@@ -34,7 +34,7 @@ void ClockUnderBar::Start()
 	PasswordUnderBar.push_back(ClockUnderBars5);
 	PasswordUnderBar.push_back(ClockUnderBars6);
 
-	PasswordSet(3,2,4,5,6,7);
+	PasswordSet(1,1,1,1,1,1);
 }
 
 void ClockUnderBar::Update(float _DeltaTime)
@@ -42,7 +42,7 @@ void ClockUnderBar::Update(float _DeltaTime)
 	UnderBarOffAndCreateNumberRender();
 	if (true == PasswordCheck())
 	{
-		ColManager::MG->SetClockValue();
+		ColManager::MG->PlusClockValue();
 		ColManager::MG->MinusCollisionValue();
 		Death();
 	}
