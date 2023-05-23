@@ -45,6 +45,15 @@ public:
 	{
 		return IsRain;
 	}
+	//³ª¹«¿¡ ¹° Áá³Ä ¾ÈÁá³Ä
+	void SetIsBigTreeTrue()
+	{
+		IsBigTree = true;
+	}
+	bool GetIsBigTree()
+	{
+		return IsBigTree;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -56,5 +65,6 @@ private:
 	int ClockValue = 0;
 
 	bool IsRain = false;
+	bool IsBigTree = false;
 };
 

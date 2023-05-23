@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "Decapsuleur.h"
-
+#include "ActorTypeEnum.h"
 //PlatForm
 //Core
 
@@ -19,7 +19,10 @@ void Decapsuleur::Start()
 	float4 Position = float4::Zero;
 	Decapsuleurs = Init(Decapsuleurs, "Decapsuleur.png", { 157,157 }, Position);
 	Decapsuleurs_overlap = Init(Decapsuleurs_overlap, "Decapsuleur_Overlap.png", { 186,186 }, { Position.x - 3,Position.y + 3 });
-	DecapsuleursCollision = CollisionInit(DecapsuleursCollision, { 157,157,1 }, Position);
+
+	DecapsuleursCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Decapsuleur);
+	DecapsuleursCollision->GetTransform()->SetLocalScale({ 157,157,1 });
+	DecapsuleursCollision->GetTransform()->SetLocalPosition(Position);
 }
 
 void Decapsuleur::Update(float _DeltaTime)
