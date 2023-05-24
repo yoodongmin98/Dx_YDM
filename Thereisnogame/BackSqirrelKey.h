@@ -16,6 +16,7 @@ public:
 	BackSqirrelKey& operator=(const BackSqirrelKey& _Other) = delete;
 	BackSqirrelKey& operator=(BackSqirrelKey&& _Other) noexcept = delete;
 
+	void CollisionInteractableCheck();
 
 protected:
 	void Start();

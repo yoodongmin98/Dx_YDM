@@ -29,6 +29,7 @@ void MusicNote_Walnut::Update(float _DeltaTime)
 	if (true == ClickCheck(MusicNote_WalnutsCollision))
 	{
 		ColManager::MG->SetIsRainfalse();
+		ColManager::MG->SetIsWalNuttrue();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(1);
 	}
 }

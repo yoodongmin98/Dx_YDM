@@ -3,8 +3,12 @@
 #include "ActorTypeEnum.h"
 //PlatForm
 //Core
+#include <GameEngineCore/GameEngineLevel.h>
 
-
+//Actor
+#include "Mouse.h"
+#include "ColManager.h"
+#include "Nut_Open.h"
 
 Nut_Close::Nut_Close()
 {
@@ -27,11 +31,23 @@ void Nut_Close::Start()
 
 void Nut_Close::Update(float _DeltaTime)
 {
-	Fall(Nut_Closes, Nut_Closes_overlap, Nut_ClosesCollision, 38.0f, _DeltaTime);
+	Fall(Nut_Closes, Nut_Closes_overlap, Nut_ClosesCollision, 37.0f, _DeltaTime);
 	CatchCheck(Nut_Closes, Nut_Closes_overlap, Nut_ClosesCollision);
+	CollisionInteractableCheck();
 }
 
 void Nut_Close::Render(float _Delta)
 {
 
 };
+
+void Nut_Close::CollisionInteractableCheck()
+{
+	if (Nut_ClosesCollision->Collision(ActorTypeEnum::Picture, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable()
+		&& true == ColManager::MG->GetIsWalNut())
+	{
+		GetLevel()->CreateActor<Nut_Open>();
+		Death();
+	}
+}

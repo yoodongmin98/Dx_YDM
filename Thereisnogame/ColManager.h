@@ -63,6 +63,19 @@ public:
 	{
 		return IsTrashCanOpen;
 	}
+	//Note에서 현재의 Picture가 Walnut인지 체크
+	void SetIsWalNutfalse()
+	{
+		IsWalNut = false;
+	}
+	void SetIsWalNuttrue()
+	{
+		IsWalNut = true;
+	}
+	bool GetIsWalNut()
+	{
+		return IsWalNut;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -74,6 +87,7 @@ private:
 	int ClockValue = 0;
 
 	bool IsRain = false;
+	bool IsWalNut = false;
 	bool IsBigTree = false;
 	bool IsTrashCanOpen = false;
 };

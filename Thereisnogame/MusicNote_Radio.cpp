@@ -28,6 +28,7 @@ void MusicNote_Radio::Update(float _DeltaTime)
 	if (true == ClickCheck(MusicNote_RadiosCollision))
 	{
 		ColManager::MG->SetIsRainfalse();
+		ColManager::MG->SetIsWalNutfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(4);
 	}
 }

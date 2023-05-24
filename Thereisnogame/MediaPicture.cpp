@@ -37,7 +37,7 @@ void MediaPicture::Start()
 	RadioPicture = AnimationInit(RadioPicture, "MediaVignetteMusic04_00.png", { 366,204 }, { 197,-65,0 }, "RadioPicture", "Radio",2, 0.2f, true);
 	
 	
-	PictureCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::PictureRain);
+	PictureCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Picture);
 	PictureCollision->GetTransform()->SetLocalScale({ 366,204 });
 	PictureCollision->GetTransform()->SetLocalPosition({ 197,-65,0 });
 

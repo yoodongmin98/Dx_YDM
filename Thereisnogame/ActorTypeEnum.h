@@ -6,8 +6,9 @@ enum class ActorTypeEnum
 	ScreenActor,//Render용
 	//상호작용
 	Nut_Close,
+	Nut_Open,
 	Cup_Full,
 	Decapsuleur,
-	PictureRain,
+	Picture,
 	Mouse,
 };

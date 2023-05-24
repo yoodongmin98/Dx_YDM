@@ -32,7 +32,7 @@ void Cup::Update(float _DeltaTime)
 {
 	Fall(Cups, Cups_Overlap, CupCollision,60.5f,_DeltaTime);
 	CatchCheck(Cups, Cups_Overlap, CupCollision);
-	if (CupCollision->Collision(ActorTypeEnum::PictureRain, ColType::AABBBOX2D, ColType::AABBBOX2D)
+	if (CupCollision->Collision(ActorTypeEnum::Picture, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&&true==Mouse::MainMouse->IsInteractable()
 		&&true== ColManager::MG->GetIsRain())
 	{

@@ -16,7 +16,9 @@ public:
 	Nut_Close& operator=(const Nut_Close& _Other) = delete;
 	Nut_Close& operator=(Nut_Close&& _Other) noexcept = delete;
 
-	//Text를 받을수있는 함수추가
+	
+	void CollisionInteractableCheck();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;

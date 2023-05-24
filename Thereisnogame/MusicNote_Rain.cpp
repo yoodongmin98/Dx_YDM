@@ -28,6 +28,7 @@ void MusicNote_Rain::Update(float _DeltaTime)
 	if (true == ClickCheck(MusicNote_RainsCollision))
 	{
 		ColManager::MG->SetIsRaintrue();
+		ColManager::MG->SetIsWalNutfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(3);
 	}
 }

@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "BackSqirrelKey.h"
-
+#include "ActorTypeEnum.h"
 //PlatForm
 //Core
 #include <GameEngineCore/GameEngineLevel.h>
@@ -8,6 +8,8 @@
 //Actor
 #include "SquirrelCloud_Need.h"
 #include "SquirrelCloud_Crack.h"
+#include "ColManager.h"
+#include "Mouse.h"
 
 BackSqirrelKey::BackSqirrelKey()
 {
@@ -37,10 +39,27 @@ void BackSqirrelKey::Update(float _DeltaTime)
 		BackSqirrelKeys->ChangeAnimation("ShakeKey");
 		SquirrelCloud_NeedPtr = GetLevel()->CreateActor<SquirrelCloud_Need>();
 	}
-	//도토리와 닿았을때는 다르게
+	CollisionInteractableCheck();
 }
 
 void BackSqirrelKey::Render(float _Delta)
 {
 
 };
+
+
+void BackSqirrelKey::CollisionInteractableCheck()
+{
+	if (BackSqirrelKeysCollision->Collision(ActorTypeEnum::Nut_Close, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable())
+	{
+		BackSqirrelKeys->ChangeAnimation("ShakeKey");
+		GetLevel()->CreateActor<SquirrelCloud_Crack>();
+	}
+	if (BackSqirrelKeysCollision->Collision(ActorTypeEnum::Nut_Open, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable())
+	{
+		//여기
+		int a = 0;
+	}
+}
