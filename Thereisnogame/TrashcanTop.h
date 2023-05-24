@@ -17,6 +17,7 @@ public:
 	TrashcanTop& operator=(const TrashcanTop& _Other) = delete;
 	TrashcanTop& operator=(TrashcanTop&& _Other) noexcept = delete;
 
+	void TrashCanFallandDeathCheck();
 
 protected:
 	void Start();

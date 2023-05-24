@@ -54,6 +54,15 @@ public:
 	{
 		return IsBigTree;
 	}
+	//TrashCan¶Ñ²± ¿­¾ú³Ä ¾È¿­¾ú³Ä
+	void SetTrashCanOpen()
+	{
+		IsTrashCanOpen = true;
+	}
+	bool GetIsTrashCanOpen()
+	{
+		return IsTrashCanOpen;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -66,5 +75,6 @@ private:
 
 	bool IsRain = false;
 	bool IsBigTree = false;
+	bool IsTrashCanOpen = false;
 };
 

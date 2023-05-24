@@ -22,7 +22,10 @@ protected:
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
-	std::shared_ptr<class GameEngineSpriteRenderer> TrashcanFolders;
+	std::shared_ptr<class GameEngineSpriteRenderer> TrashcanFolderClose;
+	std::shared_ptr<class GameEngineSpriteRenderer> TrashcanFolderOpen;
+
+	std::shared_ptr<class GameEngineCollision> TrashcanFolderCollision;
 
 };
 

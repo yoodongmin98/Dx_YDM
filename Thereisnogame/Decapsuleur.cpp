@@ -4,7 +4,9 @@
 //PlatForm
 //Core
 
-
+//Actor
+#include "Mouse.h"
+#include "ColManager.h"
 
 Decapsuleur::Decapsuleur()
 {
@@ -29,9 +31,19 @@ void Decapsuleur::Update(float _DeltaTime)
 {
 	Fall(Decapsuleurs, Decapsuleurs_overlap, DecapsuleursCollision, 78.5f, _DeltaTime);
 	CatchCheck(Decapsuleurs, Decapsuleurs_overlap, DecapsuleursCollision);
+	CollisionDeathCheck();
 }
 
 void Decapsuleur::Render(float _Delta)
 {
 
 };
+
+
+void Decapsuleur::CollisionDeathCheck()
+{
+	if (true == ColManager::MG->GetIsTrashCanOpen())
+	{
+		Death();
+	}
+}

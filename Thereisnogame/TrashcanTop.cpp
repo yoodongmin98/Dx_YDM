@@ -1,10 +1,12 @@
 #include "PrecompileHeader.h"
 #include "TrashcanTop.h"
-
+#include "ActorTypeEnum.h"
 //PlatForm
 //Core
 
-
+//Actor
+#include "Mouse.h"
+#include "ColManager.h"
 TrashcanTop* TrashcanTop::Top;
 TrashcanTop::TrashcanTop()
 {
@@ -15,6 +17,7 @@ TrashcanTop::~TrashcanTop()
 {
 }
 bool TrashcanImageLoad = true;
+bool TrashCanFall = false;
 void TrashcanTop::Start()
 {
 	if (true == TrashcanImageLoad)
@@ -28,13 +31,35 @@ void TrashcanTop::Start()
 
 void TrashcanTop::Update(float _DeltaTime)
 {
+	ManagedCollision(TrashcanTopsCollision, 0);
 	if (true == ClickCheck(TrashcanTopsCollision))
 	{
 		TrashcanTops->ChangeAnimation("TrashcanReapeat");
 	}
+	TrashCanFallandDeathCheck();
 }
 
 void TrashcanTop::Render(float _Delta)
 {
 
 };
+
+
+void TrashcanTop::TrashCanFallandDeathCheck()
+{
+	if (TrashcanTopsCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable())
+	{
+		ColManager::MG->SetTrashCanOpen();
+		TrashCanFall = true;
+	}
+	if (true == TrashCanFall)
+	{
+		TrashcanTopsCollision->Off();
+		TrashcanTops->GetTransform()->AddLocalPosition({ 0,-1,0 });
+	}
+	if (TrashcanTops->GetTransform()->GetLocalPosition().y < -500)
+	{
+		Death();
+	}
+}

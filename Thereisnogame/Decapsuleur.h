@@ -16,7 +16,8 @@ public:
 	Decapsuleur& operator=(const Decapsuleur& _Other) = delete;
 	Decapsuleur& operator=(Decapsuleur&& _Other) noexcept = delete;
 
-	//Text를 받을수있는 함수추가
+	void CollisionDeathCheck();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
