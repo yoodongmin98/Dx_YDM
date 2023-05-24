@@ -61,7 +61,6 @@ void TrashcanFolder::RenderAndCollisionCheck()
 		ManagedCollision(TrashcanFolderCollision, 0);
 		TrashcanFolderClose->Death();
 		TrashcanFolderOpen->On();
-		TrashcanFolderCollision->On();
 	}
 	else
 	{
