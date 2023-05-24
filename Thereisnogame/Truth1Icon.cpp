@@ -7,7 +7,7 @@
  
  
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "FolderNote.h"
 #include "BoxCroix_FN1.h"
 
@@ -33,7 +33,7 @@ void Truth1Icon::Update(float _DeltaTime)
 	ManagedCollision(Truth1IconsCollision, 1);
 	if (true == ClickCheck(Truth1IconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		FolderNotePtr = GetLevel()->CreateActor<FolderNote>();
 		BoxCroix_FN1Ptr = GetLevel()->CreateActor<BoxCroix_FN1>();
 	}

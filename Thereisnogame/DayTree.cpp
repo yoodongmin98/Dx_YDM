@@ -9,7 +9,7 @@
 //Actor
 #include "DayPicture.h"
 #include "RightRotate.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "Mouse.h"
 #include "Nut_Close.h"
 
@@ -31,7 +31,7 @@ void DayTree::Start()
 
 	Tree_BigCollision = CollisionInit(Tree_BigCollision, { 597,486 }, { 0,50,0 });
 	Tree_SmallCollision = CollisionInit(Tree_SmallCollision, { 159,108 }, { 70,-132,0 });
-	if (true==ColManager::MG->GetIsBigTree())
+	if (true==LevelStateManager::MG->GetIsBigTree())
 	{
 		Tree_BigCollision->On();		
 		Tree_SmallCollision->Off();
@@ -56,7 +56,7 @@ void DayTree::Update(float _DeltaTime)
 	if (Tree_SmallCollision->Collision(ActorTypeEnum::Cup_Full, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&&true==Mouse::MainMouse->IsInteractable())
 	{
-		ColManager::MG->SetIsBigTreeTrue();
+		LevelStateManager::MG->SetIsBigTreeTrue();
 		Tree_BigCollision->On();
 		Tree_SmallCollision->Off();
 	}
@@ -147,9 +147,9 @@ std::shared_ptr<GameEngineSpriteRenderer> DayTree::ChangeTreeRender(std::shared_
 
 void DayTree::WhatisTreeRender()
 {
-	if (2 == ColManager::MG->GetClockValue())
+	if (2 == LevelStateManager::MG->GetClockValue())
 	{
-		if (true == ColManager::MG->GetIsBigTree())
+		if (true == LevelStateManager::MG->GetIsBigTree())
 		{
 			WhatisTree = ChangeTreeRender(Tree_BigDay);
 		}
@@ -160,7 +160,7 @@ void DayTree::WhatisTreeRender()
 	}
 	else
 	{
-		if (true == ColManager::MG->GetIsBigTree())
+		if (true == LevelStateManager::MG->GetIsBigTree())
 		{
 			WhatisTree = ChangeTreeRender(Tree_BigNight);
 		}
@@ -173,7 +173,7 @@ void DayTree::WhatisTreeRender()
 bool CreateNut = true;
 void DayTree::GetTheNutFunc()
 {
-	if (true == ClickCheck(Tree_BigCollision)&&2==ColManager::MG->GetClockValue())
+	if (true == ClickCheck(Tree_BigCollision)&&2==LevelStateManager::MG->GetClockValue())
 	{
 		GetTheNut++;
 	}

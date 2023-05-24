@@ -5,7 +5,7 @@
 //Core
 
 
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 ClockBranch::ClockBranch()
 {
@@ -46,8 +46,8 @@ void ClockBranch::Update(float _DeltaTime)
 		ClockBranchsCollision->GetTransform()->AddLocalPosition({ 0,-5,0 });
 		if (5 == FallCount&& true == ClickCheck(ClockBranchsCollision))
 		{
-			ColManager::MG->PlusClockValue();
-			int asda=ColManager::MG->GetClockValue();
+			LevelStateManager::MG->PlusClockValue();
+			int asda=LevelStateManager::MG->GetClockValue();
 		}
 	}
 }

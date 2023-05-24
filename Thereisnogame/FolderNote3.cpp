@@ -5,7 +5,7 @@
 //Core
  
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 
 FolderNote3::FolderNote3()

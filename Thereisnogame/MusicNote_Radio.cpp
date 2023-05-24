@@ -6,7 +6,7 @@
 
 //Actor
 #include "MediaPicture.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 MusicNote_Radio::MusicNote_Radio()
 {
@@ -27,8 +27,8 @@ void MusicNote_Radio::Update(float _DeltaTime)
 	ManagedCollision(MusicNote_RadiosCollision, 1);
 	if (true == ClickCheck(MusicNote_RadiosCollision))
 	{
-		ColManager::MG->SetIsRainfalse();
-		ColManager::MG->SetIsWalNutfalse();
+		LevelStateManager::MG->SetIsRainfalse();
+		LevelStateManager::MG->SetIsWalNutfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(4);
 	}
 }

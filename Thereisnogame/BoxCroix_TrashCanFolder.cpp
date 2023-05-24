@@ -6,7 +6,7 @@
 //PlatForm
 //Core
 
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 
 BoxCroix_TrashCanFolder::BoxCroix_TrashCanFolder()
@@ -30,7 +30,7 @@ void BoxCroix_TrashCanFolder::Update(float _DeltaTime)
 	ManagedCollision(BoxCroixsCollision, 1);
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
-		ColManager::MG->MinusCollisionValue();
+		LevelStateManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();
 	}

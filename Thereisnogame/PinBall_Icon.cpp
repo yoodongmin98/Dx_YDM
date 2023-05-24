@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 PinBall_Icon::PinBall_Icon()
 {

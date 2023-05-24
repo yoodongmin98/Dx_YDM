@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "PrivatePanel_Miss.h"
 #include "FRMissIcon.h"
 #include "JPMissIcon.h"
@@ -32,7 +32,8 @@ void Private18::Update(float _DeltaTime)
 	ManagedCollision(Private18sCollision, 4);
 	if (true == ClickCheck(Private18sCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->Set18OpenTrue();
 		PrivatePanel_MissPtr = GetLevel()->CreateActor<PrivatePanel_Miss>();
 		BoxCroix_PR_MissPtr = GetLevel()->CreateActor<BoxCroix_PR_Miss>();
 		FRMissIconPtr = GetLevel()->CreateActor<FRMissIcon>();

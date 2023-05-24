@@ -5,7 +5,7 @@
 //Core
 #include <GameEngineCore/GameEngineLevel.h>
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "GigaPrivate.h"
 #include "BoxCroix_PR_Giga.h"
 #include "Truth3Icon.h"
@@ -31,7 +31,7 @@ void UltraPrivate::Update(float _DeltaTime)
 	ManagedCollision(UltraPrivatesCollision, 2);
 	if (true == ClickCheck(UltraPrivatesCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		PrivatePanel_GigaPtr = GetLevel()->CreateActor<PrivatePanel_Giga>();
 		GigaprivatePtr = GetLevel()->CreateActor<Gigaprivate>();
 		Truth3IconPtr = GetLevel()->CreateActor<Truth3Icon>();

@@ -9,7 +9,7 @@
 
 //Actor
 #include "Mouse.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "Cup_Full.h"
 
 Cup::Cup()
@@ -34,7 +34,7 @@ void Cup::Update(float _DeltaTime)
 	CatchCheck(Cups, Cups_Overlap, CupCollision);
 	if (CupCollision->Collision(ActorTypeEnum::Picture, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&&true==Mouse::MainMouse->IsInteractable()
-		&&true== ColManager::MG->GetIsRain())
+		&&true== LevelStateManager::MG->GetIsRain())
 	{
 		GetLevel()->CreateActor<Cup_Full>();
 		Death();

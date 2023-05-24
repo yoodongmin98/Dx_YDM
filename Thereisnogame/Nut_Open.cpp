@@ -6,7 +6,7 @@
 
 //Actor
 #include "Mouse.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 Nut_Open::Nut_Open()
 {
@@ -32,7 +32,7 @@ void Nut_Open::Update(float _DeltaTime)
 {
 	Fall(Nut_Opens, Nut_Opens_overlap, Nut_OpensCollision, 28.0f, _DeltaTime);
 	CatchCheck(Nut_Opens, Nut_Opens_overlap, Nut_OpensCollision);
-	if (true == ColManager::MG->GetIsGetTheKey())
+	if (true == LevelStateManager::MG->GetIsGetTheKey())
 	{
 		Death();
 	}

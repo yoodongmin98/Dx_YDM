@@ -6,7 +6,7 @@
 
 //Actor
 #include "Mouse.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 TrashcanTop* TrashcanTop::Top;
 TrashcanTop::TrashcanTop()
 {
@@ -50,7 +50,7 @@ void TrashcanTop::TrashCanFallandDeathCheck()
 	if (TrashcanTopsCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
-		ColManager::MG->SetTrashCanOpen();
+		LevelStateManager::MG->SetTrashCanOpen();
 		TrashCanFall = true;
 	}
 	if (true == TrashCanFall)

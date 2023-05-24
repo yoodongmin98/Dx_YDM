@@ -8,7 +8,7 @@
 //Actor
 #include "SquirrelCloud_Need.h"
 #include "SquirrelCloud_Crack.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "Mouse.h"
 #include "SquirrelKey.h"
 
@@ -62,11 +62,11 @@ void BackSqirrelKey::CollisionInteractableCheck()
 	if (BackSqirrelKeysCollision->Collision(ActorTypeEnum::Nut_Open, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
-		ColManager::MG->SetIsGetTheKeyTrue();
+		LevelStateManager::MG->SetIsGetTheKeyTrue();
 		BackSqirrelKeys->ChangeAnimation("FallingKey");
 	}
 	if (BackSqirrelKeys->IsAnimationEnd()
-		&& true==ColManager::MG->GetIsGetTheKey())
+		&& true==LevelStateManager::MG->GetIsGetTheKey())
 	{
 		GetLevel()->CreateActor<SquirrelKey>();
 		Death();

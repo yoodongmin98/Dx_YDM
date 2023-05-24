@@ -7,7 +7,7 @@
 
 //Actor
 #include "Mouse.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 Cup_Full::Cup_Full()
 {
@@ -32,7 +32,7 @@ void Cup_Full::Update(float _DeltaTime)
 {
 	Fall(Cup_Fulls, Cup_Fulls_overlap, Cup_FullsCollision, 60.5f, _DeltaTime);
 	CatchCheck(Cup_Fulls, Cup_Fulls_overlap, Cup_FullsCollision);
-	if (true == ColManager::MG->GetIsBigTree())
+	if (true == LevelStateManager::MG->GetIsBigTree())
 	{
 		Death();
 	}

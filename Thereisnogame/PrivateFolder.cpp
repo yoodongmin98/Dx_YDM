@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "SuperPrivate.h"
 #include "Truth1Icon.h"
 #include "PrivatePanel.h"
@@ -31,7 +31,7 @@ void PrivateFolder::Update(float _DeltaTime)
 	ManagedCollision(PrivateFoldersCollision, 0);
 	if (true == ClickCheck(PrivateFoldersCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		PrivatePanelPtr = GetLevel()->CreateActor<PrivatePanel>();
 		SuperPrivatePtr = GetLevel()->CreateActor<SuperPrivate>();
 		Truth1IconPtr = GetLevel()->CreateActor<Truth1Icon>();

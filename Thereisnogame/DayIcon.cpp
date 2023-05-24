@@ -11,7 +11,7 @@
 #include "BoxCroix_DayPicture.h"
 #include "LeftRotate.h"
 #include "RightRotate.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 DayIcon::DayIcon()
 {
@@ -44,7 +44,7 @@ void DayIcon::Update(float _DeltaTime)
 	WhatisIconRender();
 	if (true == ClickCheck(DayIconCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		DayPicturePtr=GetLevel()->CreateActor<DayPicture>();
 		DayTreePtr=GetLevel()->CreateActor<DayTree>();
 		LeftRotatePtr=GetLevel()->CreateActor<LeftRotate>();
@@ -97,9 +97,9 @@ std::shared_ptr<GameEngineSpriteRenderer> DayIcon::ChangeDayIconRender(std::shar
 
 void DayIcon::WhatisIconRender()
 {
-	if (2 == ColManager::MG->GetClockValue())
+	if (2 == LevelStateManager::MG->GetClockValue())
 	{
-		if (true == ColManager::MG->GetIsBigTree())
+		if (true == LevelStateManager::MG->GetIsBigTree())
 		{
 			WhatisIcon = ChangeDayIconRender(Icon_BigDay);
 		}
@@ -110,7 +110,7 @@ void DayIcon::WhatisIconRender()
 	}
 	else
 	{
-		if (true == ColManager::MG->GetIsBigTree())
+		if (true == LevelStateManager::MG->GetIsBigTree())
 		{
 			WhatisIcon = ChangeDayIconRender(Icon_BigNight);
 		}

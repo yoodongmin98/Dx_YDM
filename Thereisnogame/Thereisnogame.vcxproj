@@ -203,7 +203,7 @@
     <ClInclude Include="Nut_Close.h" />
     <ClInclude Include="Nut_Open.h" />
     <ClInclude Include="PasswordIcon.h" />
-    <ClInclude Include="ColManager.h" />
+    <ClInclude Include="LevelStateManager.h" />
     <ClInclude Include="PinBall_BackGround.h" />
     <ClInclude Include="PinBall_Ball.h" />
     <ClInclude Include="PinBall_Bumper100.h" />
@@ -378,7 +378,7 @@
     <ClCompile Include="Nut_Close.cpp" />
     <ClCompile Include="Nut_Open.cpp" />
     <ClCompile Include="PasswordIcon.cpp" />
-    <ClCompile Include="ColManager.cpp" />
+    <ClCompile Include="LevelStateManager.cpp" />
     <ClCompile Include="PinBall_BackGround.cpp" />
     <ClCompile Include="PinBall_Ball.cpp" />
     <ClCompile Include="PinBall_Bumper100.cpp" />

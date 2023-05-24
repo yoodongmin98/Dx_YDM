@@ -2,19 +2,19 @@
 #include <GameEngineCore/GameEngineActor.h>
 
 
-class ColManager : public GameEngineActor
+class LevelStateManager : public GameEngineActor
 {
 public:
-	static ColManager* MG;
+	static LevelStateManager* MG;
 	// constrcuter destructer
-	ColManager();
-	~ColManager();
+	LevelStateManager();
+	~LevelStateManager();
 
 	// delete Function
-	ColManager(const ColManager& _Other) = delete;
-	ColManager(ColManager&& _Other) noexcept = delete;
-	ColManager& operator=(const ColManager& _Other) = delete;
-	ColManager& operator=(ColManager&& _Other) noexcept = delete;
+	LevelStateManager(const LevelStateManager& _Other) = delete;
+	LevelStateManager(LevelStateManager&& _Other) noexcept = delete;
+	LevelStateManager& operator=(const LevelStateManager& _Other) = delete;
+	LevelStateManager& operator=(LevelStateManager&& _Other) noexcept = delete;
 	//값이 1 증가할때마다 폴더가 하나씩 열렸다는 뜻
 	void PlusCollisionValue();
 	void MinusCollisionValue();
@@ -85,6 +85,15 @@ public:
 	{
 		return IsGetTheKey;
 	}
+	//private18폴더 열어봤냐?
+	void Set18OpenTrue()
+	{
+		Is18FolderOpen = true;
+	}
+	bool Get18OpenTrue()
+	{
+		return Is18FolderOpen;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -100,5 +109,6 @@ private:
 	bool IsBigTree = false;
 	bool IsTrashCanOpen = false;
 	bool IsGetTheKey = false;
+	bool Is18FolderOpen = false;
 };
 

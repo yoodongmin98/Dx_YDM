@@ -7,7 +7,7 @@
 
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "ClockPaddle0.h"
 #include "ClockPaddle1.h"
 #include "ClockPaddle2.h"
@@ -44,14 +44,14 @@ void ClockFolder::Start()
 void ClockFolder::Update(float _DeltaTime)
 {
 	ManagedCollision(ClockFoldersCollision, 0);
-	if (2 == ColManager::MG->GetClockValue())
+	if (2 == LevelStateManager::MG->GetClockValue())
 	{
 		ClockFolder_Night->Death();
 		ClockFolder_Day->On();
 	}
-	if (true == ClickCheck(ClockFoldersCollision)&& 0==ColManager::MG->GetClockValue())
+	if (true == ClickCheck(ClockFoldersCollision)&& 0==LevelStateManager::MG->GetClockValue())
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		ClockPaddle0Ptr=GetLevel()->CreateActor<ClockPaddle0>();
 		ClockPaddle1Ptr=GetLevel()->CreateActor<ClockPaddle1>();
 		ClockPaddle2Ptr=GetLevel()->CreateActor<ClockPaddle2>();
@@ -65,12 +65,12 @@ void ClockFolder::Update(float _DeltaTime)
 		ClockUnderBarPtr = GetLevel()->CreateActor<ClockUnderBar>();
 		BoxCroix_ClockPanelPtr=GetLevel()->CreateActor<BoxCroix_ClockPanel>();
 	}
-	if (true == ClickCheck(ClockFoldersCollision) && 1 <= ColManager::MG->GetClockValue())
+	if (true == ClickCheck(ClockFoldersCollision) && 1 <= LevelStateManager::MG->GetClockValue())
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		ClockDayandNightPtr = GetLevel()->CreateActor<ClockDayandNight>();
 		BoxCroix_ClockDayPtr = GetLevel()->CreateActor<BoxCroix_ClockDay>();
-		if (2 != ColManager::MG->GetClockValue())
+		if (2 != LevelStateManager::MG->GetClockValue())
 		{
 			ClockBranchPtr = GetLevel()->CreateActor<ClockBranch>();
 		}
@@ -105,7 +105,7 @@ void ClockFolder::BoxCroixDeathCheck()
 	}
 	if (nullptr != BoxCroix_ClockDayPtr)
 	{
-		if (1 <= ColManager::MG->GetClockValue()
+		if (1 <= LevelStateManager::MG->GetClockValue()
 			&& true == BoxCroix_ClockDayPtr->IsDeath())
 		{
 			ClockDayandNightPtr.get()->Death();

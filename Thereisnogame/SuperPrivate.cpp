@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "PrivatePanel_Ultra.h"
 #include "Truth2Icon.h"
 #include "UltraPrivate.h"
@@ -30,7 +30,7 @@ void SuperPrivate::Update(float _DeltaTime)
 	ManagedCollision(SuperPrivatesCollision, 1);
 	if (true == ClickCheck(SuperPrivatesCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		PrivatePanel_UltraPtr = GetLevel()->CreateActor<PrivatePanel_Ultra>();
 		Truth2IconPtr	=GetLevel()->CreateActor<Truth2Icon>();
 		UltraPrivatePtr	=GetLevel()->CreateActor<UltraPrivate>();

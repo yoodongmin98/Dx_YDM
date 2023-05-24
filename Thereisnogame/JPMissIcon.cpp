@@ -7,7 +7,7 @@
 
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "MissPicture.h"
 #include "BoxCroix_PR_MissPicture.h"
 #include "LeftRotate.h"
@@ -33,7 +33,7 @@ void JPMissIcon::Update(float _DeltaTime)
 	ManagedCollision(JPMissIconsCollision, 5);
 	if (true == ClickCheck(JPMissIconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		MissPicturePtr = GetLevel()->CreateActor<MissPicture>();
 		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr = GetLevel()->CreateActor<RightRotate>();

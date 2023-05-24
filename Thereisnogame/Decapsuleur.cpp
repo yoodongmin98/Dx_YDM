@@ -6,7 +6,7 @@
 
 //Actor
 #include "Mouse.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 Decapsuleur::Decapsuleur()
 {
@@ -42,7 +42,7 @@ void Decapsuleur::Render(float _Delta)
 
 void Decapsuleur::CollisionDeathCheck()
 {
-	if (true == ColManager::MG->GetIsTrashCanOpen())
+	if (true == LevelStateManager::MG->GetIsTrashCanOpen())
 	{
 		Death();
 	}

@@ -5,7 +5,7 @@
 //PlatForm
 //Core
 
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 BoxCroix_FN1::BoxCroix_FN1()
 {
@@ -27,7 +27,7 @@ void BoxCroix_FN1::Update(float _DeltaTime)
 	ManagedCollision(BoxCroixsCollision, 2);
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
-		ColManager::MG->MinusCollisionValue();
+		LevelStateManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();
 	}

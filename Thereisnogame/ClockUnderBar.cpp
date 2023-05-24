@@ -5,7 +5,7 @@
 //Core
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 
 ClockUnderBar* ClockUnderBar::CM;
@@ -42,13 +42,13 @@ void ClockUnderBar::Update(float _DeltaTime)
 	UnderBarOffAndCreateNumberRender();
 	if (true == PasswordCheck())
 	{
-		ColManager::MG->PlusClockValue();
-		ColManager::MG->MinusCollisionValue();
+		LevelStateManager::MG->PlusClockValue();
+		LevelStateManager::MG->MinusCollisionValue();
 		Death();
 	}
 	if (6==PassWordCheck.size()&&false == PasswordCheck())
 	{
-		ColManager::MG->MinusCollisionValue();
+		LevelStateManager::MG->MinusCollisionValue();
 		Death();
 	}
 }

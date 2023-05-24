@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "BoxCroix_FN1.h"
 #include "FolderNote_Password.h"
 
@@ -29,7 +29,7 @@ void PasswordIcon::Update(float _DeltaTime)
 	ManagedCollision(PasswordIconsCollision, 1);
 	if (true == ClickCheck(PasswordIconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		FolderNote_PasswordPtr = GetLevel()->CreateActor<FolderNote_Password>();
 		BoxCroix_FN1Ptr = GetLevel()->CreateActor<BoxCroix_FN1>();
 	}

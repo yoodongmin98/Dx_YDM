@@ -10,7 +10,7 @@
 #include "BoxCroix_DrawerPicture.h"
 #include "RightRotate.h"
 #include "LeftRotate.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 DrawerIcon::DrawerIcon()
 {
@@ -31,7 +31,7 @@ void DrawerIcon::Update(float _DeltaTime)
 	ManagedCollision(DrawerIconsCollision, 1);
 	if (true == ClickCheck(DrawerIconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		DrawerPicturePtr = GetLevel()->CreateActor<DrawerPicture>();
 		BoxCroix_DrawerPicturePtr = GetLevel()->CreateActor<BoxCroix_DrawerPicture>();
 		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();

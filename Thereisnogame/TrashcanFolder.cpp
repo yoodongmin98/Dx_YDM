@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "GoodbyeIcon.h"
 #include "PasswordIcon.h"
 #include "PinBall_Icon.h"
@@ -34,7 +34,7 @@ void TrashcanFolder::Update(float _DeltaTime)
 	RenderAndCollisionCheck();
 	if (true == ClickCheck(TrashcanFolderCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		TrashCanFolderPanelPtr = GetLevel()->CreateActor<TrashCanFolderPanel>();
 		GoodbyeIconPtr = GetLevel()->CreateActor<GoodbyeIcon>();
 		PasswordIconPtr = GetLevel()->CreateActor<PasswordIcon>();
@@ -56,7 +56,7 @@ void TrashcanFolder::Render(float _Delta)
 
 void TrashcanFolder::RenderAndCollisionCheck()
 {
-	if (true == ColManager::MG->GetIsTrashCanOpen())
+	if (true == LevelStateManager::MG->GetIsTrashCanOpen())
 	{
 		ManagedCollision(TrashcanFolderCollision, 0);
 		TrashcanFolderClose->Death();

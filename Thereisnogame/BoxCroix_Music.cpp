@@ -5,7 +5,7 @@
 //PlatForm
 //Core
 
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 BoxCroix_Music::BoxCroix_Music()
 {
@@ -27,7 +27,7 @@ void BoxCroix_Music::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
-		ColManager::MG->MinusCollisionValue();
+		LevelStateManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();
 	}

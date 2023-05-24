@@ -9,7 +9,7 @@
 #include "Skite.h"
 #include "SkiteBanner.h"
 #include "BoxCroix_Skite.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 
 
@@ -32,7 +32,7 @@ void SkiteFolder::Update(float _DeltaTime)
 	ManagedCollision(SkiteFoldersCollision, 0);
 	if (true == ClickCheck(SkiteFoldersCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		SkitePtr=GetLevel()->CreateActor<Skite>();
 		SkiteBannerPtr=GetLevel()->CreateActor<SkiteBanner>();
 		BoxCroix_SkitePtr= GetLevel()->CreateActor<BoxCroix_Skite>();

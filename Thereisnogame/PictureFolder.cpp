@@ -11,7 +11,7 @@
 #include "CodeIcon.h"
 #include "PictureFolderPanel.h"
 #include "BoxCroix_PictureFolder.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 PictureFolder::PictureFolder()
 {
@@ -32,7 +32,7 @@ void PictureFolder::Update(float _DeltaTime)
 	ManagedCollision(PictureFoldersCollision, 0);
 	if (true == ClickCheck(PictureFoldersCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		PictureFolderPanelPtr=GetLevel()->CreateActor<PictureFolderPanel>();
 		DayIconPtr=GetLevel()->CreateActor<DayIcon>();
 		DrawerIconPtr=GetLevel()->CreateActor<DrawerIcon>();

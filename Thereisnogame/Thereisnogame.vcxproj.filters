@@ -373,7 +373,7 @@
     <ClCompile Include="LeftRotate.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClCompile>
-    <ClCompile Include="ColManager.cpp">
+    <ClCompile Include="LevelStateManager.cpp">
       <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_Music.cpp">
@@ -876,7 +876,7 @@
     <ClInclude Include="LeftRotate.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClInclude>
-    <ClInclude Include="ColManager.h">
+    <ClInclude Include="LevelStateManager.h">
       <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_Music.h">

@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "MissPicture.h"
 #include "BoxCroix_PR_MissPicture.h"
 #include "LeftRotate.h"
@@ -33,7 +33,7 @@ void USMissIcon::Update(float _DeltaTime)
 	ManagedCollision(USMissIconsCollision, 5);
 	if (true == ClickCheck(USMissIconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		MissPicturePtr=GetLevel()->CreateActor<MissPicture>();
 		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr = GetLevel()->CreateActor<RightRotate>();

@@ -1,27 +1,27 @@
 #include "PrecompileHeader.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 //PlatForm
 //Core
 //Actor
 
-ColManager* ColManager::MG;
+LevelStateManager* LevelStateManager::MG;
 
-ColManager::ColManager()
+LevelStateManager::LevelStateManager()
 {
 	MG = this;
 }
 
-ColManager::~ColManager()
+LevelStateManager::~LevelStateManager()
 {
 }
 
-void ColManager::Start()
+void LevelStateManager::Start()
 {
 
 }
 
-void ColManager::Update(float _DeltaTime)
+void LevelStateManager::Update(float _DeltaTime)
 {
 	if (0 > CollisionValue || NextCollisionValue < 0)
 	{
@@ -30,12 +30,12 @@ void ColManager::Update(float _DeltaTime)
 	CollisionValue = NextCollisionValue; //클릭했을때 한 프레임을 벌기위해서 Order를 뒤로미루고,맨 마지막에 update
 }
 
-void ColManager::PlusCollisionValue()
+void LevelStateManager::PlusCollisionValue()
 {
 	NextCollisionValue = CollisionValue + 1;
 }
 
-void ColManager::MinusCollisionValue()
+void LevelStateManager::MinusCollisionValue()
 {
 	NextCollisionValue = CollisionValue - 1;
 }

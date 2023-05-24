@@ -7,7 +7,7 @@
 
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "MissPicture.h"
 #include "BoxCroix_PR_MissPicture.h"
 #include "LeftRotate.h"
@@ -32,7 +32,7 @@ void FRMissIcon::Update(float _DeltaTime)
 	ManagedCollision(FRMissIconsCollision, 5);
 	if (true == ClickCheck(FRMissIconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		MissPicturePtr = GetLevel()->CreateActor<MissPicture>();
 		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr = GetLevel()->CreateActor<RightRotate>();

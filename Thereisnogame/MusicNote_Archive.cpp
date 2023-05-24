@@ -6,7 +6,7 @@
 
 //Actor
 #include "MediaPicture.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 
 MusicNote_Archive::MusicNote_Archive()
@@ -28,8 +28,8 @@ void MusicNote_Archive::Update(float _DeltaTime)
 	ManagedCollision(MusicNote_ArchivesCollision, 1);
 	if (true == ClickCheck(MusicNote_ArchivesCollision))
 	{
-		ColManager::MG->SetIsRainfalse();
-		ColManager::MG->SetIsWalNutfalse();
+		LevelStateManager::MG->SetIsRainfalse();
+		LevelStateManager::MG->SetIsWalNutfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(2);
 	}
 }

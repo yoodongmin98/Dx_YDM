@@ -5,7 +5,7 @@
 //PlatForm
 //Core
 
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 BoxCroix_PR_Miss::BoxCroix_PR_Miss()
 {
@@ -27,7 +27,7 @@ void BoxCroix_PR_Miss::Update(float _DeltaTime)
 	ManagedCollision(BoxCroixsCollision, 5);
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
-		ColManager::MG->MinusCollisionValue();
+		LevelStateManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();
 	}

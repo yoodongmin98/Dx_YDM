@@ -21,7 +21,7 @@
 #include "MediaPlay.h"
 #include "MediaPicture.h"
 #include "BoxCroix_Music.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 
 MusicFolder::MusicFolder()
@@ -43,9 +43,9 @@ void MusicFolder::Update(float _DeltaTime)
 	ManagedCollision(MusicFoldersCollision, 0);
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
-		ColManager::MG->SetIsRainfalse();
-		ColManager::MG->SetIsWalNuttrue();
+		LevelStateManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->SetIsRainfalse();
+		LevelStateManager::MG->SetIsWalNuttrue();
 		MusicFolderPanelPtr=GetLevel()->CreateActor<MusicFolderPanel>();
 		MusicNote_ArchivePtr=GetLevel()->CreateActor<MusicNote_Archive>();
 		MusicNote_RadioPtr=GetLevel()->CreateActor<MusicNote_Radio>();

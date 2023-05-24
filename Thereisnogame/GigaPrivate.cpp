@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "Private18.h"
 #include "BoxCroix_PR_18.h"
 #include "PrivatePanel_18.h"
@@ -31,7 +31,7 @@ void Gigaprivate::Update(float _DeltaTime)
 	ManagedCollision(GigaprivatesCollision, 3);
 	if (true == ClickCheck(GigaprivatesCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		PrivatePanel_18Ptr = GetLevel()->CreateActor<PrivatePanel_18>();
 		BoxCroix_PR_18Ptr = GetLevel()->CreateActor<BoxCroix_PR_18>();
 		Private18Ptr = GetLevel()->CreateActor<Private18>();

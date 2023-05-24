@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 DayPicture::DayPicture()
 {
@@ -18,7 +18,7 @@ DayPicture::~DayPicture()
 
 void DayPicture::Start()
 {
-	if (2 == ColManager::MG->GetClockValue())
+	if (2 == LevelStateManager::MG->GetClockValue())
 	{
 		Picture_Day = Init(Picture_Day, "Picture01Day.png", { 642,642 }, float4::Zero);
 	}

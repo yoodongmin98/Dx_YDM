@@ -8,7 +8,7 @@
 //Actor
 #include "CodePicture.h"
 #include "BoxCroix_CodePicture.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "RightRotate.h"
 #include "LeftRotate.h"
 
@@ -32,7 +32,7 @@ void CodeIcon::Update(float _DeltaTime)
 	ManagedCollision(CodeIconsCollision, 1);
 	if (true == ClickCheck(CodeIconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		CodePicturePtr = GetLevel()->CreateActor<CodePicture>();
 		BoxCroix_CodePicturePtr= GetLevel()->CreateActor<BoxCroix_CodePicture>();
 		LeftRotatePtr = GetLevel()->CreateActor<LeftRotate>();

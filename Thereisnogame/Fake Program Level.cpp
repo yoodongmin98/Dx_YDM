@@ -16,7 +16,7 @@
 #include "BackSqirrelKey.h"
 #include "Mouse.h"
 #include "Chain.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 //Folder
 #include "SkiteFolder.h"
@@ -65,7 +65,7 @@ void FakeProgramLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
 	{
-		CreateActor<ColManager>(1000);
+		CreateActor<LevelStateManager>(1000);
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		CreateActor<BackSqirrelKey>();

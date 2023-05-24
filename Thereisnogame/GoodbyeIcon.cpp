@@ -6,7 +6,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "FolderNote_GoodBye.h"
 #include "BoxCroix_FN1.h"
 
@@ -29,7 +29,7 @@ void GoodbyeIcon::Update(float _DeltaTime)
 	ManagedCollision(GoodbyeIconsCollision, 1);
 	if (true == ClickCheck(GoodbyeIconsCollision))
 	{
-		ColManager::MG->PlusCollisionValue();
+		LevelStateManager::MG->PlusCollisionValue();
 		FolderNote_GoodByePtr = GetLevel()->CreateActor<FolderNote_GoodBye>();
 		BoxCroix_FN1Ptr = GetLevel()->CreateActor<BoxCroix_FN1>();
 	}

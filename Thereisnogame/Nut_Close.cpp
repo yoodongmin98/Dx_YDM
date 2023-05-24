@@ -7,7 +7,7 @@
 
 //Actor
 #include "Mouse.h"
-#include "ColManager.h"
+#include "LevelStateManager.h"
 #include "Nut_Open.h"
 
 Nut_Close::Nut_Close()
@@ -45,7 +45,7 @@ void Nut_Close::CollisionInteractableCheck()
 {
 	if (Nut_ClosesCollision->Collision(ActorTypeEnum::Picture, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable()
-		&& true == ColManager::MG->GetIsWalNut())
+		&& true == LevelStateManager::MG->GetIsWalNut())
 	{
 		GetLevel()->CreateActor<Nut_Open>();
 		Death();

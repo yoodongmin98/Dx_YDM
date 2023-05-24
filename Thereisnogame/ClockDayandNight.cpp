@@ -4,7 +4,7 @@
 //PlatForm
 //Core
 
-#include "ColManager.h"
+#include "LevelStateManager.h"
 
 
 ClockDayandNight::ClockDayandNight()
@@ -32,7 +32,7 @@ void ClockDayandNight::Start()
 
 void ClockDayandNight::Update(float _DeltaTime)
 {
-	if (1 == ColManager::MG->GetClockValue())
+	if (1 == LevelStateManager::MG->GetClockValue())
 	{
 		ClockDay->Off();
 		ClockNight->On();
