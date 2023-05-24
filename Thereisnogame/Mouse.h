@@ -21,6 +21,7 @@ public:
 	void MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse, std::shared_ptr<GameEngineCollision> _MouseCollision);
 	void MouseStateCheck();
 	void InteractableCheck();
+	void ProgressMouseCollisionCheck();
 	float4 GetMousePos()
 	{
 		return MousePos;

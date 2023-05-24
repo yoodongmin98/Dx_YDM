@@ -8,6 +8,9 @@
 //Core
 #include <GameEngineCore/GameEngineCollision.h>
 
+
+//Actor
+#include "LevelStateManager.h"
 Mouse* Mouse::MainMouse;
 
 Mouse::Mouse()
@@ -36,20 +39,18 @@ void Mouse::Start()
 	Mousesituation.push_back(MouseHandtake);
 	Mousesituation.push_back(MouseUnavailable);
 
-
-
 	MouseCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Mouse);
 	MouseCollision->GetTransform()->SetLocalScale({5,5,1 });
 
 
 	whatisMouse=ChangeMouse(MouseIdle);
-
 }
 
 void Mouse::Update(float _DeltaTime)
 {
 	MouseStateCheck();
 	InteractableCheck();
+	ProgressMouseCollisionCheck();
 	MousePositionUpdate(whatisMouse, MouseCollision);
 }
 
@@ -113,9 +114,25 @@ void Mouse::MouseStateCheck()
 	{
 		whatisMouse = ChangeMouse(MouseInteractable);
 	}
+	else if (true == LevelStateManager::MG->GetIsProgress())
+	{
+		whatisMouse = ChangeMouse(MouseUnavailable);
+	}
 	else
 	{
 		whatisMouse = ChangeMouse(MouseIdle);
+	}
+}
+
+void Mouse::ProgressMouseCollisionCheck()
+{
+	if (true == LevelStateManager::MG->GetIsProgress())
+	{
+		MouseCollision->Off();
+	}
+	else
+	{
+		MouseCollision->On();
 	}
 }
 

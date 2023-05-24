@@ -16,6 +16,7 @@ public:
 	SkiteCallingMissed& operator=(const SkiteCallingMissed& _Other) = delete;
 	SkiteCallingMissed& operator=(SkiteCallingMissed&& _Other) noexcept = delete;
 
+	void FallandDeathCheck();
 
 protected:
 	void Start();
@@ -23,8 +24,8 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SkiteCallingMisseds;
+	std::shared_ptr<class GameEngineCollision> SkiteCallingMissedsCollision;
 
-
-
+	bool FallStart = false;
 };
 

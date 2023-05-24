@@ -15,10 +15,10 @@ public:
 	LevelStateManager(LevelStateManager&& _Other) noexcept = delete;
 	LevelStateManager& operator=(const LevelStateManager& _Other) = delete;
 	LevelStateManager& operator=(LevelStateManager&& _Other) noexcept = delete;
-	//값이 1 증가할때마다 폴더가 하나씩 열렸다는 뜻
+
+	//폴더 몇개열려있냐?
 	void PlusCollisionValue();
 	void MinusCollisionValue();
-
 	int GetCollisionValue()
 	{
 		return CollisionValue;
@@ -32,7 +32,7 @@ public:
 	{
 		ClockValue += 1;
 	}
-	//Note에서 현재의 Picture가 Rain인지 체크
+	//Note에서 현재의 Picture가 Rain이냐?
 	void SetIsRainfalse()
 	{
 		IsRain = false;
@@ -63,7 +63,7 @@ public:
 	{
 		return IsTrashCanOpen;
 	}
-	//Note에서 현재의 Picture가 Walnut인지 체크
+	//Note에서 현재의 Picture가 Walnut이냐?
 	void SetIsWalNutfalse()
 	{
 		IsWalNut = false;
@@ -94,16 +94,32 @@ public:
 	{
 		return Is18FolderOpen;
 	}
+	//지금 level진행상태냐?(Mouse용)
+	void SetIsProgressTrue()
+	{
+		IsProgress = true;
+	}
+	void SetIsProgressFalse()
+	{
+		IsProgress = false;
+	}
+	bool GetIsProgress()
+	{
+		return IsProgress;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
 	
 private:
+	//Mouse
+	bool IsProgress = false;
+
+
+	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;
-
 	int ClockValue = 0;
-
 	bool IsRain = false;
 	bool IsWalNut = false;
 	bool IsBigTree = false;

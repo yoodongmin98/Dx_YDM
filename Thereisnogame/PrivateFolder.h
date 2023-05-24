@@ -31,5 +31,7 @@ private:
 	std::shared_ptr<class PrivatePanel> PrivatePanelPtr;
 	std::shared_ptr<class BoxCroix_PR_Super> BoxCroix_PR_SuperPtr;
 
+	std::shared_ptr<class SkiteCalling> SkiteCallingPtr;
+	std::shared_ptr<class SkiteCallingMissed> SkiteCallingMissedPtr;
 };
 

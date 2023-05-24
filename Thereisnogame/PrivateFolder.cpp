@@ -11,6 +11,8 @@
 #include "Truth1Icon.h"
 #include "PrivatePanel.h"
 #include "BoxCroix_PR_Super.h"
+#include "SkiteCalling.h"
+#include "SkiteCallingMissed.h"
 
 PrivateFolder::PrivateFolder()
 {
@@ -47,7 +49,7 @@ void PrivateFolder::Render(float _Delta)
 {
 
 };
-
+bool CallingCreate = true;
 void PrivateFolder::BoxCroixDeathCheck()
 {
 	if (true == BoxCroix_PR_SuperPtr->IsDeath())
@@ -55,5 +57,13 @@ void PrivateFolder::BoxCroixDeathCheck()
 		PrivatePanelPtr.get()->Death();
 		SuperPrivatePtr.get()->Death();
 		Truth1IconPtr.get()->Death();
+		if (true == LevelStateManager::MG->Get18OpenTrue()
+			&&true== CallingCreate)
+		{
+			LevelStateManager::MG->PlusCollisionValue();
+			SkiteCallingPtr = GetLevel()->CreateActor<SkiteCalling>();
+			SkiteCallingMissedPtr = GetLevel()->CreateActor<SkiteCallingMissed>();
+			CallingCreate = false;
+		}
 	}
 }

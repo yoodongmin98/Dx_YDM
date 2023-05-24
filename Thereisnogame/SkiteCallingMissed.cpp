@@ -17,16 +17,34 @@ SkiteCallingMissed::~SkiteCallingMissed()
 
 void SkiteCallingMissed::Start()
 {
-	//독립존재
-	Init(SkiteCallingMisseds, "SkiteCalling02.png", { 96,96 }, { 55,-110,0 });
+	SkiteCallingMisseds=Init(SkiteCallingMisseds, "SkiteCalling02.png", { 96,96 }, { 55,-110,0 });
+	SkiteCallingMissedsCollision = CollisionInit(SkiteCallingMissedsCollision, { 64,64 }, { 55,-110,0 });
 }
 
 void SkiteCallingMissed::Update(float _DeltaTime)
 {
-
+	if (true == ClickCheck(SkiteCallingMissedsCollision))
+	{
+		SkiteCallingMissedsCollision->Death();
+		SkiteCallingMisseds->GetTransform()->AddLocalRotation({ 0,0,-45.0f });
+		FallStart = true;
+	}
+	FallandDeathCheck();
 }
 
 void SkiteCallingMissed::Render(float _Delta)
 {
 
 };
+
+void SkiteCallingMissed::FallandDeathCheck()
+{
+	if (true == FallStart)
+	{
+		SkiteCallingMisseds->GetTransform()->AddLocalPosition({ 0,-5,0 });
+	}
+	if (SkiteCallingMisseds->GetTransform()->GetLocalPosition().y < -500.0f)
+	{
+		Death();
+	}
+}

@@ -8,7 +8,6 @@
 #include <GameEngineCore/GameEngineCamera.h>
 #include <GameEngineCore/GameEngineTexture.h>
 
-
 //Actor
 #include "AlphaCircle.h"
 #include "C2_BackGround.h"
@@ -29,11 +28,6 @@
 #include "TrashcanFolder.h"
 #include "TrashcanTop.h"
 
-//ScreenActor
-#include "Cup.h"
-
-
-
 FakeProgramLevel::FakeProgramLevel()
 {
 }
@@ -41,7 +35,6 @@ FakeProgramLevel::FakeProgramLevel()
 FakeProgramLevel::~FakeProgramLevel()
 {
 }
-
 
 
 void FakeProgramLevel::Start()
@@ -71,18 +64,13 @@ void FakeProgramLevel::Start()
 		CreateActor<BackSqirrelKey>();
 		FolderCreate();
 	}
-	CreateActor<Cup>(); //Test¿ë
 	//CreateActor<AlphaCircle>();
 	CreateActor<Mouse>();
 }
 
 void FakeProgramLevel::Update(float _DeltaTime)
 {
-	//Test¿ë
-	if (GameEngineInput::IsDown("TestKey3"))
-	{
-		CreateActor<Chain>();
-	}
+	
 }
 
 void FakeProgramLevel::FolderCreate()

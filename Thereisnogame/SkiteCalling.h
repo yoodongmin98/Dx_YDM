@@ -25,7 +25,9 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SkiteCallings;
 	std::shared_ptr<class GameEngineSpriteRenderer> SkiteSpeakings;
 
+	std::shared_ptr<class GameEngineCollision> SkiteCallingCollision;
 
-
+	std::shared_ptr<class Chain> ChainPtr;
+	float LiveTime = 5.0f;
 };
 
