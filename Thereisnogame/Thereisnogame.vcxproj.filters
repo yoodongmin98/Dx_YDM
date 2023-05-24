@@ -484,6 +484,12 @@
     <ClCompile Include="BoxCroix_TrashCanFolder.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
     </ClCompile>
+    <ClCompile Include="FolderNote_Password.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderNote_GoodBye.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -965,6 +971,12 @@
     </ClInclude>
     <ClInclude Include="BoxCroix_TrashCanFolder.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderNote_Password.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderNote_GoodBye.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

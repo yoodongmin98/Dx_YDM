@@ -190,6 +190,8 @@
     <ClInclude Include="Decapsuleur.h" />
     <ClInclude Include="FolderNote2.h" />
     <ClInclude Include="FolderNote3.h" />
+    <ClInclude Include="FolderNote_GoodBye.h" />
+    <ClInclude Include="FolderNote_Password.h" />
     <ClInclude Include="GoodbyeIcon.h" />
     <ClInclude Include="LeftRotate.h" />
     <ClInclude Include="LoadBarBack.h" />
@@ -357,6 +359,8 @@
     <ClCompile Include="Decapsuleur.cpp" />
     <ClCompile Include="FolderNote2.cpp" />
     <ClCompile Include="FolderNote3.cpp" />
+    <ClCompile Include="FolderNote_GoodBye.cpp" />
+    <ClCompile Include="FolderNote_Password.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
     <ClCompile Include="LeftRotate.cpp" />
     <ClCompile Include="LoadBarBack.cpp" />

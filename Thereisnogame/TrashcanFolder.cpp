@@ -31,9 +31,7 @@ void TrashcanFolder::Start()
 
 void TrashcanFolder::Update(float _DeltaTime)
 {
-	//Test¿ë
-	TrashcanFolderCollision->On();
-	//RenderAndCollisionCheck();
+	RenderAndCollisionCheck();
 	if (true == ClickCheck(TrashcanFolderCollision))
 	{
 		ColManager::MG->PlusCollisionValue();

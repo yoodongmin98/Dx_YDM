@@ -23,6 +23,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> PinBall_Icons;
+	std::shared_ptr<class GameEngineCollision> PinBall_IconsCollision;
 
 
 };
