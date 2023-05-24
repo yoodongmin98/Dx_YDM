@@ -16,7 +16,12 @@ SquirrelKey::~SquirrelKey()
 
 void SquirrelKey::Start()
 {
-	//Render3°³
+	/*SquirrelKeyBig=Init()
+	SquirrelKeyBig_overlap;
+	SquirrelKeyMiddle;
+	SquirrelKeyMiddle_overlap;
+	SquirrelKeySmall;
+	SquirrelKeySmall_overlap;*/
 }
 
 void SquirrelKey::Update(float _DeltaTime)

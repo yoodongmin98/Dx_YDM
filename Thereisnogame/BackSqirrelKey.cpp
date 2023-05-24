@@ -24,11 +24,13 @@ void BackSqirrelKey::Start()
 	if (true == BackKeyLoad)
 	{
 		AnimationImageLoad("SquirrelKey");
+		AnimationImageLoad("SquirrelKeyAnimation");
 		BackKeyLoad = false;
 	}
-	BackSqirrelKeys = AnimationInit(BackSqirrelKeys, "SquirrelKey_Shake1.png", { 217,69 }, { -2,4,0 }, "ShakeKey", "SquirrelKey", 1, 0.1f, false);
-	BackSqirrelKeysCollision = CollisionInit(BackSqirrelKeysCollision, { 217,69 }, { 0,0,0 });
 
+	BackSqirrelKeys = AnimationInit(BackSqirrelKeys, "SquirrelKey_Shake1.png", { 217,69 }, { -2,4,0 }, "ShakeKey", "SquirrelKey", 1, 0.1f, false);
+	BackSqirrelKeys->CreateAnimation({ "FallingKey", "SquirrelKeyAnimation", 0,20,0.05f, false });
+	BackSqirrelKeysCollision = CollisionInit(BackSqirrelKeysCollision, { 217,69 }, { -2,4,0 });
 }
 
 void BackSqirrelKey::Update(float _DeltaTime)
@@ -59,7 +61,13 @@ void BackSqirrelKey::CollisionInteractableCheck()
 	if (BackSqirrelKeysCollision->Collision(ActorTypeEnum::Nut_Open, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
-		//¿©±â
+		ColManager::MG->SetIsGetTheKeyTrue();
+		BackSqirrelKeys->ChangeAnimation("FallingKey");
+	}
+	if (BackSqirrelKeys->IsAnimationEnd()
+		&& true==ColManager::MG->GetIsGetTheKey())
+	{
 		int a = 0;
+		Death();
 	}
 }

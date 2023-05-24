@@ -76,6 +76,15 @@ public:
 	{
 		return IsWalNut;
 	}
+	//다람쥐한테 키 얻었냐?
+	void SetIsGetTheKeyTrue()
+	{
+		IsGetTheKey = true;
+	}
+	bool GetIsGetTheKey()
+	{
+		return IsGetTheKey;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -90,5 +99,6 @@ private:
 	bool IsWalNut = false;
 	bool IsBigTree = false;
 	bool IsTrashCanOpen = false;
+	bool IsGetTheKey = false;
 };
 
