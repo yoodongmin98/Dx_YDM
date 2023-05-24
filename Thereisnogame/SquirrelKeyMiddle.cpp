@@ -7,7 +7,7 @@
 
 //Actor
 #include "Mouse.h"
-
+#include "SquirrelKeySmall.h"
 SquirrelKeyMiddle::SquirrelKeyMiddle()
 {
 }
@@ -29,7 +29,10 @@ void SquirrelKeyMiddle::Update(float _DeltaTime)
 {
 	Fall(SquirrelKeyMiddles, SquirrelKeyMiddle_overlap, SquirrelKeyMiddleCollision, 59.0f, _DeltaTime);
 	CatchCheck(SquirrelKeyMiddles, SquirrelKeyMiddle_overlap, SquirrelKeyMiddleCollision);
-	CollisionInteractableCheck();
+	if (GetLiveTime() > 1.0f) //생성되자마자 사라지는걸 방지
+	{
+		CollisionInteractableCheck();
+	}
 }
 
 void SquirrelKeyMiddle::Render(float _Delta)
@@ -42,7 +45,7 @@ void SquirrelKeyMiddle::CollisionInteractableCheck()
 	if (SquirrelKeyMiddleCollision->Collision(ActorTypeEnum::ZipWip, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
-		//GetLevel()->CreateActor<SquirrelKeyMiddleMiddle>();
+		GetLevel()->CreateActor<SquirrelKeySmall>();
 		Death();
 	}
 }

@@ -25,10 +25,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyMiddles;
 	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyMiddle_overlap;
-	//std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyMiddleSmall;
-	//std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyMiddleSmall_overlap;
 
 	std::shared_ptr<class GameEngineCollision> SquirrelKeyMiddleCollision;
-	//std::shared_ptr<class GameEngineCollision> SquirrelKeyMiddleSmallCollision;
 };
 

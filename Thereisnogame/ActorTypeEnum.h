@@ -11,5 +11,6 @@ enum class ActorTypeEnum
 	Decapsuleur,
 	Picture,
 	ZipWip,
+	LockFolder,
 	Mouse,
 };

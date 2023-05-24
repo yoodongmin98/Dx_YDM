@@ -322,6 +322,6 @@ float MainMenuLevel::FlagValueSet(int SetValue,int _iValue)
 	}
 	else
 	{
-		MsgAssert("FlagValueSet에서올바르지 않은 인수가 들어왔습니다")
+		MsgAssert("FlagValueSet에서올바르지 않은 인수가 들어왔습니다");
 	}
 }

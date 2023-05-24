@@ -56,7 +56,7 @@ void TrashcanTop::TrashCanFallandDeathCheck()
 	if (true == TrashCanFall)
 	{
 		TrashcanTopsCollision->Off();
-		TrashcanTops->GetTransform()->AddLocalPosition({ 0,-1,0 });
+		TrashcanTops->GetTransform()->AddLocalPosition({ 0,-5,0 });
 	}
 	if (TrashcanTops->GetTransform()->GetLocalPosition().y < -500)
 	{

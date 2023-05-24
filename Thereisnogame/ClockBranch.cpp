@@ -33,7 +33,7 @@ void ClockBranch::Update(float _DeltaTime)
 	if (5 <= FallCount)
 	{
 		ClockBranchsCollision->Death();
-		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-1,0 });
+		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-5,0 });
 		if (ClockBranchs->GetTransform()->GetLocalPosition().y < -500)
 		{
 			Death();
