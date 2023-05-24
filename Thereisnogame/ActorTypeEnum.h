@@ -10,5 +10,6 @@ enum class ActorTypeEnum
 	Cup_Full,
 	Decapsuleur,
 	Picture,
+	ZipWip,
 	Mouse,
 };

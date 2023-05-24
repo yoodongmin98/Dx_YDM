@@ -324,6 +324,8 @@
     <ClInclude Include="SquirrelCloud_Crack.h" />
     <ClInclude Include="SquirrelCloud_Need.h" />
     <ClInclude Include="SquirrelKey.h" />
+    <ClInclude Include="SquirrelKeyMiddle.h" />
+    <ClInclude Include="SquirrelKeySmall.h" />
     <ClInclude Include="StartPictures.h" />
     <ClInclude Include="SuperPrivate.h" />
     <ClInclude Include="S_ActorBase.h" />
@@ -503,6 +505,8 @@
     <ClCompile Include="SquirrelCloud_Crack.cpp" />
     <ClCompile Include="SquirrelCloud_Need.cpp" />
     <ClCompile Include="SquirrelKey.cpp" />
+    <ClCompile Include="SquirrelKeyMiddle.cpp" />
+    <ClCompile Include="SquirrelKeySmall.cpp" />
     <ClCompile Include="StartPictures.cpp" />
     <ClCompile Include="SuperPrivate.cpp" />
     <ClCompile Include="S_ActorBase.cpp" />

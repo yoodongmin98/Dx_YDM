@@ -10,6 +10,7 @@
 #include "SquirrelCloud_Crack.h"
 #include "ColManager.h"
 #include "Mouse.h"
+#include "SquirrelKey.h"
 
 BackSqirrelKey::BackSqirrelKey()
 {
@@ -67,7 +68,7 @@ void BackSqirrelKey::CollisionInteractableCheck()
 	if (BackSqirrelKeys->IsAnimationEnd()
 		&& true==ColManager::MG->GetIsGetTheKey())
 	{
-		int a = 0;
+		GetLevel()->CreateActor<SquirrelKey>();
 		Death();
 	}
 }

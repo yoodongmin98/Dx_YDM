@@ -499,6 +499,12 @@
     <ClCompile Include="BackSqirrelKey.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
+    <ClCompile Include="SquirrelKeyMiddle.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="SquirrelKeySmall.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -995,6 +1001,12 @@
     </ClInclude>
     <ClInclude Include="BackSqirrelKey.h">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClInclude>
+    <ClInclude Include="SquirrelKeyMiddle.h">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="SquirrelKeySmall.h">
+      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

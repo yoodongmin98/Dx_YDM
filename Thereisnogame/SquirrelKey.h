@@ -16,6 +16,7 @@ public:
 	SquirrelKey& operator=(const SquirrelKey& _Other) = delete;
 	SquirrelKey& operator=(SquirrelKey&& _Other) noexcept = delete;
 
+	void CollisionInteractableCheck();
 
 protected:
 	void Start();
@@ -24,13 +25,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyBig;
 	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyBig_overlap;
-	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyMiddle;
-	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyMiddle_overlap;
-	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeySmall;
-	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeySmall_overlap;
 
 	std::shared_ptr<class GameEngineCollision> SquirrelKeyBigCollision;
-	std::shared_ptr<class GameEngineCollision> SquirrelKeyMiddleCollision;
-	std::shared_ptr<class GameEngineCollision> SquirrelKeySmallCollision;
 };
 
