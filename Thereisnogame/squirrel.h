@@ -23,7 +23,5 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> squirrels;
-	std::shared_ptr<class GameEngineCollision> squirrelsCollision;
-
 };
 

@@ -166,6 +166,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
+    <ClInclude Include="BackSqirrelKey.h" />
     <ClInclude Include="BoxCroix_ClockDay.h" />
     <ClInclude Include="BoxCroix_ClockPanel.h" />
     <ClInclude Include="BoxCroix_CodePicture.h" />
@@ -337,6 +338,7 @@
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BackSqirrelKey.cpp" />
     <ClCompile Include="BoxCroix_ClockDay.cpp" />
     <ClCompile Include="BoxCroix_ClockPanel.cpp" />
     <ClCompile Include="BoxCroix_CodePicture.cpp" />

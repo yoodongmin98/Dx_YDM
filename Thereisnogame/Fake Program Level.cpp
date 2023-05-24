@@ -13,6 +13,7 @@
 #include "AlphaCircle.h"
 #include "C2_BackGround.h"
 #include "squirrel.h"
+#include "BackSqirrelKey.h"
 #include "Mouse.h"
 #include "Chain.h"
 #include "ColManager.h"
@@ -67,6 +68,7 @@ void FakeProgramLevel::Start()
 		CreateActor<ColManager>(1000);
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
+		CreateActor<BackSqirrelKey>();
 		FolderCreate();
 	}
 	CreateActor<Cup>(); //Test¿ë

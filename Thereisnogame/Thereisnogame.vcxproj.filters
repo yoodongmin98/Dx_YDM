@@ -496,6 +496,9 @@
     <ClCompile Include="SquirrelCloud_Crack.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
+    <ClCompile Include="BackSqirrelKey.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -988,6 +991,9 @@
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
     <ClInclude Include="SquirrelCloud_Crack.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClInclude>
+    <ClInclude Include="BackSqirrelKey.h">
       <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
   </ItemGroup>
