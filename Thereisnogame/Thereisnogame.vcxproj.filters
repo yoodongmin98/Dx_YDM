@@ -478,6 +478,12 @@
     <ClCompile Include="BoxCroix_ClockDay.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClCompile>
+    <ClCompile Include="TrashCanFolderPanel.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_TrashCanFolder.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -954,6 +960,12 @@
     <ClInclude Include="BoxCroix_ClockDay.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClInclude>
+    <ClInclude Include="TrashCanFolderPanel.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_TrashCanFolder.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1162,6 +1174,9 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\UnderBarNumber">
       <UniqueIdentifier>{934b9186-4fc4-4f22-af64-191dc02337ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan">
+      <UniqueIdentifier>{c2d05f79-ce68-4fc8-8a4c-2e4b35b55efb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

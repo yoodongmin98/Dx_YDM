@@ -182,6 +182,7 @@
     <ClInclude Include="BoxCroix_PR_Super.h" />
     <ClInclude Include="BoxCroix_PR_Ultra.h" />
     <ClInclude Include="BoxCroix_Skite.h" />
+    <ClInclude Include="BoxCroix_TrashCanFolder.h" />
     <ClInclude Include="ClockBranch.h" />
     <ClInclude Include="ClockDayandNight.h" />
     <ClInclude Include="Cup.h" />
@@ -322,6 +323,7 @@
     <ClInclude Include="SuperPrivate.h" />
     <ClInclude Include="S_ActorBase.h" />
     <ClInclude Include="TrashcanFolder.h" />
+    <ClInclude Include="TrashCanFolderPanel.h" />
     <ClInclude Include="TrashcanTop.h" />
     <ClInclude Include="Truth1Icon.h" />
     <ClInclude Include="Truth2Icon.h" />
@@ -347,6 +349,7 @@
     <ClCompile Include="BoxCroix_PR_Super.cpp" />
     <ClCompile Include="BoxCroix_PR_Ultra.cpp" />
     <ClCompile Include="BoxCroix_Skite.cpp" />
+    <ClCompile Include="BoxCroix_TrashCanFolder.cpp" />
     <ClCompile Include="ClockBranch.cpp" />
     <ClCompile Include="ClockDayandNight.cpp" />
     <ClCompile Include="Cup.cpp" />
@@ -494,6 +497,7 @@
     <ClCompile Include="SuperPrivate.cpp" />
     <ClCompile Include="S_ActorBase.cpp" />
     <ClCompile Include="TrashcanFolder.cpp" />
+    <ClCompile Include="TrashCanFolderPanel.cpp" />
     <ClCompile Include="TrashcanTop.cpp" />
     <ClCompile Include="Truth1Icon.cpp" />
     <ClCompile Include="Truth2Icon.cpp" />

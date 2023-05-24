@@ -16,6 +16,7 @@ public:
 	TrashcanFolder& operator=(const TrashcanFolder& _Other) = delete;
 	TrashcanFolder& operator=(TrashcanFolder&& _Other) noexcept = delete;
 
+	void RenderAndCollisionCheck();
 
 protected:
 	void Start();
@@ -26,6 +27,16 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> TrashcanFolderOpen;
 
 	std::shared_ptr<class GameEngineCollision> TrashcanFolderCollision;
+
+	std::shared_ptr<class GoodbyeIcon> GoodbyeIconPtr;
+	std::shared_ptr<class PasswordIcon> PasswordIconPtr;
+	std::shared_ptr<class PinBall_Icon> PinBall_IconPtr;
+	
+	std::shared_ptr<class TrashCanFolderPanel> TrashCanFolderPanelPtr;
+	
+	std::shared_ptr<class BoxCroix_TrashCanFolder> BoxCroix_TrashCanFolderPtr;
+
+
 
 };
 
