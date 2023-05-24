@@ -83,13 +83,14 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(
 	const std::string_view& _AnimationName,
 	const std::string_view& _FileName,
 	size_t _AnimationCount,
-	float _InterTime)
+	float _InterTime,
+	bool _Loop)
 {
 	_Render = CreateComponent<GameEngineSpriteRenderer>();
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
-	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime });
+	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime,_Loop});
 	_Render->ChangeAnimation(_AnimationName);
 
 	return _Render;

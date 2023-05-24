@@ -6,6 +6,7 @@
 class TrashcanTop : public G_ActorBase
 {
 public:
+	static TrashcanTop* Top;
 	// constrcuter destructer
 	TrashcanTop();
 	~TrashcanTop();
@@ -23,6 +24,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> TrashcanTops;
+	std::shared_ptr<class GameEngineCollision> TrashcanTopsCollision;
 
 };
 

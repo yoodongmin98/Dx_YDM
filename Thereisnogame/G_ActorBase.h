@@ -31,7 +31,8 @@ public:
 		const std::string_view& _AnimationName,
 		const std::string_view& _FileName,
 		size_t _AnimationCount,
-		float _InterTime);
+		float _InterTime,
+		bool _Loop);
 
 	std::shared_ptr<GameEngineCollision> CollisionInit(
 		std::shared_ptr<GameEngineCollision> _Collision,

@@ -22,7 +22,7 @@ void ClockBranch::Start()
 		AnimationImageLoad("Branch");
 		Branchbool = false;
 	}
-	ClockBranchs = AnimationInit(ClockBranchs, "ClockBranch00.png", { 30,40 }, {-230,80}, "shakeBranch", "Branch", 1, 0.15f);
+	ClockBranchs = AnimationInit(ClockBranchs, "ClockBranch00.png", { 30,40 }, {-230,80}, "shakeBranch", "Branch", 3, 0.15f, true);
 	ClockBranchsCollision = CollisionInit(ClockBranchsCollision, { 30,40 }, { -230,80 });
 	
 }
