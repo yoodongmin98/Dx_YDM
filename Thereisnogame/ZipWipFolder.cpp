@@ -17,7 +17,6 @@ ZipWipFolder::~ZipWipFolder()
 void ZipWipFolder::Start()
 {
 	Init(ZipWipFolders, "ZinWip.png", { 87,78 }, { -415,0,0 });
-	ZipWipFoldersCollision = CollisionInit(ZipWipFoldersCollision, { 87,78,1 }, { -415,0,0 });
 	ZipWipFoldersCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::ZipWip);
 	ZipWipFoldersCollision->GetTransform()->SetLocalScale({ 87,78,1 });
 	ZipWipFoldersCollision->GetTransform()->SetLocalPosition({ -415,0,0 });

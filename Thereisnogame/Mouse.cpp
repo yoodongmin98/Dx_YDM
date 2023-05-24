@@ -31,7 +31,7 @@ void Mouse::Start()
 	MouseInteractable = Init(MouseInteractable, "Interactable.png", { 108,108 }, float4::Zero);
 	MouseHand = Init(MouseHand, "Hand.png", { 108,108 }, float4::Zero);
 	MouseHandtake = Init(MouseHandtake, "HandTakeOver.png", { 108,108 }, float4::Zero);
-	MouseUnavailable = Init(MouseUnavailable, "UnavailableIndicator.png", { 55,55 }, float4::Zero);
+	MouseUnavailable = Init(MouseUnavailable, "UnavailableIndicator.png", { 85 ,85 }, float4::Zero);
 
 	Mousesituation.push_back(MouseIdle);
 	Mousesituation.push_back(MouseInteractable);
@@ -110,7 +110,9 @@ void Mouse::MouseStateCheck()
 			whatisMouse = ChangeMouse(MouseHandtake);
 		}
 	}
-	else if (MouseCollision->Collision(ActorTypeEnum::BackActor, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	else if (MouseCollision->Collision(ActorTypeEnum::BackActor, ColType::AABBBOX2D, ColType::AABBBOX2D)
+			|| MouseCollision->Collision(ActorTypeEnum::ZipWip, ColType::AABBBOX2D, ColType::AABBBOX2D)
+			|| MouseCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		whatisMouse = ChangeMouse(MouseInteractable);
 	}

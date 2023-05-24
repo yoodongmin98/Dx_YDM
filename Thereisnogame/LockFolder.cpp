@@ -25,7 +25,7 @@ void LockFolder::Start()
 
 void LockFolder::Update(float _DeltaTime)
 {
-
+	ManagedCollision(LockFoldersCollision, 0);
 }
 
 void LockFolder::Render(float _Delta)
