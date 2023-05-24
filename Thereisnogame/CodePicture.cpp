@@ -17,7 +17,6 @@ CodePicture::~CodePicture()
 
 void CodePicture::Start()
 {
-	//Rotation Create«œ±‚
 	CodePictures=Init(CodePictures, "Picture03 #75249.png", { 642,642 }, float4::Zero);
 }
 

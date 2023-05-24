@@ -39,7 +39,7 @@ void Chain::Start()
 
 void Chain::Update(float _DeltaTime)
 {
-	if (DeathTime < ChainLiveTime)//ChainLiveTime으로 바꿔야함
+	if (DeathTime < ChainLiveTime)
 	{
 		DeathTime += _DeltaTime;
 		LerfTime += _DeltaTime * Speed;
@@ -62,7 +62,6 @@ void Chain::Update(float _DeltaTime)
 		LevelStateManager::MG->SetIsProgressFalse();
 		Death();
 	}
-
 }
 
 void Chain::Render(float _Delta)

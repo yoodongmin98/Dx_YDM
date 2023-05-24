@@ -226,9 +226,6 @@
     <ClCompile Include="ClockUnderBar.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClCompile>
-    <ClCompile Include="FakeProgramLevelManager.cpp">
-      <Filter>CHapter2.0_Fake Program\Level</Filter>
-    </ClCompile>
     <ClCompile Include="Truth1Icon.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
@@ -313,9 +310,6 @@
     <ClCompile Include="Mouse.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
-    <ClCompile Include="MouseState.cpp">
-      <Filter>CommonUI</Filter>
-    </ClCompile>
     <ClCompile Include="Cup.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
@@ -372,9 +366,6 @@
     </ClCompile>
     <ClCompile Include="LeftRotate.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelStateManager.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_Music.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
@@ -504,6 +495,9 @@
     </ClCompile>
     <ClCompile Include="SquirrelKeySmall.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelStateManager.cpp">
+      <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -729,9 +723,6 @@
     <ClInclude Include="ClockUnderBar.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClInclude>
-    <ClInclude Include="FakeProgramLevelManager.h">
-      <Filter>CHapter2.0_Fake Program\Level</Filter>
-    </ClInclude>
     <ClInclude Include="Truth1Icon.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
@@ -876,9 +867,6 @@
     <ClInclude Include="LeftRotate.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClInclude>
-    <ClInclude Include="LevelStateManager.h">
-      <Filter>CHapter2.0_Fake Program\Actor</Filter>
-    </ClInclude>
     <ClInclude Include="BoxCroix_Music.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
     </ClInclude>
@@ -1007,6 +995,9 @@
     </ClInclude>
     <ClInclude Include="SquirrelKeySmall.h">
       <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelStateManager.h">
+      <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

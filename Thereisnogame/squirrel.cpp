@@ -19,7 +19,6 @@ squirrel::~squirrel()
 void squirrel::Start()
 {
 	Init(squirrels, "Squirrel_Oss.png", {381,520}, { 0,10,0 });
-
 }
 
 void squirrel::Update(float _DeltaTime)

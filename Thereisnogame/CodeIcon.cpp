@@ -22,7 +22,6 @@ CodeIcon::~CodeIcon()
 
 void CodeIcon::Start()
 {
-	//¾ê°¡CodePicture Create
 	CodeIcons=Init(CodeIcons, "Picture03.png", { 90,93 }, {-20,20});
 	CodeIconsCollision = CollisionInit(CodeIconsCollision, { 90,93,1 }, { -20,20 });
 }

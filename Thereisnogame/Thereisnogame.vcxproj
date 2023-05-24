@@ -265,7 +265,6 @@
     <ClInclude Include="DrawerIcon.h" />
     <ClInclude Include="DrawerPicture.h" />
     <ClInclude Include="Fake Program Level.h" />
-    <ClInclude Include="FakeProgramLevelManager.h" />
     <ClInclude Include="FolderBackGround.h" />
     <ClInclude Include="FRMissIcon.h" />
     <ClInclude Include="F_Brazilian.h" />
@@ -374,7 +373,6 @@
     <ClCompile Include="LoadErrorPaper.cpp" />
     <ClCompile Include="LoadRedBar.cpp" />
     <ClCompile Include="Mouse.cpp" />
-    <ClCompile Include="MouseState.cpp" />
     <ClCompile Include="Nut_Close.cpp" />
     <ClCompile Include="Nut_Open.cpp" />
     <ClCompile Include="PasswordIcon.cpp" />
@@ -440,7 +438,6 @@
     <ClCompile Include="DrawerIcon.cpp" />
     <ClCompile Include="DrawerPicture.cpp" />
     <ClCompile Include="Fake Program Level.cpp" />
-    <ClCompile Include="FakeProgramLevelManager.cpp" />
     <ClCompile Include="FolderBackGround.cpp" />
     <ClCompile Include="FRMissIcon.cpp" />
     <ClCompile Include="F_Brazilian.cpp" />

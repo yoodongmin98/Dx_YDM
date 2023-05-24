@@ -23,7 +23,6 @@ Truth1Icon::~Truth1Icon()
 
 void Truth1Icon::Start()
 {
-	//Scale¡∂¡§
 	Truth1Icons=Init(Truth1Icons, "Document.png", { 75,93 }, {-100,20});
 	Truth1IconsCollision = CollisionInit(Truth1IconsCollision, { 75,93,1 }, { -100,20 });
 }
