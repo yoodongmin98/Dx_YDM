@@ -320,6 +320,8 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="SquirrelCloud_Crack.h" />
+    <ClInclude Include="SquirrelCloud_Need.h" />
     <ClInclude Include="SquirrelKey.h" />
     <ClInclude Include="StartPictures.h" />
     <ClInclude Include="SuperPrivate.h" />
@@ -496,6 +498,8 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="SquirrelCloud_Crack.cpp" />
+    <ClCompile Include="SquirrelCloud_Need.cpp" />
     <ClCompile Include="SquirrelKey.cpp" />
     <ClCompile Include="StartPictures.cpp" />
     <ClCompile Include="SuperPrivate.cpp" />

@@ -490,6 +490,12 @@
     <ClCompile Include="FolderNote_GoodBye.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClCompile>
+    <ClCompile Include="SquirrelCloud_Need.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClCompile>
+    <ClCompile Include="SquirrelCloud_Crack.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -977,6 +983,12 @@
     </ClInclude>
     <ClInclude Include="FolderNote_GoodBye.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+    </ClInclude>
+    <ClInclude Include="SquirrelCloud_Need.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+    </ClInclude>
+    <ClInclude Include="SquirrelCloud_Crack.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
