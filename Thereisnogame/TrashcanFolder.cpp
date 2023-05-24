@@ -31,11 +31,21 @@ void TrashcanFolder::Start()
 
 void TrashcanFolder::Update(float _DeltaTime)
 {
-	RenderAndCollisionCheck();
+	//Test¿ë
+	TrashcanFolderCollision->On();
+	//RenderAndCollisionCheck();
 	if (true == ClickCheck(TrashcanFolderCollision))
 	{
 		ColManager::MG->PlusCollisionValue();
 		TrashCanFolderPanelPtr = GetLevel()->CreateActor<TrashCanFolderPanel>();
+		GoodbyeIconPtr = GetLevel()->CreateActor<GoodbyeIcon>();
+		PasswordIconPtr = GetLevel()->CreateActor<PasswordIcon>();
+		PinBall_IconPtr = GetLevel()->CreateActor<PinBall_Icon>();
+		BoxCroix_TrashCanFolderPtr = GetLevel()->CreateActor<BoxCroix_TrashCanFolder>();
+	}
+	if (nullptr != BoxCroix_TrashCanFolderPtr)
+	{
+		BoxCroixDeathCheck();
 	}
 }
 
@@ -43,6 +53,8 @@ void TrashcanFolder::Render(float _Delta)
 {
 
 };
+
+
 
 void TrashcanFolder::RenderAndCollisionCheck()
 {
@@ -57,5 +69,16 @@ void TrashcanFolder::RenderAndCollisionCheck()
 	{
 		TrashcanFolderCollision->Off();
 		TrashcanFolderOpen->Off();
+	}
+}
+
+void TrashcanFolder::BoxCroixDeathCheck()
+{
+	if (true == BoxCroix_TrashCanFolderPtr->IsDeath())
+	{
+		TrashCanFolderPanelPtr.get()->Death();
+		GoodbyeIconPtr.get()->Death();
+		PasswordIconPtr.get()->Death();
+		PinBall_IconPtr.get()->Death();
 	}
 }

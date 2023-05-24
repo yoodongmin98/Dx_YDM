@@ -17,6 +17,7 @@ public:
 	TrashcanFolder& operator=(TrashcanFolder&& _Other) noexcept = delete;
 
 	void RenderAndCollisionCheck();
+	void BoxCroixDeathCheck();
 
 protected:
 	void Start();

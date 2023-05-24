@@ -20,8 +20,8 @@ BoxCroix_TrashCanFolder::~BoxCroix_TrashCanFolder()
 
 void BoxCroix_TrashCanFolder::Start()
 {
-	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 470,205,0 });
-	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 470,205,0 });
+	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 60,90,0 });
+	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 60,90,0 });
 
 }
 

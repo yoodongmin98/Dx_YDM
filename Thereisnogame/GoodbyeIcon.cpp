@@ -4,7 +4,8 @@
 //PlatForm
 //Core
 
-
+//Actor
+#include "ColManager.h"
 
 
 GoodbyeIcon::GoodbyeIcon()
@@ -17,8 +18,7 @@ GoodbyeIcon::~GoodbyeIcon()
 
 void GoodbyeIcon::Start()
 {
-	//¾ê°¡ FolderNote Create
-	GoodbyeIcons = Init(GoodbyeIcons, "Document.png", { 75,93 }, float4::Zero);
+	GoodbyeIcons = Init(GoodbyeIcons, "Document.png", { 75,93 }, {-10,20,0,});
 }
 
 void GoodbyeIcon::Update(float _DeltaTime)
