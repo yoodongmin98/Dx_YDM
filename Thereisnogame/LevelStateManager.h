@@ -107,6 +107,15 @@ public:
 	{
 		return IsProgress;
 	}
+	//ScreenActor Cup¾ò¾ú³Ä?
+	void SetIsGetTheCupTrue()
+	{
+		IsGetTheCup = true;
+	}
+	bool GetIsGetTheCup()
+	{
+		return IsGetTheCup;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -126,5 +135,6 @@ private:
 	bool IsTrashCanOpen = false;
 	bool IsGetTheKey = false;
 	bool Is18FolderOpen = false;
+	bool IsGetTheCup = false;
 };
 

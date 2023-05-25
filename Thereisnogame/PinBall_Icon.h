@@ -25,6 +25,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> PinBall_Icons;
 	std::shared_ptr<class GameEngineCollision> PinBall_IconsCollision;
 
-
+	std::shared_ptr<class Cup> CupPtr;
 };
 

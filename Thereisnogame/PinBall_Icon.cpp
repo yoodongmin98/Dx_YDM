@@ -7,6 +7,7 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Cup.h"
 
 PinBall_Icon::PinBall_Icon()
 {
@@ -27,8 +28,13 @@ void PinBall_Icon::Update(float _DeltaTime)
 	ManagedCollision(PinBall_IconsCollision, 1);
 	if (true == ClickCheck(PinBall_IconsCollision))
 	{
+		LevelStateManager::MG->PlusCollisionValue();
 		//얘는 나중에하기 rigidbody어떻게 쓰는지 알때까지
-		int a = 0;
+		//임시
+		if (false == LevelStateManager::MG->GetIsGetTheCup())
+		{
+			CupPtr = GetLevel()->CreateActor<Cup>();
+		}
 	}
 }
 

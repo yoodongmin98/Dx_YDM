@@ -7,7 +7,7 @@
 
 //Actor
 #include "SkiteProfil.h"
-
+#include "LevelStateManager.h"
 SkiteIcon::SkiteIcon()
 {
 }
@@ -29,9 +29,8 @@ void SkiteIcon::Update(float _DeltaTime)
 	{
 		SkiteProfilPtr = GetLevel()->CreateActor<SkiteProfil>();
 	}
-	if (true == IsDeath())
+	if (true == IsDeath()&&nullptr!= SkiteProfilPtr)
 	{
-		//ㅋㅋ이게되네
 		SkiteProfilPtr.get()->Death();
 	}
 }

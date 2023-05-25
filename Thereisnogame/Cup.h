@@ -16,6 +16,8 @@ public:
 	Cup& operator=(const Cup& _Other) = delete;
 	Cup& operator=(Cup&& _Other) noexcept = delete;
 
+	void CollisionInteractableCheck();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
