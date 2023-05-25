@@ -62,7 +62,7 @@ void PrivateFolder::BoxCroixDeathCheck()
 		{
 			LevelStateManager::MG->PlusCollisionValue();
 			SkiteCallingPtr = GetLevel()->CreateActor<SkiteCalling>();
-			SkiteCallingMissedPtr = GetLevel()->CreateActor<SkiteCallingMissed>();
+			SkiteCallingMissedPtr = GetLevel()->CreateActor<SkiteCallingMissed>(101);
 			CallingCreate = false;
 		}
 	}

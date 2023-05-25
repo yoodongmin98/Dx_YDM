@@ -58,7 +58,7 @@ void FakeProgramLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
 	{
-		CreateActor<LevelStateManager>(1000);
+		CreateActor<LevelStateManager>(100);
 		CreateActor<C2_BackGround>();
 		CreateActor<squirrel>();
 		CreateActor<BackSqirrelKey>();

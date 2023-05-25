@@ -27,5 +27,6 @@ private:
 
 	std::shared_ptr<class SkiteProfil> SkiteProfilPtr;
 
+	bool CreateBool = true;
 };
 

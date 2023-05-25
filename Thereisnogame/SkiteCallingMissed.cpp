@@ -7,6 +7,9 @@
 //PlatForm
 //Core
 
+
+//Actor
+#include "LevelStateManager.h"
 SkiteCallingMissed::SkiteCallingMissed()
 {
 }
@@ -43,7 +46,8 @@ void SkiteCallingMissed::FallandDeathCheck()
 	{
 		SkiteCallingMisseds->GetTransform()->AddLocalPosition({ 0,-5,0 });
 	}
-	if (SkiteCallingMisseds->GetTransform()->GetLocalPosition().y < -500.0f)
+	if (SkiteCallingMisseds->GetTransform()->GetLocalPosition().y < -500.0f
+		|| 1 != LevelStateManager::MG->GetCollisionValue())
 	{
 		Death();
 	}

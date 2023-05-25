@@ -27,11 +27,16 @@ void SkiteIcon::Update(float _DeltaTime)
 	ManagedCollision(SkiteIconsCollision, 1);
 	if (true == ClickCheck(SkiteIconsCollision))
 	{
-		SkiteProfilPtr = GetLevel()->CreateActor<SkiteProfil>();
+		if (true == CreateBool)
+		{
+			SkiteProfilPtr = GetLevel()->CreateActor<SkiteProfil>();
+			CreateBool = false;
+		}
 	}
 	if (true == IsDeath()&&nullptr!= SkiteProfilPtr)
 	{
 		SkiteProfilPtr.get()->Death();
+		CreateBool = true;
 	}
 }
 
