@@ -33,7 +33,7 @@ void ContentsCore::GameStart()
 	GameEngineCore::CreateLevel<ProgramLoadingLevel>();
 	GameEngineCore::CreateLevel<FakeProgramLevel>();
 
-	GameEngineCore::ChangeLevel("FakeProgramLevel");
+	GameEngineCore::ChangeLevel("MainMenuLevel");
 }
 
 void ContentsCore::GameEnd() 

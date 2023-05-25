@@ -7,6 +7,7 @@
 //Core
 #include <GameEngineCore/GameEngineCamera.h>
 #include <GameEngineCore/GameEngineTexture.h>
+#include <GameEngineCore/GameEngineCore.h>
 
 
 //Actor
@@ -101,6 +102,8 @@ void MainMenuLevel::Start()
 
 	if (false == GameEngineInput::IsKey("PlayerMoveLeft"))
 	{
+		GameEngineInput::CreateKey("TestKey1", '1');
+		GameEngineInput::CreateKey("TestKey2", '2');
 		GameEngineInput::CreateKey("TestKey3", '3');
 		GameEngineInput::CreateKey("TestKey4", '4');
 		GameEngineInput::CreateKey("LeftMouse", VK_LBUTTON);
@@ -114,13 +117,17 @@ void MainMenuLevel::Update(float _DeltaTime)
 	UpdateState(_DeltaTime);
 	
 	//테스트용
-	if (GameEngineInput::IsDown("TestKey3"))
+	if (GameEngineInput::IsDown("TestKey1"))
 	{
 		ChangeState(MainMenuState::Menu);
 	}
-	if (GameEngineInput::IsDown("TestKey4"))
+	if (GameEngineInput::IsDown("TestKey2"))
 	{
 		ChangeState(MainMenuState::Select);
+	}
+	if (GameEngineInput::IsDown("TestKey3"))
+	{
+		GameEngineCore::ChangeLevel("FakeProgramLevel");
 	}
 	
 }
