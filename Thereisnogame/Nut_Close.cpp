@@ -43,6 +43,7 @@ void Nut_Close::Render(float _Delta)
 
 void Nut_Close::CollisionInteractableCheck()
 {
+	//얘도 중복생성되서 렉이 조금 걸리는게 아닐까?
 	if (Nut_ClosesCollision->Collision(ActorTypeEnum::Picture, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable()
 		&& true == LevelStateManager::MG->GetIsWalNut())

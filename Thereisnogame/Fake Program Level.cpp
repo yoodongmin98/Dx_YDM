@@ -64,8 +64,8 @@ void FakeProgramLevel::Start()
 		CreateActor<BackSqirrelKey>();
 		FolderCreate();
 	}
-	//CreateActor<AlphaCircle>();
 	CreateActor<Mouse>();
+	CreateActor<AlphaCircle>();
 }
 
 void FakeProgramLevel::Update(float _DeltaTime)

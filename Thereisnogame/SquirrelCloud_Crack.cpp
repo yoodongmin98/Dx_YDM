@@ -24,8 +24,11 @@ void SquirrelCloud_Crack::Start()
 
 void SquirrelCloud_Crack::Update(float _DeltaTime)
 {
-	//나중엔 알파값으로 바꿔야함
-	if (GetLiveTime() > 3.0f)
+	if (GetLiveTime() > 1.0f)
+	{
+		SquirrelCloud_Cracks->ColorOptionValue.MulColor.a -= _DeltaTime * 0.5f;
+	}
+	if (SquirrelCloud_Cracks->ColorOptionValue.MulColor.a <= 0.0f)
 	{
 		Death();
 	}

@@ -36,6 +36,12 @@ void BackSqirrelKey::Start()
 
 void BackSqirrelKey::Update(float _DeltaTime)
 {
+	duplicationTime += _DeltaTime;
+	if (duplicationTime > 0.5f)
+	{
+		duplication = true;
+		duplicationTime = 0.0f;
+	}
 	ManagedCollision(BackSqirrelKeysCollision, 0);
 	if (true == ClickCheck(BackSqirrelKeysCollision))
 	{
@@ -53,9 +59,12 @@ void BackSqirrelKey::Render(float _Delta)
 
 void BackSqirrelKey::CollisionInteractableCheck()
 {
+	//´Ù¼ö»ý¼ºµÊ
 	if (BackSqirrelKeysCollision->Collision(ActorTypeEnum::Nut_Close, ColType::AABBBOX2D, ColType::AABBBOX2D)
-		&& true == Mouse::MainMouse->IsInteractable())
+		&& true == Mouse::MainMouse->IsInteractable()
+		&& true==duplication)
 	{
+		duplication = false;
 		BackSqirrelKeys->ChangeAnimation("ShakeKey");
 		GetLevel()->CreateActor<SquirrelCloud_Crack>();
 	}
