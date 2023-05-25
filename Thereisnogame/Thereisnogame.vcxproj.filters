@@ -499,6 +499,9 @@
     <ClCompile Include="LevelStateManager.cpp">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
     </ClCompile>
+    <ClCompile Include="SkiteProfil.cpp">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -998,6 +1001,9 @@
     </ClInclude>
     <ClInclude Include="LevelStateManager.h">
       <Filter>CHapter2.0_Fake Program\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="SkiteProfil.h">
+      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

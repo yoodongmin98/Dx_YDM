@@ -316,6 +316,7 @@
     <ClInclude Include="SkiteCallingMissed.h" />
     <ClInclude Include="SkiteFolder.h" />
     <ClInclude Include="SkiteIcon.h" />
+    <ClInclude Include="SkiteProfil.h" />
     <ClInclude Include="squirrel.h">
       <SubType>
       </SubType>
@@ -495,6 +496,7 @@
     <ClCompile Include="SkiteCallingMissed.cpp" />
     <ClCompile Include="SkiteFolder.cpp" />
     <ClCompile Include="SkiteIcon.cpp" />
+    <ClCompile Include="SkiteProfil.cpp" />
     <ClCompile Include="squirrel.cpp">
       <SubType>
       </SubType>

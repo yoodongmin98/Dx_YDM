@@ -23,8 +23,9 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SkiteIcons;
+	std::shared_ptr<class GameEngineCollision> SkiteIconsCollision;
 
-
+	std::shared_ptr<class SkiteProfil> SkiteProfilPtr;
 
 };
 

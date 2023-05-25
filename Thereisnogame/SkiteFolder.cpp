@@ -10,6 +10,7 @@
 #include "SkiteBanner.h"
 #include "BoxCroix_Skite.h"
 #include "LevelStateManager.h"
+#include "SkiteIcon.h"
 
 
 
@@ -36,6 +37,10 @@ void SkiteFolder::Update(float _DeltaTime)
 		SkitePtr=GetLevel()->CreateActor<Skite>();
 		SkiteBannerPtr=GetLevel()->CreateActor<SkiteBanner>();
 		BoxCroix_SkitePtr= GetLevel()->CreateActor<BoxCroix_Skite>();
+		if (true == LevelStateManager::MG->Get18OpenTrue())
+		{
+			SkiteIconPtr= GetLevel()->CreateActor<SkiteIcon>();
+		}
 	}
 	if (nullptr != BoxCroix_SkitePtr)
 	{
@@ -54,5 +59,10 @@ void SkiteFolder::BoxCroixDeathCheck()
 	{
 		SkitePtr.get()->Death();
 		SkiteBannerPtr.get()->Death();
+		if (true == LevelStateManager::MG->Get18OpenTrue()
+			&& nullptr!=SkiteIconPtr.get())
+		{
+			SkiteIconPtr.get()->Death();
+		}
 	}
 }
