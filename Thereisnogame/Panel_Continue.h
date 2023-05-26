@@ -28,5 +28,6 @@ protected:
 
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Panel_Continues;
+	std::shared_ptr<class GameEngineCollision> Panel_ContinuesCollision;
 };
 

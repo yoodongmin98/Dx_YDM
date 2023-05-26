@@ -21,7 +21,8 @@ Panel_Continue::~Panel_Continue()
 
 void Panel_Continue::Start()
 {
-	Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 0,-615,0 });
+	Panel_Continues=Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 0,-615,0 });
+	Panel_ContinuesCollision = CollisionInit(Panel_ContinuesCollision, { 306,195,1 }, { 0,-615,0 });
 }
 
 void Panel_Continue::Update(float _DeltaTime)
@@ -43,5 +44,5 @@ void Panel_Continue::ZRotations(float _DeltaTime)
 void Panel_Continue::RZRotations(float _DeltaTime)
 {
 	GetTransform()->SetLocalRotation(float4::LerpClamp(GetTransform()->GetLocalRotation(), { 0,0,-90.0f }, _DeltaTime));
-	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-615,-10 }, _DeltaTime*1.5f));
+	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-615,0 }, _DeltaTime*1.5f));
 }
