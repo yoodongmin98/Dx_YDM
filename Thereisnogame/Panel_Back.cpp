@@ -10,7 +10,7 @@
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 
-
+#include "MainMenuLevel.h"
 Panel_Back::Panel_Back()
 {
 }
@@ -21,12 +21,16 @@ Panel_Back::~Panel_Back()
 
 void Panel_Back::Start()
 {
-	Init(Panel_Backs, "MenuOptions_BackPanel.png", { 228,195,1 }, { -300,-750,-10 });
+	Init(Panel_Backs, "MenuOptions_BackPanel.png", { 228,195,1 }, { -300,-750,0 });
+	Panel_BacksCollision = CollisionInit(Panel_BacksCollision, { 150,100,1 }, { -290,-780,0 });
 }
 
 void Panel_Back::Update(float _DeltaTime)
 {
-
+	if (true == ClickCheck(Panel_BacksCollision))
+	{
+		MainMenuLevel::ML->SetIsClickBackPanelTrue();
+	}
 }
 
 void Panel_Back::Render(float _Delta)

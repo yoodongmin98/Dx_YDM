@@ -21,7 +21,7 @@ Panel_Continue::~Panel_Continue()
 
 void Panel_Continue::Start()
 {
-	Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 0,-615,-10 });
+	Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 0,-615,0 });
 }
 
 void Panel_Continue::Update(float _DeltaTime)

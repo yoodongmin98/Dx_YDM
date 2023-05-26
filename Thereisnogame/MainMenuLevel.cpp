@@ -119,14 +119,6 @@ void MainMenuLevel::Update(float _DeltaTime)
 	UpdateState(_DeltaTime);
 	
 	//테스트용
-	if (GameEngineInput::IsDown("TestKey1"))
-	{
-		ChangeState(MainMenuState::Menu);
-	}
-	if (GameEngineInput::IsDown("TestKey2"))
-	{
-		ChangeState(MainMenuState::Select);
-	}
 	if (GameEngineInput::IsDown("TestKey3"))
 	{
 		GameEngineCore::ChangeLevel("FakeProgramLevel");
@@ -207,7 +199,7 @@ void MainMenuLevel::Arrowfunction(float _DeltaTime)
 	case MainMenuState::Menu:
 		for (size_t i = 0; i < ArrowVector.size(); i++)
 		{
-			if (MenuTime > 6.0f)
+			if (MenuTime > 5.0f)
 			{
 				ArrowVector[i].get()->Up(_DeltaTime);
 			}

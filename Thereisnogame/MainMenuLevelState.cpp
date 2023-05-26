@@ -2,7 +2,10 @@
 #include "MainMenuLevel.h"
 
 #include <functional>
-
+//Platform
+#include <GameEnginePlatform/GameEngineInput.h>
+//Core
+//Actor
 #include "Panel_Continue.h"
 #include "Panel_Back.h"
 #include "SelectBox.h"
@@ -136,6 +139,7 @@ void MainMenuLevel::MenuStart()
 }
 void MainMenuLevel::MenuUpdate(float _DeltaTime)
 {
+	IsClickBackPanel = false;
 	MenuTime += _DeltaTime;
 	Letterfunction(_DeltaTime);
 	Arrowfunction(_DeltaTime);
@@ -151,11 +155,17 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 
 	MenuFunctional = std::bind(&StartPictures::PictureUp, PicturesPtr.get(), std::placeholders::_1);
 	MenuFunctional(_DeltaTime);
-	//if(마우스왼쪽버튼을 누른다면)으로 바꾸기
-	if (MenuTime > 6.0f)
+
+	if (MenuTime > 5.0f)
 	{
+		//Text(게임을 시작하지않기위해 누르세요)
 		MenuFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
 		MenuFunctional(_DeltaTime);
+		
+		if (true == IsClickStartButton)
+		{
+			ChangeState(MainMenuState::Select);
+		}
 	}
 	
 }
@@ -171,6 +181,7 @@ void MainMenuLevel::SelectStart()
 }
 void MainMenuLevel::SelectUpdate(float _DeltaTime)
 {
+	IsClickStartButton = false;
 	Letterfunction(_DeltaTime);
 	Arrowfunction(_DeltaTime);
 	Flagfunction(_DeltaTime);
@@ -187,6 +198,11 @@ void MainMenuLevel::SelectUpdate(float _DeltaTime)
 
 	SelectFunctional = std::bind(&StartPictures::PictureDown, PicturesPtr.get(), std::placeholders::_1);
 	SelectFunctional(_DeltaTime);
+
+	if (true == IsClickBackPanel)
+	{
+		ChangeState(MainMenuState::Menu);
+	}
 }
 void MainMenuLevel::SelectEnd()
 {

@@ -11,7 +11,7 @@ StartPictures::~StartPictures()
 
 void StartPictures::Start()
 {
-	Init(RStartPictures, "Flag_SupportLevel.png", { 209,505,1 }, { -170,650,-10 });
+	Init(RStartPictures, "Flag_SupportLevel.png", { 209,505,1 }, { -170,650,0 });
 }
 
 void StartPictures::Update(float _DeltaTime)

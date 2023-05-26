@@ -38,10 +38,20 @@ public:
 
 	float FlagValueSet(int SetValue,int _iValue);
 	float FlagLeftValueSet(int _iValue);
-
+	//ÇÃ·¡±× ´­·¶³Ä?
 	void SetIsClicktheFlagTrue()
 	{
 		IsClicktheFlag = true;
+	}
+	//BackPanel´­·¶³Ä?
+	void SetIsClickBackPanelTrue()
+	{
+		IsClickBackPanel = true;
+	}
+	//StartBox´­·¶³Ä?
+	void SetIsClickStartButtonTrue()
+	{
+		IsClickStartButton = true;
 	}
 protected:
 	void Start() override;
@@ -83,6 +93,7 @@ private:
 	float MenuTime = 0.0f;
 	
 	bool IsClicktheFlag = false;
-
+	bool IsClickBackPanel = false;
+	bool IsClickStartButton = false;
 };
 

@@ -27,7 +27,6 @@ protected:
 
 
 private:
-
 	std::shared_ptr<class GameEngineSpriteRenderer> Panel_Continues;
 };
 

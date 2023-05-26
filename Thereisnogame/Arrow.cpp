@@ -24,14 +24,14 @@ void Arrow::Start()
 	Arrow_LightOn = CreateComponent<GameEngineSpriteRenderer>();
 	Arrow_LightOn->SetTexture("ArrowLightOn.png");
 	Arrow_LightOn->GetTransform()->SetLocalScale({ 241,129,1 });
-	Arrow_LightOn->GetTransform()->SetLocalPosition({ 144,-508,-10 });
+	Arrow_LightOn->GetTransform()->SetLocalPosition({ 144,-508,0 });
 	Arrow_LightOn->GetTransform()->SetLocalRotation({ 0, 0, -40 });
 	Arrow_LightOn->Off();
 
 	Arrow_LightOff = CreateComponent<GameEngineSpriteRenderer>();
 	Arrow_LightOff->SetTexture("ArrowLightOff.png");
 	Arrow_LightOff->GetTransform()->SetLocalScale({ 188,73,1 });
-	Arrow_LightOff->GetTransform()->SetLocalPosition({ 145,-516,-10 });
+	Arrow_LightOff->GetTransform()->SetLocalPosition({ 145,-516,0 });
 	Arrow_LightOff->GetTransform()->SetLocalRotation({ 0, 0, -40 });
 	Arrow_LightOff->On();
 }

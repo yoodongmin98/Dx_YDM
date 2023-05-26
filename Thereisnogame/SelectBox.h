@@ -26,6 +26,8 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Box_2;
 	std::shared_ptr<class GameEngineSpriteRenderer> Box_3;
 	
-
+	std::shared_ptr<class GameEngineCollision> Box_1Collision;
+	std::shared_ptr<class GameEngineCollision> Box_2Collision;
+	std::shared_ptr<class GameEngineCollision> Box_3Collision;
 };
 
