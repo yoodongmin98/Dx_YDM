@@ -22,7 +22,9 @@ public:
 		const std::string_view& _ImageName,
 		float4 _Scale,
 		float4 _Position);
+
 	void AnimationImageLoad(const std::string_view& _FileName);
+
 	std::shared_ptr<GameEngineSpriteRenderer> AnimationInit(
 		std::shared_ptr<GameEngineSpriteRenderer> _Render,
 		const std::string_view& _ImageName,
@@ -42,12 +44,19 @@ public:
 	bool ClickCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
 	void RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render);
+
 	void ManagedCollision(std::shared_ptr<GameEngineCollision> _Collision, int Value);
+
 	void Repeat(float _MoveValue, float _DeltaTime);
+
 	void Down(float _DeltaTime);
+
 	void Up(float _DeltaTime);
+
 	void FlagDown(float _EndValue, float _DeltaTime);
+
 	void FlagUp(float _PlusXvalue,float _DeltaTime);
+
 
 protected:
 	void Start() override;

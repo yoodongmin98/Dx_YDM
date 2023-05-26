@@ -11,8 +11,8 @@ F_English::~F_English()
 
 void F_English::Start()
 {
-	Init(F_Englishs, "Flag_English.png", { 198,727,1 }, { -70,700,0 });//320
-	F_EnglishsCollision = CollisionInit(F_EnglishsCollision, { 198,727,1 }, { -70,700,0 });
+	Init(F_Englishs, "Flag_English.png", { 198,727,1 }, { -70,750,0 });//320
+	F_EnglishsCollision = CollisionInit(F_EnglishsCollision, { 198,133,1 }, { -70,550,0 });
 }
 
 void F_English::Update(float _DeltaTime)

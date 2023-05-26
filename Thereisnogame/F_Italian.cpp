@@ -11,8 +11,8 @@ F_Italian::~F_Italian()
 
 void F_Italian::Start()
 {
-	Init(F_Italians, "Flag_Italian.png", { 198,727,1 }, { 420,700,0 });//170
-	F_ItaliansCollision = CollisionInit(F_ItaliansCollision, { 198,727,1 }, { 420,700,0 });
+	Init(F_Italians, "Flag_Italian.png", { 198,727,1 }, { 420,750,0 });//170
+	F_ItaliansCollision = CollisionInit(F_ItaliansCollision, { 198,133,1 }, { 420,550,0 });
 }
 
 void F_Italian::Update(float _DeltaTime)

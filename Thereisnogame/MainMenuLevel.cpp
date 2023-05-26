@@ -18,6 +18,7 @@
 #include "Panel_Back.h"
 #include "DrawaPixel.h"
 #include "StartPictures.h"
+#include "Mouse.h"
 
 //Letter
 #include "C_0Letter_T.h"
@@ -96,6 +97,7 @@ void MainMenuLevel::Start()
 		PixelPtr=CreateActor<Panel_DrawaPixel>();
 		PicturesPtr=CreateActor<StartPictures>();
 		CreateActor<AlphaCircle>();
+		CreateActor<Mouse>();
 	}
 	
 
@@ -256,34 +258,34 @@ float MainMenuLevel::FlagValueSet(int SetValue,int _iValue)
 		switch (_iValue)
 		{
 		case 0:
-			return 730.0f;
+			return 780.0f;
 			break;
 		case 1:
-			return 670.0f;
+			return 720.0f;
 			break;
 		case 2:
-			return 730.0f;
+			return 780.0f;
 			break;
 		case 3:
-			return 530.0f;
+			return 580.0f;
 			break;
 		case 4:
-			return 480.0f;
+			return 640.0f;
 			break;
 		case 5:
-			return 570.0f;
+			return 620.0f;
 			break;
 		case 6:
-			return 500.0f;
+			return 550.0f;
 			break;
 		case 7:
-			return 300.0f;
+			return 350.0f;
 			break;
 		case 8:
-			return 300.0f;
+			return 350.0f;
 			break;
 		case 9:
-			return 380.0f;
+			return 430.0f;
 			break;
 		default:
 			break;
