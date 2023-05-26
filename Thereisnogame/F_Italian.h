@@ -25,5 +25,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> F_Italians;
 	std::shared_ptr<class GameEngineSpriteRenderer> FlagChain;
+
+	std::shared_ptr<class GameEngineCollision> F_ItaliansCollision;
 };
 
