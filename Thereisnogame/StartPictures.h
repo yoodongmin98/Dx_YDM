@@ -26,5 +26,11 @@ protected:
 
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> RStartPictures;
+
+	std::shared_ptr<class GameEngineSpriteRenderer> ChapterPictureOff;
+	std::shared_ptr<class GameEngineSpriteRenderer> ChapterPictureOn;
+
+	std::shared_ptr<class GameEngineCollision> StartPictureCollision;
+
 };
 
