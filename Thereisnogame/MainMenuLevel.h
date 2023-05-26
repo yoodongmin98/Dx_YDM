@@ -13,6 +13,7 @@ enum class MainMenuState
 class MainMenuLevel : public GameEngineLevel
 {
 public:
+	static MainMenuLevel* ML;
 	// constrcuter destructer
 	MainMenuLevel();
 	~MainMenuLevel();
@@ -38,7 +39,10 @@ public:
 	float FlagValueSet(int SetValue,int _iValue);
 	float FlagLeftValueSet(int _iValue);
 
-	
+	void SetIsClicktheFlagTrue()
+	{
+		IsClicktheFlag = true;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -78,7 +82,7 @@ private:
 	float DrawaPixelTime = 0.0f;
 	float MenuTime = 0.0f;
 	
-
+	bool IsClicktheFlag = false;
 
 };
 

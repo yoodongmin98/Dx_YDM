@@ -54,9 +54,10 @@
 #include "F_Russian.h"
 #include "F_Spanish.h"
 
-
+MainMenuLevel* MainMenuLevel::ML;
 MainMenuLevel::MainMenuLevel()
 {
+	ML = this;
 }
 
 MainMenuLevel::~MainMenuLevel()
@@ -85,16 +86,15 @@ void MainMenuLevel::Start()
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
-	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
 		CreateActor<BackCurtain>();
 		CreateFlag();
+		PixelPtr=CreateActor<Panel_DrawaPixel>(); 
 		CreateLetter();
 		PanelContinuePtr = CreateActor<Panel_Continue>();
 		PanelBackPtr=CreateActor<Panel_Back>();
 		SelectBoxPtr=CreateActor<SelectBox>();
 		CreateMainMenuArrow();
-		PixelPtr=CreateActor<Panel_DrawaPixel>();
 		PicturesPtr=CreateActor<StartPictures>();
 		CreateActor<AlphaCircle>();
 		CreateActor<Mouse>();
@@ -270,7 +270,7 @@ float MainMenuLevel::FlagValueSet(int SetValue,int _iValue)
 			return 580.0f;
 			break;
 		case 4:
-			return 640.0f;
+			return 530.0f;
 			break;
 		case 5:
 			return 620.0f;

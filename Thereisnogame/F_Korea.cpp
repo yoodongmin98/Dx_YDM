@@ -1,5 +1,6 @@
 #include "PrecompileHeader.h"
 #include "F_Korea.h"
+#include "MainMenuLevel.h"
 
 F_Korea::F_Korea()
 {
@@ -20,7 +21,7 @@ void F_Korea::Update(float _DeltaTime)
 	Repeat(6, _DeltaTime * 0.7f);
 	if (true == ClickCheck(F_KoreasCollision))
 	{
-		int a = 0;
+		MainMenuLevel::ML->SetIsClicktheFlagTrue();
 	}
 }
 

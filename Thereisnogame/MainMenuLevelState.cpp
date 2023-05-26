@@ -87,9 +87,9 @@ void MainMenuLevel::FlagUpdate(float _DeltaTime)
 	if (FlagTime > 1.0f)
 	{
 		Flagfunction(_DeltaTime);
-		if (FlagTime > 7.0f) //바꿔야할 부분(if mouse<->Collision이 충돌(클릭)을 한다면)
+		if (true==IsClicktheFlag) 
 		{
-			//ChangeState(MainMenuState::DrawaPixel);
+			ChangeState(MainMenuState::DrawaPixel);
 		}
 	}
 }
