@@ -27,7 +27,7 @@ void AlphaCircle::Start()
 	AlphaCircles = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Alpha);
 	AlphaCircles->SetScaleToTexture("IndiaTitleVignette.png");
 	AlphaCircles->GetTransform()->SetLocalScale({ 1281.0f, 720.0f , 1.0f });
-	AlphaCircles->GetTransform()->SetLocalPosition({ 0,0,-10 });
+	AlphaCircles->GetTransform()->SetLocalPosition({ 0,0,0 });
 
 	AlphaCircles->ColorOptionValue.MulColor.a = 0.3f;
 	

@@ -13,5 +13,5 @@ enum class ActorTypeEnum
 	ZipWip,
 	LockFolder,
 	Alpha,
-	Mouse,
+	Mouse
 };

@@ -27,11 +27,30 @@ void Mouse::Start()
 {
 	GameEngineInput::MouseCursorOff();
 	
-	MouseIdle = Init(MouseIdle, "Idle.png", {108,108},float4::Zero);
-	MouseInteractable = Init(MouseInteractable, "Interactable.png", { 108,108 }, float4::Zero);
-	MouseHand = Init(MouseHand, "Hand.png", { 108,108 }, float4::Zero);
-	MouseHandtake = Init(MouseHandtake, "HandTakeOver.png", { 108,108 }, float4::Zero);
-	MouseUnavailable = Init(MouseUnavailable, "UnavailableIndicator.png", { 85 ,85 }, float4::Zero);
+	MouseIdle = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Mouse);
+	MouseIdle->SetScaleToTexture("Idle.png");
+	MouseIdle->GetTransform()->SetLocalScale({ 108,108,1.0f });
+	MouseIdle->GetTransform()->SetLocalPosition({0,0,0});
+
+	MouseInteractable = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Mouse);
+	MouseInteractable->SetScaleToTexture("Interactable.png");
+	MouseInteractable->GetTransform()->SetLocalScale({ 108,108,1.0f });
+	MouseInteractable->GetTransform()->SetLocalPosition({ 0,0,0 });
+
+	MouseHand = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Mouse);
+	MouseHand->SetScaleToTexture("Hand.png");
+	MouseHand->GetTransform()->SetLocalScale({ 108,108,1.0f });
+	MouseHand->GetTransform()->SetLocalPosition({ 0,0,0 });
+
+	MouseHandtake = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Mouse);
+	MouseHandtake->SetScaleToTexture("HandTakeOver.png");
+	MouseHandtake->GetTransform()->SetLocalScale({ 108,108,1.0f });
+	MouseHandtake->GetTransform()->SetLocalPosition({ 0,0,0 });
+
+	MouseUnavailable = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Mouse);
+	MouseUnavailable->SetScaleToTexture("HandTakeOver.png");
+	MouseUnavailable->GetTransform()->SetLocalScale({ 85 ,85, 1 });
+	MouseUnavailable->GetTransform()->SetLocalPosition({ 0,0,0 });
 
 	Mousesituation.push_back(MouseIdle);
 	Mousesituation.push_back(MouseInteractable);
