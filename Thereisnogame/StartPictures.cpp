@@ -25,7 +25,7 @@ void StartPictures::Start()
 void StartPictures::Update(float _DeltaTime)
 {
 	Repeat(7, _DeltaTime*0.8f);
-	
+	CollisionInteractableCheck();
 }
 
 void StartPictures::Render(float _Delta)
