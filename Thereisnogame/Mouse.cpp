@@ -121,7 +121,7 @@ void Mouse::InteractableCheck()
 
 void Mouse::MouseStateCheck()
 {
-	if (MouseCollision->Collision(ActorTypeEnum::ScreenActor, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	if (true==IsScreenActors())
 	{
 		whatisMouse = ChangeMouse(MouseHand);
 		if (GameEngineInput::IsPress("LeftMouse"))
@@ -129,9 +129,7 @@ void Mouse::MouseStateCheck()
 			whatisMouse = ChangeMouse(MouseHandtake);
 		}
 	}
-	else if (MouseCollision->Collision(ActorTypeEnum::BackActor, ColType::AABBBOX2D, ColType::AABBBOX2D)
-			|| MouseCollision->Collision(ActorTypeEnum::ZipWip, ColType::AABBBOX2D, ColType::AABBBOX2D)
-			|| MouseCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	else if (true==IsBackActors())
 	{
 		whatisMouse = ChangeMouse(MouseInteractable);
 	}
@@ -154,6 +152,36 @@ void Mouse::ProgressMouseCollisionCheck()
 	else
 	{
 		MouseCollision->On();
+	}
+}
+
+bool Mouse::IsScreenActors()
+{
+	if (MouseCollision->Collision(ActorTypeEnum::ScreenActor, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::Cup_Full, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::Nut_Close, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::Nut_Open, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Mouse::IsBackActors()
+{
+	if (MouseCollision->Collision(ActorTypeEnum::BackActor, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::ZipWip, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }
 

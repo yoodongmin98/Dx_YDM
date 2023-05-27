@@ -22,6 +22,9 @@ public:
 	void MouseStateCheck();
 	void InteractableCheck();
 	void ProgressMouseCollisionCheck();
+	bool IsScreenActors();
+	bool IsBackActors();
+
 	float4 GetMousePos()
 	{
 		return MousePos;

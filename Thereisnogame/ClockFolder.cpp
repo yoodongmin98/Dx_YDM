@@ -104,6 +104,7 @@ void ClockFolder::BoxCroixDeathCheck()
 		ClockPaddle9Ptr.get()->Death();
 		ClockUnderBarPtr.get()->Death();
 		FolderBackGroundPtr.get()->Death();
+		BoxCroix_ClockPanelPtr.get()->Death();
 	}
 	if (nullptr != BoxCroix_ClockDayPtr)
 	{
