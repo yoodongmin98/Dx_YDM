@@ -18,6 +18,7 @@ public:
 
 	void PictureDown(float _DeltaTime);
 	void PictureUp(float _DeltaTime);
+	void CollisionInteractableCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;
