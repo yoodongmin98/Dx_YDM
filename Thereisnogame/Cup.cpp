@@ -45,7 +45,7 @@ void Cup::Render(float _Delta)
 
 };
 
-
+bool IsCupFull = false;
 void Cup::CollisionInteractableCheck()
 {
 	if (CupCollision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D)
@@ -59,7 +59,11 @@ void Cup::CollisionInteractableCheck()
 		&& true == Mouse::MainMouse->IsInteractable()
 		&& true == LevelStateManager::MG->GetIsRain())
 	{
-		GetLevel()->CreateActor<Cup_Full>();
-		Death();
+		if (false == IsCupFull)
+		{
+			GetLevel()->CreateActor<Cup_Full>();
+			IsCupFull = true;
+			Death();
+		}
 	}
 }

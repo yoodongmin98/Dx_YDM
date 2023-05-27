@@ -40,7 +40,7 @@ void Nut_Close::Render(float _Delta)
 {
 
 };
-
+bool IsNutopen = false;
 void Nut_Close::CollisionInteractableCheck()
 {
 	//얘도 중복생성되서 렉이 조금 걸리는게 아닐까?
@@ -48,7 +48,11 @@ void Nut_Close::CollisionInteractableCheck()
 		&& true == Mouse::MainMouse->IsInteractable()
 		&& true == LevelStateManager::MG->GetIsWalNut())
 	{
-		GetLevel()->CreateActor<Nut_Open>();
-		Death();
+		if (false == IsNutopen)
+		{
+			GetLevel()->CreateActor<Nut_Open>();
+			IsNutopen = true;
+			Death();
+		}
 	}
 }

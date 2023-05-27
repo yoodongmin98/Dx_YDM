@@ -36,13 +36,17 @@ void SquirrelKey::Render(float _Delta)
 {
 
 };
-
+bool KeyMiddle = false;
 void SquirrelKey::CollisionInteractableCheck()
 {
 	if (SquirrelKeyBigCollision->Collision(ActorTypeEnum::ZipWip, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true==Mouse::MainMouse->IsInteractable())
 	{
-		GetLevel()->CreateActor<SquirrelKeyMiddle>();
-		Death();
+		if (false == KeyMiddle)
+		{
+			GetLevel()->CreateActor<SquirrelKeyMiddle>();
+			KeyMiddle = true;
+			Death();
+		}
 	}
 }
