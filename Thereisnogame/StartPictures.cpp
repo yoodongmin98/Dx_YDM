@@ -57,6 +57,7 @@ void StartPictures::CollisionInteractableCheck()
 	}
 	if (true == ClickCheck(StartPictureCollision))
 	{
+		
 		//페이드 인 아웃 넣고 임시로 chapter2로 넘어가기
 		GameEngineCore::ChangeLevel("FakeProgramLevel");
 	}
