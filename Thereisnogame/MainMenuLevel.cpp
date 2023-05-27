@@ -117,14 +117,10 @@ void MainMenuLevel::Start()
 void MainMenuLevel::Update(float _DeltaTime)
 {
 	UpdateState(_DeltaTime);
-	
-	//테스트용
-	if (GameEngineInput::IsDown("TestKey3"))
-	{
-		GameEngineCore::ChangeLevel("FakeProgramLevel");
-	}
-	
 }
+
+
+
 
 void MainMenuLevel::CreateFlag()
 {
@@ -282,6 +278,7 @@ float MainMenuLevel::FlagValueSet(int SetValue,int _iValue)
 		default:
 			break;
 		}
+
 	}
 	else if (2 == SetValue)
 	{

@@ -45,7 +45,6 @@ void PlaywithinaplayLevel::Start()
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
-	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
 		
 	}

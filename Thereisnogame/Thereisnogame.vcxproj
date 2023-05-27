@@ -167,6 +167,8 @@
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
     <ClInclude Include="BackSqirrelKey.h" />
+    <ClInclude Include="BalloonSecure.h" />
+    <ClInclude Include="Board.h" />
     <ClInclude Include="BoxCroix_ClockDay.h" />
     <ClInclude Include="BoxCroix_ClockPanel.h" />
     <ClInclude Include="BoxCroix_CodePicture.h" />
@@ -184,21 +186,32 @@
     <ClInclude Include="BoxCroix_PR_Ultra.h" />
     <ClInclude Include="BoxCroix_Skite.h" />
     <ClInclude Include="BoxCroix_TrashCanFolder.h" />
+    <ClInclude Include="C1_BackGround.h" />
     <ClInclude Include="ClockBranch.h" />
     <ClInclude Include="ClockDayandNight.h" />
+    <ClInclude Include="CoffreFort.h" />
+    <ClInclude Include="CoffreFortHandle.h" />
+    <ClInclude Include="CoffreFortPanel.h" />
+    <ClInclude Include="Cog.h" />
+    <ClInclude Include="Cordon.h" />
     <ClInclude Include="Cup.h" />
     <ClInclude Include="Cup_Full.h" />
+    <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
     <ClInclude Include="FolderNote2.h" />
     <ClInclude Include="FolderNote3.h" />
     <ClInclude Include="FolderNote_GoodBye.h" />
     <ClInclude Include="FolderNote_Password.h" />
+    <ClInclude Include="French.h" />
     <ClInclude Include="GoodbyeIcon.h" />
+    <ClInclude Include="Key.h" />
     <ClInclude Include="LeftRotate.h" />
     <ClInclude Include="LoadBarBack.h" />
     <ClInclude Include="LoadBarTXT.h" />
     <ClInclude Include="LoadErrorPaper.h" />
     <ClInclude Include="LoadRedBar.h" />
+    <ClInclude Include="Lope_Corde.h" />
+    <ClInclude Include="Lope_Corde_Weak.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="Nut_Close.h" />
     <ClInclude Include="Nut_Open.h" />
@@ -215,6 +228,7 @@
     <ClInclude Include="PinBall_RightBoxFond.h" />
     <ClInclude Include="PinBall_Score.h" />
     <ClInclude Include="PinBall_SideTable.h" />
+    <ClInclude Include="Plaque.h" />
     <ClInclude Include="Private18.h" />
     <ClInclude Include="AlphaCircle.h" />
     <ClInclude Include="Arrow.h" />
@@ -308,7 +322,10 @@
     <ClInclude Include="PrivatePanel_Ultra.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
+    <ClInclude Include="Raquette.h" />
     <ClInclude Include="RightRotate.h" />
+    <ClInclude Include="RouageLoad.h" />
+    <ClInclude Include="Scissor.h" />
     <ClInclude Include="SelectBox.h" />
     <ClInclude Include="Skite.h" />
     <ClInclude Include="SkiteBanner.h" />
@@ -317,6 +334,7 @@
     <ClInclude Include="SkiteFolder.h" />
     <ClInclude Include="SkiteIcon.h" />
     <ClInclude Include="SkiteProfil.h" />
+    <ClInclude Include="Speaker.h" />
     <ClInclude Include="squirrel.h">
       <SubType>
       </SubType>
@@ -329,6 +347,7 @@
     <ClInclude Include="StartPictures.h" />
     <ClInclude Include="SuperPrivate.h" />
     <ClInclude Include="S_ActorBase.h" />
+    <ClInclude Include="TitleMetal.h" />
     <ClInclude Include="TrashcanFolder.h" />
     <ClInclude Include="TrashCanFolderPanel.h" />
     <ClInclude Include="TrashcanTop.h" />
@@ -341,6 +360,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BackSqirrelKey.cpp" />
+    <ClCompile Include="BalloonSecure.cpp" />
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="BoxCroix_ClockDay.cpp" />
     <ClCompile Include="BoxCroix_ClockPanel.cpp" />
     <ClCompile Include="BoxCroix_CodePicture.cpp" />
@@ -358,21 +379,32 @@
     <ClCompile Include="BoxCroix_PR_Ultra.cpp" />
     <ClCompile Include="BoxCroix_Skite.cpp" />
     <ClCompile Include="BoxCroix_TrashCanFolder.cpp" />
+    <ClCompile Include="C1_BackGround.cpp" />
     <ClCompile Include="ClockBranch.cpp" />
     <ClCompile Include="ClockDayandNight.cpp" />
+    <ClCompile Include="CoffreFort.cpp" />
+    <ClCompile Include="CoffreFortHandle.cpp" />
+    <ClCompile Include="CoffreFortPanel.cpp" />
+    <ClCompile Include="Cog.cpp" />
+    <ClCompile Include="Cordon.cpp" />
     <ClCompile Include="Cup.cpp" />
     <ClCompile Include="Cup_Full.cpp" />
+    <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
     <ClCompile Include="FolderNote2.cpp" />
     <ClCompile Include="FolderNote3.cpp" />
     <ClCompile Include="FolderNote_GoodBye.cpp" />
     <ClCompile Include="FolderNote_Password.cpp" />
+    <ClCompile Include="French.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
+    <ClCompile Include="Key.cpp" />
     <ClCompile Include="LeftRotate.cpp" />
     <ClCompile Include="LoadBarBack.cpp" />
     <ClCompile Include="LoadBarTXT.cpp" />
     <ClCompile Include="LoadErrorPaper.cpp" />
     <ClCompile Include="LoadRedBar.cpp" />
+    <ClCompile Include="Lope_Corde.cpp" />
+    <ClCompile Include="Lope_Corde_Weak.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Nut_Close.cpp" />
     <ClCompile Include="Nut_Open.cpp" />
@@ -389,6 +421,7 @@
     <ClCompile Include="PinBall_RightBoxFond.cpp" />
     <ClCompile Include="PinBall_Score.cpp" />
     <ClCompile Include="PinBall_SideTable.cpp" />
+    <ClCompile Include="Plaque.cpp" />
     <ClCompile Include="Private18.cpp" />
     <ClCompile Include="AlphaCircle.cpp" />
     <ClCompile Include="Arrow.cpp" />
@@ -488,7 +521,10 @@
     <ClCompile Include="PrivatePanel_Ultra.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />
+    <ClCompile Include="Raquette.cpp" />
     <ClCompile Include="RightRotate.cpp" />
+    <ClCompile Include="RouageLoad.cpp" />
+    <ClCompile Include="Scissor.cpp" />
     <ClCompile Include="SelectBox.cpp" />
     <ClCompile Include="Skite.cpp" />
     <ClCompile Include="SkiteBanner.cpp" />
@@ -497,6 +533,7 @@
     <ClCompile Include="SkiteFolder.cpp" />
     <ClCompile Include="SkiteIcon.cpp" />
     <ClCompile Include="SkiteProfil.cpp" />
+    <ClCompile Include="Speaker.cpp" />
     <ClCompile Include="squirrel.cpp">
       <SubType>
       </SubType>
@@ -509,6 +546,7 @@
     <ClCompile Include="StartPictures.cpp" />
     <ClCompile Include="SuperPrivate.cpp" />
     <ClCompile Include="S_ActorBase.cpp" />
+    <ClCompile Include="TitleMetal.cpp" />
     <ClCompile Include="TrashcanFolder.cpp" />
     <ClCompile Include="TrashCanFolderPanel.cpp" />
     <ClCompile Include="TrashcanTop.cpp" />

@@ -502,6 +502,63 @@
     <ClCompile Include="SkiteProfil.cpp">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
+    <ClCompile Include="C1_BackGround.cpp">
+      <Filter>Chapter1.0_Play within a play\Level\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Cog.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="French.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Key.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Raquette.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="RouageLoad.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Scissor.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Speaker.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Plaque.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
+    </ClCompile>
+    <ClCompile Include="CoffreFort.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
+    </ClCompile>
+    <ClCompile Include="CoffreFortHandle.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
+    </ClCompile>
+    <ClCompile Include="CoffreFortPanel.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
+    </ClCompile>
+    <ClCompile Include="Lope_Corde.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClCompile>
+    <ClCompile Include="Lope_Corde_Weak.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClCompile>
+    <ClCompile Include="Cordon.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClCompile>
+    <ClCompile Include="BalloonSecure.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1005,6 +1062,63 @@
     <ClInclude Include="SkiteProfil.h">
       <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
+    <ClInclude Include="C1_BackGround.h">
+      <Filter>Chapter1.0_Play within a play\Level\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Cog.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="French.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Key.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Raquette.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="RouageLoad.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Scissor.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Speaker.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Plaque.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
+    </ClInclude>
+    <ClInclude Include="CoffreFort.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
+    </ClInclude>
+    <ClInclude Include="CoffreFortHandle.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
+    </ClInclude>
+    <ClInclude Include="CoffreFortPanel.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
+    </ClInclude>
+    <ClInclude Include="Lope_Corde_Weak.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClInclude>
+    <ClInclude Include="Cordon.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClInclude>
+    <ClInclude Include="Lope_Corde.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClInclude>
+    <ClInclude Include="BalloonSecure.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1216,6 +1330,30 @@
     </Filter>
     <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan">
       <UniqueIdentifier>{c2d05f79-ce68-4fc8-8a4c-2e4b35b55efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Level\BackGround">
+      <UniqueIdentifier>{03c80588-e4d0-4f78-8749-b846d76feec2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\ScreenActor">
+      <UniqueIdentifier>{f24b7c75-3e7b-4394-81e5-a931ad21e7de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor">
+      <UniqueIdentifier>{dc5b7a0d-d2d2-4c59-a019-caaab9fd5814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame">
+      <UniqueIdentifier>{cfad2fe3-125d-4f07-93a8-e87ccabd84a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal">
+      <UniqueIdentifier>{4b596399-2c6e-4be3-9cb2-ccb8309ffccc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal">
+      <UniqueIdentifier>{3d004cb2-fee1-4fb2-bc51-977600327be0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Lope">
+      <UniqueIdentifier>{7156949e-3f5e-4e33-8f65-694bfb13113f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\CoffreFort">
+      <UniqueIdentifier>{537e2db2-7dfa-4a18-be50-3995eea105c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
