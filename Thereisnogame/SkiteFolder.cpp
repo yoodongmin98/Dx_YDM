@@ -11,6 +11,7 @@
 #include "BoxCroix_Skite.h"
 #include "LevelStateManager.h"
 #include "SkiteIcon.h"
+#include "FolderBackGround.h"
 
 
 
@@ -34,6 +35,7 @@ void SkiteFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(SkiteFoldersCollision))
 	{
 		LevelStateManager::MG->PlusCollisionValue();
+		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		SkitePtr=GetLevel()->CreateActor<Skite>();
 		SkiteBannerPtr=GetLevel()->CreateActor<SkiteBanner>();
 		BoxCroix_SkitePtr= GetLevel()->CreateActor<BoxCroix_Skite>();
@@ -59,10 +61,12 @@ void SkiteFolder::BoxCroixDeathCheck()
 	{
 		SkitePtr.get()->Death();
 		SkiteBannerPtr.get()->Death();
+		FolderBackGroundPtr.get()->Death();
 		if (true == LevelStateManager::MG->Get18OpenTrue()
 			&& nullptr!=SkiteIconPtr.get())
 		{
 			SkiteIconPtr.get()->Death();
+
 		}
 	}
 }

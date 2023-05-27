@@ -34,7 +34,8 @@ private:
 	std::shared_ptr<class PinBall_Icon> PinBall_IconPtr;
 	
 	std::shared_ptr<class TrashCanFolderPanel> TrashCanFolderPanelPtr;
-	
+
+	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr = nullptr;
 	std::shared_ptr<class BoxCroix_TrashCanFolder> BoxCroix_TrashCanFolderPtr;
 
 

@@ -29,6 +29,7 @@ private:
 	std::shared_ptr<class SuperPrivate> SuperPrivatePtr;
 	std::shared_ptr<class Truth1Icon> Truth1IconPtr;
 	std::shared_ptr<class PrivatePanel> PrivatePanelPtr;
+	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr = nullptr;
 	std::shared_ptr<class BoxCroix_PR_Super> BoxCroix_PR_SuperPtr;
 
 	std::shared_ptr<class SkiteCalling> SkiteCallingPtr;

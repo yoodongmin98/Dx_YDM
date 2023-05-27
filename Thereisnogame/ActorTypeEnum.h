@@ -2,9 +2,11 @@
 
 enum class ActorTypeEnum
 {
+	//Render용
 	BackActor,
-	ScreenActor,//Render용
-	//상호작용
+	FolderBackGround,
+	ScreenActor,
+	//상호작용(Collision)
 	Nut_Close,
 	Nut_Open,
 	Cup_Full,
@@ -12,6 +14,7 @@ enum class ActorTypeEnum
 	Picture,
 	ZipWip,
 	LockFolder,
+	//AlphaCircle,Mouse
 	Alpha,
 	Mouse
 };

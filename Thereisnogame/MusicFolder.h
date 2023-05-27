@@ -34,6 +34,7 @@ private:
 	std::shared_ptr<class MediaPlay> MediaPlayPtr = nullptr;
 	std::shared_ptr<class MediaPause> MediaPausePtr = nullptr;
 	std::shared_ptr<class MediaPicture> MediaPicturePtr = nullptr;
+	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr = nullptr;
 	std::shared_ptr<class BoxCroix_Music> BoxCroixPtr = nullptr;
 };
 

@@ -29,6 +29,7 @@ private:
 	std::shared_ptr<class DayIcon> DayIconPtr = nullptr;
 	std::shared_ptr<class DrawerIcon> DrawerIconPtr = nullptr;
 	std::shared_ptr<class CodeIcon> CodeIconPtr = nullptr;
+	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr = nullptr;
 	std::shared_ptr<class BoxCroix_PictureFolder> BoxCroix_PictureFolderPtr = nullptr;
 
 };

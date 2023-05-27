@@ -12,6 +12,7 @@
 #include "PinBall_Icon.h"
 #include "TrashCanFolderPanel.h"
 #include "BoxCroix_TrashCanFolder.h"
+#include "FolderBackGround.h"
 
 TrashcanFolder::TrashcanFolder()
 {
@@ -35,6 +36,7 @@ void TrashcanFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(TrashcanFolderCollision))
 	{
 		LevelStateManager::MG->PlusCollisionValue();
+		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		TrashCanFolderPanelPtr = GetLevel()->CreateActor<TrashCanFolderPanel>();
 		GoodbyeIconPtr = GetLevel()->CreateActor<GoodbyeIcon>();
 		PasswordIconPtr = GetLevel()->CreateActor<PasswordIcon>();
@@ -73,6 +75,7 @@ void TrashcanFolder::BoxCroixDeathCheck()
 {
 	if (true == BoxCroix_TrashCanFolderPtr->IsDeath())
 	{
+		FolderBackGroundPtr.get()->Death();
 		TrashCanFolderPanelPtr.get()->Death();
 		GoodbyeIconPtr.get()->Death();
 		PasswordIconPtr.get()->Death();

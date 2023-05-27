@@ -12,6 +12,7 @@
 #include "PictureFolderPanel.h"
 #include "BoxCroix_PictureFolder.h"
 #include "LevelStateManager.h"
+#include "FolderBackGround.h"
 
 PictureFolder::PictureFolder()
 {
@@ -33,6 +34,7 @@ void PictureFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(PictureFoldersCollision))
 	{
 		LevelStateManager::MG->PlusCollisionValue();
+		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		PictureFolderPanelPtr=GetLevel()->CreateActor<PictureFolderPanel>();
 		DayIconPtr=GetLevel()->CreateActor<DayIcon>();
 		DrawerIconPtr=GetLevel()->CreateActor<DrawerIcon>();
@@ -54,6 +56,7 @@ void PictureFolder::BoxCroixDeathCheck()
 {
 	if (true == BoxCroix_PictureFolderPtr->IsDeath())
 	{
+		FolderBackGroundPtr.get()->Death();
 		PictureFolderPanelPtr.get()->Death();
 		DayIconPtr.get()->Death();
 		DrawerIconPtr.get()->Death();

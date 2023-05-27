@@ -23,6 +23,7 @@
 #include "ClockDayandNight.h"
 #include "BoxCroix_ClockDay.h"
 #include "ClockBranch.h"
+#include "FolderBackGround.h"
 
 ClockFolder::ClockFolder()
 {
@@ -52,6 +53,7 @@ void ClockFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(ClockFoldersCollision)&& 0==LevelStateManager::MG->GetClockValue())
 	{
 		LevelStateManager::MG->PlusCollisionValue();
+		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		ClockPaddle0Ptr=GetLevel()->CreateActor<ClockPaddle0>();
 		ClockPaddle1Ptr=GetLevel()->CreateActor<ClockPaddle1>();
 		ClockPaddle2Ptr=GetLevel()->CreateActor<ClockPaddle2>();
@@ -101,7 +103,7 @@ void ClockFolder::BoxCroixDeathCheck()
 		ClockPaddle8Ptr.get()->Death();
 		ClockPaddle9Ptr.get()->Death();
 		ClockUnderBarPtr.get()->Death();
-		BoxCroix_ClockPanelPtr.get()->Death();
+		FolderBackGroundPtr.get()->Death();
 	}
 	if (nullptr != BoxCroix_ClockDayPtr)
 	{

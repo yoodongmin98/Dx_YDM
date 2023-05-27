@@ -13,6 +13,7 @@
 #include "BoxCroix_PR_Super.h"
 #include "SkiteCalling.h"
 #include "SkiteCallingMissed.h"
+#include "FolderBackGround.h"
 
 PrivateFolder::PrivateFolder()
 {
@@ -34,6 +35,7 @@ void PrivateFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(PrivateFoldersCollision))
 	{
 		LevelStateManager::MG->PlusCollisionValue();
+		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		PrivatePanelPtr = GetLevel()->CreateActor<PrivatePanel>();
 		SuperPrivatePtr = GetLevel()->CreateActor<SuperPrivate>();
 		Truth1IconPtr = GetLevel()->CreateActor<Truth1Icon>();
@@ -57,6 +59,7 @@ void PrivateFolder::BoxCroixDeathCheck()
 		PrivatePanelPtr.get()->Death();
 		SuperPrivatePtr.get()->Death();
 		Truth1IconPtr.get()->Death();
+		FolderBackGroundPtr.get()->Death();
 		if (true == LevelStateManager::MG->Get18OpenTrue()
 			&&true== CallingCreate)
 		{

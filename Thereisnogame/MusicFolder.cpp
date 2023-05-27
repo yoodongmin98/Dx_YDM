@@ -22,7 +22,7 @@
 #include "MediaPicture.h"
 #include "BoxCroix_Music.h"
 #include "LevelStateManager.h"
-
+#include "FolderBackGround.h"
 
 MusicFolder::MusicFolder()
 {
@@ -46,6 +46,7 @@ void MusicFolder::Update(float _DeltaTime)
 		LevelStateManager::MG->PlusCollisionValue();
 		LevelStateManager::MG->SetIsRainfalse();
 		LevelStateManager::MG->SetIsWalNuttrue();
+		FolderBackGroundPtr= GetLevel()->CreateActor<FolderBackGround>();
 		MusicFolderPanelPtr=GetLevel()->CreateActor<MusicFolderPanel>();
 		MusicNote_ArchivePtr=GetLevel()->CreateActor<MusicNote_Archive>();
 		MusicNote_RadioPtr=GetLevel()->CreateActor<MusicNote_Radio>();
@@ -81,5 +82,6 @@ void MusicFolder::BoxCroixDeathCheck()
 		MediaPlayPtr.get()->Death();
 		MediaPausePtr.get()->Death();
 		MediaPicturePtr.get()->Death();
+		FolderBackGroundPtr.get()->Death();
 	}
 }
