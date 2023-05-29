@@ -70,6 +70,7 @@ void ClockFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(ClockFoldersCollision) && 1 <= LevelStateManager::MG->GetClockValue())
 	{
 		LevelStateManager::MG->PlusCollisionValue();
+		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		ClockDayandNightPtr = GetLevel()->CreateActor<ClockDayandNight>();
 		BoxCroix_ClockDayPtr = GetLevel()->CreateActor<BoxCroix_ClockDay>();
 		if (2 != LevelStateManager::MG->GetClockValue())
@@ -90,7 +91,8 @@ void ClockFolder::Render(float _Delta)
 
 void ClockFolder::BoxCroixDeathCheck()
 {
-	if (true == BoxCroix_ClockPanelPtr->IsDeath()||true== ClockUnderBarPtr->IsDeath())
+	if ((true == BoxCroix_ClockPanelPtr->IsDeath()||true== ClockUnderBarPtr->IsDeath())
+		&&nullptr== BoxCroix_ClockDayPtr)
 	{
 		ClockPaddle0Ptr.get()->Death();
 		ClockPaddle1Ptr.get()->Death();
@@ -103,17 +105,17 @@ void ClockFolder::BoxCroixDeathCheck()
 		ClockPaddle8Ptr.get()->Death();
 		ClockPaddle9Ptr.get()->Death();
 		ClockUnderBarPtr.get()->Death();
-		FolderBackGroundPtr.get()->Death();
 		BoxCroix_ClockPanelPtr.get()->Death();
+		FolderBackGroundPtr.get()->Death();
 	}
 	if (nullptr != BoxCroix_ClockDayPtr)
 	{
 		if (1 <= LevelStateManager::MG->GetClockValue()
 			&& true == BoxCroix_ClockDayPtr->IsDeath())
 		{
+			FolderBackGroundPtr.get()->Death();
 			ClockDayandNightPtr.get()->Death();
 			ClockBranchPtr.get()->Death();
 		}
-
 	}
 }
