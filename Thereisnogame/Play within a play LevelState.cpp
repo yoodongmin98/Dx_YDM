@@ -21,8 +21,8 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::ClickCordon:
 		ClickCordonStart();
 		break;
-	case Chap1LevelState::Test:
-		TestStart();
+	case Chap1LevelState::CreateBoard:
+		CreateBoardStart();
 		break;
 	default:
 		break;
@@ -33,8 +33,8 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::ClickCordon:
 		ClickCordonEnd();
 		break;
-	case Chap1LevelState::Test:
-		TestEnd();
+	case Chap1LevelState::CreateBoard:
+		CreateBoardEnd();
 		break;
 	default:
 		break;
@@ -48,14 +48,14 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 	case Chap1LevelState::ClickCordon:
 		ClickCordonUpdate(_DeltaTime);
 		break;
-	case Chap1LevelState::Test:
-		TestUpdate(_DeltaTime);
+	case Chap1LevelState::CreateBoard:
+		CreateBoardUpdate(_DeltaTime);
 		break;
 	default:
 		break;
 	}
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void PlaywithinaplayLevel::ClickCordonStart()
 {
 	AlphaCirclePtr = CreateActor<AlphaCircle>();
@@ -65,21 +65,27 @@ void PlaywithinaplayLevel::ClickCordonUpdate(float _DeltaTime)
 	std::function<void()> Functions;
 	Functions = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
 	Functions();
+	//if(Plaque두드리고 사운드가 끝나면) changeState로 바꿔야함
+
 }
 void PlaywithinaplayLevel::ClickCordonEnd()
 {
 
 }
 
-void PlaywithinaplayLevel::TestStart()
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::CreateBoardStart()
 {
 
 }
-void PlaywithinaplayLevel::TestUpdate(float _DeltaTime)
+void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 {
 
 }
-void PlaywithinaplayLevel::TestEnd()
+void PlaywithinaplayLevel::CreateBoardEnd()
 {
 
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////

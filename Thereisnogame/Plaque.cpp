@@ -27,14 +27,22 @@ void Plaque::Start()
 
 void Plaque::Update(float _DeltaTime)
 {
-	if (true == ClickCheck(PlaquesCollision) && Chap1LevelState::ClickCordon==PlaywithinaplayLevel::LM->GetLevelState())
+	if (Chap1LevelState::ClickCordon == PlaywithinaplayLevel::LM->GetLevelState())
 	{
 		PlaquesCollision->On();
-		ClickCount++;
+		if (true == ClickCheck(PlaquesCollision))
+		{
+			ClickCount++;
+		}
+	}
+	else
+	{
+		PlaquesCollision->Off();
 	}
 	if (ClickCount > 5)
 	{
-		int a = 0;
+		//юс╫ц
+		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::CreateBoard);
 	}
 }
 
