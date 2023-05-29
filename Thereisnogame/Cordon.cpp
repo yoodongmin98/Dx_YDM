@@ -44,10 +44,9 @@ void Cordon::Update(float _DeltaTime)
 	}
 	if (true == CordonsCollision->IsDeath())
 	{
-		/*Times += _DeltaTime;*/
-		std::function<void(float)> CordonFunctional;
-		CordonFunctional = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get(), std::placeholders::_1);
-		CordonFunctional(_DeltaTime);
+		std::function<void()> CordonFunctional;
+		CordonFunctional = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
+		CordonFunctional();
 		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,Values }, _DeltaTime));
 	}
 	

@@ -23,7 +23,6 @@ private:
 
 	std::shared_ptr<class BackCurtain> BackCurtainPtr;
 	float Values = 600.0f;
-	float Times = 0.0f;
 	bool MoveValue = true;
 
 };
