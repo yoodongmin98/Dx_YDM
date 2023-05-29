@@ -8,6 +8,7 @@
 //Actor
 #include "AlphaCircle.h"
 #include "BackCurtain.h"
+#include "Chain.h"
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 {
@@ -77,11 +78,15 @@ void PlaywithinaplayLevel::ClickCordonEnd()
 
 void PlaywithinaplayLevel::CreateBoardStart()
 {
-
+	ChainPtr = CreateActor<Chain>();
+	ChainPtr->SetChainLiveTime(7);
 }
 void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 {
-
+	CreateBoardTime += _DeltaTime;
+	std::function<void()> Functions;
+	Functions = std::bind(&BackCurtain::CurtainClose, BackCurtainPtr.get());
+	Functions();
 }
 void PlaywithinaplayLevel::CreateBoardEnd()
 {

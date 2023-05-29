@@ -47,7 +47,8 @@ private:
 	//Actor
 	std::shared_ptr<class BackCurtain> BackCurtainPtr;
 	std::shared_ptr<class AlphaCircle> AlphaCirclePtr;
-
+	std::shared_ptr<class Chain> ChainPtr;
+	
 
 
 	///State
@@ -58,5 +59,6 @@ private:
 	void CreateBoardStart();
 	void CreateBoardUpdate(float _DeltaTime);
 	void CreateBoardEnd();
+	float CreateBoardTime = 0.0f;
 };
 

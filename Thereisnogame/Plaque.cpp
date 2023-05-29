@@ -39,9 +39,8 @@ void Plaque::Update(float _DeltaTime)
 	{
 		PlaquesCollision->Off();
 	}
-	if (ClickCount > 5)
+	if (ClickCount > 5 && true == ClickCheck(PlaquesCollision))
 	{
-		//юс╫ц
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::CreateBoard);
 	}
 }
