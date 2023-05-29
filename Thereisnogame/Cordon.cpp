@@ -20,8 +20,9 @@ Cordon::~Cordon()
 
 void Cordon::Start()
 {
-	Cordons = Init(Cordons, "Cordon.png", { 119,693 }, { 400,700,0 });
-	CordonsCollision = CollisionInit(CordonsCollision, { 119,693 }, { 400,700,0 });
+	BackCurtainPtr=GetLevel()->CreateActor<BackCurtain>();
+	Cordons = Init(Cordons, "Cordon.png", { 119,693,1 }, { 400,700,0 });
+	CordonsCollision = CollisionInit(CordonsCollision, { 119,693,1 }, { 400,700,0 });
 	CordonsCollision->Off();
 }
 
@@ -43,9 +44,13 @@ void Cordon::Update(float _DeltaTime)
 	}
 	if (true == CordonsCollision->IsDeath())
 	{
-		std::function<void(int)> CordonFunctional;
+		/*Times += _DeltaTime;*/
+		std::function<void(float)> CordonFunctional;
+		CordonFunctional = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get(), std::placeholders::_1);
+		CordonFunctional(_DeltaTime);
 		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,Values }, _DeltaTime));
 	}
+	
 }
 
 void Cordon::Render(float _Delta)

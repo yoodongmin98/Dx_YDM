@@ -52,7 +52,6 @@ void PlaywithinaplayLevel::Start()
 	{
 		CreateActor<C1_BackGround>();
 		CreateActor<Plaque>();
-		CreateActor<BackCurtain>();
 		CreateActor<Cordon>();
 		
 	}

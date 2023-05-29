@@ -17,8 +17,8 @@ public:
 	BackCurtain& operator=(BackCurtain&& _Other) noexcept = delete;
 
 
-	void CurtainOpen(int _Speed);
-	void CurtainClose(int _Speed);
+	void CurtainOpen(float _DeltaTime);
+	void CurtainClose(float _DeltaTime);
 	
 protected:
 	void Start();

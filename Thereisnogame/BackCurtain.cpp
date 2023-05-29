@@ -39,12 +39,12 @@ void BackCurtain::Render(float _Delta)
 };
 
 //Functional È£Ãâ¿ë(Chapter1)
-void BackCurtain::CurtainOpen(int _Speed)
+void BackCurtain::CurtainOpen(float _DeltaTime)
 {
-	//LeftCurtain->GetTransform()->SetLocalPosition(float4::LerpClamp({}))
-	//RightCurtain->GetTransform()->SetLocalPosition(float4::LerpClamp({}))
+	LeftCurtain->GetTransform()->AddLocalPosition({ -1,0,0 });
+	LeftCurtain->GetTransform()->AddLocalPosition({ 1,0,0 });
 }
-void BackCurtain::CurtainClose(int _Speed)
+void BackCurtain::CurtainClose(float _DeltaTime)
 {
 
 }
