@@ -11,7 +11,10 @@
 
 
 //Actor
-
+#include "C1_BackGround.h"
+#include "Mouse.h"
+#include "AlphaCircle.h"
+#include "BackGround_White.h"
 
 PlaywithinaplayLevel::PlaywithinaplayLevel()
 {
@@ -46,7 +49,9 @@ void PlaywithinaplayLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
 	{
-		
+		CreateActor<C1_BackGround>();
+		CreateActor<Mouse>();
+		CreateActor<AlphaCircle>();
 	}
 
 }

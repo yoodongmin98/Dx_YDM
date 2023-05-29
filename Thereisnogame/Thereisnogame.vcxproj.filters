@@ -559,6 +559,9 @@
     <ClCompile Include="BalloonSecure.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClCompile>
+    <ClCompile Include="BackGround_White.cpp">
+      <Filter>CommonUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1118,6 +1121,9 @@
     </ClInclude>
     <ClInclude Include="BalloonSecure.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround_White.h">
+      <Filter>CommonUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

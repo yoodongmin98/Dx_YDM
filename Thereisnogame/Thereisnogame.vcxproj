@@ -166,6 +166,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
+    <ClInclude Include="BackGround_White.h" />
     <ClInclude Include="BackSqirrelKey.h" />
     <ClInclude Include="BalloonSecure.h" />
     <ClInclude Include="Board.h" />
@@ -359,6 +360,7 @@
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BackGround_White.cpp" />
     <ClCompile Include="BackSqirrelKey.cpp" />
     <ClCompile Include="BalloonSecure.cpp" />
     <ClCompile Include="Board.cpp" />
