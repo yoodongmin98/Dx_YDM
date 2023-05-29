@@ -28,10 +28,10 @@ void Cordon::Start()
 
 void Cordon::Update(float _DeltaTime)
 {
-	if (GetLiveTime() > 5.0f&& true==MoveValue)
+	if (GetLiveTime() > 1.0f&& true==MoveValue)
 	{
 		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-Values }, _DeltaTime));
-		if (GetTransform()->GetLocalPosition().y < -(Values - 5))
+		//if (GetTransform()->GetLocalPosition().y < -(Values - 5))
 		{
 			CordonsCollision->On();
 			MoveValue = false;

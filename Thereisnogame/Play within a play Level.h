@@ -22,7 +22,9 @@ protected:
 	void Update(float _DeltaTime) override;
 
 private:
-
-
+	std::shared_ptr<class Vis> Vis1;
+	std::shared_ptr<class Vis> Vis2;
+	std::shared_ptr<class Vis> Vis3;
+	std::shared_ptr<class Vis> Vis4;
 };
 

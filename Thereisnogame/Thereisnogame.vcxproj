@@ -357,6 +357,7 @@
     <ClInclude Include="Truth3Icon.h" />
     <ClInclude Include="UltraPrivate.h" />
     <ClInclude Include="USMissIcon.h" />
+    <ClInclude Include="Vis.h" />
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
@@ -557,6 +558,7 @@
     <ClCompile Include="Truth3Icon.cpp" />
     <ClCompile Include="UltraPrivate.cpp" />
     <ClCompile Include="USMissIcon.cpp" />
+    <ClCompile Include="Vis.cpp" />
     <ClCompile Include="ZipWipFolder.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
 #include "PrecompileHeader.h"
-#include "Cordon.h"
+#include "Vis.h"
 
 //Base
 //PlatForm
@@ -10,53 +10,33 @@
 //Actor
 #include "AlphaCircle.h"
 #include "BackCurtain.h"
-Cordon::Cordon()
+Vis::Vis()
 {
 }
 
-Cordon::~Cordon()
+Vis::~Vis()
 {
 }
 
-void Cordon::Start()
+void Vis::Start()
 {
-	BackCurtainPtr = GetLevel()->CreateActor<BackCurtain>();
-	Cordons = Init(Cordons, "Cordon.png", { 119,693,1 }, { 400,700,0 });
-	CordonsCollision = CollisionInit(CordonsCollision, { 119,693,1 }, { 400,700,0 });
-	CordonsCollision->Off();
+	Viss = Init(Viss, "Vis.png", { 31,31 }, float4::Zero);
+	VissCollision = CollisionInit(VissCollision, { 31,31 }, float4::Zero);
+	
 }
 
-void Cordon::Update(float _DeltaTime)
+void Vis::Update(float _DeltaTime)
 {
-	if (GetLiveTime() > 5.0f && true == MoveValue)
+	if (true == SettingBools && float4::Zero != Position)
 	{
-		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-Values }, _DeltaTime));
-		if (GetTransform()->GetLocalPosition().y < -(Values - 5))
-		{
-			CordonsCollision->On();
-			MoveValue = false;
-		}
+		Viss->GetTransform()->SetLocalPosition(Position);
+		VissCollision->GetTransform()->SetLocalPosition(Position);
+		Viss->GetTransform()->SetLocalRotation(RotateValue);
+		SettingBools = false;
 	}
-	if (true == ClickCheck(CordonsCollision))
-	{
-		CordonsCollision->Death();
-		GetLevel()->CreateActor<AlphaCircle>();
-	}
-	CordonCollisionCheck(_DeltaTime);
 }
 
-void Cordon::Render(float _Delta)
+void Vis::Render(float _Delta)
 {
 
 };
-
-void Cordon::CordonCollisionCheck(float _DeltaTime)
-{
-	if (true == CordonsCollision->IsDeath())
-	{
-		std::function<void()> CordonFunctional;
-		CordonFunctional = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
-		CordonFunctional();
-		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,Values }, _DeltaTime * 0.5f));
-	}
-}

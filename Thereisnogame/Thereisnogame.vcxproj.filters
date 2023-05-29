@@ -532,12 +532,6 @@
     <ClCompile Include="TitleMetal.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClCompile>
-    <ClCompile Include="Plaque.cpp">
-      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
-    </ClCompile>
-    <ClCompile Include="Board.cpp">
-      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
-    </ClCompile>
     <ClCompile Include="CoffreFort.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
     </ClCompile>
@@ -561,6 +555,15 @@
     </ClCompile>
     <ClCompile Include="BackGround_White.cpp">
       <Filter>CommonUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Vis.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\InterActor</Filter>
+    </ClCompile>
+    <ClCompile Include="Plaque.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\InterActor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1095,12 +1098,6 @@
     <ClInclude Include="TitleMetal.h">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClInclude>
-    <ClInclude Include="Plaque.h">
-      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
-    </ClInclude>
-    <ClInclude Include="Board.h">
-      <Filter>Chapter1.0_Play within a play\Actor\BackActor</Filter>
-    </ClInclude>
     <ClInclude Include="CoffreFort.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
     </ClInclude>
@@ -1124,6 +1121,15 @@
     </ClInclude>
     <ClInclude Include="BackGround_White.h">
       <Filter>CommonUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Vis.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\InterActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Plaque.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\InterActor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1360,6 +1366,12 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\CoffreFort">
       <UniqueIdentifier>{537e2db2-7dfa-4a18-be50-3995eea105c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Etc">
+      <UniqueIdentifier>{286eb904-3e1b-4664-94de-1227d4ff3912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\InterActor">
+      <UniqueIdentifier>{5661bfaf-527c-4e79-a459-34fc61c77c97}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
