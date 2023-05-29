@@ -13,8 +13,6 @@ public:
 	Cordon& operator=(const Cordon& _Other) = delete;
 	Cordon& operator=(Cordon&& _Other) noexcept = delete;
 
-	void CordonCollisionCheck(float _DeltaTime);
-
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -23,7 +21,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Cordons; 
 	std::shared_ptr<class GameEngineCollision> CordonsCollision;
 
-	std::shared_ptr<class BackCurtain> BackCurtainPtr;
 	float Values = 600.0f;
 	bool MoveValue = true;
 	bool CordonMoveBool = true;

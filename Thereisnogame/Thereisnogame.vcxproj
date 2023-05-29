@@ -425,6 +425,7 @@
     <ClCompile Include="PinBall_Score.cpp" />
     <ClCompile Include="PinBall_SideTable.cpp" />
     <ClCompile Include="Plaque.cpp" />
+    <ClCompile Include="Play within a play LevelState.cpp" />
     <ClCompile Include="Private18.cpp" />
     <ClCompile Include="AlphaCircle.cpp" />
     <ClCompile Include="Arrow.cpp" />

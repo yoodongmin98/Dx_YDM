@@ -37,7 +37,7 @@ public:
 	void Flagfunction(float _DeltaTime);
 
 	float FlagValueSet(int SetValue,int _iValue);
-	float FlagLeftValueSet(int _iValue);
+	
 	//플래그 눌렀냐?
 	void SetIsClicktheFlagTrue()
 	{

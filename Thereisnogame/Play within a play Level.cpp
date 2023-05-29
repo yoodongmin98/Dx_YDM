@@ -18,8 +18,11 @@
 #include "Cordon.h"
 #include "Vis.h"
 
+
+PlaywithinaplayLevel* PlaywithinaplayLevel::LM;
 PlaywithinaplayLevel::PlaywithinaplayLevel()
 {
+	LM = this;
 }
 
 PlaywithinaplayLevel::~PlaywithinaplayLevel()
@@ -69,15 +72,17 @@ void PlaywithinaplayLevel::Start()
 		Vis4->SetVisPosition({ 180,-25 });
 		Vis4->SetVisRotate({ 0,0,-135 });
 
-		
+		BackCurtainPtr=CreateActor<BackCurtain>();
 		CreateActor<Cordon>();
 	}
 	{
 		CreateActor<Mouse>();
 	}
+
+	ChangeState(Chap1LevelState::None);
 }
 
 void PlaywithinaplayLevel::Update(float _DeltaTime)
 {
-
+	UpdateState(_DeltaTime);
 }

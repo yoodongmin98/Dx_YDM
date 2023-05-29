@@ -52,5 +52,12 @@ void BackCurtain::CurtainOpen()
 }
 void BackCurtain::CurtainClose()
 {
-
+	if (LeftCurtain->GetTransform()->GetLocalPosition().x > -100.0f)
+	{
+		LeftCurtain->GetTransform()->AddLocalPosition({ 0.8f,0,0 });
+	}
+	if (RightCurtain->GetTransform()->GetLocalPosition().x < 100.0f)
+	{
+		RightCurtain->GetTransform()->AddLocalPosition({ -0.8f,0,0 });
+	}
 }
