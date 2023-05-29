@@ -116,6 +116,15 @@ void MainMenuLevel::Start()
 
 void MainMenuLevel::Update(float _DeltaTime)
 {
+	//юс╫ц©К
+	if (GameEngineInput::IsDown("TestKey2"))
+	{
+		GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
+	}
+	if (GameEngineInput::IsDown("TestKey3"))
+	{
+		GameEngineCore::ChangeLevel("FakeProgramLevel");
+	}
 	UpdateState(_DeltaTime);
 }
 

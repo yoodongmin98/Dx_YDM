@@ -70,7 +70,14 @@ void FakeProgramLevel::Start()
 
 void FakeProgramLevel::Update(float _DeltaTime)
 {
-	
+	if (GameEngineInput::IsDown("TestKey1"))
+	{
+		GameEngineCore::ChangeLevel("MainMenuLevel");
+	}
+	if (GameEngineInput::IsDown("TestKey2"))
+	{
+		GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
+	}
 }
 
 void FakeProgramLevel::FolderCreate()
