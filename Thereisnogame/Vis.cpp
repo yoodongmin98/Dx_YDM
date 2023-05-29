@@ -20,7 +20,7 @@ Cordon::~Cordon()
 
 void Cordon::Start()
 {
-	BackCurtainPtr=GetLevel()->CreateActor<BackCurtain>();
+	BackCurtainPtr = GetLevel()->CreateActor<BackCurtain>();
 	Cordons = Init(Cordons, "Cordon.png", { 119,693,1 }, { 400,700,0 });
 	CordonsCollision = CollisionInit(CordonsCollision, { 119,693,1 }, { 400,700,0 });
 	CordonsCollision->Off();
@@ -28,7 +28,7 @@ void Cordon::Start()
 
 void Cordon::Update(float _DeltaTime)
 {
-	if (GetLiveTime() > 5.0f&& true==MoveValue)
+	if (GetLiveTime() > 5.0f && true == MoveValue)
 	{
 		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-Values }, _DeltaTime));
 		if (GetTransform()->GetLocalPosition().y < -(Values - 5))

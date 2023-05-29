@@ -20,7 +20,7 @@ protected:
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
-	std::shared_ptr<class GameEngineSpriteRenderer> Cordons; 
+	std::shared_ptr<class GameEngineSpriteRenderer> Cordons;
 	std::shared_ptr<class GameEngineCollision> CordonsCollision;
 
 	std::shared_ptr<class BackCurtain> BackCurtainPtr;

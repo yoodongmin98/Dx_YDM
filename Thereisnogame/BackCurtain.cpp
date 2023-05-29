@@ -43,11 +43,11 @@ void BackCurtain::CurtainOpen()
 {
 	if (LeftCurtain->GetTransform()->GetLocalPosition().x > -1000.0f)
 	{
-		LeftCurtain->GetTransform()->AddLocalPosition({ -1,0,0 });
+		LeftCurtain->GetTransform()->AddLocalPosition({ -0.8f,0,0 });
 	}
 	if (RightCurtain->GetTransform()->GetLocalPosition().x < 1000.0f)
 	{
-		RightCurtain->GetTransform()->AddLocalPosition({ 1,0,0 });
+		RightCurtain->GetTransform()->AddLocalPosition({ 0.8f,0,0 });
 	}
 }
 void BackCurtain::CurtainClose()
