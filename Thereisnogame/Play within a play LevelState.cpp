@@ -9,6 +9,7 @@
 #include "AlphaCircle.h"
 #include "BackCurtain.h"
 #include "Chain.h"
+#include "Board.h"
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 {
@@ -25,6 +26,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::CreateBoard:
 		CreateBoardStart();
 		break;
+	case Chap1LevelState::SetBoard:
+		SetBoardStart();
+		break;
 	default:
 		break;
 	}
@@ -36,6 +40,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::CreateBoard:
 		CreateBoardEnd();
+		break;
+	case Chap1LevelState::SetBoard:
+		SetBoardEnd();
 		break;
 	default:
 		break;
@@ -51,6 +58,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 		break;
 	case Chap1LevelState::CreateBoard:
 		CreateBoardUpdate(_DeltaTime);
+		break;
+	case Chap1LevelState::SetBoard:
+		SetBoardUpdate(_DeltaTime);
 		break;
 	default:
 		break;
@@ -75,7 +85,7 @@ void PlaywithinaplayLevel::ClickCordonEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool BoardCreateBool = true;
 void PlaywithinaplayLevel::CreateBoardStart()
 {
 	ChainPtr = CreateActor<Chain>();
@@ -85,10 +95,38 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 {
 	CreateBoardTime += _DeltaTime;
 	std::function<void()> Functions;
-	Functions = std::bind(&BackCurtain::CurtainClose, BackCurtainPtr.get());
-	Functions();
+	if (ChainPtr->GetLiveTime() < 3.0f || ChainPtr->GetLiveTime() > 5.0f && ChainPtr->GetLiveTime() < 9.0f)
+	{
+		Functions = std::bind(&BackCurtain::CurtainClose, BackCurtainPtr.get());
+		Functions();
+	}
+	if (ChainPtr->GetLiveTime() > 3.0f && ChainPtr->GetLiveTime() < 5.0f || ChainPtr->GetLiveTime() > 9.0f && ChainPtr->GetLiveTime() < 15.0f)
+	{
+		Functions = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
+		Functions();
+	}
+	if (ChainPtr->GetLiveTime() > 6.0f&& true==BoardCreateBool)
+	{
+		CreateActor<Board>();
+		BoardCreateBool = false;
+	}
 }
 void PlaywithinaplayLevel::CreateBoardEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::SetBoardStart()
+{
+
+}
+void PlaywithinaplayLevel::SetBoardUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::SetBoardEnd()
 {
 
 }

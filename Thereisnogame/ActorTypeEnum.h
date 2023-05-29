@@ -4,6 +4,8 @@ enum class ActorTypeEnum
 {
 	//Render용
 	BackActor,
+	Curtain,
+	Cordon,
 	FolderBackGround,
 	ScreenActor,
 	//상호작용(Collision)

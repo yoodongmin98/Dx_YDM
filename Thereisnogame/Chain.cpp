@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "Chain.h"
-
+#include "ActorTypeEnum.h"
 //Base
 #include <GameEngineBase/GameEngineDirectory.h>
 //PlatForm
@@ -25,8 +25,9 @@ void Chain::Start()
 		AnimationImageLoad("Chain");
 		ChainLoad = false;
 	}
-
+	LeftChain = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Alpha);
 	LeftChain=AnimationInit(LeftChain, "BandePellicule0.png", { 121,720 }, { -700,0 }, "ChainMove", "Chain",3, 0.05f, true);
+	RightChain = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Alpha);
 	RightChain = AnimationInit(RightChain, "BandePellicule0.png", { 121,720 }, { 700,0 }, "ChainMove", "Chain",3, 0.05f, true);
 	RightChain->SetFlipX();
 

@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "BackCurtain.h"
-
+#include "ActorTypeEnum.h"
 //PlatForm
 #include <GameEnginePlatform/GameEngineInput.h>
 #include <GameEnginePlatform/GameEngineWindow.h>
@@ -22,9 +22,15 @@ BackCurtain::~BackCurtain()
 void BackCurtain::Start()
 {
 	//distortion shader적용해야함
-	LeftCurtain = Init(LeftCurtain, "Rideaux.png", { 708.0f, 720.0f,1.0f }, { -290.0f,0.0f,0.0f });
+	LeftCurtain = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Curtain);
+	LeftCurtain->SetScaleToTexture("Rideaux.png");
+	LeftCurtain->GetTransform()->SetLocalScale({ 708.0f, 720.0f,1.0f });
+	LeftCurtain->GetTransform()->SetLocalPosition({ -290.0f,0.0f,0.0f });
 
-	RightCurtain = Init(RightCurtain, "Rideaux.png", { 708.0f, 720.0f,1.0f }, { 290.0f,0.0f,0.0f });
+	RightCurtain = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Curtain);
+	RightCurtain->SetScaleToTexture("Rideaux.png");
+	RightCurtain->GetTransform()->SetLocalScale({ 708.0f, 720.0f,1.0f });
+	RightCurtain->GetTransform()->SetLocalPosition({ 290.0f,0.0f,0.0f });
 	RightCurtain->SetFlipX();
 }
 

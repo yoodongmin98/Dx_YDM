@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "Cordon.h"
-
+#include "ActorTypeEnum.h"
 //Base
 //PlatForm
 //Core
@@ -21,7 +21,11 @@ Cordon::~Cordon()
 
 void Cordon::Start()
 {
-	Cordons = Init(Cordons, "Cordon.png", { 119,693,1 }, { 400,700,0 });
+	Cordons = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::Cordon);
+	Cordons->SetScaleToTexture("Cordon.png");
+	Cordons->GetTransform()->SetLocalScale({ 119,693,1 });
+	Cordons->GetTransform()->SetLocalPosition({ 400,700,0 });
+
 	CordonsCollision = CollisionInit(CordonsCollision, { 119,693,1 }, { 400,700,0 });
 	CordonsCollision->Off();
 }
@@ -37,7 +41,7 @@ void Cordon::Update(float _DeltaTime)
 			MoveValue = false;
 		}
 	}
-	if (true == ClickCheck(CordonsCollision))
+	if (true == ClickCheck(CordonsCollision)&& Chap1LevelState::None==PlaywithinaplayLevel::LM->GetLevelState())
 	{
 		CordonsCollision->Death();
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::ClickCordon);

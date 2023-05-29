@@ -7,6 +7,7 @@ enum class Chap1LevelState
 	None,
 	ClickCordon,
 	CreateBoard,
+	SetBoard,
 };
 // Ό³Έν :
 class PlaywithinaplayLevel : public GameEngineLevel
@@ -60,5 +61,9 @@ private:
 	void CreateBoardUpdate(float _DeltaTime);
 	void CreateBoardEnd();
 	float CreateBoardTime = 0.0f;
+
+	void SetBoardStart();
+	void SetBoardUpdate(float _DeltaTime);
+	void SetBoardEnd();
 };
 

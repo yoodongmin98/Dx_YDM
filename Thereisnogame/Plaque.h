@@ -21,8 +21,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Plaques;
 	std::shared_ptr<class GameEngineCollision> PlaquesCollision;
 
-	std::shared_ptr<class BackCurtain> BackCurtainPtr;
-
 	int ClickCount = 0;
 };
 
