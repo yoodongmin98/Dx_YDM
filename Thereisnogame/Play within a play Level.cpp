@@ -6,8 +6,6 @@
 #include <GameEnginePlatform/GameEngineInput.h>
 //Core
 #include <GameEngineCore/GameEngineCamera.h>
-#include <GameEngineCore/GameEngineTexture.h>
-
 
 
 //Actor
@@ -15,6 +13,9 @@
 #include "Mouse.h"
 #include "AlphaCircle.h"
 #include "BackGround_White.h"
+#include "Plaque.h"
+#include "BackCurtain.h"
+#include "Cordon.h"
 
 PlaywithinaplayLevel::PlaywithinaplayLevel()
 {
@@ -47,13 +48,17 @@ void PlaywithinaplayLevel::Start()
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
-
+	//여기는 시작할때 만들어놓을게 많을듯
 	{
 		CreateActor<C1_BackGround>();
-		CreateActor<Mouse>();
-		CreateActor<AlphaCircle>();
+		CreateActor<Plaque>();
+		CreateActor<BackCurtain>();
+		CreateActor<Cordon>();
+		
 	}
-
+	{
+		CreateActor<Mouse>();
+	}
 }
 
 void PlaywithinaplayLevel::Update(float _DeltaTime)

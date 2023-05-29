@@ -41,7 +41,8 @@ void BackCurtain::Render(float _Delta)
 //Functional È£Ãâ¿ë(Chapter1)
 void BackCurtain::CurtainOpen(int _Speed)
 {
-
+	//LeftCurtain->GetTransform()->SetLocalPosition(float4::LerpClamp({}))
+	//RightCurtain->GetTransform()->SetLocalPosition(float4::LerpClamp({}))
 }
 void BackCurtain::CurtainClose(int _Speed)
 {
