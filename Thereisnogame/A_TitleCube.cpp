@@ -19,7 +19,7 @@ A_TitleCube::~A_TitleCube()
 
 void A_TitleCube::Start()
 {
-	A_TitleCubes = Init(A_TitleCubes, "TitleCubeLetter_A.png", { 94,106 }, { 0,0,0 });
+	A_TitleCubes = Init(A_TitleCubes, "TitleCubeLetter_A.png", { 94,106 }, { 30,10,0 });
 }
 
 void A_TitleCube::Update(float _DeltaTime)

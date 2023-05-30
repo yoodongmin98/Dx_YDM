@@ -19,7 +19,7 @@ Excla_TitleCube::~Excla_TitleCube()
 
 void Excla_TitleCube::Start()
 {
-	Excla_TitleCubes = Init(Excla_TitleCubes, "TitleCube_Excla.png", { 45,109 }, { 0,0,0 });
+	Excla_TitleCubes = Init(Excla_TitleCubes, "TitleCube_Excla.png", { 45,109 }, { 300,40,0 });
 }
 
 void Excla_TitleCube::Update(float _DeltaTime)

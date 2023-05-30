@@ -19,7 +19,7 @@ H_TitleCube::~H_TitleCube()
 
 void H_TitleCube::Start()
 {
-	H_TitleCubes = Init(H_TitleCubes, "TitleCubeLetter_H.png", { 94,106 }, { 0,0,0 });
+	H_TitleCubes = Init(H_TitleCubes, "TitleCubeLetter_H.png", { 94,106 }, { -210,150,0 });
 }
 
 void H_TitleCube::Update(float _DeltaTime)

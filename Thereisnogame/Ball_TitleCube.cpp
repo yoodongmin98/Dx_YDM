@@ -19,7 +19,7 @@ Ball_TitleCube::~Ball_TitleCube()
 
 void Ball_TitleCube::Start()
 {
-	Ball_TitleCubes = Init(Ball_TitleCubes, "TitleCube_Ball.png", { 44,58 }, { 0,0,0 });
+	Ball_TitleCubes = Init(Ball_TitleCubes, "TitleCube_Ball.png", { 44,58 }, { 300,-30,0 });
 }
 
 void Ball_TitleCube::Update(float _DeltaTime)

@@ -12,6 +12,19 @@
 #include "Board.h"
 #include "Lope_Chain.h"
 #include "Lope_Corde.h"
+#include "T_TitleCube.h"
+#include "H_TitleCube.h"
+#include "E_TitleCube.h"
+#include "R_TitleCube.h"
+#include "I_TitleCube.h"
+#include "S_TitleCube.h"
+#include "N_TitleCube.h"
+#include "O_TitleCube.h"
+#include "G_TitleCube.h"
+#include "A_TitleCube.h"
+#include "M_TitleCube.h"
+#include "Ball_TitleCube.h"
+#include "Excla_TitleCube.h"
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 {
@@ -122,6 +135,19 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 		Lope_CordePtr=CreateActor<Lope_Corde>();
 		BoardPtr=CreateActor<Board>();
 		//there is no game
+		CreateActor<T_TitleCube>();
+		CreateActor<H_TitleCube>();
+		CreateActor<E_TitleCube>();
+		CreateActor<R_TitleCube>();
+		CreateActor<I_TitleCube>();
+		CreateActor<S_TitleCube>();
+		CreateActor<N_TitleCube>();
+		CreateActor<O_TitleCube>();
+		CreateActor<G_TitleCube>();
+		CreateActor<A_TitleCube>();
+		CreateActor<M_TitleCube>();
+		CreateActor<Excla_TitleCube>();
+		CreateActor<Ball_TitleCube>();
 		Lope_ChainPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		Lope_CordePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		BoardCreateBool = false;

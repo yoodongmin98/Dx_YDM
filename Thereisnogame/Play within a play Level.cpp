@@ -79,7 +79,7 @@ void PlaywithinaplayLevel::Start()
 		CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::None);
+	ChangeState(Chap1LevelState::ClickCordon);
 }
 
 void PlaywithinaplayLevel::Update(float _DeltaTime)

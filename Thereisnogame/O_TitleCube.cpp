@@ -19,7 +19,7 @@ O_TitleCube::~O_TitleCube()
 
 void O_TitleCube::Start()
 {
-	O_TitleCubes = Init(O_TitleCubes, "TitleCubeLetter_O.png", { 94,106 }, { 0,0,0 });
+	O_TitleCubes = Init(O_TitleCubes, "TitleCubeLetter_O.png", { 94,106 }, { -190,10,0 });
 }
 
 void O_TitleCube::Update(float _DeltaTime)
