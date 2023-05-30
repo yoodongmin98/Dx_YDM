@@ -568,6 +568,9 @@
     <ClCompile Include="Play within a play LevelState.cpp">
       <Filter>Chapter1.0_Play within a play\Level</Filter>
     </ClCompile>
+    <ClCompile Include="Lope_Chain.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1133,6 +1136,9 @@
     </ClInclude>
     <ClInclude Include="Plaque.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\InterActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Lope_Chain.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

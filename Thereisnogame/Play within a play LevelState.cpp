@@ -10,6 +10,8 @@
 #include "BackCurtain.h"
 #include "Chain.h"
 #include "Board.h"
+#include "Lope_Chain.h"
+#include "Lope_Corde.h"
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 {
@@ -89,7 +91,7 @@ bool BoardCreateBool = true;
 void PlaywithinaplayLevel::CreateBoardStart()
 {
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(7);
+	ChainPtr->SetChainLiveTime(6);
 }
 void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 {
@@ -107,7 +109,11 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 	}
 	if (ChainPtr->GetLiveTime() > 6.0f&& true==BoardCreateBool)
 	{
-		CreateActor<Board>();
+		Lope_ChainPtr=CreateActor<Lope_Chain>();
+		Lope_CordePtr=CreateActor<Lope_Corde>();
+		BoardPtr=CreateActor<Board>();
+		Lope_ChainPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		Lope_CordePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		BoardCreateBool = false;
 	}
 }

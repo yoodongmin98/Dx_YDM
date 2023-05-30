@@ -22,7 +22,7 @@ void Vis::Start()
 {
 	Viss = Init(Viss, "Vis.png", { 31,31 }, float4::Zero);
 	VissCollision = CollisionInit(VissCollision, { 31,31 }, float4::Zero);
-	
+	VissCollision->Off();
 }
 
 void Vis::Update(float _DeltaTime)

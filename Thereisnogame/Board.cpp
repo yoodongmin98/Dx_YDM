@@ -19,12 +19,12 @@ Board::~Board()
 
 void Board::Start()
 {
-	Boards = Init(Boards, "Board.png", { 776,422 }, { 0,0,0 });
+	Boards = Init(Boards, "Board.png", { 776,422 }, { 0,70,0 });
 }
 
 void Board::Update(float _DeltaTime)
 {
-	Repeat(5, _DeltaTime);
+	Repeat(5, _DeltaTime*0.6f);
 }
 
 void Board::Render(float _Delta)

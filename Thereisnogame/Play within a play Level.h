@@ -49,6 +49,10 @@ private:
 	std::shared_ptr<class BackCurtain> BackCurtainPtr;
 	std::shared_ptr<class AlphaCircle> AlphaCirclePtr;
 	std::shared_ptr<class Chain> ChainPtr;
+	std::shared_ptr<class Lope_Chain> Lope_ChainPtr;
+	std::shared_ptr<class Lope_Corde> Lope_CordePtr;
+	std::shared_ptr<class Board> BoardPtr;
+	
 	
 
 

@@ -211,6 +211,7 @@
     <ClInclude Include="LoadBarTXT.h" />
     <ClInclude Include="LoadErrorPaper.h" />
     <ClInclude Include="LoadRedBar.h" />
+    <ClInclude Include="Lope_Chain.h" />
     <ClInclude Include="Lope_Corde.h" />
     <ClInclude Include="Lope_Corde_Weak.h" />
     <ClInclude Include="Mouse.h" />
@@ -406,6 +407,7 @@
     <ClCompile Include="LoadBarTXT.cpp" />
     <ClCompile Include="LoadErrorPaper.cpp" />
     <ClCompile Include="LoadRedBar.cpp" />
+    <ClCompile Include="Lope_Chain.cpp" />
     <ClCompile Include="Lope_Corde.cpp" />
     <ClCompile Include="Lope_Corde_Weak.cpp" />
     <ClCompile Include="Mouse.cpp" />
