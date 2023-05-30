@@ -20,5 +20,8 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Ball_TitleCubes;
 	std::shared_ptr<class GameEngineCollision> Ball_TitleCubesCollision;
+
+	bool UpdateBool = true;
+	int BallClickCount = 0;
 };
 

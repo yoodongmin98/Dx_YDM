@@ -20,5 +20,8 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Excla_TitleCubes;
 	std::shared_ptr<class GameEngineCollision> Excla_TitleCubesCollision;
+
+	bool UpdateBool = true;
+	int ExclaClickCount = 0;
 };
 
