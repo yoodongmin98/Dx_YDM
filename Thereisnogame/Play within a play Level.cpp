@@ -18,6 +18,8 @@
 #include "Cordon.h"
 #include "Vis.h"
 
+//ScreenActor
+#include "Cog.h"
 
 PlaywithinaplayLevel* PlaywithinaplayLevel::LM;
 PlaywithinaplayLevel::PlaywithinaplayLevel()
@@ -33,7 +35,6 @@ PlaywithinaplayLevel::~PlaywithinaplayLevel()
 
 void PlaywithinaplayLevel::Start()
 {
-	//ImageLoad
 	{
 		GameEngineDirectory NewDir;
 		NewDir.MoveParentToDirectory("ThereisnogameResource");
@@ -47,8 +48,6 @@ void PlaywithinaplayLevel::Start()
 			GameEngineTexture::Load(File[i].GetFullPath());
 		}
 	}
-
-
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
@@ -76,6 +75,8 @@ void PlaywithinaplayLevel::Start()
 		CreateActor<Cordon>();
 	}
 	{
+		//Test¿ë ScreenActor
+		CreateActor<Cog>();
 		CreateActor<Mouse>();
 	}
 
