@@ -16,6 +16,7 @@
 #include "H_TitleCube.h"
 #include "E_TitleCube.h"
 #include "R_TitleCube.h"
+#include "RE_TitleCube.h"
 #include "I_TitleCube.h"
 #include "S_TitleCube.h"
 #include "N_TitleCube.h"
@@ -23,6 +24,7 @@
 #include "G_TitleCube.h"
 #include "A_TitleCube.h"
 #include "M_TitleCube.h"
+#include "ME_TitleCube.h"
 #include "Ball_TitleCube.h"
 #include "Excla_TitleCube.h"
 
@@ -139,6 +141,7 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 		CreateActor<H_TitleCube>();
 		CreateActor<E_TitleCube>();
 		CreateActor<R_TitleCube>();
+		CreateActor<RE_TitleCube>();
 		CreateActor<I_TitleCube>();
 		CreateActor<S_TitleCube>();
 		CreateActor<N_TitleCube>();
@@ -146,6 +149,7 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 		CreateActor<G_TitleCube>();
 		CreateActor<A_TitleCube>();
 		CreateActor<M_TitleCube>();
+		CreateActor<ME_TitleCube>();
 		CreateActor<Excla_TitleCube>();
 		CreateActor<Ball_TitleCube>();
 		Lope_ChainPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
@@ -155,7 +159,10 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 }
 void PlaywithinaplayLevel::CreateBoardEnd()
 {
-
+	if (true == ChainPtr->IsDeath())
+	{
+		ChainPtr = nullptr;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////

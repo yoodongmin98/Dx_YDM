@@ -167,6 +167,7 @@
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
     <ClInclude Include="A_TitleCube.h" />
+    <ClInclude Include="BackCurtain_Main.h" />
     <ClInclude Include="BackGround_White.h" />
     <ClInclude Include="BackSqirrelKey.h" />
     <ClInclude Include="BalloonSecure.h" />
@@ -220,6 +221,7 @@
     <ClInclude Include="Lope_Chain.h" />
     <ClInclude Include="Lope_Corde.h" />
     <ClInclude Include="Lope_Corde_Weak.h" />
+    <ClInclude Include="ME_TitleCube.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="M_TitleCube.h" />
     <ClInclude Include="Nut_Close.h" />
@@ -334,6 +336,7 @@
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
     <ClInclude Include="Raquette.h" />
+    <ClInclude Include="RE_TitleCube.h" />
     <ClInclude Include="RightRotate.h" />
     <ClInclude Include="RouageLoad.h" />
     <ClInclude Include="R_TitleCube.h" />
@@ -376,6 +379,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="A_TitleCube.cpp" />
+    <ClCompile Include="BackCurtain_Main.cpp" />
     <ClCompile Include="BackGround_White.cpp" />
     <ClCompile Include="BackSqirrelKey.cpp" />
     <ClCompile Include="BalloonSecure.cpp" />
@@ -429,6 +433,7 @@
     <ClCompile Include="Lope_Chain.cpp" />
     <ClCompile Include="Lope_Corde.cpp" />
     <ClCompile Include="Lope_Corde_Weak.cpp" />
+    <ClCompile Include="ME_TitleCube.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="M_TitleCube.cpp" />
     <ClCompile Include="Nut_Close.cpp" />
@@ -550,6 +555,7 @@
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />
     <ClCompile Include="Raquette.cpp" />
+    <ClCompile Include="RE_TitleCube.cpp" />
     <ClCompile Include="RightRotate.cpp" />
     <ClCompile Include="RouageLoad.cpp" />
     <ClCompile Include="R_TitleCube.cpp" />

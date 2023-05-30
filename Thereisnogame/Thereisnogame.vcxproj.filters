@@ -610,6 +610,15 @@
     <ClCompile Include="Ball_TitleCube.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
     </ClCompile>
+    <ClCompile Include="RE_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="ME_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="BackCurtain_Main.cpp">
+      <Filter>CommonUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1217,6 +1226,15 @@
     </ClInclude>
     <ClInclude Include="Ball_TitleCube.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="RE_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="ME_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="BackCurtain_Main.h">
+      <Filter>CommonUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

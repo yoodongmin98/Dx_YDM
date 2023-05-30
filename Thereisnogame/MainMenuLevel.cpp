@@ -11,7 +11,7 @@
 
 
 //Actor
-#include "BackCurtain.h"
+#include "BackCurtain_Main.h"
 #include "AlphaCircle.h"
 #include "SelectBox.h"
 #include "Panel_Continue.h"
@@ -87,7 +87,7 @@ void MainMenuLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 
 	{
-		CreateActor<BackCurtain>();
+		CreateActor<BackCurtain_Main>();
 		CreateFlag();
 		PixelPtr=CreateActor<Panel_DrawaPixel>(); 
 		CreateLetter();
