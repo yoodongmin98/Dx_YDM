@@ -54,6 +54,21 @@ private:
 	std::shared_ptr<class Lope_Corde> Lope_CordePtr;
 	std::shared_ptr<class Board> BoardPtr;
 	
+	std::shared_ptr<class T_TitleCube> T_TitleCubePtr;
+	std::shared_ptr<class H_TitleCube> H_TitleCubePtr;
+	std::shared_ptr<class E_TitleCube> E_TitleCubePtr;
+	std::shared_ptr<class R_TitleCube> R_TitleCubePtr;
+	std::shared_ptr<class RE_TitleCube> RE_TitleCubePtr;
+	std::shared_ptr<class I_TitleCube> I_TitleCubePtr;
+	std::shared_ptr<class S_TitleCube> S_TitleCubePtr;
+	std::shared_ptr<class N_TitleCube> N_TitleCubePtr;
+	std::shared_ptr<class O_TitleCube> O_TitleCubePtr;
+	std::shared_ptr<class G_TitleCube> G_TitleCubePtr;
+	std::shared_ptr<class A_TitleCube> A_TitleCubePtr;
+	std::shared_ptr<class M_TitleCube> M_TitleCubePtr;
+	std::shared_ptr<class ME_TitleCube> ME_TitleCubePtr;
+	std::shared_ptr<class Excla_TitleCube> Excla_TitleCubePtr;
+	std::shared_ptr<class Ball_TitleCube> Ball_TitleCubePtr;
 	
 
 

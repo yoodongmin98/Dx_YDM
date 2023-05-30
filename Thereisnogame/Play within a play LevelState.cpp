@@ -27,6 +27,8 @@
 #include "ME_TitleCube.h"
 #include "Ball_TitleCube.h"
 #include "Excla_TitleCube.h"
+#include "Mouse.h"
+#include "LevelStateManager.h"
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 {
@@ -137,21 +139,37 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 		Lope_CordePtr=CreateActor<Lope_Corde>();
 		BoardPtr=CreateActor<Board>();
 		//there is no game
-		CreateActor<T_TitleCube>();
-		CreateActor<H_TitleCube>();
-		CreateActor<E_TitleCube>();
-		CreateActor<R_TitleCube>();
-		CreateActor<RE_TitleCube>();
-		CreateActor<I_TitleCube>();
-		CreateActor<S_TitleCube>();
-		CreateActor<N_TitleCube>();
-		CreateActor<O_TitleCube>();
-		CreateActor<G_TitleCube>();
-		CreateActor<A_TitleCube>();
-		CreateActor<M_TitleCube>();
-		CreateActor<ME_TitleCube>();
-		CreateActor<Excla_TitleCube>();
-		CreateActor<Ball_TitleCube>();
+		T_TitleCubePtr=CreateActor<T_TitleCube>();
+		T_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		H_TitleCubePtr=CreateActor<H_TitleCube>();
+		H_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		E_TitleCubePtr=CreateActor<E_TitleCube>();
+		E_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		R_TitleCubePtr=CreateActor<R_TitleCube>();
+		R_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		RE_TitleCubePtr=CreateActor<RE_TitleCube>();
+		RE_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		I_TitleCubePtr=CreateActor<I_TitleCube>();
+		I_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		S_TitleCubePtr=CreateActor<S_TitleCube>();
+		S_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		N_TitleCubePtr=CreateActor<N_TitleCube>();
+		N_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		O_TitleCubePtr=CreateActor<O_TitleCube>();
+		O_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		G_TitleCubePtr=CreateActor<G_TitleCube>();
+		G_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		A_TitleCubePtr=CreateActor<A_TitleCube>();
+		A_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		M_TitleCubePtr=CreateActor<M_TitleCube>();
+		M_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		ME_TitleCubePtr=CreateActor<ME_TitleCube>();
+		ME_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		Excla_TitleCubePtr=CreateActor<Excla_TitleCube>();
+		Excla_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		Ball_TitleCubePtr=CreateActor<Ball_TitleCube>();
+		Ball_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+
 		Lope_ChainPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		Lope_CordePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		BoardCreateBool = false;

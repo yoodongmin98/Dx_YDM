@@ -15,7 +15,7 @@ public:
 	LevelStateManager(LevelStateManager&& _Other) noexcept = delete;
 	LevelStateManager& operator=(const LevelStateManager& _Other) = delete;
 	LevelStateManager& operator=(LevelStateManager&& _Other) noexcept = delete;
-
+	//Chapter2----------------------------------------------------------------------------------------------------------
 	//폴더 몇개열려있냐?
 	void PlusCollisionValue();
 	void MinusCollisionValue();
@@ -116,6 +116,16 @@ public:
 	{
 		return IsGetTheCup;
 	}
+	//Chapter1----------------------------------------------------------------------------------------------------------
+	//Board 다 내려왔냐?
+	void SetIsBoardDownTrue()
+	{
+		IsBoardDown = true;
+	}
+	bool GetIsBoardDown()
+	{
+		return IsBoardDown;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -124,6 +134,8 @@ private:
 	//Mouse
 	bool IsProgress = false;
 
+	//Chapter1
+	bool IsBoardDown = false;
 
 	//Chapter2
 	int CollisionValue = 0;

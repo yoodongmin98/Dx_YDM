@@ -598,6 +598,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\구조 메모장.txt" />
+    <Text Include="etc.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,6 +13,8 @@ public:
 	Board& operator=(const Board& _Other) = delete;
 	Board& operator=(Board&& _Other) noexcept = delete;
 
+	void BoardMoveCheck();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;

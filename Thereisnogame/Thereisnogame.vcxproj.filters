@@ -1489,5 +1489,8 @@
     <Text Include="..\구조 메모장.txt">
       <Filter>Core</Filter>
     </Text>
+    <Text Include="etc.txt">
+      <Filter>Core</Filter>
+    </Text>
   </ItemGroup>
 </Project>
