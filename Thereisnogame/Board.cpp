@@ -24,7 +24,7 @@ void Board::Start()
 
 void Board::Update(float _DeltaTime)
 {
-	Repeat(5, _DeltaTime*0.6f);
+	Repeat(4, _DeltaTime*0.5f);
 }
 
 void Board::Render(float _Delta)

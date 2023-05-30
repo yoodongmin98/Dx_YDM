@@ -28,8 +28,11 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::CreateBoard:
 		CreateBoardStart();
 		break;
-	case Chap1LevelState::SetBoard:
-		SetBoardStart();
+	case Chap1LevelState::DownBoard:
+		DownBoardStart();
+		break;
+	case Chap1LevelState::ClearBoard:
+		ClearBoardStart();
 		break;
 	default:
 		break;
@@ -43,8 +46,11 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::CreateBoard:
 		CreateBoardEnd();
 		break;
-	case Chap1LevelState::SetBoard:
-		SetBoardEnd();
+	case Chap1LevelState::DownBoard:
+		DownBoardEnd();
+		break;
+	case Chap1LevelState::ClearBoard:
+		ClearBoardEnd();
 		break;
 	default:
 		break;
@@ -61,8 +67,11 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 	case Chap1LevelState::CreateBoard:
 		CreateBoardUpdate(_DeltaTime);
 		break;
-	case Chap1LevelState::SetBoard:
-		SetBoardUpdate(_DeltaTime);
+	case Chap1LevelState::DownBoard:
+		DownBoardUpdate(_DeltaTime);
+		break;
+	case Chap1LevelState::ClearBoard:
+		ClearBoardUpdate(_DeltaTime);
 		break;
 	default:
 		break;
@@ -112,6 +121,7 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 		Lope_ChainPtr=CreateActor<Lope_Chain>();
 		Lope_CordePtr=CreateActor<Lope_Corde>();
 		BoardPtr=CreateActor<Board>();
+		//there is no game
 		Lope_ChainPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		Lope_CordePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		BoardCreateBool = false;
@@ -124,17 +134,30 @@ void PlaywithinaplayLevel::CreateBoardEnd()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void PlaywithinaplayLevel::SetBoardStart()
+void PlaywithinaplayLevel::DownBoardStart()
+{
+	
+}
+void PlaywithinaplayLevel::DownBoardUpdate(float _DeltaTime)
 {
 
 }
-void PlaywithinaplayLevel::SetBoardUpdate(float _DeltaTime)
-{
-
-}
-void PlaywithinaplayLevel::SetBoardEnd()
+void PlaywithinaplayLevel::DownBoardEnd()
 {
 
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::ClearBoardStart()
+{
+
+}
+void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::ClearBoardEnd()
+{
+
+}

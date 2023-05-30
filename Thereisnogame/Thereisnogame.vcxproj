@@ -166,9 +166,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ActorTypeEnum.h" />
+    <ClInclude Include="A_TitleCube.h" />
     <ClInclude Include="BackGround_White.h" />
     <ClInclude Include="BackSqirrelKey.h" />
     <ClInclude Include="BalloonSecure.h" />
+    <ClInclude Include="Ball_TitleCube.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoxCroix_ClockDay.h" />
     <ClInclude Include="BoxCroix_ClockPanel.h" />
@@ -199,12 +201,16 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="Excla_TitleCube.h" />
+    <ClInclude Include="E_TitleCube.h" />
     <ClInclude Include="FolderNote2.h" />
     <ClInclude Include="FolderNote3.h" />
     <ClInclude Include="FolderNote_GoodBye.h" />
     <ClInclude Include="FolderNote_Password.h" />
     <ClInclude Include="French.h" />
     <ClInclude Include="GoodbyeIcon.h" />
+    <ClInclude Include="G_TitleCube.h" />
+    <ClInclude Include="I_TitleCube.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="LeftRotate.h" />
     <ClInclude Include="LoadBarBack.h" />
@@ -215,8 +221,11 @@
     <ClInclude Include="Lope_Corde.h" />
     <ClInclude Include="Lope_Corde_Weak.h" />
     <ClInclude Include="Mouse.h" />
+    <ClInclude Include="M_TitleCube.h" />
     <ClInclude Include="Nut_Close.h" />
     <ClInclude Include="Nut_Open.h" />
+    <ClInclude Include="N_TitleCube.h" />
+    <ClInclude Include="O_TitleCube.h" />
     <ClInclude Include="PasswordIcon.h" />
     <ClInclude Include="LevelStateManager.h" />
     <ClInclude Include="PinBall_BackGround.h" />
@@ -327,6 +336,7 @@
     <ClInclude Include="Raquette.h" />
     <ClInclude Include="RightRotate.h" />
     <ClInclude Include="RouageLoad.h" />
+    <ClInclude Include="R_TitleCube.h" />
     <ClInclude Include="Scissor.h" />
     <ClInclude Include="SelectBox.h" />
     <ClInclude Include="Skite.h" />
@@ -349,6 +359,9 @@
     <ClInclude Include="StartPictures.h" />
     <ClInclude Include="SuperPrivate.h" />
     <ClInclude Include="S_ActorBase.h" />
+    <ClInclude Include="H_TitleCube.h" />
+    <ClInclude Include="S_TitleCube.h" />
+    <ClInclude Include="T_TitleCube.h" />
     <ClInclude Include="TitleMetal.h" />
     <ClInclude Include="TrashcanFolder.h" />
     <ClInclude Include="TrashCanFolderPanel.h" />
@@ -362,9 +375,11 @@
     <ClInclude Include="ZipWipFolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="A_TitleCube.cpp" />
     <ClCompile Include="BackGround_White.cpp" />
     <ClCompile Include="BackSqirrelKey.cpp" />
     <ClCompile Include="BalloonSecure.cpp" />
+    <ClCompile Include="Ball_TitleCube.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BoxCroix_ClockDay.cpp" />
     <ClCompile Include="BoxCroix_ClockPanel.cpp" />
@@ -395,12 +410,16 @@
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
+    <ClCompile Include="Excla_TitleCube.cpp" />
+    <ClCompile Include="E_TitleCube.cpp" />
     <ClCompile Include="FolderNote2.cpp" />
     <ClCompile Include="FolderNote3.cpp" />
     <ClCompile Include="FolderNote_GoodBye.cpp" />
     <ClCompile Include="FolderNote_Password.cpp" />
     <ClCompile Include="French.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
+    <ClCompile Include="G_TitleCube.cpp" />
+    <ClCompile Include="I_TitleCube.cpp" />
     <ClCompile Include="Key.cpp" />
     <ClCompile Include="LeftRotate.cpp" />
     <ClCompile Include="LoadBarBack.cpp" />
@@ -411,8 +430,11 @@
     <ClCompile Include="Lope_Corde.cpp" />
     <ClCompile Include="Lope_Corde_Weak.cpp" />
     <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="M_TitleCube.cpp" />
     <ClCompile Include="Nut_Close.cpp" />
     <ClCompile Include="Nut_Open.cpp" />
+    <ClCompile Include="N_TitleCube.cpp" />
+    <ClCompile Include="O_TitleCube.cpp" />
     <ClCompile Include="PasswordIcon.cpp" />
     <ClCompile Include="LevelStateManager.cpp" />
     <ClCompile Include="PinBall_BackGround.cpp" />
@@ -530,6 +552,7 @@
     <ClCompile Include="Raquette.cpp" />
     <ClCompile Include="RightRotate.cpp" />
     <ClCompile Include="RouageLoad.cpp" />
+    <ClCompile Include="R_TitleCube.cpp" />
     <ClCompile Include="Scissor.cpp" />
     <ClCompile Include="SelectBox.cpp" />
     <ClCompile Include="Skite.cpp" />
@@ -552,6 +575,9 @@
     <ClCompile Include="StartPictures.cpp" />
     <ClCompile Include="SuperPrivate.cpp" />
     <ClCompile Include="S_ActorBase.cpp" />
+    <ClCompile Include="H_TitleCube.cpp" />
+    <ClCompile Include="S_TitleCube.cpp" />
+    <ClCompile Include="T_TitleCube.cpp" />
     <ClCompile Include="TitleMetal.cpp" />
     <ClCompile Include="TrashcanFolder.cpp" />
     <ClCompile Include="TrashCanFolderPanel.cpp" />

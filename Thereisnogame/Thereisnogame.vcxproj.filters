@@ -571,6 +571,45 @@
     <ClCompile Include="Lope_Chain.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClCompile>
+    <ClCompile Include="A_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="E_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="G_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="H_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="I_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="M_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="N_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="O_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="R_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="S_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="T_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClCompile>
+    <ClCompile Include="Excla_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
+    </ClCompile>
+    <ClCompile Include="Ball_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1140,6 +1179,45 @@
     <ClInclude Include="Lope_Chain.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClInclude>
+    <ClInclude Include="A_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="E_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="G_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="H_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="I_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="M_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="N_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="O_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="R_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="S_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="T_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet</Filter>
+    </ClInclude>
+    <ClInclude Include="Excla_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1381,6 +1459,12 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\InterActor">
       <UniqueIdentifier>{5661bfaf-527c-4e79-a459-34fc61c77c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Alphabet">
+      <UniqueIdentifier>{29a5fe2e-7fe2-493b-8b86-e13cc5e03876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball">
+      <UniqueIdentifier>{5ac7ce9d-c7e2-45ea-8b17-9868193e54c4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
