@@ -619,6 +619,9 @@
     <ClCompile Include="BackCurtain_Main.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
+    <ClCompile Include="FadeEffect.cpp">
+      <Filter>Actor Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1235,6 +1238,9 @@
     </ClInclude>
     <ClInclude Include="BackCurtain_Main.h">
       <Filter>CommonUI</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeEffect.h">
+      <Filter>Actor Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

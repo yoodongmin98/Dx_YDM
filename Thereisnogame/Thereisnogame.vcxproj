@@ -204,6 +204,7 @@
     <ClInclude Include="Decapsuleur.h" />
     <ClInclude Include="Excla_TitleCube.h" />
     <ClInclude Include="E_TitleCube.h" />
+    <ClInclude Include="FadeEffect.h" />
     <ClInclude Include="FolderNote2.h" />
     <ClInclude Include="FolderNote3.h" />
     <ClInclude Include="FolderNote_GoodBye.h" />
@@ -416,6 +417,7 @@
     <ClCompile Include="Decapsuleur.cpp" />
     <ClCompile Include="Excla_TitleCube.cpp" />
     <ClCompile Include="E_TitleCube.cpp" />
+    <ClCompile Include="FadeEffect.cpp" />
     <ClCompile Include="FolderNote2.cpp" />
     <ClCompile Include="FolderNote3.cpp" />
     <ClCompile Include="FolderNote_GoodBye.cpp" />
