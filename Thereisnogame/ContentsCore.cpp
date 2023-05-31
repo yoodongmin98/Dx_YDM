@@ -9,6 +9,7 @@
 #include "Program Loading Level.h"
 #include "Play within a play Level.h"
 #include "Fake Program Level.h"
+#include "OpeningLevel.h"
 
 ContentsCore::ContentsCore() 
 {
@@ -30,20 +31,22 @@ void ContentsCore::ContentsResourcesCreate()
 	{
 		GameEngineShader::AutoCompile(Files[i]);
 	}
-	
+	ResourceInit("FadeShader.hlsl", "Fade");
 }
 
 void ContentsCore::GameStart() 
 {
 	ContentsResourcesCreate();
-	ResourceInit("FadeShader.hlsl", "Fade");
+	
 	new int();
+	GameEngineCore::CreateLevel<OpeningLevel>();
 	GameEngineCore::CreateLevel<MainMenuLevel>();
 	GameEngineCore::CreateLevel<PlaywithinaplayLevel>();
 	GameEngineCore::CreateLevel<ProgramLoadingLevel>();
 	GameEngineCore::CreateLevel<FakeProgramLevel>();
+	//GameEngineCore::CreateLevel<EndingLevel>();
 
-	GameEngineCore::ChangeLevel("MainMenuLevel");
+	GameEngineCore::ChangeLevel("OpeningLevel");
 }
 
 void ContentsCore::GameEnd() 

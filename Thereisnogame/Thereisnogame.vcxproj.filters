@@ -625,6 +625,18 @@
     <ClCompile Include="ContentsCore_Resource.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="MadeWithUnity.cpp">
+      <Filter>Chapter-1.0_Opening\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="OpeningLevel.cpp">
+      <Filter>Chapter-1.0_Opening\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="OpeningBackGround.cpp">
+      <Filter>Chapter-1.0_Opening\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="BlueErrorMessage.cpp">
+      <Filter>Chapter-1.0_Opening\Actor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1245,6 +1257,18 @@
     <ClInclude Include="FadeEffect.h">
       <Filter>Actor Base</Filter>
     </ClInclude>
+    <ClInclude Include="MadeWithUnity.h">
+      <Filter>Chapter-1.0_Opening\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="OpeningLevel.h">
+      <Filter>Chapter-1.0_Opening\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="OpeningBackGround.h">
+      <Filter>Chapter-1.0_Opening\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueErrorMessage.h">
+      <Filter>Chapter-1.0_Opening\Actor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1501,6 +1525,15 @@
     </Filter>
     <Filter Include="Chapter3.0_Ending\Level">
       <UniqueIdentifier>{18cf2983-1f94-439f-89c6-86d88ece73b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter-1.0_Opening">
+      <UniqueIdentifier>{3fbc39e6-83ab-421d-99d7-266affeb05ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter-1.0_Opening\Level">
+      <UniqueIdentifier>{6e85bc2a-0a5f-40b9-82a1-5cf8535759a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter-1.0_Opening\Actor">
+      <UniqueIdentifier>{5ff9e4fc-a258-45c7-bfec-25df1ac68986}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
