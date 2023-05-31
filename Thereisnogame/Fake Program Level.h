@@ -14,12 +14,14 @@ public:
 	FakeProgramLevel(FakeProgramLevel&& _Other) noexcept = delete;
 	FakeProgramLevel& operator=(const FakeProgramLevel& _Other) = delete;
 	FakeProgramLevel& operator=(FakeProgramLevel&& _Other) noexcept = delete;
+	std::shared_ptr<class FadeEffect> FEffect;
 
 	void FolderCreate();
 
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
+	void LevelChangeStart() override;
 
 private:
 

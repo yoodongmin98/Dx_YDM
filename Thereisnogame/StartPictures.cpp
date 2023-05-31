@@ -5,6 +5,9 @@
 //Platform
 //Core
 #include <GameEngineCore/GameEngineCore.h>
+
+//Actor
+#include "FadeEffect.h"
 StartPictures::StartPictures()
 {
 }
@@ -20,12 +23,14 @@ void StartPictures::Start()
 	RStartPictures=Init(RStartPictures, "Flag_SupportLevel.png", { 209,505,1 }, { -170,650,0 });
 
 	StartPictureCollision = CollisionInit(StartPictureCollision, { 151,100,1 }, { -180,480,0 });
+
+	FEffect = GetLevel()->GetLastTarget()->CreateEffect<FadeEffect>();
 }
 
 void StartPictures::Update(float _DeltaTime)
 {
 	Repeat(7, _DeltaTime*0.8f);
-	CollisionInteractableCheck();
+	CollisionInteractableCheck(_DeltaTime);
 }
 
 void StartPictures::Render(float _Delta)
@@ -43,7 +48,7 @@ void StartPictures::PictureUp(float _DeltaTime)
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,300 }, _DeltaTime));
 }
 
-void StartPictures::CollisionInteractableCheck()
+void StartPictures::CollisionInteractableCheck(float _DeltaTime)
 {
 	if (StartPictureCollision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
@@ -57,9 +62,17 @@ void StartPictures::CollisionInteractableCheck()
 	}
 	if (true == ClickCheck(StartPictureCollision))
 	{
+		IsClick = true;
+		FEffect->FadeIn();
 		
-		//페이드 인 아웃 넣고 임시로 chapter2로 넘어가기
-		GameEngineCore::ChangeLevel("FakeProgramLevel");
+	}
+	if (true == IsClick)
+	{
+		FadeTime += _DeltaTime;
+		if (FadeTime > 3.0f)
+		{
+			GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
+		}
 	}
 }
 

@@ -24,6 +24,7 @@ public:
 	PlaywithinaplayLevel(PlaywithinaplayLevel&& _Other) noexcept = delete;
 	PlaywithinaplayLevel& operator=(const PlaywithinaplayLevel& _Other) = delete;
 	PlaywithinaplayLevel& operator=(PlaywithinaplayLevel&& _Other) noexcept = delete;
+	std::shared_ptr<class FadeEffect> FEffect;
 
 	void ChangeState(Chap1LevelState _State);
 	void UpdateState(float _DeltaTime);
@@ -35,7 +36,7 @@ public:
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
-
+	void LevelChangeStart() override;
 private:
 	Chap1LevelState StateValue = Chap1LevelState::None;
 

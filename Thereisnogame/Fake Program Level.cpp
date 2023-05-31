@@ -16,7 +16,7 @@
 #include "Mouse.h"
 #include "Chain.h"
 #include "LevelStateManager.h"
-
+#include "FadeEffect.h"
 //Folder
 #include "SkiteFolder.h"
 #include "ZipWipFolder.h"
@@ -56,6 +56,7 @@ void FakeProgramLevel::Start()
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
+	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 
 	{
 		CreateActor<LevelStateManager>(100);
@@ -78,6 +79,11 @@ void FakeProgramLevel::Update(float _DeltaTime)
 	{
 		GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
 	}
+}
+
+void FakeProgramLevel::LevelChangeStart()
+{
+	FEffect->FadeOut();
 }
 
 void FakeProgramLevel::FolderCreate()

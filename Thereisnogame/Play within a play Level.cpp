@@ -17,7 +17,7 @@
 #include "BackCurtain.h"
 #include "Cordon.h"
 #include "Vis.h"
-
+#include "FadeEffect.h"
 //ScreenActor
 #include "Cog.h"
 
@@ -51,6 +51,7 @@ void PlaywithinaplayLevel::Start()
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
+	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	//여기는 시작할때 만들어놓을게 많을듯
 	{
 		CreateActor<C1_BackGround>();
@@ -76,11 +77,11 @@ void PlaywithinaplayLevel::Start()
 	}
 	{
 		//Test용 ScreenActor
-		CreateActor<Cog>();
+		//CreateActor<Cog>();
 		CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::ClickCordon);
+	ChangeState(Chap1LevelState::None);
 }
 
 void PlaywithinaplayLevel::Update(float _DeltaTime)
@@ -95,4 +96,9 @@ void PlaywithinaplayLevel::Update(float _DeltaTime)
 		GameEngineCore::ChangeLevel("FakeProgramLevel");
 	}
 	UpdateState(_DeltaTime);
+}
+
+void PlaywithinaplayLevel::LevelChangeStart()
+{
+	FEffect->FadeOut();
 }

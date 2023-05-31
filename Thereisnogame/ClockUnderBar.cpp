@@ -34,7 +34,7 @@ void ClockUnderBar::Start()
 	PasswordUnderBar.push_back(ClockUnderBars5);
 	PasswordUnderBar.push_back(ClockUnderBars6);
 
-	PasswordSet(1,1,1,1,1,1);
+	PasswordSet(1,2,3,4,5,6);
 }
 
 void ClockUnderBar::Update(float _DeltaTime)

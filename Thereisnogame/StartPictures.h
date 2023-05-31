@@ -18,12 +18,12 @@ public:
 
 	void PictureDown(float _DeltaTime);
 	void PictureUp(float _DeltaTime);
-	void CollisionInteractableCheck();
+	void CollisionInteractableCheck(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
-
+	std::shared_ptr<class FadeEffect> FEffect;
 
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> RStartPictures;
@@ -33,5 +33,7 @@ private:
 
 	std::shared_ptr<class GameEngineCollision> StartPictureCollision;
 
+	float FadeTime = 0.0f;
+	bool IsClick = false;
 };
 
