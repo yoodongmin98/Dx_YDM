@@ -11,9 +11,8 @@
 //Actor
 #include "Mouse.h"
 #include "FadeEffect.h"
-#include "OpeningBackGround.h"
 #include "BlueErrorMessage.h"
-#include "MadeWithUnity.h"
+
 
 OpeningLevel::OpeningLevel()
 {
@@ -46,8 +45,6 @@ void OpeningLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	
-	CreateActor<OpeningBackGround>();
-	CreateActor<MadeWithUnity>();
 	CreateActor<BlueErrorMessage>();
 }
 

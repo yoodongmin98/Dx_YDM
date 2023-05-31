@@ -19,5 +19,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> BlueErrorMessages;
+
+	float Times = 0.0f;
 };
 

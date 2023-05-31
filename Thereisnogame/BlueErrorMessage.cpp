@@ -19,7 +19,6 @@ BlueErrorMessage::~BlueErrorMessage()
 void BlueErrorMessage::Start()
 {
 	BlueErrorMessages = Init(BlueErrorMessages, "End_ErrorMessage.png", { 1280,720 }, { 0,0,0 });
-	FEffect = GetLevel()->GetLastTarget()->CreateEffect<FadeEffect>();
 }
 
 void BlueErrorMessage::Update(float _DeltaTime)

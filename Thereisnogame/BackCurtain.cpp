@@ -49,21 +49,21 @@ void BackCurtain::CurtainOpen()
 {
 	if (LeftCurtain->GetTransform()->GetLocalPosition().x > -1000.0f)
 	{
-		LeftCurtain->GetTransform()->AddLocalPosition({ -0.5f,0,0 });
+		LeftCurtain->GetTransform()->AddLocalPosition({ -1.6f,0,0 });
 	}
 	if (RightCurtain->GetTransform()->GetLocalPosition().x < 1000.0f)
 	{
-		RightCurtain->GetTransform()->AddLocalPosition({ 0.5f,0,0 });
+		RightCurtain->GetTransform()->AddLocalPosition({ 1.6f,0,0 });
 	}
 }
 void BackCurtain::CurtainClose()
 {
 	if (LeftCurtain->GetTransform()->GetLocalPosition().x < -290.0f)
 	{
-		LeftCurtain->GetTransform()->AddLocalPosition({ 6.0f,0,0 });
+		LeftCurtain->GetTransform()->AddLocalPosition({ 9.0f,0,0 });
 	}
 	if (RightCurtain->GetTransform()->GetLocalPosition().x > 290.0f)
 	{
-		RightCurtain->GetTransform()->AddLocalPosition({ -6.0f,0,0 });
+		RightCurtain->GetTransform()->AddLocalPosition({ -9.0f,0,0 });
 	}
 }
