@@ -32,7 +32,7 @@
       <Filter>Chapter1.0_Play within a play\Level</Filter>
     </ClCompile>
     <ClCompile Include="Fake Program Level.cpp">
-      <Filter>CHapter2.0_Fake Program\Level</Filter>
+      <Filter>Chapter2.0_Fake Program\Level</Filter>
     </ClCompile>
     <ClCompile Include="C_0Letter_E.cpp">
       <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
@@ -134,202 +134,202 @@
       <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClCompile>
     <ClCompile Include="C2_BackGround.cpp">
-      <Filter>CHapter2.0_Fake Program\Level\BackGround</Filter>
+      <Filter>Chapter2.0_Fake Program\Level\BackGround</Filter>
     </ClCompile>
     <ClCompile Include="squirrel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
     <ClCompile Include="FolderBackGround.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
     <ClCompile Include="ClockFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="LockFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="MusicFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="PictureFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="PrivateFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="SkiteFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="ZipWipFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="TrashcanFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="TrashcanTop.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClCompile>
     <ClCompile Include="MusicNote_Walnut.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClCompile>
     <ClCompile Include="MusicNote_Archive.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClCompile>
     <ClCompile Include="MusicNote_Rain.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClCompile>
     <ClCompile Include="MusicNote_Radio.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClCompile>
     <ClCompile Include="Skite.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
     <ClCompile Include="SkiteBanner.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
     <ClCompile Include="SkiteIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
     <ClCompile Include="SkiteCalling.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
     <ClCompile Include="SkiteCallingMissed.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
     <ClCompile Include="DayIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClCompile>
     <ClCompile Include="DayPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClCompile>
     <ClCompile Include="DayTree.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClCompile>
     <ClCompile Include="PurpleTextBox.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClCompile>
     <ClCompile Include="DrawerIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
     </ClCompile>
     <ClCompile Include="DrawerPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
     </ClCompile>
     <ClCompile Include="CodeIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClCompile>
     <ClCompile Include="CodePicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClCompile>
     <ClCompile Include="ClockPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClCompile>
     <ClCompile Include="ClockUnderBar.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClCompile>
     <ClCompile Include="Truth1Icon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
     <ClCompile Include="Truth2Icon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
     <ClCompile Include="Truth3Icon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClCompile>
     <ClCompile Include="USMissIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClCompile>
     <ClCompile Include="FRMissIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClCompile>
     <ClCompile Include="JPMissIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClCompile>
     <ClCompile Include="MissPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture</Filter>
     </ClCompile>
     <ClCompile Include="SuperPrivate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
     <ClCompile Include="UltraPrivate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
     <ClCompile Include="GigaPrivate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
     <ClCompile Include="Private18.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClCompile>
     <ClCompile Include="ClockDayandNight.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
     </ClCompile>
     <ClCompile Include="ClockBranch.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
     </ClCompile>
     <ClCompile Include="PictureFolderPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClCompile>
     <ClCompile Include="PasswordIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClCompile>
     <ClCompile Include="GoodbyeIcon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_BackGround.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_Ball.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_Bumper50.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_Racket.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_SideTable.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_Icon.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_Score.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_HaloCup.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_Bumper100.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_LeftBoxFond.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClCompile>
     <ClCompile Include="PinBall_RightBoxFond.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClCompile>
     <ClCompile Include="Mouse.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
     <ClCompile Include="Cup.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="Decapsuleur.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="Nut_Open.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="Nut_Close.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="S_ActorBase.cpp">
       <Filter>Actor Base</Filter>
     </ClCompile>
     <ClCompile Include="SquirrelKey.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="Cup_Full.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="LoadBarTXT.cpp">
       <Filter>Chapter1.5_Program Loading\Actor</Filter>
@@ -344,163 +344,163 @@
       <Filter>Chapter1.5_Program Loading\Actor</Filter>
     </ClCompile>
     <ClCompile Include="MediaPause.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClCompile>
     <ClCompile Include="MediaPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClCompile>
     <ClCompile Include="MediaPlay.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClCompile>
     <ClCompile Include="MediaPlayer.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClCompile>
     <ClCompile Include="MusicFolderPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClCompile>
     <ClCompile Include="FolderNote.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="RightRotate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClCompile>
     <ClCompile Include="LeftRotate.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_Music.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_Skite.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_CodePicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_DayPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_DrawerPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PictureFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClCompile>
     <ClCompile Include="PrivatePanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClCompile>
     <ClCompile Include="PrivatePanel_Ultra.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClCompile>
     <ClCompile Include="PrivatePanel_Giga.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClCompile>
     <ClCompile Include="PrivatePanel_18.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClCompile>
     <ClCompile Include="PrivatePanel_Miss.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PR_18.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PR_Giga.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PR_Super.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PR_Ultra.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PR_Miss.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_PR_MissPicture.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClCompile>
     <ClCompile Include="FolderNote2.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="FolderNote3.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_FN1.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_FN2.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_FN3.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_ClockPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle0.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle1.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle2.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle3.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle4.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle5.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle6.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle7.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle8.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="ClockPaddle9.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_ClockDay.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClCompile>
     <ClCompile Include="TrashCanFolderPanel.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClCompile>
     <ClCompile Include="BoxCroix_TrashCanFolder.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
     </ClCompile>
     <ClCompile Include="FolderNote_Password.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="FolderNote_GoodBye.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClCompile>
     <ClCompile Include="SquirrelCloud_Need.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
     <ClCompile Include="SquirrelCloud_Crack.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
     <ClCompile Include="BackSqirrelKey.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClCompile>
     <ClCompile Include="SquirrelKeyMiddle.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="SquirrelKeySmall.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
     <ClCompile Include="LevelStateManager.cpp">
-      <Filter>CHapter2.0_Fake Program\Level</Filter>
+      <Filter>Chapter2.0_Fake Program\Level</Filter>
     </ClCompile>
     <ClCompile Include="SkiteProfil.cpp">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
     <ClCompile Include="C1_BackGround.cpp">
       <Filter>Chapter1.0_Play within a play\Level\BackGround</Filter>
@@ -658,7 +658,7 @@
       <Filter>Chapter1.0_Play within a play\Level</Filter>
     </ClInclude>
     <ClInclude Include="Fake Program Level.h">
-      <Filter>CHapter2.0_Fake Program\Level</Filter>
+      <Filter>Chapter2.0_Fake Program\Level</Filter>
     </ClInclude>
     <ClInclude Include="C_0Letter_E.h">
       <Filter>Chapter0.0_MainMenu\Actor\Letter\There is</Filter>
@@ -757,202 +757,202 @@
       <Filter>Chapter0.0_MainMenu\Actor\Panel</Filter>
     </ClInclude>
     <ClInclude Include="C2_BackGround.h">
-      <Filter>CHapter2.0_Fake Program\Level\BackGround</Filter>
+      <Filter>Chapter2.0_Fake Program\Level\BackGround</Filter>
     </ClInclude>
     <ClInclude Include="squirrel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
     <ClInclude Include="FolderBackGround.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
     <ClInclude Include="ClockFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="LockFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="MusicFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="PictureFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="PrivateFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="SkiteFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="ZipWipFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="TrashcanFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="TrashcanTop.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\OutFolder</Filter>
     </ClInclude>
     <ClInclude Include="MusicNote_Walnut.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClInclude>
     <ClInclude Include="MusicNote_Archive.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClInclude>
     <ClInclude Include="MusicNote_Rain.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClInclude>
     <ClInclude Include="MusicNote_Radio.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note</Filter>
     </ClInclude>
     <ClInclude Include="Skite.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
     <ClInclude Include="SkiteBanner.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
     <ClInclude Include="SkiteIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
     <ClInclude Include="SkiteCalling.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
     <ClInclude Include="SkiteCallingMissed.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
     <ClInclude Include="DayIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClInclude>
     <ClInclude Include="DayPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClInclude>
     <ClInclude Include="DayTree.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClInclude>
     <ClInclude Include="PurpleTextBox.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
     <ClInclude Include="DrawerIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
     </ClInclude>
     <ClInclude Include="DrawerPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
     </ClInclude>
     <ClInclude Include="CodeIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClInclude>
     <ClInclude Include="CodePicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code</Filter>
     </ClInclude>
     <ClInclude Include="ClockPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClInclude>
     <ClInclude Include="ClockUnderBar.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI</Filter>
     </ClInclude>
     <ClInclude Include="Truth1Icon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
     <ClInclude Include="Truth2Icon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
     <ClInclude Include="Truth3Icon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth</Filter>
     </ClInclude>
     <ClInclude Include="USMissIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClInclude>
     <ClInclude Include="FRMissIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClInclude>
     <ClInclude Include="JPMissIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss</Filter>
     </ClInclude>
     <ClInclude Include="MissPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture</Filter>
     </ClInclude>
     <ClInclude Include="SuperPrivate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
     <ClInclude Include="UltraPrivate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
     <ClInclude Include="GigaPrivate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
     <ClInclude Include="Private18.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File</Filter>
     </ClInclude>
     <ClInclude Include="ClockDayandNight.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
     </ClInclude>
     <ClInclude Include="ClockBranch.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay</Filter>
     </ClInclude>
     <ClInclude Include="PictureFolderPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
     <ClInclude Include="PasswordIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClInclude>
     <ClInclude Include="GoodbyeIcon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_BackGround.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_Ball.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_Bumper50.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_Racket.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_SideTable.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_Icon.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_Score.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_HaloCup.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_Bumper100.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_LeftBoxFond.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClInclude>
     <ClInclude Include="PinBall_RightBoxFond.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back</Filter>
     </ClInclude>
     <ClInclude Include="Mouse.h">
       <Filter>CommonUI</Filter>
     </ClInclude>
     <ClInclude Include="Cup.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="Decapsuleur.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="Nut_Open.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="Nut_Close.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="S_ActorBase.h">
       <Filter>Actor Base</Filter>
     </ClInclude>
     <ClInclude Include="SquirrelKey.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="Cup_Full.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="LoadBarTXT.h">
       <Filter>Chapter1.5_Program Loading\Actor</Filter>
@@ -970,163 +970,163 @@
       <Filter>CommonUI</Filter>
     </ClInclude>
     <ClInclude Include="MediaPause.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
     <ClInclude Include="MediaPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
     <ClInclude Include="MediaPlay.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
     <ClInclude Include="MediaPlayer.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
     <ClInclude Include="MusicFolderPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor</Filter>
     </ClInclude>
     <ClInclude Include="FolderNote.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="RightRotate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClInclude>
     <ClInclude Include="LeftRotate.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_Music.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_Skite.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_CodePicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_DayPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_DrawerPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PictureFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture</Filter>
     </ClInclude>
     <ClInclude Include="PrivatePanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClInclude>
     <ClInclude Include="PrivatePanel_Ultra.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClInclude>
     <ClInclude Include="PrivatePanel_Giga.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClInclude>
     <ClInclude Include="PrivatePanel_18.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClInclude>
     <ClInclude Include="PrivatePanel_Miss.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_18.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_Giga.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_Super.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_Ultra.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_Miss.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_PR_MissPicture.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss</Filter>
     </ClInclude>
     <ClInclude Include="FolderNote2.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="FolderNote3.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_FN1.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_FN2.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_FN3.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_ClockPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle0.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle1.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle2.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle3.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle4.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle5.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle6.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle7.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle8.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="ClockPaddle9.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_ClockDay.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock</Filter>
     </ClInclude>
     <ClInclude Include="TrashCanFolderPanel.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File</Filter>
     </ClInclude>
     <ClInclude Include="BoxCroix_TrashCanFolder.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan</Filter>
     </ClInclude>
     <ClInclude Include="FolderNote_Password.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="FolderNote_GoodBye.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote</Filter>
     </ClInclude>
     <ClInclude Include="SquirrelCloud_Need.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
     <ClInclude Include="SquirrelCloud_Crack.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
     <ClInclude Include="BackSqirrelKey.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Backetc</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Backetc</Filter>
     </ClInclude>
     <ClInclude Include="SquirrelKeyMiddle.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="SquirrelKeySmall.h">
-      <Filter>CHapter2.0_Fake Program\Actor\ScreenActor</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="LevelStateManager.h">
-      <Filter>CHapter2.0_Fake Program\Level</Filter>
+      <Filter>Chapter2.0_Fake Program\Level</Filter>
     </ClInclude>
     <ClInclude Include="SkiteProfil.h">
-      <Filter>CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
     <ClInclude Include="C1_BackGround.h">
       <Filter>Chapter1.0_Play within a play\Level\BackGround</Filter>
@@ -1304,158 +1304,8 @@
     <Filter Include="Chapter0.0_MainMenu\Actor\DrawaPixel">
       <UniqueIdentifier>{ac402e5a-38d6-44b8-a652-8f864d07c5f8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CHapter2.0_Fake Program">
-      <UniqueIdentifier>{0d1587da-ee20-4381-8476-d7820d86efcf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Level">
-      <UniqueIdentifier>{a9d32771-3e43-4815-9495-bfd57d377e06}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Level\BackGround">
-      <UniqueIdentifier>{d7ad261a-27d8-426a-8076-d4f557c190a4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor">
-      <UniqueIdentifier>{3d541356-c62a-4ad2-9f98-6f67442f8c60}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder">
-      <UniqueIdentifier>{1766bcde-a63a-4db1-8c53-98a39b093da7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Backetc">
-      <UniqueIdentifier>{1f658f27-2485-4ba0-8aae-e138973c9ca6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\OutFolder">
-      <UniqueIdentifier>{b180e55e-6584-4e44-9842-cfab917fc3a6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder">
-      <UniqueIdentifier>{8ee0afa6-df38-4539-9294-b579d4e1d8e9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI">
-      <UniqueIdentifier>{a308f3c2-8bdc-4cae-8a3d-5a82713d82df}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Skite">
-      <UniqueIdentifier>{6033a441-6262-4de1-88ec-76f2dddd7f67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock">
-      <UniqueIdentifier>{6371abdb-cbfe-4a2b-ab75-2cd41db665c3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture">
-      <UniqueIdentifier>{ea88ec9f-113d-43f7-a3c7-84fb9ca0b1a1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private">
-      <UniqueIdentifier>{ebb29a65-e5bb-43db-8d21-f32d8fd18515}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan">
-      <UniqueIdentifier>{4ee7fe16-cf07-49f2-9e7c-19e2d6f5b8c8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day">
-      <UniqueIdentifier>{7a6ae1f3-4681-4bcd-addb-5e0a48eea306}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer">
-      <UniqueIdentifier>{1165bab7-807d-4dd5-a7e4-60c78175f965}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code">
-      <UniqueIdentifier>{c72242e6-6b6e-451a-be23-1b927d1c37cb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder">
-      <UniqueIdentifier>{d1d9a76c-744f-4296-8563-eec0f9c313f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note">
-      <UniqueIdentifier>{e023be9c-a5e9-43d3-96d4-0d5ef754ed0e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI">
-      <UniqueIdentifier>{58fcb3b0-1c16-4a1a-a71c-7e80d26043a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle">
-      <UniqueIdentifier>{17c82583-1299-4c39-93a8-5d5a7163c238}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI">
-      <UniqueIdentifier>{ec6dd253-3bfc-474e-9eb8-fd3eb3e48109}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Chapter1.5_Program Loading\Actor">
       <UniqueIdentifier>{b918024b-13e6-489c-88d4-9a7a6597c019}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI">
-      <UniqueIdentifier>{d24fc3d6-cd87-49d7-97d7-49c4b8c03448}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss">
-      <UniqueIdentifier>{027fc8bf-dc69-4481-8351-84aa8bff6e22}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture">
-      <UniqueIdentifier>{3a0962eb-e827-4af9-86ba-8ba698493b41}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\File">
-      <UniqueIdentifier>{58812e5f-ae68-4db2-911a-ae3b1d78de84}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth">
-      <UniqueIdentifier>{90b583d3-bf92-41fe-a5d3-7c03a95437d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay">
-      <UniqueIdentifier>{4c6c6f13-963b-4584-810c-8ce2e1e058c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall">
-      <UniqueIdentifier>{a9f38c08-a8df-44cb-88d4-1b07292490b2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File">
-      <UniqueIdentifier>{afb8f9b7-183c-482b-9afa-a6fc77daceb7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction">
-      <UniqueIdentifier>{a3e9167a-1b0c-4ea6-9192-a1216f197ecb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back">
-      <UniqueIdentifier>{fc44acb5-9bf1-462c-88cd-74342b2821f7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc">
-      <UniqueIdentifier>{4bdeeaf5-5277-47ed-b252-714ccda2a44b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\ScreenActor">
-      <UniqueIdentifier>{14b735ee-00cd-45bd-b2c4-11eae1c63805}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor">
-      <UniqueIdentifier>{3f3b6f27-e2df-46d6-a7d0-8b20d1aad969}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix">
-      <UniqueIdentifier>{83ab74f4-c102-4d7b-956d-fd71accc3d37}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate">
-      <UniqueIdentifier>{21569e5a-4070-46ea-9a87-9bea83a31d13}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote">
-      <UniqueIdentifier>{032df8b2-f4f4-431a-846e-822e46ed0b70}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music">
-      <UniqueIdentifier>{08047a24-fb99-4e81-89b6-6471a851d773}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private">
-      <UniqueIdentifier>{080f9e7e-4cda-42c9-8b3a-4510d2de591f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture">
-      <UniqueIdentifier>{9c4e8795-9609-4ef5-a28b-7022403643d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite">
-      <UniqueIdentifier>{59c82167-25ca-45de-901d-639ae7589e46}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel">
-      <UniqueIdentifier>{8f3a87a4-a788-4fd8-8355-4367e780dcc4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder">
-      <UniqueIdentifier>{93e90ec0-9896-4e5d-a2aa-0ea8834d656f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss">
-      <UniqueIdentifier>{7c47faa7-667d-47c6-a284-cbacffdd1bb2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote">
-      <UniqueIdentifier>{0d7874bd-86d7-48c1-b42d-40ecd66cf897}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock">
-      <UniqueIdentifier>{30fe0d18-d057-4eea-9570-9f80dfcd2200}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle">
-      <UniqueIdentifier>{05a4b6cb-79e3-4b9d-bba6-1f00e2b4dd65}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\UnderBarNumber">
-      <UniqueIdentifier>{934b9186-4fc4-4f22-af64-191dc02337ce}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CHapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan">
-      <UniqueIdentifier>{c2d05f79-ce68-4fc8-8a4c-2e4b35b55efb}</UniqueIdentifier>
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Level\BackGround">
       <UniqueIdentifier>{03c80588-e4d0-4f78-8749-b846d76feec2}</UniqueIdentifier>
@@ -1492,6 +1342,165 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball">
       <UniqueIdentifier>{5ac7ce9d-c7e2-45ea-8b17-9868193e54c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program">
+      <UniqueIdentifier>{0d1587da-ee20-4381-8476-d7820d86efcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Level">
+      <UniqueIdentifier>{a9d32771-3e43-4815-9495-bfd57d377e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Level\BackGround">
+      <UniqueIdentifier>{d7ad261a-27d8-426a-8076-d4f557c190a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor">
+      <UniqueIdentifier>{3d541356-c62a-4ad2-9f98-6f67442f8c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder">
+      <UniqueIdentifier>{1766bcde-a63a-4db1-8c53-98a39b093da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\OutFolder">
+      <UniqueIdentifier>{b180e55e-6584-4e44-9842-cfab917fc3a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder">
+      <UniqueIdentifier>{8ee0afa6-df38-4539-9294-b579d4e1d8e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite">
+      <UniqueIdentifier>{6033a441-6262-4de1-88ec-76f2dddd7f67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock">
+      <UniqueIdentifier>{6371abdb-cbfe-4a2b-ab75-2cd41db665c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle">
+      <UniqueIdentifier>{17c82583-1299-4c39-93a8-5d5a7163c238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\Paddle">
+      <UniqueIdentifier>{05a4b6cb-79e3-4b9d-bba6-1f00e2b4dd65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockPaddle\UnderBarNumber">
+      <UniqueIdentifier>{934b9186-4fc4-4f22-af64-191dc02337ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockUI">
+      <UniqueIdentifier>{ec6dd253-3bfc-474e-9eb8-fd3eb3e48109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Clock\ClockDay">
+      <UniqueIdentifier>{4c6c6f13-963b-4584-810c-8ce2e1e058c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture">
+      <UniqueIdentifier>{ea88ec9f-113d-43f7-a3c7-84fb9ca0b1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day">
+      <UniqueIdentifier>{7a6ae1f3-4681-4bcd-addb-5e0a48eea306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer">
+      <UniqueIdentifier>{1165bab7-807d-4dd5-a7e4-60c78175f965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture3_Code">
+      <UniqueIdentifier>{c72242e6-6b6e-451a-be23-1b927d1c37cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI">
+      <UniqueIdentifier>{58fcb3b0-1c16-4a1a-a71c-7e80d26043a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Private">
+      <UniqueIdentifier>{ebb29a65-e5bb-43db-8d21-f32d8fd18515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI">
+      <UniqueIdentifier>{d24fc3d6-cd87-49d7-97d7-49c4b8c03448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\PrivateUI\Panel">
+      <UniqueIdentifier>{8f3a87a4-a788-4fd8-8355-4367e780dcc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss">
+      <UniqueIdentifier>{027fc8bf-dc69-4481-8351-84aa8bff6e22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\18+Miss\MissPicture">
+      <UniqueIdentifier>{3a0962eb-e827-4af9-86ba-8ba698493b41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\File">
+      <UniqueIdentifier>{58812e5f-ae68-4db2-911a-ae3b1d78de84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Private\Truth">
+      <UniqueIdentifier>{90b583d3-bf92-41fe-a5d3-7c03a95437d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan">
+      <UniqueIdentifier>{4ee7fe16-cf07-49f2-9e7c-19e2d6f5b8c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall">
+      <UniqueIdentifier>{a9f38c08-a8df-44cb-88d4-1b07292490b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Interaction">
+      <UniqueIdentifier>{a3e9167a-1b0c-4ea6-9192-a1216f197ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Back">
+      <UniqueIdentifier>{fc44acb5-9bf1-462c-88cd-74342b2821f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\PinBall\Icon+etc">
+      <UniqueIdentifier>{4bdeeaf5-5277-47ed-b252-714ccda2a44b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\Trashcan\File">
+      <UniqueIdentifier>{afb8f9b7-183c-482b-9afa-a6fc77daceb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder">
+      <UniqueIdentifier>{d1d9a76c-744f-4296-8563-eec0f9c313f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\Note">
+      <UniqueIdentifier>{e023be9c-a5e9-43d3-96d4-0d5ef754ed0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\Infolder\MusicFolder\MusicActor">
+      <UniqueIdentifier>{3f3b6f27-e2df-46d6-a7d0-8b20d1aad969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI">
+      <UniqueIdentifier>{a308f3c2-8bdc-4cae-8a3d-5a82713d82df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix">
+      <UniqueIdentifier>{83ab74f4-c102-4d7b-956d-fd71accc3d37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Music">
+      <UniqueIdentifier>{08047a24-fb99-4e81-89b6-6471a851d773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private">
+      <UniqueIdentifier>{080f9e7e-4cda-42c9-8b3a-4510d2de591f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\folder">
+      <UniqueIdentifier>{93e90ec0-9896-4e5d-a2aa-0ea8834d656f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\miss">
+      <UniqueIdentifier>{7c47faa7-667d-47c6-a284-cbacffdd1bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Private\FolderNote">
+      <UniqueIdentifier>{0d7874bd-86d7-48c1-b42d-40ecd66cf897}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Picture">
+      <UniqueIdentifier>{9c4e8795-9609-4ef5-a28b-7022403643d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Skite">
+      <UniqueIdentifier>{59c82167-25ca-45de-901d-639ae7589e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_Clock">
+      <UniqueIdentifier>{30fe0d18-d057-4eea-9570-9f80dfcd2200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\BoxCroix\B_TrashCan">
+      <UniqueIdentifier>{c2d05f79-ce68-4fc8-8a4c-2e4b35b55efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\Rotate">
+      <UniqueIdentifier>{21569e5a-4070-46ea-9a87-9bea83a31d13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\FolderNote">
+      <UniqueIdentifier>{032df8b2-f4f4-431a-846e-822e46ed0b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Backetc">
+      <UniqueIdentifier>{1f658f27-2485-4ba0-8aae-e138973c9ca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\ScreenActor">
+      <UniqueIdentifier>{14b735ee-00cd-45bd-b2c4-11eae1c63805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter3.0_Ending">
+      <UniqueIdentifier>{cb8c83d0-96ae-4f37-84cd-0afd36832214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter3.0_Ending\Actor">
+      <UniqueIdentifier>{69f0d5fa-626a-4bd8-9f03-ae22b1ec6b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter3.0_Ending\Level">
+      <UniqueIdentifier>{18cf2983-1f94-439f-89c6-86d88ece73b1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
