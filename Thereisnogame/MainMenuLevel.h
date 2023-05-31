@@ -23,7 +23,7 @@ public:
 	MainMenuLevel(MainMenuLevel&& _Other) noexcept = delete;
 	MainMenuLevel& operator=(const MainMenuLevel& _Other) = delete;
 	MainMenuLevel& operator=(MainMenuLevel&& _Other) noexcept = delete;
-
+	std::shared_ptr<class FadeEffect> FEffect;
 	void CreateMainMenuArrow();
 	void CreateLetter();
 	void CreateFlag();
@@ -56,6 +56,7 @@ public:
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
+	void LevelChangeStart() override;
 
 private:
 	MainMenuState StateValue = MainMenuState::Flag;

@@ -410,6 +410,7 @@
     <ClCompile Include="CoffreFortHandle.cpp" />
     <ClCompile Include="CoffreFortPanel.cpp" />
     <ClCompile Include="Cog.cpp" />
+    <ClCompile Include="ContentsCore_Resource.cpp" />
     <ClCompile Include="Cordon.cpp" />
     <ClCompile Include="Cup.cpp" />
     <ClCompile Include="Cup_Full.cpp" />

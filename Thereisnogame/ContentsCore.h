@@ -22,5 +22,7 @@ public:
 protected:
 
 private:
+
+	static void ResourceInit(std::string_view _ShaderName, std::string_view _PipeName);
 };
 

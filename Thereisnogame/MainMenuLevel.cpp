@@ -19,7 +19,7 @@
 #include "DrawaPixel.h"
 #include "StartPictures.h"
 #include "Mouse.h"
-
+#include "FadeEffect.h"
 //Letter
 #include "C_0Letter_T.h"
 #include "C_0Letter_H .h"
@@ -85,7 +85,7 @@ void MainMenuLevel::Start()
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
-
+	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
 		CreateActor<BackCurtain_Main>();
 		CreateFlag();
@@ -128,6 +128,11 @@ void MainMenuLevel::Update(float _DeltaTime)
 	UpdateState(_DeltaTime);
 }
 
+void MainMenuLevel::LevelChangeStart()
+{
+	FEffect->FadeOut();
+	GameEngineLevel::LevelChangeStart();
+}
 
 
 
