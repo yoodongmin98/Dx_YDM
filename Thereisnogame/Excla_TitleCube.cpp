@@ -31,6 +31,7 @@ void Excla_TitleCube::Update(float _DeltaTime)
 	{
 		UpdateBool = false;
 		Excla_TitleCubes->GetTransform()->SetLocalRotation({ 0,0,-30 });
+		Excla_TitleCubes->GetTransform()->SetLocalPosition({ 30,0,0 });
 		Excla_TitleCubesCollision->On();
 	}
 }

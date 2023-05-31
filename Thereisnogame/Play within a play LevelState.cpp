@@ -117,7 +117,7 @@ bool BoardCreateBool = true;
 void PlaywithinaplayLevel::CreateBoardStart()
 {
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(6);
+	ChainPtr->SetChainLiveTime(7);
 }
 void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 {

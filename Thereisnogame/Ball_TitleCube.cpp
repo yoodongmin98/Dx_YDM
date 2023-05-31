@@ -31,6 +31,7 @@ void Ball_TitleCube::Update(float _DeltaTime)
 	{
 		UpdateBool = false;
 		Ball_TitleCubes->GetTransform()->SetLocalRotation({ 0,0,-30 });
+		Ball_TitleCubes->GetTransform()->AddLocalPosition({ -30,-20,0 });
 		Ball_TitleCubesCollision->On();
 	}
 }

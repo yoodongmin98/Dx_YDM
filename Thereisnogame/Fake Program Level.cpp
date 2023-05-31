@@ -28,6 +28,8 @@
 #include "TrashcanFolder.h"
 #include "TrashcanTop.h"
 
+//Test
+#include "SquirrelKey.h"
 FakeProgramLevel::FakeProgramLevel()
 {
 }
@@ -64,6 +66,7 @@ void FakeProgramLevel::Start()
 		CreateActor<squirrel>();
 		CreateActor<BackSqirrelKey>();
 		FolderCreate();
+		CreateActor<SquirrelKey>();
 	}
 	CreateActor<Mouse>();
 	CreateActor<AlphaCircle>();

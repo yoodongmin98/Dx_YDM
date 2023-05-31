@@ -77,6 +77,7 @@ void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	std::shared_ptr<GameEngineSpriteRenderer> _Render2,
 	std::shared_ptr<GameEngineCollision> _Collision)
 {
+	// 이 조건문 때문에 Actor를잡고 빠르게 움직이면 놓쳐버림 얘 없으면 잘 됨.
 	if (_Collision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		float4 MousePos = Mouse::MainMouse->GetMousePos();
