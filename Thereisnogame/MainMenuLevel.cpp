@@ -131,7 +131,6 @@ void MainMenuLevel::Update(float _DeltaTime)
 void MainMenuLevel::LevelChangeStart()
 {
 	FEffect->FadeOut();
-	GameEngineLevel::LevelChangeStart();
 }
 
 
