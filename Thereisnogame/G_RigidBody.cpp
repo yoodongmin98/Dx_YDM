@@ -12,7 +12,7 @@ G_RigidBody::G_RigidBody()
 	:Parents(nullptr)
 	, Mass(1.0f) //질량
 	, MaxSpeed(100.0f) //최대속도
-	, FrictionCoeff(0.0f) //마찰계수
+	, FrictionCoeff(100.0f) //마찰계수
 {
 
 }
@@ -28,19 +28,34 @@ void G_RigidBody::RigidBodyUpdate()
 		MsgAssert("RigidBody의 부모가 존재하지 않습니다");
 	}
 	//힘의방향
-	float XX = Force.x;
-	float YY = Force.y;
-	float Length = sqrt(XX * XX + YY * YY);
+	float Length = Force.Size();
 	if (Length !=0.0f)
 	{
+		//DeltaTime
+		float Times = GameEngineTime::GlobalTime.GetDeltaTime(); //DeltaTime은 매 프레임마다 꾸준히 받아와야함
+
 		Force.Normalize();
 		//가속도의 크기
 		float fAccel = Length / Mass;
 		//가속도
 		Accel = Force * fAccel;
 		//속도
-		float Times = GameEngineTime::GlobalTime.GetDeltaTime(); //DeltaTime은 매 프레임마다 꾸준히 받아와야함
 		Velocity += Accel * Times;
+
+		//마찰력에 의한 반대방향으로의 가속도
+		float4 VecDir = -Velocity.NormalizeReturn() * FrictionCoeff * Times;
+		if (VecDir.Size() > Velocity.Size())
+		{
+			//마찰 가속도가 본래 속도보다 더 큰 경우
+			Velocity = float4::Zero;
+		}
+		else
+		{
+			Velocity += VecDir;
+		}
+
+
+		//속도제한
 		if (MaxSpeed < Length)
 		{
 			Velocity.Normalize();
@@ -56,9 +71,7 @@ void G_RigidBody::RigidBodyUpdate()
 void G_RigidBody::Move()
 {
 	//이동속력
-	float XX = Velocity.x;
-	float YY = Velocity.y;
-	float fSpeed = sqrt(XX * XX + YY * YY);
+	float fSpeed = Velocity.Size();
 	if (0.0f != fSpeed)
 	{
 		//이동방향

@@ -26,6 +26,7 @@ G_ActorBase::G_ActorBase()
 
 G_ActorBase::~G_ActorBase()
 {
+	//LeakªË¡¶
 	if (nullptr != pRigidBody)
 	{
 		delete pRigidBody;
