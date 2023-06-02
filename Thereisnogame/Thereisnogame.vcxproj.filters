@@ -631,6 +631,9 @@
     <ClCompile Include="BlueErrorMessage.cpp">
       <Filter>Chapter0.0.0_Opening\Actor</Filter>
     </ClCompile>
+    <ClCompile Include="G_RigidBody.cpp">
+      <Filter>Actor Base\RigidBody</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContentsCore.h">
@@ -1257,6 +1260,9 @@
     <ClInclude Include="BlueErrorMessage.h">
       <Filter>Chapter0.0.0_Opening\Actor</Filter>
     </ClInclude>
+    <ClInclude Include="G_RigidBody.h">
+      <Filter>Actor Base\RigidBody</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1522,6 +1528,9 @@
     </Filter>
     <Filter Include="Chapter0.0.0_Opening\Actor">
       <UniqueIdentifier>{5ff9e4fc-a258-45c7-bfec-25df1ac68986}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor Base\RigidBody">
+      <UniqueIdentifier>{5706364c-1296-414b-ae68-62766f29cc16}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

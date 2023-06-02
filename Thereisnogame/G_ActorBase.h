@@ -3,7 +3,7 @@
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 #include <GameEngineCore/GameEngineCollision.h>
 
-
+class G_RigidBody;
 class G_ActorBase : public GameEngineActor
 {
 public:
@@ -57,7 +57,12 @@ public:
 
 	void FlagUp(float _PlusXvalue,float _DeltaTime);
 
+	void CreateRigidBody();
 
+	G_RigidBody* GetRigidBody()
+	{
+		return pRigidBody;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -66,4 +71,6 @@ protected:
 private:
 	float ReverseTime = 0.0f;
 	float4 EndPos = float4::Zero;
+
+	G_RigidBody* pRigidBody;
 };

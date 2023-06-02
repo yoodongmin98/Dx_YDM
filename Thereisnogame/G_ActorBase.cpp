@@ -2,6 +2,7 @@
 #include "G_ActorBase.h"
 #include "ActorTypeEnum.h"
 #include "Mouse.h"
+#include "G_RigidBody.h"
 //Base
 #include <GameEngineBase/GameEngineString.h>
 #include <GameEngineBase/GameEngineMath.h>
@@ -32,7 +33,7 @@ void G_ActorBase::Start()
 }
 void G_ActorBase::Update(float _DeltaTime)
 {
-	
+	pRigidBody->RigidBodyUpdate();
 }
 
 
@@ -174,6 +175,12 @@ void G_ActorBase::RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _R
 			break;
 		}
 	}
+}
+
+void G_ActorBase::CreateRigidBody()
+{
+	pRigidBody = new G_RigidBody;
+	pRigidBody->Parents = this;
 }
 
 void G_ActorBase::Down(float _DeltaTime)

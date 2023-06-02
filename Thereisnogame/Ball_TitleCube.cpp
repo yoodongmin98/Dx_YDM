@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "Ball_TitleCube.h"
-
+#include "G_RigidBody.h"
 //Base
 //PlatForm
 //Core
@@ -19,6 +19,7 @@ Ball_TitleCube::~Ball_TitleCube()
 
 void Ball_TitleCube::Start()
 {
+	G_RigidBody* Rigids = GetRigidBody();
 	Ball_TitleCubes = Init(Ball_TitleCubes, "TitleCube_Ball.png", { 44,58 }, { 300,-30,0 });
 	Ball_TitleCubesCollision = CollisionInit(Ball_TitleCubesCollision, { 44,58 }, { 300,-30,0 });
 	Ball_TitleCubesCollision->Off();
