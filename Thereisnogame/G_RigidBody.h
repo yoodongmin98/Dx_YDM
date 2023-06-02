@@ -34,6 +34,10 @@ public:
 	{
 		Velocity = _Velocity;
 	}
+	void AddVelocity(float4 _AddVelocity)
+	{
+		Velocity += _AddVelocity;
+	}
 	//최대속력
 	void SetMaxVelocity(float _MaxMaxSpeed)
 	{
