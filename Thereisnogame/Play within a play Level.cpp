@@ -12,7 +12,6 @@
 #include "C1_BackGround.h"
 #include "Mouse.h"
 #include "AlphaCircle.h"
-#include "BackGround_White.h"
 #include "Plaque.h"
 #include "BackCurtain.h"
 #include "Cordon.h"

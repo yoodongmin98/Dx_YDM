@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="ContentsCore.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="PrecompileHeader.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="MainMenuLevel.cpp">
       <Filter>Chapter0.0_MainMenu\Level</Filter>
     </ClCompile>
@@ -18,9 +12,6 @@
     </ClCompile>
     <ClCompile Include="SelectBox.cpp">
       <Filter>Chapter0.0_MainMenu\Actor\SelectBox</Filter>
-    </ClCompile>
-    <ClCompile Include="G_ActorBase.cpp">
-      <Filter>Actor Base</Filter>
     </ClCompile>
     <ClCompile Include="BackCurtain.cpp">
       <Filter>CommonUI</Filter>
@@ -322,9 +313,6 @@
     <ClCompile Include="Nut_Close.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
-    <ClCompile Include="S_ActorBase.cpp">
-      <Filter>Actor Base</Filter>
-    </ClCompile>
     <ClCompile Include="SquirrelKey.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
@@ -496,9 +484,6 @@
     <ClCompile Include="SquirrelKeySmall.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClCompile>
-    <ClCompile Include="LevelStateManager.cpp">
-      <Filter>Chapter2.0_Fake Program\Level</Filter>
-    </ClCompile>
     <ClCompile Include="SkiteProfil.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClCompile>
@@ -552,9 +537,6 @@
     </ClCompile>
     <ClCompile Include="BalloonSecure.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
-    </ClCompile>
-    <ClCompile Include="BackGround_White.cpp">
-      <Filter>CommonUI</Filter>
     </ClCompile>
     <ClCompile Include="Vis.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
@@ -619,12 +601,6 @@
     <ClCompile Include="BackCurtain_Main.cpp">
       <Filter>CommonUI</Filter>
     </ClCompile>
-    <ClCompile Include="FadeEffect.cpp">
-      <Filter>Actor Base</Filter>
-    </ClCompile>
-    <ClCompile Include="ContentsCore_Resource.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="OpeningLevel.cpp">
       <Filter>Chapter0.0.0_Opening\Level</Filter>
     </ClCompile>
@@ -634,14 +610,29 @@
     <ClCompile Include="G_RigidBody.cpp">
       <Filter>Actor Base\RigidBody</Filter>
     </ClCompile>
+    <ClCompile Include="FadeEffect.cpp">
+      <Filter>Actor Base\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="G_ActorBase.cpp">
+      <Filter>Actor Base\G &amp; S Base</Filter>
+    </ClCompile>
+    <ClCompile Include="S_ActorBase.cpp">
+      <Filter>Actor Base\G &amp; S Base</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelStateManager.cpp">
+      <Filter>Actor Base\StateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentsCore_Resource.cpp">
+      <Filter>Core\Cores</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentsCore.cpp">
+      <Filter>Core\Cores</Filter>
+    </ClCompile>
+    <ClCompile Include="PrecompileHeader.cpp">
+      <Filter>Core\etc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ContentsCore.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="PrecompileHeader.h">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="MainMenuLevel.h">
       <Filter>Chapter0.0_MainMenu\Level</Filter>
     </ClInclude>
@@ -653,9 +644,6 @@
     </ClInclude>
     <ClInclude Include="SelectBox.h">
       <Filter>Chapter0.0_MainMenu\Actor\SelectBox</Filter>
-    </ClInclude>
-    <ClInclude Include="G_ActorBase.h">
-      <Filter>Actor Base</Filter>
     </ClInclude>
     <ClInclude Include="BackCurtain.h">
       <Filter>CommonUI</Filter>
@@ -954,9 +942,6 @@
     <ClInclude Include="Nut_Close.h">
       <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
-    <ClInclude Include="S_ActorBase.h">
-      <Filter>Actor Base</Filter>
-    </ClInclude>
     <ClInclude Include="SquirrelKey.h">
       <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
@@ -1131,9 +1116,6 @@
     <ClInclude Include="SquirrelKeySmall.h">
       <Filter>Chapter2.0_Fake Program\Actor\ScreenActor</Filter>
     </ClInclude>
-    <ClInclude Include="LevelStateManager.h">
-      <Filter>Chapter2.0_Fake Program\Level</Filter>
-    </ClInclude>
     <ClInclude Include="SkiteProfil.h">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Skite</Filter>
     </ClInclude>
@@ -1187,9 +1169,6 @@
     </ClInclude>
     <ClInclude Include="BalloonSecure.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
-    </ClInclude>
-    <ClInclude Include="BackGround_White.h">
-      <Filter>CommonUI</Filter>
     </ClInclude>
     <ClInclude Include="Vis.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
@@ -1251,9 +1230,6 @@
     <ClInclude Include="BackCurtain_Main.h">
       <Filter>CommonUI</Filter>
     </ClInclude>
-    <ClInclude Include="FadeEffect.h">
-      <Filter>Actor Base</Filter>
-    </ClInclude>
     <ClInclude Include="OpeningLevel.h">
       <Filter>Chapter0.0.0_Opening\Level</Filter>
     </ClInclude>
@@ -1262,6 +1238,24 @@
     </ClInclude>
     <ClInclude Include="G_RigidBody.h">
       <Filter>Actor Base\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeEffect.h">
+      <Filter>Actor Base\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="G_ActorBase.h">
+      <Filter>Actor Base\G &amp; S Base</Filter>
+    </ClInclude>
+    <ClInclude Include="S_ActorBase.h">
+      <Filter>Actor Base\G &amp; S Base</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelStateManager.h">
+      <Filter>Actor Base\StateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentsCore.h">
+      <Filter>Core\Cores</Filter>
+    </ClInclude>
+    <ClInclude Include="PrecompileHeader.h">
+      <Filter>Core\etc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1532,13 +1526,25 @@
     <Filter Include="Actor Base\RigidBody">
       <UniqueIdentifier>{5706364c-1296-414b-ae68-62766f29cc16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Actor Base\Effect">
+      <UniqueIdentifier>{6c16d0e5-c2a7-49a5-98c5-b7dfc0feea62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor Base\G &amp; S Base">
+      <UniqueIdentifier>{b5f1928c-723d-4d28-b891-f3c2fcb8303b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor Base\StateManager">
+      <UniqueIdentifier>{bdc38631-cd8a-4616-a6ba-ad63c95b0456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\etc">
+      <UniqueIdentifier>{d3a423d9-9470-48d5-a73a-e580087558c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Cores">
+      <UniqueIdentifier>{4537085f-1035-4638-9f11-08f0a42e5b3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\구조 메모장.txt">
-      <Filter>Core</Filter>
-    </Text>
-    <Text Include="etc.txt">
-      <Filter>Core</Filter>
+      <Filter>Core\etc</Filter>
     </Text>
   </ItemGroup>
 </Project>

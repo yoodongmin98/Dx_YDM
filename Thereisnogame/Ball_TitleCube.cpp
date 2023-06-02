@@ -25,11 +25,11 @@ void Ball_TitleCube::Start()
 
 	ImageHalfScaleX = Ball_TitleCubes->GetTransform()->GetLocalScale().half().x;
 	ImageHalfScaleY = Ball_TitleCubes->GetTransform()->GetLocalScale().half().y;
-
-	/*GameEngineInput::CreateKey("Left", 'A');
-	GameEngineInput::CreateKey("Up", 'W');
-	GameEngineInput::CreateKey("Down", 'S');
-	GameEngineInput::CreateKey("Right", 'D');*/
+	if (false == GameEngineInput::IsKey("BallLeft"))
+	{
+		GameEngineInput::CreateKey("BallLeft", 'A');
+		GameEngineInput::CreateKey("BallRight", 'D');
+	}
 }
 
 void Ball_TitleCube::Update(float _DeltaTime)
@@ -50,16 +50,16 @@ void Ball_TitleCube::StartRigidBody()
 {
 	G_RigidBody* Rigids = GetRigidBody();
 	//Test Key
-	/*if (GameEngineInput::IsPress("Left"))
+	if (GameEngineInput::IsPress("BallLeft"))
 	{
 		Rigids->AddForce(float4::Left * 300);
 	}
-	if (GameEngineInput::IsPress("Right"))
+	if (GameEngineInput::IsPress("BallRight"))
 	{
 		Rigids->AddForce(float4::Right * 200);
-	}*/
+	}
 	Rigids->AddForce(float4::Down * 400);
-	if (GetTransform()->GetLocalPosition().y <= -100 - ImageHalfScaleY)
+	if (GetTransform()->GetLocalPosition().y <= -280 - ImageHalfScaleY)
 	{
 		Rigids->ChangeYDir();
 	}
@@ -77,8 +77,6 @@ void Ball_TitleCube::ProgressCheck()
 		&& true == UpdateBool)
 	{
 		UpdateBool = false;
-		GetTransform()->SetLocalRotation({ 0,0,-30 });
-		GetTransform()->AddLocalPosition({ 60,140,0 });
 		Ball_TitleCubesCollision->On();
 	}
 	if (true == ClickCheck(Ball_TitleCubesCollision)&&false== StartBallGame)
@@ -87,6 +85,7 @@ void Ball_TitleCube::ProgressCheck()
 		GetTransform()->AddLocalPosition({ 0,-5,0 });
 		if (BallClickCount > 4)
 		{
+			Ball_TitleCubesCollision->Death();
 			StartBallGame = true;
 		}
 	}

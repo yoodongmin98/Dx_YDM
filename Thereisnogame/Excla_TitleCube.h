@@ -13,6 +13,8 @@ public:
 	Excla_TitleCube& operator=(const Excla_TitleCube& _Other) = delete;
 	Excla_TitleCube& operator=(Excla_TitleCube&& _Other) noexcept = delete;
 
+	void ProgressCheck();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;

@@ -26,19 +26,31 @@ void Excla_TitleCube::Start()
 
 void Excla_TitleCube::Update(float _DeltaTime)
 {
-	if (true == LevelStateManager::MG->GetIsBoardDown()
-		&& true == UpdateBool)
-	{
-		UpdateBool = false;
-		GetTransform()->SetLocalRotation({ 0,0,-30 });
-		GetTransform()->AddLocalPosition({ 30,0,0 });
-		Excla_TitleCubesCollision->On();
-	}
+	ProgressCheck();
 }
 
 void Excla_TitleCube::Render(float _Delta)
 {
 
 };
+
+void Excla_TitleCube::ProgressCheck()
+{
+	if (true == LevelStateManager::MG->GetIsBoardDown()
+		&& true == UpdateBool)
+	{
+		UpdateBool = false;
+		Excla_TitleCubesCollision->On();
+	}
+	if (true == ClickCheck(Excla_TitleCubesCollision))
+	{
+		++ExclaClickCount;
+		if (ExclaClickCount > 4)
+		{
+			Excla_TitleCubesCollision->Death();
+			// 화면 밖으로나가면 밑판Create하고나서 Death
+		}
+	}
+}
 
 
