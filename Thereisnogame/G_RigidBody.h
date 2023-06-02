@@ -30,9 +30,13 @@ public:
 		return Mass;
 	}
 	//¼Óµµ
-	void ChangeDir()
+	void ChangeYDir()
 	{
-		Velocity = -Velocity;
+		Velocity.y = -Velocity.y;
+	}
+	void ChangeXDir()
+	{
+		Velocity.x = -Velocity.x;
 	}
 	void SetVelocity(float4 _Velocity)
 	{
