@@ -18,7 +18,7 @@ public:
 	void RigidBodyUpdate();
 	void AddForce(float4 _Forces)
 	{
-		Force = Force + _Forces;
+		Force += _Forces;
 	}
 	//기본질량은 1 질량설정
 	void SetMass(float _Mass)
@@ -28,6 +28,16 @@ public:
 	float GetMass()
 	{
 		return Mass;
+	}
+	//속도
+	void SetVelocity(float4 _Velocity)
+	{
+		Velocity = _Velocity;
+	}
+	//최대속력
+	void SetMaxVelocity(float _MaxMaxSpeed)
+	{
+		MaxSpeed = _MaxMaxSpeed;
 	}
 protected:
 
@@ -40,6 +50,11 @@ private:
 	float4 Accel; //가속도
 	float Mass;//질량
 	float4 Velocity;//속도(크기: 속력,방향)
+	float MaxSpeed;//최대속력
+
+	float FrictionCoeff;//마찰계수
+
+
 
 	// F = M * A;
 	// V += A * DeltaTime;
