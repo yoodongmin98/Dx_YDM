@@ -11,8 +11,8 @@
 G_RigidBody::G_RigidBody()
 	:Parents(nullptr)
 	, Mass(1.0f) //질량
-	, MaxSpeed(200.0f) //최대속도
-	, FrictionCoeff(100.0f) //마찰계수
+	, MaxSpeed(300.0f) //최대속도
+	, FrictionCoeff(0.0f) //마찰계수
 {
 
 }

@@ -32,21 +32,10 @@ void Ball_TitleCube::Start()
 void Ball_TitleCube::Update(float _DeltaTime)
 {
 	G_RigidBody* Rigids = GetRigidBody();
-	if (GameEngineInput::IsPress("Down"))
+	Rigids->AddForce(float4::Down*300);
+	if (GetTransform()->GetLocalPosition().y < -360+29)
 	{
-		Rigids->AddForce(float4{0.0f,-200.0f});
-	}
-	if (GameEngineInput::IsPress("Up"))
-	{
-		Rigids->AddForce(float4{ 0.0f,200.0f });
-	}
-	if (GameEngineInput::IsPress("Right"))
-	{
-		Rigids->AddForce(float4{ 200.0f,0.0f });
-	}
-	if (GameEngineInput::IsPress("Left"))
-	{
-		Rigids->AddForce(float4{ -200.0f,0.0f });
+		Rigids->ChangeDir();
 	}
 	Rigids->RigidBodyUpdate();
 	//if (true == LevelStateManager::MG->GetIsBoardDown()
