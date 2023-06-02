@@ -40,7 +40,6 @@ void G_ActorBase::Start()
 }
 void G_ActorBase::Update(float _DeltaTime)
 {
-	pRigidBody->RigidBodyUpdate();
 }
 
 
