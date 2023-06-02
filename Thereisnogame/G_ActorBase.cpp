@@ -19,12 +19,18 @@
 #include "LevelStateManager.h"
 
 G_ActorBase::G_ActorBase()
+	:pRigidBody(nullptr)
 {
-
+	CreateRigidBody();
 }
 
 G_ActorBase::~G_ActorBase()
 {
+	if (nullptr != pRigidBody)
+	{
+		delete pRigidBody;
+		pRigidBody = nullptr;
+	}
 }
 
 void G_ActorBase::Start()
@@ -179,7 +185,7 @@ void G_ActorBase::RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _R
 
 void G_ActorBase::CreateRigidBody()
 {
-	pRigidBody = new G_RigidBody;
+	pRigidBody = new G_RigidBody();
 	pRigidBody->Parents = this;
 }
 

@@ -11,7 +11,7 @@
 
 
 //Actor
-
+#include "Ball_TitleCube.h"
 ProgramLoadingLevel::ProgramLoadingLevel()
 {
 }
@@ -46,7 +46,7 @@ void ProgramLoadingLevel::Start()
 
 	//백그라운드부터 순서대로(나중에 렌더될수록 가장 앞으로나옴)
 	{
-		
+		CreateActor<Ball_TitleCube>();
 	}
 
 }

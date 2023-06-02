@@ -13,6 +13,8 @@ public:
 	Ball_TitleCube& operator=(const Ball_TitleCube& _Other) = delete;
 	Ball_TitleCube& operator=(Ball_TitleCube&& _Other) noexcept = delete;
 
+	void StartRigidBody();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;

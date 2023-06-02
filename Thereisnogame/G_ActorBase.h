@@ -7,7 +7,6 @@ class G_RigidBody;
 class G_ActorBase : public GameEngineActor
 {
 public:
-
 	G_ActorBase();
 	~G_ActorBase();
 
