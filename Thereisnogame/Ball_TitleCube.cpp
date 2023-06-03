@@ -51,7 +51,8 @@ void Ball_TitleCube::StartRigidBody()
 {
 	G_RigidBody* Rigids = GetRigidBody();
 	Rigids->AddForce(float4::Down * 400);
-	if (GetTransform()->GetLocalPosition().y <= -280 - ImageHalfScaleY)
+	if (GetTransform()->GetLocalPosition().y <= -280 - ImageHalfScaleY
+		|| GetTransform()->GetLocalPosition().y>=430)
 	{
 		Rigids->ChangeYDir();
 	}
@@ -87,7 +88,7 @@ void Ball_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 {
 	if (Ball_TitleCubesCollision->Collision(ActorTypeEnum::Excla,ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
-		_Rigids->AddForce(float4::Down * 400); //힘을 주고나서,
+		_Rigids->AddForce(float4::Down * 500); //힘을 주고나서,
 		_Rigids->ChangeYDir(); //방향을 바꾼다.
 	}
 }
