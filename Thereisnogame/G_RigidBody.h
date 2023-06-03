@@ -63,7 +63,7 @@ private:
 	float Mass;//질량
 	float4 Velocity;//속도(크기: 속력,방향)
 	float MaxSpeed;//최대속력
-
+	float MinSpeed;
 	float FrictionCoeff;//마찰계수
 
 

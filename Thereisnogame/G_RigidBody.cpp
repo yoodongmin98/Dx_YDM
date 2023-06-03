@@ -11,8 +11,9 @@
 G_RigidBody::G_RigidBody()
 	:Parents(nullptr)
 	, Mass(1.0f) //질량
-	, MaxSpeed(500.0f) //최대속도
-	, FrictionCoeff(0.0f) //마찰계수
+	, MaxSpeed(600.0f) //최대속도
+	, FrictionCoeff(20.0f) //마찰계수
+	, MinSpeed(300.0f)
 {
 
 }
@@ -64,6 +65,11 @@ void G_RigidBody::RigidBodyUpdate()
 	{
 		Velocity.Normalize();
 		Velocity *= MaxSpeed;
+	}
+	else if (MinSpeed > Length)
+	{
+		Velocity.Normalize();
+		Velocity *= MinSpeed;
 	}
 
 	Move();

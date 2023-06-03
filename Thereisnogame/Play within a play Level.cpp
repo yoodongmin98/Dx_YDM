@@ -75,8 +75,6 @@ void PlaywithinaplayLevel::Start()
 		CreateActor<Cordon>();
 	}
 	{
-		//Test¿ë ScreenActor
-		//CreateActor<Cog>();
 		MousePtr=CreateActor<Mouse>();
 	}
 

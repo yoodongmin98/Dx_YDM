@@ -38,7 +38,6 @@ void Ball_TitleCube::Update(float _DeltaTime)
 	if (true == StartBallGame)
 	{
 		StartRigidBody();
-		CollisionInterCheck();
 	}
 	ProgressCheck();
 }
@@ -51,15 +50,6 @@ void Ball_TitleCube::Render(float _Delta)
 void Ball_TitleCube::StartRigidBody()
 {
 	G_RigidBody* Rigids = GetRigidBody();
-	//Test Key
-	if (GameEngineInput::IsPress("BallLeft"))
-	{
-		Rigids->AddForce(float4::Left * 300);
-	}
-	if (GameEngineInput::IsPress("BallRight"))
-	{
-		Rigids->AddForce(float4::Right * 200);
-	}
 	Rigids->AddForce(float4::Down * 400);
 	if (GetTransform()->GetLocalPosition().y <= -280 - ImageHalfScaleY)
 	{
@@ -70,6 +60,7 @@ void Ball_TitleCube::StartRigidBody()
 	{
 		Rigids->ChangeXDir();
 	}
+	CollisionInterCheck(Rigids);
 	Rigids->RigidBodyUpdate();
 }
 
@@ -92,7 +83,11 @@ void Ball_TitleCube::ProgressCheck()
 	}
 }
 
-void Ball_TitleCube::CollisionInterCheck()
+void Ball_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 {
-	/*if(Ball_TitleCubesCollision->Collision(ActorTypeEnum::))*/
+	if (Ball_TitleCubesCollision->Collision(ActorTypeEnum::Excla,ColType::AABBBOX2D, ColType::AABBBOX2D))
+	{
+		_Rigids->AddForce(float4::Down * 400); //힘을 주고나서,
+		_Rigids->ChangeYDir(); //방향을 바꾼다.
+	}
 }

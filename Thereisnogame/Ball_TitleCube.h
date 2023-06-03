@@ -15,7 +15,7 @@ public:
 
 	void StartRigidBody();
 	void ProgressCheck();
-	void CollisionInterCheck();
+	void CollisionInterCheck(G_RigidBody* _Rigids);
 protected:
 	void Start();
 	void Update(float _Delta) override;
