@@ -1,6 +1,7 @@
 #include "PrecompileHeader.h"
 #include "Ball_TitleCube.h"
 #include "G_RigidBody.h"
+#include "ActorTypeEnum.h"
 //Base
 //PlatForm
 //Core
@@ -37,6 +38,7 @@ void Ball_TitleCube::Update(float _DeltaTime)
 	if (true == StartBallGame)
 	{
 		StartRigidBody();
+		CollisionInterCheck();
 	}
 	ProgressCheck();
 }
@@ -79,14 +81,18 @@ void Ball_TitleCube::ProgressCheck()
 		UpdateBool = false;
 		Ball_TitleCubesCollision->On();
 	}
-	if (true == ClickCheck(Ball_TitleCubesCollision)&&false== StartBallGame)
+	if (true == ClickCheck(Ball_TitleCubesCollision)&&false== StartBallGame&& 5>BallClickCount)
 	{
 		++BallClickCount;
 		GetTransform()->AddLocalPosition({ 0,-5,0 });
 		if (BallClickCount > 4)
 		{
-			Ball_TitleCubesCollision->Death();
 			StartBallGame = true;
 		}
 	}
+}
+
+void Ball_TitleCube::CollisionInterCheck()
+{
+	/*if(Ball_TitleCubesCollision->Collision(ActorTypeEnum::))*/
 }

@@ -25,5 +25,6 @@ private:
 
 	bool UpdateBool = true;
 	int ExclaClickCount = 0;
+	bool FallAndDeathCheck = false;
 };
 

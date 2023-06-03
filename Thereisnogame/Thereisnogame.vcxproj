@@ -338,7 +338,7 @@
     <ClInclude Include="PrivatePanel_Ultra.h" />
     <ClInclude Include="Program Loading Level.h" />
     <ClInclude Include="PurpleTextBox.h" />
-    <ClInclude Include="Raquette.h" />
+    <ClInclude Include="Raquette_TitleCube.h" />
     <ClInclude Include="RE_TitleCube.h" />
     <ClInclude Include="RightRotate.h" />
     <ClInclude Include="RouageLoad.h" />
@@ -561,7 +561,7 @@
     <ClCompile Include="PrivatePanel_Ultra.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
     <ClCompile Include="PurpleTextBox.cpp" />
-    <ClCompile Include="Raquette.cpp" />
+    <ClCompile Include="Raquette_TitleCube.cpp" />
     <ClCompile Include="RE_TitleCube.cpp" />
     <ClCompile Include="RightRotate.cpp" />
     <ClCompile Include="RouageLoad.cpp" />

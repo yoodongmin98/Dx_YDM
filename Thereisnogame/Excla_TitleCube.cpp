@@ -1,13 +1,15 @@
 #include "PrecompileHeader.h"
 #include "Excla_TitleCube.h"
-
+#include "ActorTypeEnum.h"
 //Base
 //PlatForm
 //Core
+#include <GameEngineCore/GameEngineLevel.h>
 
 
 //Actor
 #include "LevelStateManager.h"
+#include "Raquette_TitleCube.h"
 
 Excla_TitleCube::Excla_TitleCube()
 {
@@ -42,13 +44,25 @@ void Excla_TitleCube::ProgressCheck()
 		UpdateBool = false;
 		Excla_TitleCubesCollision->On();
 	}
+
 	if (true == ClickCheck(Excla_TitleCubesCollision))
 	{
+		GetTransform()->AddLocalPosition({ 0,-5,0 });
 		++ExclaClickCount;
 		if (ExclaClickCount > 4)
 		{
 			Excla_TitleCubesCollision->Death();
-			// 화면 밖으로나가면 밑판Create하고나서 Death
+			FallAndDeathCheck = true;
+		}
+	}
+
+	if (true == FallAndDeathCheck)
+	{
+		GetTransform()->AddLocalPosition({ 0,-5,0 });
+		if (GetTransform()->GetLocalPosition().y < -360 + 55)
+		{
+			GetLevel()->CreateActor<Raquette_TitleCube>();
+			Death();
 		}
 	}
 }

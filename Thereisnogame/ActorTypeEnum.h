@@ -8,6 +8,8 @@ enum class ActorTypeEnum
 	Cordon,
 	FolderBackGround,
 	ScreenActor,
+
+
 	//상호작용(Collision)
 	Nut_Close,
 	Nut_Open,
@@ -16,6 +18,12 @@ enum class ActorTypeEnum
 	Picture,
 	ZipWip,
 	LockFolder,
+	//Chapter1 BallGame
+	Block,
+	Excla,
+
+
+
 	//AlphaCircle,Mouse,FrontBack
 	Alpha,
 	Mouse,
