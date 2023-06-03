@@ -97,7 +97,7 @@ void MainMenuLevel::Start()
 		CreateMainMenuArrow();
 		PicturesPtr=CreateActor<StartPictures>();
 		CreateActor<AlphaCircle>();
-		CreateActor<Mouse>();
+		//MousePtr=CreateActor<Mouse>();
 	}
 	
 

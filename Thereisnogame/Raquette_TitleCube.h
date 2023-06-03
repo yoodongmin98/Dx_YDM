@@ -13,6 +13,7 @@ public:
 	Raquette_TitleCube& operator=(const Raquette_TitleCube& _Other) = delete;
 	Raquette_TitleCube& operator=(Raquette_TitleCube&& _Other) noexcept = delete;
 
+	void CatchMoveCheck();
 
 protected:
 	void Start();

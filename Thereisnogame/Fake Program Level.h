@@ -25,6 +25,6 @@ protected:
 
 private:
 
-
+	std::shared_ptr<class Mouse> MousePtr = nullptr;
 };
 

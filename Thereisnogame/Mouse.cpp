@@ -161,7 +161,8 @@ bool Mouse::IsScreenActors()
 		|| MouseCollision->Collision(ActorTypeEnum::Cup_Full, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		|| MouseCollision->Collision(ActorTypeEnum::Nut_Close, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		|| MouseCollision->Collision(ActorTypeEnum::Nut_Open, ColType::AABBBOX2D, ColType::AABBBOX2D)
-		|| MouseCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D))
+		|| MouseCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::Excla, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		return true;
 	}

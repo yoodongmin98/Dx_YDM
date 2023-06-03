@@ -68,7 +68,7 @@ void FakeProgramLevel::Start()
 		FolderCreate();
 		CreateActor<SquirrelKey>();
 	}
-	CreateActor<Mouse>();
+	//MousePtr=CreateActor<Mouse>();
 	CreateActor<AlphaCircle>();
 }
 

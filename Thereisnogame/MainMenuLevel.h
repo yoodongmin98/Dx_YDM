@@ -61,6 +61,8 @@ protected:
 private:
 	MainMenuState StateValue = MainMenuState::Flag;
 
+	std::shared_ptr<class Mouse> MousePtr = nullptr;
+
 	std::shared_ptr<class Panel_Continue> PanelContinuePtr = nullptr;
 	std::shared_ptr<class Panel_Back> PanelBackPtr = nullptr;
 	std::shared_ptr<class SelectBox> SelectBoxPtr = nullptr;

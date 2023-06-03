@@ -77,7 +77,7 @@ void PlaywithinaplayLevel::Start()
 	{
 		//Test¿ë ScreenActor
 		//CreateActor<Cog>();
-		CreateActor<Mouse>();
+		MousePtr=CreateActor<Mouse>();
 	}
 
 	ChangeState(Chap1LevelState::None);

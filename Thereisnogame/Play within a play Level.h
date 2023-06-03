@@ -40,6 +40,8 @@ protected:
 private:
 	Chap1LevelState StateValue = Chap1LevelState::None;
 
+	std::shared_ptr<class Mouse> MousePtr = nullptr;
+
 	std::shared_ptr<class Vis> Vis1;
 	std::shared_ptr<class Vis> Vis2;
 	std::shared_ptr<class Vis> Vis3;
