@@ -32,6 +32,7 @@ void ContentsCore::ContentsResourcesCreate()
 		GameEngineShader::AutoCompile(Files[i]);
 	}
 	ResourceInit("FadeShader.hlsl", "Fade");
+	ResourceInit("DebugMeshRender.hlsl", "Meshs");
 }
 
 void ContentsCore::GameStart() 
