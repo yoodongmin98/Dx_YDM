@@ -91,5 +91,6 @@ void Ball_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 	{
 		_Rigids->AddForce(float4::Down * 500); //힘을 주고나서,
 		_Rigids->ChangeYDir(); //방향을 바꾼다.
+		//홀리몰리 차라리 나를 튀겨라
 	}
 }
