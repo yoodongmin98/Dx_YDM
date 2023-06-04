@@ -9,6 +9,7 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Raquette_TitleCube.h"
 
 Ball_TitleCube::Ball_TitleCube()
 {

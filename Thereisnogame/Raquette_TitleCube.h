@@ -5,6 +5,7 @@
 class Raquette_TitleCube : public S_ActorBase
 {
 public:
+	static Raquette_TitleCube* RQ;
 	Raquette_TitleCube();
 	~Raquette_TitleCube();
 
@@ -15,6 +16,10 @@ public:
 
 	void CatchMoveCheck();
 
+	float GetCollisionPos()
+	{
+		return Raquette_TitleCubesCollision->GetTransform()->GetLocalPosition().x-300;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;

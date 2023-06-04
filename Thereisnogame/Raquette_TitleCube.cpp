@@ -9,8 +9,11 @@
 //Actor
 #include "LevelStateManager.h"
 #include "Mouse.h"
+
+Raquette_TitleCube* Raquette_TitleCube::RQ;
 Raquette_TitleCube::Raquette_TitleCube()
 {
+	RQ = this;
 }
 
 Raquette_TitleCube::~Raquette_TitleCube()
