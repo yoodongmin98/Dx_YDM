@@ -10,7 +10,6 @@
 
 //Actor
 #include "LevelStateManager.h"
-#include "Raquette_TitleCube.h"
 #include "GameBall_TitleCube.h"
 Ball_TitleCube::Ball_TitleCube()
 {
@@ -39,7 +38,7 @@ void Ball_TitleCube::Render(float _Delta)
 
 void Ball_TitleCube::ProgressCheck()
 {
-	if (true == LevelStateManager::MG->GetIsBoardDown()
+	if (true==LevelStateManager::MG->GetIsCreateRaquette()
 		&& true == UpdateBool)
 	{
 		UpdateBool = false;

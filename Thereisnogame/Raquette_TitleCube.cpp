@@ -14,6 +14,7 @@ Raquette_TitleCube* Raquette_TitleCube::RQ;
 Raquette_TitleCube::Raquette_TitleCube()
 {
 	RQ = this;
+	LevelStateManager::MG->SetIsCreateRaquetteTrue();
 }
 
 Raquette_TitleCube::~Raquette_TitleCube()

@@ -126,6 +126,15 @@ public:
 	{
 		return IsBoardDown;
 	}
+	//Raquette 만들어졌냐??
+	void SetIsCreateRaquetteTrue()
+	{
+		IsCreateRaquette = true;
+	}
+	bool GetIsCreateRaquette()
+	{
+		return IsCreateRaquette;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -136,7 +145,7 @@ private:
 
 	//Chapter1
 	bool IsBoardDown = false;
-
+	bool IsCreateRaquette = false;
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

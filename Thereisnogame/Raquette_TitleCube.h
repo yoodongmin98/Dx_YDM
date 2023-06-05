@@ -20,6 +20,10 @@ public:
 	{
 		return Raquette_TitleCubesCollision->GetTransform()->GetLocalPosition().x-300;
 	}
+	bool GetIsCreateRaquette()
+	{
+		return IsCreateRaquette;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -27,6 +31,8 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Raquette_TitleCubes;
 	std::shared_ptr<class GameEngineCollision> Raquette_TitleCubesCollision;
+
+	bool IsCreateRaquette = false;
 
 };
 
