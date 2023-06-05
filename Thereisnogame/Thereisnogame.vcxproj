@@ -210,6 +210,7 @@
     <ClInclude Include="FolderNote_GoodBye.h" />
     <ClInclude Include="FolderNote_Password.h" />
     <ClInclude Include="French.h" />
+    <ClInclude Include="GameBall_TitleCube.h" />
     <ClInclude Include="GoodbyeIcon.h" />
     <ClInclude Include="G_RigidBody.h" />
     <ClInclude Include="G_TitleCube.h" />
@@ -426,6 +427,7 @@
     <ClCompile Include="FolderNote_GoodBye.cpp" />
     <ClCompile Include="FolderNote_Password.cpp" />
     <ClCompile Include="French.cpp" />
+    <ClCompile Include="GameBall_TitleCube.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
     <ClCompile Include="G_RigidBody.cpp" />
     <ClCompile Include="G_TitleCube.cpp" />

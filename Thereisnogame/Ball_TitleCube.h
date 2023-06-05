@@ -13,9 +13,8 @@ public:
 	Ball_TitleCube& operator=(const Ball_TitleCube& _Other) = delete;
 	Ball_TitleCube& operator=(Ball_TitleCube&& _Other) noexcept = delete;
 
-	void StartRigidBody();
 	void ProgressCheck();
-	void CollisionInterCheck(G_RigidBody* _Rigids);
+	
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -26,9 +25,5 @@ private:
 
 	bool UpdateBool = true;
 	int BallClickCount = 0;
-	bool StartBallGame = false;
-
-	float ImageHalfScaleX = 0.0f;
-	float ImageHalfScaleY = 0.0f;
 };
 

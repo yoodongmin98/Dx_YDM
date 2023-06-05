@@ -631,6 +631,9 @@
     <ClCompile Include="Raquette_TitleCube.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
     </ClCompile>
+    <ClCompile Include="GameBall_TitleCube.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1255,6 +1258,9 @@
       <Filter>Core\etc</Filter>
     </ClInclude>
     <ClInclude Include="Raquette_TitleCube.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBall_TitleCube.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Excla,Ball</Filter>
     </ClInclude>
   </ItemGroup>
