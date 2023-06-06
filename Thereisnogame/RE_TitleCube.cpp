@@ -20,6 +20,7 @@ RE_TitleCube::~RE_TitleCube()
 void RE_TitleCube::Start()
 {
 	RE_TitleCubes = Init(RE_TitleCubes, "TitleCubeLetter_E.png", { 94,106 }, { 60,140,0 });
+	RE_TitleCubesCollision = CollisionInit(RE_TitleCubesCollision, { 94,106 }, { 60,140,0 });
 }
 
 void RE_TitleCube::Update(float _DeltaTime)
