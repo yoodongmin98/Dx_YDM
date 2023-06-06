@@ -202,6 +202,7 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="ETC_TitleMetal.h" />
     <ClInclude Include="Excla_TitleCube.h" />
     <ClInclude Include="E_TitleCube.h" />
     <ClInclude Include="FadeEffect.h" />
@@ -376,6 +377,7 @@
     <ClInclude Include="Truth1Icon.h" />
     <ClInclude Include="Truth2Icon.h" />
     <ClInclude Include="Truth3Icon.h" />
+    <ClInclude Include="T_TitleMetal.h" />
     <ClInclude Include="UltraPrivate.h" />
     <ClInclude Include="USMissIcon.h" />
     <ClInclude Include="Vis.h" />
@@ -419,6 +421,7 @@
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
+    <ClCompile Include="ETC_TitleMetal.cpp" />
     <ClCompile Include="Excla_TitleCube.cpp" />
     <ClCompile Include="E_TitleCube.cpp" />
     <ClCompile Include="FadeEffect.cpp" />
@@ -600,6 +603,7 @@
     <ClCompile Include="Truth1Icon.cpp" />
     <ClCompile Include="Truth2Icon.cpp" />
     <ClCompile Include="Truth3Icon.cpp" />
+    <ClCompile Include="T_TitleMetal.cpp" />
     <ClCompile Include="UltraPrivate.cpp" />
     <ClCompile Include="USMissIcon.cpp" />
     <ClCompile Include="Vis.cpp" />

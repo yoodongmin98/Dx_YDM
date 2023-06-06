@@ -634,6 +634,12 @@
     <ClCompile Include="Raquette_TitleCube.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Games</Filter>
     </ClCompile>
+    <ClCompile Include="T_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="ETC_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1262,6 +1268,12 @@
     </ClInclude>
     <ClInclude Include="Raquette_TitleCube.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="T_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="ETC_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -29,6 +29,7 @@
 #include "Excla_TitleCube.h"
 #include "Mouse.h"
 #include "LevelStateManager.h"
+#include "T_TitleMetal.h"
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 {
@@ -210,7 +211,11 @@ void PlaywithinaplayLevel::ClearBoardStart()
 }
 void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 {
-
+	//사운드끝나는거로바꾸면 베스트
+	if (ChainPtr->GetLiveTime() > 4.0f)
+	{
+		T_TitleMetalPtr = CreateActor<T_TitleMetal>();
+	}
 }
 void PlaywithinaplayLevel::ClearBoardEnd()
 {

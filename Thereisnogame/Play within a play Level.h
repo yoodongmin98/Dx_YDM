@@ -77,6 +77,8 @@ private:
 	std::shared_ptr<class ME_TitleCube> ME_TitleCubePtr;
 	std::shared_ptr<class Excla_TitleCube> Excla_TitleCubePtr;
 	std::shared_ptr<class Ball_TitleCube> Ball_TitleCubePtr;
+
+	std::shared_ptr<class T_TitleMetal> T_TitleMetalPtr;
 	
 
 
