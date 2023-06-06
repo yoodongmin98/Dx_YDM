@@ -22,6 +22,9 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> GameBall_TitleCubes;
-	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollision;
+	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollisionU;
+	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollisionD;
+	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollisionL;
+	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollisionR;
 };
 

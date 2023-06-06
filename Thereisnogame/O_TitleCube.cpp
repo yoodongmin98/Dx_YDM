@@ -25,7 +25,7 @@ void O_TitleCube::Start()
 
 void O_TitleCube::Update(float _DeltaTime)
 {
-
+	CubeMoveDeathCheck(O_TitleCubesCollision);
 }
 
 void O_TitleCube::Render(float _Delta)

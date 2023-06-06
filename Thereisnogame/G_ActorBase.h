@@ -68,7 +68,7 @@ public:
 		return pRigidBody;
 	}
 
-	void CubeMoveDeathCheck(int _UpDownValue);
+	void CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Collision);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

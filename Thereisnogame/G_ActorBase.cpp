@@ -17,6 +17,7 @@
 //StaticActor
 #include "RightRotate.h"
 #include "LevelStateManager.h"
+#include "G_RigidBody.h"
 
 G_ActorBase::G_ActorBase()
 	:pRigidBody(nullptr)
@@ -201,20 +202,20 @@ void G_ActorBase::CreateRigidBody()
 	pRigidBody->Parents = this;
 }
 
-void G_ActorBase::CubeMoveDeathCheck(int _UpDownValue)
+void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Collision)
 {
-	if (1 != _UpDownValue || 2 != _UpDownValue)
+	bool FallBool = false;
+	if ((_Collision->Collision(ActorTypeEnum::Block, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
-		MsgAssert("Cube Value값에 이상한 값이 들어왔습니다");
+		_Collision->Death();
+		FallBool = true;
 	}
-	if (1 == _UpDownValue)
+	if (true == FallBool)
 	{
-		GetTransform()->AddLocalPosition({ 0,5,0 });
+		G_RigidBody* BlockRigid = GetRigidBody();
+		BlockRigid->AddForce(float4::Down * 600);
 	}
-	else
-	{
-		GetTransform()->AddLocalPosition({ 0,-5,0 });
-	}
+	
 }
 
 void G_ActorBase::Down(float _DeltaTime)
