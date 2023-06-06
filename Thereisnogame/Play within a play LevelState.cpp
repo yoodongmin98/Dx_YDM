@@ -205,7 +205,8 @@ void PlaywithinaplayLevel::DownBoardEnd()
 
 void PlaywithinaplayLevel::ClearBoardStart()
 {
-
+	ChainPtr = CreateActor<Chain>();
+	ChainPtr->SetChainLiveTime(7);
 }
 void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 {

@@ -14,7 +14,8 @@ public:
 	Board& operator=(Board&& _Other) noexcept = delete;
 
 	void BoardMoveCheck();
-
+	void BoardUp();
+	void BoardDown();
 protected:
 	void Start();
 	void Update(float _Delta) override;

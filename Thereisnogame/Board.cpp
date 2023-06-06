@@ -55,3 +55,18 @@ void Board::BoardMoveCheck()
 	}
 }
 
+//Functional È£Ãâ¿ë
+void Board::BoardUp()
+{
+	Boardmoves = true;
+	GetTransform()->AddLocalPosition({ 0,1,0 });
+	if (GetTransform()->GetLocalPosition().y > 70.0f)
+	{
+		Boardmoves = false;//
+	}
+}
+void Board::BoardDown()
+{
+
+}
+
