@@ -21,6 +21,7 @@ enum class ActorTypeEnum
 	//Chapter1 BallGame
 	Block,
 	Excla,
+	Ball,
 
 
 

@@ -8,6 +8,7 @@
 #include <GameEngineBase/GameEngineMath.h>
 //PlatForm
 #include <GameEnginePlatform/GameEngineInput.h>
+#include <GameEngineBase/GameEngineTime.h>
 //Core
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
@@ -17,7 +18,6 @@
 //StaticActor
 #include "RightRotate.h"
 #include "LevelStateManager.h"
-#include "G_RigidBody.h"
 
 G_ActorBase::G_ActorBase()
 	:pRigidBody(nullptr)
@@ -132,6 +132,18 @@ std::shared_ptr<GameEngineCollision> G_ActorBase::BlockCollisionInit(
 	return _Collision;
 }
 
+std::shared_ptr<GameEngineCollision> G_ActorBase::BallCollisionInit(
+	std::shared_ptr<GameEngineCollision> _Collision,
+	float4 _Scale,
+	float4 _Position)
+{
+	_Collision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Ball);
+	_Collision->GetTransform()->SetLocalScale(_Scale);
+	_Collision->GetTransform()->SetLocalPosition({ _Position.x,_Position.y });
+
+	return _Collision;
+}
+
 void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
 {
 	GameEngineDirectory NewDir;
@@ -204,16 +216,19 @@ void G_ActorBase::CreateRigidBody()
 
 void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Collision)
 {
-	bool FallBool = false;
-	if ((_Collision->Collision(ActorTypeEnum::Block, ColType::AABBBOX2D, ColType::AABBBOX2D)))
+	float Times=GameEngineTime::GlobalTime.GetDeltaTime();
+	if ((_Collision->Collision(ActorTypeEnum::Ball, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
 		_Collision->Death();
-		FallBool = true;
 	}
-	if (true == FallBool)
+	if (true==_Collision->IsDeath())
 	{
-		G_RigidBody* BlockRigid = GetRigidBody();
-		BlockRigid->AddForce(float4::Down * 600);
+		GetTransform()->AddLocalPosition(float4::Down * 2);
+		ResetLiveTime();
+		if (GetLiveTime() > 3.0f)
+		{
+			Death();
+		}
 	}
 	
 }

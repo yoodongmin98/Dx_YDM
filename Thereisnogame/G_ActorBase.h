@@ -45,6 +45,11 @@ public:
 		float4 _Scale,
 		float4 _Position);
 
+	std::shared_ptr<GameEngineCollision> BallCollisionInit(
+		std::shared_ptr<GameEngineCollision> _Collision,
+		float4 _Scale,
+		float4 _Position);
+
 	bool ClickCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
 	void RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render);
@@ -76,6 +81,7 @@ protected:
 
 private:
 	float ReverseTime = 0.0f;
+	float BlockDeathTime = 0.0f;
 	float4 EndPos = float4::Zero;
 
 	G_RigidBody* pRigidBody;

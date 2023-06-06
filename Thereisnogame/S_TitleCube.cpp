@@ -25,7 +25,7 @@ void S_TitleCube::Start()
 
 void S_TitleCube::Update(float _DeltaTime)
 {
-
+	CubeMoveDeathCheck(S_TitleCubesCollision);
 }
 
 void S_TitleCube::Render(float _Delta)

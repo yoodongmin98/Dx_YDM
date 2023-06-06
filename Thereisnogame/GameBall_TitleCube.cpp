@@ -25,10 +25,10 @@ void GameBall_TitleCube::Start()
 {
 	float4 Position = Mouse::MainMouse->GetMousePos();
 	GameBall_TitleCubes = Init(GameBall_TitleCubes, "TitleCube_Ball.png", { 44,58 }, Position);
-	GameBall_TitleCubesCollisionU = CollisionInit(GameBall_TitleCubesCollisionU, { 42,5 }, Position + float4::Up * 28);
-	GameBall_TitleCubesCollisionD = CollisionInit(GameBall_TitleCubesCollisionD, { 42,5 }, Position + float4::Down * 28);
-	GameBall_TitleCubesCollisionL = CollisionInit(GameBall_TitleCubesCollisionL, { 5,56 }, Position + float4::Left * 22);
-	GameBall_TitleCubesCollisionR = CollisionInit(GameBall_TitleCubesCollisionR, { 5,56 }, Position + float4::Right * 22);
+	GameBall_TitleCubesCollisionU = BallCollisionInit(GameBall_TitleCubesCollisionU, { 42,5 }, Position + float4::Up * 28);
+	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 42,5 }, Position + float4::Down * 28);
+	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,56 }, Position + float4::Left * 22);
+	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,56 }, Position + float4::Right * 22);
 }
 
 void GameBall_TitleCube::Update(float _DeltaTime)
@@ -66,7 +66,7 @@ void GameBall_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 	if ((GameBall_TitleCubesCollisionD->Collision(ActorTypeEnum::Excla, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
 		if (GetTransform()->GetLocalPosition().x < RQXpos - 20
-			&& GetTransform()->GetLocalPosition().x < RQXpos - 40)
+			&& GetTransform()->GetLocalPosition().x > RQXpos - 40)
 		{
 			_Rigids->AddForce(float4::Left * 15000); 
 			_Rigids->AddForce(float4::Down * 1000);
@@ -78,7 +78,7 @@ void GameBall_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 			_Rigids->AddForce(float4::Down * 1000);
 			_Rigids->ChangeYDir();
 		}
-		else if (GetTransform()->GetLocalPosition().x < RQXpos + 20
+		else if (GetTransform()->GetLocalPosition().x > RQXpos + 20
 			&& GetTransform()->GetLocalPosition().x < RQXpos + 40)
 		{
 			_Rigids->AddForce(float4::Right * 15000);
@@ -113,8 +113,6 @@ void GameBall_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 
 void GameBall_TitleCube::CubeCrashCheck(G_RigidBody* _Rigids)
 {
-	/*float Times = GameEngineTime::GlobalTime.GetDeltaTime();
-	float NextXPos = GetTransform()->GetLocalPosition().x * Times;*/
 	if ((GameBall_TitleCubesCollisionD->Collision(ActorTypeEnum::Block, ColType::AABBBOX2D, ColType::AABBBOX2D))
 		|| (GameBall_TitleCubesCollisionU->Collision(ActorTypeEnum::Block, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
