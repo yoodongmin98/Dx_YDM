@@ -9,6 +9,7 @@
 //Actor
 #include "LevelStateManager.h"
 #include "Mouse.h"
+#include "Play within a play Level.h"
 
 Raquette_TitleCube* Raquette_TitleCube::RQ;
 Raquette_TitleCube::Raquette_TitleCube()
@@ -33,6 +34,10 @@ void Raquette_TitleCube::Start()
 void Raquette_TitleCube::Update(float _DeltaTime)
 {
 	CatchMoveCheck();
+	if (Chap1LevelState::ClearBoard == PlaywithinaplayLevel::LM->GetLevelState())
+	{
+		Death();
+	}
 }
 
 void Raquette_TitleCube::Render(float _Delta)

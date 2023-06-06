@@ -12,6 +12,7 @@
 #include "LevelStateManager.h"
 #include "Raquette_TitleCube.h"
 #include "Mouse.h"
+#include "Play within a play Level.h"
 
 GameBall_TitleCube::GameBall_TitleCube()
 {
@@ -24,16 +25,27 @@ GameBall_TitleCube::~GameBall_TitleCube()
 void GameBall_TitleCube::Start()
 {
 	float4 Position = Mouse::MainMouse->GetMousePos();
-	GameBall_TitleCubes = Init(GameBall_TitleCubes, "TitleCube_Ball.png", { 44,58 }, Position);
-	GameBall_TitleCubesCollisionU = BallCollisionInit(GameBall_TitleCubesCollisionU, { 42,5 }, Position + float4::Up * 28);
-	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 42,5 }, Position + float4::Down * 28);
-	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,56 }, Position + float4::Left * 22);
-	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,56 }, Position + float4::Right * 22);
+	GameBall_TitleCubes = Init(GameBall_TitleCubes, "TitleCube_Ball_Rebond.png", { 33,45 }, Position);
+	GameBall_TitleCubesCollisionU = BallCollisionInit(GameBall_TitleCubesCollisionU, { 29,5 }, Position + float4::Up * 21);
+	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 29,5 }, Position + float4::Down * 21);
+	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,41 }, Position + float4::Left * 14);
+	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,41 }, Position + float4::Right * 14);
 }
 
 void GameBall_TitleCube::Update(float _DeltaTime)
 {
+	InterBoolTime += _DeltaTime;
+	if (InterBoolTime > 0.1f)
+	{
+		InterBoolTime = 0.0f;
+		InterBool = true;
+	}
 	StartRigidBody();
+
+	if (Chap1LevelState::ClearBoard == PlaywithinaplayLevel::LM->GetLevelState())
+	{
+		Death();
+	}
 }
 
 void GameBall_TitleCube::Render(float _Delta)
@@ -45,14 +57,16 @@ void GameBall_TitleCube::StartRigidBody()
 {
 	G_RigidBody* Rigids = GetRigidBody();
 	Rigids->AddForce(float4::Down * 500);
-	if (GetTransform()->GetLocalPosition().y <= -280 +29
-		|| GetTransform()->GetLocalPosition().y >= 460)
+	if (GetTransform()->GetLocalPosition().y < -280 +29
+		|| GetTransform()->GetLocalPosition().y > 460)
 	{
+		InterBool = false;
 		Rigids->ChangeYDir();
 	}
 	if (GetTransform()->GetLocalPosition().x < -940 + 22
 		|| GetTransform()->GetLocalPosition().x > 352 - 22)
 	{
+		InterBool = false;
 		Rigids->ChangeXDir();
 	}
 	CollisionInterCheck(Rigids);

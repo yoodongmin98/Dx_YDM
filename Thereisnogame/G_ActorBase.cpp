@@ -220,7 +220,6 @@ void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Colli
 	if ((_Collision->Collision(ActorTypeEnum::Ball, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
 		_Collision->Death();
-		
 	}
 	if (true==_Collision->IsDeath())
 	{

@@ -26,5 +26,8 @@ private:
 	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollisionD;
 	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollisionL;
 	std::shared_ptr<class GameEngineCollision> GameBall_TitleCubesCollisionR;
+
+	float InterBoolTime = 0.0f;
+	bool InterBool = true;
 };
 
