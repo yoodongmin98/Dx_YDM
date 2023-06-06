@@ -40,6 +40,11 @@ public:
 		float4 _Scale,
 		float4 _Position);
 
+	std::shared_ptr<GameEngineCollision> BlockCollisionInit(
+		std::shared_ptr<GameEngineCollision> _Collision,
+		float4 _Scale,
+		float4 _Position);
+
 	bool ClickCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
 	void RenderRotateCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render);
@@ -62,6 +67,8 @@ public:
 	{
 		return pRigidBody;
 	}
+
+	void CubeMoveDeathCheck(int _UpDownValue);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

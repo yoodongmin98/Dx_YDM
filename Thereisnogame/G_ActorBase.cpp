@@ -119,6 +119,18 @@ std::shared_ptr<GameEngineCollision> G_ActorBase::CollisionInit(
 	return _Collision;
 }
 
+std::shared_ptr<GameEngineCollision> G_ActorBase::BlockCollisionInit(
+	std::shared_ptr<GameEngineCollision> _Collision,
+	float4 _Scale,
+	float4 _Position)
+{
+	_Collision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Block);
+	_Collision->GetTransform()->SetLocalScale(_Scale);
+	_Collision->GetTransform()->SetLocalPosition({ _Position.x,_Position.y });
+
+	return _Collision;
+}
+
 void G_ActorBase::AnimationImageLoad(const std::string_view& _FileName)
 {
 	GameEngineDirectory NewDir;
@@ -187,6 +199,22 @@ void G_ActorBase::CreateRigidBody()
 {
 	pRigidBody = new G_RigidBody();
 	pRigidBody->Parents = this;
+}
+
+void G_ActorBase::CubeMoveDeathCheck(int _UpDownValue)
+{
+	if (1 != _UpDownValue || 2 != _UpDownValue)
+	{
+		MsgAssert("Cube Value값에 이상한 값이 들어왔습니다");
+	}
+	if (1 == _UpDownValue)
+	{
+		GetTransform()->AddLocalPosition({ 0,5,0 });
+	}
+	else
+	{
+		GetTransform()->AddLocalPosition({ 0,-5,0 });
+	}
 }
 
 void G_ActorBase::Down(float _DeltaTime)

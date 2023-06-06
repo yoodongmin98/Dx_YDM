@@ -14,8 +14,8 @@ public:
 	GameBall_TitleCube& operator=(GameBall_TitleCube&& _Other) noexcept = delete;
 
 	void StartRigidBody();
-	void ProgressCheck();
 	void CollisionInterCheck(G_RigidBody* _Rigids);
+	void CubeCrashCheck(G_RigidBody* _Rigids);
 protected:
 	void Start();
 	void Update(float _Delta) override;
