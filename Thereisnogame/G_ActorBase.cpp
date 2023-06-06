@@ -18,6 +18,7 @@
 //StaticActor
 #include "RightRotate.h"
 #include "LevelStateManager.h"
+#include "Play within a play Level.h"
 
 G_ActorBase::G_ActorBase()
 	:pRigidBody(nullptr)
@@ -216,17 +217,17 @@ void G_ActorBase::CreateRigidBody()
 
 void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Collision)
 {
-	float Times=GameEngineTime::GlobalTime.GetDeltaTime();
 	if ((_Collision->Collision(ActorTypeEnum::Ball, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
 		_Collision->Death();
+		
 	}
 	if (true==_Collision->IsDeath())
 	{
 		GetTransform()->AddLocalPosition(float4::Down * 2);
-		ResetLiveTime();
-		if (GetLiveTime() > 3.0f)
+		if (GetTransform()->GetLocalPosition().y < -500.0f)
 		{
+			PlaywithinaplayLevel::LM->MinusBlockCount();
 			Death();
 		}
 	}

@@ -33,6 +33,11 @@ public:
 	{
 		return StateValue;
 	}
+
+	void MinusBlockCount()
+	{
+		BlockCount -= 1;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -88,6 +93,7 @@ private:
 	void DownBoardStart();
 	void DownBoardUpdate(float _DeltaTime);
 	void DownBoardEnd();
+	int BlockCount = 0;
 
 	void ClearBoardStart();
 	void ClearBoardUpdate(float _DeltaTime);

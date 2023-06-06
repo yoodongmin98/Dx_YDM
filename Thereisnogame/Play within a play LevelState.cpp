@@ -187,11 +187,14 @@ void PlaywithinaplayLevel::CreateBoardEnd()
 
 void PlaywithinaplayLevel::DownBoardStart()
 {
-	
+	BlockCount = 13;
 }
 void PlaywithinaplayLevel::DownBoardUpdate(float _DeltaTime)
 {
-	
+	if (0 == BlockCount)
+	{
+		ChangeState(Chap1LevelState::ClearBoard);
+	}
 }
 void PlaywithinaplayLevel::DownBoardEnd()
 {

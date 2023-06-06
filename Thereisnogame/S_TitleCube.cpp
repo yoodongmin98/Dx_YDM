@@ -7,7 +7,7 @@
 
 
 //Actor
-
+#include "Play within a play Level.h"
 
 S_TitleCube::S_TitleCube()
 {
@@ -15,6 +15,7 @@ S_TitleCube::S_TitleCube()
 
 S_TitleCube::~S_TitleCube()
 {
+	
 }
 
 void S_TitleCube::Start()
