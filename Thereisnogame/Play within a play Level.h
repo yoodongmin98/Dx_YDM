@@ -44,6 +44,7 @@ protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
 	void LevelChangeStart() override;
+	void LevelChangeEnd() override;
 private:
 	Chap1LevelState StateValue = Chap1LevelState::None;
 

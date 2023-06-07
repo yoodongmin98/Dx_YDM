@@ -73,7 +73,7 @@ void PlaywithinaplayLevel::Start()
 		MousePtr=CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::ClickCordon);
+	ChangeState(Chap1LevelState::None);
 }
 
 void PlaywithinaplayLevel::Update(float _DeltaTime)
@@ -93,4 +93,8 @@ void PlaywithinaplayLevel::Update(float _DeltaTime)
 void PlaywithinaplayLevel::LevelChangeStart()
 {
 	FEffect->FadeOut();
+}
+
+void PlaywithinaplayLevel::LevelChangeEnd()
+{
 }

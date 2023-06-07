@@ -133,6 +133,10 @@ void MainMenuLevel::LevelChangeStart()
 	FEffect->FadeOut();
 }
 
+void MainMenuLevel::LevelChangeEnd()
+{
+	
+}
 
 
 void MainMenuLevel::CreateFlag()

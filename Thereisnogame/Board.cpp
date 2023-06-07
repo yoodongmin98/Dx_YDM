@@ -26,7 +26,7 @@ void Board::Start()
 
 void Board::Update(float _DeltaTime)
 {
-	if (Chap1LevelState::SlantBoard >= PlaywithinaplayLevel::LM->GetLevelState())
+	if (Chap1LevelState::SlantBoard > PlaywithinaplayLevel::LM->GetLevelState())
 	{
 		Repeat(5, _DeltaTime*0.7f);
 	}
