@@ -670,6 +670,27 @@
     <ClCompile Include="ME_TitleMetal.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
     </ClCompile>
+    <ClCompile Include="R_Paper.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\My</Filter>
+    </ClCompile>
+    <ClCompile Include="R_Rock.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\My</Filter>
+    </ClCompile>
+    <ClCompile Include="R_Sissor.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\My</Filter>
+    </ClCompile>
+    <ClCompile Include="R_Dos.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="R_EnemyPaper.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="R_EnemyRock.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="R_EnemySissor.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1335,6 +1356,27 @@
     <ClInclude Include="ME_TitleMetal.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
     </ClInclude>
+    <ClInclude Include="R_Paper.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\My</Filter>
+    </ClInclude>
+    <ClInclude Include="R_Rock.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\My</Filter>
+    </ClInclude>
+    <ClInclude Include="R_Sissor.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\My</Filter>
+    </ClInclude>
+    <ClInclude Include="R_Dos.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="R_EnemyPaper.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="R_EnemyRock.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="R_EnemySissor.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1621,6 +1663,15 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Normal\Games">
       <UniqueIdentifier>{9af3c649-371d-4f53-90c0-e65ca860850b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Roshambo">
+      <UniqueIdentifier>{eed21f76-4650-4af2-b021-2daf38bf64e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Roshambo\My">
+      <UniqueIdentifier>{7fe952e2-278b-4da4-8ea6-fb80867e282c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy">
+      <UniqueIdentifier>{f0865ca2-e73f-4711-a5d2-5c906c0116e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

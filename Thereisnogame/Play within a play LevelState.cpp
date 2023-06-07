@@ -276,8 +276,26 @@ void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 		Lope_ChainPtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
 		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
 	}
+	//사운드가 끝나고, Metal 특정횟수 이상 건드렸을때 ChangeState
 }
 void PlaywithinaplayLevel::SlantBoardEnd()
 {
 
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::RoshamboStart()
+{
+	if (nullptr != ChainPtr) { ChainPtr->Death(); ChainPtr = nullptr; }
+}
+void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::RoshamboEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////

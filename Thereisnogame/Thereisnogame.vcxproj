@@ -352,6 +352,13 @@
     <ClInclude Include="RE_TitleCube.h" />
     <ClInclude Include="RightRotate.h" />
     <ClInclude Include="RouageLoad.h" />
+    <ClInclude Include="R_Dos.h" />
+    <ClInclude Include="R_EnemyPaper.h" />
+    <ClInclude Include="R_EnemyRock.h" />
+    <ClInclude Include="R_EnemySissor.h" />
+    <ClInclude Include="R_Paper.h" />
+    <ClInclude Include="R_Rock.h" />
+    <ClInclude Include="R_Sissor.h" />
     <ClInclude Include="R_TitleCube.h" />
     <ClInclude Include="R_TitleMetal.h" />
     <ClInclude Include="Scissor.h" />
@@ -588,6 +595,13 @@
     <ClCompile Include="RE_TitleMetal.cpp" />
     <ClCompile Include="RightRotate.cpp" />
     <ClCompile Include="RouageLoad.cpp" />
+    <ClCompile Include="R_Dos.cpp" />
+    <ClCompile Include="R_EnemyPaper.cpp" />
+    <ClCompile Include="R_EnemyRock.cpp" />
+    <ClCompile Include="R_EnemySissor.cpp" />
+    <ClCompile Include="R_Paper.cpp" />
+    <ClCompile Include="R_Rock.cpp" />
+    <ClCompile Include="R_Sissor.cpp" />
     <ClCompile Include="R_TitleCube.cpp" />
     <ClCompile Include="R_TitleMetal.cpp" />
     <ClCompile Include="Scissor.cpp" />
