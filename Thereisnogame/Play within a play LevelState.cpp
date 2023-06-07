@@ -271,7 +271,11 @@ void PlaywithinaplayLevel::SlantBoardStart()
 }
 void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 {
-
+	if (true == LevelStateManager::MG->GetLopeDownStart())
+	{
+		Lope_ChainPtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
+		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
+	}
 }
 void PlaywithinaplayLevel::SlantBoardEnd()
 {

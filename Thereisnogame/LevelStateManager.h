@@ -135,6 +135,19 @@ public:
 	{
 		return IsCreateRaquette;
 	}
+	//Lope 내려가야하냐?
+	void SetLopeDownStartTrue()
+	{
+		LopeDownStart = true;
+	}
+	void SetLopeDownStartFalse()
+	{
+		LopeDownStart = false;
+	}
+	bool GetLopeDownStart()
+	{
+		return LopeDownStart;
+	}
 	//Board 기울어졌냐?
 	void SetIsSlantBoardTrue()
 	{
@@ -155,6 +168,7 @@ private:
 	//Chapter1
 	bool IsBoardDown = false;
 	bool IsCreateRaquette = false;
+	bool LopeDownStart = false;
 	bool IsSlantBoard = false;
 	//Chapter2
 	int CollisionValue = 0;
