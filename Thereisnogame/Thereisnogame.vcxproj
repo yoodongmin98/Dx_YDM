@@ -233,7 +233,6 @@
     <ClInclude Include="LoadRedBar.h" />
     <ClInclude Include="Lope_Chain.h" />
     <ClInclude Include="Lope_Corde.h" />
-    <ClInclude Include="Lope_Corde_Weak.h" />
     <ClInclude Include="ME_TitleCube.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="M_TitleCube.h" />
@@ -458,7 +457,6 @@
     <ClCompile Include="LoadRedBar.cpp" />
     <ClCompile Include="Lope_Chain.cpp" />
     <ClCompile Include="Lope_Corde.cpp" />
-    <ClCompile Include="Lope_Corde_Weak.cpp" />
     <ClCompile Include="ME_TitleCube.cpp" />
     <ClCompile Include="ME_TitleMetal.cpp" />
     <ClCompile Include="Mouse.cpp" />

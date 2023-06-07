@@ -89,20 +89,20 @@ void GameBall_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 		else if (GetTransform()->GetLocalPosition().x < RQXpos - 40)
 		{
 			_Rigids->AddForce(float4::Left * 25000);
-			_Rigids->AddForce(float4::Down * 1000);
+			_Rigids->AddForce(float4::Down * 10000);
 			_Rigids->ChangeYDir();
 		}
 		else if (GetTransform()->GetLocalPosition().x > RQXpos + 20
 			&& GetTransform()->GetLocalPosition().x < RQXpos + 40)
 		{
 			_Rigids->AddForce(float4::Right * 15000);
-			_Rigids->AddForce(float4::Down * 1000);
+			_Rigids->AddForce(float4::Down * 10000);
 			_Rigids->ChangeYDir();
 		}
 		else if (GetTransform()->GetLocalPosition().x > RQXpos + 40)
 		{
 			_Rigids->AddForce(float4::Right * 25000);
-			_Rigids->AddForce(float4::Down * 1000);
+			_Rigids->AddForce(float4::Down * 10000);
 			_Rigids->ChangeYDir();
 		}
 		else
@@ -113,13 +113,13 @@ void GameBall_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 	}
 	else if ((GameBall_TitleCubesCollisionL->Collision(ActorTypeEnum::Excla, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
-		_Rigids->AddForce(float4::Down * 1500);
+		_Rigids->AddForce(float4::Down * 15000);
 		_Rigids->AddForce(float4::Left * 25000);
 		_Rigids->ChangeXDir();
 	}
 	else if ((GameBall_TitleCubesCollisionR->Collision(ActorTypeEnum::Excla, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
-		_Rigids->AddForce(float4::Down * 1500);
+		_Rigids->AddForce(float4::Down * 15000);
 		_Rigids->AddForce(float4::Right * 25000);
 		_Rigids->ChangeXDir();
 	}
@@ -130,7 +130,6 @@ void GameBall_TitleCube::CubeCrashCheck(G_RigidBody* _Rigids)
 	if ((GameBall_TitleCubesCollisionD->Collision(ActorTypeEnum::Block, ColType::AABBBOX2D, ColType::AABBBOX2D))
 		|| (GameBall_TitleCubesCollisionU->Collision(ActorTypeEnum::Block, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
-		_Rigids->AddForce(float4::Up * 1500);
 		_Rigids->ChangeYDir();
 	}
 	else if((GameBall_TitleCubesCollisionL->Collision(ActorTypeEnum::Block, ColType::AABBBOX2D, ColType::AABBBOX2D))

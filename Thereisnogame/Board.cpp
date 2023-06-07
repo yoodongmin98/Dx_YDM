@@ -68,11 +68,12 @@ void Board::LevelStateMoveCheck()
 	if (Chap1LevelState::SlantBoard == PlaywithinaplayLevel::LM->GetLevelState()
 		&&true== RemoveDown)
 	{
-		GetTransform()->AddLocalPosition({ 0,-1,0 });
-		GetTransform()->AddLocalRotation({ 0,0,-0.03 });
+		GetTransform()->AddLocalPosition({ 0,-2.0f,0 });
+		GetTransform()->AddLocalRotation({ 0,0,-0.03f });
 		if (GetTransform()->GetLocalPosition().y < -60.0f)
 		{
 			RemoveDown = false;
+			LevelStateManager::MG->SetIsSlantBoardTrue();
 		}
 	}
 }

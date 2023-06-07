@@ -135,6 +135,15 @@ public:
 	{
 		return IsCreateRaquette;
 	}
+	//Board 기울어졌냐?
+	void SetIsSlantBoardTrue()
+	{
+		IsSlantBoard = true;
+	}
+	bool GetIsSlantBoard()
+	{
+		return IsSlantBoard;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -146,6 +155,7 @@ private:
 	//Chapter1
 	bool IsBoardDown = false;
 	bool IsCreateRaquette = false;
+	bool IsSlantBoard = false;
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

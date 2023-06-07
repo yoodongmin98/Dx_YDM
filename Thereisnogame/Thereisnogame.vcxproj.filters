@@ -526,9 +526,6 @@
     <ClCompile Include="Lope_Corde.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClCompile>
-    <ClCompile Include="Lope_Corde_Weak.cpp">
-      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
-    </ClCompile>
     <ClCompile Include="Cordon.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClCompile>
@@ -1196,9 +1193,6 @@
     </ClInclude>
     <ClInclude Include="CoffreFortPanel.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\CoffreFort</Filter>
-    </ClInclude>
-    <ClInclude Include="Lope_Corde_Weak.h">
-      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClInclude>
     <ClInclude Include="Cordon.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>

@@ -8,8 +8,7 @@
 
 
 //Actor
-#include "Play within a play Level.h"
-
+#include "LevelStateManager.h"
 Lope_Corde::Lope_Corde()
 {
 }
@@ -22,10 +21,16 @@ void Lope_Corde::Start()
 {
 	Lope_Cordes = Init(Lope_Cordes, "Corde.png", { 39,582 }, { 300,300,0 });
 }
-
+bool InitBool = true;
 void Lope_Corde::Update(float _DeltaTime)
 {
-
+	if (true == LevelStateManager::MG->GetIsSlantBoard()&&true== InitBool)
+	{
+		Lope_Cordes->SetScaleToTexture("Corde_Weak.png");
+		Lope_Cordes->GetTransform()->SetLocalScale({ 56,454 });
+		Lope_Cordes->GetTransform()->SetLocalPosition(Lope_Cordes->GetTransform()->GetLocalPosition()+(float4::Down*100));
+		InitBool = false;
+	}
 }
 
 void Lope_Corde::Render(float _Delta)
