@@ -20,5 +20,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> ME_TitleMetals;
 	std::shared_ptr<class GameEngineCollision> ME_TitleMetalsCollision;
+
+	bool StateChangeBool = true;
 };
 

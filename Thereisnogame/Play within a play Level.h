@@ -9,6 +9,7 @@ enum class Chap1LevelState
 	CreateBoard,
 	DownBoard,
 	ClearBoard,
+	SlantBoard,
 };
 // Ό³Έν :
 class PlaywithinaplayLevel : public GameEngineLevel
@@ -113,6 +114,10 @@ private:
 	void ClearBoardStart();
 	void ClearBoardUpdate(float _DeltaTime);
 	void ClearBoardEnd();
+
+	void SlantBoardStart();
+	void SlantBoardUpdate(float _DeltaTime);
+	void SlantBoardEnd();
 
 };
 

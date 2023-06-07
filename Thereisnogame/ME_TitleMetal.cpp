@@ -7,7 +7,7 @@
 
 
 //Actor
-
+#include "Play within a play Level.h"
 
 ME_TitleMetal::ME_TitleMetal()
 {
@@ -26,7 +26,11 @@ void ME_TitleMetal::Start()
 
 void ME_TitleMetal::Update(float _DeltaTime)
 {
-
+	if (GetLiveTime() > 1.0f&& true==StateChangeBool)
+	{
+		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::SlantBoard);
+		StateChangeBool = false;
+	}
 }
 
 void ME_TitleMetal::Render(float _Delta)

@@ -40,6 +40,8 @@ void Board::Render(float _Delta)
 {
 
 };
+
+
 bool Boardmoves = true;
 void Board::BoardMoveCheck()
 {
