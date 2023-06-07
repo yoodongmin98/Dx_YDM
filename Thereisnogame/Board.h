@@ -23,5 +23,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Boards;
 	std::shared_ptr<class GameEngineCollision> BoardsCollision;
+
+	bool BoardFunc = true;
 };
 

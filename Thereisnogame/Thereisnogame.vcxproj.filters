@@ -637,7 +637,40 @@
     <ClCompile Include="T_TitleMetal.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
     </ClCompile>
-    <ClCompile Include="ETC_TitleMetal.cpp">
+    <ClCompile Include="H_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="E_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="R_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="RE_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="I_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="S_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="N_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="O_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="G_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="A_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="M_TitleMetal.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClCompile>
+    <ClCompile Include="ME_TitleMetal.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1272,7 +1305,40 @@
     <ClInclude Include="T_TitleMetal.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
     </ClInclude>
-    <ClInclude Include="ETC_TitleMetal.h">
+    <ClInclude Include="H_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="E_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="R_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="RE_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="I_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="S_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="N_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="O_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="G_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="A_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="M_TitleMetal.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
+    </ClInclude>
+    <ClInclude Include="ME_TitleMetal.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Block_ThereIsNoGame\Metal</Filter>
     </ClInclude>
   </ItemGroup>

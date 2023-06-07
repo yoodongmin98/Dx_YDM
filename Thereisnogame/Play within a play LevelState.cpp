@@ -211,8 +211,12 @@ void PlaywithinaplayLevel::ClearBoardStart()
 }
 void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 {
+	std::function<void()> Functions;
+
+	Functions = std::bind(&Board::BoardUp, BoardPtr.get());
+	Functions();
 	//사운드끝나는거로바꾸면 베스트
-	if (ChainPtr->GetLiveTime() > 4.0f)
+	if (ChainPtr->GetLiveTime() > 6.0f)
 	{
 		T_TitleMetalPtr = CreateActor<T_TitleMetal>();
 	}
