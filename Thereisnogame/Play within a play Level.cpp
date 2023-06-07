@@ -51,26 +51,21 @@ void PlaywithinaplayLevel::Start()
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
-	//여기는 시작할때 만들어놓을게 많을듯
 	{
 		CreateActor<C1_BackGround>();
 		CreateActor<Plaque>();
 		Vis1 = CreateActor<Vis>();
 		Vis1->SetVisPosition({ -180,130 });
 		Vis1->SetVisRotate({ 0,0,45 });
-
 		Vis2 = CreateActor<Vis>();
 		Vis2->SetVisPosition({ -180,-25 });
 		Vis2->SetVisRotate({ 0,0,135 });
-
 		Vis3 = CreateActor<Vis>();
 		Vis3->SetVisPosition({ 180,130 });
 		Vis3->SetVisRotate({ 0,0,-45 });
-
 		Vis4 = CreateActor<Vis>();
 		Vis4->SetVisPosition({ 180,-25 });
 		Vis4->SetVisRotate({ 0,0,-135 });
-
 		BackCurtainPtr=CreateActor<BackCurtain>();
 		CreateActor<Cordon>();
 	}

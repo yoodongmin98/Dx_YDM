@@ -26,14 +26,12 @@ void Board::Start()
 
 void Board::Update(float _DeltaTime)
 {
-	Repeat(4, _DeltaTime*0.5f);
-	BoardMoveCheck();
-	if (false == LevelStateManager::MG->GetIsProgress()
-		&& true == ClickCheck(BoardsCollision))
+	if (Chap1LevelState::SlantBoard > PlaywithinaplayLevel::LM->GetLevelState())
 	{
-		BoardsCollision->Death();
-		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::DownBoard);
+		Repeat(5, _DeltaTime*0.7f);
 	}
+	BoardMoveCheck();
+	LevelStateMoveCheck();
 }
 
 void Board::Render(float _Delta)
@@ -55,7 +53,30 @@ void Board::BoardMoveCheck()
 			Boardmoves = false;
 		}
 	}
+	if (false == LevelStateManager::MG->GetIsProgress()
+		&& true == ClickCheck(BoardsCollision))
+	{
+		BoardsCollision->Death();
+		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::DownBoard);
+	}
 }
+
+
+bool RemoveDown = true;
+void Board::LevelStateMoveCheck()
+{
+	if (Chap1LevelState::SlantBoard == PlaywithinaplayLevel::LM->GetLevelState()
+		&&true== RemoveDown)
+	{
+		GetTransform()->AddLocalPosition({ 0,-1,0 });
+		GetTransform()->AddLocalRotation({ 0,0,-0.03 });
+		if (GetTransform()->GetLocalPosition().y < -60.0f)
+		{
+			RemoveDown = false;
+		}
+	}
+}
+
 
 //Functional È£Ãâ¿ë
 void Board::BoardUp()

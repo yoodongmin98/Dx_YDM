@@ -13,6 +13,7 @@ public:
 	Board& operator=(const Board& _Other) = delete;
 	Board& operator=(Board&& _Other) noexcept = delete;
 
+	void LevelStateMoveCheck();
 	void BoardMoveCheck();
 	void BoardUp();
 	void BoardDown();

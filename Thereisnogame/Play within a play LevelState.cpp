@@ -258,7 +258,9 @@ void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 }
 void PlaywithinaplayLevel::ClearBoardEnd()
 {
-
+	//chian이랑 lope부모 해제
+	Lope_ChainPtr->GetTransform()->SetParent(nullptr);
+	Lope_CordePtr->GetTransform()->SetParent(nullptr);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
