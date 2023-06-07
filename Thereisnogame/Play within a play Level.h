@@ -79,6 +79,19 @@ private:
 	std::shared_ptr<class Ball_TitleCube> Ball_TitleCubePtr;
 
 	std::shared_ptr<class T_TitleMetal> T_TitleMetalPtr;
+	std::shared_ptr<class H_TitleMetal> H_TitleMetalPtr;
+	std::shared_ptr<class E_TitleMetal> E_TitleMetalPtr;
+	std::shared_ptr<class R_TitleMetal> R_TitleMetalPtr;
+	std::shared_ptr<class RE_TitleMetal> RE_TitleMetalPtr;
+	std::shared_ptr<class I_TitleMetal> I_TitleMetalPtr;
+	std::shared_ptr<class S_TitleMetal> S_TitleMetalPtr;
+	std::shared_ptr<class N_TitleMetal> N_TitleMetalPtr;
+	std::shared_ptr<class O_TitleMetal> O_TitleMetalPtr;
+	std::shared_ptr<class G_TitleMetal> G_TitleMetalPtr;
+	std::shared_ptr<class A_TitleMetal> A_TitleMetalPtr;
+	std::shared_ptr<class M_TitleMetal> M_TitleMetalPtr;
+	std::shared_ptr<class ME_TitleMetal> ME_TitleMetalPtr;
+
 	
 
 

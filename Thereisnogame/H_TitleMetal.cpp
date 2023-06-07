@@ -20,7 +20,7 @@ H_TitleMetal::~H_TitleMetal()
 
 void H_TitleMetal::Start()
 {
-	H_TitleMetals = Init(H_TitleMetals, "TitleMetal_H.png", { 102,138 }, { -300,140,0 });
+	H_TitleMetals = Init(H_TitleMetals, "TitleMetal_H.png", { 102,138 }, { -210,230,0 });
 	H_TitleMetalsCollision = BlockCollisionInit(H_TitleMetalsCollision, { 94,142 }, { -300,140,0 });
 }
 

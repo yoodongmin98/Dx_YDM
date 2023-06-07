@@ -20,7 +20,7 @@ I_TitleMetal::~I_TitleMetal()
 
 void I_TitleMetal::Start()
 {
-	I_TitleMetals = Init(I_TitleMetals, "TitleMetal_I.png", { 42,138 }, { -300,140,0 });
+	I_TitleMetals = Init(I_TitleMetals, "TitleMetal_I.png", { 42,138 }, { 190,230,0 });
 	I_TitleMetalsCollision = BlockCollisionInit(I_TitleMetalsCollision, { 94,142 }, { -300,140,0 });
 }
 

@@ -30,6 +30,20 @@
 #include "Mouse.h"
 #include "LevelStateManager.h"
 #include "T_TitleMetal.h"
+#include "H_TitleMetal.h"
+#include "E_TitleMetal.h"
+#include "R_TitleMetal.h"
+#include "RE_TitleMetal.h"
+#include "I_TitleMetal.h"
+#include "S_TitleMetal.h"
+#include "N_TitleMetal.h"
+#include "O_TitleMetal.h"
+#include "G_TitleMetal.h"
+#include "A_TitleMetal.h"
+#include "M_TitleMetal.h"
+#include "ME_TitleMetal.h"
+
+
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 {
@@ -203,7 +217,7 @@ void PlaywithinaplayLevel::DownBoardEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool MetalCreateBool = true;
 void PlaywithinaplayLevel::ClearBoardStart()
 {
 	ChainPtr = CreateActor<Chain>();
@@ -216,9 +230,35 @@ void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 	Functions = std::bind(&Board::BoardUp, BoardPtr.get());
 	Functions();
 	//사운드끝나는거로바꾸면 베스트
-	if (ChainPtr->GetLiveTime() > 6.0f)
+	if (ChainPtr->GetLiveTime() > 6.0f&&true== MetalCreateBool)
 	{
 		T_TitleMetalPtr = CreateActor<T_TitleMetal>();
+		T_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		H_TitleMetalPtr = CreateActor<H_TitleMetal>();
+		H_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		E_TitleMetalPtr = CreateActor<E_TitleMetal>();
+		E_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		R_TitleMetalPtr = CreateActor<R_TitleMetal>();
+		R_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		RE_TitleMetalPtr = CreateActor<RE_TitleMetal>();
+		RE_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		I_TitleMetalPtr = CreateActor<I_TitleMetal>();
+		I_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		S_TitleMetalPtr = CreateActor<S_TitleMetal>();
+		S_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		N_TitleMetalPtr = CreateActor<N_TitleMetal>();
+		N_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		O_TitleMetalPtr = CreateActor<O_TitleMetal>();
+		O_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		G_TitleMetalPtr = CreateActor<G_TitleMetal>();
+		G_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		A_TitleMetalPtr = CreateActor<A_TitleMetal>();
+		A_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		M_TitleMetalPtr = CreateActor<M_TitleMetal>();
+		M_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		ME_TitleMetalPtr = CreateActor<ME_TitleMetal>();
+		ME_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		MetalCreateBool = false;
 	}
 }
 void PlaywithinaplayLevel::ClearBoardEnd()
