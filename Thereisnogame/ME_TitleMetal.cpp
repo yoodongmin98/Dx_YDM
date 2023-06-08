@@ -8,7 +8,7 @@
 
 //Actor
 #include "Play within a play Level.h"
-
+#include "LevelStateManager.h"
 ME_TitleMetal::ME_TitleMetal()
 {
 }
@@ -30,6 +30,10 @@ void ME_TitleMetal::Update(float _DeltaTime)
 	{
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::SlantBoard);
 		StateChangeBool = false;
+	}
+	if (true == ClickCheck(ME_TitleMetalsCollision))
+	{
+		LevelStateManager::MG->SetHMCMetalPlus();
 	}
 }
 

@@ -7,7 +7,7 @@
 
 
 //Actor
-
+#include "LevelStateManager.h"
 
 O_TitleMetal::O_TitleMetal()
 {
@@ -26,7 +26,10 @@ void O_TitleMetal::Start()
 
 void O_TitleMetal::Update(float _DeltaTime)
 {
-
+	if (true == ClickCheck(O_TitleMetalsCollision))
+	{
+		LevelStateManager::MG->SetHMCMetalPlus();
+	}
 }
 
 void O_TitleMetal::Render(float _Delta)

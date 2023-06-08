@@ -157,6 +157,15 @@ public:
 	{
 		return IsSlantBoard;
 	}
+	//Metal 몇번 두들겼냐
+	void SetHMCMetalPlus()
+	{
+		HMCMetal += 1;
+	}
+	int GetHMCMetal()
+	{
+		return HMCMetal;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -170,6 +179,7 @@ private:
 	bool IsCreateRaquette = false;
 	bool LopeDownStart = false;
 	bool IsSlantBoard = false;
+	int HMCMetal = 0;
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

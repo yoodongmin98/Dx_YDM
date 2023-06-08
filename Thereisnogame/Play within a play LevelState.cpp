@@ -277,6 +277,8 @@ void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
 	}
 	//사운드가 끝나고, Metal 특정횟수 이상 건드렸을때 ChangeState
+
+
 }
 void PlaywithinaplayLevel::SlantBoardEnd()
 {
@@ -291,7 +293,7 @@ void PlaywithinaplayLevel::RoshamboStart()
 }
 void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 {
-
+	//사운드가 끝나면
 }
 void PlaywithinaplayLevel::RoshamboEnd()
 {
