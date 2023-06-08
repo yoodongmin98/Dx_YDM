@@ -26,7 +26,7 @@ void Board::Start()
 
 void Board::Update(float _DeltaTime)
 {
-	if (Chap1LevelState::SlantBoard > PlaywithinaplayLevel::LM->GetLevelState())
+	if (Chap1LevelState::SlantBoard != PlaywithinaplayLevel::LM->GetLevelState())
 	{
 		Repeat(5, _DeltaTime*0.7f);
 	}
@@ -69,9 +69,9 @@ void Board::LevelStateMoveCheck()
 		&&true== RemoveDown)
 	{
 		LevelStateManager::MG->SetLopeDownStartTrue();
-		GetTransform()->AddLocalPosition({ 0,-2.0f,0 });
-		GetTransform()->AddLocalRotation({ 0,0,-0.03f });
-		if (GetTransform()->GetLocalPosition().y < -60.0f)
+		GetTransform()->AddLocalPosition({ 0,-1.0f,0 });
+		GetTransform()->AddLocalRotation({ 0,0,-0.04f });
+		if (GetTransform()->GetLocalPosition().y < -80.0f)
 		{
 			RemoveDown = false;
 			LevelStateManager::MG->SetIsSlantBoardTrue();

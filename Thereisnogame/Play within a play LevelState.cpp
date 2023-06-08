@@ -204,6 +204,8 @@ void PlaywithinaplayLevel::CreateBoardEnd()
 	if (true == ChainPtr->IsDeath())
 	{
 		ChainPtr = nullptr;
+		BackCurtainPtr->Death();
+		BackCurtainPtr = nullptr;
 	}
 }
 
