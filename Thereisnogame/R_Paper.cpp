@@ -8,6 +8,7 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Play within a play Level.h"
 R_Paper::R_Paper()
 {
 }
@@ -26,6 +27,7 @@ void R_Paper::Start()
 
 void R_Paper::Update(float _DeltaTime)
 {
+	RoShamboStateCheck(R_PapersCollision);
 	if (true == IsPos)
 	{
 		InfinityShape(_DeltaTime);
@@ -45,8 +47,6 @@ void R_Paper::Up()
 	}
 	if (GetTransform()->GetLocalPosition().y >= 0.0f)
 	{
-		float4 Tests = GetTransform()->GetLocalPosition();
-		GetTransform()->SetLocalPosition(GetTransform()->GetLocalPosition());
 		IsPos = true;
 	}
 }

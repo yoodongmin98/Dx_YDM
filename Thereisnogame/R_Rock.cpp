@@ -26,6 +26,7 @@ void R_Rock::Start()
 
 void R_Rock::Update(float _DeltaTime)
 {
+	RoShamboStateCheck(R_RocksCollision);
 	if(true== IsPos)
 	{
 		InfinityShape(_DeltaTime); 
@@ -45,8 +46,6 @@ void R_Rock::Up()
 	}
 	if (GetTransform()->GetLocalPosition().y >= 5.0f)
 	{
-		float4 Tests = GetTransform()->GetLocalPosition();
-		GetTransform()->SetLocalPosition(GetTransform()->GetLocalPosition());
 		IsPos = true;
 	}
 }

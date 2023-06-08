@@ -74,6 +74,7 @@ void PlaywithinaplayLevel::Start()
 	}
 
 	ChangeState(Chap1LevelState::Roshambo);
+	RSBChangeState(RoshamboState::None);
 }
 
 void PlaywithinaplayLevel::Update(float _DeltaTime)

@@ -166,6 +166,24 @@ public:
 	{
 		return HMCMetal;
 	}
+	//Card다 올라왔냐?
+	void SetIsSetCardTrue()
+	{
+		IsSetCard = true;
+	}
+	bool GetIsSetCard()
+	{
+		return IsSetCard;
+	}
+	//Roshambo 내Card 눌렀냐?
+	void SetIsSelectCardTrue()
+	{
+		IsSelectCard = true;
+	}
+	bool GetIsSelectCard()
+	{
+		return IsSelectCard;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -180,6 +198,8 @@ private:
 	bool LopeDownStart = false;
 	bool IsSlantBoard = false;
 	int HMCMetal = 0;
+	bool IsSetCard = false;
+	bool IsSelectCard = false;
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

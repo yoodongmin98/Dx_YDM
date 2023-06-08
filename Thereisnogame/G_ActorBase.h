@@ -76,6 +76,8 @@ public:
 	void CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
 	void InfinityShape(float _DeltaTime);
+
+	void RoShamboStateCheck(std::shared_ptr<GameEngineCollision> _Collision);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

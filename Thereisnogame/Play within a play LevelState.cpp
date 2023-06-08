@@ -313,7 +313,7 @@ void PlaywithinaplayLevel::RoshamboStart()
 void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 {
 	//Roshambo FSM
-	//RSBUpdateState(_DeltaTime);
+	RSBUpdateState(_DeltaTime);
 
 	CardTime += _DeltaTime;
 	if (true == RoshamboBool)
@@ -339,6 +339,8 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 		Functions = std::bind(&R_EnemyRock::Up, R_EnemyRockPtr.get()); Functions();
 		Functions = std::bind(&R_EnemySissor::Up, R_EnemySissorPtr.get()); Functions();
 	}
+	//나는 다 골랐어요 사운드가 끝난후에
+	if (CardTime > 15.0f) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
 
 }
 void PlaywithinaplayLevel::RoshamboEnd()

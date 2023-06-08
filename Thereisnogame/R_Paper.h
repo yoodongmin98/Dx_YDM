@@ -14,7 +14,6 @@ public:
 	R_Paper& operator=(R_Paper&& _Other) noexcept = delete;
 
 	void Up();
-
 protected:
 	void Start();
 	void Update(float _Delta) override;

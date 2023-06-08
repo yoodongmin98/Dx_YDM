@@ -7,7 +7,13 @@
 //Core
 
 //Actor
-
+#include "R_Sissor.h"
+#include "R_Paper.h"
+#include "R_Rock.h"
+#include "R_EnemyPaper.h"
+#include "R_EnemyRock.h"
+#include "R_EnemySissor.h"
+#include "R_Dos.h"
 
 
 void PlaywithinaplayLevel::RSBChangeState(RoshamboState _State)
@@ -66,16 +72,49 @@ void PlaywithinaplayLevel::RSBUpdateState(float _DeltaTime)
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void SelectCardStart()
+void PlaywithinaplayLevel::SelectCardStart()
 {
 
 }
-void SelectCardUpdate(float _DeltaTime)
+void PlaywithinaplayLevel::SelectCardUpdate(float _DeltaTime)
+{
+	//Collision작용을 위한 빈 State
+}
+void PlaywithinaplayLevel::SelectCardEnd()
 {
 
 }
-void SelectCardEnd()
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::EnemyCardStart()
 {
 
 }
+void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::EnemyCardEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::CardDownAndOffStart()
+{
+
+}
+void PlaywithinaplayLevel::CardDownAndOffUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::CardDownAndOffEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
