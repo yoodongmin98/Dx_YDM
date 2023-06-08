@@ -25,7 +25,10 @@ void R_Paper::Start()
 
 void R_Paper::Update(float _DeltaTime)
 {
-
+	if (GetLiveTime() > 1.3f)
+	{
+		InfinityShape(_DeltaTime);
+	}
 }
 
 void R_Paper::Render(float _Delta)

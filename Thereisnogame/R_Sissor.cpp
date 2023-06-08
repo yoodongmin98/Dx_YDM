@@ -25,7 +25,10 @@ void R_Sissor::Start()
 
 void R_Sissor::Update(float _DeltaTime)
 {
-	
+	if (GetLiveTime() > 0.6f)
+	{
+		InfinityShape(_DeltaTime);
+	}
 }
 
 void R_Sissor::Render(float _Delta)

@@ -25,7 +25,7 @@ void R_Rock::Start()
 
 void R_Rock::Update(float _DeltaTime)
 {
-
+	InfinityShape(_DeltaTime);
 }
 
 void R_Rock::Render(float _Delta)

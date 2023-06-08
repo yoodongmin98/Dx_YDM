@@ -74,6 +74,8 @@ public:
 	}
 
 	void CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Collision);
+
+	void InfinityShape(float _DeltaTime);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -82,6 +84,7 @@ protected:
 private:
 	float ReverseTime = 0.0f;
 	float BlockDeathTime = 0.0f;
+	float Progress = 0.0f;
 	float4 EndPos = float4::Zero;
 
 	G_RigidBody* pRigidBody;

@@ -1,9 +1,12 @@
 #include "PrecompileHeader.h"
 #include "R_EnemySissor.h"
+#include <math.h>
 //Base
 //PlatForm
 //Core
 #include <GameEngineCore/GameEngineLevel.h>
+
+#include <GameEngineBase/GameEngineTime.h>
 
 
 //Actor
@@ -28,7 +31,7 @@ void R_EnemySissor::Start()
 
 void R_EnemySissor::Update(float _DeltaTime)
 {
-
+	
 }
 
 void R_EnemySissor::Render(float _Delta)

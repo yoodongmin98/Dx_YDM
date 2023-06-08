@@ -233,6 +233,15 @@ void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Colli
 	
 }
 
+
+void G_ActorBase::InfinityShape(float _DeltaTime)
+{
+	Progress += _DeltaTime * 1.5f;
+	float4 Pos = float4::Zero;
+	Pos.x = cosf(Progress) * 5.0f;
+	Pos.y = sinf(Progress * 2.0f) * 5.0f;
+	GetTransform()->SetLocalPosition(Pos);
+}
 void G_ActorBase::Down(float _DeltaTime)
 {
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-400}, _DeltaTime));
