@@ -34,3 +34,17 @@ void R_EnemyRock::Render(float _Delta)
 
 };
 
+void R_EnemyRock::Up()
+{
+	if (false == IsPos)
+	{
+		GetTransform()->AddLocalPosition({ 0,1,0 });
+	}
+	if (GetTransform()->GetLocalPosition().y >= 280.0f)
+	{
+		float4 Tests = GetTransform()->GetLocalPosition();
+		GetTransform()->SetLocalPosition(GetTransform()->GetLocalPosition());
+		IsPos = true;
+	}
+}
+

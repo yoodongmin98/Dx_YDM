@@ -15,6 +15,9 @@ enum class Chap1LevelState
 enum class RoshamboState
 {
 	None,
+	SelectCard,
+	EnemyCard,
+	CardDownAndOff,
 };
 // Ό³Έν :
 class PlaywithinaplayLevel : public GameEngineLevel
@@ -35,9 +38,17 @@ public:
 	void ChangeState(Chap1LevelState _State);
 	void UpdateState(float _DeltaTime);
 
+	void RSBChangeState(RoshamboState _State);
+	void RSBUpdateState(float _DeltaTime);
+
 	Chap1LevelState GetLevelState()
 	{
 		return StateValue;
+	}
+
+	RoshamboState GetRoShamboState()
+	{
+		return RSBStateValue;
 	}
 
 	void MinusBlockCount()
@@ -51,6 +62,7 @@ protected:
 	void LevelChangeEnd() override;
 private:
 	Chap1LevelState StateValue = Chap1LevelState::None;
+	RoshamboState RSBStateValue = RoshamboState::None;
 
 	std::shared_ptr<class Mouse> MousePtr = nullptr;
 
@@ -58,9 +70,6 @@ private:
 	std::shared_ptr<class Vis> Vis2;
 	std::shared_ptr<class Vis> Vis3;
 	std::shared_ptr<class Vis> Vis4;
-
-
-
 
 	//Actor
 	std::shared_ptr<class Cordon> CordonPtr;
@@ -136,5 +145,18 @@ private:
 	void RoshamboUpdate(float _DeltaTime);
 	void RoshamboEnd();
 	float CardTime = 0.0f;
+	//-------Roshambo State-------//
+	void SelectCardStart();
+	void SelectCardUpdate(float _DeltaTime);
+	void SelectCardEnd();
+
+	void EnemyCardStart();
+	void EnemyCardUpdate(float _DeltaTime);
+	void EnemyCardEnd();
+
+	void CardDownAndOffStart();
+	void CardDownAndOffUpdate(float _DeltaTime);
+	void CardDownAndOffEnd();
+	//----------------------------//
 };
 

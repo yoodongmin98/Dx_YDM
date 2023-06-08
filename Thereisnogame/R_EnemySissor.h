@@ -13,6 +13,8 @@ public:
 	R_EnemySissor& operator=(const R_EnemySissor& _Other) = delete;
 	R_EnemySissor& operator=(R_EnemySissor&& _Other) noexcept = delete;
 
+	void Up();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -21,5 +23,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_EnemySissors;
 	std::shared_ptr<class GameEngineSpriteRenderer> R_EnemySissorsNone;
 	std::shared_ptr<class GameEngineCollision> R_EnemySissorsCollision;
+	bool IsPos = false;
 };
 

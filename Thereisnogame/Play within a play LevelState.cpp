@@ -274,7 +274,6 @@ void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 	if (ChainPtr->GetLiveTime() > 8.0f && true == Setbool11) { A_TitleMetalPtr = CreateActor<A_TitleMetal>(); A_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool11 = false;}
 	if (ChainPtr->GetLiveTime() > 8.2f && true == Setbool12) { M_TitleMetalPtr = CreateActor<M_TitleMetal>(); M_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool12 = false;}
 	if (ChainPtr->GetLiveTime() > 8.4f && true == Setbool13) { ME_TitleMetalPtr = CreateActor<ME_TitleMetal>(); ME_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool13 = false;}
-	
 }
 void PlaywithinaplayLevel::ClearBoardEnd()
 {
@@ -313,6 +312,9 @@ void PlaywithinaplayLevel::RoshamboStart()
 }
 void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 {
+	//Roshambo FSM
+	//RSBUpdateState(_DeltaTime);
+
 	CardTime += _DeltaTime;
 	if (true == RoshamboBool)
 	{
@@ -327,20 +329,15 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	}
 	//여기 밑은 전부 사운드가 끝나면 카드들 올라오게하기
 	std::function<void()> Functions;
-	if (CardTime > 5.0f) 
+	if (CardTime > 3.0f) { Functions = std::bind(&R_Rock::Up, R_RockPtr.get()); Functions();}
+	if (CardTime > 6.0f) { Functions = std::bind(&R_Paper::Up, R_PaperPtr.get()); Functions();}
+	if (CardTime > 9.0f) { Functions = std::bind(&R_Sissor::Up, R_SissorPtr.get()); Functions();}
+	if (CardTime > 12.0f) 
 	{
-		Functions = std::bind(&R_Rock::Up, R_RockPtr.get());
-		Functions();
-	}
-	if (CardTime > 8.0f)
-	{
-		Functions = std::bind(&R_Paper::Up, R_PaperPtr.get());
-		Functions();
-	}
-	if (CardTime > 11.0f)
-	{
-		Functions = std::bind(&R_Sissor::Up, R_SissorPtr.get());
-		Functions();
+		Functions = std::bind(&R_Dos::Up, R_DosPtr.get()); Functions();
+		Functions = std::bind(&R_EnemyPaper::Up, R_EnemyPaperPtr.get()); Functions();
+		Functions = std::bind(&R_EnemyRock::Up, R_EnemyRockPtr.get()); Functions();
+		Functions = std::bind(&R_EnemySissor::Up, R_EnemySissorPtr.get()); Functions();
 	}
 
 }

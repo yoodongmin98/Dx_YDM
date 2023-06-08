@@ -13,6 +13,8 @@ public:
 	R_EnemyRock& operator=(const R_EnemyRock& _Other) = delete;
 	R_EnemyRock& operator=(R_EnemyRock&& _Other) noexcept = delete;
 
+	void Up();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -20,5 +22,6 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_EnemyRocks;
 	std::shared_ptr<class GameEngineCollision> R_EnemyRocksCollision;
+	bool IsPos = false;
 };
 

@@ -13,6 +13,8 @@ public:
 	R_Dos& operator=(const R_Dos& _Other) = delete;
 	R_Dos& operator=(R_Dos&& _Other) noexcept = delete;
 
+	void Up();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -20,5 +22,6 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_Doss;
 	std::shared_ptr<class GameEngineCollision> R_DossCollision;
+	bool IsPos = false;
 };
 

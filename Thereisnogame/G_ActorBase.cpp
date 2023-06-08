@@ -230,7 +230,6 @@ void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Colli
 			Death();
 		}
 	}
-	
 }
 
 void G_ActorBase::InfinityShape(float _DeltaTime)

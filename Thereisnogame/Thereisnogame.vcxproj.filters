@@ -691,6 +691,9 @@
     <ClCompile Include="R_EnemySissor.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="RoShamboState.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\RoShambo State</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1672,6 +1675,9 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy">
       <UniqueIdentifier>{f0865ca2-e73f-4711-a5d2-5c906c0116e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\BackActor\Roshambo\RoShambo State">
+      <UniqueIdentifier>{3020c442-8264-4865-bc6b-208eeb648784}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

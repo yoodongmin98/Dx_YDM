@@ -594,6 +594,7 @@
     <ClCompile Include="RE_TitleCube.cpp" />
     <ClCompile Include="RE_TitleMetal.cpp" />
     <ClCompile Include="RightRotate.cpp" />
+    <ClCompile Include="RoShamboState.cpp" />
     <ClCompile Include="RouageLoad.cpp" />
     <ClCompile Include="R_Dos.cpp" />
     <ClCompile Include="R_EnemyPaper.cpp" />
