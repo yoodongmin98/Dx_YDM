@@ -12,6 +12,10 @@ enum class Chap1LevelState
 	SlantBoard,
 	Roshambo,
 };
+enum class RoshamboState
+{
+	None,
+};
 // Ό³Έν :
 class PlaywithinaplayLevel : public GameEngineLevel
 {
@@ -95,7 +99,9 @@ private:
 	std::shared_ptr<class M_TitleMetal> M_TitleMetalPtr;
 	std::shared_ptr<class ME_TitleMetal> ME_TitleMetalPtr;
 
-	
+	std::shared_ptr<class R_Sissor> R_SissorPtr;
+	std::shared_ptr<class R_Rock> R_RockPtr;
+	std::shared_ptr<class R_Paper> R_PaperPtr;
 
 
 	///State

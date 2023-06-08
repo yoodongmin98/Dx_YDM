@@ -42,6 +42,9 @@
 #include "A_TitleMetal.h"
 #include "M_TitleMetal.h"
 #include "ME_TitleMetal.h"
+#include "R_Sissor.h"
+#include "R_Paper.h"
+#include "R_Rock.h"
 
 
 
@@ -69,6 +72,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::SlantBoard:
 		SlantBoardStart();
 		break;
+	case Chap1LevelState::Roshambo:
+		RoshamboStart();
+		break;
 	default:
 		break;
 	}
@@ -89,6 +95,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::SlantBoard:
 		SlantBoardEnd();
+		break;
+	case Chap1LevelState::Roshambo:
+		RoshamboEnd();
 		break;
 	default:
 		break;
@@ -113,6 +122,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 		break;
 	case Chap1LevelState::SlantBoard:
 		SlantBoardUpdate(_DeltaTime);
+		break;
+	case Chap1LevelState::Roshambo:
+		RoshamboUpdate(_DeltaTime);
 		break;
 	default:
 		break;
@@ -276,13 +288,9 @@ void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 	if (true == LevelStateManager::MG->GetLopeDownStart())
 	{
 		Lope_ChainPtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
-		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
+		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-0.7f,0 });
 	}
 	//사운드가 끝나고, Metal 특정횟수 이상 건드렸을때 ChangeState
-	if (5 < LevelStateManager::MG->GetHMCMetal())
-	{
-		ChangeState(Chap1LevelState::Roshambo);
-	}
 }
 void PlaywithinaplayLevel::SlantBoardEnd()
 {
@@ -290,14 +298,21 @@ void PlaywithinaplayLevel::SlantBoardEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool RoshamboBool = true;
 void PlaywithinaplayLevel::RoshamboStart()
 {
 	if (nullptr != ChainPtr) { ChainPtr->Death(); ChainPtr = nullptr; }
 }
 void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 {
-	//사운드가 끝나면
+	if (true == RoshamboBool)
+	{
+		R_SissorPtr = CreateActor<R_Sissor>();
+		R_RockPtr = CreateActor<R_Rock>();
+		R_PaperPtr = CreateActor<R_Paper>();
+		RoshamboBool = false;
+	}
+	
 }
 void PlaywithinaplayLevel::RoshamboEnd()
 {

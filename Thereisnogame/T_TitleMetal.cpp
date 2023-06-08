@@ -8,6 +8,7 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Play within a play Level.h"
 
 T_TitleMetal::T_TitleMetal()
 {
@@ -29,6 +30,10 @@ void T_TitleMetal::Update(float _DeltaTime)
 	if (true == ClickCheck(T_TitleMetalsCollision))
 	{
 		LevelStateManager::MG->SetHMCMetalPlus();
+	}
+	if (5 < LevelStateManager::MG->GetHMCMetal())
+	{
+		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::Roshambo);
 	}
 }
 
