@@ -13,6 +13,8 @@ public:
 	R_Paper& operator=(const R_Paper& _Other) = delete;
 	R_Paper& operator=(R_Paper&& _Other) noexcept = delete;
 
+	void Up();
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -20,5 +22,6 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_Papers;
 	std::shared_ptr<class GameEngineCollision> R_PapersCollision;
+	bool IsPos = false;
 };
 

@@ -3,6 +3,7 @@
 
 //Base
 //Platform
+#include <GameEnginePlatform/GameEngineInput.h>
 //Core
 
 //Actor
@@ -312,6 +313,7 @@ void PlaywithinaplayLevel::RoshamboStart()
 }
 void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 {
+	CardTime += _DeltaTime;
 	if (true == RoshamboBool)
 	{
 		R_SissorPtr = CreateActor<R_Sissor>();
@@ -323,7 +325,24 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 		R_DosPtr = CreateActor<R_Dos>();
 		RoshamboBool = false;
 	}
-	
+	//여기 밑은 전부 사운드가 끝나면 카드들 올라오게하기
+	std::function<void()> Functions;
+	if (CardTime > 5.0f) 
+	{
+		Functions = std::bind(&R_Rock::Up, R_RockPtr.get());
+		Functions();
+	}
+	if (CardTime > 8.0f)
+	{
+		Functions = std::bind(&R_Paper::Up, R_PaperPtr.get());
+		Functions();
+	}
+	if (CardTime > 11.0f)
+	{
+		Functions = std::bind(&R_Sissor::Up, R_SissorPtr.get());
+		Functions();
+	}
+
 }
 void PlaywithinaplayLevel::RoshamboEnd()
 {

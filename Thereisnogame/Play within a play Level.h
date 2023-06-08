@@ -135,5 +135,6 @@ private:
 	void RoshamboStart();
 	void RoshamboUpdate(float _DeltaTime);
 	void RoshamboEnd();
+	float CardTime = 0.0f;
 };
 

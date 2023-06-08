@@ -18,14 +18,15 @@ R_Paper::~R_Paper()
 
 void R_Paper::Start()
 {
-	float4 Position = { -350,-540,0 };
+	float4 Position = { -350,-365,0 };
 	R_Papers = Init(R_Papers, "Icon_Shifumi_Paper.png", { 232,350 }, Position);
 	R_PapersCollision = CollisionInit(R_PapersCollision, { 232,350 }, Position);
+	GetTransform()->SetLocalPosition({ 0,-175,0 });
 }
 
 void R_Paper::Update(float _DeltaTime)
 {
-	if (GetLiveTime() > 1.3f)
+	if (true == IsPos)
 	{
 		InfinityShape(_DeltaTime);
 	}
@@ -36,3 +37,16 @@ void R_Paper::Render(float _Delta)
 
 };
 
+void R_Paper::Up()
+{
+	if (false == IsPos)
+	{
+		GetTransform()->AddLocalPosition({ 0,1,0 });
+	}
+	if (GetTransform()->GetLocalPosition().y >= 0.0f)
+	{
+		float4 Tests = GetTransform()->GetLocalPosition();
+		GetTransform()->SetLocalPosition(GetTransform()->GetLocalPosition());
+		IsPos = true;
+	}
+}

@@ -86,6 +86,6 @@ private:
 	float BlockDeathTime = 0.0f;
 	float Progress = 0.0f;
 	float4 EndPos = float4::Zero;
-
+	
 	G_RigidBody* pRigidBody;
 };
