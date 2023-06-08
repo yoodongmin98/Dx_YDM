@@ -21,7 +21,7 @@ N_TitleMetal::~N_TitleMetal()
 void N_TitleMetal::Start()
 {
 	N_TitleMetals = Init(N_TitleMetals, "TitleMetal_N.png", { 102,138 }, { -300,80,0 });
-	N_TitleMetalsCollision = BlockCollisionInit(N_TitleMetalsCollision, { 94,142 }, { -300,140,0 });
+	N_TitleMetalsCollision = CollisionInit(N_TitleMetalsCollision, { 94,142 }, { -300,80,0 });
 }
 
 void N_TitleMetal::Update(float _DeltaTime)

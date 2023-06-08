@@ -21,7 +21,7 @@ E_TitleMetal::~E_TitleMetal()
 void E_TitleMetal::Start()
 {
 	E_TitleMetals = Init(E_TitleMetals, "TitleMetal_E.png", { 99,138 }, { -120,230,0 });
-	E_TitleMetalsCollision = BlockCollisionInit(E_TitleMetalsCollision, { 94,142 }, { -300,140,0 });
+	E_TitleMetalsCollision = CollisionInit(E_TitleMetalsCollision, { 94,142 }, { -120,230,0 });
 }
 
 void E_TitleMetal::Update(float _DeltaTime)

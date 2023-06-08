@@ -26,10 +26,10 @@ void GameBall_TitleCube::Start()
 {
 	float4 Position = Mouse::MainMouse->GetMousePos();
 	GameBall_TitleCubes = Init(GameBall_TitleCubes, "TitleCube_Ball_Rebond.png", { 33,45 }, Position);
-	GameBall_TitleCubesCollisionU = BallCollisionInit(GameBall_TitleCubesCollisionU, { 29,5 }, Position + float4::Up * 21);
-	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 29,5 }, Position + float4::Down * 21);
-	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,41 }, Position + float4::Left * 14);
-	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,41 }, Position + float4::Right * 14);
+	GameBall_TitleCubesCollisionU = BallCollisionInit(GameBall_TitleCubesCollisionU, { 27,5 }, Position + float4::Up * 20);
+	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 27,5 }, Position + float4::Down * 20);
+	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,39 }, Position + float4::Left * 13);
+	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,39 }, Position + float4::Right * 13);
 }
 
 void GameBall_TitleCube::Update(float _DeltaTime)
