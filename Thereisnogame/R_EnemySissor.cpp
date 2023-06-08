@@ -18,11 +18,12 @@ R_EnemySissor::~R_EnemySissor()
 
 void R_EnemySissor::Start()
 {
-	R_EnemySissors = Init(R_EnemySissors, "Icon_Shifumi_Voix_Scissor.png", { 232,350 }, { 0,0,0 });
-	R_EnemySissorsNone = Init(R_EnemySissorsNone, "Icon_Shifumi_Voix_FaceEmpty.png", { 245,362 }, { 0,0,0 });
-	R_EnemySissorsCollision = CollisionInit(R_EnemySissorsCollision, { 232,350 }, { 0,0,0 });
+	float4 Position = { 500,-540,0 };
+	R_EnemySissors = Init(R_EnemySissors, "Icon_Shifumi_Voix_Scissor.png", { 232,350 }, Position);
+	R_EnemySissorsNone = Init(R_EnemySissorsNone, "Icon_Shifumi_Voix_FaceEmpty.png", { 245,362 }, Position);
+	R_EnemySissorsCollision = CollisionInit(R_EnemySissorsCollision, { 232,350 }, Position);
 
-	R_EnemySissorsNone->Off();
+	Off();
 }
 
 void R_EnemySissor::Update(float _DeltaTime)

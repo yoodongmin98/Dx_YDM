@@ -67,13 +67,13 @@ void PlaywithinaplayLevel::Start()
 		Vis4->SetVisPosition({ 180,-25 });
 		Vis4->SetVisRotate({ 0,0,-135 });
 		BackCurtainPtr=CreateActor<BackCurtain>();
-		CreateActor<Cordon>();
+		CordonPtr=CreateActor<Cordon>();
 	}
 	{
 		MousePtr=CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::None);
+	ChangeState(Chap1LevelState::Roshambo);
 }
 
 void PlaywithinaplayLevel::Update(float _DeltaTime)

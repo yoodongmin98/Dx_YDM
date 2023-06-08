@@ -61,7 +61,9 @@ private:
 
 
 
+
 	//Actor
+	std::shared_ptr<class Cordon> CordonPtr;
 	std::shared_ptr<class BackCurtain> BackCurtainPtr;
 	std::shared_ptr<class AlphaCircle> AlphaCirclePtr;
 	std::shared_ptr<class Chain> ChainPtr;
@@ -102,7 +104,10 @@ private:
 	std::shared_ptr<class R_Sissor> R_SissorPtr;
 	std::shared_ptr<class R_Rock> R_RockPtr;
 	std::shared_ptr<class R_Paper> R_PaperPtr;
-
+	std::shared_ptr<class R_EnemySissor> R_EnemySissorPtr;
+	std::shared_ptr<class R_EnemyRock> R_EnemyRockPtr;
+	std::shared_ptr<class R_EnemyPaper> R_EnemyPaperPtr;
+	std::shared_ptr<class R_Dos> R_DosPtr;
 
 	///State
 	void ClickCordonStart();

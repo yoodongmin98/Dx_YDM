@@ -18,8 +18,9 @@ R_Paper::~R_Paper()
 
 void R_Paper::Start()
 {
-	R_Papers = Init(R_Papers, "Icon_Shifumi_Paper.png", { 232,350 }, { 0,0,0 });
-	R_PapersCollision = CollisionInit(R_PapersCollision, { 232,350 }, { 0,0,0 });
+	float4 Position = { -350,-540,0 };
+	R_Papers = Init(R_Papers, "Icon_Shifumi_Paper.png", { 232,350 }, Position);
+	R_PapersCollision = CollisionInit(R_PapersCollision, { 232,350 }, Position);
 }
 
 void R_Paper::Update(float _DeltaTime)

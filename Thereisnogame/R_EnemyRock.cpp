@@ -18,8 +18,10 @@ R_EnemyRock::~R_EnemyRock()
 
 void R_EnemyRock::Start()
 {
-	R_EnemyRocks = Init(R_EnemyRocks, "Icon_Shifumi_Voix_Rock.png", { 232,350 }, { 0,0,0 });
-	R_EnemyRocksCollision = CollisionInit(R_EnemyRocksCollision, { 232,350 }, { 0,0,0 });
+	float4 Position = { 500,-540,0 };
+	R_EnemyRocks = Init(R_EnemyRocks, "Icon_Shifumi_Voix_Rock.png", { 232,350 }, Position);
+	R_EnemyRocksCollision = CollisionInit(R_EnemyRocksCollision, { 232,350 }, Position);
+	Off();
 }
 
 void R_EnemyRock::Update(float _DeltaTime)

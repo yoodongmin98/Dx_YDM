@@ -18,8 +18,10 @@ R_EnemyPaper::~R_EnemyPaper()
 
 void R_EnemyPaper::Start()
 {
-	R_EnemyPapers = Init(R_EnemyPapers, "Icon_Shifumi_Voix_Paper.png", { 232,350 }, { 0,0,0 });
-	R_EnemyPapersCollision = CollisionInit(R_EnemyPapersCollision, { 232,350 }, { 0,0,0 });
+	float4 Position = { 500,-540,0 };
+	R_EnemyPapers = Init(R_EnemyPapers, "Icon_Shifumi_Voix_Paper.png", { 232,350 }, Position);
+	R_EnemyPapersCollision = CollisionInit(R_EnemyPapersCollision, { 232,350 }, Position);
+	Off();
 }
 
 void R_EnemyPaper::Update(float _DeltaTime)

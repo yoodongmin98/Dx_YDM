@@ -18,8 +18,9 @@ R_Dos::~R_Dos()
 
 void R_Dos::Start()
 {
-	R_Doss = Init(R_Doss, "Icon_Shifumi_Voix_Dos.png", { 232,350 }, { 0,0,0 });
-	R_DossCollision = CollisionInit(R_DossCollision, { 232,350 }, { 0,0,0 });
+	float4 Position = { 500,-540,0 };
+	R_Doss = Init(R_Doss, "Icon_Shifumi_Voix_Dos.png", { 232,350 }, Position);
+	R_DossCollision = CollisionInit(R_DossCollision, { 232,350 }, Position);
 }
 
 void R_Dos::Update(float _DeltaTime)

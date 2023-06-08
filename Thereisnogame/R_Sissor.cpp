@@ -18,8 +18,9 @@ R_Sissor::~R_Sissor()
 
 void R_Sissor::Start()
 {
-	R_Sissors = Init(R_Sissors, "Icon_Shifumi_Scissor.png", { 232,350 }, { 0,0,0 });
-	R_SissorsCollision = CollisionInit(R_SissorsCollision, { 232,350 }, { 0,0,0 });
+	float4 Position = { -250,-540,0 };
+	R_Sissors = Init(R_Sissors, "Icon_Shifumi_Scissor.png", { 232,350 }, Position);
+	R_SissorsCollision = CollisionInit(R_SissorsCollision, { 232,350 }, Position);
 }
 
 void R_Sissor::Update(float _DeltaTime)

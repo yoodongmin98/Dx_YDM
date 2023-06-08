@@ -45,6 +45,11 @@
 #include "R_Sissor.h"
 #include "R_Paper.h"
 #include "R_Rock.h"
+#include "R_EnemyPaper.h"
+#include "R_EnemyRock.h"
+#include "R_EnemySissor.h"
+#include "R_Dos.h"
+#include "Cordon.h"
 
 
 
@@ -302,14 +307,20 @@ bool RoshamboBool = true;
 void PlaywithinaplayLevel::RoshamboStart()
 {
 	if (nullptr != ChainPtr) { ChainPtr->Death(); ChainPtr = nullptr; }
+	if (nullptr != BackCurtainPtr) { BackCurtainPtr->Death(); BackCurtainPtr = nullptr; }
+	if (nullptr != CordonPtr) { CordonPtr->Death(); CordonPtr = nullptr; }
 }
 void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 {
 	if (true == RoshamboBool)
 	{
 		R_SissorPtr = CreateActor<R_Sissor>();
-		R_RockPtr = CreateActor<R_Rock>();
 		R_PaperPtr = CreateActor<R_Paper>();
+		R_RockPtr = CreateActor<R_Rock>();
+		R_EnemySissorPtr = CreateActor<R_EnemySissor>();
+		R_EnemyRockPtr = CreateActor<R_EnemyRock>();
+		R_EnemyPaperPtr = CreateActor<R_EnemyPaper>();
+		R_DosPtr = CreateActor<R_Dos>();
 		RoshamboBool = false;
 	}
 	
