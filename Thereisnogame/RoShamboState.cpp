@@ -91,7 +91,7 @@ void PlaywithinaplayLevel::SelectCardEnd()
 
 void PlaywithinaplayLevel::EnemyCardStart()
 {
-
+	//카드 누르면 여기로 넘어옴 ㅇㅇ
 }
 void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 {

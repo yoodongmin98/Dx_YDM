@@ -8,6 +8,9 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Play within a play Level.h"
+bool R_SissorBool = true;
+bool R_SissorClick = false;
 R_Sissor::R_Sissor()
 {
 }
@@ -27,7 +30,8 @@ void R_Sissor::Start()
 void R_Sissor::Update(float _DeltaTime)
 {
 	RoShamboStateCheck(R_SissorsCollision);
-	if (true == IsPos)
+	StateClickCheck();
+	if (true == IsPos && false == R_SissorClick)
 	{
 		InfinityShape(_DeltaTime);
 	}
@@ -47,5 +51,26 @@ void R_Sissor::Up()
 	if (GetTransform()->GetLocalPosition().y >= 5.0f)
 	{
 		IsPos = true;
+	}
+}
+
+void R_Sissor::StateClickCheck()
+{
+	//Up
+	if (true == ClickCheck(R_SissorsCollision))
+	{
+		R_SissorClick = true;
+		LevelStateManager::MG->SetIsSelectCardTrue();
+		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
+	}
+	if (true == LevelStateManager::MG->GetIsSelectCard()
+		&& true == R_SissorBool
+		&& true == R_SissorClick)
+	{
+		GetTransform()->AddLocalPosition({ 0,1,0 });
+		if (GetTransform()->GetLocalPosition().y > 120.0f)
+		{
+			R_SissorBool = false;
+		}
 	}
 }

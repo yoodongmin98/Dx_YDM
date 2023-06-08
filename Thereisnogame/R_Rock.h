@@ -14,7 +14,7 @@ public:
 	R_Rock& operator=(R_Rock&& _Other) noexcept = delete;
 
 	void Up();
-
+	void StateClickCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;

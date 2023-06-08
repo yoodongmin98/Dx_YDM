@@ -14,7 +14,7 @@ public:
 	R_Sissor& operator=(R_Sissor&& _Other) noexcept = delete;
 
 	void Up();
-
+	void StateClickCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;

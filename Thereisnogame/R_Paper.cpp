@@ -9,6 +9,8 @@
 //Actor
 #include "LevelStateManager.h"
 #include "Play within a play Level.h"
+bool R_PaperBool = true;
+bool R_PaperClick = false;
 R_Paper::R_Paper()
 {
 }
@@ -28,7 +30,8 @@ void R_Paper::Start()
 void R_Paper::Update(float _DeltaTime)
 {
 	RoShamboStateCheck(R_PapersCollision);
-	if (true == IsPos)
+	StateClickCheck();
+	if (true == IsPos && false == R_PaperClick)
 	{
 		InfinityShape(_DeltaTime);
 	}
@@ -48,5 +51,26 @@ void R_Paper::Up()
 	if (GetTransform()->GetLocalPosition().y >= 0.0f)
 	{
 		IsPos = true;
+	}
+}
+
+void R_Paper::StateClickCheck()
+{
+	//Up
+	if (true == ClickCheck(R_PapersCollision))
+	{
+		R_PaperClick = true;
+		LevelStateManager::MG->SetIsSelectCardTrue();
+		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
+	}
+	if (true == LevelStateManager::MG->GetIsSelectCard()
+		&& true==R_PaperBool
+		&& true == R_PaperClick)
+	{
+		GetTransform()->AddLocalPosition({ 0,1,0 });
+		if (GetTransform()->GetLocalPosition().y > 120.0f)
+		{
+			R_PaperBool = false;
+		}
 	}
 }

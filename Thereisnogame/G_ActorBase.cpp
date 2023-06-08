@@ -252,13 +252,8 @@ void G_ActorBase::RoShamboStateCheck(std::shared_ptr<GameEngineCollision> _Colli
 	{
 		_Collision->Off();
 	}
-
-	if (true == ClickCheck(_Collision))
-	{
-		LevelStateManager::MG->SetIsSelectCardTrue();
-		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
-	}
 }
+
 
 void G_ActorBase::Down(float _DeltaTime)
 {

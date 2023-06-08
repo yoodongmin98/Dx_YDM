@@ -8,6 +8,9 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Play within a play Level.h"
+bool R_RockBool = true;
+bool R_RockClick = false;
 R_Rock::R_Rock()
 {
 }
@@ -27,7 +30,8 @@ void R_Rock::Start()
 void R_Rock::Update(float _DeltaTime)
 {
 	RoShamboStateCheck(R_RocksCollision);
-	if(true== IsPos)
+	StateClickCheck();
+	if(true== IsPos && false == R_RockClick)
 	{
 		InfinityShape(_DeltaTime); 
 	}
@@ -50,3 +54,23 @@ void R_Rock::Up()
 	}
 }
 
+void R_Rock::StateClickCheck()
+{
+	//Up
+	if (true == ClickCheck(R_RocksCollision))
+	{
+		R_RockClick = true;
+		LevelStateManager::MG->SetIsSelectCardTrue();
+		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
+	}
+	if (true == LevelStateManager::MG->GetIsSelectCard()
+		&& true == R_RockBool
+		&& true == R_RockClick)
+	{
+		GetTransform()->AddLocalPosition({ 0,1,0 });
+		if (GetTransform()->GetLocalPosition().y > 120.0f)
+		{
+			R_RockBool = false;
+		}
+	}
+}
