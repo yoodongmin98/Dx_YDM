@@ -24,5 +24,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_EnemySissorsNone;
 	std::shared_ptr<class GameEngineCollision> R_EnemySissorsCollision;
 	bool IsPos = false;
+
+	std::shared_ptr<class Scissor> ScissorPtr;
 };
 

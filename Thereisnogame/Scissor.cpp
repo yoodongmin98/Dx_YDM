@@ -31,6 +31,10 @@ void Scissor::Start()
 
 void Scissor::Update(float _DeltaTime)
 {
+	if (true == Mouse::MainMouse->IsInteractable())
+	{
+		Death();
+	}
 	CatchCheck(Scissors, Scissors_overlap, ScissorsCollision);
 }
 

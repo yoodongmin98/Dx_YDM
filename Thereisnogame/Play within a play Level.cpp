@@ -73,7 +73,7 @@ void PlaywithinaplayLevel::Start()
 		MousePtr=CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::None);
+	ChangeState(Chap1LevelState::Roshambo);
 	RSBChangeState(RoshamboState::None);
 }
 

@@ -12,6 +12,7 @@
 //Actor
 #include "LevelStateManager.h"
 #include "Scissor.h"
+#include "Mouse.h"
 
 R_EnemySissor::R_EnemySissor()
 {
@@ -36,8 +37,14 @@ void R_EnemySissor::Update(float _DeltaTime)
 	{
 		R_EnemySissorsNone->On();
 		R_EnemySissors->Off();
-		GetLevel()->CreateActor<Scissor>();
+		ScissorPtr=GetLevel()->CreateActor<Scissor>();
+		if (true == ScissorPtr.get()->IsDeath())
+		{
+			R_EnemySissorsNone->Off();
+			R_EnemySissors->On();
+		}
 	}
+	
 }
 
 void R_EnemySissor::Render(float _Delta)
@@ -45,7 +52,7 @@ void R_EnemySissor::Render(float _Delta)
 
 };
 
-
+//Functional
 void R_EnemySissor::Up()
 {
 	if (false == IsPos)
