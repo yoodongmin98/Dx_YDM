@@ -60,7 +60,7 @@ void R_Sissor::StateClickCheck()
 	{
 		R_SissorClick = true;
 		LevelStateManager::MG->SetIsSelectCardTrue();
-		LevelStateManager::MG->SetIsPaperTrue();
+		LevelStateManager::MG->SetIsSissorTrue();
 		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
 	}
 	if (true == LevelStateManager::MG->GetIsSelectCard()

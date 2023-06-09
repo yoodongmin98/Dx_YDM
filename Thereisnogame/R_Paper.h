@@ -15,6 +15,11 @@ public:
 
 	void Up();
 	void StateClickCheck();
+	void SetBool()
+	{
+		R_PaperBool = true;
+		R_PaperClick = false;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;

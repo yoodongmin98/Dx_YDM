@@ -73,12 +73,4 @@ void R_Paper::StateClickCheck()
 			R_PaperBool = false;
 		}
 	}
-	/*else
-	{
-		GetTransform()->AddLocalPosition({ 0,-1,0 });
-		if (GetTransform()->GetLocalPosition().y <= 0.0f)
-		{
-			R_PaperBool = false;
-		}
-	}*/
 }

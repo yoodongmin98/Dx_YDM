@@ -180,6 +180,10 @@ public:
 	{
 		IsSelectCard = true;
 	}
+	void SetIsSelectCardFalse()
+	{
+		IsSelectCard = false;
+	}
 	bool GetIsSelectCard()
 	{
 		return IsSelectCard;

@@ -121,7 +121,7 @@ void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 			R_EnemySissorPtr.get()->On();
 		}
 	}
-	if (EnemyCardTime > 6.0f)
+	if (EnemyCardTime > 8.0f)
 	{
 		RSBChangeState(RoshamboState::CardDownAndOff);
 	}
@@ -136,6 +136,7 @@ void PlaywithinaplayLevel::EnemyCardEnd()
 
 void PlaywithinaplayLevel::CardDownAndOffStart()
 {
+	LevelStateManager::MG->SetIsSelectCardFalse();
 	LevelStateManager::MG->SetIsRockfalse();
 	LevelStateManager::MG->SetIsSissorfalse();
 	LevelStateManager::MG->SetIsPaperfalse();
@@ -143,6 +144,9 @@ void PlaywithinaplayLevel::CardDownAndOffStart()
 	R_EnemyRockPtr.get()->Off();
 	R_EnemyPaperPtr.get()->Off();
 	R_EnemySissorPtr.get()->Off();
+	R_RockPtr.get()->SetBool();
+	R_SissorPtr.get()->SetBool();
+	R_PaperPtr.get()->SetBool();
 }
 void PlaywithinaplayLevel::CardDownAndOffUpdate(float _DeltaTime)
 {

@@ -15,6 +15,11 @@ public:
 
 	void Up();
 	void StateClickCheck();
+	void SetBool()
+	{
+		R_RockBool = true;
+		R_RockClick = false;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;
