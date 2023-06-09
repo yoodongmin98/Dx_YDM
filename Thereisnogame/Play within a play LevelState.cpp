@@ -184,13 +184,19 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 	std::function<void()> Functions;
 	if (ChainPtr->GetLiveTime() < 3.0f || ChainPtr->GetLiveTime() > 5.0f && ChainPtr->GetLiveTime() < 9.0f)
 	{
-		//Functions = std::bind(&BackCurtain::CurtainClose, BackCurtainPtr.get());
-		//Functions();
+		if (DebugIntValue == 0) //Debug
+		{
+			Functions = std::bind(&BackCurtain::CurtainClose, BackCurtainPtr.get());
+			Functions();
+		}
 	}
 	if (ChainPtr->GetLiveTime() > 3.0f && ChainPtr->GetLiveTime() < 5.0f || ChainPtr->GetLiveTime() > 9.0f && ChainPtr->GetLiveTime() < 15.0f)
 	{
-		//Functions = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
-		//Functions();
+		if (DebugIntValue == 0) //Debug
+		{
+			Functions = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
+			Functions();
+		}
 	}
 	if (ChainPtr->GetLiveTime() > 6.0f&& true==BoardCreateBool)
 	{
