@@ -329,10 +329,10 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	}
 	//여기 밑은 전부 사운드가 끝나면 카드들 올라오게하기
 	std::function<void()> Functions;
-	if (CardTime > 3.0f) { Functions = std::bind(&R_Rock::Up, R_RockPtr.get()); Functions();}
-	if (CardTime > 6.0f) { Functions = std::bind(&R_Paper::Up, R_PaperPtr.get()); Functions();}
-	if (CardTime > 9.0f) { Functions = std::bind(&R_Sissor::Up, R_SissorPtr.get()); Functions();}
-	if (CardTime > 12.0f) 
+	if (CardTime > 3.0f && CardTime < 14.0f) { Functions = std::bind(&R_Rock::Up, R_RockPtr.get()); Functions();}
+	if (CardTime > 6.0f && CardTime < 14.0f) { Functions = std::bind(&R_Paper::Up, R_PaperPtr.get()); Functions();}
+	if (CardTime > 9.0f && CardTime < 14.0f) { Functions = std::bind(&R_Sissor::Up, R_SissorPtr.get()); Functions();}
+	if (CardTime > 12.0f && CardTime < 14.0f)
 	{
 		Functions = std::bind(&R_Dos::Up, R_DosPtr.get()); Functions();
 		Functions = std::bind(&R_EnemyPaper::Up, R_EnemyPaperPtr.get()); Functions();

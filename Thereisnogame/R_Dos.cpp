@@ -8,8 +8,10 @@
 
 //Actor
 #include "LevelStateManager.h"
+R_Dos* R_Dos::Dos;
 R_Dos::R_Dos()
 {
+	Dos = this;
 }
 
 R_Dos::~R_Dos()
@@ -25,14 +27,17 @@ void R_Dos::Start()
 
 void R_Dos::Update(float _DeltaTime)
 {
+	
 
 }
 
 void R_Dos::Render(float _Delta)
 {
-
+	
 };
 
+
+//Functional
 void R_Dos::Up()
 {
 	if (false == IsPos)
@@ -44,5 +49,14 @@ void R_Dos::Up()
 		float4 Tests = GetTransform()->GetLocalPosition();
 		GetTransform()->SetLocalPosition(GetTransform()->GetLocalPosition());
 		IsPos = true;
+	}
+}
+
+void R_Dos::Shake()
+{
+	++RotateCount;
+	if (RotateCount <= 360)
+	{
+		R_Doss->GetTransform()->AddLocalRotation({ 0,0,1.0f });
 	}
 }

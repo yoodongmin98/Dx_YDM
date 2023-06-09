@@ -91,11 +91,14 @@ void PlaywithinaplayLevel::SelectCardEnd()
 
 void PlaywithinaplayLevel::EnemyCardStart()
 {
-	//카드 누르면 여기로 넘어옴 ㅇㅇ
+	
 }
 void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 {
-
+	//얘는 나중에
+	/*std::function<void()> Functions;
+	Functions = std::bind(&R_Dos::Shake, R_DosPtr.get());
+	Functions();*/
 }
 void PlaywithinaplayLevel::EnemyCardEnd()
 {

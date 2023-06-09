@@ -47,7 +47,7 @@ void ContentsCore::GameStart()
 	GameEngineCore::CreateLevel<FakeProgramLevel>();
 	//GameEngineCore::CreateLevel<EndingLevel>();
 
-	GameEngineCore::ChangeLevel("MainMenuLevel");
+	GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
 }
 
 void ContentsCore::GameEnd() 
