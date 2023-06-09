@@ -168,11 +168,13 @@ void PlaywithinaplayLevel::ClickCordonEnd()
 bool BoardCreateBool = true;
 void PlaywithinaplayLevel::CreateBoardStart()
 {
+	//Debug------------------------------------------
 	if (nullptr != BackCurtainPtr)
 	{
 		BackCurtainPtr.get()->Death();
 		BackCurtainPtr = nullptr;
 	}
+	//-----------------------------------------------
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(7);
 }
@@ -182,13 +184,13 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 	std::function<void()> Functions;
 	if (ChainPtr->GetLiveTime() < 3.0f || ChainPtr->GetLiveTime() > 5.0f && ChainPtr->GetLiveTime() < 9.0f)
 	{
-		Functions = std::bind(&BackCurtain::CurtainClose, BackCurtainPtr.get());
-		Functions();
+		//Functions = std::bind(&BackCurtain::CurtainClose, BackCurtainPtr.get());
+		//Functions();
 	}
 	if (ChainPtr->GetLiveTime() > 3.0f && ChainPtr->GetLiveTime() < 5.0f || ChainPtr->GetLiveTime() > 9.0f && ChainPtr->GetLiveTime() < 15.0f)
 	{
-		Functions = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
-		Functions();
+		//Functions = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
+		//Functions();
 	}
 	if (ChainPtr->GetLiveTime() > 6.0f&& true==BoardCreateBool)
 	{
@@ -246,6 +248,14 @@ void PlaywithinaplayLevel::CreateBoardEnd()
 
 void PlaywithinaplayLevel::DownBoardStart()
 {
+	//Debug------------------------------------------
+	if (nullptr == BoardPtr)
+	{
+		Lope_ChainPtr = CreateActor<Lope_Chain>();
+		Lope_CordePtr = CreateActor<Lope_Corde>();
+		BoardPtr = CreateActor<Board>();
+	}
+	//-----------------------------------------------
 	BlockCount = 13;
 }
 void PlaywithinaplayLevel::DownBoardUpdate(float _DeltaTime)
@@ -266,6 +276,13 @@ bool Setbool1 = true; bool Setbool2 = true; bool Setbool3 = true; bool Setbool4 
 bool Setbool8 = true; bool Setbool9 = true; bool Setbool10 = true; bool Setbool11 = true; bool Setbool12 = true; bool Setbool13 = true;
 void PlaywithinaplayLevel::ClearBoardStart()
 {
+	//Debug------------------------------------------
+	if (nullptr != ChainPtr)
+	{
+		ChainPtr.get()->Death();
+		ChainPtr = nullptr;
+	}
+	//-----------------------------------------------
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(7);
 }
@@ -292,7 +309,7 @@ void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 }
 void PlaywithinaplayLevel::ClearBoardEnd()
 {
-	//chian이랑 lope부모 해제
+	//chain이랑 lope부모 해제
 	Lope_ChainPtr->GetTransform()->SetParent(nullptr);
 	Lope_CordePtr->GetTransform()->SetParent(nullptr);
 }
@@ -301,7 +318,24 @@ void PlaywithinaplayLevel::ClearBoardEnd()
 
 void PlaywithinaplayLevel::SlantBoardStart()
 {
-
+	//Debug------------------------------------------
+	if (nullptr == T_TitleMetalPtr)
+	{
+		T_TitleMetalPtr = CreateActor<T_TitleMetal>(); T_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		H_TitleMetalPtr = CreateActor<H_TitleMetal>(); H_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		E_TitleMetalPtr = CreateActor<E_TitleMetal>(); E_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		R_TitleMetalPtr = CreateActor<R_TitleMetal>(); R_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		RE_TitleMetalPtr = CreateActor<RE_TitleMetal>(); RE_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		I_TitleMetalPtr = CreateActor<I_TitleMetal>(); I_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		S_TitleMetalPtr = CreateActor<S_TitleMetal>(); S_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		N_TitleMetalPtr = CreateActor<N_TitleMetal>(); N_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		O_TitleMetalPtr = CreateActor<O_TitleMetal>(); O_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		G_TitleMetalPtr = CreateActor<G_TitleMetal>(); G_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		A_TitleMetalPtr = CreateActor<A_TitleMetal>(); A_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		M_TitleMetalPtr = CreateActor<M_TitleMetal>(); M_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		ME_TitleMetalPtr = CreateActor<ME_TitleMetal>(); ME_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+	}
+	//-----------------------------------------------
 }
 void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 {
@@ -321,9 +355,17 @@ void PlaywithinaplayLevel::SlantBoardEnd()
 bool RoshamboBool = true;
 void PlaywithinaplayLevel::RoshamboStart()
 {
+	//Debug------------------------------------------
+	if (false != LevelStateManager::MG->GetIsProgress())
+	{
+		LevelStateManager::MG->SetIsProgressFalse();
+	}
+	BoardPtr.get()->GetCollision()->Off();
+	//-----------------------------------------------
 	if (nullptr != ChainPtr) { ChainPtr->Death(); ChainPtr = nullptr; }
 	if (nullptr != BackCurtainPtr) { BackCurtainPtr->Death(); BackCurtainPtr = nullptr; }
 	if (nullptr != CordonPtr) { CordonPtr->Death(); CordonPtr = nullptr; }
+	
 }
 void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 {
@@ -359,7 +401,7 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 }
 void PlaywithinaplayLevel::RoshamboEnd()
 {
-
+	RSBChangeState(RoshamboState::CardDownAndOff);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////

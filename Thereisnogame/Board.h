@@ -16,6 +16,12 @@ public:
 	void LevelStateMoveCheck();
 	void BoardMoveCheck();
 	void BoardUp();
+	//Debug----------------------------------------------
+	std::shared_ptr<class GameEngineCollision> GetCollision()
+	{
+		return BoardsCollision;
+	}
+	//---------------------------------------------------
 protected:
 	void Start();
 	void Update(float _Delta) override;
