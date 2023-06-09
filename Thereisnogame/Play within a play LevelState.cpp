@@ -7,6 +7,7 @@
 //Core
 
 //Actor
+//나는 Actor의 노예야
 #include "AlphaCircle.h"
 #include "BackCurtain.h"
 #include "Chain.h"
@@ -81,6 +82,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::Roshambo:
 		RoshamboStart();
 		break;
+	case Chap1LevelState::TiltBoard:
+		TiltBoardStart();
+		break;
 	default:
 		break;
 	}
@@ -104,6 +108,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::Roshambo:
 		RoshamboEnd();
+		break;
+	case Chap1LevelState::TiltBoard:
+		TiltBoardEnd();
 		break;
 	default:
 		break;
@@ -132,6 +139,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 	case Chap1LevelState::Roshambo:
 		RoshamboUpdate(_DeltaTime);
 		break;
+	case Chap1LevelState::TiltBoard:
+		TiltBoardUpdate(_DeltaTime);
+		break;
 	default:
 		break;
 	}
@@ -158,6 +168,11 @@ void PlaywithinaplayLevel::ClickCordonEnd()
 bool BoardCreateBool = true;
 void PlaywithinaplayLevel::CreateBoardStart()
 {
+	if (nullptr != BackCurtainPtr)
+	{
+		BackCurtainPtr.get()->Death();
+		BackCurtainPtr = nullptr;
+	}
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(7);
 }
@@ -343,6 +358,22 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	if (CardTime > 15.0f && false==LevelStateManager::MG->GetIsSetCard()) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
 }
 void PlaywithinaplayLevel::RoshamboEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::TiltBoardStart()
+{
+	ChainPtr = CreateActor<Chain>();
+	ChainPtr->SetChainLiveTime(5);
+}
+void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::TiltBoardEnd()
 {
 
 }

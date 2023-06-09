@@ -237,7 +237,7 @@ void G_ActorBase::InfinityShape(float _DeltaTime)
 	Progress += _DeltaTime * 1.5f;
 	float4 Pos = GetTransform()->GetLocalPosition();
 	Pos.x = cosf(Progress) * 2.0f;
-	Pos.y = sinf(Progress * 2.0f) * 2.0f;
+	Pos.y = sinf(Progress * 2.0f) * 3.0f;
 	GetTransform()->SetLocalPosition(Pos);
 }
 

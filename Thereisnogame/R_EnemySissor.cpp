@@ -25,7 +25,7 @@ R_EnemySissor::~R_EnemySissor()
 void R_EnemySissor::Start()
 {
 	float4 Position = { 500,-540,0 };
-	R_EnemySissorsNone = Init(R_EnemySissorsNone, "Icon_Shifumi_Voix_FaceEmpty.png", { 245,362 }, Position);
+	R_EnemySissorsNone = Init(R_EnemySissorsNone, "Icon_Shifumi_Voix_FaceEmpty.png", { 245,362 }, { Position.x - 3 ,Position.y + 3 });
 	R_EnemySissors = Init(R_EnemySissors, "Icon_Shifumi_Voix_Scissor.png", { 232,350 }, Position);
 	R_EnemySissorsCollision = CollisionInit(R_EnemySissorsCollision, { 232,350 }, Position);
 	Off();

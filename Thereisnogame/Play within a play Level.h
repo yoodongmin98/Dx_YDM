@@ -11,6 +11,7 @@ enum class Chap1LevelState
 	ClearBoard,
 	SlantBoard,
 	Roshambo,
+	TiltBoard,
 };
 enum class RoshamboState
 {
@@ -63,6 +64,8 @@ protected:
 private:
 	Chap1LevelState StateValue = Chap1LevelState::None;
 	RoshamboState RSBStateValue = RoshamboState::None;
+
+	int DebugIntValue = 0;
 
 	std::shared_ptr<class Mouse> MousePtr = nullptr;
 
@@ -159,5 +162,9 @@ private:
 	void CardDownAndOffUpdate(float _DeltaTime);
 	void CardDownAndOffEnd();
 	//----------------------------//
+
+	void TiltBoardStart();
+	void TiltBoardUpdate(float _DeltaTime);
+	void TiltBoardEnd();
 };
 

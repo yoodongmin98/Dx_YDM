@@ -9,6 +9,8 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Mouse.h"
+#include "Play within a play Level.h"
 Lope_Corde::Lope_Corde()
 {
 }
@@ -25,6 +27,7 @@ void Lope_Corde::Start()
 bool InitBool = true;
 void Lope_Corde::Update(float _DeltaTime)
 {
+	DeathCheck();
 	if (true == LevelStateManager::MG->GetIsSlantBoard()&&true== InitBool)
 	{
 		Lope_Cordes->SetScaleToTexture("Corde_Weak.png");
@@ -39,4 +42,15 @@ void Lope_Corde::Render(float _Delta)
 {
 
 };
+
+void Lope_Corde::DeathCheck()
+{
+	if (Lope_CordesCollision->Collision(ActorTypeEnum::ScreenActor, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true==Mouse::MainMouse->IsInteractable())
+	{
+		LevelStateManager::MG->SetIsCutTheLopeTrue();
+		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::TiltBoard);
+		Death();
+	}
+}
 

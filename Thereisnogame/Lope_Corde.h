@@ -12,7 +12,7 @@ public:
 	Lope_Corde(Lope_Corde&& _Other) noexcept = delete;
 	Lope_Corde& operator=(const Lope_Corde& _Other) = delete;
 	Lope_Corde& operator=(Lope_Corde&& _Other) noexcept = delete;
-
+	void DeathCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;

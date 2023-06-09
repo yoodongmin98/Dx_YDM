@@ -73,7 +73,7 @@ void PlaywithinaplayLevel::Start()
 		MousePtr=CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::Roshambo);
+	ChangeState(Chap1LevelState::None);
 	RSBChangeState(RoshamboState::None);
 }
 
@@ -87,6 +87,12 @@ void PlaywithinaplayLevel::Update(float _DeltaTime)
 	if (GameEngineInput::IsDown("TestKey3"))
 	{
 		GameEngineCore::ChangeLevel("FakeProgramLevel");
+	}
+	//State Debug¿ë
+	if (GameEngineInput::IsDown("TestKey2"))
+	{
+		++DebugIntValue;
+		ChangeState((static_cast<Chap1LevelState>(DebugIntValue)));
 	}
 	UpdateState(_DeltaTime);
 }

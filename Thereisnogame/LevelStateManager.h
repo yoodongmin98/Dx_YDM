@@ -240,6 +240,15 @@ public:
 	{
 		return IsPickScissor;
 	}
+	//Lope_weak Àß·È³Ä??
+	void SetIsCutTheLopeTrue()
+	{
+		IsCutTheLope = true;
+	}
+	bool GetIsCutTheLope()
+	{
+		return IsCutTheLope;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -253,13 +262,15 @@ private:
 	bool IsCreateRaquette = false;
 	bool LopeDownStart = false;
 	bool IsSlantBoard = false;
-	int HMCMetal = 0;
+	int HMCMetal = 0; //How Many Click Metal
 	bool IsSetCard = false;
 	bool IsSelectCard = false;
 	bool IsSissor = false;
 	bool IsRock = false;
 	bool IsPaper = false;
 	bool IsPickScissor = false;
+	bool IsCutTheLope = false;
+
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;
