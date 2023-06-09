@@ -38,6 +38,7 @@ protected:
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
+	void LevelChangeStart() override;
 
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MouseIdle;

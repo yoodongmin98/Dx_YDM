@@ -186,3 +186,9 @@ bool Mouse::IsBackActors()
 	}
 }
 
+void Mouse::LevelChangeStart()
+{
+	MainMouse = this;
+}
+
+
