@@ -153,6 +153,7 @@ private:
 	void EnemyCardStart();
 	void EnemyCardUpdate(float _DeltaTime);
 	void EnemyCardEnd();
+	float EnemyCardTime = 0.0f;
 
 	void CardDownAndOffStart();
 	void CardDownAndOffUpdate(float _DeltaTime);

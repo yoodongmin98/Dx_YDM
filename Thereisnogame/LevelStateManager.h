@@ -184,6 +184,45 @@ public:
 	{
 		return IsSelectCard;
 	}
+	//가위냐?
+	void SetIsSissorTrue()
+	{
+		IsSissor = true;
+	}
+	void SetIsSissorfalse()
+	{
+		IsSissor = false;
+	}
+	bool GetIsSissor()
+	{
+		return IsSissor;
+	}
+	//보냐?
+	 void SetIsPaperTrue()
+	{
+		 IsPaper = true;
+	}
+	void SetIsPaperfalse()
+	{
+		IsPaper = false;
+	}
+	bool GetIsPaper()
+	{
+		return IsPaper;
+	}
+	//바위냐?
+	void SetIsRockTrue()
+	{
+		IsRock = true;
+	}
+	void SetIsRockfalse()
+	{
+		IsRock = false;
+	}
+	bool GetIsRock()
+	{
+		return IsRock;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -200,6 +239,9 @@ private:
 	int HMCMetal = 0;
 	bool IsSetCard = false;
 	bool IsSelectCard = false;
+	bool IsSissor = false;
+	bool IsRock = false;
+	bool IsPaper = false;
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

@@ -340,7 +340,7 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 		Functions = std::bind(&R_EnemySissor::Up, R_EnemySissorPtr.get()); Functions();
 	}
 	//나는 다 골랐어요 사운드가 끝난후에
-	if (CardTime > 15.0f) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
+	if (CardTime > 15.0f && false==LevelStateManager::MG->GetIsSetCard()) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
 
 }
 void PlaywithinaplayLevel::RoshamboEnd()

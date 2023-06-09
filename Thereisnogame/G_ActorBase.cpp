@@ -254,7 +254,6 @@ void G_ActorBase::RoShamboStateCheck(std::shared_ptr<GameEngineCollision> _Colli
 	}
 }
 
-
 void G_ActorBase::Down(float _DeltaTime)
 {
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-400}, _DeltaTime));

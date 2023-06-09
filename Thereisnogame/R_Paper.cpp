@@ -9,8 +9,7 @@
 //Actor
 #include "LevelStateManager.h"
 #include "Play within a play Level.h"
-bool R_PaperBool = true;
-bool R_PaperClick = false;
+
 R_Paper::R_Paper()
 {
 }
@@ -61,6 +60,7 @@ void R_Paper::StateClickCheck()
 	{
 		R_PaperClick = true;
 		LevelStateManager::MG->SetIsSelectCardTrue();
+		LevelStateManager::MG->SetIsPaperTrue();
 		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
 	}
 	if (true == LevelStateManager::MG->GetIsSelectCard()
@@ -73,4 +73,12 @@ void R_Paper::StateClickCheck()
 			R_PaperBool = false;
 		}
 	}
+	/*else
+	{
+		GetTransform()->AddLocalPosition({ 0,-1,0 });
+		if (GetTransform()->GetLocalPosition().y <= 0.0f)
+		{
+			R_PaperBool = false;
+		}
+	}*/
 }

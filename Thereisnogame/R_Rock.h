@@ -23,5 +23,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_Rocks;
 	std::shared_ptr<class GameEngineCollision> R_RocksCollision;
 	bool IsPos = false;
+	bool R_RockBool = true;
+	bool R_RockClick = false;
 };
 

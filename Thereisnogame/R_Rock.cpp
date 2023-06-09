@@ -9,8 +9,7 @@
 //Actor
 #include "LevelStateManager.h"
 #include "Play within a play Level.h"
-bool R_RockBool = true;
-bool R_RockClick = false;
+
 R_Rock::R_Rock()
 {
 }
@@ -61,6 +60,7 @@ void R_Rock::StateClickCheck()
 	{
 		R_RockClick = true;
 		LevelStateManager::MG->SetIsSelectCardTrue();
+		LevelStateManager::MG->SetIsRockTrue();
 		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
 	}
 	if (true == LevelStateManager::MG->GetIsSelectCard()

@@ -14,6 +14,7 @@
 #include "R_EnemyRock.h"
 #include "R_EnemySissor.h"
 #include "R_Dos.h"
+#include "LevelStateManager.h"
 
 
 void PlaywithinaplayLevel::RSBChangeState(RoshamboState _State)
@@ -95,21 +96,53 @@ void PlaywithinaplayLevel::EnemyCardStart()
 }
 void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 {
-	//¾ê´Â ³ªÁß¿¡
-	/*std::function<void()> Functions;
-	Functions = std::bind(&R_Dos::Shake, R_DosPtr.get());
-	Functions();*/
+	EnemyCardTime += _DeltaTime;
+	std::function<void()> Functions;
+	if (EnemyCardTime>1.0f)
+	{
+		Functions = std::bind(&R_Dos::Shake, R_DosPtr.get());
+		Functions();
+	}
+	if (EnemyCardTime > 3.0f)
+	{
+		if (true == LevelStateManager::MG->GetIsRock())
+		{
+			R_DosPtr.get()->Off();
+			R_EnemyPaperPtr.get()->On();
+		}
+		if (true == LevelStateManager::MG->GetIsSissor())
+		{
+			R_DosPtr.get()->Off();
+			R_EnemyRockPtr.get()->On();
+		}
+		if (true == LevelStateManager::MG->GetIsPaper())
+		{
+			R_DosPtr.get()->Off();
+			R_EnemySissorPtr.get()->On();
+		}
+	}
+	if (EnemyCardTime > 6.0f)
+	{
+		RSBChangeState(RoshamboState::CardDownAndOff);
+	}
 }
 void PlaywithinaplayLevel::EnemyCardEnd()
 {
-
+	EnemyCardTime = 0.0f;
+	R_DosPtr.get()->SetCountClear();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void PlaywithinaplayLevel::CardDownAndOffStart()
 {
-
+	LevelStateManager::MG->SetIsRockfalse();
+	LevelStateManager::MG->SetIsSissorfalse();
+	LevelStateManager::MG->SetIsPaperfalse();
+	R_DosPtr.get()->On();
+	R_EnemyRockPtr.get()->Off();
+	R_EnemyPaperPtr.get()->Off();
+	R_EnemySissorPtr.get()->Off();
 }
 void PlaywithinaplayLevel::CardDownAndOffUpdate(float _DeltaTime)
 {

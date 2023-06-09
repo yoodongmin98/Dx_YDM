@@ -9,8 +9,7 @@
 //Actor
 #include "LevelStateManager.h"
 #include "Play within a play Level.h"
-bool R_SissorBool = true;
-bool R_SissorClick = false;
+
 R_Sissor::R_Sissor()
 {
 }
@@ -61,6 +60,7 @@ void R_Sissor::StateClickCheck()
 	{
 		R_SissorClick = true;
 		LevelStateManager::MG->SetIsSelectCardTrue();
+		LevelStateManager::MG->SetIsPaperTrue();
 		PlaywithinaplayLevel::LM->RSBChangeState(RoshamboState::EnemyCard);
 	}
 	if (true == LevelStateManager::MG->GetIsSelectCard()

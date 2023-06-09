@@ -23,5 +23,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_Papers;
 	std::shared_ptr<class GameEngineCollision> R_PapersCollision;
 	bool IsPos = false;
+	bool R_PaperBool = true;
+	bool R_PaperClick = false;
 };
 

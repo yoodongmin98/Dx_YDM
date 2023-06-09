@@ -23,5 +23,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> R_Sissors;
 	std::shared_ptr<class GameEngineCollision> R_SissorsCollision;
 	bool IsPos = false;
+	bool R_SissorBool = true;
+	bool R_SissorClick = false;
 };
 
