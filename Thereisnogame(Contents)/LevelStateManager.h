@@ -227,6 +227,19 @@ public:
 	{
 		return IsRock;
 	}
+	//가위 집었냐?
+	void SetIsPickScissorTrue()
+	{
+		IsPickScissor = true;
+	}
+	void SetIsPickScissorFalse()
+	{
+		IsPickScissor = false;
+	}
+	bool GetIsPickScissor()
+	{
+		return IsPickScissor;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -246,6 +259,7 @@ private:
 	bool IsSissor = false;
 	bool IsRock = false;
 	bool IsPaper = false;
+	bool IsPickScissor = false;
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

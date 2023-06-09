@@ -14,7 +14,8 @@ public:
 	R_EnemySissor& operator=(R_EnemySissor&& _Other) noexcept = delete;
 
 	void Up();
-
+	void RenderOnoffCheck();
+	void CreateScissor();
 protected:
 	void Start();
 	void Update(float _Delta) override;

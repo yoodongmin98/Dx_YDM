@@ -33,24 +33,38 @@ void R_EnemySissor::Start()
 
 void R_EnemySissor::Update(float _DeltaTime)
 {
-	if (true == ClickCheck(R_EnemySissorsCollision))
-	{
-		R_EnemySissorsNone->On();
-		R_EnemySissors->Off();
-		ScissorPtr=GetLevel()->CreateActor<Scissor>();
-		if (true == ScissorPtr.get()->IsDeath())
-		{
-			R_EnemySissorsNone->Off();
-			R_EnemySissors->On();
-		}
-	}
-	
+	RenderOnoffCheck();
+	CreateScissor();
 }
 
 void R_EnemySissor::Render(float _Delta)
 {
 
 };
+
+
+void R_EnemySissor::RenderOnoffCheck()
+{
+	if (false == LevelStateManager::MG->GetIsPickScissor())
+	{
+		R_EnemySissorsNone->Off();
+		R_EnemySissors->On();
+	}
+	else
+	{
+		R_EnemySissorsNone->On();
+		R_EnemySissors->Off();
+	}
+}
+
+void R_EnemySissor::CreateScissor()
+{
+	if (true == ClickCheck(R_EnemySissorsCollision))
+	{
+		LevelStateManager::MG->SetIsPickScissorTrue();
+		ScissorPtr = GetLevel()->CreateActor<Scissor>();
+	}
+}
 
 //Functional
 void R_EnemySissor::Up()

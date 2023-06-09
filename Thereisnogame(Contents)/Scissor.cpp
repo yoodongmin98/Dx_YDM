@@ -8,6 +8,7 @@
 
 //Actor
 #include "Mouse.h"
+#include "LevelStateManager.h"
 
 Scissor::Scissor()
 {
@@ -33,6 +34,7 @@ void Scissor::Update(float _DeltaTime)
 {
 	if (true == Mouse::MainMouse->IsInteractable())
 	{
+		LevelStateManager::MG->SetIsPickScissorFalse();
 		Death();
 	}
 	CatchCheck(Scissors, Scissors_overlap, ScissorsCollision);
