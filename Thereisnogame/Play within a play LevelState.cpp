@@ -406,13 +406,14 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 }
 void PlaywithinaplayLevel::RoshamboEnd()
 {
-	RSBChangeState(RoshamboState::CardDownAndOff);
+	
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void PlaywithinaplayLevel::TiltBoardStart()
 {
+	RSBChangeState(RoshamboState::CardDownAndOff);
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(5);
 }
