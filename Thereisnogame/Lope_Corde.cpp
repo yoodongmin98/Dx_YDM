@@ -40,7 +40,7 @@ void Lope_Corde::Update(float _DeltaTime)
 
 void Lope_Corde::Render(float _Delta)
 {
-
+	
 };
 
 void Lope_Corde::DeathCheck()

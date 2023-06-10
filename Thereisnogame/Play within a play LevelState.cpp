@@ -168,13 +168,6 @@ void PlaywithinaplayLevel::ClickCordonEnd()
 bool BoardCreateBool = true;
 void PlaywithinaplayLevel::CreateBoardStart()
 {
-	//Debug------------------------------------------
-	if (nullptr != BackCurtainPtr)
-	{
-		BackCurtainPtr.get()->Death();
-		BackCurtainPtr = nullptr;
-	}
-	//-----------------------------------------------
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(7);
 }
@@ -245,7 +238,7 @@ void PlaywithinaplayLevel::CreateBoardEnd()
 	if (true == ChainPtr->IsDeath())
 	{
 		ChainPtr = nullptr;
-		BackCurtainPtr->Death();
+		BackCurtainPtr.get()->Death();
 		BackCurtainPtr = nullptr;
 	}
 }
@@ -273,7 +266,13 @@ void PlaywithinaplayLevel::DownBoardUpdate(float _DeltaTime)
 }
 void PlaywithinaplayLevel::DownBoardEnd()
 {
-
+	//Debug------------------------------------------
+	if (nullptr != BackCurtainPtr)
+	{
+		BackCurtainPtr.get()->Death();
+		BackCurtainPtr = nullptr;
+	//-----------------------------------------------
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
