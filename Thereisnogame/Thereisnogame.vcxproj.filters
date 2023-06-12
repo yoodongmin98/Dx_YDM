@@ -694,6 +694,9 @@
     <ClCompile Include="RoShamboState.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\RoShambo State</Filter>
     </ClCompile>
+    <ClCompile Include="TransparencyActor.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\InterActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1379,6 +1382,9 @@
     </ClInclude>
     <ClInclude Include="R_EnemySissor.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Roshambo\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="TransparencyActor.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\InterActor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

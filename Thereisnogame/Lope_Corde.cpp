@@ -32,7 +32,7 @@ void Lope_Corde::Update(float _DeltaTime)
 	{
 		Lope_Cordes->SetScaleToTexture("Corde_Weak.png");
 		Lope_Cordes->GetTransform()->SetLocalScale({ 56,454 });
-		Lope_Cordes->GetTransform()->SetLocalPosition(Lope_Cordes->GetTransform()->GetLocalPosition());
+		Lope_Cordes->GetTransform()->SetLocalPosition(Lope_Cordes->GetTransform()->GetLocalPosition() + float4::Up * 100);
 		Lope_CordesCollision->GetTransform()->SetLocalPosition(Lope_Cordes->GetTransform()->GetLocalPosition());
 		InitBool = false;
 	}

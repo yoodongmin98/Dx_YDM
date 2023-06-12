@@ -55,6 +55,7 @@ void R_Dos::Up()
 
 void R_Dos::Shake()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	++RotateCount;
 	if (RotateCount <= 360)
 	{

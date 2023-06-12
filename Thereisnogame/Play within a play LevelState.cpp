@@ -52,6 +52,7 @@
 #include "R_EnemySissor.h"
 #include "R_Dos.h"
 #include "Cordon.h"
+#include "TransparencyActor.h"
 
 
 
@@ -287,7 +288,6 @@ void PlaywithinaplayLevel::ClearBoardStart()
 		ChainPtr.get()->Death();
 		ChainPtr = nullptr;
 	}
-	
 	//-----------------------------------------------
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(7);
@@ -347,14 +347,14 @@ void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 {
 	if (true == LevelStateManager::MG->GetLopeDownStart())
 	{
-		Lope_ChainPtr->GetTransform()->AddLocalPosition({ 0,-1.0f* _DeltaTime,0 });
-		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-0.7f* _DeltaTime,0 });
+		Lope_ChainPtr->GetTransform()->AddLocalPosition({ 0,-1.0f* _DeltaTime*200.0f,0 });
+		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-0.7f* _DeltaTime*200.0f,0 });
 	}
 	//사운드가 끝나고, Metal 특정횟수 이상 건드렸을때 ChangeState
 }
 void PlaywithinaplayLevel::SlantBoardEnd()
 {
-
+	
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -421,13 +421,21 @@ void PlaywithinaplayLevel::TiltBoardStart()
 		Lope_CordePtr = nullptr;
 	}
 	//-----------------------------------------------
-	RSBChangeState(RoshamboState::CardDownAndOff);
+	R_SissorPtr->Death();
+	R_PaperPtr->Death();
+	R_RockPtr->Death();
+	R_EnemySissorPtr->Death();
+	R_EnemyRockPtr->Death();
+	R_EnemyPaperPtr->Death();
+	R_DosPtr->Death();
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(5);
+	TransparencyActorPtr = CreateActor<TransparencyActor>();
+	BoardPtr->GetTransform()->SetParent(TransparencyActorPtr->GetTransform());
 }
 void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 {
-	
+	TransparencyActorPtr->GetTransform()->AddLocalRotation({0,0,-10 * _DeltaTime});
 }
 void PlaywithinaplayLevel::TiltBoardEnd()
 {

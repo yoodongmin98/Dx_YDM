@@ -122,6 +122,8 @@ private:
 	std::shared_ptr<class R_EnemyPaper> R_EnemyPaperPtr;
 	std::shared_ptr<class R_Dos> R_DosPtr;
 
+	std::shared_ptr<class TransparencyActor> TransparencyActorPtr;
+
 	///State
 	void ClickCordonStart();
 	void ClickCordonUpdate(float _DeltaTime);

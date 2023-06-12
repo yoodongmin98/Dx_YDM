@@ -386,6 +386,7 @@
     <ClInclude Include="H_TitleCube.h" />
     <ClInclude Include="S_TitleCube.h" />
     <ClInclude Include="S_TitleMetal.h" />
+    <ClInclude Include="TransparencyActor.h" />
     <ClInclude Include="T_TitleCube.h" />
     <ClInclude Include="TitleMetal.h" />
     <ClInclude Include="TrashcanFolder.h" />
@@ -630,6 +631,7 @@
     <ClCompile Include="H_TitleCube.cpp" />
     <ClCompile Include="S_TitleCube.cpp" />
     <ClCompile Include="S_TitleMetal.cpp" />
+    <ClCompile Include="TransparencyActor.cpp" />
     <ClCompile Include="T_TitleCube.cpp" />
     <ClCompile Include="TitleMetal.cpp" />
     <ClCompile Include="TrashcanFolder.cpp" />
