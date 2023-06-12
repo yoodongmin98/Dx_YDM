@@ -20,8 +20,7 @@ TransparencyActor::~TransparencyActor()
 
 void TransparencyActor::Start()
 {
-	TransparencyActors = Init(TransparencyActors, "Chap04_ArrowLeft.png", { 100,100,1 }, { -370,140,0 });
-	TransparencyActors->Off();
+	TransparencyActors = Init(TransparencyActors, "Chap04_ArrowLeft.png", { 0.1f,0.1f,1 }, { -370,140,0 });
 }
 
 void TransparencyActor::Update(float _DeltaTime)

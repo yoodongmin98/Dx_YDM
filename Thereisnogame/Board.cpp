@@ -67,8 +67,8 @@ void Board::LevelStateMoveCheck()
 		&&true== RemoveDown)
 	{
 		LevelStateManager::MG->SetLopeDownStartTrue();
-		GetTransform()->AddLocalPosition({ 0,-1.0f*Times,0 });
-		GetTransform()->AddLocalRotation({ 0,0,-0.04f*Times });
+		GetTransform()->AddLocalPosition({ 0,-1.5f*Times,0 });
+		GetTransform()->AddLocalRotation({ 0,0,-0.05f*Times });
 		if (GetTransform()->GetLocalPosition().y < -80.0f)
 		{
 			RemoveDown = false;

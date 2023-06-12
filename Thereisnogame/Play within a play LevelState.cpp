@@ -404,6 +404,10 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	}
 	//나는 다 골랐어요 사운드가 끝난후에
 	if (CardTime > 15.0f && false==LevelStateManager::MG->GetIsSetCard()) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
+	if (LevelStateManager::MG->GetIsCutTheLope())
+	{
+		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::TiltBoard);
+	}
 }
 void PlaywithinaplayLevel::RoshamboEnd()
 {
@@ -428,14 +432,14 @@ void PlaywithinaplayLevel::TiltBoardStart()
 	R_EnemyRockPtr->Death();
 	R_EnemyPaperPtr->Death();
 	R_DosPtr->Death();
-	//ChainPtr = CreateActor<Chain>();
-	//ChainPtr->SetChainLiveTime(5);
+	ChainPtr = CreateActor<Chain>();
+	ChainPtr->SetChainLiveTime(5);
 	TransparencyActorPtr = CreateActor<TransparencyActor>();
 	BoardPtr->GetTransform()->SetParent(TransparencyActorPtr->GetRenderTransform());
 }
 void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 {
-	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z > -57.0f)
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z > -59.0f)
 	{
 		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-100.0f * _DeltaTime });
 	}
