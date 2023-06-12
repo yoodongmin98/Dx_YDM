@@ -62,15 +62,16 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	std::shared_ptr<GameEngineCollision> _Collision,
 	float _ImageHalfScale,float _DeltaTime)
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	float4 MoveDir = float4::Down * _DeltaTime * FallSpeed;
 	
 	if (_Render->GetTransform()->GetLocalPosition().y < -GameEngineWindow::GetScreenSize().half().y + _ImageHalfScale)
 	{
 		MoveDir = float4::Zero;
 	}
-	_Render->GetTransform()->AddLocalPosition(MoveDir);
-	_Render2->GetTransform()->AddLocalPosition(MoveDir);
-	_Collision->GetTransform()->AddLocalPosition(MoveDir);
+	_Render->GetTransform()->AddLocalPosition(MoveDir* Times);
+	_Render2->GetTransform()->AddLocalPosition(MoveDir * Times);
+	_Collision->GetTransform()->AddLocalPosition(MoveDir * Times);
 }
 
 void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,

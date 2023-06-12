@@ -43,9 +43,10 @@ void R_Paper::Render(float _Delta)
 
 void R_Paper::Up()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({ 0,1,0 });
+		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
 	}
 	if (GetTransform()->GetLocalPosition().y >= 0.0f)
 	{
@@ -55,6 +56,7 @@ void R_Paper::Up()
 
 void R_Paper::StateClickCheck()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	//Up
 	if (true == ClickCheck(R_PapersCollision))
 	{
@@ -67,7 +69,7 @@ void R_Paper::StateClickCheck()
 		&& true==R_PaperBool
 		&& true == R_PaperClick)
 	{
-		GetTransform()->AddLocalPosition({ 0,1,0 });
+		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
 		if (GetTransform()->GetLocalPosition().y > 120.0f)
 		{
 			R_PaperBool = false;

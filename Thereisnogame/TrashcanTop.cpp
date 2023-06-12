@@ -47,6 +47,7 @@ void TrashcanTop::Render(float _Delta)
 
 void TrashcanTop::TrashCanFallandDeathCheck()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (TrashcanTopsCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
@@ -56,7 +57,7 @@ void TrashcanTop::TrashCanFallandDeathCheck()
 	if (true == TrashCanFall)
 	{
 		TrashcanTopsCollision->Off();
-		TrashcanTops->GetTransform()->AddLocalPosition({ 0,-5,0 });
+		TrashcanTops->GetTransform()->AddLocalPosition({ 0,-5*Times,0 });
 	}
 	if (TrashcanTops->GetTransform()->GetLocalPosition().y < -500)
 	{

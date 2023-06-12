@@ -38,6 +38,7 @@ void Ball_TitleCube::Render(float _Delta)
 
 void Ball_TitleCube::ProgressCheck()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (true==LevelStateManager::MG->GetIsCreateRaquette()
 		&& true == UpdateBool)
 	{
@@ -47,7 +48,7 @@ void Ball_TitleCube::ProgressCheck()
 	if (true == ClickCheck(Ball_TitleCubesCollision)&& 5>BallClickCount)
 	{
 		++BallClickCount;
-		GetTransform()->AddLocalPosition({ 0,-5,0 });
+		GetTransform()->AddLocalPosition({ 0,-5*Times,0 });
 		if (BallClickCount > 4)
 		{
 			GetLevel()->CreateActor<GameBall_TitleCube>();

@@ -39,10 +39,11 @@ void Board::Render(float _Delta)
 bool Boardmoves = true;
 void Board::BoardMoveCheck()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (Chap1LevelState::DownBoard == PlaywithinaplayLevel::LM->GetLevelState()
 		&& true==Boardmoves)
 	{
-		GetTransform()->AddLocalPosition({ 0,-1,0 });
+		GetTransform()->AddLocalPosition({ 0,-1*Times,0 });
 		if (GetTransform()->GetLocalPosition().y < -70.0f)
 		{
 			LevelStateManager::MG->SetIsBoardDownTrue();
@@ -61,12 +62,13 @@ void Board::BoardMoveCheck()
 bool RemoveDown = true;
 void Board::LevelStateMoveCheck()
 {
+	float Times=GameEngineTime::GlobalTime.GetDeltaTime()*200;
 	if (Chap1LevelState::SlantBoard == PlaywithinaplayLevel::LM->GetLevelState()
 		&&true== RemoveDown)
 	{
 		LevelStateManager::MG->SetLopeDownStartTrue();
-		GetTransform()->AddLocalPosition({ 0,-1.0f,0 });
-		GetTransform()->AddLocalRotation({ 0,0,-0.04f });
+		GetTransform()->AddLocalPosition({ 0,-1.0f*Times,0 });
+		GetTransform()->AddLocalRotation({ 0,0,-0.04f*Times });
 		if (GetTransform()->GetLocalPosition().y < -80.0f)
 		{
 			RemoveDown = false;
@@ -80,9 +82,10 @@ void Board::LevelStateMoveCheck()
 //Functional È£Ãâ¿ë
 void Board::BoardUp()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (true == BoardFunc)
 	{
-		GetTransform()->AddLocalPosition({ 0,1,0 });
+		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
 	}
 	if (GetTransform()->GetLocalPosition().y > 70.0f)
 	{

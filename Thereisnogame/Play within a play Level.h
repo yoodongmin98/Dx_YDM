@@ -56,6 +56,7 @@ public:
 	{
 		BlockCount -= 1;
 	}
+
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

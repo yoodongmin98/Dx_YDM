@@ -43,9 +43,10 @@ void R_Rock::Render(float _Delta)
 
 void R_Rock::Up()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({0,1,0});
+		GetTransform()->AddLocalPosition({0,1*Times,0});
 	}
 	if (GetTransform()->GetLocalPosition().y >= 5.0f)
 	{
@@ -56,6 +57,7 @@ void R_Rock::Up()
 void R_Rock::StateClickCheck()
 {
 	//Up
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (true == ClickCheck(R_RocksCollision))
 	{
 		R_RockClick = true;
@@ -67,7 +69,7 @@ void R_Rock::StateClickCheck()
 		&& true == R_RockBool
 		&& true == R_RockClick)
 	{
-		GetTransform()->AddLocalPosition({ 0,1,0 });
+		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
 		if (GetTransform()->GetLocalPosition().y > 120.0f)
 		{
 			R_RockBool = false;

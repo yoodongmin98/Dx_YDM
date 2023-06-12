@@ -38,6 +38,7 @@ void Excla_TitleCube::Render(float _Delta)
 
 void Excla_TitleCube::ProgressCheck()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (true == LevelStateManager::MG->GetIsBoardDown()
 		&& true == UpdateBool)
 	{
@@ -47,7 +48,7 @@ void Excla_TitleCube::ProgressCheck()
 
 	if (true == ClickCheck(Excla_TitleCubesCollision))
 	{
-		GetTransform()->AddLocalPosition({ 0,-5,0 });
+		GetTransform()->AddLocalPosition({ 0,-5*Times,0 });
 		++ExclaClickCount;
 		if (ExclaClickCount > 4)
 		{
@@ -58,7 +59,7 @@ void Excla_TitleCube::ProgressCheck()
 
 	if (true == FallAndDeathCheck)
 	{
-		GetTransform()->AddLocalPosition({ 0,-5,0 });
+		GetTransform()->AddLocalPosition({ 0,-5*Times,0 });
 		if (GetTransform()->GetLocalPosition().y < -360 + 55)
 		{
 			GetLevel()->CreateActor<Raquette_TitleCube>();

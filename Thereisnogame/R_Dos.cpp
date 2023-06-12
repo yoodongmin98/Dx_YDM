@@ -40,9 +40,10 @@ void R_Dos::Render(float _Delta)
 //Functional
 void R_Dos::Up()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({ 0,1,0 });
+		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
 	}
 	if (GetTransform()->GetLocalPosition().y >= 280.0f)
 	{

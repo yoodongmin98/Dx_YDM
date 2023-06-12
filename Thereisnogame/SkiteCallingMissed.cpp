@@ -42,9 +42,10 @@ void SkiteCallingMissed::Render(float _Delta)
 
 void SkiteCallingMissed::FallandDeathCheck()
 {
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (true == FallStart)
 	{
-		SkiteCallingMisseds->GetTransform()->AddLocalPosition({ 0,-5,0 });
+		SkiteCallingMisseds->GetTransform()->AddLocalPosition({ 0,-5*Times,0 });
 	}
 	if (SkiteCallingMisseds->GetTransform()->GetLocalPosition().y < -500.0f
 		|| 1 != LevelStateManager::MG->GetCollisionValue())

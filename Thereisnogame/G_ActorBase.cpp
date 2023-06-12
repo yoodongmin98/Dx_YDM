@@ -217,13 +217,14 @@ void G_ActorBase::CreateRigidBody()
 
 void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Collision)
 {
+	float Times=GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if ((_Collision->Collision(ActorTypeEnum::Ball, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
 		_Collision->Death();
 	}
 	if (true==_Collision->IsDeath())
 	{
-		GetTransform()->AddLocalPosition(float4::Down * 2);
+		GetTransform()->AddLocalPosition(float4::Down * 2* Times);
 		if (GetTransform()->GetLocalPosition().y < -500.0f)
 		{
 			PlaywithinaplayLevel::LM->MinusBlockCount();

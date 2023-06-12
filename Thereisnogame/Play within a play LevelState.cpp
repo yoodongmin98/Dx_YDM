@@ -287,6 +287,7 @@ void PlaywithinaplayLevel::ClearBoardStart()
 		ChainPtr.get()->Death();
 		ChainPtr = nullptr;
 	}
+	
 	//-----------------------------------------------
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(7);
@@ -346,8 +347,8 @@ void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 {
 	if (true == LevelStateManager::MG->GetLopeDownStart())
 	{
-		Lope_ChainPtr->GetTransform()->AddLocalPosition({ 0,-1,0 });
-		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-0.7f,0 });
+		Lope_ChainPtr->GetTransform()->AddLocalPosition({ 0,-1.0f* _DeltaTime,0 });
+		Lope_CordePtr->GetTransform()->AddLocalPosition({ 0,-0.7f* _DeltaTime,0 });
 	}
 	//사운드가 끝나고, Metal 특정횟수 이상 건드렸을때 ChangeState
 }
@@ -413,13 +414,20 @@ void PlaywithinaplayLevel::RoshamboEnd()
 
 void PlaywithinaplayLevel::TiltBoardStart()
 {
+	//Debug------------------------------------------
+	if (Lope_CordePtr.get() != nullptr)
+	{
+		Lope_CordePtr->Death();
+		Lope_CordePtr = nullptr;
+	}
+	//-----------------------------------------------
 	RSBChangeState(RoshamboState::CardDownAndOff);
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(5);
 }
 void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 {
-
+	
 }
 void PlaywithinaplayLevel::TiltBoardEnd()
 {
