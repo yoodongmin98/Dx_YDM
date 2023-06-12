@@ -428,14 +428,18 @@ void PlaywithinaplayLevel::TiltBoardStart()
 	R_EnemyRockPtr->Death();
 	R_EnemyPaperPtr->Death();
 	R_DosPtr->Death();
-	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(5);
+	//ChainPtr = CreateActor<Chain>();
+	//ChainPtr->SetChainLiveTime(5);
 	TransparencyActorPtr = CreateActor<TransparencyActor>();
-	BoardPtr->GetTransform()->SetParent(TransparencyActorPtr->GetTransform());
+	BoardPtr->GetTransform()->SetParent(TransparencyActorPtr->GetRenderTransform());
 }
 void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 {
-	TransparencyActorPtr->GetTransform()->AddLocalRotation({0,0,-10 * _DeltaTime});
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z > -57.0f)
+	{
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-100.0f * _DeltaTime });
+	}
+	
 }
 void PlaywithinaplayLevel::TiltBoardEnd()
 {
