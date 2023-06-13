@@ -137,6 +137,17 @@ private:
 	std::shared_ptr<class Binary0> Binary0Ptr10;
 	std::shared_ptr<class Binary0> Binary0Ptr11;
 
+	std::shared_ptr<class Binary1> Binary1Ptr1;
+	std::shared_ptr<class Binary1> Binary1Ptr2;
+	std::shared_ptr<class Binary1> Binary1Ptr3;
+	std::shared_ptr<class Binary1> Binary1Ptr4;
+	std::shared_ptr<class Binary1> Binary1Ptr5;
+	std::shared_ptr<class Binary1> Binary1Ptr6;
+	std::shared_ptr<class Binary1> Binary1Ptr7;
+	std::shared_ptr<class Binary1> Binary1Ptr8;
+	std::shared_ptr<class Binary1> Binary1Ptr9;
+	std::shared_ptr<class Binary1> Binary1Ptr10;
+
 	///State
 	void ClickCordonStart();
 	void ClickCordonUpdate(float _DeltaTime);
