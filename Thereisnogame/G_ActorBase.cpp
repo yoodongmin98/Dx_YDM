@@ -255,6 +255,27 @@ void G_ActorBase::RoShamboStateCheck(std::shared_ptr<GameEngineCollision> _Colli
 	}
 }
 
+void G_ActorBase::RightFallRigid(float _RightValue,float _DownValue,bool _globalvariable,float _DeltaTime)
+{
+	{
+		G_RigidBody* Rigids = GetRigidBody();
+		Rigids->SetFrictionCoeff(2);
+		if (_DeltaTime < 0.1f && true == _globalvariable)
+		{
+			Rigids->AddForce(float4::Right * _RightValue);
+		}
+		if (_DeltaTime > 0.1f)
+		{
+			_globalvariable = false;
+			Rigids->AddForce(float4::Down * _DownValue);
+		}
+		if (GetTransform()->GetLocalPosition().y > -GameEngineWindow::GetScreenSize().half().y)
+		{
+			Rigids->RigidBodyUpdate();
+		}
+	}
+}
+
 void G_ActorBase::Down(float _DeltaTime)
 {
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-400}, _DeltaTime));

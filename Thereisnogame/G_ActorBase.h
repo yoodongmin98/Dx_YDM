@@ -78,6 +78,8 @@ public:
 	void InfinityShape(float _DeltaTime);
 
 	void RoShamboStateCheck(std::shared_ptr<GameEngineCollision> _Collision);
+
+	void RightFallRigid(float _RightValue, float _DownValue, bool _globalvariable, float _DeltaTime);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

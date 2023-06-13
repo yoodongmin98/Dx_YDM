@@ -52,7 +52,7 @@ public:
 		MaxSpeed = _MaxMaxSpeed;
 	}
 	//¸¶Âû·Â
-	void SetFrictionCoeff(int _Value)
+	void SetFrictionCoeff(float _Value)
 	{
 		FrictionCoeff = _Value;
 	}

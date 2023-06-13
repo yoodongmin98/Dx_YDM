@@ -53,6 +53,8 @@
 #include "R_Dos.h"
 #include "Cordon.h"
 #include "TransparencyActor.h"
+#include "Binary0.h"
+#include "Binary1.h"
 
 
 
@@ -415,7 +417,7 @@ void PlaywithinaplayLevel::RoshamboEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool BinaryCreateBool = true;
 void PlaywithinaplayLevel::TiltBoardStart()
 {
 	//Debug------------------------------------------
@@ -442,6 +444,12 @@ void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z > -59.0f)
 	{
 		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-100.0f * _DeltaTime });
+	}
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
+		&&true== BinaryCreateBool)
+	{
+		CreateActor<Binary0>();
+		BinaryCreateBool = false;
 	}
 }
 void PlaywithinaplayLevel::TiltBoardEnd()

@@ -172,6 +172,8 @@
     <ClInclude Include="BackSqirrelKey.h" />
     <ClInclude Include="BalloonSecure.h" />
     <ClInclude Include="Ball_TitleCube.h" />
+    <ClInclude Include="Binary0.h" />
+    <ClInclude Include="Binary1.h" />
     <ClInclude Include="BlueErrorMessage.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoxCroix_ClockDay.h" />
@@ -408,6 +410,8 @@
     <ClCompile Include="BackSqirrelKey.cpp" />
     <ClCompile Include="BalloonSecure.cpp" />
     <ClCompile Include="Ball_TitleCube.cpp" />
+    <ClCompile Include="Binary0.cpp" />
+    <ClCompile Include="Binary1.cpp" />
     <ClCompile Include="BlueErrorMessage.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BoxCroix_ClockDay.cpp" />

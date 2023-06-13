@@ -20,5 +20,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> LoadBarTXTs;
 	std::shared_ptr<class GameEngineCollision> LoadBarTXTsCollision;
+
+	float TestTime = 0.0f;
 };
 
