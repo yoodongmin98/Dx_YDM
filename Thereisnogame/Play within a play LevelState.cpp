@@ -448,18 +448,17 @@ void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
 		&&true== BinaryCreateBool)
 	{
-		float4 TestPosition = { -600,200,0 };
-		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.3, 500, TestPosition);
-		Binary0Ptr2 = CreateActor<Binary0>(); Binary0Ptr2->SetBinary(2.4, 600, TestPosition);
-		Binary0Ptr3 = CreateActor<Binary0>(); Binary0Ptr3->SetBinary(2.5, 700, TestPosition);
-		Binary0Ptr4 = CreateActor<Binary0>(); Binary0Ptr4->SetBinary(2.6, 800, TestPosition);
-		Binary0Ptr5 = CreateActor<Binary0>(); Binary0Ptr5->SetBinary(2.7, 600, TestPosition);
-		Binary0Ptr6 = CreateActor<Binary0>(); Binary0Ptr6->SetBinary(2.4, 500, TestPosition);
-		Binary0Ptr7 = CreateActor<Binary0>(); Binary0Ptr7->SetBinary(2.6, 550, TestPosition);
-		Binary0Ptr8 = CreateActor<Binary0>(); Binary0Ptr8->SetBinary(2.2, 650, TestPosition);
-		Binary0Ptr9 = CreateActor<Binary0>(); Binary0Ptr9->SetBinary(2.1, 600, TestPosition);
-		Binary0Ptr10 = CreateActor<Binary0>(); Binary0Ptr10->SetBinary(2.15, 750, TestPosition);
-		Binary0Ptr11 = CreateActor<Binary0>(); Binary0Ptr11->SetBinary(2.3, 600, TestPosition);
+		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.3f, 700, { -600,200,0 }, { 42,42 });
+		Binary0Ptr2 = CreateActor<Binary0>(); Binary0Ptr2->SetBinary(2.4f, 700, { -630,140,0 }, { 39,39 });
+		Binary0Ptr3 = CreateActor<Binary0>(); Binary0Ptr3->SetBinary(3.0f, 600, { -640,110,0 }, { 44,44 });
+		Binary0Ptr4 = CreateActor<Binary0>(); Binary0Ptr4->SetBinary(2.6f, 800, { -740,260,0 }, { 37,37 });
+		Binary0Ptr5 = CreateActor<Binary0>(); Binary0Ptr5->SetBinary(2.7f, 600, { -750,160,0 }, { 35,35 });
+		Binary0Ptr6 = CreateActor<Binary0>(); Binary0Ptr6->SetBinary(2.4f, 500, { -850,300,0 }, { 37,37 });
+		Binary0Ptr7 = CreateActor<Binary0>(); Binary0Ptr7->SetBinary(2.6f, 750, { -850,240,0 }, { 39,39 });
+		Binary0Ptr8 = CreateActor<Binary0>(); Binary0Ptr8->SetBinary(2.2f, 550, { -600,50,0 }, { 37,37 });
+		Binary0Ptr9 = CreateActor<Binary0>(); Binary0Ptr9->SetBinary(2.1f, 500, { -650,50,0 }, { 42,42 });
+		Binary0Ptr10 = CreateActor<Binary0>(); Binary0Ptr10->SetBinary(2.15f, 550, { -640,60,0 }, { 42,42  });
+		Binary0Ptr11 = CreateActor<Binary0>(); Binary0Ptr11->SetBinary(2.3f, 600, { -670,-30,0 }, { 45,45 });
 		BinaryCreateBool = false;
 	}
 }
