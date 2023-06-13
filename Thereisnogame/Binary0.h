@@ -13,7 +13,7 @@ public:
 	Binary0& operator=(const Binary0& _Other) = delete;
 	Binary0& operator=(Binary0&& _Other) noexcept = delete;
 
-	void SetBinary(int _Right, int _Down, float4 _Position)
+	void SetBinary(float _Right, float _Down, float4 _Position)
 	{
 		RightValue = _Right;
 		DownValue = _Down;

@@ -124,6 +124,19 @@ private:
 
 	std::shared_ptr<class TransparencyActor> TransparencyActorPtr;
 
+	//이마저도 노가다로 만들어버리는 무식한 나
+	std::shared_ptr<class Binary0> Binary0Ptr1;
+	std::shared_ptr<class Binary0> Binary0Ptr2;
+	std::shared_ptr<class Binary0> Binary0Ptr3;
+	std::shared_ptr<class Binary0> Binary0Ptr4;
+	std::shared_ptr<class Binary0> Binary0Ptr5;
+	std::shared_ptr<class Binary0> Binary0Ptr6;
+	std::shared_ptr<class Binary0> Binary0Ptr7;
+	std::shared_ptr<class Binary0> Binary0Ptr8;
+	std::shared_ptr<class Binary0> Binary0Ptr9;
+	std::shared_ptr<class Binary0> Binary0Ptr10;
+	std::shared_ptr<class Binary0> Binary0Ptr11;
+
 	///State
 	void ClickCordonStart();
 	void ClickCordonUpdate(float _DeltaTime);

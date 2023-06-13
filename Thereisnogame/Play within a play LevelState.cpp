@@ -448,7 +448,18 @@ void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
 		&&true== BinaryCreateBool)
 	{
-		CreateActor<Binary0>();
+		float4 TestPosition = { -600,200,0 };
+		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.3, 500, TestPosition);
+		Binary0Ptr2 = CreateActor<Binary0>(); Binary0Ptr2->SetBinary(2.4, 600, TestPosition);
+		Binary0Ptr3 = CreateActor<Binary0>(); Binary0Ptr3->SetBinary(2.5, 700, TestPosition);
+		Binary0Ptr4 = CreateActor<Binary0>(); Binary0Ptr4->SetBinary(2.6, 800, TestPosition);
+		Binary0Ptr5 = CreateActor<Binary0>(); Binary0Ptr5->SetBinary(2.7, 600, TestPosition);
+		Binary0Ptr6 = CreateActor<Binary0>(); Binary0Ptr6->SetBinary(2.4, 500, TestPosition);
+		Binary0Ptr7 = CreateActor<Binary0>(); Binary0Ptr7->SetBinary(2.6, 550, TestPosition);
+		Binary0Ptr8 = CreateActor<Binary0>(); Binary0Ptr8->SetBinary(2.2, 650, TestPosition);
+		Binary0Ptr9 = CreateActor<Binary0>(); Binary0Ptr9->SetBinary(2.1, 600, TestPosition);
+		Binary0Ptr10 = CreateActor<Binary0>(); Binary0Ptr10->SetBinary(2.15, 750, TestPosition);
+		Binary0Ptr11 = CreateActor<Binary0>(); Binary0Ptr11->SetBinary(2.3, 600, TestPosition);
 		BinaryCreateBool = false;
 	}
 }

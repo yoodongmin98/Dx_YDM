@@ -25,8 +25,9 @@ void Binary0::Start()
 
 void Binary0::Update(float _DeltaTime)
 {
+	Binary0s->GetTransform()->SetLocalPosition(StartPosition);
 	Binary0Time += _DeltaTime;
-	RightFallRigid(2.3, 500, Binarybool, Binary0Time);
+	RightFallRigid(RightValue, DownValue, Binarybool, Binary0Time);
 }
 
 void Binary0::Render(float _Delta)
