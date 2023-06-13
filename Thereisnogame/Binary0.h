@@ -20,10 +20,6 @@ public:
 		StartPosition = _Position;
 		StartScale = _Scale;
 	}
-	/*std::shared_ptr<class GameEngineSpriteRenderer> GetRenderPtr()
-	{
-		return Binary0s;
-	}*/
 protected:
 	void Start();
 	void Update(float _Delta) override;
