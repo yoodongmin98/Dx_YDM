@@ -24,16 +24,18 @@ void T_TitleMetal::Start()
 	T_TitleMetals = Init(T_TitleMetals, "TitleMetal_T.png", { 94,142 }, { -300,230,0 });
 	T_TitleMetalsCollision = CollisionInit(T_TitleMetalsCollision, { 94,142 }, { -300,230,0 });
 }
-
+bool T_TitleMetalStateBool = true;
 void T_TitleMetal::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(T_TitleMetalsCollision))
 	{
 		LevelStateManager::MG->SetHMCMetalPlus();
 	}
-	if (5 < LevelStateManager::MG->GetHMCMetal())
+	if (5 < LevelStateManager::MG->GetHMCMetal()
+		&&true== T_TitleMetalStateBool)
 	{
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::Roshambo);
+		T_TitleMetalStateBool = false;
 	}
 }
 
