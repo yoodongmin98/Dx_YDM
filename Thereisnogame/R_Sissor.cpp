@@ -22,7 +22,7 @@ void R_Sissor::Start()
 {
 	float4 Position = { -250,-365,0 };
 	R_Sissors = Init(R_Sissors, "Icon_Shifumi_Scissor.png", { 232,350 }, Position);
-	R_SissorsCollision = CollisionInit(R_SissorsCollision, { 232,350 }, Position);
+	R_SissorsCollision = CollisionInit(R_SissorsCollision, { 116,350 }, Position + float4::Right * 58);
 	GetTransform()->SetLocalPosition({ 0,-175,0 });
 }
 

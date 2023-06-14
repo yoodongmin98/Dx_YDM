@@ -22,7 +22,7 @@ void R_Paper::Start()
 {
 	float4 Position = { -350,-365,0 };
 	R_Papers = Init(R_Papers, "Icon_Shifumi_Paper.png", { 232,350 }, Position);
-	R_PapersCollision = CollisionInit(R_PapersCollision, { 232,350 }, Position);
+	R_PapersCollision = CollisionInit(R_PapersCollision, { 116,350 }, Position + float4::Right * 58);
 	GetTransform()->SetLocalPosition({ 0,-175,0 });
 }
 

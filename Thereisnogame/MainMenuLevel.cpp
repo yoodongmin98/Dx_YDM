@@ -108,6 +108,7 @@ void MainMenuLevel::Start()
 		GameEngineInput::CreateKey("TestKey2", '2');
 		GameEngineInput::CreateKey("TestKey3", '3');
 		GameEngineInput::CreateKey("TestKey4", '4');
+		GameEngineInput::CreateKey("TestKey0", '0');
 		GameEngineInput::CreateKey("LeftMouse", VK_LBUTTON);
 	}
 	ChangeState(MainMenuState::Flag);

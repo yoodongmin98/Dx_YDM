@@ -89,7 +89,7 @@ void PlaywithinaplayLevel::Update(float _DeltaTime)
 		GameEngineCore::ChangeLevel("FakeProgramLevel");
 	}
 	//State Debug¿ë
-	if (GameEngineInput::IsDown("TestKey2"))
+	if (GameEngineInput::IsDown("TestKey0"))
 	{
 		++DebugIntValue;
 		ChangeState((static_cast<Chap1LevelState>(DebugIntValue)));
