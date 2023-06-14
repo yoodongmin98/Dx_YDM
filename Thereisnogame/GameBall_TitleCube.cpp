@@ -26,10 +26,10 @@ void GameBall_TitleCube::Start()
 {
 	float4 Position = Mouse::MainMouse->GetMousePos();
 	GameBall_TitleCubes = Init(GameBall_TitleCubes, "TitleCube_Ball_Rebond.png", { 33,45 }, Position);
-	GameBall_TitleCubesCollisionU = BallCollisionInit(GameBall_TitleCubesCollisionU, { 27,5 }, Position + float4::Up * 20);
-	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 27,5 }, Position + float4::Down * 20);
-	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,39 }, Position + float4::Left * 13);
-	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,39 }, Position + float4::Right * 13);
+	GameBall_TitleCubesCollisionU = BallCollisionInit(GameBall_TitleCubesCollisionU, { 27,5 }, Position + float4::Up * 24);
+	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 27,5 }, Position + float4::Down * 24);
+	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,39 }, Position + float4::Left * 17);
+	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,39 }, Position + float4::Right * 17);
 }
 
 void GameBall_TitleCube::Update(float _DeltaTime)
@@ -82,32 +82,32 @@ void GameBall_TitleCube::CollisionInterCheck(G_RigidBody* _Rigids)
 		if (GetTransform()->GetLocalPosition().x < RQXpos - 20
 			&& GetTransform()->GetLocalPosition().x > RQXpos - 40)
 		{
-			_Rigids->AddForce(float4::Left * 15000); 
-			_Rigids->AddForce(float4::Down * 1000);
+			_Rigids->AddForce(float4::Left * 10000); 
+			_Rigids->AddForce(float4::Down * 15000);
 			_Rigids->ChangeYDir();
 		}
 		else if (GetTransform()->GetLocalPosition().x < RQXpos - 40)
 		{
-			_Rigids->AddForce(float4::Left * 25000);
-			_Rigids->AddForce(float4::Down * 10000);
+			_Rigids->AddForce(float4::Left * 15000);
+			_Rigids->AddForce(float4::Down * 15000);
 			_Rigids->ChangeYDir();
 		}
 		else if (GetTransform()->GetLocalPosition().x > RQXpos + 20
 			&& GetTransform()->GetLocalPosition().x < RQXpos + 40)
 		{
-			_Rigids->AddForce(float4::Right * 15000);
-			_Rigids->AddForce(float4::Down * 10000);
+			_Rigids->AddForce(float4::Right * 10000);
+			_Rigids->AddForce(float4::Down * 15000);
 			_Rigids->ChangeYDir();
 		}
 		else if (GetTransform()->GetLocalPosition().x > RQXpos + 40)
 		{
-			_Rigids->AddForce(float4::Right * 25000);
-			_Rigids->AddForce(float4::Down * 10000);
+			_Rigids->AddForce(float4::Right * 15000);
+			_Rigids->AddForce(float4::Down * 15000);
 			_Rigids->ChangeYDir();
 		}
 		else
 		{
-			_Rigids->AddForce(float4::Down * 1000);
+			_Rigids->AddForce(float4::Down * 15000);
 			_Rigids->ChangeYDir();
 		}
 	}

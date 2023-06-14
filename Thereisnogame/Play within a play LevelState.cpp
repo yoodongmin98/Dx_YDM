@@ -444,6 +444,7 @@ void PlaywithinaplayLevel::TiltBoardStart()
 }
 void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 {
+	float asd = TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z;
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z > -59.0f)
 	{
 		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-100.0f * _DeltaTime });
