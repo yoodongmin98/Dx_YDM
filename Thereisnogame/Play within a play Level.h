@@ -193,5 +193,6 @@ private:
 	void TiltBoardStart();
 	void TiltBoardUpdate(float _DeltaTime);
 	void TiltBoardEnd();
+	float NOTime = 0.0f;
 };
 

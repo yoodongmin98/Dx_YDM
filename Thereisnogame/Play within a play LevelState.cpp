@@ -421,6 +421,8 @@ void PlaywithinaplayLevel::RoshamboEnd()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool BinaryCreateBool = true;
+bool MetalNBool = true;
+bool MetalOBool = true;
 void PlaywithinaplayLevel::TiltBoardStart()
 {
 	//Debug------------------------------------------
@@ -444,7 +446,6 @@ void PlaywithinaplayLevel::TiltBoardStart()
 }
 void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 {
-	float asd = TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z;
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z > -59.0f)
 	{
 		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-100.0f * _DeltaTime });
@@ -452,6 +453,8 @@ void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
 		&&true== BinaryCreateBool)
 	{
+		N_TitleMetalPtr->GetTransform()->SetParent(nullptr);
+		O_TitleMetalPtr->GetTransform()->SetParent(nullptr);
 		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.2f, 700, { -700,300,0 }, { 42,42 });
 		Binary0Ptr2 = CreateActor<Binary0>(); Binary0Ptr2->SetBinary(2.3f, 700, { -780,240,0 }, { 39,39 });
 		Binary0Ptr3 = CreateActor<Binary0>(); Binary0Ptr3->SetBinary(2.7f, 600, { -840,210,0 }, { 44,44 });
@@ -475,6 +478,12 @@ void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 		Binary1Ptr9 = CreateActor<Binary1>();	Binary1Ptr9->SetBinary(2.1f, 700, { -1000,-100,0 }, { 46,46 });
 		Binary1Ptr10 = CreateActor<Binary1>();	Binary1Ptr10->SetBinary(2.6f, 700, { -910,-120,0 }, { 40,40 });
 		BinaryCreateBool = false;
+	}
+	if (false == BinaryCreateBool)
+	{
+		NOTime += _DeltaTime;
+		N_TitleMetalPtr.get()->RightFallRigid(2.1f, 600, MetalNBool, NOTime);
+		O_TitleMetalPtr.get()->RightFallRigid(2.2f, 500, MetalOBool, NOTime);
 	}
 }
 void PlaywithinaplayLevel::TiltBoardEnd()
