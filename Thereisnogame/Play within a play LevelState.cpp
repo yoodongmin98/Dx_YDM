@@ -361,6 +361,7 @@ void PlaywithinaplayLevel::SlantBoardEnd()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool RoshamboBool = true;
+bool RoshamboStateBools = true;
 void PlaywithinaplayLevel::RoshamboStart()
 {
 	//Debug------------------------------------------
@@ -406,9 +407,11 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	}
 	//나는 다 골랐어요 사운드가 끝난후에
 	if (CardTime > 15.0f && false==LevelStateManager::MG->GetIsSetCard()) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
-	if (LevelStateManager::MG->GetIsCutTheLope())
+	if (true==LevelStateManager::MG->GetIsCutTheLope()
+		&& true==RoshamboStateBools)
 	{
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::TiltBoard);
+		RoshamboStateBools = false;
 	}
 }
 void PlaywithinaplayLevel::RoshamboEnd()

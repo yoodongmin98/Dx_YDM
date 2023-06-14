@@ -59,6 +59,6 @@ void R_Dos::Shake()
 	++RotateCount;
 	if (RotateCount <= 360)
 	{
-		R_Doss->GetTransform()->AddLocalRotation({ 0,0,1.0f });
+		R_Doss->GetTransform()->AddLocalRotation({ 0,0,1.0f* Times });
 	}
 }
