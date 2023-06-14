@@ -12,7 +12,10 @@ public:
 	BalloonSecure(BalloonSecure&& _Other) noexcept = delete;
 	BalloonSecure& operator=(const BalloonSecure& _Other) = delete;
 	BalloonSecure& operator=(BalloonSecure&& _Other) noexcept = delete;
-
+	GameEngineTransform* GetRender()
+	{
+		return BalloonSecures->GetTransform();
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;

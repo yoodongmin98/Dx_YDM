@@ -11,7 +11,7 @@
 
 BalloonSecure::BalloonSecure()
 {
-	BalloonSecures = Init(BalloonSecures, "BalloonSecure.png", { 323,351 }, float4::Zero);
+	
 }
 
 BalloonSecure::~BalloonSecure()
@@ -20,7 +20,7 @@ BalloonSecure::~BalloonSecure()
 
 void BalloonSecure::Start()
 {
-	
+	BalloonSecures = Init(BalloonSecures, "BalloonSecure.png", { 323,351 }, float4::Zero);
 }
 
 void BalloonSecure::Update(float _DeltaTime)

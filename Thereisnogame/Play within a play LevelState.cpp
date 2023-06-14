@@ -201,7 +201,7 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 		Lope_CordePtr=CreateActor<Lope_Corde>();
 		BoardPtr=CreateActor<Board>();
 		BalloonSecurePtr = CreateActor<BalloonSecure>();
-		BalloonSecurePtr->GetTransform()->SetParent(BoardPtr->GetBoardRender());
+		BalloonSecurePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		//there is no game
 		T_TitleCubePtr=CreateActor<T_TitleCube>();
 		T_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
