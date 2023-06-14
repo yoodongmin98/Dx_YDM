@@ -55,6 +55,7 @@
 #include "TransparencyActor.h"
 #include "Binary0.h"
 #include "Binary1.h"
+#include "BalloonSecure.h"
 
 
 
@@ -199,6 +200,8 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 		Lope_ChainPtr=CreateActor<Lope_Chain>();
 		Lope_CordePtr=CreateActor<Lope_Corde>();
 		BoardPtr=CreateActor<Board>();
+		BalloonSecurePtr = CreateActor<BalloonSecure>();
+		BalloonSecurePtr->GetTransform()->SetParent(BoardPtr->GetBoardRender());
 		//there is no game
 		T_TitleCubePtr=CreateActor<T_TitleCube>();
 		T_TitleCubePtr->GetTransform()->SetParent(BoardPtr->GetTransform());

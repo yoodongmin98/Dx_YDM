@@ -11,6 +11,7 @@
 
 BalloonSecure::BalloonSecure()
 {
+	BalloonSecures = Init(BalloonSecures, "BalloonSecure.png", { 323,351 }, float4::Zero);
 }
 
 BalloonSecure::~BalloonSecure()

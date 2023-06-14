@@ -22,6 +22,10 @@ public:
 		return BoardsCollision;
 	}
 	//---------------------------------------------------
+	GameEngineTransform* GetBoardRender()
+	{
+		return Boards->GetTransform();
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;

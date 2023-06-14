@@ -83,6 +83,7 @@ private:
 	std::shared_ptr<class Lope_Chain> Lope_ChainPtr;
 	std::shared_ptr<class Lope_Corde> Lope_CordePtr;
 	std::shared_ptr<class Board> BoardPtr;
+	std::shared_ptr<class BalloonSecure> BalloonSecurePtr;
 	
 	std::shared_ptr<class T_TitleCube> T_TitleCubePtr;
 	std::shared_ptr<class H_TitleCube> H_TitleCubePtr;
