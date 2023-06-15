@@ -62,7 +62,7 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	std::shared_ptr<GameEngineCollision> _Collision,
 	float _ImageHalfScale,float _DeltaTime)
 {
-	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 100;
 	float4 MoveDir = float4::Down * _DeltaTime * FallSpeed;
 	
 	if (_Render->GetTransform()->GetLocalPosition().y < -GameEngineWindow::GetScreenSize().half().y + _ImageHalfScale)

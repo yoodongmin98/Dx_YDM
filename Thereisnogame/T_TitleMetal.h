@@ -13,6 +13,8 @@ public:
 	T_TitleMetal& operator=(const T_TitleMetal& _Other) = delete;
 	T_TitleMetal& operator=(T_TitleMetal&& _Other) noexcept = delete;
 
+	void BeforeRoshambo();
+	void DeathandCreateScreenT();
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -20,5 +22,6 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> T_TitleMetals;
 	std::shared_ptr<class GameEngineCollision> T_TitleMetalsCollision;
+	std::shared_ptr<class TitleMetal> TitleMetalPtr;
 };
 
