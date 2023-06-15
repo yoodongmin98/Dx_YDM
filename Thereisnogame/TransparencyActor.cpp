@@ -9,7 +9,7 @@
 //Actor
 #include "BackCurtain.h"
 #include "Play within a play Level.h"
-
+#include "LevelStateManager.h"
 TransparencyActor::TransparencyActor()
 {
 }
@@ -25,7 +25,7 @@ void TransparencyActor::Start()
 
 void TransparencyActor::Update(float _DeltaTime)
 {
-
+	
 }
 void TransparencyActor::Render(float _Delta)
 {

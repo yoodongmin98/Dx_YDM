@@ -31,7 +31,7 @@ void BalloonParents::Update(float _DeltaTime)
 {
 	if(true == ShakeBalloonBool)
 	{
-		GetTransform()->AddLocalRotation({ 0,0,0.01f });
+		GetTransform()->AddLocalRotation({ 0,0,6.0f* _DeltaTime });
 	}
 	if (GetTransform()->GetLocalRotation().z >= 15.0f)
 	{
@@ -39,7 +39,7 @@ void BalloonParents::Update(float _DeltaTime)
 	}
 	if (false == ShakeBalloonBool)
 	{
-		GetTransform()->AddLocalRotation({ 0,0,-0.01f });
+		GetTransform()->AddLocalRotation({ 0,0,-6.0f* _DeltaTime });
 	}
 	if (GetTransform()->GetLocalRotation().z <= -15.0f)
 	{

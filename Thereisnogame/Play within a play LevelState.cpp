@@ -515,6 +515,7 @@ void PlaywithinaplayLevel::TiltBoardEnd()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool BalloonManageBool = true;
+bool BoardUpDownBool = true;
 void PlaywithinaplayLevel::BalloonUpStart()
 {
 
@@ -534,6 +535,24 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 		LevelStateManager::MG->SetIsBalloonUpTrue();
 		BalloonManageBool = false;
 	}
+	if (true == LevelStateManager::MG->GetIsBalloonUp()
+		&&true== BoardUpDownBool)
+	{
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({0,0,2.0f* _DeltaTime });
+	}
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z >= 5.0f)
+	{
+		BoardUpDownBool = false;
+	}
+	if (false == BoardUpDownBool)
+	{
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-2.0f* _DeltaTime });
+	}
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z <= 2.0f)
+	{
+		BoardUpDownBool = true;
+	}
+	
 }
 void PlaywithinaplayLevel::BalloonUpEnd()
 {
