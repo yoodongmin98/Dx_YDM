@@ -538,7 +538,7 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 	if (true == LevelStateManager::MG->GetIsBalloonUp()
 		&&true== BoardUpDownBool)
 	{
-		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({0,0,2.0f* _DeltaTime });
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({0,0,1.0f* _DeltaTime });
 	}
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z >= 5.0f)
 	{
@@ -546,7 +546,7 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 	}
 	if (false == BoardUpDownBool)
 	{
-		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-2.0f* _DeltaTime });
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-1.0f* _DeltaTime });
 	}
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z <= 2.0f)
 	{

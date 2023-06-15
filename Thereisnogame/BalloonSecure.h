@@ -16,8 +16,8 @@ public:
 	{
 		return BalloonSecures->GetTransform();
 	}
-	void BalloonScaleSet();
-	void BalloonShakeCheck(float _DeltaTime);
+	void BalloonScaleSet(float _DeltaTime);
+
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -26,8 +26,8 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> BalloonSecures;
 	std::shared_ptr<class GameEngineCollision> BalloonSecuresCollision;
 
-	float BalloonXscale = 1.0f;
-	float BalloonYscale = 1.0f;
+	float BalloonXscale = 0.0f;
+	float BalloonYscale = 0.0f;
 	float BalloonTime = 0.0f;
 };
 

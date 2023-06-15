@@ -26,7 +26,7 @@ void BalloonSecure::Start()
 
 void BalloonSecure::Update(float _DeltaTime)
 {
-	BalloonScaleSet();
+	BalloonScaleSet(_DeltaTime);
 }
 
 void BalloonSecure::Render(float _Delta)
@@ -34,7 +34,7 @@ void BalloonSecure::Render(float _Delta)
 
 };
 
-void BalloonSecure::BalloonScaleSet()
+void BalloonSecure::BalloonScaleSet(float _DeltaTime)
 {
 	if (true == LevelStateManager::MG->GetIsDeathN()
 		&& false == LevelStateManager::MG->GetIsBalloonUp())
@@ -42,12 +42,12 @@ void BalloonSecure::BalloonScaleSet()
 		On();
 		if (BalloonXscale <= 323.0f)
 		{
-			BalloonXscale += 0.323f;
+			BalloonXscale += 323.0f* _DeltaTime*0.6f;
 		}
 		if (BalloonYscale <= 351.0f)
 		{
-			BalloonYscale += 0.351f;
-			GetTransform()->AddLocalPosition({ 0,0.175f,0 });
+			BalloonYscale += 351.0f* _DeltaTime*0.6f;
+			GetTransform()->AddLocalPosition({ 0,175.0f * _DeltaTime*0.6f,0 });
 		}
 		BalloonSecures->GetTransform()->SetLocalScale({ BalloonXscale ,BalloonYscale });
 	}
