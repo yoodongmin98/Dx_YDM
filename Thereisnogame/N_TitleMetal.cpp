@@ -30,6 +30,10 @@ void N_TitleMetal::Update(float _DeltaTime)
 	{
 		LevelStateManager::MG->SetHMCMetalPlus();
 	}
+	if(GetTransform()->GetLocalPosition().y<-1000.0f)
+	{
+		Death();
+	}
 }
 
 void N_TitleMetal::Render(float _Delta)

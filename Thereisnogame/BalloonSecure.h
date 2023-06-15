@@ -23,5 +23,8 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> BalloonSecures;
 	std::shared_ptr<class GameEngineCollision> BalloonSecuresCollision;
+
+	float BalloonXscale = 1.0f;
+	float BalloonYscale = 1.0f;
 };
 

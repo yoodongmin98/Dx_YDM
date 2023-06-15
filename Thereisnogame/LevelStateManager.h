@@ -249,6 +249,15 @@ public:
 	{
 		return IsCutTheLope;
 	}
+	//¶³¾îÁø ¾ËÆÄºª Á×¾ú³Ä?
+	void SetIsDeathNTrue()
+	{
+		IsDeathN = true;
+	}
+	bool GetIsDeathN()
+	{
+		return IsDeathN;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -270,6 +279,7 @@ private:
 	bool IsPaper = false;
 	bool IsPickScissor = false;
 	bool IsCutTheLope = false;
+	bool IsDeathN = false;
 
 	//Chapter2
 	int CollisionValue = 0;

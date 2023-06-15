@@ -12,6 +12,7 @@ enum class Chap1LevelState
 	SlantBoard,
 	Roshambo,
 	TiltBoard,
+	BalloonUp,
 };
 enum class RoshamboState
 {
@@ -195,5 +196,9 @@ private:
 	void TiltBoardUpdate(float _DeltaTime);
 	void TiltBoardEnd();
 	float NOTime = 0.0f;
+
+	void BalloonUpStart();
+	void BalloonUpUpdate(float _DeltaTime);
+	void BalloonUpEnd();
 };
 

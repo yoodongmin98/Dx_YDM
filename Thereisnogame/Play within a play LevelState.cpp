@@ -89,6 +89,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::TiltBoard:
 		TiltBoardStart();
 		break;
+	case Chap1LevelState::BalloonUp:
+		BalloonUpStart();
+		break;
 	default:
 		break;
 	}
@@ -115,6 +118,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::TiltBoard:
 		TiltBoardEnd();
+		break;
+	case Chap1LevelState::BalloonUp:
+		BalloonUpEnd();
 		break;
 	default:
 		break;
@@ -145,6 +151,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 		break;
 	case Chap1LevelState::TiltBoard:
 		TiltBoardUpdate(_DeltaTime);
+		break;
+	case Chap1LevelState::BalloonUp:
+		BalloonUpUpdate(_DeltaTime);
 		break;
 	default:
 		break;
@@ -258,7 +267,9 @@ void PlaywithinaplayLevel::DownBoardStart()
 	{
 		Lope_ChainPtr = CreateActor<Lope_Chain>();
 		Lope_CordePtr = CreateActor<Lope_Corde>();
+		BalloonSecurePtr = CreateActor<BalloonSecure>();
 		BoardPtr = CreateActor<Board>();
+		BalloonSecurePtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 	}
 	//-----------------------------------------------
 	BlockCount = 13;
@@ -426,6 +437,7 @@ void PlaywithinaplayLevel::RoshamboEnd()
 bool BinaryCreateBool = true;
 bool MetalNBool = true;
 bool MetalOBool = true;
+bool DeathNBool = true;
 void PlaywithinaplayLevel::TiltBoardStart()
 {
 	//Debug------------------------------------------
@@ -488,6 +500,13 @@ void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 		N_TitleMetalPtr.get()->RightFallRigid(2.1f, 600, MetalNBool, NOTime);
 		O_TitleMetalPtr.get()->RightFallRigid(2.2f, 500, MetalOBool, NOTime);
 	}
+	if (true == N_TitleMetalPtr->IsDeath()
+		&&true== DeathNBool)
+	{
+		LevelStateManager::MG->SetIsDeathNTrue();
+		ChangeState(Chap1LevelState::BalloonUp);
+		DeathNBool = false;
+	}
 }
 void PlaywithinaplayLevel::TiltBoardEnd()
 {
@@ -495,3 +514,19 @@ void PlaywithinaplayLevel::TiltBoardEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::BalloonUpStart()
+{
+
+}
+void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
+{
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z <= 5.0f)
+	{
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,28.0f * _DeltaTime });
+	}
+}
+void PlaywithinaplayLevel::BalloonUpEnd()
+{
+
+}
