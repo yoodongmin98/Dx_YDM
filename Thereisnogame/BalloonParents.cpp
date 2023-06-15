@@ -20,13 +20,31 @@ BalloonParents::~BalloonParents()
 
 void BalloonParents::Start()
 {
-	BalloonParentss = Init(BalloonParentss, "BalloonSecure.png", { 10.0f,10.0f }, float4::Zero);
-	GetTransform()->SetLocalPosition({ 200,300 });
+	BalloonParentss = Init(BalloonParentss, "BalloonSecure.png", { 1.0f,1.0f }, float4::Zero);
+	BalloonParentss->Off();
+	GetTransform()->SetLocalPosition({ 310,210 });
 }
+
+bool ShakeBalloonBool = true;
 
 void BalloonParents::Update(float _DeltaTime)
 {
-
+	if(true == ShakeBalloonBool)
+	{
+		GetTransform()->AddLocalRotation({ 0,0,0.01f });
+	}
+	if (GetTransform()->GetLocalRotation().z >= 15.0f)
+	{
+		ShakeBalloonBool = false;
+	}
+	if (false == ShakeBalloonBool)
+	{
+		GetTransform()->AddLocalRotation({ 0,0,-0.01f });
+	}
+	if (GetTransform()->GetLocalRotation().z <= -15.0f)
+	{
+		ShakeBalloonBool = true;
+	}
 }
 
 void BalloonParents::Render(float _Delta)
