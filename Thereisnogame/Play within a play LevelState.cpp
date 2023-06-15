@@ -56,7 +56,7 @@
 #include "Binary0.h"
 #include "Binary1.h"
 #include "BalloonSecure.h"
-
+#include "BalloonParents.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -514,16 +514,25 @@ void PlaywithinaplayLevel::TiltBoardEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool BalloonManageBool = true;
 void PlaywithinaplayLevel::BalloonUpStart()
 {
 
 }
 void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 {
-	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z <= 5.0f)
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z <= 5.0f&&true== BalloonManageBool)
 	{
 		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,28.0f * _DeltaTime });
+	}
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z >= 5.0 && true==BalloonManageBool)
+	{
+		BalloonParentsPtr=CreateActor<BalloonParents>();
+		BalloonParentsPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
+		BalloonSecurePtr->GetTransform()->SetParent(nullptr);
+		BalloonSecurePtr->GetTransform()->SetParent(BalloonParentsPtr->GetTransform());
+		LevelStateManager::MG->SetIsBalloonUpTrue();
+		BalloonManageBool = false;
 	}
 }
 void PlaywithinaplayLevel::BalloonUpEnd()

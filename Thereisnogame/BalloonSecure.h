@@ -16,6 +16,8 @@ public:
 	{
 		return BalloonSecures->GetTransform();
 	}
+	void BalloonScaleSet();
+	void BalloonShakeCheck(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -26,5 +28,6 @@ private:
 
 	float BalloonXscale = 1.0f;
 	float BalloonYscale = 1.0f;
+	float BalloonTime = 0.0f;
 };
 

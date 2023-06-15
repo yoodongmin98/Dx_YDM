@@ -170,6 +170,7 @@
     <ClInclude Include="A_TitleMetal.h" />
     <ClInclude Include="BackCurtain_Main.h" />
     <ClInclude Include="BackSqirrelKey.h" />
+    <ClInclude Include="BalloonParents.h" />
     <ClInclude Include="BalloonSecure.h" />
     <ClInclude Include="Ball_TitleCube.h" />
     <ClInclude Include="Binary0.h" />
@@ -408,6 +409,7 @@
     <ClCompile Include="A_TitleMetal.cpp" />
     <ClCompile Include="BackCurtain_Main.cpp" />
     <ClCompile Include="BackSqirrelKey.cpp" />
+    <ClCompile Include="BalloonParents.cpp" />
     <ClCompile Include="BalloonSecure.cpp" />
     <ClCompile Include="Ball_TitleCube.cpp" />
     <ClCompile Include="Binary0.cpp" />

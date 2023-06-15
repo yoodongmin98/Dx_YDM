@@ -703,6 +703,9 @@
     <ClCompile Include="Binary1.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
     </ClCompile>
+    <ClCompile Include="BalloonParents.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1397,6 +1400,9 @@
     </ClInclude>
     <ClInclude Include="Binary1.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="BalloonParents.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

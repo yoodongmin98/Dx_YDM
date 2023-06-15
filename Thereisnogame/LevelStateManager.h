@@ -258,6 +258,15 @@ public:
 	{
 		return IsDeathN;
 	}
+	//Balloon다 올라왔냐?
+	void SetIsBalloonUpTrue()
+	{
+		IsBalloonUp = true;
+	}
+	bool GetIsBalloonUp()
+	{
+		return IsBalloonUp;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -280,6 +289,7 @@ private:
 	bool IsPickScissor = false;
 	bool IsCutTheLope = false;
 	bool IsDeathN = false;
+	bool IsBalloonUp = false;
 
 	//Chapter2
 	int CollisionValue = 0;

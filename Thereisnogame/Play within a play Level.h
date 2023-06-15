@@ -150,6 +150,8 @@ private:
 	std::shared_ptr<class Binary1> Binary1Ptr9;
 	std::shared_ptr<class Binary1> Binary1Ptr10;
 
+	std::shared_ptr<class BalloonParents> BalloonParentsPtr;
+
 	///State
 	void ClickCordonStart();
 	void ClickCordonUpdate(float _DeltaTime);
