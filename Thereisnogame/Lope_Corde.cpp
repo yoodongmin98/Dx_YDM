@@ -11,6 +11,7 @@
 #include "LevelStateManager.h"
 #include "Mouse.h"
 #include "Play within a play Level.h"
+#include "Scissor_Fall.h"
 Lope_Corde::Lope_Corde()
 {
 }
@@ -49,6 +50,7 @@ void Lope_Corde::DeathCheck()
 		&& true==Mouse::MainMouse->IsInteractable())
 	{
 		LevelStateManager::MG->SetIsCutTheLopeTrue();
+		GetLevel()->CreateActor<ScissorDeath>();
 		Death();
 	}
 }

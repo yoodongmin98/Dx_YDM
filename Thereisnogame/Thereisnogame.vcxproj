@@ -365,6 +365,7 @@
     <ClInclude Include="R_TitleCube.h" />
     <ClInclude Include="R_TitleMetal.h" />
     <ClInclude Include="Scissor.h" />
+    <ClInclude Include="Scissor_Fall.h" />
     <ClInclude Include="SelectBox.h" />
     <ClInclude Include="Skite.h" />
     <ClInclude Include="SkiteBanner.h" />
@@ -613,6 +614,7 @@
     <ClCompile Include="R_TitleCube.cpp" />
     <ClCompile Include="R_TitleMetal.cpp" />
     <ClCompile Include="Scissor.cpp" />
+    <ClCompile Include="Scissor_Fall.cpp" />
     <ClCompile Include="SelectBox.cpp" />
     <ClCompile Include="Skite.cpp" />
     <ClCompile Include="SkiteBanner.cpp" />

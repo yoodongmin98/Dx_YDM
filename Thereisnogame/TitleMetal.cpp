@@ -40,9 +40,6 @@ void TitleMetal::Update(float _DeltaTime)
 		TitleMetalsCollision->GetTransform()->SetLocalPosition(CreatePosition);
 		CreateMetalBoolss = false;
 	}
-	
-
-
 	Fall(TitleMetals, TitleMetals_overlap, TitleMetalsCollision,71.0f, _DeltaTime);
 	CatchCheck(TitleMetals, TitleMetals_overlap, TitleMetalsCollision);
 }

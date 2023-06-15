@@ -18,6 +18,10 @@ public:
 	{
 		CreatePosition = _Position;
 	}
+	void SetSpeakerCount()
+	{
+		++SpeakerCount;
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -28,5 +32,6 @@ private:
 	std::shared_ptr<class GameEngineCollision> TitleMetalsCollision;
 
 	float4 CreatePosition = float4::Zero;
+	int SpeakerCount = 0;
 };
 

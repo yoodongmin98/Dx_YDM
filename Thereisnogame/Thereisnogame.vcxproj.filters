@@ -706,6 +706,9 @@
     <ClCompile Include="BalloonParents.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
     </ClCompile>
+    <ClCompile Include="Scissor_Fall.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1403,6 +1406,9 @@
     </ClInclude>
     <ClInclude Include="BalloonParents.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Lope</Filter>
+    </ClInclude>
+    <ClInclude Include="Scissor_Fall.h">
+      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
