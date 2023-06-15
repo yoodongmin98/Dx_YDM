@@ -57,6 +57,7 @@
 #include "Binary1.h"
 #include "BalloonSecure.h"
 #include "BalloonParents.h"
+#include "Speaker.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -529,6 +530,7 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z >= 5.0 && true==BalloonManageBool)
 	{
 		BalloonParentsPtr=CreateActor<BalloonParents>();
+		SpeakerPtr = CreateActor<Speaker>();
 		BalloonParentsPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 		BalloonSecurePtr->GetTransform()->SetParent(nullptr);
 		BalloonSecurePtr->GetTransform()->SetParent(BalloonParentsPtr->GetTransform());
@@ -552,9 +554,26 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 	{
 		BoardUpDownBool = true;
 	}
-	
+	//Trans¶û BalloonParents DeathÀØÁö¸»±â
 }
 void PlaywithinaplayLevel::BalloonUpEnd()
 {
 
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::PopsBalloonStart()
+{
+
+}
+void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::PopsBalloonEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////

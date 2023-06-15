@@ -23,9 +23,9 @@ Speaker::~Speaker()
 
 void Speaker::Start()
 {
-	float4 Position = float4::Zero;
-	Speakers = Init(Speakers, "Speaker_T.png", { 78,70 }, Position);
-	SpeakersOff = Init(SpeakersOff, "Speaker_T.png", { 82,75 }, Position);
+	float4 Position = { -300,400 };
+	Speakers = Init(Speakers, "SpeekerIcon_On.png", { 78,70 }, Position);
+	SpeakersOff = Init(SpeakersOff, "SpeakerIcon_Off.png", { 82,75 }, Position);
 	SpeakersOff->Off();
 	SpeakersCollision = CollisionInit(SpeakersCollision, { 123,171 }, Position);
 }

@@ -13,6 +13,7 @@ enum class Chap1LevelState
 	Roshambo,
 	TiltBoard,
 	BalloonUp,
+	PopsBalloon,
 };
 enum class RoshamboState
 {
@@ -151,6 +152,7 @@ private:
 	std::shared_ptr<class Binary1> Binary1Ptr10;
 
 	std::shared_ptr<class BalloonParents> BalloonParentsPtr;
+	std::shared_ptr<class Speaker> SpeakerPtr;
 
 	///State
 	void ClickCordonStart();
@@ -202,5 +204,9 @@ private:
 	void BalloonUpStart();
 	void BalloonUpUpdate(float _DeltaTime);
 	void BalloonUpEnd();
+
+	void PopsBalloonStart();
+	void PopsBalloonUpdate(float _DeltaTime);
+	void PopsBalloonEnd();
 };
 
