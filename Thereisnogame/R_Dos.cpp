@@ -47,7 +47,6 @@ void R_Dos::Up()
 	}
 	if (GetTransform()->GetLocalPosition().y >= 280.0f)
 	{
-		float4 Tests = GetTransform()->GetLocalPosition();
 		GetTransform()->SetLocalPosition(GetTransform()->GetLocalPosition());
 		IsPos = true;
 	}
@@ -55,10 +54,7 @@ void R_Dos::Up()
 
 void R_Dos::Shake()
 {
-	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
-	++RotateCount;
-	if (RotateCount <= 360)
-	{
-		R_Doss->GetTransform()->AddLocalRotation({ 0,0,1.0f});
-	}
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 360;
+	
+	R_Doss->GetTransform()->AddLocalRotation({ 0,0,1.0f * Times });
 }

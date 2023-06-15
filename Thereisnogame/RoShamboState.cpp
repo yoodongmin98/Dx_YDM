@@ -140,6 +140,7 @@ void PlaywithinaplayLevel::CardDownAndOffStart()
 	LevelStateManager::MG->SetIsRockfalse();
 	LevelStateManager::MG->SetIsSissorfalse();
 	LevelStateManager::MG->SetIsPaperfalse();
+	R_DosPtr.get()->GetRenderTransform()->SetLocalRotation(float4::Zero);
 	R_DosPtr.get()->On();
 	R_EnemyRockPtr.get()->Off();
 	R_EnemyPaperPtr.get()->Off();

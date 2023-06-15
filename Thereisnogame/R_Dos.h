@@ -21,6 +21,10 @@ public:
 	{
 		RotateCount = 0;
 	}
+	GameEngineTransform* GetRenderTransform()
+	{
+		return R_Doss->GetTransform();
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;
