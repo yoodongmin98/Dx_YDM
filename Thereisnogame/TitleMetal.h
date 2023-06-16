@@ -18,10 +18,11 @@ public:
 	{
 		CreatePosition = _Position;
 	}
-	void SetSpeakerCount()
+	int GetSpeakerCount()
 	{
-		++SpeakerCount;
+		return SpeakerCount;
 	}
+	void FallCountCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -30,6 +31,8 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> TitleMetals;
 	std::shared_ptr<class GameEngineSpriteRenderer> TitleMetals_overlap;
 	std::shared_ptr<class GameEngineCollision> TitleMetalsCollision;
+
+	std::shared_ptr<class GameEngineCollision> FallCheckCollision;
 
 	float4 CreatePosition = float4::Zero;
 	int SpeakerCount = 0;

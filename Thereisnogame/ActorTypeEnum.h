@@ -22,8 +22,8 @@ enum class ActorTypeEnum
 	Block,
 	Excla,
 	Ball,
-
-
+	//Chap1Etc
+	DownCheck,
 
 	//AlphaCircle,Mouse,FrontBack
 	Alpha,

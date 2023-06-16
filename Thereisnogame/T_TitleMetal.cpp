@@ -61,6 +61,7 @@ void T_TitleMetal::DeathandCreateScreenT()
 		&&true== ScreenTCreateBool)
 	{
 		TitleMetalPtr=GetLevel()->CreateActor<TitleMetal>();
+		LevelStateManager::MG->SetIsCreateScreenTTrue();
 		TitleMetalPtr->SetCreatePosition(T_TitleMetals->GetTransform()->GetLocalPosition() + GetTransform()->GetLocalPosition());
 		Death();
 		ScreenTCreateBool = false;

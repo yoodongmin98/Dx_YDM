@@ -11,6 +11,7 @@
 
 //Actor
 #include "Mouse.h"
+#include "LevelStateManager.h"
 
 
 S_ActorBase::S_ActorBase()

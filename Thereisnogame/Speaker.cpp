@@ -9,6 +9,7 @@
 //Actor
 #include "Mouse.h"
 #include "LevelStateManager.h"
+#include "TitleMetal.h"
 
 
 Speaker* Speaker::TM;
