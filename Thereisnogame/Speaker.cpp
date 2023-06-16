@@ -28,17 +28,28 @@ void Speaker::Start()
 	Speakers = Init(Speakers, "SpeekerIcon_On.png", { 78,70 }, Position);
 	SpeakersOff = Init(SpeakersOff, "SpeakerIcon_Off.png", { 82,75 }, Position);
 	SpeakersOff->Off();
-	SpeakersCollision = CollisionInit(SpeakersCollision, { 123,171 }, Position);
+	SpeakersCollision = CollisionInit(SpeakersCollision, { 78,70 }, Position);
 }
 
 
 void Speaker::Update(float _DeltaTime)
 {
-	if (ClickCheck(SpeakersCollision))
+	Times += _DeltaTime;
+
+	if (true==ClickCheck(SpeakersCollision))
 	{
 		Speakers->Off();
 		SpeakersOff->On();
 	}
+
+	float4 MoveDir = float4::Down * _DeltaTime * 500.0f;
+	if (Speakers->GetTransform()->GetLocalPosition().y < -GameEngineWindow::GetScreenSize().half().y + 35.0f)
+	{
+		MoveDir = float4::Zero;
+	}
+	Speakers->GetTransform()->AddLocalPosition(MoveDir * Times);
+	SpeakersOff->GetTransform()->AddLocalPosition(MoveDir * Times);
+	SpeakersCollision->GetTransform()->AddLocalPosition(MoveDir * Times);
 }
 
 void Speaker::Render(float _Delta)

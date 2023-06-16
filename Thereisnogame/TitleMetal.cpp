@@ -12,10 +12,10 @@
 #include "LevelStateManager.h"
 
 
-TitleMetal* TitleMetal::TM;
+
 TitleMetal::TitleMetal()
 {
-	TM = this;
+	
 }
 
 TitleMetal::~TitleMetal()
@@ -42,7 +42,6 @@ void TitleMetal::Update(float _DeltaTime)
 	}
 	Fall(TitleMetals, TitleMetals_overlap, TitleMetalsCollision,71.0f, _DeltaTime);
 	CatchCheck(TitleMetals, TitleMetals_overlap, TitleMetalsCollision);
-	FallCountCheck();
 }
 
 void TitleMetal::Render(float _Delta)
@@ -51,7 +50,3 @@ void TitleMetal::Render(float _Delta)
 };
 
 
-void TitleMetal::FallCountCheck()
-{
-	
-}

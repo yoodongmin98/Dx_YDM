@@ -267,15 +267,7 @@ public:
 	{
 		return IsBalloonUp;
 	}
-	//ScreenT만들어졌냐?
-	void SetIsCreateScreenTTrue()
-	{
-		IsCreateScreenT = true;
-	}
-	bool GetIsCreateScreenT()
-	{
-		return IsCreateScreenT;
-	}
+	//Speaker눌렀냐?
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -299,7 +291,7 @@ private:
 	bool IsCutTheLope = false;
 	bool IsDeathN = false;
 	bool IsBalloonUp = false;
-	bool IsCreateScreenT = false;
+	bool IsClickSpeaker = false;
 
 	//Chapter2
 	int CollisionValue = 0;

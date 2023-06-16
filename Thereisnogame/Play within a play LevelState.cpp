@@ -555,6 +555,7 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 		BoardUpDownBool = true;
 	}
 	//Trans랑 BalloonParents Death잊지말기
+	//스피커 화살표로 풍선 터트리면 넘어가기
 }
 void PlaywithinaplayLevel::BalloonUpEnd()
 {

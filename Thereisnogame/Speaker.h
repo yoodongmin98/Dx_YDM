@@ -22,5 +22,8 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Speakers;
 	std::shared_ptr<class GameEngineSpriteRenderer> SpeakersOff;
 	std::shared_ptr<class GameEngineCollision> SpeakersCollision;
+
+
+	float Times = 0.0f;
 };
 
