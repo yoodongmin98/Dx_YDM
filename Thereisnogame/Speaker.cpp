@@ -3,6 +3,7 @@
 //Base
 //PlatForm
 //Core
+#include <GameEngineCore/GameEngineLevel.h>
 
 
 
@@ -10,7 +11,7 @@
 #include "Mouse.h"
 #include "LevelStateManager.h"
 #include "TitleMetal.h"
-
+#include "Cursor.h"
 
 Speaker* Speaker::TM;
 Speaker::Speaker()
@@ -36,8 +37,11 @@ void Speaker::Update(float _DeltaTime)
 {
 	Times += _DeltaTime;
 
-	if (true==ClickCheck(SpeakersCollision))
+	if (true==ClickCheck(SpeakersCollision)
+		&&false==LevelStateManager::MG->GetIsClickSpeaker())
 	{
+		LevelStateManager::MG->SetIsClickSpeakerTrue();
+		GetLevel()->CreateActor<Cursor>();
 		Speakers->Off();
 		SpeakersOff->On();
 	}

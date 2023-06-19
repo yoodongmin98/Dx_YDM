@@ -14,6 +14,10 @@ public:
 	Speaker& operator=(const Speaker& _Other) = delete;
 	Speaker& operator=(Speaker&& _Other) noexcept = delete;
 
+	float4 GetSpeakerPosition()
+	{
+		return Speakers->GetTransform()->GetLocalPosition();
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;

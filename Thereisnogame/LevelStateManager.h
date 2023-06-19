@@ -268,6 +268,14 @@ public:
 		return IsBalloonUp;
 	}
 	//Speaker´­·¶³Ä?
+	void SetIsClickSpeakerTrue()
+	{
+		IsClickSpeaker = true;
+	}
+	bool GetIsClickSpeaker()
+	{
+		return IsClickSpeaker;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

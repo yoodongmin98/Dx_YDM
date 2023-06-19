@@ -18,6 +18,8 @@ enum class ActorTypeEnum
 	Picture,
 	ZipWip,
 	LockFolder,
+	//Chap1
+	Cursor, 
 	//Chapter1 BallGame
 	Block,
 	Excla,
