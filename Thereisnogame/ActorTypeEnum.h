@@ -19,7 +19,8 @@ enum class ActorTypeEnum
 	ZipWip,
 	LockFolder,
 	//Chap1
-	Cursor, 
+	Cursor,
+	Speaker,
 	//Chapter1 BallGame
 	Block,
 	Excla,

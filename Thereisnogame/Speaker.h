@@ -18,6 +18,9 @@ public:
 	{
 		return Speakers->GetTransform()->GetLocalPosition();
 	}
+
+	void SpeakerFall(float _DeltaTime);
+	void ClickOnOffCheck(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;

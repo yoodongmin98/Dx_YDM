@@ -272,6 +272,10 @@ public:
 	{
 		IsClickSpeaker = true;
 	}
+	void SetIsClickSpeakerFalse()
+	{
+		IsClickSpeaker = false;
+	}
 	bool GetIsClickSpeaker()
 	{
 		return IsClickSpeaker;

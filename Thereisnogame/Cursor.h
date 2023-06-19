@@ -13,6 +13,8 @@ public:
 	Cursor& operator=(const Cursor& _Other) = delete;
 	Cursor& operator=(Cursor&& _Other) noexcept = delete;
 
+	void CollisionDeathCheck();
+	void CursorMoveCheck(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
