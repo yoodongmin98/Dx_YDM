@@ -45,7 +45,7 @@ public:
 		std::shared_ptr<GameEngineCollision> _Collision,
 		float _ImageHalfScale, float _DeltaTime);
 
-	void CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
+	bool CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 		std::shared_ptr<GameEngineSpriteRenderer> _Render2,
 		std::shared_ptr<GameEngineCollision> _Collision);
 

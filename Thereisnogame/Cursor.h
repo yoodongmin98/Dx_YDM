@@ -21,6 +21,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Cursors;
+	std::shared_ptr<class GameEngineSpriteRenderer> Cursor_Overlap;
 	std::shared_ptr<class GameEngineCollision> CursorsCollision;
 
 	float4 Starts = float4::Zero;

@@ -67,6 +67,11 @@ void Speaker::SpeakerFall(float _DeltaTime)
 void Speaker::ClickOnOffCheck(float _DeltaTime)
 {
 	Times += _DeltaTime;
+	if (false==LevelStateManager::MG->GetIsClickSpeaker())
+	{		
+		Speakers->On();
+		SpeakersOff->Off();
+	}
 
 	if (true == ClickCheck(SpeakersCollision)
 		&& false == LevelStateManager::MG->GetIsClickSpeaker())
@@ -75,12 +80,5 @@ void Speaker::ClickOnOffCheck(float _DeltaTime)
 		GetLevel()->CreateActor<Cursor>();
 		Speakers->Off();
 		SpeakersOff->On();
-	}
-
-	if (SpeakersCollision->Collision(ActorTypeEnum::Cursor, ColType::AABBBOX2D, ColType::AABBBOX2D))
-	{
-		LevelStateManager::MG->SetIsClickSpeakerFalse();
-		Speakers->On();
-		SpeakersOff->Off();
 	}
 }

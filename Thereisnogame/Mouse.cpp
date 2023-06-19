@@ -162,7 +162,8 @@ bool Mouse::IsScreenActors()
 		|| MouseCollision->Collision(ActorTypeEnum::Nut_Close, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		|| MouseCollision->Collision(ActorTypeEnum::Nut_Open, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		|| MouseCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D)
-		|| MouseCollision->Collision(ActorTypeEnum::Excla, ColType::AABBBOX2D, ColType::AABBBOX2D))
+		|| MouseCollision->Collision(ActorTypeEnum::Excla, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::Cursor, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		return true;
 	}
@@ -176,7 +177,8 @@ bool Mouse::IsBackActors()
 {
 	if (MouseCollision->Collision(ActorTypeEnum::BackActor, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		|| MouseCollision->Collision(ActorTypeEnum::ZipWip, ColType::AABBBOX2D, ColType::AABBBOX2D)
-		|| MouseCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D))
+		|| MouseCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		|| MouseCollision->Collision(ActorTypeEnum::Speaker, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		return true;
 	}

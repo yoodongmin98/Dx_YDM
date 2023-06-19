@@ -63,7 +63,7 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	std::shared_ptr<GameEngineCollision> _Collision,
 	float _ImageHalfScale,float _DeltaTime)
 {
-	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 500;
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 100;
 	float4 MoveDir = float4::Down * _DeltaTime * FallSpeed;
 	
 	if (_Render->GetTransform()->GetLocalPosition().y < -GameEngineWindow::GetScreenSize().half().y + _ImageHalfScale)
@@ -75,7 +75,7 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	_Collision->GetTransform()->AddLocalPosition(MoveDir * Times);
 }
 
-void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
+bool S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	std::shared_ptr<GameEngineSpriteRenderer> _Render2,
 	std::shared_ptr<GameEngineCollision> _Collision)
 {
@@ -88,6 +88,7 @@ void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 			_Render->GetTransform()->SetLocalPosition(MousePos);
 			_Render2->GetTransform()->SetLocalPosition({ MousePos.x - 3,MousePos.y + 3 });
 			_Collision->GetTransform()->SetLocalPosition(MousePos);
+			return true;
 		}
 		_Render->Off();
 		_Render2->On();
@@ -96,5 +97,6 @@ void S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	{
 		_Render->On();
 		_Render2->Off();
+		return false;
 	}
 }
