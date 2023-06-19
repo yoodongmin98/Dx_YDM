@@ -17,7 +17,7 @@ public:
 		return BalloonSecures->GetTransform();
 	}
 	void BalloonScaleSet(float _DeltaTime);
-
+	void BalloonStateDeathCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;

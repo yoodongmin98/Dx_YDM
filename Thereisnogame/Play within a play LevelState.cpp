@@ -93,6 +93,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::BalloonUp:
 		BalloonUpStart();
 		break;
+	case Chap1LevelState::PopsBalloon:
+		PopsBalloonStart();
+		break;
 	default:
 		break;
 	}
@@ -122,6 +125,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::BalloonUp:
 		BalloonUpEnd();
+		break;
+	case Chap1LevelState::PopsBalloon:
+		PopsBalloonEnd();
 		break;
 	default:
 		break;
@@ -155,6 +161,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 		break;
 	case Chap1LevelState::BalloonUp:
 		BalloonUpUpdate(_DeltaTime);
+		break;
+	case Chap1LevelState::PopsBalloon:
+		PopsBalloonUpdate(_DeltaTime);
 		break;
 	default:
 		break;
@@ -554,7 +563,6 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 	{
 		BoardUpDownBool = true;
 	}
-	//Trans랑 BalloonParents Death잊지말기
 	//스피커 화살표로 풍선 터트리면 넘어가기
 }
 void PlaywithinaplayLevel::BalloonUpEnd()
@@ -566,10 +574,11 @@ void PlaywithinaplayLevel::BalloonUpEnd()
 
 void PlaywithinaplayLevel::PopsBalloonStart()
 {
-
+	BalloonParentsPtr.get()->Death();
 }
 void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 {
+	//Trans(Board)Death잊지말기
 
 }
 void PlaywithinaplayLevel::PopsBalloonEnd()
