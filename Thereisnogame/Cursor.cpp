@@ -22,23 +22,41 @@ Cursor::~Cursor()
 
 void Cursor::Start()
 {
-	float4 Position = { 700,50,0 };
-	Cursors = Init(Cursors, "MouseCursorObj.png", { 52,79 }, Position);
-	Cursor_Overlap = Init(Cursor_Overlap, "MouseCursorObj_Overlap.png", { 77,103 }, Position);
+	if (false == LevelStateManager::MG->GetIsPopBalloon())
+	{
+		StartPosition = { 700,50,0 };
+	}
+	else if (true == LevelStateManager::MG->GetIsPopBalloon())
+	{
+		StartPosition = Mouse::MainMouse->GetMousePos();
+	}
+	else
+	{
+		return;
+	}
+	Cursors = Init(Cursors, "MouseCursorObj.png", { 52,79 }, StartPosition);
+	Cursor_Overlap = Init(Cursor_Overlap, "MouseCursorObj_Overlap.png", { 77,103 }, StartPosition);
 
 
 	CursorsCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Cursor);
 	CursorsCollision->GetTransform()->SetLocalScale({ 52,79 });
-	CursorsCollision->GetTransform()->SetLocalPosition(Position);
+	CursorsCollision->GetTransform()->SetLocalPosition(StartPosition);
 
-	Starts = Position;
+	Starts = StartPosition;
 	Ends = Speaker::TM->GetSpeakerPosition();
 }
 bool CursorCatchBools = false;
 void Cursor::Update(float _DeltaTime)
 {
+	if (true == LevelStateManager::MG->GetIsPopBalloon())
+	{
+		Fall(Cursors, Cursor_Overlap, CursorsCollision,40.0f, _DeltaTime);
+	}
 	CursorCatchBools=CatchCheck(Cursors, Cursor_Overlap, CursorsCollision);
-	CursorMoveCheck(_DeltaTime);
+	if (false == LevelStateManager::MG->GetIsPopBalloon())
+	{
+		CursorMoveCheck(_DeltaTime);
+	}
 	CollisionDeathCheck();
 }
 

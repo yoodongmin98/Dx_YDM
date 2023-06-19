@@ -280,6 +280,15 @@ public:
 	{
 		return IsClickSpeaker;
 	}
+	//Balloon емаЁЁд?
+	void SetIsPopBalloonTrue()
+	{
+		IsPopBalloon = true;
+	}
+	bool GetIsPopBalloon()
+	{
+		return IsPopBalloon;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -304,6 +313,7 @@ private:
 	bool IsDeathN = false;
 	bool IsBalloonUp = false;
 	bool IsClickSpeaker = false;
+	bool IsPopBalloon = false;
 
 	//Chapter2
 	int CollisionValue = 0;

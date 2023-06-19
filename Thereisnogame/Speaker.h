@@ -18,6 +18,10 @@ public:
 	{
 		return Speakers->GetTransform()->GetLocalPosition();
 	}
+	void SpeakerCollisionDeath()
+	{
+		SpeakersCollision->Death();
+	}
 
 	void SpeakerFall(float _DeltaTime);
 	void ClickOnOffCheck(float _DeltaTime);

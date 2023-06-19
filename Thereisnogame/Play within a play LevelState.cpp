@@ -58,6 +58,7 @@
 #include "BalloonSecure.h"
 #include "BalloonParents.h"
 #include "Speaker.h"
+#include "Cursor.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -574,12 +575,23 @@ void PlaywithinaplayLevel::BalloonUpEnd()
 
 void PlaywithinaplayLevel::PopsBalloonStart()
 {
+	//Debug------------------------------------------
+	if (nullptr != BalloonSecurePtr)
+	{
+		BalloonSecurePtr.get()->Death();
+	}
+	//-----------------------------------------------
 	BalloonParentsPtr.get()->Death();
+	SpeakerPtr.get()->SpeakerCollisionDeath();
+	CreateActor<Cursor>();
 }
 void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 {
 	//Trans(Board)DeathÀØÁö¸»±â
-
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z <= 5.0f && true == BalloonManageBool)
+	{
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,28.0f * _DeltaTime });
+	}
 }
 void PlaywithinaplayLevel::PopsBalloonEnd()
 {

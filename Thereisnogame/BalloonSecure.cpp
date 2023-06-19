@@ -64,6 +64,7 @@ void BalloonSecure::BalloonStateDeathCheck()
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::PopsBalloon);
+		LevelStateManager::MG->SetIsPopBalloonTrue();
 		Death();
 	}
 }

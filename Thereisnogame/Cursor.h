@@ -27,6 +27,7 @@ private:
 	float4 Starts = float4::Zero;
 	float4 Ends = float4::Zero;
 
+	float4 StartPosition = float4::Zero;
 	float4 Positions = float4::Zero;
 	float MoveTime = 0.0f;
 };
