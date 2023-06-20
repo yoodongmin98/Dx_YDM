@@ -586,6 +586,7 @@ void PlaywithinaplayLevel::PopsBalloonStart()
 	BalloonParentsPtr.get()->Death();
 	SpeakerPtr.get()->SpeakerCollisionDeath();
 	CreateActor<Cursor>();
+	Lope_ChainPtr->GetTransform()->SetParent(TransparencyActorPtr->GetTransform());
 }
 void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 {
@@ -621,10 +622,10 @@ void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 		Binary1Ptr10 = CreateActor<Binary1>();	Binary1Ptr10->SetBinary(2.6f, 700, { -910,-120,0 }, { 40,40 });
 		BinaryCreateBool = true;
 	}
-	if (true == Binary1Ptr10->IsDeath())
+	if (true == BinaryCreateBool)
 	{
-		SpeakerPtr.get()->GetTransform()->AddLocalPosition({ 0,-1.0f * _DeltaTime ,0 });
-		TransparencyActorPtr.get()->GetTransform()->AddLocalPosition({ 0,-1.0f * _DeltaTime,0 });
+		SpeakerPtr.get()->GetTransform()->AddLocalPosition({ 0,-100.0f * _DeltaTime ,0 });
+		TransparencyActorPtr.get()->GetTransform()->AddLocalPosition({ 0,-500.0f * _DeltaTime,0 });
 	}
 	if (SpeakerPtr.get()->GetTransform()->GetLocalPosition().y < -500.0f) { SpeakerPtr->Death(); }
 	if (TransparencyActorPtr.get()->GetTransform()->GetLocalPosition().y < -800.0f) { TransparencyActorPtr->Death(); }
@@ -634,4 +635,5 @@ void PlaywithinaplayLevel::PopsBalloonEnd()
 
 }
 
+											//1Phase End....//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
