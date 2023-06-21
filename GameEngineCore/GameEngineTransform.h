@@ -27,7 +27,7 @@ public:
 		DirectX::BoundingOrientedBox OBB;
 	};
 
-	void ScaleABS() 
+	void ScaleABS()
 	{
 		OBB.Extents.x = abs(OBB.Extents.x);
 		OBB.Extents.y = abs(OBB.Extents.y);
@@ -76,6 +76,10 @@ struct TransformData
 	float4x4 ViewPort;
 	float4x4 WorldViewProjectionMatrix;
 
+	void WorldCalculation(const TransformData& _Parent, bool AbsoluteScale, bool AbsoluteRotation, bool AbsolutePosition);
+	void LocalCalculation();
+
+	void SetViewAndProjection(const float4x4& _View, const float4x4& _Projection);
 
 public:
 	TransformData()
@@ -150,10 +154,8 @@ public:
 
 	void SetLocalScale(const float4& _Value)
 	{
-
 		AbsoluteScale = false;
 		TransData.Scale = _Value;
-
 
 		TransformUpdate();
 		CalChild();
@@ -296,9 +298,7 @@ public:
 
 	inline const void SetCameraMatrix(const float4x4& _View, const float4x4& _Projection)
 	{
-		TransData.View = _View;
-		TransData.Projection = _Projection;
-		TransData.WorldViewProjectionMatrix = TransData.WorldMatrix * TransData.View * TransData.Projection;
+		TransData.SetViewAndProjection(_View, _Projection);
 	}
 
 	inline const void SetViewPort(const float4x4& _ViewPort)
@@ -310,6 +310,21 @@ public:
 	void CalChild();
 
 	void SetParent(GameEngineTransform* _Parent, bool _IsParentWorld = true);
+
+	bool IsAbsoluteScale()
+	{
+		return  AbsoluteScale;
+	}
+	bool IsAbsoluteRotation()
+	{
+		return  AbsoluteRotation;
+	}
+	bool IsAbsolutePosition()
+	{
+		return  AbsolutePosition;
+	}
+
+
 
 	GameEngineTransform* GetParent()
 	{
@@ -326,7 +341,7 @@ public:
 		TransData = _Data;
 	}
 
-	CollisionData GetCollisionData() 
+	CollisionData GetCollisionData()
 	{
 		return ColData;
 	}
