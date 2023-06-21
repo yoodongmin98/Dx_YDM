@@ -709,6 +709,9 @@
     <ClCompile Include="Scissor_Fall.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClCompile>
+    <ClCompile Include="GlitchParticle.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1409,6 +1412,9 @@
     </ClInclude>
     <ClInclude Include="Scissor_Fall.h">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
+    </ClInclude>
+    <ClInclude Include="GlitchParticle.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

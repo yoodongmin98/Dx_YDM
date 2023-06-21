@@ -206,6 +206,7 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="GlitchParticle.h" />
     <ClInclude Include="G_TitleMetal.h" />
     <ClInclude Include="I_TitleMetal.h" />
     <ClInclude Include="ME_TitleMetal.h" />
@@ -457,6 +458,7 @@
     <ClCompile Include="FolderNote_Password.cpp" />
     <ClCompile Include="French.cpp" />
     <ClCompile Include="GameBall_TitleCube.cpp" />
+    <ClCompile Include="GlitchParticle.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
     <ClCompile Include="G_RigidBody.cpp" />
     <ClCompile Include="G_TitleCube.cpp" />

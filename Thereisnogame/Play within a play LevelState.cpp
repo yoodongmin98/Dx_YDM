@@ -59,6 +59,7 @@
 #include "BalloonParents.h"
 #include "Speaker.h"
 #include "Cursor.h"
+#include "GlitchParticle.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -620,6 +621,19 @@ void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 		Binary1Ptr8 = CreateActor<Binary1>();	Binary1Ptr8->SetBinary(2.05f, 600, { -980,-80,0 }, { 38,38 });
 		Binary1Ptr9 = CreateActor<Binary1>();	Binary1Ptr9->SetBinary(2.1f, 700, { -1000,-100,0 }, { 46,46 });
 		Binary1Ptr10 = CreateActor<Binary1>();	Binary1Ptr10->SetBinary(2.6f, 700, { -910,-120,0 }, { 40,40 });
+		//GlitchParticle Setting
+		GlitchParticlePtr1 = CreateActor<GlitchParticle>();  GlitchParticlePtr1->SetGlitch(2.3f, 700, { -700,500,0 }, { 42,42 });
+		GlitchParticlePtr2 = CreateActor<GlitchParticle>();	 GlitchParticlePtr2->SetGlitch(2.4f, 700, { -780,440,0 }, { 39,39 });
+		GlitchParticlePtr3 = CreateActor<GlitchParticle>();	 GlitchParticlePtr3->SetGlitch(2.5f, 600, { -900,460,0 }, { 35,35 });
+		GlitchParticlePtr4 = CreateActor<GlitchParticle>();	 GlitchParticlePtr4->SetGlitch(2.15f, 550, { -730,400,0 }, { 37,37 });
+		GlitchParticlePtr5 = CreateActor<GlitchParticle>();	 GlitchParticlePtr5->SetGlitch(2.3f, 600, { -720,250,0 }, { 42,42 });
+		GlitchParticlePtr6 = CreateActor<GlitchParticle>();	 GlitchParticlePtr6->SetGlitch(2.7f, 700, { -910,80,0 }, { 40,40 });
+		GlitchParticlePtr7 = CreateActor<GlitchParticle>();	 GlitchParticlePtr7->SetGlitch(2.2f, 700, { -1000,100,0 }, { 46,46 });
+		GlitchParticlePtr8 = CreateActor<GlitchParticle>();	 GlitchParticlePtr8->SetGlitch(2.3f, 500, { -1020,600,0 }, { 37,37 });
+		GlitchParticlePtr9 = CreateActor<GlitchParticle>();	 GlitchParticlePtr9->SetGlitch(2.4f, 600, { -820,180,0 }, { 45,45 });
+		GlitchParticlePtr10 = CreateActor<GlitchParticle>(); GlitchParticlePtr10->SetGlitch(2.5f, 800, { -700,150,0 }, { 42,42 });
+		GlitchParticlePtr11 = CreateActor<GlitchParticle>(); GlitchParticlePtr11->SetGlitch(2.6f, 500, { -770,280,0 }, { 31,31 });
+		GlitchParticlePtr12 = CreateActor<GlitchParticle>(); GlitchParticlePtr12->SetGlitch(2.4f, 500, { -900,400,0 }, { 38,38 });
 		BinaryCreateBool = true;
 	}
 	if (true == BinaryCreateBool)

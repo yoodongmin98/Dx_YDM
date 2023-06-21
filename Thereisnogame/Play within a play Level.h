@@ -154,6 +154,19 @@ private:
 	std::shared_ptr<class BalloonParents> BalloonParentsPtr;
 	std::shared_ptr<class Speaker> SpeakerPtr;
 
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr1;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr2;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr3;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr4;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr5;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr6;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr7;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr8;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr9;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr10;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr11;
+	std::shared_ptr<class GlitchParticle> GlitchParticlePtr12;
+
 	///State
 	void ClickCordonStart();
 	void ClickCordonUpdate(float _DeltaTime);
