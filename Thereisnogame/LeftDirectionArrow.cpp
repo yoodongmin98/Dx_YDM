@@ -30,7 +30,7 @@ bool BlinkArrowLeftBool = true;
 void LeftDirectionArrow::Update(float _DeltaTime)
 {
 	CameraMoveCheck(_DeltaTime);
-	BlinkArrow();
+	BlinkArrow(_DeltaTime);
 }
 
 void LeftDirectionArrow::Render(float _Delta)
@@ -38,24 +38,26 @@ void LeftDirectionArrow::Render(float _Delta)
 
 };
 
-void LeftDirectionArrow::BlinkArrow()
+void LeftDirectionArrow::BlinkArrow(float _DeltaTime)
 {
 	if (LeftDirectionArrows->ColorOptionValue.MulColor.a > 0.0f
 		&& true == BlinkArrowLeftBool)
 	{
-		LeftDirectionArrows->ColorOptionValue.MulColor.a -= 0.02f;
+		LeftDirectionArrows->ColorOptionValue.MulColor.a -= _DeltaTime;
 	}
 	else if (LeftDirectionArrows->ColorOptionValue.MulColor.a < 1.0f
 		&& false == BlinkArrowLeftBool)
 	{
-		LeftDirectionArrows->ColorOptionValue.MulColor.a += 0.02f;
+		LeftDirectionArrows->ColorOptionValue.MulColor.a += _DeltaTime;
 	}
 	if (LeftDirectionArrows->ColorOptionValue.MulColor.a <= 0)
 	{
+		_DeltaTime = 0.0f;
 		BlinkArrowLeftBool = false;
 	}
 	if (LeftDirectionArrows->ColorOptionValue.MulColor.a >= 1.0f)
 	{
+		_DeltaTime = 0.0f;
 		BlinkArrowLeftBool = true;
 	}
 }
@@ -77,7 +79,7 @@ void LeftDirectionArrow::CameraMoveCheck(float _DeltaTime)
 		&&false== LeftCameraMoveBool)
 	{
 		MoveTime += _DeltaTime;
-		Cameras->SetLocalPosition(float4::LerpClamp(StartCameraPos, EndCameraPos, MoveTime));
+		Cameras->SetLocalPosition(float4::LerpClamp(StartCameraPos, EndCameraPos, MoveTime*1.5f));
 		if (Cameras->GetLocalPosition().x < (LevelStateManager::MG->GetCameraMoveValue() * 1279.0f))
 		{			
 			LeftCameraMoveBool = true;

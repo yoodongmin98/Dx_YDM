@@ -70,6 +70,8 @@ private:
 	RoshamboState RSBStateValue = RoshamboState::None;
 
 	int DebugIntValue = 0;
+	float WindowXSize = GameEngineWindow::GetScreenSize().x;
+	float WindowSideXValue = 580.0f;
 
 	std::shared_ptr<class Mouse> MousePtr = nullptr;
 

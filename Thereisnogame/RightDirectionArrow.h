@@ -12,7 +12,7 @@ public:
 	RightDirectionArrow(RightDirectionArrow&& _Other) noexcept = delete;
 	RightDirectionArrow& operator=(const RightDirectionArrow& _Other) = delete;
 	RightDirectionArrow& operator=(RightDirectionArrow&& _Other) noexcept = delete;
-	void BlinkArrow();
+	void BlinkArrow(float _DeltaTime);
 	void CameraMoveCheck(float _DeltaTime);
 protected:
 	void Start();
