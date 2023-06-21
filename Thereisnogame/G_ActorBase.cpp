@@ -76,6 +76,21 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::Init(
 	float4 _Scale,
 	float4 _Position)
 {
+	
+	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
+	_Render->SetScaleToTexture(_ImageName);
+	_Render->GetTransform()->SetLocalScale(_Scale);
+	_Render->GetTransform()->SetLocalPosition(_Position);
+
+	return _Render;
+}
+
+std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::NullCheckInit(
+	std::shared_ptr<GameEngineSpriteRenderer> _Render,
+	const std::string_view& _ImageName,
+	float4 _Scale,
+	float4 _Position)
+{
 	if (nullptr == _Render)
 	{
 		_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
@@ -106,9 +121,30 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
 	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime,_Loop});
-
+	_Render->ChangeAnimation(_AnimationName);
 	return _Render;
+}
 
+std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::NoChangeAnimationInit(
+	std::shared_ptr<GameEngineSpriteRenderer> _Render,
+	const std::string_view& _ImageName,
+	float4 _Scale,
+	float4 _Position,
+	const std::string_view& _AnimationName,
+	const std::string_view& _FileName,
+	size_t _AnimationCount,
+	float _InterTime,
+	bool _Loop)
+{
+	if (nullptr == _Render)
+	{
+		_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
+	}
+	_Render->SetScaleToTexture(_ImageName);
+	_Render->GetTransform()->SetLocalScale(_Scale);
+	_Render->GetTransform()->SetLocalPosition(_Position);
+	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime,_Loop });
+	return _Render;
 }
 
 std::shared_ptr<GameEngineCollision> G_ActorBase::CollisionInit(

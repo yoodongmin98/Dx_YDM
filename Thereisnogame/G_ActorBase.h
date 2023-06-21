@@ -22,9 +22,27 @@ public:
 		float4 _Scale,
 		float4 _Position);
 
+	std::shared_ptr<GameEngineSpriteRenderer> NullCheckInit(
+		std::shared_ptr<GameEngineSpriteRenderer> _Render,
+		const std::string_view& _ImageName,
+		float4 _Scale,
+		float4 _Position);
+	
+
 	void AnimationImageLoad(const std::string_view& _FileName);
 
 	std::shared_ptr<GameEngineSpriteRenderer> AnimationInit(
+		std::shared_ptr<GameEngineSpriteRenderer> _Render,
+		const std::string_view& _ImageName,
+		float4 _Scale,
+		float4 _Position,
+		const std::string_view& _AnimationName,
+		const std::string_view& _FileName,
+		size_t _AnimationCount,
+		float _InterTime,
+		bool _Loop);
+
+	std::shared_ptr<GameEngineSpriteRenderer> NoChangeAnimationInit(
 		std::shared_ptr<GameEngineSpriteRenderer> _Render,
 		const std::string_view& _ImageName,
 		float4 _Scale,
