@@ -9,6 +9,7 @@
 //Actor
 //나는 Actor의 노예야
 #include "AlphaCircle.h"
+#include "Plaque.h"
 #include "Vis.h"
 #include "BackCurtain.h"
 #include "C1_BackGround.h"
@@ -63,6 +64,8 @@
 #include "Cursor.h"
 #include "GlitchParticle.h"
 #include "TitleMetal.h"
+#include "RightDirectionArrow.h"
+#include "LeftDirectionArrow.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -585,7 +588,7 @@ void PlaywithinaplayLevel::BalloonUpEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool StateBoolss = true;
 void PlaywithinaplayLevel::PopsBalloonStart()
 {
 	//Debug------------------------------------------
@@ -655,9 +658,11 @@ void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 	}
 	if (SpeakerPtr.get()->GetTransform()->GetLocalPosition().y < -500.0f) { SpeakerPtr->Death(); }
 	if (TransparencyActorPtr.get()->GetTransform()->GetLocalPosition().y < -800.0f) { TransparencyActorPtr->Death(); }
-	if (true == ChainPtr->IsDeath())
+	if (true == ChainPtr->IsDeath()
+		&&true== StateBoolss)
 	{
-		//ChangeState
+		ChangeState(Chap1LevelState::SideMap);
+		StateBoolss = false;
 	}
 }
 void PlaywithinaplayLevel::PopsBalloonEnd()
@@ -673,8 +678,10 @@ void PlaywithinaplayLevel::SideMapStart()
 	//Debug------------------------------------------
 	if (TransparencyActorPtr == nullptr)
 	{
-		CreateActor<Cursor>();
-		CreateActor<TitleMetal>();
+		TitleMetalPtr=CreateActor<TitleMetal>();
+		TitleMetalPtr.get()->SetCreatePosition(float4::Zero);
+		BackCurtainPtr.get()->Death();
+		CordonPtr.get()->Death();
 	}
 	//-----------------------------------------------
 	Vis1.get()->VisCollisionOn();
@@ -683,11 +690,22 @@ void PlaywithinaplayLevel::SideMapStart()
 	Vis4.get()->VisCollisionOn();
 	C1_BackGroundPtr2=CreateActor<C1_BackGround>();
 	C1_BackGroundPtr3=CreateActor<C1_BackGround>();
+	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ -1280.0f,0 });
+	C1_BackGroundPtr3.get()->GetTransform()->SetLocalPosition({ -2560.0f,0 });
+
+	RightDirectionArrowPtr1 = CreateActor<RightDirectionArrow>();
+	RightDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -800.0f,0 });
+
+	//RightDirectionArrowPtr2 = CreateActor<RightDirectionArrow>();
+
+	LeftDirectionArrowPtr1 = CreateActor<LeftDirectionArrow>();
+	LeftDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -580.0f,0 });
+
+	//LeftDirectionArrowPtr2 = CreateActor<LeftDirectionArrow>();
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 {
-	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ 0,-1280.0f,0 });
-	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ 0,-2560.0f,0 });
+	
 }
 void PlaywithinaplayLevel::SideMapEnd()
 {

@@ -172,6 +172,13 @@ private:
 	std::shared_ptr<class GlitchParticle> GlitchParticlePtr11;
 	std::shared_ptr<class GlitchParticle> GlitchParticlePtr12;
 
+	std::shared_ptr<class TitleMetal> TitleMetalPtr;
+
+	std::shared_ptr<class RightDirectionArrow> RightDirectionArrowPtr1;
+	std::shared_ptr<class RightDirectionArrow> RightDirectionArrowPtr2;
+	std::shared_ptr<class LeftDirectionArrow> LeftDirectionArrowPtr1;
+	std::shared_ptr<class LeftDirectionArrow> LeftDirectionArrowPtr2;
+
 	///State
 	void ClickCordonStart();
 	void ClickCordonUpdate(float _DeltaTime);

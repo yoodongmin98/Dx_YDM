@@ -712,6 +712,12 @@
     <ClCompile Include="GlitchParticle.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
     </ClCompile>
+    <ClCompile Include="LeftDirectionArrow.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="RightDirectionArrow.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1414,6 +1420,12 @@
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClInclude>
     <ClInclude Include="GlitchParticle.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftDirectionArrow.h">
+      <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="RightDirectionArrow.h">
       <Filter>Chapter1.0_Play within a play\Actor\BackActor\Etc</Filter>
     </ClInclude>
   </ItemGroup>
