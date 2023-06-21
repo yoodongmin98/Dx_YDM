@@ -26,7 +26,7 @@ void Binary0::Start()
 
 void Binary0::Update(float _DeltaTime)
 {
-	Binary0s->ColorOptionValue.MulColor.a -= 0.001f;
+	Binary0s->ColorOptionValue.MulColor.a -= 0.0025f;
 	if (Binary0s->ColorOptionValue.MulColor.a <= 0)
 	{
 		Death();

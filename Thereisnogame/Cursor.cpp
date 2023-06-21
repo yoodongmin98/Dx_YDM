@@ -35,7 +35,7 @@ void Cursor::Start()
 		return;
 	}
 	Cursors = Init(Cursors, "MouseCursorObj.png", { 52,79 }, StartPosition);
-	Cursor_Overlap = Init(Cursor_Overlap, "MouseCursorObj_Overlap.png", { 77,103 }, StartPosition);
+	Cursor_Overlap = Init(Cursor_Overlap, "MouseCursorObj_Overlap.png", { 77,103 }, { StartPosition.x - 3,StartPosition.y + 3 });
 
 
 	CursorsCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Cursor);

@@ -466,7 +466,7 @@ void PlaywithinaplayLevel::TiltBoardStart()
 	R_EnemyPaperPtr->Death();
 	R_DosPtr->Death();
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(5);
+	ChainPtr->SetChainLiveTime(4);
 	TransparencyActorPtr = CreateActor<TransparencyActor>();
 	BoardPtr->GetTransform()->SetParent(TransparencyActorPtr->GetRenderTransform());
 }
@@ -581,21 +581,59 @@ void PlaywithinaplayLevel::PopsBalloonStart()
 		BalloonSecurePtr.get()->Death();
 	}
 	//-----------------------------------------------
+	ChainPtr = CreateActor<Chain>();
+	ChainPtr->SetChainLiveTime(3);
 	BalloonParentsPtr.get()->Death();
 	SpeakerPtr.get()->SpeakerCollisionDeath();
 	CreateActor<Cursor>();
+	Lope_ChainPtr->GetTransform()->SetParent(TransparencyActorPtr->GetTransform());
 }
 void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 {
 	//Trans(Board)DeathÀØÁö¸»±â
-	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z <= 5.0f && true == BalloonManageBool)
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z > -59.0f)
 	{
-		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,28.0f * _DeltaTime });
+		TransparencyActorPtr->GetRenderTransform()->AddLocalRotation({ 0,0,-100.0f * _DeltaTime });
 	}
+	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
+		&& false == BinaryCreateBool)
+	{
+		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.2f, 700, { -700,300,0 }, { 42,42 });
+		Binary0Ptr2 = CreateActor<Binary0>(); Binary0Ptr2->SetBinary(2.3f, 700, { -780,240,0 }, { 39,39 });
+		Binary0Ptr3 = CreateActor<Binary0>(); Binary0Ptr3->SetBinary(2.7f, 600, { -840,210,0 }, { 44,44 });
+		Binary0Ptr4 = CreateActor<Binary0>(); Binary0Ptr4->SetBinary(2.4f, 800, { -890,360,0 }, { 37,37 });
+		Binary0Ptr5 = CreateActor<Binary0>(); Binary0Ptr5->SetBinary(2.5f, 600, { -900,260,0 }, { 35,35 });
+		Binary0Ptr6 = CreateActor<Binary0>(); Binary0Ptr6->SetBinary(2.2f, 500, { -1020,400,0 }, { 37,37 });
+		Binary0Ptr7 = CreateActor<Binary0>(); Binary0Ptr7->SetBinary(2.4f, 750, { -1020,340,0 }, { 39,39 });
+		Binary0Ptr8 = CreateActor<Binary0>(); Binary0Ptr8->SetBinary(2.05f, 550, { -730,200,0 }, { 37,37 });
+		Binary0Ptr9 = CreateActor<Binary0>(); Binary0Ptr9->SetBinary(2.1f, 500, { -800,120,0 }, { 42,42 });
+		Binary0Ptr10 = CreateActor<Binary0>(); Binary0Ptr10->SetBinary(2.15f, 550, { -790,80,0 }, { 42,42 });
+		Binary0Ptr11 = CreateActor<Binary0>(); Binary0Ptr11->SetBinary(2.2f, 600, { -820,-20,0 }, { 45,45 });
+		//Binary 1 Setting
+		Binary1Ptr1 = CreateActor<Binary1>();   Binary1Ptr1->SetBinary(2.2f, 600, { -800,280,0 }, { 42,42 });
+		Binary1Ptr2 = CreateActor<Binary1>();	Binary1Ptr2->SetBinary(2.3f, 500, { -900,200,0 }, { 38,38 });
+		Binary1Ptr3 = CreateActor<Binary1>();	Binary1Ptr3->SetBinary(2.7f, 550, { -850,200,0 }, { 35,35 });
+		Binary1Ptr4 = CreateActor<Binary1>();	Binary1Ptr4->SetBinary(2.4f, 750, { -750,180,0 }, { 40,40 });
+		Binary1Ptr5 = CreateActor<Binary1>();	Binary1Ptr5->SetBinary(2.5f, 500, { -770,80,0 }, { 31,31 });
+		Binary1Ptr6 = CreateActor<Binary1>();	Binary1Ptr6->SetBinary(2.2f, 600, { -720,50,0 }, { 42,42 });
+		Binary1Ptr7 = CreateActor<Binary1>();	Binary1Ptr7->SetBinary(2.4f, 800, { -700,-50,0 }, { 42,42 });
+		Binary1Ptr8 = CreateActor<Binary1>();	Binary1Ptr8->SetBinary(2.05f, 600, { -980,-80,0 }, { 38,38 });
+		Binary1Ptr9 = CreateActor<Binary1>();	Binary1Ptr9->SetBinary(2.1f, 700, { -1000,-100,0 }, { 46,46 });
+		Binary1Ptr10 = CreateActor<Binary1>();	Binary1Ptr10->SetBinary(2.6f, 700, { -910,-120,0 }, { 40,40 });
+		BinaryCreateBool = true;
+	}
+	if (true == BinaryCreateBool)
+	{
+		SpeakerPtr.get()->GetTransform()->AddLocalPosition({ 0,-100.0f * _DeltaTime ,0 });
+		TransparencyActorPtr.get()->GetTransform()->AddLocalPosition({ 0,-500.0f * _DeltaTime,0 });
+	}
+	if (SpeakerPtr.get()->GetTransform()->GetLocalPosition().y < -500.0f) { SpeakerPtr->Death(); }
+	if (TransparencyActorPtr.get()->GetTransform()->GetLocalPosition().y < -800.0f) { TransparencyActorPtr->Death(); }
 }
 void PlaywithinaplayLevel::PopsBalloonEnd()
 {
 
 }
 
+											//1Phase End....//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
