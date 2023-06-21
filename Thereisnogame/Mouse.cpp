@@ -7,7 +7,7 @@
 #include <GameEnginePlatform/GameEngineInput.h>
 //Core
 #include <GameEngineCore/GameEngineCollision.h>
-
+#include <GameEngineCore/GameEngineLevel.h>
 
 //Actor
 #include "LevelStateManager.h"
@@ -100,8 +100,8 @@ std::shared_ptr<GameEngineSpriteRenderer> Mouse::ChangeMouse(std::shared_ptr<cla
 
 void Mouse::MousePositionUpdate(std::shared_ptr<GameEngineSpriteRenderer> _Mouse, std::shared_ptr<GameEngineCollision> _MouseCollision)
 {
-	MousePos = { GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().half().x ,
-				-GameEngineInput::GetMousePosition().y + GameEngineWindow::GetScreenSize().half().y };
+	MousePos = { GameEngineInput::GetMousePosition().x - GameEngineWindow::GetScreenSize().half().x + GetLevel()->GetMainCamera()->GetTransform()->GetLocalPosition().x ,
+				-GameEngineInput::GetMousePosition().y + GameEngineWindow::GetScreenSize().half().y + GetLevel()->GetMainCamera()->GetTransform()->GetLocalPosition().y };
 
 	_Mouse->GetTransform()->SetLocalPosition(MousePos);
 	_MouseCollision->GetTransform()->SetLocalPosition(MousePos);

@@ -1,5 +1,6 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
+#include <GameEngineCore/GameEngineLevel.h>
 #include "G_ActorBase.h"
 
 class LeftDirectionArrow : public G_ActorBase
@@ -13,6 +14,7 @@ public:
 	LeftDirectionArrow& operator=(const LeftDirectionArrow& _Other) = delete;
 	LeftDirectionArrow& operator=(LeftDirectionArrow&& _Other) noexcept = delete;
 	void BlinkArrow();
+	void CameraMoveCheck(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -20,5 +22,10 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> LeftDirectionArrows;
 	std::shared_ptr<class GameEngineCollision> LeftDirectionArrowsCollision;
+
+	GameEngineTransform* Cameras = nullptr;
+
+	float4 StartCameraPos = float4::Zero;
+	float4 EndCameraPos = float4::Zero;
 };
 
