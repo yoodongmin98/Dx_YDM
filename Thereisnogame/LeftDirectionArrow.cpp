@@ -80,7 +80,7 @@ void LeftDirectionArrow::CameraMoveCheck(float _DeltaTime)
 	{
 		MoveTime += _DeltaTime;
 		Cameras->SetLocalPosition(float4::LerpClamp(StartCameraPos, EndCameraPos, MoveTime*1.5f));
-		if (Cameras->GetLocalPosition().x < (LevelStateManager::MG->GetCameraMoveValue() * 1279.0f))
+		if (Cameras->GetLocalPosition().x <= (LevelStateManager::MG->GetCameraMoveValue() * 1280.0f))
 		{			
 			LeftCameraMoveBool = true;
 			LevelStateManager::MG->SetIsCameraMoveCheckTrue();

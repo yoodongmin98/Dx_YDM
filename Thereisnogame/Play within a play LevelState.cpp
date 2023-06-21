@@ -690,20 +690,21 @@ void PlaywithinaplayLevel::SideMapStart()
 	Vis4.get()->VisCollisionOn();
 	C1_BackGroundPtr2=CreateActor<C1_BackGround>();
 	C1_BackGroundPtr3=CreateActor<C1_BackGround>();
-	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ -WindowSideXValue,0 });
-	C1_BackGroundPtr3.get()->GetTransform()->SetLocalPosition({ -WindowSideXValue*2.0f,0 });
+	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize,0 });
+	C1_BackGroundPtr3.get()->GetTransform()->SetLocalPosition({ -WindowXSize *2.0f,0 });
 
 	RightDirectionArrowPtr1 = CreateActor<RightDirectionArrow>();
 	RightDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -WindowXSize + WindowSideXValue,0 });
 
 	RightDirectionArrowPtr2 = CreateActor<RightDirectionArrow>();
-	RightDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize - WindowSideXValue,0 });
+	RightDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize * 2.0f + WindowSideXValue,0 });
 	
 	LeftDirectionArrowPtr1 = CreateActor<LeftDirectionArrow>();
 	LeftDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -WindowSideXValue,0 });
 
 	LeftDirectionArrowPtr2 = CreateActor<LeftDirectionArrow>();
-	LeftDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize * 2.0f + WindowSideXValue,0 });
+	
+	LeftDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize - WindowSideXValue,0 });
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 {
