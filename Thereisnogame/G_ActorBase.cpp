@@ -76,7 +76,10 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::Init(
 	float4 _Scale,
 	float4 _Position)
 {
-	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
+	if (nullptr == _Render)
+	{
+		_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
+	}
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
@@ -103,7 +106,6 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::AnimationInit(
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
 	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime,_Loop});
-	_Render->ChangeAnimation(_AnimationName);
 
 	return _Render;
 

@@ -718,6 +718,15 @@
     <ClCompile Include="RightDirectionArrow.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\Phase1Actor\Etc</Filter>
     </ClCompile>
+    <ClCompile Include="PixelBook.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
+    </ClCompile>
+    <ClCompile Include="FlagChain_Back.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
+    </ClCompile>
+    <ClCompile Include="FlagPicture_Back.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1427,6 +1436,15 @@
     </ClInclude>
     <ClInclude Include="RightDirectionArrow.h">
       <Filter>Chapter1.0_Play within a play\Actor\Phase1Actor\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelBook.h">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
+    </ClInclude>
+    <ClInclude Include="FlagChain_Back.h">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
+    </ClInclude>
+    <ClInclude Include="FlagPicture_Back.h">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

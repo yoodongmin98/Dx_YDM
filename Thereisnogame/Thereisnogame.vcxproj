@@ -206,6 +206,8 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="FlagChain_Back.h" />
+    <ClInclude Include="FlagPicture_Back.h" />
     <ClInclude Include="GlitchParticle.h" />
     <ClInclude Include="G_TitleMetal.h" />
     <ClInclude Include="I_TitleMetal.h" />
@@ -214,6 +216,10 @@
     <ClInclude Include="M_TitleMetal.h" />
     <ClInclude Include="N_TitleMetal.h" />
     <ClInclude Include="O_TitleMetal.h" />
+    <ClInclude Include="PixelBook.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="RE_TitleMetal.h" />
     <ClInclude Include="Excla_TitleCube.h" />
     <ClInclude Include="E_TitleCube.h" />
@@ -454,6 +460,8 @@
     <ClCompile Include="E_TitleCube.cpp" />
     <ClCompile Include="E_TitleMetal.cpp" />
     <ClCompile Include="FadeEffect.cpp" />
+    <ClCompile Include="FlagChain_Back.cpp" />
+    <ClCompile Include="FlagPicture_Back.cpp" />
     <ClCompile Include="FolderNote2.cpp" />
     <ClCompile Include="FolderNote3.cpp" />
     <ClCompile Include="FolderNote_GoodBye.cpp" />
@@ -502,6 +510,7 @@
     <ClCompile Include="PinBall_RightBoxFond.cpp" />
     <ClCompile Include="PinBall_Score.cpp" />
     <ClCompile Include="PinBall_SideTable.cpp" />
+    <ClCompile Include="PixelBook.cpp" />
     <ClCompile Include="Plaque.cpp" />
     <ClCompile Include="Play within a play LevelState.cpp" />
     <ClCompile Include="Private18.cpp" />

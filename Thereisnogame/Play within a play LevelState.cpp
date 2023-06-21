@@ -66,6 +66,8 @@
 #include "TitleMetal.h"
 #include "RightDirectionArrow.h"
 #include "LeftDirectionArrow.h"
+#include "FlagChain_Back.h"
+#include "PixelBook.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -695,16 +697,15 @@ void PlaywithinaplayLevel::SideMapStart()
 
 	RightDirectionArrowPtr1 = CreateActor<RightDirectionArrow>();
 	RightDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -WindowXSize + WindowSideXValue,0 });
-
 	RightDirectionArrowPtr2 = CreateActor<RightDirectionArrow>();
 	RightDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize * 2.0f + WindowSideXValue,0 });
-	
 	LeftDirectionArrowPtr1 = CreateActor<LeftDirectionArrow>();
 	LeftDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -WindowSideXValue,0 });
-
 	LeftDirectionArrowPtr2 = CreateActor<LeftDirectionArrow>();
-	
 	LeftDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize - WindowSideXValue,0 });
+
+	CreateActor<FlagChain_Back>();
+	CreateActor<PixelBook>();
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 {
