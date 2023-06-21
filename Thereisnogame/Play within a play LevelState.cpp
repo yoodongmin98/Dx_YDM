@@ -694,7 +694,7 @@ void PlaywithinaplayLevel::SideMapStart()
 	C1_BackGroundPtr3.get()->GetTransform()->SetLocalPosition({ -2560.0f,0 });
 
 	RightDirectionArrowPtr1 = CreateActor<RightDirectionArrow>();
-	RightDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -800.0f,0 });
+	RightDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -700.0f,0 });
 
 	//RightDirectionArrowPtr2 = CreateActor<RightDirectionArrow>();
 

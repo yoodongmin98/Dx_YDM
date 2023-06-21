@@ -289,6 +289,32 @@ public:
 	{
 		return IsPopBalloon;
 	}
+	//카메라 위치(int value)뭐냐?
+	void SetCameraMoveValuePlus()
+	{
+		CameraMoveValue += 1;
+	}
+	void SetCameraMoveValueMinus()
+	{
+		CameraMoveValue -= 1;
+	}
+	int GetCameraMoveValue()
+	{
+		return CameraMoveValue;
+	}
+	//카메라 움직일 수 있냐?
+	void SetIsCameraMoveCheckTrue()
+	{
+		IsCameraMoveCheck = true;
+	}
+	void SetIsCameraMoveCheckFalse()
+	{
+		IsCameraMoveCheck = false;
+	}
+	bool GetIsCameraMoveCheck()
+	{
+		return IsCameraMoveCheck;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -314,6 +340,8 @@ private:
 	bool IsBalloonUp = false;
 	bool IsClickSpeaker = false;
 	bool IsPopBalloon = false;
+	int CameraMoveValue = 0;
+	bool IsCameraMoveCheck = true;
 
 	//Chapter2
 	int CollisionValue = 0;

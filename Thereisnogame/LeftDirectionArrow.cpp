@@ -8,6 +8,7 @@
 
 
 //Actor
+#include "LevelStateManager.h"
 
 LeftDirectionArrow::LeftDirectionArrow()
 {
@@ -25,6 +26,7 @@ void LeftDirectionArrow::Start()
 	Cameras = GetLevel()->GetMainCamera()->GetTransform();
 }
 bool BlinkArrowLeftBool = true;
+
 void LeftDirectionArrow::Update(float _DeltaTime)
 {
 	CameraMoveCheck(_DeltaTime);
@@ -60,10 +62,26 @@ void LeftDirectionArrow::BlinkArrow()
 
 void LeftDirectionArrow::CameraMoveCheck(float _DeltaTime)
 {
-	if (true == ClickCheck(LeftDirectionArrowsCollision))
+	if (true == ClickCheck(LeftDirectionArrowsCollision)
+		&&true==LevelStateManager::MG->GetIsCameraMoveCheck()
+		&&true== LeftCameraMoveBool)
 	{
+		LeftCameraMoveBool = false;
+		LevelStateManager::MG->SetIsCameraMoveCheckFalse();
+		LevelStateManager::MG->SetCameraMoveValueMinus();
+		MoveTime = 0.0f;
 		StartCameraPos = Cameras->GetLocalPosition();
 		EndCameraPos = StartCameraPos - float4{1280.0f, 0, 0};
-		GetLevel()->GetMainCamera()->GetTransform()->SetLocalPosition(float4::LerpClamp(StartCameraPos, EndCameraPos, _DeltaTime));
+	}
+	if (false == LevelStateManager::MG->GetIsCameraMoveCheck()
+		&&false== LeftCameraMoveBool)
+	{
+		MoveTime += _DeltaTime;
+		Cameras->SetLocalPosition(float4::LerpClamp(StartCameraPos, EndCameraPos, MoveTime));
+		if (Cameras->GetLocalPosition().x < (LevelStateManager::MG->GetCameraMoveValue() * 1279.0f))
+		{			
+			LeftCameraMoveBool = true;
+			LevelStateManager::MG->SetIsCameraMoveCheckTrue();
+		}
 	}
 }

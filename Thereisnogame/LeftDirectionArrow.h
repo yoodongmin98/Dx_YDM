@@ -27,5 +27,8 @@ private:
 
 	float4 StartCameraPos = float4::Zero;
 	float4 EndCameraPos = float4::Zero;
+
+	bool LeftCameraMoveBool = true;
+	float MoveTime = 0.0f;
 };
 
