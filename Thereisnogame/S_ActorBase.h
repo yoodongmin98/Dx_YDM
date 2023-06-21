@@ -23,9 +23,9 @@ public:
 		float4 _Scale,
 		float4 _Position);
 
-	void AnimationImageLoad(const std::string_view& _FileName);
+	void SAnimationImageLoad(const std::string_view& _FileName);
 
-	std::shared_ptr<GameEngineSpriteRenderer> AnimationInit(
+	std::shared_ptr<GameEngineSpriteRenderer> SAnimationInit(
 		std::shared_ptr<GameEngineSpriteRenderer> _Render,
 		const std::string_view& _ImageName,
 		float4 _Scale,
@@ -33,7 +33,8 @@ public:
 		const std::string_view& _AnimationName,
 		const std::string_view& _FileName,
 		size_t _AnimationCount,
-		float _InterTime);
+		float _InterTime,
+		bool _Loop);
 
 	std::shared_ptr<GameEngineCollision> CollisionInit(
 		std::shared_ptr<GameEngineCollision> _Collision,

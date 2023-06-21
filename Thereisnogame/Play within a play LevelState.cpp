@@ -696,12 +696,14 @@ void PlaywithinaplayLevel::SideMapStart()
 	RightDirectionArrowPtr1 = CreateActor<RightDirectionArrow>();
 	RightDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -700.0f,0 });
 
-	//RightDirectionArrowPtr2 = CreateActor<RightDirectionArrow>();
+	RightDirectionArrowPtr2 = CreateActor<RightDirectionArrow>();
+	RightDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -1980.0f,0 });
 
 	LeftDirectionArrowPtr1 = CreateActor<LeftDirectionArrow>();
 	LeftDirectionArrowPtr1.get()->GetTransform()->SetLocalPosition({ -580.0f,0 });
 
-	//LeftDirectionArrowPtr2 = CreateActor<LeftDirectionArrow>();
+	LeftDirectionArrowPtr2 = CreateActor<LeftDirectionArrow>();
+	LeftDirectionArrowPtr2.get()->GetTransform()->SetLocalPosition({ -1860.0f,0 });
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 {

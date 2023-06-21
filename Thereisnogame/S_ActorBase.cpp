@@ -58,6 +58,41 @@ std::shared_ptr<GameEngineCollision> S_ActorBase::CollisionInit(
 	return _Collision;
 }
 
+
+std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::SAnimationInit(
+	std::shared_ptr<GameEngineSpriteRenderer> _Render,
+	const std::string_view& _ImageName,
+	float4 _Scale,
+	float4 _Position,
+	const std::string_view& _AnimationName,
+	const std::string_view& _FileName,
+	size_t _AnimationCount,
+	float _InterTime,
+	bool _Loop)
+{
+	if (nullptr == _Render)
+	{
+		_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::ScreenActor);
+	}
+	_Render->SetScaleToTexture(_ImageName);
+	_Render->GetTransform()->SetLocalScale(_Scale);
+	_Render->GetTransform()->SetLocalPosition(_Position);
+	_Render->CreateAnimation({ _AnimationName, _FileName, 0,_AnimationCount,_InterTime,_Loop });
+
+	return _Render;
+
+}
+
+void S_ActorBase::SAnimationImageLoad(const std::string_view& _FileName)
+{
+	GameEngineDirectory NewDir;
+	NewDir.MoveParentToDirectory("ThereisnogameResource");
+	NewDir.Move("ThereisnogameResource");
+	NewDir.Move("Animation");
+
+	GameEngineSprite::LoadFolder(NewDir.GetPlusFileName(_FileName).GetFullPath());
+}
+
 void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	std::shared_ptr<GameEngineSpriteRenderer> _Render2,
 	std::shared_ptr<GameEngineCollision> _Collision,
