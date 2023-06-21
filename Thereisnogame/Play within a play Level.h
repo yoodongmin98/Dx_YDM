@@ -14,6 +14,7 @@ enum class Chap1LevelState
 	TiltBoard,
 	BalloonUp,
 	PopsBalloon,
+	SideMap,
 };
 enum class RoshamboState
 {
@@ -71,6 +72,10 @@ private:
 	int DebugIntValue = 0;
 
 	std::shared_ptr<class Mouse> MousePtr = nullptr;
+
+	std::shared_ptr<class C1_BackGround> C1_BackGroundPtr;
+	std::shared_ptr<class C1_BackGround> C1_BackGroundPtr2;
+	std::shared_ptr<class C1_BackGround> C1_BackGroundPtr3;
 
 	std::shared_ptr<class Vis> Vis1;
 	std::shared_ptr<class Vis> Vis2;
@@ -221,5 +226,9 @@ private:
 	void PopsBalloonStart();
 	void PopsBalloonUpdate(float _DeltaTime);
 	void PopsBalloonEnd();
+
+	void SideMapStart();
+	void SideMapUpdate(float _DeltaTime);
+	void SideMapEnd();
 };
 

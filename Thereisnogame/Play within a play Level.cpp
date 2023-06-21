@@ -52,7 +52,7 @@ void PlaywithinaplayLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
-		CreateActor<C1_BackGround>();
+		C1_BackGroundPtr=CreateActor<C1_BackGround>();
 		CreateActor<Plaque>();
 		Vis1 = CreateActor<Vis>();
 		Vis1->SetVisPosition({ -180,130 });
@@ -73,7 +73,7 @@ void PlaywithinaplayLevel::Start()
 		MousePtr=CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::None);
+	ChangeState(Chap1LevelState::SideMap);
 	RSBChangeState(RoshamboState::None);
 }
 

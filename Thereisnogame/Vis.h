@@ -21,6 +21,11 @@ public:
 	{
 		RotateValue = _Rotate;
 	}
+
+	void VisCollisionOn()
+	{
+		VissCollision->On();
+	}
 protected:
 	void Start();
 	void Update(float _Delta) override;

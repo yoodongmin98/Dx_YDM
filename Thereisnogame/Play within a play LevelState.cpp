@@ -9,7 +9,9 @@
 //Actor
 //나는 Actor의 노예야
 #include "AlphaCircle.h"
+#include "Vis.h"
 #include "BackCurtain.h"
+#include "C1_BackGround.h"
 #include "Chain.h"
 #include "Board.h"
 #include "Lope_Chain.h"
@@ -60,6 +62,7 @@
 #include "Speaker.h"
 #include "Cursor.h"
 #include "GlitchParticle.h"
+#include "TitleMetal.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -98,6 +101,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::PopsBalloon:
 		PopsBalloonStart();
 		break;
+	case Chap1LevelState::SideMap:
+		SideMapStart();
+		break;
 	default:
 		break;
 	}
@@ -130,6 +136,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::PopsBalloon:
 		PopsBalloonEnd();
+		break;
+	case Chap1LevelState::SideMap:
+		SideMapEnd();
 		break;
 	default:
 		break;
@@ -166,6 +175,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 		break;
 	case Chap1LevelState::PopsBalloon:
 		PopsBalloonUpdate(_DeltaTime);
+		break;
+	case Chap1LevelState::SideMap:
+		SideMapUpdate(_DeltaTime);
 		break;
 	default:
 		break;
@@ -643,6 +655,10 @@ void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 	}
 	if (SpeakerPtr.get()->GetTransform()->GetLocalPosition().y < -500.0f) { SpeakerPtr->Death(); }
 	if (TransparencyActorPtr.get()->GetTransform()->GetLocalPosition().y < -800.0f) { TransparencyActorPtr->Death(); }
+	if (true == ChainPtr->IsDeath())
+	{
+		//ChangeState
+	}
 }
 void PlaywithinaplayLevel::PopsBalloonEnd()
 {
@@ -650,4 +666,32 @@ void PlaywithinaplayLevel::PopsBalloonEnd()
 }
 
 											//1Phase End....//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::SideMapStart()
+{
+	//Debug------------------------------------------
+	if (TransparencyActorPtr == nullptr)
+	{
+		CreateActor<Cursor>();
+		CreateActor<TitleMetal>();
+	}
+	//-----------------------------------------------
+	Vis1.get()->VisCollisionOn();
+	Vis2.get()->VisCollisionOn();
+	Vis3.get()->VisCollisionOn();
+	Vis4.get()->VisCollisionOn();
+	C1_BackGroundPtr2=CreateActor<C1_BackGround>();
+	C1_BackGroundPtr3=CreateActor<C1_BackGround>();
+}
+void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
+{
+	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ 0,-1280.0f,0 });
+	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ 0,-2560.0f,0 });
+}
+void PlaywithinaplayLevel::SideMapEnd()
+{
+
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
