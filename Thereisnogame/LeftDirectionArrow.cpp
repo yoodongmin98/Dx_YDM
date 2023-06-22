@@ -40,26 +40,7 @@ void LeftDirectionArrow::Render(float _Delta)
 
 void LeftDirectionArrow::BlinkArrow(float _DeltaTime)
 {
-	if (LeftDirectionArrows->ColorOptionValue.MulColor.a > 0.0f
-		&& true == BlinkArrowLeftBool)
-	{
-		LeftDirectionArrows->ColorOptionValue.MulColor.a -= _DeltaTime;
-	}
-	else if (LeftDirectionArrows->ColorOptionValue.MulColor.a < 1.0f
-		&& false == BlinkArrowLeftBool)
-	{
-		LeftDirectionArrows->ColorOptionValue.MulColor.a += _DeltaTime;
-	}
-	if (LeftDirectionArrows->ColorOptionValue.MulColor.a <= 0)
-	{
-		_DeltaTime = 0.0f;
-		BlinkArrowLeftBool = false;
-	}
-	if (LeftDirectionArrows->ColorOptionValue.MulColor.a >= 1.0f)
-	{
-		_DeltaTime = 0.0f;
-		BlinkArrowLeftBool = true;
-	}
+	LeftDirectionArrows->ColorOptionValue.MulColor.a = sinf(GetLiveTime() * 2.0f) * 0.5 + 0.5f;
 }
 
 void LeftDirectionArrow::CameraMoveCheck(float _DeltaTime)

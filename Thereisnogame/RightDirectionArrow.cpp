@@ -39,26 +39,7 @@ void RightDirectionArrow::Render(float _Delta)
 
 void RightDirectionArrow::BlinkArrow(float _DeltaTime)
 {
-	if (RightDirectionArrows->ColorOptionValue.MulColor.a > 0.0f
-		&& true == BlinkArrowBool)
-	{
-		RightDirectionArrows->ColorOptionValue.MulColor.a -= _DeltaTime;
-	}
-	else if (RightDirectionArrows->ColorOptionValue.MulColor.a < 1.0f
-		&&false== BlinkArrowBool)
-	{
-		RightDirectionArrows->ColorOptionValue.MulColor.a += _DeltaTime;
-	}
-	if (RightDirectionArrows->ColorOptionValue.MulColor.a <= 0)
-	{
-		_DeltaTime = 0.0f;
-		BlinkArrowBool = false;
-	}
-	if (RightDirectionArrows->ColorOptionValue.MulColor.a >= 1.0f)
-	{
-		_DeltaTime = 0.0f;
-		BlinkArrowBool = true;
-	}
+	RightDirectionArrows->ColorOptionValue.MulColor.a=sinf(GetLiveTime()*2.0f) * 0.5 + 0.5f;
 }
 
 void RightDirectionArrow::CameraMoveCheck(float _DeltaTime)
