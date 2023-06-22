@@ -102,12 +102,11 @@ protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
 
-
+	virtual void BallCheckEvent() {}
 private:
 	float ReverseTime = 0.0f;
 	float BlockDeathTime = 0.0f;
 	float Progress = 0.0f;
 	float4 EndPos = float4::Zero;
-	
 	G_RigidBody* pRigidBody;
 };

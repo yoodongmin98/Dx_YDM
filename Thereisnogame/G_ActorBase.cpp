@@ -258,7 +258,7 @@ void G_ActorBase::CubeMoveDeathCheck(std::shared_ptr<GameEngineCollision> _Colli
 	float Times=GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if ((_Collision->Collision(ActorTypeEnum::Ball, ColType::AABBBOX2D, ColType::AABBBOX2D)))
 	{
-		_Collision->Death();
+		BallCheckEvent();
 	}
 	if (true==_Collision->IsDeath())
 	{
