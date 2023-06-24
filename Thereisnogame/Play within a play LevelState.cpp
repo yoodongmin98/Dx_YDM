@@ -110,6 +110,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::SideMap:
 		SideMapStart();
 		break;
+	case Chap1LevelState::CoffreFort:
+		CoffreFortStart();
+		break;
 	default:
 		break;
 	}
@@ -145,6 +148,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::SideMap:
 		SideMapEnd();
+		break;
+	case Chap1LevelState::CoffreFort:
+		CoffreFortEnd();
 		break;
 	default:
 		break;
@@ -185,11 +191,16 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 	case Chap1LevelState::SideMap:
 		SideMapUpdate(_DeltaTime);
 		break;
+	case Chap1LevelState::CoffreFort:
+		CoffreFortUpdate(_DeltaTime);
+		break;
 	default:
 		break;
 	}
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 void PlaywithinaplayLevel::ClickCordonStart()
 {
 	AlphaCirclePtr = CreateActor<AlphaCircle>();
@@ -714,6 +725,21 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 	
 }
 void PlaywithinaplayLevel::SideMapEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::CoffreFortStart()
+{
+
+}
+void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::CoffreFortEnd()
 {
 
 }

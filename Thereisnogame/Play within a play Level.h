@@ -15,6 +15,7 @@ enum class Chap1LevelState
 	BalloonUp,
 	PopsBalloon,
 	SideMap,
+	CoffreFort,
 };
 enum class RoshamboState
 {
@@ -239,5 +240,9 @@ private:
 	void SideMapStart();
 	void SideMapUpdate(float _DeltaTime);
 	void SideMapEnd();
+
+	void CoffreFortStart();
+	void CoffreFortUpdate(float _DeltaTime);
+	void CoffreFortEnd();
 };
 
