@@ -68,6 +68,7 @@
 #include "LeftDirectionArrow.h"
 #include "FlagChain_Back.h"
 #include "PixelBook.h"
+#include "FlagPicture_Back.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -706,6 +707,7 @@ void PlaywithinaplayLevel::SideMapStart()
 
 	CreateActor<FlagChain_Back>();
 	CreateActor<PixelBook>();
+	CreateActor<FlagPicture>();
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 {
