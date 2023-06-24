@@ -26,12 +26,21 @@ void G_TitleCube::Start()
 
 void G_TitleCube::Update(float _DeltaTime)
 {
+	if (true == DeathCheck)
+	{
+		G_TitleCubesCollision->Death();
+	}
 	CubeMoveDeathCheck(G_TitleCubesCollision);
 }
 
 void G_TitleCube::Render(float _Delta)
 {
 
+};
+
+void G_TitleCube::BallCheckEvent()
+{
+	DeathCheck = true;
 };
 
 

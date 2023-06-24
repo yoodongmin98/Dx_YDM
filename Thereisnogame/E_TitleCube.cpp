@@ -26,6 +26,10 @@ void E_TitleCube::Start()
 
 void E_TitleCube::Update(float _DeltaTime)
 {
+	if (true == DeathCheck)
+	{
+		E_TitleCubesCollision->Death();
+	}
 	CubeMoveDeathCheck(E_TitleCubesCollision);
 }
 
@@ -34,4 +38,8 @@ void E_TitleCube::Render(float _Delta)
 
 };
 
+void E_TitleCube::BallCheckEvent()
+{
+	DeathCheck = true;
+};
 

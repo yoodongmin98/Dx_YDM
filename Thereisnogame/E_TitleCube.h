@@ -17,7 +17,10 @@ protected:
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
+
+	void BallCheckEvent() override;
 private:
+	bool DeathCheck = false;
 	std::shared_ptr<class GameEngineSpriteRenderer> E_TitleCubes;
 	std::shared_ptr<class GameEngineCollision> E_TitleCubesCollision;
 };
