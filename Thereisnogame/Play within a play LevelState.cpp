@@ -698,6 +698,7 @@ bool Vis1Bool = false;
 bool Vis2Bool = false;
 bool Vis3Bool = false;
 bool Vis4Bool = false;
+bool SideMapChangeBool = true;
 void PlaywithinaplayLevel::SideMapStart()
 {
 	//Debug------------------------------------------
@@ -777,7 +778,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		Vis1.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
 		if (VisTurnTime > 1.2f)
 		{
-			Vis1.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-400 * _DeltaTime ,0 });
+			Vis1.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-700 * _DeltaTime ,0 });
 			if (Vis1.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
 			{
 				LevelStateManager::MG->SetIsTurnVisFalse();
@@ -793,7 +794,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		Vis2.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
 		if (VisTurnTime>1.2f)
 		{
-			Vis2.get()->GetRender()->GetTransform()->AddLocalPosition({0,-400 * _DeltaTime ,0});
+			Vis2.get()->GetRender()->GetTransform()->AddLocalPosition({0,-700 * _DeltaTime ,0});
 			if (Vis2.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
 			{
 				LevelStateManager::MG->SetIsTurnVisFalse();
@@ -809,7 +810,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		Vis3.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
 		if (VisTurnTime > 1.2f)
 		{
-			Vis3.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-400 * _DeltaTime ,0 });
+			Vis3.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-700 * _DeltaTime ,0 });
 			if (Vis3.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
 			{
 				LevelStateManager::MG->SetIsTurnVisFalse();
@@ -825,7 +826,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		Vis4.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
 		if (VisTurnTime > 1.2f)
 		{
-			Vis4.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-400 * _DeltaTime ,0 });
+			Vis4.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-700 * _DeltaTime ,0 });
 			if (Vis4.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
 			{
 				LevelStateManager::MG->SetIsTurnVisFalse();
@@ -835,6 +836,12 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		}
 	}
 	
+	if (true == Vis1->IsDeath() && true == Vis2->IsDeath() && true == Vis3->IsDeath() && true == Vis4->IsDeath()
+		&&true== SideMapChangeBool)
+	{
+		ChangeState(Chap1LevelState::CoffreFort);
+		SideMapChangeBool = false;
+	}
 }
 void PlaywithinaplayLevel::SideMapEnd()
 {
@@ -845,7 +852,8 @@ void PlaywithinaplayLevel::SideMapEnd()
 
 void PlaywithinaplayLevel::CoffreFortStart()
 {
-
+	ChainPtr = CreateActor<Chain>();
+	ChainPtr->SetChainLiveTime(3);
 }
 void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 {

@@ -496,12 +496,6 @@
     <ClCompile Include="Cog.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClCompile>
-    <ClCompile Include="French.cpp">
-      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
-    </ClCompile>
-    <ClCompile Include="Key.cpp">
-      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
-    </ClCompile>
     <ClCompile Include="RouageLoad.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClCompile>
@@ -726,6 +720,9 @@
     </ClCompile>
     <ClCompile Include="FlagPicture_Back.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
+    </ClCompile>
+    <ClCompile Include="StartButton.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\CoffreFort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1224,12 +1221,6 @@
     <ClInclude Include="Cog.h">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClInclude>
-    <ClInclude Include="French.h">
-      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
-    </ClInclude>
-    <ClInclude Include="Key.h">
-      <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
-    </ClInclude>
     <ClInclude Include="RouageLoad.h">
       <Filter>Chapter1.0_Play within a play\Actor\ScreenActor</Filter>
     </ClInclude>
@@ -1445,6 +1436,9 @@
     </ClInclude>
     <ClInclude Include="FlagPicture_Back.h">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
+    </ClInclude>
+    <ClInclude Include="StartButton.h">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\CoffreFort</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

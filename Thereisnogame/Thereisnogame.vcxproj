@@ -229,14 +229,12 @@
     <ClInclude Include="FolderNote3.h" />
     <ClInclude Include="FolderNote_GoodBye.h" />
     <ClInclude Include="FolderNote_Password.h" />
-    <ClInclude Include="French.h" />
     <ClInclude Include="GameBall_TitleCube.h" />
     <ClInclude Include="GoodbyeIcon.h" />
     <ClInclude Include="G_RigidBody.h" />
     <ClInclude Include="G_TitleCube.h" />
     <ClInclude Include="H_TitleMetal.h" />
     <ClInclude Include="I_TitleCube.h" />
-    <ClInclude Include="Key.h" />
     <ClInclude Include="LeftRotate.h" />
     <ClInclude Include="LoadBarBack.h" />
     <ClInclude Include="LoadBarTXT.h" />
@@ -393,6 +391,7 @@
     <ClInclude Include="SquirrelKey.h" />
     <ClInclude Include="SquirrelKeyMiddle.h" />
     <ClInclude Include="SquirrelKeySmall.h" />
+    <ClInclude Include="StartButton.h" />
     <ClInclude Include="StartPictures.h" />
     <ClInclude Include="SuperPrivate.h" />
     <ClInclude Include="S_ActorBase.h" />
@@ -466,7 +465,6 @@
     <ClCompile Include="FolderNote3.cpp" />
     <ClCompile Include="FolderNote_GoodBye.cpp" />
     <ClCompile Include="FolderNote_Password.cpp" />
-    <ClCompile Include="French.cpp" />
     <ClCompile Include="GameBall_TitleCube.cpp" />
     <ClCompile Include="GlitchParticle.cpp" />
     <ClCompile Include="GoodbyeIcon.cpp" />
@@ -476,7 +474,6 @@
     <ClCompile Include="H_TitleMetal.cpp" />
     <ClCompile Include="I_TitleCube.cpp" />
     <ClCompile Include="I_TitleMetal.cpp" />
-    <ClCompile Include="Key.cpp" />
     <ClCompile Include="LeftDirectionArrow.cpp" />
     <ClCompile Include="LeftRotate.cpp" />
     <ClCompile Include="LoadBarBack.cpp" />
@@ -648,6 +645,7 @@
     <ClCompile Include="SquirrelKey.cpp" />
     <ClCompile Include="SquirrelKeyMiddle.cpp" />
     <ClCompile Include="SquirrelKeySmall.cpp" />
+    <ClCompile Include="StartButton.cpp" />
     <ClCompile Include="StartPictures.cpp" />
     <ClCompile Include="SuperPrivate.cpp" />
     <ClCompile Include="S_ActorBase.cpp" />

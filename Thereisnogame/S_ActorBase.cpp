@@ -43,6 +43,7 @@ std::shared_ptr<GameEngineSpriteRenderer> S_ActorBase::Init(
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition({ _Position.x,_Position.y});
+	
 
 	return _Render;
 }
