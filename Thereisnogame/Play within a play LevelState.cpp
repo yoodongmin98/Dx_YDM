@@ -854,6 +854,7 @@ void PlaywithinaplayLevel::CoffreFortStart()
 {
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(3);
+	//StartButton,CoffreFort,Handle,Panel Create
 }
 void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 {

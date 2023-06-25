@@ -13,6 +13,7 @@ public:
 	PixelBook& operator=(const PixelBook& _Other) = delete;
 	PixelBook& operator=(PixelBook&& _Other) noexcept = delete;
 	void PageAnimationSet();
+	void CogCreateCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -24,7 +25,11 @@ private:
 
 	std::shared_ptr<class GameEngineSpriteRenderer> PixelBooks;
 	std::shared_ptr<class GameEngineCollision> PixelBooksCollision;
+	std::shared_ptr<class GameEngineCollision> PixelBooksCogCollision;
+
+	std::shared_ptr<class GameEngineSpriteRenderer> PixelBookVis;
 
 	int AnimationValue = 0;
+	
 };
 

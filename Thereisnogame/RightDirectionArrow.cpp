@@ -39,7 +39,7 @@ void RightDirectionArrow::Render(float _Delta)
 
 void RightDirectionArrow::BlinkArrow(float _DeltaTime)
 {
-	RightDirectionArrows->ColorOptionValue.MulColor.a=sinf(GetLiveTime()*2.0f) * 0.5 + 0.5f;
+	RightDirectionArrows->ColorOptionValue.MulColor.a=sinf(GetLiveTime()*2.0f) * 0.5f + 0.5f;
 }
 
 void RightDirectionArrow::CameraMoveCheck(float _DeltaTime)
