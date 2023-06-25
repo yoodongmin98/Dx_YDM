@@ -18,6 +18,10 @@ protected:
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
+	std::shared_ptr<class GameEngineSpriteRenderer> Lope1;
+	std::shared_ptr<class GameEngineSpriteRenderer> Lope2;
+	std::shared_ptr<class GameEngineSpriteRenderer> BoxMenus;
+
 	std::shared_ptr<class GameEngineSpriteRenderer> PixelBooks;
 	std::shared_ptr<class GameEngineCollision> PixelBooksCollision;
 
