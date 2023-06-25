@@ -10,6 +10,8 @@
 //Actor
 #include "AlphaCircle.h"
 #include "BackCurtain.h"
+#include "LevelStateManager.h"
+
 Vis::Vis()
 {
 }

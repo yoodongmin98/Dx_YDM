@@ -60,8 +60,6 @@ void T_TitleMetal::DeathandCreateScreenT()
 	if (true == LevelStateManager::MG->GetIsBalloonUp()
 		&&true== ScreenTCreateBool)
 	{
-		TitleMetalPtr=GetLevel()->CreateActor<TitleMetal>();
-		TitleMetalPtr->SetCreatePosition(T_TitleMetals->GetTransform()->GetLocalPosition() + GetTransform()->GetLocalPosition());
 		Death();
 		ScreenTCreateBool = false;
 	}

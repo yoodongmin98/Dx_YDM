@@ -30,9 +30,12 @@ void TitleMetal::Start()
 		STitleMetalImageLoadBoolr = false;
 	}
 	float4 Position = float4::Zero;
-	TitleMetals = SAnimationInit(TitleMetals, "TitleMetal_T.png", { 94,142 }, Position, "RotateMetal", "RotateMetal", 11, 0.1f, false);
+	TitleMetals = SAnimationInit(TitleMetals, "TitleMetal_T.png", { 94,142 }, Position, "RotateMetal", "RotateMetal", 12, 0.1f, false);
 	TitleMetals_overlap = Init(TitleMetals_overlap, "TitleMetal_T_Overlap.png", { 123,171 }, { Position.x - 3,Position.y + 3 });
-	TitleMetalsCollision = CollisionInit(TitleMetalsCollision, { 123,171 }, Position);
+	
+	TitleMetalsCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::TitleMetal);
+	TitleMetalsCollision->GetTransform()->SetLocalScale({ 123,171 });
+	TitleMetalsCollision->GetTransform()->SetLocalPosition(Position);
 }
 
 bool CreateMetalBoolss = true;
@@ -45,7 +48,7 @@ void TitleMetal::Update(float _DeltaTime)
 		TitleMetalsCollision->GetTransform()->SetLocalPosition(CreatePosition);
 		CreateMetalBoolss = false;
 	}
-	Fall(TitleMetals, TitleMetals_overlap, TitleMetalsCollision,71.0f, _DeltaTime);
+	Fall(TitleMetals, TitleMetals_overlap, TitleMetalsCollision, 71.0f, _DeltaTime);
 	CatchCheck(TitleMetals, TitleMetals_overlap, TitleMetalsCollision);
 }
 
@@ -53,5 +56,4 @@ void TitleMetal::Render(float _Delta)
 {
 
 };
-
 

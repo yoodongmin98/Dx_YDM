@@ -1,6 +1,6 @@
 #include "PrecompileHeader.h"
 #include "Play within a play Level.h"
-
+#include "ActorTypeEnum.h"
 //Base
 //Platform
 #include <GameEnginePlatform/GameEngineInput.h>
@@ -557,6 +557,7 @@ void PlaywithinaplayLevel::TiltBoardEnd()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool BalloonManageBool = true;
 bool BoardUpDownBool = true;
+bool ScreenTCreateBools = true;
 void PlaywithinaplayLevel::BalloonUpStart()
 {
 
@@ -577,6 +578,7 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 		LevelStateManager::MG->SetIsBalloonUpTrue();
 		BalloonManageBool = false;
 	}
+
 	if (true == LevelStateManager::MG->GetIsBalloonUp()
 		&&true== BoardUpDownBool)
 	{
@@ -595,6 +597,13 @@ void PlaywithinaplayLevel::BalloonUpUpdate(float _DeltaTime)
 		BoardUpDownBool = true;
 	}
 	//스피커 화살표로 풍선 터트리면 넘어가기
+	if (true == LevelStateManager::MG->GetIsBalloonUp()
+		&& true == ScreenTCreateBools)
+	{
+		TitleMetalPtr = GetLevel()->CreateActor<TitleMetal>();
+		TitleMetalPtr->SetCreatePosition({-300,180});
+		ScreenTCreateBools = false;
+	}
 }
 void PlaywithinaplayLevel::BalloonUpEnd()
 {
@@ -685,23 +694,23 @@ void PlaywithinaplayLevel::PopsBalloonEnd()
 
 											//1Phase End....//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool Vis1Bool = false;
+bool Vis2Bool = false;
+bool Vis3Bool = false;
+bool Vis4Bool = false;
 void PlaywithinaplayLevel::SideMapStart()
 {
 	//Debug------------------------------------------
 	if (TransparencyActorPtr == nullptr)
 	{
 		TitleMetalPtr=CreateActor<TitleMetal>();
-		TitleMetalPtr.get()->SetCreatePosition(float4::Zero);
+		TitleMetalPtr.get()->SetCreatePosition({400,-400});
 		BackCurtainPtr.get()->Death();
 		CordonPtr.get()->Death();
 		CreateActor<AlphaCircle>();
 	}
 	//-----------------------------------------------
-	Vis1.get()->VisCollisionOn();
-	Vis2.get()->VisCollisionOn();
-	Vis3.get()->VisCollisionOn();
-	Vis4.get()->VisCollisionOn();
+	
 	C1_BackGroundPtr2=CreateActor<C1_BackGround>();
 	C1_BackGroundPtr3=CreateActor<C1_BackGround>();
 	C1_BackGroundPtr2.get()->GetTransform()->SetLocalPosition({ -WindowXSize,0 });
@@ -719,9 +728,112 @@ void PlaywithinaplayLevel::SideMapStart()
 	CreateActor<FlagChain_Back>();
 	CreateActor<PixelBook>();
 	CreateActor<FlagPicture>();
+	Vis1.get()->VisCollisionOn();
+	Vis2.get()->VisCollisionOn();
+	Vis3.get()->VisCollisionOn();
+	Vis4.get()->VisCollisionOn();
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 {
+	if (Vis1.get()->GetCollision()->Collision(ActorTypeEnum::TitleMetal, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&&true==Mouse::MainMouse->IsInteractable()
+		&&false==LevelStateManager::MG->GetIsTurnVis())
+	{
+		VisTurnTime = 0.0f;
+		LevelStateManager::MG->SetIsTurnVisTrue();
+		Vis1Bool = true;
+	}
+
+	if (Vis2.get()->GetCollision()->Collision(ActorTypeEnum::TitleMetal, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable()
+		&& false == LevelStateManager::MG->GetIsTurnVis())
+	{
+		VisTurnTime = 0.0f;
+		LevelStateManager::MG->SetIsTurnVisTrue();
+		Vis2Bool = true;
+	}
+
+	if (Vis3.get()->GetCollision()->Collision(ActorTypeEnum::TitleMetal, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable()
+		&& false == LevelStateManager::MG->GetIsTurnVis())
+	{
+		VisTurnTime = 0.0f;
+		LevelStateManager::MG->SetIsTurnVisTrue();
+		Vis3Bool = true;
+	}
+
+	if (Vis4.get()->GetCollision()->Collision(ActorTypeEnum::TitleMetal, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable()
+		&& false == LevelStateManager::MG->GetIsTurnVis())
+	{
+		VisTurnTime = 0.0f;
+		LevelStateManager::MG->SetIsTurnVisTrue();
+		Vis4Bool = true;
+	}
+
+	if (true == Vis1Bool)
+	{
+		VisTurnTime += _DeltaTime;
+		Vis1.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
+		if (VisTurnTime > 1.2f)
+		{
+			Vis1.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-400 * _DeltaTime ,0 });
+			if (Vis1.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
+			{
+				LevelStateManager::MG->SetIsTurnVisFalse();
+				Vis1->Death();
+				Vis1Bool = false;
+			}
+		}
+	}
+
+	if (true == Vis2Bool)
+	{
+		VisTurnTime += _DeltaTime;
+		Vis2.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
+		if (VisTurnTime>1.2f)
+		{
+			Vis2.get()->GetRender()->GetTransform()->AddLocalPosition({0,-400 * _DeltaTime ,0});
+			if (Vis2.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
+			{
+				LevelStateManager::MG->SetIsTurnVisFalse();
+				Vis2->Death();
+				Vis2Bool = false;
+			}
+		}
+	}
+
+	if (true == Vis3Bool)
+	{
+		VisTurnTime += _DeltaTime;
+		Vis3.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
+		if (VisTurnTime > 1.2f)
+		{
+			Vis3.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-400 * _DeltaTime ,0 });
+			if (Vis3.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
+			{
+				LevelStateManager::MG->SetIsTurnVisFalse();
+				Vis3->Death();
+				Vis3Bool = false;
+			}
+		}
+	}
+
+	if (true == Vis4Bool)
+	{
+		VisTurnTime += _DeltaTime;
+		Vis4.get()->GetRender()->GetTransform()->AddLocalRotation({ 0,0,600.0f * _DeltaTime });
+		if (VisTurnTime > 1.2f)
+		{
+			Vis4.get()->GetRender()->GetTransform()->AddLocalPosition({ 0,-400 * _DeltaTime ,0 });
+			if (Vis4.get()->GetRender()->GetTransform()->GetLocalPosition().y < -400.0f)
+			{
+				LevelStateManager::MG->SetIsTurnVisFalse();
+				Vis4->Death();
+				Vis4Bool = false;
+			}
+		}
+	}
 	
 }
 void PlaywithinaplayLevel::SideMapEnd()

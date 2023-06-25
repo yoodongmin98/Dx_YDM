@@ -21,6 +21,7 @@ enum class ActorTypeEnum
 	//Chap1
 	Cursor,
 	Speaker,
+	TitleMetal,
 	//Chapter1 BallGame
 	Block,
 	Excla,

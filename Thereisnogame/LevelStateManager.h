@@ -315,6 +315,19 @@ public:
 	{
 		return IsCameraMoveCheck;
 	}
+	//Vis 돌리고있냐?
+	void SetIsTurnVisTrue()
+	{
+		IsTurnVis = true;
+	}
+	void SetIsTurnVisFalse()
+	{
+		IsTurnVis = false;
+	}
+	bool GetIsTurnVis()
+	{
+		return IsTurnVis;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -342,7 +355,7 @@ private:
 	bool IsPopBalloon = false;
 	int CameraMoveValue = 0;
 	bool IsCameraMoveCheck = true;
-
+	bool IsTurnVis = false;
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

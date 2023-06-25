@@ -240,6 +240,7 @@ private:
 	void SideMapStart();
 	void SideMapUpdate(float _DeltaTime);
 	void SideMapEnd();
+	float VisTurnTime = 0.0f;
 
 	void CoffreFortStart();
 	void CoffreFortUpdate(float _DeltaTime);

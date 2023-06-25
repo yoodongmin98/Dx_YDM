@@ -26,6 +26,16 @@ public:
 	{
 		VissCollision->On();
 	}
+
+	std::shared_ptr<class GameEngineCollision> GetCollision()
+	{
+		return VissCollision;
+	}
+	std::shared_ptr<class GameEngineSpriteRenderer> GetRender()
+	{
+		return Viss;
+	}
+	
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -38,5 +48,6 @@ private:
 	float4 RotateValue = float4::Zero;
 
 	bool SettingBools = true;
+	bool TurnVis = false;
 };
 
