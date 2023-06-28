@@ -856,7 +856,7 @@ bool CoffreCreateBool = true;
 void PlaywithinaplayLevel::CoffreFortStart()
 {
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(5);
+	ChainPtr->SetChainLiveTime(4);
 	PlaqueStartPos = PlaquePtr.get()->GetTransform()->GetLocalPosition();
 	PlaqueEndPos = PlaqueStartPos + float4::Down * 1000;
 }
