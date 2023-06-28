@@ -37,7 +37,7 @@ void PixelBook::Start()
 	PixelBooks = NoChangeAnimationInit(PixelBooks, "DrawMeAPixelBook05.png", { 597,422 }, Position, "ChangeCog", "DisplayCog", 2, 0.2f, false);
 	PixelBooks = NullCheckInit(PixelBooks, "DrawMeAPixelBook01.png", { 597,457 }, Position);
 
-	PixelBookVis = Init(PixelBookVis, "VisPaper.png", { 60,60 }, { -1280,0,0 });
+	PixelBookVis = Init(PixelBookVis, "VisPaper.png", { 60,60 }, { -1279,25,0 });
 	PixelBookVis->Off();
 
 	PixelBooksCollision = CollisionInit(PixelBooksCollision, { 597,422 }, Position);
@@ -70,7 +70,10 @@ void PixelBook::PageAnimationSet()
 		{
 			PixelBooks->ChangeAnimation("ChangeCog");
 			PixelBooksCollision->Death();
-			PixelBookVis->On();
+			if (2==PixelBooks->GetCurrentFrame())
+			{
+				PixelBookVis->On();
+			}
 			PixelBooksCogCollision->On();
 		}
 	}
@@ -85,8 +88,5 @@ void PixelBook::CogCreateCheck()
 		GetLevel()->CreateActor<Cog>();
 		PixelBooks->SetTexture("DrawMeAPixelBook08.png");
 		CogCreateSettingBoolss = false;
-	
-		//PixelBookVis->GetTransform()->AddLocalRotation({ 0,0,1 });
-		//VisRender추가 해서 돌리고나서 Create하기
 	}
 }

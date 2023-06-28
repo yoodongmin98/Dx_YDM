@@ -40,7 +40,7 @@ void LeftDirectionArrow::Render(float _Delta)
 
 void LeftDirectionArrow::BlinkArrow(float _DeltaTime)
 {
-	LeftDirectionArrows->ColorOptionValue.MulColor.a = sinf(GetLiveTime() * 2.0f) * 0.5 + 0.5f;
+	LeftDirectionArrows->ColorOptionValue.MulColor.a = sinf(GetLiveTime() * 2.0f) * 0.5f + 0.5f;
 }
 
 void LeftDirectionArrow::CameraMoveCheck(float _DeltaTime)
