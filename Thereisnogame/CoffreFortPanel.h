@@ -20,7 +20,12 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> CoffreFortPanels;
 	std::shared_ptr<class GameEngineSpriteRenderer> TestCoffreFortPanels;
+
 	std::shared_ptr<class GameEngineCollision> CoffreFortPanelsColliision;
+	std::shared_ptr<class GameEngineCollision> PanelCogCollision;
+	std::shared_ptr<class GameEngineCollision> PanelRouageCollision;
+
+
 
 	bool PanelOpen = false;
 	float PanelTime = 0.0f;

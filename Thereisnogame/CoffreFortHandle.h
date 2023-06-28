@@ -20,6 +20,7 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> CoffreFortHandles;
+	std::shared_ptr<class GameEngineSpriteRenderer> CoffreFortHandlesShadow;
 	std::shared_ptr<class GameEngineCollision> CoffreFortHandlesCollision;
 
 	float Force = 0.0f;

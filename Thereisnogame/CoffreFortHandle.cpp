@@ -17,8 +17,11 @@ CoffreFortHandle::~CoffreFortHandle()
 
 void CoffreFortHandle::Start()
 {
-	CoffreFortHandles = Init(CoffreFortHandles, "CoffreFortHandle.png", { 234,234 }, float4::Zero);
-	CoffreFortHandlesCollision = CollisionInit(CoffreFortHandlesCollision, { 200,200 }, float4::Zero);
+	
+	float4 Position = { -10,10 };
+	CoffreFortHandlesShadow = Init(CoffreFortHandlesShadow, "CoffreFortHandleShadow.png", { 218,218 }, { Position.x ,Position.y-25});
+	CoffreFortHandles = Init(CoffreFortHandles, "CoffreFortHandle.png", { 234,234 }, Position);
+	CoffreFortHandlesCollision = CollisionInit(CoffreFortHandlesCollision, { 200,200 }, Position);
 }
 
 void CoffreFortHandle::Update(float _DeltaTime)
@@ -42,6 +45,7 @@ void CoffreFortHandle::HandleRotateCheck(float _DeltaTime)
 	if(Force>0.0f)
 	{ 
 		CoffreFortHandles->GetTransform()->AddLocalRotation({ 0,0,Force * _DeltaTime });
+		CoffreFortHandlesShadow->GetTransform()->AddLocalRotation({ 0,0,Force * _DeltaTime });
 	}
 }
 

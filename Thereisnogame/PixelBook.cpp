@@ -87,6 +87,8 @@ void PixelBook::CogCreateCheck()
 	{
 		GetLevel()->CreateActor<Cog>();
 		PixelBooks->SetTexture("DrawMeAPixelBook08.png");
+		PixelBooks->GetTransform()->SetLocalScale({ 597,329 });
+		PixelBooks->GetTransform()->AddLocalPosition({ 0,-59,0 });
 		CogCreateSettingBoolss = false;
 	}
 }
