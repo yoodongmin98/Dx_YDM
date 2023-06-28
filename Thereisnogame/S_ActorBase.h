@@ -58,4 +58,5 @@ private:
 	float ScreenSizeY = GameEngineWindow::GetScreenSize().half().y;
 
 	float FallSpeed = 700.0f;
+	float4 MoveDir = float4::Zero;
 };

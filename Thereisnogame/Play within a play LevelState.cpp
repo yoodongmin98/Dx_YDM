@@ -69,6 +69,9 @@
 #include "FlagChain_Back.h"
 #include "PixelBook.h"
 #include "FlagPicture_Back.h"
+#include "CoffreFortPanel.h"
+#include "CoffreFort.h"
+#include "CoffreFortHandle.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -849,7 +852,7 @@ void PlaywithinaplayLevel::SideMapEnd()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+bool CoffreCreateBool = true;
 void PlaywithinaplayLevel::CoffreFortStart()
 {
 	ChainPtr = CreateActor<Chain>();
@@ -860,9 +863,14 @@ void PlaywithinaplayLevel::CoffreFortStart()
 void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 {
 	CoffreTime += _DeltaTime;
-	PlaquePtr.get()->GetTransform()->SetLocalPosition(float4::LerpClamp(PlaqueStartPos, PlaqueEndPos, CoffreTime*0.7f));
-	if (CoffreTime > 3.0f)
+	PlaquePtr.get()->GetTransform()->SetLocalPosition(float4::LerpClamp(PlaqueStartPos, PlaqueEndPos, CoffreTime));
+	if (CoffreTime > 3.0f && true==CoffreCreateBool)
 	{
+		CreateActor<CoffreFortPanel>();
+		CreateActor<CoffreFort>();
+		CreateActor<CoffreFortHandle>();
+		CoffreCreateBool = false;
+		//CameraShaking
 		//StartButton,CoffreFort,Handle,Panel Create
 	}
 }

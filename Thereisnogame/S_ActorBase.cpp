@@ -101,7 +101,10 @@ void S_ActorBase::Fall(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 	float _ImageHalfScale,float _DeltaTime)
 {
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
-	float4 MoveDir = float4::Down * _DeltaTime * FallSpeed;
+	if (true == Mouse::MainMouse->IsInteractable())
+	{
+		MoveDir = float4::Down * _DeltaTime * FallSpeed;
+	}
 	
 	if (_Render->GetTransform()->GetLocalPosition().y < -GameEngineWindow::GetScreenSize().half().y + _ImageHalfScale)
 	{
