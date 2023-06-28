@@ -80,6 +80,8 @@ private:
 	std::shared_ptr<class C1_BackGround> C1_BackGroundPtr2;
 	std::shared_ptr<class C1_BackGround> C1_BackGroundPtr3;
 
+	std::shared_ptr<class Plaque> PlaquePtr;
+
 	std::shared_ptr<class Vis> Vis1;
 	std::shared_ptr<class Vis> Vis2;
 	std::shared_ptr<class Vis> Vis3;
@@ -245,5 +247,8 @@ private:
 	void CoffreFortStart();
 	void CoffreFortUpdate(float _DeltaTime);
 	void CoffreFortEnd();
+	float CoffreTime = 0.0f;
+	float4 PlaqueStartPos = float4::Zero;
+	float4 PlaqueEndPos = float4::Zero;
 };
 

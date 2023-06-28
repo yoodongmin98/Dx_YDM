@@ -17,8 +17,10 @@
 #include "Cordon.h"
 #include "Vis.h"
 #include "FadeEffect.h"
+#include "StartButton.h"
 //ScreenActor
 #include "Cog.h"
+
 
 PlaywithinaplayLevel* PlaywithinaplayLevel::LM;
 PlaywithinaplayLevel::PlaywithinaplayLevel()
@@ -53,7 +55,8 @@ void PlaywithinaplayLevel::Start()
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
 		C1_BackGroundPtr=CreateActor<C1_BackGround>();
-		CreateActor<Plaque>();
+		CreateActor<StartButton>();
+		PlaquePtr=CreateActor<Plaque>();
 		Vis1 = CreateActor<Vis>();
 		Vis1->SetVisPosition({ -180,130 });
 		Vis1->SetVisRotate({ 0,0,45 });
@@ -73,7 +76,7 @@ void PlaywithinaplayLevel::Start()
 		MousePtr=CreateActor<Mouse>();
 	}
 
-	ChangeState(Chap1LevelState::SideMap);
+	ChangeState(Chap1LevelState::None);
 	RSBChangeState(RoshamboState::None);
 }
 

@@ -12,7 +12,7 @@ public:
 	FlagPicture(FlagPicture&& _Other) noexcept = delete;
 	FlagPicture& operator=(const FlagPicture& _Other) = delete;
 	FlagPicture& operator=(FlagPicture&& _Other) noexcept = delete;
-
+	void CollisionInterCheck(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -29,6 +29,11 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> F_Spanish;
 	std::shared_ptr<class GameEngineSpriteRenderer> F_English;
 
+	std::shared_ptr<class GameEngineSpriteRenderer> F_LockRender;
+	std::shared_ptr<class GameEngineSpriteRenderer> F_LockOpenRender;
+	std::shared_ptr<class GameEngineCollision> LockCollision;
+
+	float LockFallTime = 0.0f;
 	
 
 
