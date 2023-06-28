@@ -855,12 +855,12 @@ void PlaywithinaplayLevel::CoffreFortStart()
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(5);
 	PlaqueStartPos = PlaquePtr.get()->GetTransform()->GetLocalPosition();
-	PlaqueEndPos = PlaqueStartPos - float4::Down * 1000;
+	PlaqueEndPos = PlaqueStartPos + float4::Down * 1000;
 }
 void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 {
 	CoffreTime += _DeltaTime;
-	PlaquePtr.get()->GetTransform()->SetLocalPosition(float4::LerpClamp(PlaqueStartPos, PlaqueEndPos, CoffreTime*0.5f));
+	PlaquePtr.get()->GetTransform()->SetLocalPosition(float4::LerpClamp(PlaqueStartPos, PlaqueEndPos, CoffreTime*0.7f));
 	if (CoffreTime > 3.0f)
 	{
 		//StartButton,CoffreFort,Handle,Panel Create
