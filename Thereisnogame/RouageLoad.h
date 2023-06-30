@@ -13,6 +13,7 @@ public:
 	RouageLoad& operator=(const RouageLoad& _Other) = delete;
 	RouageLoad& operator=(RouageLoad&& _Other) noexcept = delete;
 
+	void RougeDeathandInterCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;

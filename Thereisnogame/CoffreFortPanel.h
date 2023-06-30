@@ -13,6 +13,7 @@ public:
 	CoffreFortPanel& operator=(const CoffreFortPanel& _Other) = delete;
 	CoffreFortPanel& operator=(CoffreFortPanel&& _Other) noexcept = delete;
 	void PanelInterCheck(float _DeltaTime);
+	void RenderOnCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -38,5 +39,8 @@ private:
 
 	float4 CogValue = float4::Zero;
 	float4 RougeValue = float4::Zero;
+
+	bool CogOnBool = true;
+	bool RougeOnBool = true;
 };
 

@@ -1,5 +1,6 @@
 #include "PrecompileHeader.h"
 #include "RouageLoad.h"
+#include "ActorTypeEnum.h"
 //Base
 //PlatForm
 //Core
@@ -31,9 +32,20 @@ void RouageLoad::Update(float _DeltaTime)
 {
 	Fall(RouageLoads, RouageLoads_overlap, RouageLoadsCollision, 55.0f, _DeltaTime);
 	CatchCheck(RouageLoads, RouageLoads_overlap, RouageLoadsCollision);
+	RougeDeathandInterCheck();
 }
 
 void RouageLoad::Render(float _Delta)
 {
 
 };
+
+void RouageLoad::RougeDeathandInterCheck()
+{
+	if (RouageLoadsCollision->Collision(ActorTypeEnum::PanelRouge, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable())
+	{
+		LevelStateManager::MG->SetIsRougeStickTrue();
+		Death();
+	}
+}

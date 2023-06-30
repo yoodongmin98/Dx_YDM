@@ -5,6 +5,8 @@
 //PlatForm
 //Core
 //Actor
+#include "LevelStateManager.h"
+
 CoffreFortPanel::CoffreFortPanel()
 {
 }
@@ -36,6 +38,7 @@ void CoffreFortPanel::Start()
 void CoffreFortPanel::Update(float _DeltaTime)
 {
 	PanelInterCheck(_DeltaTime);
+	RenderOnCheck();
 }
 
 void CoffreFortPanel::Render(float _Delta)
@@ -74,5 +77,19 @@ void CoffreFortPanel::PanelInterCheck(float _DeltaTime)
 		PanelCogCollision->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + CogValue, EndPosX + CogValue, PanelTime * 1.5f));
 		RougeRender->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + RougeValue, EndPosX + RougeValue, PanelTime * 1.5f));
 		PanelRouageCollision->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + RougeValue, EndPosX + RougeValue, PanelTime * 1.5f));
+	}
+}
+
+void CoffreFortPanel::RenderOnCheck()
+{
+	if (true == CogOnBool && LevelStateManager::MG->GetIsCogStick())
+	{
+		CogRender->On();
+		CogOnBool = false;
+	}
+	if (true == RougeOnBool && LevelStateManager::MG->GetIsRougeStick())
+	{
+		RougeRender->On();
+		RougeOnBool = false;
 	}
 }
