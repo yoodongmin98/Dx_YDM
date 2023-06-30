@@ -21,6 +21,9 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> CoffreFortPanels;
 	std::shared_ptr<class GameEngineSpriteRenderer> TestCoffreFortPanels;
 
+	std::shared_ptr<class GameEngineSpriteRenderer> CogRender;
+	std::shared_ptr<class GameEngineSpriteRenderer> RougeRender;
+
 	std::shared_ptr<class GameEngineCollision> CoffreFortPanelsColliision;
 	std::shared_ptr<class GameEngineCollision> PanelCogCollision;
 	std::shared_ptr<class GameEngineCollision> PanelRouageCollision;
@@ -32,5 +35,8 @@ private:
 
 	float4 StartPosX = float4::Zero;
 	float4 EndPosX = float4::Zero;
+
+	float4 CogValue = float4::Zero;
+	float4 RougeValue = float4::Zero;
 };
 

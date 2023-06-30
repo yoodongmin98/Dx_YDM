@@ -871,7 +871,6 @@ void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 		CreateActor<CoffreFortHandle>();
 		CoffreCreateBool = false;
 		//CameraShaking
-		//StartButton,CoffreFort,Handle,Panel Create
 	}
 }
 void PlaywithinaplayLevel::CoffreFortEnd()
