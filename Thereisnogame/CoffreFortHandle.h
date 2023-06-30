@@ -14,6 +14,7 @@ public:
 	CoffreFortHandle& operator=(CoffreFortHandle&& _Other) noexcept = delete;
 
 	void HandleRotateCheck(float _DeltaTime);
+	void HandleCheckNextLevel();
 protected:
 	void Start();
 	void Update(float _Delta) override;

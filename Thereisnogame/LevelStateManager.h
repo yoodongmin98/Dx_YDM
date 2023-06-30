@@ -346,6 +346,15 @@ public:
 	{
 		return IsRougeStick;
 	}
+	//CoffrePanel¿­·È³Ä
+	void SetIsPanelClick()
+	{
+		IsPanelClick = !IsPanelClick;
+	}
+	bool GetIsPanelClick()
+	{
+		return IsPanelClick;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -376,7 +385,7 @@ private:
 	bool IsTurnVis = false;
 	bool IsCogStick = false;
 	bool IsRougeStick = false;
-
+	bool IsPanelClick = false;
 
 	//Chapter2
 	int CollisionValue = 0;

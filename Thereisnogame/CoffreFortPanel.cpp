@@ -53,6 +53,7 @@ void CoffreFortPanel::PanelInterCheck(float _DeltaTime)
 	if (true == ClickCheck(CoffreFortPanelsColliision))
 	{
 		PanelOpen = !PanelOpen;
+		LevelStateManager::MG->SetIsPanelClick();
 		PanelTime = 0.0f;
 		StartPosX = CoffreFortPanels->GetTransform()->GetLocalPosition();
 		CogValue = { 17,45 };

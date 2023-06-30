@@ -6,6 +6,8 @@
 //Core
 //Actor
 #include "Mouse.h"
+#include "LevelStateManager.h"
+#include "Play within a play Level.h"
 
 CoffreFortHandle::CoffreFortHandle()
 {
@@ -27,6 +29,7 @@ void CoffreFortHandle::Start()
 void CoffreFortHandle::Update(float _DeltaTime)
 {
 	HandleRotateCheck(_DeltaTime);
+	HandleCheckNextLevel();
 }
 
 void CoffreFortHandle::Render(float _Delta)
@@ -46,6 +49,15 @@ void CoffreFortHandle::HandleRotateCheck(float _DeltaTime)
 	{ 
 		CoffreFortHandles->GetTransform()->AddLocalRotation({ 0,0,Force * _DeltaTime });
 		CoffreFortHandlesShadow->GetTransform()->AddLocalRotation({ 0,0,Force * _DeltaTime });
+	}
+}
+
+void CoffreFortHandle::HandleCheckNextLevel()
+{
+	if (true == LevelStateManager::MG->GetIsCogStick() && true == LevelStateManager::MG->GetIsRougeStick()
+		&&true==ClickCheck(CoffreFortHandlesCollision) &&false==LevelStateManager::MG->GetIsPanelClick())
+	{
+		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::MemorySet);
 	}
 }
 

@@ -891,7 +891,8 @@ void PlaywithinaplayLevel::CoffreFortEnd()
 
 void PlaywithinaplayLevel::MemorySetStart()
 {
-
+	ChainPtr = CreateActor<Chain>();
+	ChainPtr->SetChainLiveTime(4);
 }
 void PlaywithinaplayLevel::MemorySetUpdate(float _DeltaTime)
 {
