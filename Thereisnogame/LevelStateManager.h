@@ -328,6 +328,24 @@ public:
 	{
 		return IsTurnVis;
 	}
+	//Cog²È¾Ò³Ä
+	void SetIsCogStickTrue()
+	{
+		IsCogStick = true;
+	}
+	bool GetIsCogStick()
+	{
+		return IsCogStick;
+	}
+	//Rouge²È¾Ò³Ä
+	void SetIsRougeStickTrue()
+	{
+		IsRougeStick = true;
+	}
+	bool GetIsRougeStick()
+	{
+		return IsRougeStick;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -356,6 +374,10 @@ private:
 	int CameraMoveValue = 0;
 	bool IsCameraMoveCheck = true;
 	bool IsTurnVis = false;
+	bool IsCogStick = false;
+	bool IsRougeStick = false;
+
+
 	//Chapter2
 	int CollisionValue = 0;
 	int NextCollisionValue = 0;

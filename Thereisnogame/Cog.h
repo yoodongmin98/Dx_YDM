@@ -16,6 +16,7 @@ public:
 	Cog& operator=(const Cog& _Other) = delete;
 	Cog& operator=(Cog&& _Other) noexcept = delete;
 
+	void CogDeathandInterCheck();
 protected:
 	void Start();
 	void Update(float _Delta) override;

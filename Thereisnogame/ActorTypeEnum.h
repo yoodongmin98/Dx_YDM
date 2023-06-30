@@ -10,7 +10,7 @@ enum class ActorTypeEnum
 	ScreenActor,
 
 
-	//상호작용(Collision)
+	//Chap2
 	Nut_Close,
 	Nut_Open,
 	Cup_Full,
@@ -18,19 +18,23 @@ enum class ActorTypeEnum
 	Picture,
 	ZipWip,
 	LockFolder,
+
 	//Chap1
 	Cursor,
 	Speaker,
 	TitleMetal,
+	PanelCog,
+	PanelRouge,
+
 	//Chapter1 BallGame
 	Block,
 	Excla,
 	Ball,
+
 	//Chap1Etc
 	DownCheck,
 
-	//AlphaCircle,Mouse,FrontBack
+	//AlphaCircle,Mouse
 	Alpha,
-	Mouse,
-	WhiteFront
+	Mouse
 };

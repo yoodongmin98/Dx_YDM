@@ -116,6 +116,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 	case Chap1LevelState::CoffreFort:
 		CoffreFortStart();
 		break;
+	case Chap1LevelState::MemorySet:
+		MemorySetStart();
+		break;
 	default:
 		break;
 	}
@@ -154,6 +157,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 		break;
 	case Chap1LevelState::CoffreFort:
 		CoffreFortEnd();
+		break;
+	case Chap1LevelState::MemorySet:
+		MemorySetEnd();
 		break;
 	default:
 		break;
@@ -196,6 +202,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 		break;
 	case Chap1LevelState::CoffreFort:
 		CoffreFortUpdate(_DeltaTime);
+		break;
+	case Chap1LevelState::MemorySet:
+		MemorySetUpdate(_DeltaTime);
 		break;
 	default:
 		break;
@@ -874,6 +883,21 @@ void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 	}
 }
 void PlaywithinaplayLevel::CoffreFortEnd()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::MemorySetStart()
+{
+
+}
+void PlaywithinaplayLevel::MemorySetUpdate(float _DeltaTime)
+{
+
+}
+void PlaywithinaplayLevel::MemorySetEnd()
 {
 
 }

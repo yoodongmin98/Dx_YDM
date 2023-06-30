@@ -1,5 +1,6 @@
 #include "PrecompileHeader.h"
 #include "CoffreFortPanel.h"
+#include "ActorTypeEnum.h"
 //Base
 //PlatForm
 //Core
@@ -16,8 +17,15 @@ void CoffreFortPanel::Start()
 {
 	CoffreFortPanels = Init(CoffreFortPanels, "CoffreFortPanel.png", { 390,285 }, float4::Zero + float4::Right * 64);
 	CoffreFortPanelsColliision = CollisionInit(CoffreFortPanelsColliision, { 80,150 }, float4::Right * 210);
-	/*PanelCogCollision=CollisionInit(PanelCogCollision,)
-	PanelRouageCollision= CollisionInit(PanelRouageCollision,)*/
+
+	
+	PanelCogCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::PanelCog);
+	PanelCogCollision->GetTransform()->SetLocalScale({ 19,18 });
+	PanelCogCollision->GetTransform()->SetLocalPosition(float4::Zero);
+	
+	PanelRouageCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::PanelRouge);
+	PanelRouageCollision->GetTransform()->SetLocalScale({11,11});
+	PanelRouageCollision->GetTransform()->SetLocalPosition(float4::Zero);
 
 	CogRender = Init(CogRender, "Cog_OBJ.png", { 190,184 }, float4::Zero);
 	RougeRender = Init(RougeRender, "RouageLoad.png", { 109,109 }, float4::Zero);
@@ -34,6 +42,7 @@ void CoffreFortPanel::Render(float _Delta)
 {
 
 };
+
 
 void CoffreFortPanel::PanelInterCheck(float _DeltaTime)
 {
@@ -52,7 +61,9 @@ void CoffreFortPanel::PanelInterCheck(float _DeltaTime)
 		EndPosX = { 350,0,0 };
 		CoffreFortPanels->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX, EndPosX, PanelTime * 1.5f));
 		CogRender->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX+ CogValue, EndPosX + CogValue, PanelTime * 1.5f));
+		PanelCogCollision->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + CogValue, EndPosX + CogValue, PanelTime * 1.5f));
 		RougeRender->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX+ RougeValue, EndPosX + RougeValue, PanelTime * 1.5f));
+		PanelRouageCollision->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + RougeValue, EndPosX + RougeValue, PanelTime * 1.5f));
 	}
 	else
 	{
@@ -60,6 +71,8 @@ void CoffreFortPanel::PanelInterCheck(float _DeltaTime)
 		EndPosX = {64,0,0};
 		CoffreFortPanels->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX, EndPosX, PanelTime*1.5f));
 		CogRender->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + CogValue, EndPosX + CogValue, PanelTime * 1.5f));
+		PanelCogCollision->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + CogValue, EndPosX + CogValue, PanelTime * 1.5f));
 		RougeRender->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + RougeValue, EndPosX + RougeValue, PanelTime * 1.5f));
+		PanelRouageCollision->GetTransform()->SetLocalPosition(float4::LerpClamp(StartPosX + RougeValue, EndPosX + RougeValue, PanelTime * 1.5f));
 	}
 }

@@ -6,6 +6,8 @@
 //Core
 
 //Actor
+#include "Mouse.h"
+#include "LevelStateManager.h"
 
 Cog::Cog()
 {
@@ -27,6 +29,7 @@ void Cog::Update(float _DeltaTime)
 {
 	CatchCheck(Cogs, Cogs_Overlap, CogCollision);
 	Fall(Cogs, Cogs_Overlap, CogCollision, 92.0f, _DeltaTime);
+	CogDeathandInterCheck();
 }
 
 void Cog::Render(float _Delta)
@@ -34,3 +37,12 @@ void Cog::Render(float _Delta)
 
 };
 
+
+void Cog::CogDeathandInterCheck()
+{
+	if (CogCollision->Collision(ActorTypeEnum::PanelCog, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable())
+	{
+
+	}
+}

@@ -16,6 +16,7 @@ enum class Chap1LevelState
 	PopsBalloon,
 	SideMap,
 	CoffreFort,
+	MemorySet,
 };
 enum class RoshamboState
 {
@@ -250,5 +251,9 @@ private:
 	float CoffreTime = 0.0f;
 	float4 PlaqueStartPos = float4::Zero;
 	float4 PlaqueEndPos = float4::Zero;
+
+	void MemorySetStart();
+	void MemorySetUpdate(float _DeltaTime);
+	void MemorySetEnd();
 };
 
