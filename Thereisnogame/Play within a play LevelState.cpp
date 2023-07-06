@@ -896,7 +896,11 @@ void PlaywithinaplayLevel::MemorySetStart()
 }
 void PlaywithinaplayLevel::MemorySetUpdate(float _DeltaTime)
 {
-
+	//사운드가 끝나면 다음레벨로 넘어가기
+	if (true == ChainPtr->IsDeath())
+	{
+		GameEngineCore::ChangeLevel("FakeProgramLevel");	
+	}
 }
 void PlaywithinaplayLevel::MemorySetEnd()
 {
