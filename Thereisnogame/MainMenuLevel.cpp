@@ -240,6 +240,12 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValue=FlagValueSet(1,i);
+
+			if (false == FlagIn.IsPlay())
+			{
+				Play(FlagIn, "MainMenu_LanguageIn.wav", 0.1f);
+			}
+
 			FlagVector[i].get()->FlagDown(FlagValue,_DeltaTime);
 		}
 		break;
@@ -249,6 +255,7 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValues = FlagValueSet(2, i);
+			Play(FlagOut, "MainMenu_LanguageOut.wav", 0.1f);
 			FlagVector[i].get()->FlagUp(FlagValues,_DeltaTime);
 		}
 		break;

@@ -20,6 +20,13 @@ public:
 
 	}
 
+	bool IsPlay()
+	{
+		bool IsPlay = false;
+
+		Channel->isPlaying(&IsPlay);
+		return IsPlay;
+	}
 	void Stop()
 	{
 		Channel->stop();
