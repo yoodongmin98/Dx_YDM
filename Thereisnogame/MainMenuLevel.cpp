@@ -232,6 +232,7 @@ void MainMenuLevel::Arrowfunction(float _DeltaTime)
 	}
 }
 
+
 void MainMenuLevel::Flagfunction(float _DeltaTime)
 {
 	switch (StateValue)
@@ -240,12 +241,7 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValue=FlagValueSet(1,i);
-
-			if (false == FlagIn.IsPlay())
-			{
-				Play(FlagIn, "MainMenu_LanguageIn.wav", 0.1f);
-			}
-
+			if (false == S1) { Play(FlagIn, "MainMenu_LanguageIn.wav", 0.1f); S1 = true; }
 			FlagVector[i].get()->FlagDown(FlagValue,_DeltaTime);
 		}
 		break;
@@ -255,7 +251,7 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValues = FlagValueSet(2, i);
-			Play(FlagOut, "MainMenu_LanguageOut.wav", 0.1f);
+			if (false == S2) { Play(FlagOut, "MainMenu_LanguageOut.wav", 0.1f); S2 = true; }
 			FlagVector[i].get()->FlagUp(FlagValues,_DeltaTime);
 		}
 		break;
