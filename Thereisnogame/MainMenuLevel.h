@@ -1,5 +1,7 @@
 #pragma once
 #include <GameEngineCore\GameEngineLevel.h>
+#include <GameEnginePlatform/GameEngineSound.h>
+
 
 enum class MainMenuState
 {
@@ -24,6 +26,12 @@ public:
 	MainMenuLevel& operator=(const MainMenuLevel& _Other) = delete;
 	MainMenuLevel& operator=(MainMenuLevel&& _Other) noexcept = delete;
 	std::shared_ptr<class FadeEffect> FEffect;
+
+	void SoundPlay(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
+	void SoundPause(GameEngineSoundPlayer _ControlSoundName);
+
+
+
 	void CreateMainMenuArrow();
 	void CreateLetter();
 	void CreateFlag();
@@ -53,6 +61,12 @@ public:
 	{
 		IsClickStartButton = true;
 	}
+
+	void SoundLoad();
+
+	GameEngineSoundPlayer MainBackSound;
+	GameEngineSoundPlayer FlagIn;
+	GameEngineSoundPlayer FlagOut;
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

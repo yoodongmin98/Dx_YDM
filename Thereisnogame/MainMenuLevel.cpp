@@ -8,6 +8,8 @@
 #include <GameEngineCore/GameEngineCamera.h>
 #include <GameEngineCore/GameEngineTexture.h>
 #include <GameEngineCore/GameEngineCore.h>
+#include <GameEngineCore/GameEngineResource.h>
+#include <GameEnginePlatform/GameEngineSound.h>
 
 
 //Actor
@@ -80,8 +82,7 @@ void MainMenuLevel::Start()
 			GameEngineTexture::Load(File[i].GetFullPath());
 		}
 	}
-
-
+	SoundLoad();
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
@@ -112,7 +113,6 @@ void MainMenuLevel::Start()
 		GameEngineInput::CreateKey("LeftMouse", VK_LBUTTON);
 	}
 	ChangeState(MainMenuState::Flag);
-
 }
 
 void MainMenuLevel::Update(float _DeltaTime)

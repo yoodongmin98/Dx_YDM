@@ -724,6 +724,9 @@
     <ClCompile Include="StartButton.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\CoffreFort</Filter>
     </ClCompile>
+    <ClCompile Include="MainMenuSoundLoader.cpp">
+      <Filter>Chapter0.0_MainMenu\Level</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
