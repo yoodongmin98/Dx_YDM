@@ -348,6 +348,7 @@ std::shared_ptr<GameEngineFontRenderer> G_ActorBase::FontInit(std::shared_ptr<Ga
 	_FontRender->SetFont("ÈÞ¸ÕµÕ±ÙÇìµå¶óÀÎ");
 	_FontRender->SetText(_Text);
 	_FontRender->SetScale(_Scale);
+	_FontRender->SetFontFlag(static_cast<FW1_TEXT_FLAG>(FW1_TEXT_FLAG::FW1_CENTER | FW1_TEXT_FLAG::FW1_VCENTER));
 	_FontRender->GetTransform()->SetLocalPosition(_WorldPosition);
 	_FontRender->SetColor(float4(1.0f, 1.0f, 1.0f, 1));
 	return _FontRender;
