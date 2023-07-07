@@ -15,6 +15,7 @@ public:
 	Arrow& operator=(const Arrow& _Other) = delete;
 	Arrow& operator=(Arrow&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

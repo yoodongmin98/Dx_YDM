@@ -15,6 +15,7 @@ public:
 	SelectBox& operator=(const SelectBox& _Other) = delete;
 	SelectBox& operator=(SelectBox&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

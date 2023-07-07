@@ -108,7 +108,7 @@ void MainMenuLevel::FlagEnd()
 	
 }
 
-
+bool PixelPanel = false;
 void MainMenuLevel::DrawaPixelStart()
 {
 	
@@ -121,6 +121,12 @@ void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 	std::function<void(float)> PixelFunctional;
 	if (DrawaPixelTime > 3.0f)
 	{
+		if (false == PixelPanel)
+		{
+			PixelPtr = CreateActor<Panel_DrawaPixel>();
+			PixelPanel = true;
+		}
+		//잘못짰는데 되긴하니까 넘어가자..
 		PixelFunctional = std::bind(&Panel_DrawaPixel::Down, PixelPtr.get(), std::placeholders::_1);
 		PixelFunctional(_DeltaTime);
 		if (DrawaPixelTime > 7.0f)
@@ -130,6 +136,7 @@ void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 			if (DrawaPixelTime > 10.0f)
 			{
 				ChangeState(MainMenuState::Menu);
+				Play(MainEtcSound, "MainMenu_TitleIn.wav", 0.1f);
 			}
 		}
 	}
@@ -152,6 +159,8 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 	Arrowfunction(_DeltaTime);
 	Flagfunction(_DeltaTime);
 
+	
+
 	std::function<void(float)> MenuFunctional;
 
 	MenuFunctional = std::bind(&Panel_Continue::RZRotations, PanelContinuePtr.get(), std::placeholders::_1);
@@ -165,13 +174,26 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 
 	if (MenuTime > 5.0f)
 	{
-		//Text(게임을 시작하지않기위해 누르세요)
-		MenuFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
-		MenuFunctional(_DeltaTime);
+		if (GameEngineInput::IsDown("LeftMouse"))
+		{
+			if (false == ArrowCreateBool)
+			{
+				Play(MainEtcSound, "MainMenu_Click.wav", 0.1f);
+				SelectBoxPtr = CreateActor<SelectBox>();
+				CreateMainMenuArrow();
+				ArrowCreateBool = true;
+			}
+		}
+		if (true == ArrowCreateBool)
+		{
+			MenuFunctional = std::bind(&SelectBox::Up, SelectBoxPtr.get(), std::placeholders::_1);
+			MenuFunctional(_DeltaTime);
+		}
 		
 		if (true == IsClickStartButton)
 		{
 			ChangeState(MainMenuState::Select);
+			Play(MainEtcSound, "MainMenu_PanelChoiceOut.wav", 0.1f);
 		}
 	}
 	
@@ -188,6 +210,7 @@ void MainMenuLevel::SelectStart()
 }
 void MainMenuLevel::SelectUpdate(float _DeltaTime)
 {
+	ArrowCreateBool = false;
 	IsClickStartButton = false;
 	Letterfunction(_DeltaTime);
 	Arrowfunction(_DeltaTime);

@@ -18,6 +18,8 @@ public:
 
 	void Down(float _DeltaTime);
 	void Up(float _DeltaTime);
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

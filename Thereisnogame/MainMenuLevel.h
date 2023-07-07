@@ -61,6 +61,10 @@ public:
 	{
 		IsClickStartButton = true;
 	}
+	bool GetIsArrowCreateBool()
+	{
+		return ArrowCreateBool;
+	}
 
 	void SoundLoad();
 
@@ -113,31 +117,7 @@ private:
 	bool IsClicktheFlag = false;
 	bool IsClickBackPanel = false;
 	bool IsClickStartButton = false;
+	bool ArrowCreateBool = false;
 
-
-
-	bool S1 = true;
-	bool S2 = true;
-	bool S3 = true;
-	bool S4 = true;
-	bool S5 = true;
-	bool S6 = true;
-	bool S7 = true;
-	bool S8 = true;
-	bool S9 = true;
-	bool S10 = true;
-	bool S11 = true;
-	bool S12 = true;
-	bool S13 = true;
-	bool S14 = true;
-	bool S15 = true;
-	bool S16 = true;
-	bool S17 = true;
-	bool S18 = true;
-	bool S19 = true;
-	bool S20 = true;
-	bool S21 = true;
-	bool S22 = true;
-	bool S23 = true;
 };
 

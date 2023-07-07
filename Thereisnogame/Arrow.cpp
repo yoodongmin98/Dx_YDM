@@ -10,6 +10,8 @@
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 
+#include "MainMenuLevel.h"
+
 Arrow::Arrow()
 {
 }
@@ -20,7 +22,6 @@ Arrow::~Arrow()
 
 void Arrow::Start()
 {
-
 	Arrow_LightOn = CreateComponent<GameEngineSpriteRenderer>();
 	Arrow_LightOn->SetTexture("ArrowLightOn.png");
 	Arrow_LightOn->GetTransform()->SetLocalScale({ 241,129,1 });
@@ -34,6 +35,7 @@ void Arrow::Start()
 	Arrow_LightOff->GetTransform()->SetLocalPosition({ 145,-516,0 });
 	Arrow_LightOff->GetTransform()->SetLocalRotation({ 0, 0, -40 });
 	Arrow_LightOff->On();
+	
 }
 void Arrow::Update(float _DeltaTime)
 {
@@ -42,9 +44,14 @@ void Arrow::Update(float _DeltaTime)
 	{
 		Arrow_LightOn->On();
 		Arrow_LightOff->Off();
+		
 	}
 	if (ArrowBlinkTime > 2.0f)
 	{
+		if (true == MainMenuLevel::ML->GetIsArrowCreateBool())
+		{
+			Play(Sound, "LightBzz.wav", 0.1f);
+		}
 		Arrow_LightOn->Off();
 		Arrow_LightOff->On();
 		ArrowBlinkTime = 0.0f;

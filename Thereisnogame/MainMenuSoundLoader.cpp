@@ -13,17 +13,12 @@ void MainMenuLevel::SoundLoad()
 		SoundDir.Move("SoundFiles");
 		SoundDir.Move("MainMenus");
 
-		GameEngineSound::Load(SoundDir.GetPlusFileName("MainMenu.wav").GetFullPath());
-		GameEngineSound::Load(SoundDir.GetPlusFileName("MainMenu_LanguageIn.wav").GetFullPath());
-		GameEngineSound::Load(SoundDir.GetPlusFileName("MainMenu_LanguageOut.wav").GetFullPath());
-		GameEngineSound::Load(SoundDir.GetPlusFileName("MainMenu_PanelChoiceOut.wav").GetFullPath());
-		GameEngineSound::Load(SoundDir.GetPlusFileName("MainMenu_PanelChoiceIn.wav").GetFullPath());
-		GameEngineSound::Load(SoundDir.GetPlusFileName("MainMenu_TitleIn.wav").GetFullPath());
+		std::vector<GameEngineFile> File = SoundDir.GetAllFile({ ".wav", });
 
-
-
-
-
+		for (size_t i = 0; i < File.size(); i++)
+		{
+			GameEngineSound::Load(File[i].GetFullPath());
+		}
 		MainBackSound = GameEngineSound::Play("MainMenu.wav");
 		MainBackSound.SetVolume(0.1f);
 	}

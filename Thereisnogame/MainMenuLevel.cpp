@@ -89,13 +89,11 @@ void MainMenuLevel::Start()
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
 		CreateActor<BackCurtain_Main>();
-		PixelPtr=CreateActor<Panel_DrawaPixel>(); 
 		CreateLetter();
 		PanelContinuePtr = CreateActor<Panel_Continue>();
 		PanelBackPtr=CreateActor<Panel_Back>();
-		SelectBoxPtr=CreateActor<SelectBox>();
-		CreateMainMenuArrow();
 		PicturesPtr=CreateActor<StartPictures>();
+
 		CreateActor<AlphaCircle>();
 		MousePtr=CreateActor<Mouse>();
 	}

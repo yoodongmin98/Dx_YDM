@@ -30,6 +30,8 @@ void SelectBox::Start()
 	Box_1Collision = CollisionInit(Box_1Collision, { 315,200,1 }, { -330,-620,0 });
 	Box_2Collision = CollisionInit(Box_2Collision, { 315,200,1 }, { 0,-620,0 });
 	Box_3Collision = CollisionInit(Box_3Collision, { 315,200,1 }, { 330,-620,0 });
+
+	Play(Sound, "MainMenu_PanelChoiceIn.wav", 0.1f);
 }
 
 void SelectBox::Update(float _DeltaTime)
