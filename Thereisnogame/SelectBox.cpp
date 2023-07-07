@@ -10,8 +10,9 @@
 #include <GameEngineCore/GameEngineRenderer.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 
-
+//Actor
 #include "MainMenuLevel.h"
+#include "FolderBackGround.h"
 SelectBox::SelectBox()
 {
 }
@@ -39,6 +40,12 @@ void SelectBox::Update(float _DeltaTime)
 	if (true == ClickCheck(Box_1Collision))
 	{
 		MainMenuLevel::ML->SetIsClickStartButtonTrue();
+	}
+
+	if (true == ClickCheck(Box_3Collision))
+	{
+		Play(Sound, "MainMenu_Click.wav", 0.1f);
+		GetLevel()->CreateActor<FolderBackGround>();
 	}
 }
 

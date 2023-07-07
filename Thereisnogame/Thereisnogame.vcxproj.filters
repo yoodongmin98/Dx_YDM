@@ -727,6 +727,15 @@
     <ClCompile Include="MainMenuSoundLoader.cpp">
       <Filter>Chapter0.0_MainMenu\Level</Filter>
     </ClCompile>
+    <ClCompile Include="Box_Conformation_Q.cpp">
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
+    </ClCompile>
+    <ClCompile Include="Box_Conformation_No.cpp">
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
+    </ClCompile>
+    <ClCompile Include="Box_Conformation_Yes.cpp">
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1443,6 +1452,15 @@
     <ClInclude Include="StartButton.h">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\CoffreFort</Filter>
     </ClInclude>
+    <ClInclude Include="Box_Conformation_Q.h">
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
+    </ClInclude>
+    <ClInclude Include="Box_Conformation_No.h">
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
+    </ClInclude>
+    <ClInclude Include="Box_Conformation_Yes.h">
+      <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1747,6 +1765,9 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor">
       <UniqueIdentifier>{0971909a-1713-4c3c-a8f0-baa9da51c381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox">
+      <UniqueIdentifier>{ccf6cfcc-9af7-4c1f-a9e3-c304e94d8f55}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

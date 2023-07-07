@@ -41,7 +41,8 @@ void Cog::Render(float _Delta)
 void Cog::CogDeathandInterCheck()
 {
 	if (CogCollision->Collision(ActorTypeEnum::PanelCog, ColType::AABBBOX2D, ColType::AABBBOX2D)
-		&& true == Mouse::MainMouse->IsInteractable())
+		&& true == Mouse::MainMouse->IsInteractable()
+		&& true == LevelStateManager::MG->GetIsPanelClick())
 	{
 		LevelStateManager::MG->SetIsCogStickTrue();
 		Death();

@@ -43,7 +43,8 @@ void RouageLoad::Render(float _Delta)
 void RouageLoad::RougeDeathandInterCheck()
 {
 	if (RouageLoadsCollision->Collision(ActorTypeEnum::PanelRouge, ColType::AABBBOX2D, ColType::AABBBOX2D)
-		&& true == Mouse::MainMouse->IsInteractable())
+		&& true == Mouse::MainMouse->IsInteractable()
+		&& true == LevelStateManager::MG->GetIsPanelClick())
 	{
 		LevelStateManager::MG->SetIsRougeStickTrue();
 		Death();
