@@ -79,6 +79,7 @@ void MainMenuLevel::UpdateState(float _DeltaTime)
 	}
 }
 
+bool FlagCreateBool = false;
 void MainMenuLevel::FlagStart()
 {
 	
@@ -89,22 +90,28 @@ void MainMenuLevel::FlagUpdate(float _DeltaTime)
 
 	if (FlagTime > 1.0f)
 	{
+		if (false == FlagCreateBool)
+		{
+			CreateFlag();
+			FlagCreateBool = true;
+		}
 		Flagfunction(_DeltaTime);
 		if (true==IsClicktheFlag) 
 		{
 			ChangeState(MainMenuState::DrawaPixel);
+			Play(MainEtcSound, "MainMenu_LanguageOut.wav", 0.1f);
 		}
 	}
 }
 void MainMenuLevel::FlagEnd()
 {
-
+	
 }
 
 
 void MainMenuLevel::DrawaPixelStart()
 {
-
+	/*Play(FlagIn, "MainMenu_LanguageOut.wav", 0.1f);*/
 }
 void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 {

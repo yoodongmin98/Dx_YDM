@@ -16,6 +16,7 @@ public:
 	F_Chinese& operator=(const F_Chinese& _Other) = delete;
 	F_Chinese& operator=(F_Chinese&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

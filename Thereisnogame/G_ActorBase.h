@@ -2,6 +2,8 @@
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 #include <GameEngineCore/GameEngineCollision.h>
+#include <GameEnginePlatform/GameEngineSound.h>
+
 
 class G_RigidBody;
 class G_ActorBase : public GameEngineActor
@@ -98,6 +100,10 @@ public:
 	void RoShamboStateCheck(std::shared_ptr<GameEngineCollision> _Collision);
 
 	void RightFallRigid(float _RightValue, float _DownValue, bool _globalvariable, float _DeltaTime);
+
+	void Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
+
+	void Pause(GameEngineSoundPlayer _ControlSoundName);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

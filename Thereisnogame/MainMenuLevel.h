@@ -65,8 +65,8 @@ public:
 	void SoundLoad();
 
 	GameEngineSoundPlayer MainBackSound;
-	GameEngineSoundPlayer FlagIn;
-	GameEngineSoundPlayer FlagOut;
+	GameEngineSoundPlayer MainEtcSound;
+	
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

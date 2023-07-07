@@ -89,7 +89,6 @@ void MainMenuLevel::Start()
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
 		CreateActor<BackCurtain_Main>();
-		CreateFlag();
 		PixelPtr=CreateActor<Panel_DrawaPixel>(); 
 		CreateLetter();
 		PanelContinuePtr = CreateActor<Panel_Continue>();
@@ -241,7 +240,6 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValue=FlagValueSet(1,i);
-			if (false == S1) { Play(FlagIn, "MainMenu_LanguageIn.wav", 0.1f); S1 = true; }
 			FlagVector[i].get()->FlagDown(FlagValue,_DeltaTime);
 		}
 		break;
@@ -251,7 +249,6 @@ void MainMenuLevel::Flagfunction(float _DeltaTime)
 		for (int i = 0; i < FlagVector.size(); i++)
 		{
 			float FlagValues = FlagValueSet(2, i);
-			if (false == S2) { Play(FlagOut, "MainMenu_LanguageOut.wav", 0.1f); S2 = true; }
 			FlagVector[i].get()->FlagUp(FlagValues,_DeltaTime);
 		}
 		break;

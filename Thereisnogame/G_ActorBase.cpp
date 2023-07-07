@@ -328,3 +328,15 @@ void G_ActorBase::FlagUp(float _PlusXvalue,float _DeltaTime)
 {
 	GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { -1300- _PlusXvalue,GetTransform()->GetLocalPosition().y}, _DeltaTime));
 }
+
+void G_ActorBase::Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+{
+	_ControlSoundName = GameEngineSound::Play(_MusicName);
+	_ControlSoundName.SetVolume(_Volume);
+	_ControlSoundName.SetLoop(0);
+}
+
+void G_ActorBase::Pause(GameEngineSoundPlayer _ControlSoundName)
+{
+	_ControlSoundName.SetPause(true);
+}
