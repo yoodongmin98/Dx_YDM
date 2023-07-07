@@ -14,6 +14,7 @@
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineLevel.h>
+#include <GameEngineCore/GameEngineFontRenderer.h>
 
 //StaticActor
 #include "RightRotate.h"
@@ -339,4 +340,15 @@ void G_ActorBase::Play(GameEngineSoundPlayer _ControlSoundName, const std::strin
 void G_ActorBase::Pause(GameEngineSoundPlayer _ControlSoundName)
 {
 	_ControlSoundName.SetPause(true);
+}
+
+std::shared_ptr<GameEngineFontRenderer> G_ActorBase::FontInit(std::shared_ptr<GameEngineFontRenderer> _FontRender,const std::string_view& _Text, float _Scale, float4 _WorldPosition)
+{
+	_FontRender = CreateComponent<GameEngineFontRenderer>();
+	_FontRender->SetFont("ÈÞ¸ÕµÕ±ÙÇìµå¶óÀÎ");
+	_FontRender->SetText(_Text);
+	_FontRender->SetScale(_Scale);
+	_FontRender->GetTransform()->SetLocalPosition(_WorldPosition);
+	_FontRender->SetColor(float4(1.0f, 1.0f, 1.0f, 1));
+	return _FontRender;
 }

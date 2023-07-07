@@ -3,6 +3,7 @@
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 #include <GameEngineCore/GameEngineCollision.h>
 #include <GameEnginePlatform/GameEngineSound.h>
+#include <GameEngineCore/GameEngineFontRenderer.h>
 
 
 class G_RigidBody;
@@ -104,6 +105,8 @@ public:
 	void Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
 
 	void Pause(GameEngineSoundPlayer _ControlSoundName);
+
+	std::shared_ptr<GameEngineFontRenderer> FontInit(std::shared_ptr<GameEngineFontRenderer> _FontRender,const std::string_view& _Text, float _Scale, float4 _WorldPosition);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
