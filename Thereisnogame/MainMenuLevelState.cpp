@@ -111,7 +111,7 @@ void MainMenuLevel::FlagEnd()
 
 void MainMenuLevel::DrawaPixelStart()
 {
-	/*Play(FlagIn, "MainMenu_LanguageOut.wav", 0.1f);*/
+	
 }
 void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 {
