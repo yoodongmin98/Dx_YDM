@@ -19,7 +19,7 @@ public:
 	void ZRotations(float _DeltaTime);
 	void RZRotations(float _DeltaTime);
 
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

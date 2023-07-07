@@ -136,7 +136,6 @@ void MainMenuLevel::DrawaPixelUpdate(float _DeltaTime)
 			if (DrawaPixelTime > 10.0f)
 			{
 				ChangeState(MainMenuState::Menu);
-				Play(MainEtcSound, "MainMenu_TitleIn.wav", 0.1f);
 			}
 		}
 	}
@@ -149,7 +148,8 @@ void MainMenuLevel::DrawaPixelEnd()
 
 void MainMenuLevel::MenuStart()
 {
-
+	Play(MainEtcSound, "MainMenu_TitleIn.wav", 0.1f);
+	CreateLetter();
 }
 void MainMenuLevel::MenuUpdate(float _DeltaTime)
 {
@@ -168,9 +168,11 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 
 	MenuFunctional = std::bind(&Panel_Back::RZRotations, PanelBackPtr.get(), std::placeholders::_1);
 	MenuFunctional(_DeltaTime);
-
-	MenuFunctional = std::bind(&StartPictures::PictureUp, PicturesPtr.get(), std::placeholders::_1);
-	MenuFunctional(_DeltaTime);
+	if (nullptr != PicturesPtr)
+	{
+		MenuFunctional = std::bind(&StartPictures::PictureUp, PicturesPtr.get(), std::placeholders::_1);
+		MenuFunctional(_DeltaTime);
+	}
 
 	if (MenuTime > 5.0f)
 	{
@@ -192,8 +194,13 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 		
 		if (true == IsClickStartButton)
 		{
-			ChangeState(MainMenuState::Select);
+			if (nullptr != PicturesPtr)
+			{
+				PicturesPtr.get()->Death();
+			}
+			Play(MainEtcSound, "MainMenu_Click02.wav", 0.1f);
 			Play(MainEtcSound, "MainMenu_PanelChoiceOut.wav", 0.1f);
+			ChangeState(MainMenuState::Select);
 		}
 	}
 	
@@ -206,7 +213,7 @@ void MainMenuLevel::MenuEnd()
 
 void MainMenuLevel::SelectStart()
 {
-
+	PicturesPtr = CreateActor<StartPictures>();
 }
 void MainMenuLevel::SelectUpdate(float _DeltaTime)
 {
@@ -231,6 +238,16 @@ void MainMenuLevel::SelectUpdate(float _DeltaTime)
 
 	if (true == IsClickBackPanel)
 	{
+		ArrowCreateBool = false;
+		SelectBoxPtr.get()->Death();
+		for (size_t i = 0; i < ArrowVector.size(); i++)
+		{
+			ArrowVector[i].get()->Death();
+		}
+		for (size_t i = 0; i < LetterVector.size(); i++)
+		{
+			LetterVector[i].get()->Death();
+		}
 		ChangeState(MainMenuState::Menu);
 	}
 }

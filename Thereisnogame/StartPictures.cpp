@@ -25,6 +25,8 @@ void StartPictures::Start()
 	StartPictureCollision = CollisionInit(StartPictureCollision, { 151,100,1 }, { -180,480,0 });
 
 	FEffect = GetLevel()->GetLastTarget()->CreateEffect<FadeEffect>();
+
+	Play(Sound2, "MainMenu_CreditsIn.wav", 0.1f);
 }
 
 void StartPictures::Update(float _DeltaTime)
@@ -62,9 +64,9 @@ void StartPictures::CollisionInteractableCheck(float _DeltaTime)
 	}
 	if (true == ClickCheck(StartPictureCollision))
 	{
+		Play(Sound, "MainMenu_Click.wav", 0.1f);
 		IsClick = true;
 		FEffect->FadeIn();
-		
 	}
 	if (true == IsClick)
 	{

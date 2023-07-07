@@ -29,6 +29,7 @@ void Panel_Back::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(Panel_BacksCollision))
 	{
+		Play(Sound, "MainMenu_Click.wav", 0.1f);
 		MainMenuLevel::ML->SetIsClickBackPanelTrue();
 	}
 }

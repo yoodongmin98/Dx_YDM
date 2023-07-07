@@ -89,11 +89,8 @@ void MainMenuLevel::Start()
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
 		CreateActor<BackCurtain_Main>();
-		CreateLetter();
 		PanelContinuePtr = CreateActor<Panel_Continue>();
 		PanelBackPtr=CreateActor<Panel_Back>();
-		PicturesPtr=CreateActor<StartPictures>();
-
 		CreateActor<AlphaCircle>();
 		MousePtr=CreateActor<Mouse>();
 	}
@@ -133,7 +130,7 @@ void MainMenuLevel::LevelChangeStart()
 
 void MainMenuLevel::LevelChangeEnd()
 {
-	
+	MainBackSound.Stop();
 }
 
 

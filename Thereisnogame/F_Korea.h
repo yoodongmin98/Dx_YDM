@@ -21,7 +21,7 @@ protected:
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 
-
+	GameEngineSoundPlayer Sound;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> F_Koreas;
 	std::shared_ptr<class GameEngineSpriteRenderer> FlagChain;

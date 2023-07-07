@@ -21,6 +21,7 @@ void F_Korea::Update(float _DeltaTime)
 	Repeat(6, _DeltaTime * 0.7f);
 	if (true == ClickCheck(F_KoreasCollision))
 	{
+		Play(Sound, "MainMenu_Click.wav", 0.1f);
 		MainMenuLevel::ML->SetIsClicktheFlagTrue();
 	}
 }
