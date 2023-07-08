@@ -56,6 +56,8 @@
 #include "F_Russian.h"
 #include "F_Spanish.h"
 
+#include "LevelStateManager.h"
+
 MainMenuLevel* MainMenuLevel::ML;
 MainMenuLevel::MainMenuLevel()
 {
@@ -88,6 +90,7 @@ void MainMenuLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
+		CreateActor<LevelStateManager>();
 		CreateActor<BackCurtain_Main>();
 		PanelContinuePtr = CreateActor<Panel_Continue>();
 		PanelBackPtr=CreateActor<Panel_Back>();

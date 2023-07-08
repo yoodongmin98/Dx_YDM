@@ -39,3 +39,8 @@ void LevelStateManager::MinusCollisionValue()
 {
 	NextCollisionValue = CollisionValue - 1;
 }
+
+void LevelStateManager::LevelChangeStart()
+{
+	MG = this;
+}

@@ -15,7 +15,7 @@ Box_Conformation_Yes::~Box_Conformation_Yes()
 
 void Box_Conformation_Yes::Start()
 {
-	Boxs = Init(Boxs, "MenuOptions_Confirmation_Yes.png", { 435,447,1 }, float4::Zero);
+	Boxs = Init(Boxs, "MenuOptions_Confirmation_Yes.png", { 435*0.7f,447*0.7f,1 }, {-200,-350,0});
 }
 
 void Box_Conformation_Yes::Update(float _DeltaTime)

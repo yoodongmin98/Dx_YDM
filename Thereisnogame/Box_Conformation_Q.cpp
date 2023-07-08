@@ -15,7 +15,7 @@ Box_Conformation_Q::~Box_Conformation_Q()
 
 void Box_Conformation_Q::Start()
 {
-	Boxs = Init(Boxs, "MenuOptions_Confirmation_Question.png", { 348,276,1 }, float4::Zero);
+	Boxs = Init(Boxs, "MenuOptions_Confirmation_Question.png", { 348,276,1 }, { 0,-270,0 });
 }
 
 void Box_Conformation_Q::Update(float _DeltaTime)

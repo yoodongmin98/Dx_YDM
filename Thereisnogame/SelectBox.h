@@ -30,5 +30,10 @@ private:
 	std::shared_ptr<class GameEngineCollision> Box_1Collision;
 	std::shared_ptr<class GameEngineCollision> Box_2Collision;
 	std::shared_ptr<class GameEngineCollision> Box_3Collision;
+
+	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr;
+	std::shared_ptr<class Box_Conformation_No> Box_Conformation_NoPtr;
+	std::shared_ptr<class Box_Conformation_Q> Box_Conformation_QPtr;
+	std::shared_ptr<class Box_Conformation_Yes> Box_Conformation_YesPtr;
 };
 

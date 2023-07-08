@@ -13,6 +13,11 @@
 //Actor
 #include "MainMenuLevel.h"
 #include "FolderBackGround.h"
+#include "Box_Conformation_No.h"
+#include "Box_Conformation_Q.h"
+#include "Box_Conformation_Yes.h"
+#include "LevelStateManager.h"
+
 SelectBox::SelectBox()
 {
 }
@@ -37,6 +42,9 @@ void SelectBox::Start()
 
 void SelectBox::Update(float _DeltaTime)
 {
+	ManagedCollision(Box_1Collision, 0);
+	ManagedCollision(Box_2Collision, 0);
+	ManagedCollision(Box_3Collision, 0);
 	if (true == ClickCheck(Box_1Collision))
 	{
 		MainMenuLevel::ML->SetIsClickStartButtonTrue();
@@ -44,8 +52,21 @@ void SelectBox::Update(float _DeltaTime)
 
 	if (true == ClickCheck(Box_3Collision))
 	{
+		LevelStateManager::MG->PlusCollisionValue();
 		Play(Sound, "MainMenu_Click.wav", 0.1f);
-		GetLevel()->CreateActor<FolderBackGround>();
+		FolderBackGroundPtr=GetLevel()->CreateActor<FolderBackGround>();
+		Box_Conformation_NoPtr=GetLevel()->CreateActor<Box_Conformation_No>();
+		Box_Conformation_QPtr=GetLevel()->CreateActor<Box_Conformation_Q>();
+		Box_Conformation_YesPtr=GetLevel()->CreateActor<Box_Conformation_Yes>();
+	}
+	if (nullptr != Box_Conformation_NoPtr)
+	{
+		if (true == Box_Conformation_NoPtr->IsDeath())
+		{
+			FolderBackGroundPtr->Death();
+			Box_Conformation_QPtr->Death();
+			Box_Conformation_YesPtr->Death();
+		}
 	}
 }
 
