@@ -50,6 +50,8 @@ void PlaywithinaplayLevel::Start()
 		}
 	}
 
+	SoundLoad();
+
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
@@ -103,6 +105,7 @@ void PlaywithinaplayLevel::Update(float _DeltaTime)
 void PlaywithinaplayLevel::LevelChangeStart()
 {
 	FEffect->FadeOut();
+	Play(StartBackSound, "MusicStart.wav", 0.1f);
 }
 
 void PlaywithinaplayLevel::LevelChangeEnd()

@@ -736,6 +736,9 @@
     <ClCompile Include="Box_Conformation_Yes.cpp">
       <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
     </ClCompile>
+    <ClCompile Include="Play within a play Level SoundLoader.cpp">
+      <Filter>Chapter1.0_Play within a play\Level</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">

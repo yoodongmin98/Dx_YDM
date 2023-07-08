@@ -516,6 +516,7 @@
     <ClCompile Include="PinBall_SideTable.cpp" />
     <ClCompile Include="PixelBook.cpp" />
     <ClCompile Include="Plaque.cpp" />
+    <ClCompile Include="Play within a play Level SoundLoader.cpp" />
     <ClCompile Include="Play within a play LevelState.cpp" />
     <ClCompile Include="Private18.cpp" />
     <ClCompile Include="AlphaCircle.cpp" />

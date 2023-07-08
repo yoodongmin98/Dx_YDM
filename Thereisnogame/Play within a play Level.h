@@ -1,6 +1,6 @@
 #pragma once
 #include <GameEngineCore\GameEngineLevel.h>
-
+#include <GameEnginePlatform/GameEngineSound.h>
 
 enum class Chap1LevelState
 {
@@ -41,6 +41,9 @@ public:
 	PlaywithinaplayLevel& operator=(PlaywithinaplayLevel&& _Other) noexcept = delete;
 	std::shared_ptr<class FadeEffect> FEffect;
 
+	void Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
+	void Pause(GameEngineSoundPlayer _ControlSoundName);
+
 	void ChangeState(Chap1LevelState _State);
 	void UpdateState(float _DeltaTime);
 
@@ -62,6 +65,9 @@ public:
 		BlockCount -= 1;
 	}
 
+	void SoundLoad();
+
+	GameEngineSoundPlayer StartBackSound;
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -186,6 +192,10 @@ private:
 	std::shared_ptr<class LeftDirectionArrow> LeftDirectionArrowPtr2;
 
 	///State
+	void NoneStart();
+	void NoneUpdate(float _DeltaTime);
+	void NoneEnd();
+
 	void ClickCordonStart();
 	void ClickCordonUpdate(float _DeltaTime);
 	void ClickCordonEnd();

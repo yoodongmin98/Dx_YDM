@@ -83,6 +83,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 
 	switch (NextState)
 	{
+	case Chap1LevelState::None:
+		NoneStart();
+		break;
 	case Chap1LevelState::ClickCordon:
 		ClickCordonStart();
 		break;
@@ -125,6 +128,9 @@ void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
 
 	switch (PrevState)
 	{
+	case Chap1LevelState::None:
+		NoneEnd();
+		break;
 	case Chap1LevelState::ClickCordon:
 		ClickCordonEnd();
 		break;
@@ -170,6 +176,9 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 {
 	switch (StateValue)
 	{
+	case Chap1LevelState::None:
+		NoneUpdate(_DeltaTime);
+		break;
 	case Chap1LevelState::ClickCordon:
 		ClickCordonUpdate(_DeltaTime);
 		break;
@@ -211,6 +220,20 @@ void PlaywithinaplayLevel::UpdateState(float _DeltaTime)
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void PlaywithinaplayLevel::NoneStart()
+{
+	
+}
+void PlaywithinaplayLevel::NoneUpdate(float _DeltaTime)
+{
+	
+}
+void PlaywithinaplayLevel::NoneEnd()
+{
+
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void PlaywithinaplayLevel::ClickCordonStart()
