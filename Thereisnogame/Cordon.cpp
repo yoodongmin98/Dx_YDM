@@ -50,7 +50,7 @@ void Cordon::Update(float _DeltaTime)
 	}
 	if (true == ClickCheck(CordonsCollision)&& Chap1LevelState::None==PlaywithinaplayLevel::LM->GetLevelState())
 	{
-		Play(Sound, "MainMenu_LanguageOut.wav", 0.1f);
+		Play(Sound, "CurtainOpen(Start).wav", 0.1f);
 		CordonsCollision->Death();
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::ClickCordon);
 	}
