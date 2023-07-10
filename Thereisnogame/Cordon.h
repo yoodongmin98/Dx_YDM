@@ -13,6 +13,7 @@ public:
 	Cordon& operator=(const Cordon& _Other) = delete;
 	Cordon& operator=(Cordon&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

@@ -30,9 +30,16 @@ void Cordon::Start()
 	CordonsCollision->Off();
 }
 
+bool Cordonlerfbool = false;
 void Cordon::Update(float _DeltaTime)
 {
-	if (GetLiveTime() > 3.0f&& true==MoveValue)
+	if (GetLiveTime() > 10.0f&& true==MoveValue) //내려오는시간
+	{
+		Cordonlerfbool = true;
+		ResetLiveTime();
+		Play(Sound, "Corde01.wav", 0.1f);
+	}
+	if (true== Cordonlerfbool && true == MoveValue)
 	{
 		GetTransform()->SetLocalPosition(float4::LerpClamp(GetTransform()->GetLocalPosition(), { 0,-Values }, _DeltaTime));
 		if (GetTransform()->GetLocalPosition().y < -(Values - 5))
@@ -43,6 +50,7 @@ void Cordon::Update(float _DeltaTime)
 	}
 	if (true == ClickCheck(CordonsCollision)&& Chap1LevelState::None==PlaywithinaplayLevel::LM->GetLevelState())
 	{
+		Play(Sound, "MainMenu_LanguageOut.wav", 0.1f);
 		CordonsCollision->Death();
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::ClickCordon);
 	}
