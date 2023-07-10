@@ -13,6 +13,7 @@ public:
 	Plaque& operator=(const Plaque& _Other) = delete;
 	Plaque& operator=(Plaque&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

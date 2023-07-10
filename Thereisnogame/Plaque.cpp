@@ -32,6 +32,7 @@ void Plaque::Update(float _DeltaTime)
 		PlaquesCollision->On();
 		if (true == ClickCheck(PlaquesCollision))
 		{
+			Play(Sound, "PlaqueHit.wav", 0.1f);
 			ClickCount++;
 		}
 	}
@@ -41,6 +42,7 @@ void Plaque::Update(float _DeltaTime)
 	}
 	if (ClickCount > 5 && true == ClickCheck(PlaquesCollision))
 	{
+		Play(Sound, "CurtainOpen(Start).wav", 0.1f);
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::CreateBoard);
 	}
 }
