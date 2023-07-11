@@ -17,7 +17,9 @@ void GameEngineTileMapRenderer::Start()
 	GameEngineRenderer::Start();
 
 	SetMesh("Rect");
-	SetPipeLine("2DTexture");
+	SetPipeLine("TileMap");
+
+	// SetPipeLine("2DTexture");
 
 	AtlasData.x = 0.0f;
 	AtlasData.y = 0.0f;
@@ -27,19 +29,17 @@ void GameEngineTileMapRenderer::Start()
 	ColorOptionValue.MulColor = float4::One;
 	ColorOptionValue.PlusColor = float4::Null;
 
-	Clip.x = 1.0f;
-	Clip.y = 1.0f;
-
 	GetShaderResHelper().SetConstantBufferLink("AtlasData", AtlasData);
 	GetShaderResHelper().SetConstantBufferLink("ColorOption", ColorOptionValue);
-	GetShaderResHelper().SetConstantBufferLink("ClipData", Clip);
+	
 }
 
-void GameEngineTileMapRenderer::CreateTileMap(int _X, int _Y, const float4& _TileSize, const float4& _RenderSize, TileMapMode _Mode)
+void GameEngineTileMapRenderer::CreateTileMap(int _X, int _Y, float _ZPos, const float4& _TileSize, const float4& _RenderSize, TileMapMode _Mode)
 {
 	TileSize = _TileSize;
 	TileSize.z = 1.0f;
 	TileSizeH = TileSize.half();
+	ZPos = _ZPos;
 
 	if (_RenderSize == float4::Zero)
 	{
@@ -144,6 +144,8 @@ void GameEngineTileMapRenderer::Render(float _Delta)
 				default:
 					break;
 				}
+
+				vPos.z = ZPos;
 
 				Scale.Scale(RenderSize);
 				Pos.Pos(vPos);
