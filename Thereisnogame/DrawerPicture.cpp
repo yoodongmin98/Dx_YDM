@@ -28,6 +28,7 @@ void DrawerPicture::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(DrawerCollision))
 	{
+		Play(Sound, "DrawerOpen.wav", 0.1f);
 		DrawerOpen->On();
 		DrawerClose->Death();
 	}
@@ -48,6 +49,7 @@ void DrawerPicture::ScreenActorCreateCheck()
 	{
 		if (true == CreateBool&& true==DrawerClose->IsDeath())
 		{
+			Play(Sound, "TiroirObj.wav", 0.1f);
 			GetLevel()->CreateActor<Decapsuleur>();
 			CreateBool = false;
 		}

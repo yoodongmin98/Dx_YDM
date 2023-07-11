@@ -17,6 +17,8 @@ public:
 	DrawerPicture& operator=(DrawerPicture&& _Other) noexcept = delete;
 
 	void ScreenActorCreateCheck();
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

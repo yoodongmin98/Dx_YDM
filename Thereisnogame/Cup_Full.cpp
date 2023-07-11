@@ -26,6 +26,8 @@ void Cup_Full::Start()
 	Cup_FullsCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Cup_Full);
 	Cup_FullsCollision->GetTransform()->SetLocalScale({ 94,121,1 });
 	Cup_FullsCollision->GetTransform()->SetLocalPosition(Position);
+
+	Play(Sound, "CupFull.wav", 0.2f);
 }
 
 void Cup_Full::Update(float _DeltaTime)

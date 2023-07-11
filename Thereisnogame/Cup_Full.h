@@ -16,7 +16,7 @@ public:
 	Cup_Full& operator=(const Cup_Full& _Other) = delete;
 	Cup_Full& operator=(Cup_Full&& _Other) noexcept = delete;
 
-	//Text를 받을수있는 함수추가
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;
