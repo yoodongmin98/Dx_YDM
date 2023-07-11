@@ -7,7 +7,7 @@
 //Actor
 #include "MediaPicture.h"
 #include "LevelStateManager.h"
-
+#include "Fake Program Level.h"
 
 MusicNote_Archive::MusicNote_Archive()
 {
@@ -31,6 +31,7 @@ void MusicNote_Archive::Update(float _DeltaTime)
 		LevelStateManager::MG->SetIsRainfalse();
 		LevelStateManager::MG->SetIsWalNutfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(2);
+		FakeProgramLevel::FP->ChangeBGM("Chap02_MetalMusic.wav");
 	}
 }
 

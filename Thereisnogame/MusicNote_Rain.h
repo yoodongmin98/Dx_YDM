@@ -16,7 +16,7 @@ public:
 	MusicNote_Rain& operator=(const MusicNote_Rain& _Other) = delete;
 	MusicNote_Rain& operator=(MusicNote_Rain&& _Other) noexcept = delete;
 
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

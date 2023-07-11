@@ -8,7 +8,7 @@
 //Actor
 #include "MediaPicture.h"
 #include "LevelStateManager.h"
-
+#include "Fake Program Level.h"
 MusicNote_Walnut::MusicNote_Walnut()
 {
 }
@@ -31,6 +31,7 @@ void MusicNote_Walnut::Update(float _DeltaTime)
 		LevelStateManager::MG->SetIsRainfalse();
 		LevelStateManager::MG->SetIsWalNuttrue();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(1);
+		FakeProgramLevel::FP->ChangeBGM("Chap02_NutCrackerMusic.wav");
 	}
 }
 

@@ -22,27 +22,33 @@ void FakeProgramLevel::SoundLoad()
 	}
 }
 
-void FakeProgramLevel::FPlay(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+void FakeProgramLevel::ReSetBGM()
 {
-	_ControlSoundName = GameEngineSound::Play(_MusicName);
-	_ControlSoundName.SetVolume(_Volume);
-	_ControlSoundName.SetLoop(0);
+	MainBGM = GameEngineSound::Play("Chap02_ElevatorMusic.wav");
+	MainBGM.SetVolume(0.1f);
+	MainBGM.SetLoop(-1);
 }
 
-void FakeProgramLevel::FPause(GameEngineSoundPlayer _ControlSoundName)
+void FakeProgramLevel::StopBGM()
 {
-	_ControlSoundName.SetPause(true);
+	MainBGM.Stop();
 }
 
-void FakeProgramLevel::PausePlay(GameEngineSoundPlayer _ControlSoundName)
+GameEngineSoundPlayer FakeProgramLevel::ChangeBGM(const std::string_view& _MusicName)
 {
-	_ControlSoundName.SetPause(false);
+	MainBGM.Stop();
+	MainBGM= GameEngineSound::Play(_MusicName);
+	MainBGM.SetVolume(0.1f);
+	MainBGM.SetLoop(0);
+
+	return MainBGM;
 }
 
-void FakeProgramLevel::ChangeBGM(const std::string_view& _MusicName, float _Volume)
+void FakeProgramLevel::BGMPauseOn()
 {
-	//MainBGM= GameEngineSound::Play(_MusicName);
-	//MainBGM.SetVolume(_Volume);
-	//MainBGM.SetLoop(0);
-
+	MainBGM.SetPause(true);
+}
+void FakeProgramLevel::BGMPauseOff()
+{
+	MainBGM.SetPause(false);
 }

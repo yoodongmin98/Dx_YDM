@@ -92,6 +92,7 @@ void FakeProgramLevel::Update(float _DeltaTime)
 void FakeProgramLevel::LevelChangeStart()
 {
 	FEffect->FadeOut();
+	ReSetBGM();
 }
 
 void FakeProgramLevel::FolderCreate()

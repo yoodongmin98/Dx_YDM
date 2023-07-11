@@ -45,6 +45,16 @@ void DayIcon::Update(float _DeltaTime)
 	if (true == ClickCheck(DayIconCollision))
 	{
 		LevelStateManager::MG->PlusCollisionValue();
+		if (2 == LevelStateManager::MG->GetClockValue())
+		{
+			Sound = Play(Sound, "AmbianceDay.wav", 0.1f);
+			Sound.SetLoop(-1);
+		}
+		else
+		{
+			Sound = Play(Sound, "AmbianceNight.wav", 0.1f);
+			Sound.SetLoop(-1);
+		}
 		DayPicturePtr=GetLevel()->CreateActor<DayPicture>();
 		DayTreePtr=GetLevel()->CreateActor<DayTree>();
 		LeftRotatePtr=GetLevel()->CreateActor<LeftRotate>();
@@ -71,6 +81,7 @@ void DayIcon::BoxCroixDeathCheck()
 {
 	if (true == BoxCroix_DayPicturePtr->IsDeath())
 	{
+		Sound.Stop();
 		DayPicturePtr.get()->Death();
 		DayTreePtr.get()->Death();
 		LeftRotatePtr.get()->Death();

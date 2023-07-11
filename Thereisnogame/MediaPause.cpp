@@ -35,6 +35,7 @@ void MediaPause::Update(float _DeltaTime)
 		MediaPauseoffs->Off();
 		MediaPlay::MainMediaPlay->SetMediaPlayoff(2);
 		MediaPicture::MainMediaPicture->SetPlayandPause("Pause");
+		FakeProgramLevel::FP->BGMPauseOn();
 	}
 }
 

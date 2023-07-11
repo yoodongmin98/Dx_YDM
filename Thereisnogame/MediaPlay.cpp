@@ -36,6 +36,7 @@ void MediaPlay::Update(float _DeltaTime)
 		MediaPlayoffs->Off();
 		MediaPause::MainMediaPause->SetMediaPauseoff();
 		MediaPicture::MainMediaPicture->SetPlayandPause("Play");
+		FakeProgramLevel::FP->BGMPauseOff();
 	}
 }
 
@@ -61,3 +62,5 @@ void MediaPlay::SetMediaPlayoff(int _Value)
 		MsgAssert("MediaPlay에 이상한 값 넣지마라")
 	}
 }
+
+

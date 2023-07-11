@@ -7,6 +7,7 @@
 //Actor
 #include "MediaPicture.h"
 #include "LevelStateManager.h"
+#include "Fake Program Level.h"
 
 MusicNote_Rain::MusicNote_Rain()
 {
@@ -30,6 +31,8 @@ void MusicNote_Rain::Update(float _DeltaTime)
 		LevelStateManager::MG->SetIsRaintrue();
 		LevelStateManager::MG->SetIsWalNutfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(3);
+		Sound=FakeProgramLevel::FP->ChangeBGM("RainLoop.wav");
+		Sound.SetLoop(-1);
 	}
 }
 

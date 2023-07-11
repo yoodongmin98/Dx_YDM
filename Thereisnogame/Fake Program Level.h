@@ -18,18 +18,19 @@ public:
 	FakeProgramLevel& operator=(FakeProgramLevel&& _Other) noexcept = delete;
 	std::shared_ptr<class FadeEffect> FEffect;
 
-	void FPlay(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
-	void FPause(GameEngineSoundPlayer _ControlSoundName);
-	void PausePlay(GameEngineSoundPlayer _ControlSoundName);
+	void ReSetBGM();
+	void StopBGM();
+	void BGMPauseOn();
+	void BGMPauseOff();
 
 	void SoundLoad();
 
 	void FolderCreate();
 
 	
-	GameEngineSoundPlayer Sound;
+	GameEngineSoundPlayer MainBGM;
 
-	void ChangeBGM(const std::string_view& _MusicName, float _Volume);
+	GameEngineSoundPlayer ChangeBGM(const std::string_view& _MusicName);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

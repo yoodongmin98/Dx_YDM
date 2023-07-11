@@ -19,6 +19,7 @@ public:
 	void BoxCroixDeathCheck();
 	std::shared_ptr<GameEngineSpriteRenderer> ChangeDayIconRender(std::shared_ptr<class GameEngineSpriteRenderer> _PictureRender);
 	void WhatisIconRender();
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

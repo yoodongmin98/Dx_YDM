@@ -7,6 +7,7 @@
 //Actor
 #include "MediaPicture.h"
 #include "LevelStateManager.h"
+#include "Fake Program Level.h"
 
 MusicNote_Radio::MusicNote_Radio()
 {
@@ -30,6 +31,7 @@ void MusicNote_Radio::Update(float _DeltaTime)
 		LevelStateManager::MG->SetIsRainfalse();
 		LevelStateManager::MG->SetIsWalNutfalse();
 		MediaPicture::MainMediaPicture->ChangeMusicPicture(4);
+		FakeProgramLevel::FP->ChangeBGM("Chap02_ElevatorMusic.wav");
 	}
 }
 

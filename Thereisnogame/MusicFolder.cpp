@@ -23,6 +23,7 @@
 #include "BoxCroix_Music.h"
 #include "LevelStateManager.h"
 #include "FolderBackGround.h"
+#include "Fake Program Level.h"
 
 MusicFolder::MusicFolder()
 {
@@ -44,6 +45,7 @@ void MusicFolder::Update(float _DeltaTime)
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
 		Play(Sound, "OpenWindow.wav", 0.1f);
+		FakeProgramLevel::FP->ChangeBGM("Chap02_NutCrackerMusic.wav");
 		LevelStateManager::MG->PlusCollisionValue();
 		LevelStateManager::MG->SetIsRainfalse();
 		LevelStateManager::MG->SetIsWalNuttrue();
