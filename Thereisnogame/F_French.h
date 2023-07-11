@@ -27,5 +27,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> FlagChain;
 
 	std::shared_ptr<class GameEngineCollision> F_FrenchsCollision;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

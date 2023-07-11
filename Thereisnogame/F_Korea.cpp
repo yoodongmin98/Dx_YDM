@@ -15,7 +15,7 @@ void F_Korea::Start()
 {
 	F_Koreas=Init(F_Koreas, "Flag_Korea.png", { 198,727,1 }, { 330,750,0 });//400
 	F_KoreasCollision = CollisionInit(F_KoreasCollision, { 198,133,1 }, { 330,550,0 });
-	Font = FontInit(Font, "안녕", 10, float4::Zero);
+	Font = FontCreate(Font, 20, "이 글이 보인다면 프로그램을 종료해주세요!", { 0,-260,0 }, GetTransform(), 2);
 	Font->Off();
 }
 
@@ -27,6 +27,7 @@ void F_Korea::Update(float _DeltaTime)
 		Play(Sound, "MainMenu_Click.wav", 0.1f);
 		MainMenuLevel::ML->SetIsClicktheFlagTrue();
 	}
+
 	if (F_KoreasCollision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D))
 	{
 		Font->On();

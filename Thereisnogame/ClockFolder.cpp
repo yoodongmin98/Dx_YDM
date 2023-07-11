@@ -25,6 +25,9 @@
 #include "ClockBranch.h"
 #include "FolderBackGround.h"
 
+//Core
+#include <GameEngineCore/GameEngineFontRenderer.h>
+
 ClockFolder::ClockFolder()
 {
 }
@@ -40,6 +43,7 @@ void ClockFolder::Start()
 	ClockFoldersCollision = CollisionInit(ClockFoldersCollision, { 102,97 }, { 420,200,0 });
 
 	ClockFolder_Day->Off();
+	ClockFont = FontCreate(ClockFont, 48, "¾È³ç", float4::Zero,GetTransform(),2);
 }
 
 void ClockFolder::Update(float _DeltaTime)
@@ -120,3 +124,4 @@ void ClockFolder::BoxCroixDeathCheck()
 		}
 	}
 }
+

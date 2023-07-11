@@ -106,7 +106,11 @@ public:
 
 	void Pause(GameEngineSoundPlayer _ControlSoundName);
 
-	std::shared_ptr<GameEngineFontRenderer> FontInit(std::shared_ptr<GameEngineFontRenderer> _FontRender,const std::string_view& _Text, float _Scale, float4 _WorldPosition);
+	//1이면 Local 아니면 World
+	std::shared_ptr<GameEngineFontRenderer> FontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender, float _Scale,
+		const std::string_view _Text, float4 _Position,
+		GameEngineTransform* _Transform,
+		int _Index);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -118,4 +122,6 @@ private:
 	float Progress = 0.0f;
 	float4 EndPos = float4::Zero;
 	G_RigidBody* pRigidBody;
+
+	std::string Font = "ChevyRay";
 };

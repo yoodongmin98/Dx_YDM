@@ -16,6 +16,7 @@
 #include <GameEngineCore/GameEngineLevel.h>
 #include <GameEngineCore/GameEngineFontRenderer.h>
 
+
 //StaticActor
 #include "RightRotate.h"
 #include "LevelStateManager.h"
@@ -77,7 +78,6 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::Init(
 	float4 _Scale,
 	float4 _Position)
 {
-	
 	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
@@ -344,14 +344,26 @@ void G_ActorBase::Pause(GameEngineSoundPlayer _ControlSoundName)
 	_ControlSoundName.SetPause(true);
 }
 
-std::shared_ptr<GameEngineFontRenderer> G_ActorBase::FontInit(std::shared_ptr<GameEngineFontRenderer> _FontRender,const std::string_view& _Text, float _Scale, float4 _WorldPosition)
+
+std::shared_ptr<GameEngineFontRenderer> G_ActorBase::FontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender,
+	float _Scale, const std::string_view _Text, float4 _Position,
+	GameEngineTransform* _Transform,
+	int _Index)
 {
 	_FontRender = CreateComponent<GameEngineFontRenderer>();
-	_FontRender->SetFont("ÈÞ¸ÕµÕ±ÙÇìµå¶óÀÎ");
-	_FontRender->SetText(_Text);
+	_FontRender->GetTransform()->SetParent(_Transform);
+	_FontRender->SetFont(Font);
+	_FontRender->SetFontFlag(FW1_CENTER);
 	_FontRender->SetScale(_Scale);
-	_FontRender->SetFontFlag(static_cast<FW1_TEXT_FLAG>(FW1_TEXT_FLAG::FW1_CENTER | FW1_TEXT_FLAG::FW1_VCENTER));
-	_FontRender->GetTransform()->SetLocalPosition(_WorldPosition);
-	_FontRender->SetColor(float4(1.0f, 1.0f, 1.0f, 1));
+	_FontRender->SetColor(float4::White);
+	_FontRender->SetText(_Text);
+	if (1 == _Index)
+	{
+		_FontRender->GetTransform()->SetLocalPosition(_Position);
+	}
+	else
+	{
+		_FontRender->GetTransform()->SetWorldPosition(_Position);
+	}
 	return _FontRender;
 }

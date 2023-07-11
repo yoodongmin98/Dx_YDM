@@ -50,5 +50,7 @@ private:
 	std::shared_ptr<class ClockDayandNight> ClockDayandNightPtr;
 	std::shared_ptr<class BoxCroix_ClockDay> BoxCroix_ClockDayPtr;
 	std::shared_ptr<class ClockBranch> ClockBranchPtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont;
 };
 
