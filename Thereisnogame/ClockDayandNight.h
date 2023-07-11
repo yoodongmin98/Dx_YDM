@@ -25,5 +25,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> ClockDay;
 	std::shared_ptr<class GameEngineSpriteRenderer> ClockNight;
 
+	float Times = 0.0f;
 };
 

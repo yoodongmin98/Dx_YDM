@@ -39,6 +39,11 @@ void ClockDayandNight::Update(float _DeltaTime)
 	}
 	else
 	{
+		Times += _DeltaTime;
+		if (1.0f <= ClockDay->ColorOptionValue.MulColor.a)
+		{
+			ClockDay->ColorOptionValue.MulColor.a = sinf(Times) + 1.0f;
+		}
 		ClockDay->On();
 		ClockNight->Off();
 	}

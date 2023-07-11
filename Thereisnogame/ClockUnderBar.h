@@ -25,6 +25,8 @@ public:
 	bool PasswordCheck();
 	void PasswordSet(int _Value1, int Value2, int Value3, int Value4, int Value5, int Value6);
 	void UnderBarOffAndCreateNumberRender();
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

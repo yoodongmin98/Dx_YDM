@@ -16,7 +16,7 @@ public:
 	ClockBranch& operator=(const ClockBranch& _Other) = delete;
 	ClockBranch& operator=(ClockBranch&& _Other) noexcept = delete;
 
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

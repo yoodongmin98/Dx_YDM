@@ -26,6 +26,7 @@ void ClockPaddle4::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(ClockPaddle4sCollision))
 	{
+		Play(Sound, "Digicode.wav", 0.1f);
 		ClockUnderBar::CM->ClockPasswordPush(4);
 	}
 }

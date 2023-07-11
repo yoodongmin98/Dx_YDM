@@ -41,11 +41,13 @@ void ClockBranch::Update(float _DeltaTime)
 	}
 	if (true == ClickCheck(ClockBranchsCollision))
 	{
+		Play(Sound, "Drag.wav", 0.1f);
 		FallCount++;
 		ClockBranchs->GetTransform()->AddLocalPosition({ 0,-5*_DeltaTime * 100.0f,0 });
 		ClockBranchsCollision->GetTransform()->AddLocalPosition({ 0,-5*_DeltaTime * 100.0f,0 });
 		if (5 == FallCount&& true == ClickCheck(ClockBranchsCollision))
 		{
+			Play(Sound, "HaloSun.wav", 0.1f);
 			LevelStateManager::MG->PlusClockValue();
 			int asda=LevelStateManager::MG->GetClockValue();
 		}

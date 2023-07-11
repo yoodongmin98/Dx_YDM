@@ -42,12 +42,14 @@ void ClockUnderBar::Update(float _DeltaTime)
 	UnderBarOffAndCreateNumberRender();
 	if (true == PasswordCheck())
 	{
+		Play(Sound, "DigicodeRight.wav", 0.1f);
 		LevelStateManager::MG->PlusClockValue();
 		LevelStateManager::MG->MinusCollisionValue();
 		Death();
 	}
 	if (6==PassWordCheck.size()&&false == PasswordCheck())
 	{
+		Play(Sound, "DigicodeWrong.wav", 0.1f);
 		LevelStateManager::MG->MinusCollisionValue();
 		Death();
 	}

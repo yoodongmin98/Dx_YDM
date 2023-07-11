@@ -16,7 +16,7 @@ public:
 	ClockPaddle2& operator=(const ClockPaddle2& _Other) = delete;
 	ClockPaddle2& operator=(ClockPaddle2&& _Other) noexcept = delete;
 
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;
