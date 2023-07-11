@@ -23,6 +23,7 @@ void Panel_Back::Start()
 {
 	Init(Panel_Backs, "MenuOptions_BackPanel.png", { 228,195,1 }, { -300,-750,0 });
 	Panel_BacksCollision = CollisionInit(Panel_BacksCollision, { 150,100,1 }, { -290,-780,0 });
+	Font = FontCreate(Font, 25, "µÚ·Î", { -280,-760,0 }, GetTransform(), 1);
 }
 
 void Panel_Back::Update(float _DeltaTime)

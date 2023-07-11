@@ -29,5 +29,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Panel_Backs;
 	std::shared_ptr<class GameEngineCollision> Panel_BacksCollision;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

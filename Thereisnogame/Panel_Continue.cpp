@@ -23,6 +23,7 @@ void Panel_Continue::Start()
 {
 	Panel_Continues=Init(Panel_Continues, "Menu_Panel_Continue.png", { 306,195,1 }, { 0,-615,0 });
 	Panel_ContinuesCollision = CollisionInit(Panel_ContinuesCollision, { 306,195,1 }, { 0,-615,0 });
+	Font = FontCreate(Font, 30, "레벨 선택", { 0,-545,0 }, GetTransform(), 1);
 }
 
 void Panel_Continue::Update(float _DeltaTime)

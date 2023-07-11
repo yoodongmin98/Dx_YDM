@@ -38,6 +38,10 @@ void SelectBox::Start()
 	Box_3Collision = CollisionInit(Box_3Collision, { 315,200,1 }, { 330,-620,0 });
 
 	Play(Sound, "MainMenu_PanelChoiceIn.wav", 0.1f);
+
+	Font1 = FontCreate(Font1, 30, "여기 게임 없음", { -340,-590,0 }, GetTransform(), 1);
+	Font2 = FontCreate(Font2, 30, "쓸모없는 설정", { -5,-585,0 }, GetTransform(), 1);
+	Font3 = FontCreate(Font3, 30, "이쪽입니다!", { 330,-585,0 }, GetTransform(), 1);
 }
 
 void SelectBox::Update(float _DeltaTime)

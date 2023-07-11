@@ -35,5 +35,9 @@ private:
 	std::shared_ptr<class Box_Conformation_No> Box_Conformation_NoPtr;
 	std::shared_ptr<class Box_Conformation_Q> Box_Conformation_QPtr;
 	std::shared_ptr<class Box_Conformation_Yes> Box_Conformation_YesPtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
+	std::shared_ptr<class GameEngineFontRenderer> Font3;
 };
 
