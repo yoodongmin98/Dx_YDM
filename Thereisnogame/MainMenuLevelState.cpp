@@ -176,7 +176,7 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 		MenuFunctional(_DeltaTime);
 	}
 
-	if (MenuTime > 5.0f)
+	if (MenuTime > 3.0f)
 	{
 		if (GameEngineInput::IsDown("LeftMouse"))
 		{

@@ -19,6 +19,7 @@ void Box_Conformation_No::Start()
 	float4 Position = { 230,-300,0 };
 	Boxs = Init(Boxs, "MenuOptions_Confirmation_No.png", { 273 * 0.7f,309 * 0.7f,1 }, Position);
 	BoxsCollision = CollisionInit(BoxsCollision, { 150,50,1 }, Position + float4::Up * 60);
+	Font = FontCreate(Font, 20, "¾Æ´Ï¿À", {220,-220,0}, GetTransform(), 1);
 }
 
 void Box_Conformation_No::Update(float _DeltaTime)

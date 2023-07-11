@@ -21,11 +21,13 @@ protected:
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 
-
+	
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Boxs;
 	std::shared_ptr<class GameEngineCollision> BoxsCollision;
 
 	bool IsClick = false;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

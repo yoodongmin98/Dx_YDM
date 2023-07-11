@@ -25,5 +25,6 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Boxs;
 
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 
