@@ -27,6 +27,7 @@ void BoxCroix_PR_Miss::Update(float _DeltaTime)
 	ManagedCollision(BoxCroixsCollision, 5);
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
+		Play(Sound, "CloseWindow.wav", 0.1f);
 		LevelStateManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();

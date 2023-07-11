@@ -16,6 +16,7 @@ public:
 	BoxCroix_PR_Ultra& operator=(const BoxCroix_PR_Ultra& _Other) = delete;
 	BoxCroix_PR_Ultra& operator=(BoxCroix_PR_Ultra&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

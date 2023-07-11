@@ -29,6 +29,7 @@ void LeftRotate::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(LeftRotatesCollision))
 	{
+		Play(Sound, "Chap02_RotationImage.wav", 0.1f);
 		RightRotate::MainRightRotate->MinusHowManyClick();
 	}
 }

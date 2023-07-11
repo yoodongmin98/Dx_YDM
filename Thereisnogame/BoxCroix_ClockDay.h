@@ -16,6 +16,7 @@ public:
 	BoxCroix_ClockDay& operator=(const BoxCroix_ClockDay& _Other) = delete;
 	BoxCroix_ClockDay& operator=(BoxCroix_ClockDay&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

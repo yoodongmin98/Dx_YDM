@@ -16,6 +16,7 @@ public:
 	BoxCroix_PictureFolder& operator=(const BoxCroix_PictureFolder& _Other) = delete;
 	BoxCroix_PictureFolder& operator=(BoxCroix_PictureFolder&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

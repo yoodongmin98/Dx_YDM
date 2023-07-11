@@ -16,6 +16,7 @@ public:
 	BoxCroix_ClockPanel& operator=(const BoxCroix_ClockPanel& _Other) = delete;
 	BoxCroix_ClockPanel& operator=(BoxCroix_ClockPanel&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

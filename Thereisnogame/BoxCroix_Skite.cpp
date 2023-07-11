@@ -30,6 +30,7 @@ void BoxCroix_Skite::Update(float _DeltaTime)
 	ManagedCollision(BoxCroixsCollision, 1);
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
+		Play(Sound, "CloseWindow.wav", 0.1f);
 		LevelStateManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();

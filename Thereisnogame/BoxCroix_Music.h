@@ -16,6 +16,7 @@ public:
 	BoxCroix_Music& operator=(const BoxCroix_Music& _Other) = delete;
 	BoxCroix_Music& operator=(BoxCroix_Music&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

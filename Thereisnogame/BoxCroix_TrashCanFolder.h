@@ -16,6 +16,7 @@ public:
 	BoxCroix_TrashCanFolder& operator=(const BoxCroix_TrashCanFolder& _Other) = delete;
 	BoxCroix_TrashCanFolder& operator=(BoxCroix_TrashCanFolder&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

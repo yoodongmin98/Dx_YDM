@@ -16,6 +16,7 @@ public:
 	BoxCroix_DrawerPicture& operator=(const BoxCroix_DrawerPicture& _Other) = delete;
 	BoxCroix_DrawerPicture& operator=(BoxCroix_DrawerPicture&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

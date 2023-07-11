@@ -2,6 +2,7 @@
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineSpriteRenderer.h>
 #include <GameEngineCore/GameEngineCollision.h>
+#include <GameEnginePlatform/GameEngineSound.h>
 
 
 class S_ActorBase : public GameEngineActor
@@ -50,6 +51,9 @@ public:
 		std::shared_ptr<GameEngineSpriteRenderer> _Render2,
 		std::shared_ptr<GameEngineCollision> _Collision);
 
+	void Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
+
+	void Pause(GameEngineSoundPlayer _ControlSoundName);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

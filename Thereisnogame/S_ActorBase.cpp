@@ -140,3 +140,15 @@ bool S_ActorBase::CatchCheck(std::shared_ptr<GameEngineSpriteRenderer> _Render,
 		return false;
 	}
 }
+
+void S_ActorBase::Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+{
+	_ControlSoundName = GameEngineSound::Play(_MusicName);
+	_ControlSoundName.SetVolume(_Volume);
+	_ControlSoundName.SetLoop(0);
+}
+
+void S_ActorBase::Pause(GameEngineSoundPlayer _ControlSoundName)
+{
+	_ControlSoundName.SetPause(true);
+}

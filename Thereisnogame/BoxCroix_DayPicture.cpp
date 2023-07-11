@@ -30,6 +30,7 @@ void BoxCroix_DayPicture::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(BoxCroixsCollision))
 	{
+		Play(Sound, "CloseWindow.wav", 0.1f);
 		LevelStateManager::MG->MinusCollisionValue();
 		BoxCroixsCollision->Death();
 		Death();

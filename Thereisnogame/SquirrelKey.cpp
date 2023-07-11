@@ -44,6 +44,7 @@ void SquirrelKey::CollisionInteractableCheck()
 	{
 		if (false == KeyMiddle)
 		{
+			Play(Sound, "Zipping.wav", 0.1f);
 			GetLevel()->CreateActor<SquirrelKeyMiddle>();
 			KeyMiddle = true;
 			Death();

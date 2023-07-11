@@ -16,7 +16,7 @@ public:
 	LeftRotate& operator=(const LeftRotate& _Other) = delete;
 	LeftRotate& operator=(LeftRotate&& _Other) noexcept = delete;
 
-	//Text를 받을수있는 함수추가
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

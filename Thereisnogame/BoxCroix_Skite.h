@@ -16,6 +16,7 @@ public:
 	BoxCroix_Skite& operator=(const BoxCroix_Skite& _Other) = delete;
 	BoxCroix_Skite& operator=(BoxCroix_Skite&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

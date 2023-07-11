@@ -47,6 +47,7 @@ void SquirrelKeyMiddle::CollisionInteractableCheck()
 	{
 		if (false == KeySmall)
 		{
+			Play(Sound, "Zipping.wav", 0.1f);
 			GetLevel()->CreateActor<SquirrelKeySmall>();
 			KeySmall = true;
 			Death();
