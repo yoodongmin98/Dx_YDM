@@ -26,6 +26,7 @@ void PictureFolder::Start()
 {
 	Init(PictureFolders, "Folder.png", { 96,87 }, { -230,-200,0 });
 	PictureFoldersCollision = CollisionInit(PictureFoldersCollision, { 96,87,1 }, { -230,-200,0 });
+	Font = FontCreate(Font, 28, "»çÁø", { -230,-260,0 }, GetTransform(), 2);
 }
 
 void PictureFolder::Update(float _DeltaTime)

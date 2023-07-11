@@ -37,6 +37,7 @@ void MusicFolder::Start()
 {
 	Init(MusicFolders, "Folder.png", { 96,87 }, { -425,-200,0 });
 	MusicFoldersCollision = CollisionInit(MusicFoldersCollision, { 96,87,1 }, { -425,-200,0 });
+	Font = FontCreate(Font, 28, "À½¾Ç", { -425,-260,0 }, GetTransform(), 2);
 }
 
 void MusicFolder::Update(float _DeltaTime)

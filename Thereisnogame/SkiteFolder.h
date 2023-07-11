@@ -31,5 +31,7 @@ private:
 	std::shared_ptr<class BoxCroix_Skite> BoxCroix_SkitePtr;
 	std::shared_ptr<class SkiteIcon> SkiteIconPtr;
 	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr = nullptr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

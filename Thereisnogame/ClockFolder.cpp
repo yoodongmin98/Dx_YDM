@@ -43,7 +43,7 @@ void ClockFolder::Start()
 	ClockFoldersCollision = CollisionInit(ClockFoldersCollision, { 102,97 }, { 420,200,0 });
 
 	ClockFolder_Day->Off();
-	ClockFont = FontCreate(ClockFont, 48, "¾È³ç", float4::Zero,GetTransform(),2);
+	ClockFont = FontCreate(ClockFont, 28, "½Ã°è", { 420,140 }, GetTransform(), 2);
 }
 
 void ClockFolder::Update(float _DeltaTime)

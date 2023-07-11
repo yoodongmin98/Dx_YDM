@@ -38,7 +38,6 @@ private:
 	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr = nullptr;
 	std::shared_ptr<class BoxCroix_TrashCanFolder> BoxCroix_TrashCanFolderPtr;
 
-
-
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

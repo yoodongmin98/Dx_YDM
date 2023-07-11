@@ -27,6 +27,7 @@ void SkiteFolder::Start()
 {
 	SkiteFolders=Init(SkiteFolders, "Skite.png", { 103,102 }, { -420,200,0 });
 	SkiteFoldersCollision = CollisionInit(SkiteFoldersCollision, { 103,102 }, { -420,200,0 });
+	Font = FontCreate(Font, 28, "sKite", { -420,150,0 }, GetTransform(), 2);
 }
 
 void SkiteFolder::Update(float _DeltaTime)

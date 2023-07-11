@@ -25,5 +25,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> ZipWipFolders;
 	std::shared_ptr<class GameEngineCollision> ZipWipFoldersCollision;
 
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

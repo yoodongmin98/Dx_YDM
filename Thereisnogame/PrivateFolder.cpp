@@ -27,6 +27,7 @@ void PrivateFolder::Start()
 {
 	Init(PrivateFolders, "Folder.png", { 96,87 }, { 225,-200,0 });
 	PrivateFoldersCollision = CollisionInit(PrivateFoldersCollision, { 96,87 }, { 225,-200,0 });
+	Font = FontCreate(Font, 28, "°³ÀÎ¿ë", { 225,-260,0 }, GetTransform(), 2);
 }
 
 void PrivateFolder::Update(float _DeltaTime)

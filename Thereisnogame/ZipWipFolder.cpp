@@ -20,6 +20,8 @@ void ZipWipFolder::Start()
 	ZipWipFoldersCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::ZipWip);
 	ZipWipFoldersCollision->GetTransform()->SetLocalScale({ 87,78,1 });
 	ZipWipFoldersCollision->GetTransform()->SetLocalPosition({ -415,0,0 });
+
+	Font = FontCreate(Font, 28, "ZinWip", { -422,-40,0 }, GetTransform(), 2);
 }
 
 void ZipWipFolder::Update(float _DeltaTime)

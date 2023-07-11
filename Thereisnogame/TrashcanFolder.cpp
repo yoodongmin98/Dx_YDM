@@ -28,6 +28,7 @@ void TrashcanFolder::Start()
 	TrashcanFolderOpen = Init(TrashcanFolderClose, "IconRubbish_Open.png", { 63,84 }, { 420,-200,0 });
 
 	TrashcanFolderCollision = CollisionInit(TrashcanFolderCollision, { 63,84 }, { 420,-200,0 });
+	Font = FontCreate(Font, 28, "쓰레기통", { 420,-260,0 }, GetTransform(), 2);
 }
 
 void TrashcanFolder::Update(float _DeltaTime)

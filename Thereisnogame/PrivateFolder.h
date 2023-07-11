@@ -34,5 +34,7 @@ private:
 
 	std::shared_ptr<class SkiteCalling> SkiteCallingPtr;
 	std::shared_ptr<class SkiteCallingMissed> SkiteCallingMissedPtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 
