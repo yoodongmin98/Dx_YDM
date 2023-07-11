@@ -70,7 +70,7 @@ MainMenuLevel::~MainMenuLevel()
 
 void MainMenuLevel::Start()
 {
-	GameEngineFont::Load("ChevyRay");
+	GameEngineFont::Load("ChevyRay-LoveBug");
 	//ImageLoad
 	{
 		GameEngineDirectory NewDir;

@@ -21,6 +21,7 @@ void MusicNote_Radio::Start()
 {
 	Init(MusicNote_Radios, "Note.png", { 100,110 }, { -245,-150,0 });
 	MusicNote_RadiosCollision = CollisionInit(MusicNote_RadiosCollision, { 100,110,1 }, { -245,-150,0 });
+	Font = FontCreate(Font, 20, "Æ®·¢\n04", { -245,-200,0 }, GetTransform(), 2);
 }
 
 void MusicNote_Radio::Update(float _DeltaTime)

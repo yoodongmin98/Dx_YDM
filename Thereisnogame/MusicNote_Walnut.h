@@ -25,5 +25,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MusicNote_Walnuts;
 	std::shared_ptr<class GameEngineCollision>MusicNote_WalnutsCollision;
 
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

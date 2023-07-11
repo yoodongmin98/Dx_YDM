@@ -123,5 +123,5 @@ private:
 	float4 EndPos = float4::Zero;
 	G_RigidBody* pRigidBody;
 
-	std::string Font = "ChevyRay";
+	std::string Font = "ChevyRay-LoveBug";
 };

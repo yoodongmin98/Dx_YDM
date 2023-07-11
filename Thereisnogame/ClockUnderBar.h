@@ -43,5 +43,6 @@ private:
 	std::vector<int> PassWord;
 
 	std::vector<std::shared_ptr<GameEngineSpriteRenderer>> PasswordUnderBar;
+	std::shared_ptr<GameEngineFontRenderer> Font;
 };
 

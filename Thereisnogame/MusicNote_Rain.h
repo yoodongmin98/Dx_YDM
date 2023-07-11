@@ -25,5 +25,6 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MusicNote_Rains;
 	std::shared_ptr<class GameEngineCollision> MusicNote_RainsCollision;
 
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

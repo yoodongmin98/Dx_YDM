@@ -21,6 +21,7 @@ void MusicNote_Walnut::Start()
 {
 	Init(MusicNote_Walnuts, "Note.png", { 100,110 }, { -400,30,0 });
 	MusicNote_WalnutsCollision = CollisionInit(MusicNote_WalnutsCollision, { 100,110,1 }, { -400,30,0 });
+	Font = FontCreate(Font, 20, "Æ®·¢\n01", { -400,-20,0 }, GetTransform(), 2);
 }
 
 void MusicNote_Walnut::Update(float _DeltaTime)

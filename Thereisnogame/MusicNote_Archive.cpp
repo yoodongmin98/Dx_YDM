@@ -21,6 +21,7 @@ void MusicNote_Archive::Start()
 {
 	Init(MusicNote_Archives, "Note.png", { 100,110 }, { -245,30,0 });
 	MusicNote_ArchivesCollision = CollisionInit(MusicNote_ArchivesCollision, { 100,110,1 }, { -245,30,0 });
+	Font = FontCreate(Font, 20, "Æ®·¢\n02", { -245,-20,0 }, GetTransform(), 2);
 }
 
 void MusicNote_Archive::Update(float _DeltaTime)

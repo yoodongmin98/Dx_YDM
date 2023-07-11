@@ -24,5 +24,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> MusicNote_Archives;
 	std::shared_ptr<class GameEngineCollision> MusicNote_ArchivesCollision;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 
