@@ -35,6 +35,7 @@ void TrashcanFolder::Update(float _DeltaTime)
 	RenderAndCollisionCheck();
 	if (true == ClickCheck(TrashcanFolderCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		TrashCanFolderPanelPtr = GetLevel()->CreateActor<TrashCanFolderPanel>();

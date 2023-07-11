@@ -52,6 +52,7 @@ void ClockFolder::Update(float _DeltaTime)
 	}
 	if (true == ClickCheck(ClockFoldersCollision)&& 0==LevelStateManager::MG->GetClockValue())
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		ClockPaddle0Ptr=GetLevel()->CreateActor<ClockPaddle0>();

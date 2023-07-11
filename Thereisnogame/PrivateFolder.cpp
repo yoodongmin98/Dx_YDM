@@ -34,6 +34,7 @@ void PrivateFolder::Update(float _DeltaTime)
 	ManagedCollision(PrivateFoldersCollision, 0);
 	if (true == ClickCheck(PrivateFoldersCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		PrivatePanelPtr = GetLevel()->CreateActor<PrivatePanel>();

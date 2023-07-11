@@ -102,7 +102,7 @@ public:
 
 	void RightFallRigid(float _RightValue, float _DownValue, bool _globalvariable, float _DeltaTime);
 
-	void Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
+	GameEngineSoundPlayer Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
 
 	void Pause(GameEngineSoundPlayer _ControlSoundName);
 

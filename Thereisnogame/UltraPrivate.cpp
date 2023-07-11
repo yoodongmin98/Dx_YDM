@@ -31,6 +31,7 @@ void UltraPrivate::Update(float _DeltaTime)
 	ManagedCollision(UltraPrivatesCollision, 2);
 	if (true == ClickCheck(UltraPrivatesCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		PrivatePanel_GigaPtr = GetLevel()->CreateActor<PrivatePanel_Giga>();
 		GigaprivatePtr = GetLevel()->CreateActor<Gigaprivate>();

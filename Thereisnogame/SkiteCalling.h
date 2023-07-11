@@ -16,7 +16,7 @@ public:
 	SkiteCalling& operator=(const SkiteCalling& _Other) = delete;
 	SkiteCalling& operator=(SkiteCalling&& _Other) noexcept = delete;
 
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

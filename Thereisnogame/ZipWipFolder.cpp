@@ -25,6 +25,10 @@ void ZipWipFolder::Start()
 void ZipWipFolder::Update(float _DeltaTime)
 {
 	ManagedCollision(ZipWipFoldersCollision, 0);
+	if (true == ClickCheck(ZipWipFoldersCollision))
+	{
+		Play(Sound, "Chap02_ClickZinWip.wav", 0.1f);
+	}
 }
 
 void ZipWipFolder::Render(float _Delta)

@@ -30,6 +30,7 @@ void SuperPrivate::Update(float _DeltaTime)
 	ManagedCollision(SuperPrivatesCollision, 1);
 	if (true == ClickCheck(SuperPrivatesCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		PrivatePanel_UltraPtr = GetLevel()->CreateActor<PrivatePanel_Ultra>();
 		Truth2IconPtr	=GetLevel()->CreateActor<Truth2Icon>();

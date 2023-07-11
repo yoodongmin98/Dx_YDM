@@ -17,7 +17,7 @@ public:
 	SkiteFolder& operator=(SkiteFolder&& _Other) noexcept = delete;
 
 	void BoxCroixDeathCheck();
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

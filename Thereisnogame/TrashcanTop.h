@@ -18,7 +18,7 @@ public:
 	TrashcanTop& operator=(TrashcanTop&& _Other) noexcept = delete;
 
 	void TrashCanFallandDeathCheck();
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

@@ -17,7 +17,7 @@ public:
 	Truth3Icon& operator=(Truth3Icon&& _Other) noexcept = delete;
 
 	void BoxCroixDeathCheck();
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

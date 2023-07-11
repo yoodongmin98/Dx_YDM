@@ -26,12 +26,15 @@ void SkiteCalling::Start()
 
 	SkiteCallings->On();
 	SkiteSpeakings->Off();
+	Sound=Play(Sound, "SkiteRing.wav", 0.1f);
+	Sound.SetLoop(-1);
 }
 
 void SkiteCalling::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(SkiteCallingCollision))
 	{
+		Sound.Stop();
 		SkiteCallings->Death();
 		SkiteSpeakings->On();
 		ChainPtr = GetLevel()->CreateActor<Chain>();

@@ -31,6 +31,7 @@ void Truth3Icon::Update(float _DeltaTime)
 	ManagedCollision(Truth3IconsCollision, 3);
 	if (true == ClickCheck(Truth3IconsCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		FolderNotePtr = GetLevel()->CreateActor<FolderNote3>();
 		BoxCroix_FN3Ptr = GetLevel()->CreateActor<BoxCroix_FN3>();

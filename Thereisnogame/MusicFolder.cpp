@@ -43,6 +43,7 @@ void MusicFolder::Update(float _DeltaTime)
 	ManagedCollision(MusicFoldersCollision, 0);
 	if (true == ClickCheck(MusicFoldersCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		LevelStateManager::MG->SetIsRainfalse();
 		LevelStateManager::MG->SetIsWalNuttrue();

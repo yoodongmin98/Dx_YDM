@@ -16,7 +16,7 @@ public:
 	LockFolder& operator=(const LockFolder& _Other) = delete;
 	LockFolder& operator=(LockFolder&& _Other) noexcept = delete;
 
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

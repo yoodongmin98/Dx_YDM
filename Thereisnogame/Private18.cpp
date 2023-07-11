@@ -32,6 +32,7 @@ void Private18::Update(float _DeltaTime)
 	ManagedCollision(Private18sCollision, 4);
 	if (true == ClickCheck(Private18sCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		LevelStateManager::MG->Set18OpenTrue();
 		PrivatePanel_MissPtr = GetLevel()->CreateActor<PrivatePanel_Miss>();

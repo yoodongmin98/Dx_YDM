@@ -34,6 +34,7 @@ void SkiteFolder::Update(float _DeltaTime)
 	ManagedCollision(SkiteFoldersCollision, 0);
 	if (true == ClickCheck(SkiteFoldersCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		SkitePtr=GetLevel()->CreateActor<Skite>();

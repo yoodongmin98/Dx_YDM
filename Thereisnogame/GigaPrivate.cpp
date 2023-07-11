@@ -31,6 +31,7 @@ void Gigaprivate::Update(float _DeltaTime)
 	ManagedCollision(GigaprivatesCollision, 3);
 	if (true == ClickCheck(GigaprivatesCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		PrivatePanel_18Ptr = GetLevel()->CreateActor<PrivatePanel_18>();
 		BoxCroix_PR_18Ptr = GetLevel()->CreateActor<BoxCroix_PR_18>();

@@ -16,7 +16,7 @@ public:
 	ZipWipFolder& operator=(const ZipWipFolder& _Other) = delete;
 	ZipWipFolder& operator=(ZipWipFolder&& _Other) noexcept = delete;
 
-
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

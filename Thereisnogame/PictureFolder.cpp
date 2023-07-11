@@ -33,6 +33,7 @@ void PictureFolder::Update(float _DeltaTime)
 	ManagedCollision(PictureFoldersCollision, 0);
 	if (true == ClickCheck(PictureFoldersCollision))
 	{
+		Play(Sound, "OpenWindow.wav", 0.1f);
 		LevelStateManager::MG->PlusCollisionValue();
 		FolderBackGroundPtr = GetLevel()->CreateActor<FolderBackGround>();
 		PictureFolderPanelPtr=GetLevel()->CreateActor<PictureFolderPanel>();
