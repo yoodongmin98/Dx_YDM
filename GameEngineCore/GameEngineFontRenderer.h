@@ -2,6 +2,7 @@
 #include <string_view>
 #include "GameEngineRenderer.h"
 #include "GameEngineFont.h"
+#include "EngineContentRenderingStruct.h"
 
 // Ό³Έν :
 class GameEngineFontRenderer : public GameEngineRenderer
@@ -35,6 +36,7 @@ public:
 		FwTextFlag = _Flag;
 	}
 
+	ColorOption ColorOptionValue;
 protected:
 	void Render(float _Delta) override;
 

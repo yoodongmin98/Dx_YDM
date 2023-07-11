@@ -15,6 +15,21 @@ public:
 	LevelStateManager(LevelStateManager&& _Other) noexcept = delete;
 	LevelStateManager& operator=(const LevelStateManager& _Other) = delete;
 	LevelStateManager& operator=(LevelStateManager&& _Other) noexcept = delete;
+
+	//MainMenu
+	//한번 클릭했냐?
+	void SetIsClickMainMenuTrue()
+	{
+		IsClickMainMenu = true;
+	}
+	void SetIsClickMainMenuFalse()
+	{
+		IsClickMainMenu = false;
+	}
+	bool GetIsClickMainMenu()
+	{
+		return IsClickMainMenu;
+	}
 	//Chapter2----------------------------------------------------------------------------------------------------------
 	//폴더 몇개열려있냐?
 	void PlusCollisionValue();
@@ -363,6 +378,8 @@ private:
 	//Mouse
 	bool IsProgress = false;
 
+	//MainMenu
+	bool IsClickMainMenu = false;
 	//Chapter1
 	bool IsBoardDown = false;
 	bool IsCreateRaquette = false;

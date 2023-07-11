@@ -12,6 +12,7 @@
 #include "Arrow.h"
 #include "DrawaPixel.h"
 #include "StartPictures.h"
+#include "LevelStateManager.h"
 
 
 
@@ -150,6 +151,7 @@ void MainMenuLevel::MenuStart()
 {
 	Play(MainEtcSound, "MainMenu_TitleIn.wav", 0.1f);
 	CreateLetter();
+	LevelStateManager::MG->SetIsClickMainMenuFalse();
 }
 void MainMenuLevel::MenuUpdate(float _DeltaTime)
 {
@@ -178,6 +180,7 @@ void MainMenuLevel::MenuUpdate(float _DeltaTime)
 	{
 		if (GameEngineInput::IsDown("LeftMouse"))
 		{
+			LevelStateManager::MG->SetIsClickMainMenuTrue();
 			if (false == ArrowCreateBool)
 			{
 				Play(MainEtcSound, "MainMenu_Click.wav", 0.1f);

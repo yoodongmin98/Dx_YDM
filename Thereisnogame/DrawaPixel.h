@@ -28,5 +28,8 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Panel_CNC;
 	std::shared_ptr<class GameEngineSpriteRenderer> Panel_Book;
 	std::shared_ptr<class GameEngineSpriteRenderer> Panel_Box;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
 };
 

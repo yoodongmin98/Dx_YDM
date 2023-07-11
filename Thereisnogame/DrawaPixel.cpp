@@ -26,6 +26,9 @@ void Panel_DrawaPixel::Start()
 	Init(Panel_Box, "NotAgameBy_Panel.png", { 354,422,1 }, { -380,900,0 });
 
 	Play(Sound, "MainMenu_LogoIn.wav", 0.1f);
+	Font1 = FontCreate(Font1, 25, "제작사 아님 :", { -390,755,0 }, GetTransform(), 1);
+	Font2 = FontCreate(Font2, 35, "도움 받은 곳 :", { 440,830,0 }, GetTransform(), 1);
+	
 }
 
 void Panel_DrawaPixel::Update(float _DeltaTime)

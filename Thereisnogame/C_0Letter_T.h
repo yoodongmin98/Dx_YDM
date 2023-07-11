@@ -35,5 +35,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Letter_E2;
 	float TestTime = 0.0f;
 
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	float ColorTime = 0.0f;
 };
 
