@@ -739,6 +739,9 @@
     <ClCompile Include="Play within a play Level SoundLoader.cpp">
       <Filter>Chapter1.0_Play within a play\Level</Filter>
     </ClCompile>
+    <ClCompile Include="FakeProgramLevelSoundLoader.cpp">
+      <Filter>Chapter2.0_Fake Program\Level</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">

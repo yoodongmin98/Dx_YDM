@@ -465,6 +465,7 @@
     <ClCompile Include="E_TitleCube.cpp" />
     <ClCompile Include="E_TitleMetal.cpp" />
     <ClCompile Include="FadeEffect.cpp" />
+    <ClCompile Include="FakeProgramLevelSoundLoader.cpp" />
     <ClCompile Include="FlagChain_Back.cpp" />
     <ClCompile Include="FlagPicture_Back.cpp" />
     <ClCompile Include="FolderNote2.cpp" />

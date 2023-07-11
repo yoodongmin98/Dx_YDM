@@ -110,5 +110,6 @@ void PlaywithinaplayLevel::LevelChangeStart()
 
 void PlaywithinaplayLevel::LevelChangeEnd()
 {
+	StartBackSound.Stop();
 }
 

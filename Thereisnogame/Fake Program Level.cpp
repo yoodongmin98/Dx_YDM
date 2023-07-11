@@ -30,8 +30,12 @@
 
 //Test
 #include "SquirrelKey.h"
+
+FakeProgramLevel* FakeProgramLevel::FP;
+
 FakeProgramLevel::FakeProgramLevel()
 {
+	FP = this;
 }
 
 FakeProgramLevel::~FakeProgramLevel()
@@ -55,6 +59,8 @@ void FakeProgramLevel::Start()
 			GameEngineTexture::Load(File[i].GetFullPath());
 		}
 	}
+
+	SoundLoad();
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });

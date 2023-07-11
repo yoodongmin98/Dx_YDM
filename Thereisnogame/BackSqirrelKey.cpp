@@ -45,6 +45,7 @@ void BackSqirrelKey::Update(float _DeltaTime)
 	ManagedCollision(BackSqirrelKeysCollision, 0);
 	if (true == ClickCheck(BackSqirrelKeysCollision))
 	{
+		Play(Sound, "Squirrel01.wav", 0.1f);
 		BackSqirrelKeys->ChangeAnimation("ShakeKey");
 		SquirrelCloud_NeedPtr = GetLevel()->CreateActor<SquirrelCloud_Need>();
 	}

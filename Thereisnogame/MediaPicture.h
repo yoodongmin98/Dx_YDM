@@ -17,6 +17,7 @@ public:
 	MediaPicture& operator=(const MediaPicture& _Other) = delete;
 	MediaPicture& operator=(MediaPicture&& _Other) noexcept = delete;
 
+
 	std::shared_ptr<GameEngineSpriteRenderer> ChangeMusicRender(std::shared_ptr<class GameEngineSpriteRenderer> _PictureRender);
 	void ChangeMusicPicture(int _Value);
 	void SetPlayandPause(const std::string_view& _PlayandPause);
