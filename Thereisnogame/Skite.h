@@ -24,6 +24,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Skites;
 	
-
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
 };
 

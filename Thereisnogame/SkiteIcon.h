@@ -16,7 +16,8 @@ public:
 	SkiteIcon& operator=(const SkiteIcon& _Other) = delete;
 	SkiteIcon& operator=(SkiteIcon&& _Other) noexcept = delete;
 
-
+	
+	std::shared_ptr<class SkiteProfil> SkiteProfilPtr;
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -25,8 +26,9 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SkiteIcons;
 	std::shared_ptr<class GameEngineCollision> SkiteIconsCollision;
 
-	std::shared_ptr<class SkiteProfil> SkiteProfilPtr;
 
 	bool CreateBool = true;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

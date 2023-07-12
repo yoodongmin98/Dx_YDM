@@ -20,6 +20,7 @@ void SkiteIcon::Start()
 {
 	SkiteIcons=Init(SkiteIcons, "Skiteface.png", { 63,63 }, { 270,0,0 });
 	SkiteIconsCollision = CollisionInit(SkiteIconsCollision, { 63,63,1 }, { 270,0,0 });
+	Font = FontCreate(Font, 30, "³ª ¾Æ´Ô", { 360,20,0 }, GetTransform(), 2);
 }
 
 void SkiteIcon::Update(float _DeltaTime)

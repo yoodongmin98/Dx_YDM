@@ -12,7 +12,7 @@
 #include "LevelStateManager.h"
 #include "SkiteIcon.h"
 #include "FolderBackGround.h"
-
+#include "SkiteProfil.h"
 
 
 SkiteFolder::SkiteFolder()
@@ -67,8 +67,8 @@ void SkiteFolder::BoxCroixDeathCheck()
 		if (true == LevelStateManager::MG->Get18OpenTrue()
 			&& nullptr!=SkiteIconPtr.get())
 		{
+			SkiteIconPtr.get()->SkiteProfilPtr.get()->Death();
 			SkiteIconPtr.get()->Death();
-
 		}
 	}
 }
