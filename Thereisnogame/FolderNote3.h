@@ -23,5 +23,9 @@ protected:
 	void Render(float _Delta) override;
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> FolderNote3s;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
+	std::shared_ptr<class GameEngineFontRenderer> Font3;
 };
 

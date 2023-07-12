@@ -28,6 +28,7 @@ void SkiteCallingMissed::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(SkiteCallingMissedsCollision))
 	{
+		Play(Sound, "Drag.wav", 0.1f);
 		SkiteCallingMissedsCollision->Death();
 		SkiteCallingMisseds->GetTransform()->AddLocalRotation({ 0,0,-45.0f });
 		FallStart = true;
