@@ -30,6 +30,7 @@
 
 //Test
 #include "SquirrelKey.h"
+#include "SkiteProfil.h"
 
 FakeProgramLevel* FakeProgramLevel::FP;
 
