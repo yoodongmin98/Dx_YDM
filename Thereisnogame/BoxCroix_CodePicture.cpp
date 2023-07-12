@@ -24,6 +24,7 @@ void BoxCroix_CodePicture::Start()
 	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 317,317,0 });
 	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 317,317,0 });
 
+	Font = FontCreate(Font, 25, "ID Ä«µå", float4::Down * 250, GetTransform(), 2);
 }
 
 void BoxCroix_CodePicture::Update(float _DeltaTime)

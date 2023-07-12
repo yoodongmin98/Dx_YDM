@@ -24,5 +24,7 @@ protected:
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> BoxCroixs;
 	std::shared_ptr<class GameEngineCollision> BoxCroixsCollision;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

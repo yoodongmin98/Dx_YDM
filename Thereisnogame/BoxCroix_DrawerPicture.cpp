@@ -23,6 +23,7 @@ void BoxCroix_DrawerPicture::Start()
 {
 	Init(BoxCroixs, "BoxCroix.png", { 48,54 }, { 317,317,0 });
 	BoxCroixsCollision = CollisionInit(BoxCroixsCollision, { 48,54,1 }, { 317,317,0 });
+	Font = FontCreate(Font, 25, "프로그래밍 도구", float4::Down * 250, GetTransform(), 2);
 
 }
 

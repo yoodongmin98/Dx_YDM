@@ -30,5 +30,8 @@ private:
 	std::shared_ptr<class BoxCroix_DrawerPicture> BoxCroix_DrawerPicturePtr;
 	std::shared_ptr<class LeftRotate> LeftRotatePtr;
 	std::shared_ptr<class RightRotate> RightRotatePtr;
+	std::shared_ptr<class PurpleBox> PurpleBoxPtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

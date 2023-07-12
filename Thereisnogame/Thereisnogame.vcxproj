@@ -223,6 +223,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="PurpleBox.h" />
     <ClInclude Include="RE_TitleMetal.h" />
     <ClInclude Include="Excla_TitleCube.h" />
     <ClInclude Include="E_TitleCube.h" />
@@ -359,7 +360,6 @@
     <ClInclude Include="PrivatePanel_Miss.h" />
     <ClInclude Include="PrivatePanel_Ultra.h" />
     <ClInclude Include="Program Loading Level.h" />
-    <ClInclude Include="PurpleTextBox.h" />
     <ClInclude Include="Raquette_TitleCube.h" />
     <ClInclude Include="RE_TitleCube.h" />
     <ClInclude Include="RightDirectionArrow.h" />
@@ -617,7 +617,7 @@
     <ClCompile Include="PrivatePanel_Miss.cpp" />
     <ClCompile Include="PrivatePanel_Ultra.cpp" />
     <ClCompile Include="Program Loading Level.cpp" />
-    <ClCompile Include="PurpleTextBox.cpp" />
+    <ClCompile Include="PurpleBox.cpp" />
     <ClCompile Include="Raquette_TitleCube.cpp" />
     <ClCompile Include="RE_TitleCube.cpp" />
     <ClCompile Include="RE_TitleMetal.cpp" />

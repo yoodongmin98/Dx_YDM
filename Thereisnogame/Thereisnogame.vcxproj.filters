@@ -196,9 +196,6 @@
     <ClCompile Include="DayTree.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
     </ClCompile>
-    <ClCompile Include="PurpleTextBox.cpp">
-      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
-    </ClCompile>
     <ClCompile Include="DrawerIcon.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
     </ClCompile>
@@ -742,6 +739,9 @@
     <ClCompile Include="FakeProgramLevelSoundLoader.cpp">
       <Filter>Chapter2.0_Fake Program\Level</Filter>
     </ClCompile>
+    <ClCompile Include="PurpleBox.cpp">
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\PicturePurpleBox</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -935,9 +935,6 @@
     </ClInclude>
     <ClInclude Include="DayTree.h">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture1_Day</Filter>
-    </ClInclude>
-    <ClInclude Include="PurpleTextBox.h">
-      <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\PictureUI</Filter>
     </ClInclude>
     <ClInclude Include="DrawerIcon.h">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\Infolder\Picture\Picture2_Drawer</Filter>
@@ -1467,6 +1464,9 @@
     <ClInclude Include="Box_Conformation_Yes.h">
       <Filter>Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox</Filter>
     </ClInclude>
+    <ClInclude Include="PurpleBox.h">
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\FloderUI\PicturePurpleBox</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1774,6 +1774,9 @@
     </Filter>
     <Filter Include="Chapter0.0_MainMenu\Actor\SelectBox\ChooseBox">
       <UniqueIdentifier>{ccf6cfcc-9af7-4c1f-a9e3-c304e94d8f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\FloderUI\PicturePurpleBox">
+      <UniqueIdentifier>{fcc34b59-f0d3-494c-b663-8113b3818838}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

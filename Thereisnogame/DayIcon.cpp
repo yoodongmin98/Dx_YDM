@@ -12,6 +12,7 @@
 #include "LeftRotate.h"
 #include "RightRotate.h"
 #include "LevelStateManager.h"
+#include "PurpleBox.h"
 
 DayIcon::DayIcon()
 {
@@ -36,6 +37,7 @@ void DayIcon::Start()
 	DayIconVector.push_back(Icon_SmallNight);
 
 	WhatisIcon = ChangeDayIconRender(Icon_SmallNight);
+	Font = FontCreate(Font, 25, "ÀÌ¹ÌÁö\n01", { -340,-40 }, GetTransform(), 2);
 }
 
 void DayIcon::Update(float _DeltaTime)
@@ -59,6 +61,7 @@ void DayIcon::Update(float _DeltaTime)
 		DayTreePtr=GetLevel()->CreateActor<DayTree>();
 		LeftRotatePtr=GetLevel()->CreateActor<LeftRotate>();
 		RightRotatePtr=GetLevel()->CreateActor<RightRotate>();
+		PurpleBoxptr = GetLevel()->CreateActor<PurpleBox>();
 		BoxCroix_DayPicturePtr = GetLevel()->CreateActor<BoxCroix_DayPicture>();
 	}
 	if (nullptr != BoxCroix_DayPicturePtr)
@@ -86,6 +89,7 @@ void DayIcon::BoxCroixDeathCheck()
 		DayTreePtr.get()->Death();
 		LeftRotatePtr.get()->Death();
 		RightRotatePtr.get()->Death();
+		PurpleBoxptr.get()->Death();
 	}
 }
 
