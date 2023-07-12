@@ -59,6 +59,7 @@ void SquirrelKey::SoundCheck(float _DeltaTime)
 	BoolTime += _DeltaTime;
 	if (BoolTime > 1.0f)
 	{
+		BoolTime = 0.0f;
 		IsPlay = false;
 	}
 	if (SquirrelKeyBigCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D)
