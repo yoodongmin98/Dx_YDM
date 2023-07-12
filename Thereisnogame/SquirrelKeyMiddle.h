@@ -17,7 +17,7 @@ public:
 	SquirrelKeyMiddle& operator=(SquirrelKeyMiddle&& _Other) noexcept = delete;
 
 	void CollisionInteractableCheck();
-
+	void SoundCheck(float _DeltaTime);
 	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
@@ -28,5 +28,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeyMiddle_overlap;
 
 	std::shared_ptr<class GameEngineCollision> SquirrelKeyMiddleCollision;
+
+	float BoolTime = 0.0f;
 };
 

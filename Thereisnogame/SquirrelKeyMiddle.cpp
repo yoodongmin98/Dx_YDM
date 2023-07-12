@@ -33,6 +33,7 @@ void SquirrelKeyMiddle::Update(float _DeltaTime)
 	{
 		CollisionInteractableCheck();
 	}
+	SoundCheck(_DeltaTime);
 }
 
 void SquirrelKeyMiddle::Render(float _Delta)
@@ -51,6 +52,25 @@ void SquirrelKeyMiddle::CollisionInteractableCheck()
 			GetLevel()->CreateActor<SquirrelKeySmall>();
 			KeySmall = true;
 			Death();
+		}
+	}
+}
+
+void SquirrelKeyMiddle::SoundCheck(float _DeltaTime)
+{
+	static bool IsPlay = false;
+	BoolTime += _DeltaTime;
+	if (BoolTime > 1.0f)
+	{
+		IsPlay = false;
+	}
+	if (SquirrelKeyMiddleCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable())
+	{
+		if (false == IsPlay)
+		{
+			Play(Sound, "KeysToBig.wav", 0.1f);
+			IsPlay = true;
 		}
 	}
 }

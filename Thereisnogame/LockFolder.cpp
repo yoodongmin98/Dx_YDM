@@ -28,6 +28,11 @@ void LockFolder::Start()
 void LockFolder::Update(float _DeltaTime)
 {
 	ManagedCollision(LockFoldersCollision, 0);
+
+	if (true == ClickCheck(LockFoldersCollision))
+	{
+		Play(Sound, "Chap02_ClickZinWip.wav", 0.1f);
+	}
 }
 
 void LockFolder::Render(float _Delta)

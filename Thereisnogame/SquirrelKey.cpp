@@ -30,6 +30,7 @@ void SquirrelKey::Update(float _DeltaTime)
 	Fall(SquirrelKeyBig, SquirrelKeyBig_overlap, SquirrelKeyBigCollision, 93.5f, _DeltaTime);
 	CatchCheck(SquirrelKeyBig, SquirrelKeyBig_overlap, SquirrelKeyBigCollision);
 	CollisionInteractableCheck();
+	SoundCheck(_DeltaTime);
 }
 
 void SquirrelKey::Render(float _Delta)
@@ -50,4 +51,24 @@ void SquirrelKey::CollisionInteractableCheck()
 			Death();
 		}
 	}
+}
+
+void SquirrelKey::SoundCheck(float _DeltaTime)
+{
+	static bool IsPlay = false;
+	BoolTime += _DeltaTime;
+	if (BoolTime > 1.0f)
+	{
+		IsPlay = false;
+	}
+	if (SquirrelKeyBigCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D)
+		&& true == Mouse::MainMouse->IsInteractable())
+	{
+		if (false == IsPlay)
+		{
+			Play(Sound, "KeysToBig.wav", 0.1f);
+			IsPlay = true;
+		}
+	}
+	
 }
