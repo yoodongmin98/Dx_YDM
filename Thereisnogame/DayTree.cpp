@@ -173,14 +173,17 @@ void DayTree::WhatisTreeRender()
 bool CreateNut = true;
 void DayTree::GetTheNutFunc()
 {
-	if (true == ClickCheck(Tree_BigCollision)&&2==LevelStateManager::MG->GetClockValue())
+	if (true == ClickCheck(Tree_BigCollision)&&2==LevelStateManager::MG->GetClockValue()
+		&& GetTheNut<5)
 	{
+		Play(Sound, "Drag.wav", 0.1f);
 		GetTheNut++;
 	}
 	if (GetTheNut >= 5)
 	{
 		if (true == CreateNut)
 		{
+			Play(Sound, "CloseWindow.wav", 0.1f);
 			GetLevel()->CreateActor<Nut_Close>();
 			CreateNut = false;
 		}

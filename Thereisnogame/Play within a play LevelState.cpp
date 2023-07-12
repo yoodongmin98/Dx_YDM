@@ -246,7 +246,6 @@ void PlaywithinaplayLevel::ClickCordonUpdate(float _DeltaTime)
 	Functions = std::bind(&BackCurtain::CurtainOpen, BackCurtainPtr.get());
 	Functions();
 	//if(Plaque두드리고 사운드가 끝나면) changeState로 바꿔야함
-
 }
 void PlaywithinaplayLevel::ClickCordonEnd()
 {

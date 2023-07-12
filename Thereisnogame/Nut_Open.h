@@ -16,7 +16,7 @@ public:
 	Nut_Open& operator=(const Nut_Open& _Other) = delete;
 	Nut_Open& operator=(Nut_Open&& _Other) noexcept = delete;
 
-	//Text를 받을수있는 함수추가
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

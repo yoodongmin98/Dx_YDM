@@ -28,6 +28,8 @@ void Cup::Start()
 	Cups_Overlap = Init(Cups_Overlap, "CupObj_Empty_Overlap.png", { 126,153 }, { Position.x - 3,Position.y + 3 });
 	Cups = Init(Cups, "CupObj_Empty.png", { 94,121 }, Position);
 	CupCollision = CollisionInit(CupCollision, { 94,121,1 }, Position);
+
+	Play(Sound, "PinBallSound.wav", 0.1f);
 }
 
 void Cup::Update(float _DeltaTime)

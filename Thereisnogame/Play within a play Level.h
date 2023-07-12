@@ -68,6 +68,7 @@ public:
 	void SoundLoad();
 
 	GameEngineSoundPlayer StartBackSound;
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

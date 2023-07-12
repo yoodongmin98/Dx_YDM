@@ -34,6 +34,7 @@ void TrashcanTop::Update(float _DeltaTime)
 	ManagedCollision(TrashcanTopsCollision, 0);
 	if (true == ClickCheck(TrashcanTopsCollision))
 	{
+		Play(Sound, "TrashCanClick.wav", 0.1f);
 		TrashcanTops->ChangeAnimation("TrashcanReapeat");
 	}
 	TrashCanFallandDeathCheck();
@@ -51,6 +52,7 @@ void TrashcanTop::TrashCanFallandDeathCheck()
 	if (TrashcanTopsCollision->Collision(ActorTypeEnum::Decapsuleur, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
+		Play(Sound, "TrashCanOff.wav", 0.1f);
 		LevelStateManager::MG->SetTrashCanOpen();
 		TrashCanFall = true;
 	}

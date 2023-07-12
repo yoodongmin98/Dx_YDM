@@ -36,6 +36,7 @@ void Cup_Full::Update(float _DeltaTime)
 	CatchCheck(Cup_Fulls, Cup_Fulls_overlap, Cup_FullsCollision);
 	if (true == LevelStateManager::MG->GetIsBigTree())
 	{
+		Play(Sound, "TreePop.wav", 0.2f);
 		Death();
 	}
 }

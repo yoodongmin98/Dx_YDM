@@ -65,6 +65,7 @@ void BackSqirrelKey::CollisionInteractableCheck()
 		&& true == Mouse::MainMouse->IsInteractable()
 		&& true==duplication)
 	{
+		Play(Sound, "Squirrel01.wav", 0.1f);
 		duplication = false;
 		BackSqirrelKeys->ChangeAnimation("ShakeKey");
 		GetLevel()->CreateActor<SquirrelCloud_Crack>();
@@ -72,6 +73,7 @@ void BackSqirrelKey::CollisionInteractableCheck()
 	if (BackSqirrelKeysCollision->Collision(ActorTypeEnum::Nut_Open, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
+		Play(Sound, "SquirrelEat.wav", 0.1f);
 		LevelStateManager::MG->SetIsGetTheKeyTrue();
 		BackSqirrelKeys->ChangeAnimation("FallingKey");
 	}

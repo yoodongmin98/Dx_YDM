@@ -26,6 +26,8 @@ void Nut_Open::Start()
 	Nut_OpensCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Nut_Open);
 	Nut_OpensCollision->GetTransform()->SetLocalScale({ 64,58 });
 	Nut_OpensCollision->GetTransform()->SetLocalPosition(Position);
+
+	Play(Sound, "NutCrack.wav", 0.1f);
 }
 
 void Nut_Open::Update(float _DeltaTime)

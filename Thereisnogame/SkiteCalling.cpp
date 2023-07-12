@@ -39,6 +39,7 @@ void SkiteCalling::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(SkiteCallingCollision))
 	{
+		Sound2 = Play(Sound2, "CallingClick.wav", 0.1f);
 		Font1->Death();
 		Font2->On();
 		Sound.Stop();

@@ -20,6 +20,8 @@ public:
 	std::shared_ptr<GameEngineSpriteRenderer> ChangeTreeRender(std::shared_ptr<class GameEngineSpriteRenderer> _PictureRender);
 	void WhatisTreeRender();
 	void GetTheNutFunc();
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;
