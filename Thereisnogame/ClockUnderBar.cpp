@@ -34,7 +34,7 @@ void ClockUnderBar::Start()
 	PasswordUnderBar.push_back(ClockUnderBars5);
 	PasswordUnderBar.push_back(ClockUnderBars6);
 
-	PasswordSet(1,2,3,4,5,6);
+	PasswordSet(5,0,7,2,3,8);
 
 	Font = FontCreate(Font, 25, "시간 시스템에 접속하려면 관리자 비밀번호가 필요합니다.", float4::Down * 200, GetTransform(), 2);
 }
