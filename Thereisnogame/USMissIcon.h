@@ -30,5 +30,10 @@ private:
 	std::shared_ptr<class BoxCroix_PR_MissPicture> BoxCroix_PR_MissPicturePtr;
 	std::shared_ptr<class LeftRotate> LeftRotatePtr;
 	std::shared_ptr<class RightRotate> RightRotatePtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
+	std::shared_ptr<class GameEngineFontRenderer> Font3;
 };
 

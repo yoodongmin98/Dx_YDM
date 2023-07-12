@@ -30,5 +30,9 @@ private:
 	std::shared_ptr<class UltraPrivate> UltraPrivatePtr;
 	std::shared_ptr<class PrivatePanel_Ultra> PrivatePanel_UltraPtr;
 	std::shared_ptr<class BoxCroix_PR_Ultra> BoxCroix_PR_UltraPtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
 };
 

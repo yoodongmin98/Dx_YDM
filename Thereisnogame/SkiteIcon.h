@@ -16,7 +16,7 @@ public:
 	SkiteIcon& operator=(const SkiteIcon& _Other) = delete;
 	SkiteIcon& operator=(SkiteIcon&& _Other) noexcept = delete;
 
-	
+	GameEngineSoundPlayer Sound;
 	std::shared_ptr<class SkiteProfil> SkiteProfilPtr;
 protected:
 	void Start();

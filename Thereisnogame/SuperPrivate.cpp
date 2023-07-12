@@ -23,6 +23,9 @@ void SuperPrivate::Start()
 {
 	SuperPrivates=Init(SuperPrivates, "Folder.png", { 96,87 }, {-260,20});
 	SuperPrivatesCollision = CollisionInit(SuperPrivatesCollision, { 96,87,1 }, { -260,20 });
+	Font = FontCreate(Font, 25, "슈퍼 개인용", { -260,-40 }, GetTransform(), 2);
+	Font1 = FontCreate(Font1, 25, "진실01", { -105,-40 }, GetTransform(), 2);
+	Font2 = FontCreate(Font2, 25, "개인용", { -310,120 }, GetTransform(), 2);
 }
 
 void SuperPrivate::Update(float _DeltaTime)

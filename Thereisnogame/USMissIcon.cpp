@@ -26,6 +26,11 @@ void USMissIcon::Start()
 {
 	Init(USMissIcons, "PictureBoard01 #75136.png", { 90,93 }, {-140,10});
 	USMissIconsCollision = CollisionInit(USMissIconsCollision, { 90,93,1 }, { -140,10 });
+
+	Font = FontCreate(Font, 25, "US__MISS", { -145,-40 }, GetTransform(), 2);
+	Font1 = FontCreate(Font1, 25, "FR__MISS", { 20,-40 }, GetTransform(), 2);
+	Font2 = FontCreate(Font2, 25, "JP__MISS", { 180,-40 }, GetTransform(), 2);
+	Font3 = FontCreate(Font3, 25, "18+", { -205,120 }, GetTransform(), 2);
 }
 
 void USMissIcon::Update(float _DeltaTime)

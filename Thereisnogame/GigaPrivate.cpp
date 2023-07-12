@@ -24,6 +24,10 @@ void Gigaprivate::Start()
 {
 	Init(Gigaprivates, "Folder.png", { 96,87 }, { -200,20 });
 	GigaprivatesCollision = CollisionInit(GigaprivatesCollision, { 96,87,1 }, { -200,20 });
+
+	Font = FontCreate(Font, 25, "기가 개인용", { -200,-40 }, GetTransform(), 2);
+	Font1 = FontCreate(Font1, 25, "진실03", { -60,-40 }, GetTransform(), 2);
+	Font2 = FontCreate(Font2, 25, "울트라 개인용", { -210,120 }, GetTransform(), 2);
 }
 
 void Gigaprivate::Update(float _DeltaTime)

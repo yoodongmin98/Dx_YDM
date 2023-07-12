@@ -30,6 +30,7 @@ void SkiteIcon::Update(float _DeltaTime)
 	{
 		if (true == CreateBool)
 		{
+			Play(Sound, "OpenWindow.wav", 0.1f);
 			SkiteProfilPtr = GetLevel()->CreateActor<SkiteProfil>();
 			CreateBool = false;
 		}

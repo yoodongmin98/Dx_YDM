@@ -24,6 +24,10 @@ void UltraPrivate::Start()
 {
 	UltraPrivates = Init(UltraPrivates, "Folder.png", { 96,87 }, {-230,20});
 	UltraPrivatesCollision = CollisionInit(UltraPrivatesCollision, { 96,87,1 }, { -230,20 });
+
+	Font = FontCreate(Font, 25, "울트라 개인용", { -230,-40 }, GetTransform(), 2);
+	Font1 = FontCreate(Font1, 25, "진실02", { -80,-40 }, GetTransform(), 2);
+	Font2 = FontCreate(Font2, 25, "슈퍼 개인용", { -250,120 }, GetTransform(), 2);
 }
 
 void UltraPrivate::Update(float _DeltaTime)

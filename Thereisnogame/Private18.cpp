@@ -25,6 +25,9 @@ void Private18::Start()
 {
 	Init(Private18s, "Folder.png", { 96,87 }, {-170,20});
 	Private18sCollision = CollisionInit(Private18sCollision, { 96,87 }, { -170,20 });
+
+	Font = FontCreate(Font, 25, "18+", { -170,-40 }, GetTransform(), 2);
+	Font1 = FontCreate(Font1, 25, "기가 개인용", { -190,120 }, GetTransform(), 2);
 }
 
 void Private18::Update(float _DeltaTime)

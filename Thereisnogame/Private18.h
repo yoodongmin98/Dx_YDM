@@ -31,5 +31,8 @@ private:
 	std::shared_ptr<class FRMissIcon> FRMissIconPtr;
 	std::shared_ptr<class JPMissIcon> JPMissIconPtr;
 	std::shared_ptr<class USMissIcon> USMissIconPtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
 };
 

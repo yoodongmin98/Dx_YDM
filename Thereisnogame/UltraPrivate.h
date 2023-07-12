@@ -30,5 +30,9 @@ private:
 	std::shared_ptr<class Truth3Icon> Truth3IconPtr;
 	std::shared_ptr<class PrivatePanel_Giga> PrivatePanel_GigaPtr;
 	std::shared_ptr<class BoxCroix_PR_Giga> BoxCroix_PR_GigaPtr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
 };
 

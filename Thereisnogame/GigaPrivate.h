@@ -30,5 +30,9 @@ private:
 	std::shared_ptr<class PrivatePanel_18> PrivatePanel_18Ptr;
 	std::shared_ptr<class BoxCroix_PR_18> BoxCroix_PR_18Ptr;
 	std::shared_ptr<class Private18> Private18Ptr;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
 };
 
