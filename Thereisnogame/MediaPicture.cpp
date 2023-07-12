@@ -36,6 +36,11 @@ void MediaPicture::Start()
 	ArchivePicture = AnimationInit(ArchivePicture, "MediaVignetteMusic02_00.png", { 366,204 }, { 197,-65,0 }, "ArchivePicture", "Archive",1, 0.4f, true);
 	RainPicture = AnimationInit(RainPicture, "MediaVignetteMusic03_00.png", { 366,204 }, { 197,-65,0 }, "RainPicture", "Rain",2, 0.1f, true);
 	RadioPicture = AnimationInit(RadioPicture, "MediaVignetteMusic04_00.png", { 366,204 }, { 197,-65,0 }, "RadioPicture", "Radio",2, 0.2f, true);
+
+	Font1 = FontCreate(Font1, 25, "호두까기 인형\n차이코프스키", { 200,-190,0 }, GetTransform(), 2);
+	Font2 = FontCreate(Font2, 25, "머리를 흔들어\n지옥의 아카이브", { 200,-190,0 }, GetTransform(), 2);
+	Font3 = FontCreate(Font3, 25, "안정\n자연의 소리", { 200,-190,0 }, GetTransform(), 2);
+	Font4 = FontCreate(Font4, 25, "엘리베이터 사랑\n13층5중주단", { 200,-190,0 }, GetTransform(), 2);
 	
 	
 	PictureCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Picture);
@@ -47,6 +52,11 @@ void MediaPicture::Start()
 	PictureSelectVector.push_back(ArchivePicture);
 	PictureSelectVector.push_back(RainPicture);
 	PictureSelectVector.push_back(RadioPicture);
+
+	FontSelectVector.push_back(Font1);
+	FontSelectVector.push_back(Font2);
+	FontSelectVector.push_back(Font3);
+	FontSelectVector.push_back(Font4);
 
 	WhatisPicture = ChangeMusicRender(WalnutPicture);
 }
@@ -69,9 +79,11 @@ std::shared_ptr<GameEngineSpriteRenderer> MediaPicture::ChangeMusicRender(std::s
 	}
 	for (size_t i = 0; i <= 3; ++i)
 	{
+		FontSelectVector[i]->Off();
 		PictureSelectVector[i]->Off();
 		if (PictureSelectVector[i] == _PictureRender)
 		{
+			FontSelectVector[i]->On();
 			PictureSelectVector[i]->On();
 		}
 	}

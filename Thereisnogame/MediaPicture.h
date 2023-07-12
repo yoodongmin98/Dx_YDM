@@ -32,10 +32,18 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> RainPicture;
 	std::shared_ptr<class GameEngineSpriteRenderer> RadioPicture;
 
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
+	std::shared_ptr<class GameEngineFontRenderer> Font3;
+	std::shared_ptr<class GameEngineFontRenderer> Font4;
+
 	std::shared_ptr<class GameEngineCollision> PictureCollision;
 
 	std::vector<std::shared_ptr<class GameEngineSpriteRenderer>> PictureSelectVector;
+	std::vector<std::shared_ptr<class GameEngineFontRenderer>> FontSelectVector;
 
 	std::shared_ptr<class GameEngineSpriteRenderer> WhatisPicture;
+
+
 };
 

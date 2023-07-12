@@ -52,11 +52,11 @@ void MusicFolder::Update(float _DeltaTime)
 		LevelStateManager::MG->SetIsWalNuttrue();
 		FolderBackGroundPtr= GetLevel()->CreateActor<FolderBackGround>();
 		MusicFolderPanelPtr=GetLevel()->CreateActor<MusicFolderPanel>();
+		MediaPlayerPtr=GetLevel()->CreateActor<MediaPlayer>();
 		MusicNote_ArchivePtr=GetLevel()->CreateActor<MusicNote_Archive>();
 		MusicNote_RadioPtr=GetLevel()->CreateActor<MusicNote_Radio>();
 		MusicNote_RainPtr=GetLevel()->CreateActor<MusicNote_Rain>();
 		MusicNote_WalnutPtr=GetLevel()->CreateActor<MusicNote_Walnut>();
-		MediaPlayerPtr=GetLevel()->CreateActor<MediaPlayer>();
 		MediaPlayPtr=GetLevel()->CreateActor<MediaPlay>();
 		MediaPausePtr=GetLevel()->CreateActor<MediaPause>();
 		MediaPicturePtr=GetLevel()->CreateActor<MediaPicture>();
