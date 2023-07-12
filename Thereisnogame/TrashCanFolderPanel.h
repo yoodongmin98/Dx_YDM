@@ -27,5 +27,10 @@ private:
 
 	std::shared_ptr<class BoxCroix_Music> Croix;
 
+	std::shared_ptr<class GameEngineFontRenderer> Font1;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
+	std::shared_ptr<class GameEngineFontRenderer> Font3;
+	std::shared_ptr<class GameEngineFontRenderer> Font4;
+
 };
 
