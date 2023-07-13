@@ -67,8 +67,9 @@ void SkiteFolder::BoxCroixDeathCheck()
 		if (true == LevelStateManager::MG->Get18OpenTrue()
 			&& nullptr!=SkiteIconPtr.get())
 		{
+			//오류수정
 			SkiteIconPtr.get()->SkiteProfilPtr.get()->Death();
-			SkiteIconPtr.get()->Death();
 		}
+		SkiteIconPtr.get()->Death();
 	}
 }
