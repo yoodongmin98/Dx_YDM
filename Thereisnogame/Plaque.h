@@ -23,5 +23,7 @@ private:
 	std::shared_ptr<class GameEngineCollision> PlaquesCollision;
 
 	int ClickCount = 0;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

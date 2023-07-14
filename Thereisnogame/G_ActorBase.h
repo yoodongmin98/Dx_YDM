@@ -111,6 +111,11 @@ public:
 		const std::string_view _Text, float4 _Position,
 		GameEngineTransform* _Transform,
 		int _Index);
+
+	std::shared_ptr<GameEngineFontRenderer> NFontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender,
+		const std::string_view _Text,
+		GameEngineTransform* _Transform,
+		float _Time);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

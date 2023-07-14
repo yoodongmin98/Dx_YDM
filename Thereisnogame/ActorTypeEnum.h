@@ -36,5 +36,6 @@ enum class ActorTypeEnum
 
 	//AlphaCircle,Mouse
 	Alpha,
+	Font,
 	Mouse
 };
