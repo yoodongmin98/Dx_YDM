@@ -383,7 +383,7 @@ void PlaywithinaplayLevel::ClearBoardStart()
 	Sound = Play(Sound,"ChainUp.wav",0.1f);
 	Sound = Play(Sound, "Clap.wav", 0.1f);
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(7);
+	ChainPtr->SetChainLiveTime(12);
 }
 void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 {
@@ -392,19 +392,19 @@ void PlaywithinaplayLevel::ClearBoardUpdate(float _DeltaTime)
 	Functions = std::bind(&Board::BoardUp, BoardPtr.get());
 	Functions();
 	//사운드끝나는거로바꾸면 베스트
-	if (ChainPtr->GetLiveTime() > 6.0f && true == Setbool1) { T_TitleMetalPtr = CreateActor<T_TitleMetal>(); T_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform()); Setbool1 = false; }
-	if (ChainPtr->GetLiveTime() > 6.2f && true == Setbool2) { H_TitleMetalPtr = CreateActor<H_TitleMetal>(); H_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool2 = false;}
-	if (ChainPtr->GetLiveTime() > 6.4f && true == Setbool3) { E_TitleMetalPtr = CreateActor<E_TitleMetal>(); E_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool3 = false;}
-	if (ChainPtr->GetLiveTime() > 6.6f && true == Setbool4) { R_TitleMetalPtr = CreateActor<R_TitleMetal>(); R_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool4 = false;}
-	if (ChainPtr->GetLiveTime() > 6.8f && true == Setbool5) { RE_TitleMetalPtr = CreateActor<RE_TitleMetal>(); RE_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool5 = false;}
-	if (ChainPtr->GetLiveTime() > 7.0f && true == Setbool6) { I_TitleMetalPtr = CreateActor<I_TitleMetal>(); I_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool6 = false;}
-	if (ChainPtr->GetLiveTime() > 7.2f && true == Setbool7) { S_TitleMetalPtr = CreateActor<S_TitleMetal>(); S_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool7 = false;}
-	if (ChainPtr->GetLiveTime() > 7.4f && true == Setbool8) { N_TitleMetalPtr = CreateActor<N_TitleMetal>(); N_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool8 = false;}
-	if (ChainPtr->GetLiveTime() > 7.6f && true == Setbool9) { O_TitleMetalPtr = CreateActor<O_TitleMetal>(); O_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool9 = false;}
-	if (ChainPtr->GetLiveTime() > 7.8f && true == Setbool10) { G_TitleMetalPtr = CreateActor<G_TitleMetal>(); G_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool10 = false;}
-	if (ChainPtr->GetLiveTime() > 8.0f && true == Setbool11) { A_TitleMetalPtr = CreateActor<A_TitleMetal>(); A_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool11 = false;}
-	if (ChainPtr->GetLiveTime() > 8.2f && true == Setbool12) { M_TitleMetalPtr = CreateActor<M_TitleMetal>(); M_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool12 = false;}
-	if (ChainPtr->GetLiveTime() > 8.4f && true == Setbool13) { ME_TitleMetalPtr = CreateActor<ME_TitleMetal>(); ME_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool13 = false;}
+	if (ChainPtr->GetLiveTime() > 16.0f && true == Setbool1) { T_TitleMetalPtr = CreateActor<T_TitleMetal>(); T_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform()); Setbool1 = false; }
+	if (ChainPtr->GetLiveTime() > 16.2f && true == Setbool2) { H_TitleMetalPtr = CreateActor<H_TitleMetal>(); H_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool2 = false;}
+	if (ChainPtr->GetLiveTime() > 16.4f && true == Setbool3) { E_TitleMetalPtr = CreateActor<E_TitleMetal>(); E_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool3 = false;}
+	if (ChainPtr->GetLiveTime() > 16.6f && true == Setbool4) { R_TitleMetalPtr = CreateActor<R_TitleMetal>(); R_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool4 = false;}
+	if (ChainPtr->GetLiveTime() > 16.8f && true == Setbool5) { RE_TitleMetalPtr = CreateActor<RE_TitleMetal>(); RE_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool5 = false;}
+	if (ChainPtr->GetLiveTime() > 17.0f && true == Setbool6) { I_TitleMetalPtr = CreateActor<I_TitleMetal>(); I_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool6 = false;}
+	if (ChainPtr->GetLiveTime() > 17.2f && true == Setbool7) { S_TitleMetalPtr = CreateActor<S_TitleMetal>(); S_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool7 = false;}
+	if (ChainPtr->GetLiveTime() > 17.4f && true == Setbool8) { N_TitleMetalPtr = CreateActor<N_TitleMetal>(); N_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool8 = false;}
+	if (ChainPtr->GetLiveTime() > 17.6f && true == Setbool9) { O_TitleMetalPtr = CreateActor<O_TitleMetal>(); O_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool9 = false;}
+	if (ChainPtr->GetLiveTime() > 17.8f && true == Setbool10) { G_TitleMetalPtr = CreateActor<G_TitleMetal>(); G_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool10 = false;}
+	if (ChainPtr->GetLiveTime() > 18.0f && true == Setbool11) { A_TitleMetalPtr = CreateActor<A_TitleMetal>(); A_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool11 = false;}
+	if (ChainPtr->GetLiveTime() > 18.2f && true == Setbool12) { M_TitleMetalPtr = CreateActor<M_TitleMetal>(); M_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool12 = false;}
+	if (ChainPtr->GetLiveTime() > 18.4f && true == Setbool13) { ME_TitleMetalPtr = CreateActor<ME_TitleMetal>(); ME_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());Setbool13 = false;}
 }
 void PlaywithinaplayLevel::ClearBoardEnd()
 {

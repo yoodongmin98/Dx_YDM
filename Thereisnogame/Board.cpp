@@ -29,6 +29,10 @@ void Board::Update(float _DeltaTime)
 {
 	BoardMoveCheck();
 	LevelStateMoveCheck();
+	if (false == BoardFunc)
+	{
+		SoudAndText(_DeltaTime);
+	}
 }
 
 void Board::Render(float _Delta)
@@ -96,6 +100,43 @@ void Board::BoardUp()
 	if (GetTransform()->GetLocalPosition().y > 70.0f)
 	{
 		BoardFunc = false;
+	}
+}
+
+void Board::SoudAndText(float _DeltaTime)
+{
+	SoundTime += _DeltaTime;
+	if (SoundTime > 2.0f)
+	{
+		static bool Play30 = true;
+		if (true == Play30)
+		{
+			Sound = Play(Sound, "Chap01NoTitle01.wav", 0.1f);
+			Play30 = false;
+		}
+		Font = NFontCreate(Font, "브라보, 유저님. 지금 가상으로 박수치고 있어요...", GetTransform(), 3.0f);
+	}
+
+	if (SoundTime > 5.5f)
+	{
+		static bool Play31 = true;
+		if (true == Play31)
+		{
+			Sound = Play(Sound, "Chap01NoTitle02.wav", 0.1f);
+			Play31 = false;
+		}
+		Font2 = NFontCreate(Font2, "내 아름다운 제목을 완전히 망쳐놨네요.", GetTransform(), 4.0f);
+	}
+
+	if (SoundTime > 10.0f)
+	{
+		static bool Play32 = true;
+		if (true == Play32)
+		{
+			Sound = Play(Sound, "Chap01NoTitle03.wav", 0.1f);
+			Play32 = false;
+		}
+		Font3 = NFontCreate(Font3, "뭐, 그래야 한다면 어쩔 수 없죠. 이번엔 좀 단단하게 만들 거예요.", GetTransform(), 4.0f);
 	}
 }
 

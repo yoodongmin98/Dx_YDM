@@ -26,6 +26,7 @@ public:
 	{
 		return Boards->GetTransform();
 	}
+	void SoudAndText(float _DeltaTime);
 
 	GameEngineSoundPlayer Sound;
 protected:
@@ -37,5 +38,15 @@ private:
 	std::shared_ptr<class GameEngineCollision> BoardsCollision;
 
 	bool BoardFunc = true;
+	float SoundTime = 0.0f;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
+	std::shared_ptr<class GameEngineFontRenderer> Font3;
+	std::shared_ptr<class GameEngineFontRenderer> Font4;
+	std::shared_ptr<class GameEngineFontRenderer> Font5;
+	std::shared_ptr<class GameEngineFontRenderer> Font6;
+	std::shared_ptr<class GameEngineFontRenderer> Font7;
+	std::shared_ptr<class GameEngineFontRenderer> Font8;
 };
 

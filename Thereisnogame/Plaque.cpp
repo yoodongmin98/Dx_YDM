@@ -143,6 +143,7 @@ void Plaque::SoundAndText(float _DeltaTime)
 		if (true == Play6)
 		{
 			PlaywithinaplayLevel::LM->StopBGM();
+			Sound = Play(Sound, "BoardDown.wav", 0.1f);
 			Sound = Play(Sound, "CurtainClose.wav", 0.1f);
 			Sound = Play(Sound, "Chap01Intro06.wav", 0.1f);
 			Play6 = false;

@@ -13,6 +13,7 @@ public:
 	G_TitleMetal& operator=(const G_TitleMetal& _Other) = delete;
 	G_TitleMetal& operator=(G_TitleMetal&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

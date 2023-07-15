@@ -22,6 +22,7 @@ void RE_TitleMetal::Start()
 {
 	RE_TitleMetals = Init(RE_TitleMetals, "TitleMetal_E.png", { 99,138 }, { 60,230,0 });
 	RE_TitleMetalsCollision = CollisionInit(RE_TitleMetalsCollision, { 94,142 }, { 60,230,0 });
+	Play(Sound, "ImpactIron.wav", 0.1f);
 }
 
 void RE_TitleMetal::Update(float _DeltaTime)

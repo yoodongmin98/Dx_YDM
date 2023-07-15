@@ -22,6 +22,7 @@ void N_TitleMetal::Start()
 {
 	N_TitleMetals = Init(N_TitleMetals, "TitleMetal_N.png", { 102,138 }, { -300,80,0 });
 	N_TitleMetalsCollision = CollisionInit(N_TitleMetalsCollision, { 94,142 }, { -300,80,0 });
+	Play(Sound, "ImpactIron.wav", 0.1f);
 }
 
 void N_TitleMetal::Update(float _DeltaTime)

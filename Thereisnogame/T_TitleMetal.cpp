@@ -25,6 +25,7 @@ void T_TitleMetal::Start()
 {
 	T_TitleMetals = Init(T_TitleMetals, "TitleMetal_T.png", { 94,142 }, { -300,230,0 });
 	T_TitleMetalsCollision = CollisionInit(T_TitleMetalsCollision, { 94,142 }, { -300,230,0 });
+	Play(Sound, "ImpactIron.wav", 0.1f);
 }
 
 
