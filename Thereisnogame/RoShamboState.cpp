@@ -85,14 +85,13 @@ void PlaywithinaplayLevel::SelectCardStart()
 		RoshamboWinNarate.push_back("Chap01ShifumiWin03.wav");
 		RoshamboWinNarate.push_back("Chap01ShifumiWin04.wav");
 		RoshamboWinNarate.push_back("Chap01ShifumiWin05.wav");
-		RoshamboWinNarate.push_back("Chap01ShifumiWin06.wav");
 
 		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay01.wav");
 		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay02.wav");
 		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay03.wav");
 		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay04.wav");
 		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay05.wav");
-		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay06.wav");
+		
 		Play58 = false;
 	}
 }
@@ -109,7 +108,7 @@ void PlaywithinaplayLevel::SelectCardEnd()
 
 void PlaywithinaplayLevel::EnemyCardStart()
 {
-	
+	EnemyCardBool = true;
 }
 void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 {
@@ -172,7 +171,6 @@ void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 		if (true == ReplayBool)
 		{
 			Sound = Play(Sound, RoshamboRePlayNarate[NarateValue], 0.1f);
-			NarateValue++;
 			ReplayBool = false;
 		}
 	}
@@ -191,7 +189,9 @@ void PlaywithinaplayLevel::EnemyCardEnd()
 
 void PlaywithinaplayLevel::CardDownAndOffStart()
 {
-	if (NarateValue >= 5)
+	EnemyCardBool = false;
+	NarateValue++;
+	if (NarateValue >= 4)
 	{
 		NarateValue = 0;
 	}

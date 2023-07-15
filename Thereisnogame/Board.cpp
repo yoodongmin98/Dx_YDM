@@ -23,6 +23,19 @@ void Board::Start()
 	Boards = Init(Boards, "Board.png", { 776,422 }, { 0,70,0 });
 	BoardsCollision = CollisionInit(BoardsCollision, { 770,420 }, { 0,70,0 });
 	BoardsCollision->Off();
+	FontVector.push_back(FontW0);
+	FontVector.push_back(FontW1);
+	FontVector.push_back(FontW2);
+	FontVector.push_back(FontW3);
+	FontVector.push_back(FontW4);
+	FontVector.push_back(FontW5);
+
+	FontReplayVector.push_back(FontR0);
+	FontReplayVector.push_back(FontR1);
+	FontReplayVector.push_back(FontR2);
+	FontReplayVector.push_back(FontR3);
+	FontReplayVector.push_back(FontR4);
+	FontReplayVector.push_back(FontR5);
 }
 
 void Board::Update(float _DeltaTime)
@@ -33,6 +46,7 @@ void Board::Update(float _DeltaTime)
 	{
 		SoudAndText(_DeltaTime);
 	}
+	RoshamboText(_DeltaTime);
 }
 
 void Board::Render(float _Delta)
@@ -170,6 +184,66 @@ void Board::SoudAndText(float _DeltaTime)
 			Play35 = false;
 		}
 		Font6 = NFontCreate(Font6, "색 배열에 수차가 생긴 건가, 아니면 글자가 기울어진 건가?", GetTransform(), 4.0f);
+	}
+}
+
+void Board::RoshamboText(float _DeltaTime)
+{
+	Value = PlaywithinaplayLevel::LM->GetNarateValue();
+	CardBool = PlaywithinaplayLevel::LM->GetEnemyCardBool();
+	if (CardBool == true)
+	{
+		Time += _DeltaTime;
+	}
+	if (Time > 4.0f)
+	{
+		if (0 == Value)
+		{
+			FontVector[Value] = NFontCreate(FontVector[Value], "내가 이겼다! 운 좋네요!", GetTransform(), 2.5f);
+		}
+		if (1 == Value)
+		{
+			FontVector[Value] = NFontCreate(FontVector[Value], "또 이겼다! 이거 되게 재밌네!", GetTransform(), 2.5f);
+		}
+		if (2 == Value)
+		{
+			FontVector[Value] = NFontCreate(FontVector[Value], "아, 안타깝네요! 또 졌어요.", GetTransform(), 2.5f);
+		}
+		if (3 == Value)
+		{
+			FontVector[Value] = NFontCreate(FontVector[Value], "이 게임 되게 재밌네요. 안 그런가요?", GetTransform(), 2.5f);
+		}
+		if (4 == Value)
+		{
+			FontVector[Value] = NFontCreate(FontVector[Value], "정말로 사기치는 건 아니에요.아뇨,아뇨,아니에요...", GetTransform(), 2.5f);
+		}
+	}
+	if (Time > 7.0f)
+	{
+		if (0 == Value)
+		{
+			FontReplayVector[Value] = NFontCreate(FontReplayVector[Value], "자, 한 번 더 합시다!", GetTransform(), 1.9f);
+		}
+		if (1 == Value)
+		{
+			FontReplayVector[Value] = NFontCreate(FontReplayVector[Value], "다음엔 당신이 이길 거 같네요. 그냥 알겠어요.", GetTransform(), 1.9f);
+		}
+		if (2 == Value)
+		{
+			FontReplayVector[Value] = NFontCreate(FontReplayVector[Value], "포기하지 마요.", GetTransform(), 1.9f);
+		}
+		if (3 == Value)
+		{
+			FontReplayVector[Value] = NFontCreate(FontReplayVector[Value], "조금 반복되는 느낌이지만요.", GetTransform(), 1.9f);
+		}
+		if (4 == Value)
+		{
+			FontReplayVector[Value] = NFontCreate(FontReplayVector[Value], "지는 건 안 지겨워요?", GetTransform(), 1.9f);
+		}
+	}
+	if (Time > 8.99f)
+	{
+		Time = 0.0f;
 	}
 }
 

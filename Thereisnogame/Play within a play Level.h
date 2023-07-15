@@ -52,6 +52,7 @@ public:
 	void RSBChangeState(RoshamboState _State);
 	void RSBUpdateState(float _DeltaTime);
 
+
 	Chap1LevelState GetLevelState()
 	{
 		return StateValue;
@@ -71,6 +72,16 @@ public:
 
 	GameEngineSoundPlayer MainBGM;
 	GameEngineSoundPlayer Sound;
+
+	int GetNarateValue()
+	{
+		return NarateValue;
+	}
+
+	bool GetEnemyCardBool()
+	{
+		return EnemyCardBool;
+	}
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
@@ -231,6 +242,8 @@ private:
 
 	std::vector<std::string_view> RoshamboWinFont;
 	std::vector<std::string_view> RoshamboRePlayFont;
+
+	bool EnemyCardBool = false;
 
 	bool ScotchBool = true;
 	bool RockBool = true;

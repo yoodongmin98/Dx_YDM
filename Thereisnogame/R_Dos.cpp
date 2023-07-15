@@ -8,6 +8,8 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Play within a play Level.h"
+
 R_Dos* R_Dos::Dos;
 R_Dos::R_Dos()
 {
@@ -28,7 +30,6 @@ void R_Dos::Start()
 void R_Dos::Update(float _DeltaTime)
 {
 	
-
 }
 
 void R_Dos::Render(float _Delta)

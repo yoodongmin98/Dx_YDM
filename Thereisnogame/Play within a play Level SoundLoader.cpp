@@ -1,6 +1,10 @@
 #include "PrecompileHeader.h"
 #include "Play within a play Level.h"
+#include "ActorTypeEnum.h"
 #include <GameEnginePlatform/GameEngineSound.h>
+#include <GameEngineCore/GameEngineFontRenderer.h>
+#include <GameEngineCore/GameEngineActor.h>
+
 
 
 void PlaywithinaplayLevel::SoundLoad()
@@ -52,3 +56,4 @@ GameEngineSoundPlayer PlaywithinaplayLevel::Play(GameEngineSoundPlayer _ControlS
 
 	return _ControlSoundName;
 }
+
