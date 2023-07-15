@@ -41,8 +41,9 @@ public:
 	PlaywithinaplayLevel& operator=(PlaywithinaplayLevel&& _Other) noexcept = delete;
 	std::shared_ptr<class FadeEffect> FEffect;
 
-	void Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
-	void Pause(GameEngineSoundPlayer _ControlSoundName);
+	void ReSetBGM();
+	void StopBGM();
+	GameEngineSoundPlayer ChangeBGM(const std::string_view& _MusicName);
 
 	void ChangeState(Chap1LevelState _State);
 	void UpdateState(float _DeltaTime);
@@ -67,7 +68,7 @@ public:
 
 	void SoundLoad();
 
-	GameEngineSoundPlayer StartBackSound;
+	GameEngineSoundPlayer MainBGM;
 	GameEngineSoundPlayer Sound;
 protected:
 	void Start() override;

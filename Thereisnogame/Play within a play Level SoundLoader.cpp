@@ -22,14 +22,24 @@ void PlaywithinaplayLevel::SoundLoad()
 	}
 }
 
-void PlaywithinaplayLevel::Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+void PlaywithinaplayLevel::ReSetBGM()
 {
-	_ControlSoundName = GameEngineSound::Play(_MusicName);
-	_ControlSoundName.SetVolume(_Volume);
-	_ControlSoundName.SetLoop(0);
+	MainBGM = GameEngineSound::Play("MusicStart.wav");
+	MainBGM.SetVolume(0.1f);
+	MainBGM.SetLoop(0);
 }
 
-void PlaywithinaplayLevel::Pause(GameEngineSoundPlayer _ControlSoundName)
+void PlaywithinaplayLevel::StopBGM()
 {
-	_ControlSoundName.SetPause(true);
+	MainBGM.Stop();
+}
+
+GameEngineSoundPlayer PlaywithinaplayLevel::ChangeBGM(const std::string_view& _MusicName)
+{
+	MainBGM.Stop();
+	MainBGM = GameEngineSound::Play(_MusicName);
+	MainBGM.SetVolume(0.1f);
+	MainBGM.SetLoop(-1);
+
+	return MainBGM;
 }

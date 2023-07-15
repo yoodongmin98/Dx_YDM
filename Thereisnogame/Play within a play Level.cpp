@@ -105,11 +105,11 @@ void PlaywithinaplayLevel::Update(float _DeltaTime)
 void PlaywithinaplayLevel::LevelChangeStart()
 {
 	FEffect->FadeOut();
-	Play(StartBackSound, "MusicStart.wav", 0.1f);
+	ReSetBGM();
 }
 
 void PlaywithinaplayLevel::LevelChangeEnd()
 {
-	StartBackSound.Stop();
+	MainBGM.Stop();
 }
 
