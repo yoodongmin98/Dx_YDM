@@ -46,6 +46,7 @@ void T_TitleMetal::BeforeRoshambo()
 {
 	if (true == ClickCheck(T_TitleMetalsCollision))
 	{
+		Play(Sound, "MetalHit.wav", 0.1f);
 		LevelStateManager::MG->SetHMCMetalPlus();
 	}
 	if (5 < LevelStateManager::MG->GetHMCMetal()

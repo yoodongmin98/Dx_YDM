@@ -29,6 +29,7 @@ void G_TitleMetal::Update(float _DeltaTime)
 {
 	if (true == ClickCheck(G_TitleMetalsCollision))
 	{
+		Play(Sound, "MetalHit.wav", 0.1f);
 		LevelStateManager::MG->SetHMCMetalPlus();
 	}
 }

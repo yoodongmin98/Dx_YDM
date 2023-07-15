@@ -435,6 +435,7 @@ void PlaywithinaplayLevel::SlantBoardStart()
 		ME_TitleMetalPtr = CreateActor<ME_TitleMetal>(); ME_TitleMetalPtr->GetTransform()->SetParent(BoardPtr->GetTransform());
 	}
 	//-----------------------------------------------
+	Sound = Play(Sound, "IronTitleDown.wav", 0.1f);
 }
 void PlaywithinaplayLevel::SlantBoardUpdate(float _DeltaTime)
 {

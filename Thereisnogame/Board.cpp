@@ -136,7 +136,40 @@ void Board::SoudAndText(float _DeltaTime)
 			Sound = Play(Sound, "Chap01NoTitle03.wav", 0.1f);
 			Play32 = false;
 		}
-		Font3 = NFontCreate(Font3, "뭐, 그래야 한다면 어쩔 수 없죠. 이번엔 좀 단단하게 만들 거예요.", GetTransform(), 4.0f);
+		Font3 = NFontCreate(Font3, "뭐, 그래야 한다면 어쩔 수 없죠. 이번엔 좀 단단하게 만들 거예요.", GetTransform(), 5.0f);
+	}
+
+	if (SoundTime > 24.0f)
+	{
+		static bool Play33 = true;
+		if (true == Play33)
+		{
+			Sound = Play(Sound, "Chap01TitleIron01.wav", 0.1f);
+			Play33 = false;
+		}
+		Font4 = NFontCreate(Font4, "조금 흥분 한 거 같네요...", GetTransform(), 2.5f);
+	}
+
+	if (SoundTime > 27.0f)
+	{
+		static bool Play34 = true;
+		if (true == Play34)
+		{
+			Sound = Play(Sound, "Chap01TitleIron02.wav", 0.1f);
+			Play34 = false;
+		}
+		Font5 = NFontCreate(Font5, "이번엔 제목을 좀 내버려줬으면 해요...", GetTransform(), 3.0f);
+	}
+
+	if (SoundTime > 31.0f)
+	{
+		static bool Play35 = true;
+		if (true == Play35)
+		{
+			Sound = Play(Sound, "Chap01TitleIron03.wav", 0.1f);
+			Play35 = false;
+		}
+		Font6 = NFontCreate(Font6, "색 배열에 수차가 생긴 건가, 아니면 글자가 기울어진 건가?", GetTransform(), 4.0f);
 	}
 }
 
