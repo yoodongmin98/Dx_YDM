@@ -226,6 +226,22 @@ private:
 	void RoshamboEnd();
 	float CardTime = 0.0f;
 	//-------Roshambo State-------//
+	std::vector<std::string_view> RoshamboWinNarate;
+	std::vector<std::string_view> RoshamboRePlayNarate;
+
+	std::vector<std::string_view> RoshamboWinFont;
+	std::vector<std::string_view> RoshamboRePlayFont;
+
+	bool ScotchBool = true;
+	bool RockBool = true;
+	bool ScissorBool = true;
+	bool PaperBool = true;
+
+	bool WinBool = true;
+	bool ReplayBool = true;
+
+	int NarateValue = 0;
+
 	void SelectCardStart();
 	void SelectCardUpdate(float _DeltaTime);
 	void SelectCardEnd();

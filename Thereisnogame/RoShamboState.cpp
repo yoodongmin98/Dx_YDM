@@ -77,7 +77,24 @@ void PlaywithinaplayLevel::RSBUpdateState(float _DeltaTime)
 
 void PlaywithinaplayLevel::SelectCardStart()
 {
+	static bool Play58 = true;
+	if (true == Play58)
+	{
+		RoshamboWinNarate.push_back("Chap01ShifumiWin01.wav");
+		RoshamboWinNarate.push_back("Chap01ShifumiWin02.wav");
+		RoshamboWinNarate.push_back("Chap01ShifumiWin03.wav");
+		RoshamboWinNarate.push_back("Chap01ShifumiWin04.wav");
+		RoshamboWinNarate.push_back("Chap01ShifumiWin05.wav");
+		RoshamboWinNarate.push_back("Chap01ShifumiWin06.wav");
 
+		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay01.wav");
+		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay02.wav");
+		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay03.wav");
+		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay04.wav");
+		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay05.wav");
+		RoshamboRePlayNarate.push_back("Chap01ShifumiReplay06.wav");
+		Play58 = false;
+	}
 }
 void PlaywithinaplayLevel::SelectCardUpdate(float _DeltaTime)
 {
@@ -100,6 +117,11 @@ void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 	std::function<void()> Functions;
 	if (EnemyCardTime>1.0f)
 	{
+		if (true == ScotchBool)
+		{
+			Sound = Play(Sound, "Scotch.wav", 0.1f);
+			ScotchBool = false;
+		}
 		Functions = std::bind(&R_Dos::Shake, R_DosPtr.get());
 		Functions();
 	}
@@ -107,21 +129,54 @@ void PlaywithinaplayLevel::EnemyCardUpdate(float _DeltaTime)
 	{
 		if (true == LevelStateManager::MG->GetIsRock())
 		{
+			if (true == RockBool)
+			{
+				Sound = Play(Sound, "CardDrop.wav", 0.1f);
+				RockBool = false;
+			}
 			R_DosPtr.get()->Off();
 			R_EnemyPaperPtr.get()->On();
 		}
 		if (true == LevelStateManager::MG->GetIsSissor())
 		{
+			if (true == ScissorBool)
+			{
+				Sound = Play(Sound, "CardDrop.wav", 0.1f);
+				ScissorBool = false;
+			}
 			R_DosPtr.get()->Off();
 			R_EnemyRockPtr.get()->On();
 		}
 		if (true == LevelStateManager::MG->GetIsPaper())
 		{
+			if (true == PaperBool)
+			{
+				Sound = Play(Sound, "CardDrop.wav", 0.1f);
+				PaperBool = false;
+			}
 			R_DosPtr.get()->Off();
 			R_EnemySissorPtr.get()->On();
 		}
 	}
-	if (EnemyCardTime > 8.0f)
+	if (EnemyCardTime > 4.0f)
+	{
+		if (true == WinBool)
+		{
+			Sound = Play(Sound, RoshamboWinNarate[NarateValue], 0.1f);
+			WinBool = false;
+		}
+	}
+
+	if (EnemyCardTime > 7.0f)
+	{
+		if (true == ReplayBool)
+		{
+			Sound = Play(Sound, RoshamboRePlayNarate[NarateValue], 0.1f);
+			NarateValue++;
+			ReplayBool = false;
+		}
+	}
+	if (EnemyCardTime > 9.0f)
 	{
 		RSBChangeState(RoshamboState::CardDownAndOff);
 	}
@@ -136,6 +191,11 @@ void PlaywithinaplayLevel::EnemyCardEnd()
 
 void PlaywithinaplayLevel::CardDownAndOffStart()
 {
+	if (NarateValue >= 5)
+	{
+		NarateValue = 0;
+	}
+	Sound = Play(Sound, "CardDrop.wav", 0.1f);
 	LevelStateManager::MG->SetIsSelectCardFalse();
 	LevelStateManager::MG->SetIsRockfalse();
 	LevelStateManager::MG->SetIsSissorfalse();
@@ -148,6 +208,13 @@ void PlaywithinaplayLevel::CardDownAndOffStart()
 	R_RockPtr.get()->SetBool();
 	R_SissorPtr.get()->SetBool();
 	R_PaperPtr.get()->SetBool();
+
+	ScotchBool = true;
+	RockBool = true;
+	ScissorBool = true;
+	PaperBool = true;
+	WinBool = true;
+	ReplayBool = true;
 }
 void PlaywithinaplayLevel::CardDownAndOffUpdate(float _DeltaTime)
 {
