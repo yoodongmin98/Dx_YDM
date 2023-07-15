@@ -184,5 +184,60 @@ void T_TitleMetal::SoundAndText(float _DeltaTime)
 		}
 		Font10 = NFontCreate(Font10, "알겠지만, 가위, 바위, 보가 있는 게임이에요.", GetTransform(), 2.5f);
 	}
+
+	if (SoundTime > 29.0f)
+	{
+		static bool Play49 = true;
+		if (true == Play49)
+		{
+			Sound = Play(Sound, "Chap01Shifumi09.wav", 0.1f);
+			Play49 = false;
+		}
+		Font11 = NFontCreate(Font11, "바위는 가위를 부수고,", GetTransform(), 2.5f);
+	}
+
+	if (SoundTime > 32.0f)
+	{
+		static bool Play50 = true;
+		if (true == Play50)
+		{
+			Sound = Play(Sound, "Chap01Shifumi10.wav", 0.1f);
+			Play50 = false;
+		}
+		Font12 = NFontCreate(Font12, "보는 바위를 감싸고,", GetTransform(), 2.5f);
+	}
+
+	if (SoundTime > 35.0f)
+	{
+		static bool Play51 = true;
+		if (true == Play51)
+		{
+			Sound = Play(Sound, "Chap01Shifumi11.wav", 0.1f);
+			Play51 = false;
+		}
+		Font13 = NFontCreate(Font13, "가위는 보를 자르죠.", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 37.5f)
+	{
+		static bool Play52 = true;
+		if (true == Play52)
+		{
+			Sound = Play(Sound, "Chap01Shifumi12.wav", 0.1f);
+			Play52 = false;
+		}
+		Font14 = NFontCreate(Font14, "좋아요. 시작할 게요. 난 골랐어요.", GetTransform(), 2.5f);
+	}
+
+	if (SoundTime > 41.5f)
+	{
+		static bool Play53 = true;
+		if (true == Play53)
+		{
+			Sound = Play(Sound, "Chap01Shifumi13.wav", 0.1f);
+			Play53 = false;
+		}
+		Font15 = NFontCreate(Font15, "이제 당신이 카드를 고르면 돼요.", GetTransform(), 2.5f);
+	}
 }
 

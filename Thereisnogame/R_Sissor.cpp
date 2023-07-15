@@ -44,9 +44,15 @@ void R_Sissor::Render(float _Delta)
 void R_Sissor::Up()
 {
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
+	static bool Play48 = true;
+	if (true == Play48)
+	{
+		Sound = Play(Sound, "CardDrop.wav", 0.1f);
+		Play48 = false;
+	}
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
+		GetTransform()->AddLocalPosition({ 0,2*Times,0 });
 	}
 	if (GetTransform()->GetLocalPosition().y >= 5.0f)
 	{
@@ -60,6 +66,7 @@ void R_Sissor::StateClickCheck()
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (true == ClickCheck(R_SissorsCollision))
 	{
+		Sound = Play(Sound, "CardDrop.wav", 0.1f);
 		R_SissorClick = true;
 		LevelStateManager::MG->SetIsSelectCardTrue();
 		LevelStateManager::MG->SetIsSissorTrue();

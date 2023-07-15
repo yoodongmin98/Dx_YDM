@@ -41,9 +41,15 @@ void R_Dos::Render(float _Delta)
 void R_Dos::Up()
 {
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
+	static bool Play54 = true;
+	if (true == Play54)
+	{
+		Sound = Play(Sound, "CardDrop.wav", 0.1f);
+		Play54 = false;
+	}
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
+		GetTransform()->AddLocalPosition({ 0,2*Times,0 });
 	}
 	if (GetTransform()->GetLocalPosition().y >= 280.0f)
 	{

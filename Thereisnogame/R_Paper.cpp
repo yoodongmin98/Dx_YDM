@@ -44,9 +44,15 @@ void R_Paper::Render(float _Delta)
 void R_Paper::Up()
 {
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
+	static bool Play46 = true;
+	if (true == Play46)
+	{
+		Sound = Play(Sound, "CardDrop.wav", 0.1f);
+		Play46 = false;
+	}
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
+		GetTransform()->AddLocalPosition({ 0,2*Times,0 });
 	}
 	if (GetTransform()->GetLocalPosition().y >= 0.0f)
 	{
@@ -60,6 +66,7 @@ void R_Paper::StateClickCheck()
 	//Up
 	if (true == ClickCheck(R_PapersCollision))
 	{
+		Sound = Play(Sound, "CardDrop.wav", 0.1f);
 		R_PaperClick = true;
 		LevelStateManager::MG->SetIsSelectCardTrue();
 		LevelStateManager::MG->SetIsPaperTrue();

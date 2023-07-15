@@ -20,6 +20,8 @@ public:
 		R_SissorBool = true;
 		R_SissorClick = false;
 	}
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

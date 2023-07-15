@@ -39,7 +39,7 @@ void R_EnemyRock::Up()
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({ 0,1*Times,0 });
+		GetTransform()->AddLocalPosition({ 0,2*Times,0 });
 	}
 	if (GetTransform()->GetLocalPosition().y >= 280.0f)
 	{

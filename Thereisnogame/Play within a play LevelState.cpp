@@ -474,7 +474,7 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	RSBUpdateState(_DeltaTime);
 
 	CardTime += _DeltaTime;
-	if (true == RoshamboBool) //시간값 추가하기
+	if (true == RoshamboBool && CardTime>26.0f) //시간값 추가하기
 	{
 		R_SissorPtr = CreateActor<R_Sissor>();
 		R_PaperPtr = CreateActor<R_Paper>();
@@ -487,10 +487,10 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	}
 	//여기 밑은 전부 사운드가 끝나면 카드들 올라오게하기
 	std::function<void()> Functions;
-	if (CardTime > 3.0f && CardTime < 14.0f) { Functions = std::bind(&R_Rock::Up, R_RockPtr.get()); Functions();}
-	if (CardTime > 6.0f && CardTime < 14.0f) { Functions = std::bind(&R_Paper::Up, R_PaperPtr.get()); Functions();}
-	if (CardTime > 9.0f && CardTime < 14.0f) { Functions = std::bind(&R_Sissor::Up, R_SissorPtr.get()); Functions();}
-	if (CardTime > 12.0f && CardTime < 14.0f)
+	if (CardTime > 28.0f && CardTime < 41.0f) { Functions = std::bind(&R_Rock::Up, R_RockPtr.get()); Functions();}
+	if (CardTime > 31.0f && CardTime < 41.0f) { Functions = std::bind(&R_Paper::Up, R_PaperPtr.get()); Functions();}
+	if (CardTime > 34.0f && CardTime < 41.0f) { Functions = std::bind(&R_Sissor::Up, R_SissorPtr.get()); Functions();}
+	if (CardTime > 40.5f && CardTime < 43.0f)
 	{
 		Functions = std::bind(&R_Dos::Up, R_DosPtr.get()); Functions();
 		Functions = std::bind(&R_EnemyPaper::Up, R_EnemyPaperPtr.get()); Functions();
@@ -498,7 +498,7 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 		Functions = std::bind(&R_EnemySissor::Up, R_EnemySissorPtr.get()); Functions();
 	}
 	//나는 다 골랐어요 사운드가 끝난후에
-	if (CardTime > 15.0f && false==LevelStateManager::MG->GetIsSetCard()) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
+	if (CardTime > 43.0f && false==LevelStateManager::MG->GetIsSetCard()) { RSBChangeState(RoshamboState::SelectCard); LevelStateManager::MG->SetIsSetCardTrue(); }
 	if (true==LevelStateManager::MG->GetIsCutTheLope()
 		&& true==RoshamboStateBools)
 	{

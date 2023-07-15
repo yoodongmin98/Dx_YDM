@@ -44,9 +44,15 @@ void R_Rock::Render(float _Delta)
 void R_Rock::Up()
 {
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
+	static bool Play47 = true;
+	if (true == Play47)
+	{
+		Sound = Play(Sound, "CardDrop.wav", 0.1f);
+		Play47 = false;
+	}
 	if (false == IsPos)
 	{
-		GetTransform()->AddLocalPosition({0,1*Times,0});
+		GetTransform()->AddLocalPosition({0,2*Times,0});
 	}
 	if (GetTransform()->GetLocalPosition().y >= 5.0f)
 	{
@@ -60,6 +66,7 @@ void R_Rock::StateClickCheck()
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
 	if (true == ClickCheck(R_RocksCollision))
 	{
+		Sound = Play(Sound, "CardDrop.wav", 0.1f);
 		R_RockClick = true;
 		LevelStateManager::MG->SetIsSelectCardTrue();
 		LevelStateManager::MG->SetIsRockTrue();

@@ -20,6 +20,8 @@ public:
 		R_PaperBool = true;
 		R_PaperClick = false;
 	}
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

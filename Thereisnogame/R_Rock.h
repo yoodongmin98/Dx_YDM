@@ -20,6 +20,8 @@ public:
 		R_RockBool = true;
 		R_RockClick = false;
 	}
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;
