@@ -116,6 +116,9 @@ public:
 		const std::string_view _Text,
 		GameEngineTransform* _Transform,
 		float _Time);
+
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
