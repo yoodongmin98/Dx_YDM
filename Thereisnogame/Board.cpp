@@ -139,7 +139,7 @@ void Board::SoudAndText(float _DeltaTime)
 		Font3 = NFontCreate(Font3, "뭐, 그래야 한다면 어쩔 수 없죠. 이번엔 좀 단단하게 만들 거예요.", GetTransform(), 5.0f);
 	}
 
-	if (SoundTime > 24.0f)
+	if (SoundTime > 22.0f)
 	{
 		static bool Play33 = true;
 		if (true == Play33)
@@ -150,7 +150,7 @@ void Board::SoudAndText(float _DeltaTime)
 		Font4 = NFontCreate(Font4, "조금 흥분 한 거 같네요...", GetTransform(), 2.5f);
 	}
 
-	if (SoundTime > 27.0f)
+	if (SoundTime > 25.0f)
 	{
 		static bool Play34 = true;
 		if (true == Play34)
@@ -161,7 +161,7 @@ void Board::SoudAndText(float _DeltaTime)
 		Font5 = NFontCreate(Font5, "이번엔 제목을 좀 내버려줬으면 해요...", GetTransform(), 3.0f);
 	}
 
-	if (SoundTime > 31.0f)
+	if (SoundTime > 29.0f)
 	{
 		static bool Play35 = true;
 		if (true == Play35)

@@ -143,7 +143,6 @@ void Plaque::SoundAndText(float _DeltaTime)
 		if (true == Play6)
 		{
 			PlaywithinaplayLevel::LM->StopBGM();
-			Sound = Play(Sound, "BoardDown.wav", 0.1f);
 			Sound = Play(Sound, "CurtainClose.wav", 0.1f);
 			Sound = Play(Sound, "Chap01Intro06.wav", 0.1f);
 			Play6 = false;
@@ -341,4 +340,3 @@ void Plaque::SoundAndText(float _DeltaTime)
 		Font20 = NFontCreate(Font20, "특히 저 느낌표 부분요. 풀이 다 떨어졌거든요.", GetTransform(), 3.5f);
 	}
 }
-

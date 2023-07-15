@@ -474,7 +474,7 @@ void PlaywithinaplayLevel::RoshamboUpdate(float _DeltaTime)
 	RSBUpdateState(_DeltaTime);
 
 	CardTime += _DeltaTime;
-	if (true == RoshamboBool)
+	if (true == RoshamboBool) //시간값 추가하기
 	{
 		R_SissorPtr = CreateActor<R_Sissor>();
 		R_PaperPtr = CreateActor<R_Paper>();
