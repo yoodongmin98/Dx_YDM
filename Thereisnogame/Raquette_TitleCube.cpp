@@ -29,6 +29,8 @@ void Raquette_TitleCube::Start()
 	Raquette_TitleCubesCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Excla);
 	Raquette_TitleCubesCollision->GetTransform()->SetLocalScale({ 151,74 });
 	Raquette_TitleCubesCollision->GetTransform()->SetLocalPosition({ 300,-330,0 });
+
+	Play(Sound, "DropBounce.wav", 0.1f);
 }
 
 void Raquette_TitleCube::Update(float _DeltaTime)

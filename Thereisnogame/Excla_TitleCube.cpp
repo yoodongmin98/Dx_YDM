@@ -48,6 +48,7 @@ void Excla_TitleCube::ProgressCheck()
 
 	if (true == ClickCheck(Excla_TitleCubesCollision))
 	{
+		Sound = Play(Sound, "ExclaClick.wav", 0.1f);
 		GetTransform()->AddLocalPosition({ 0,-5*Times,0 });
 		++ExclaClickCount;
 		if (ExclaClickCount > 4)

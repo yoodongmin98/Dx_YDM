@@ -132,6 +132,15 @@ public:
 		return IsGetTheCup;
 	}
 	//Chapter1----------------------------------------------------------------------------------------------------------
+	// plaque나레이션 다 끝났냐?
+	void SetplaqueNarateTrue()
+	{
+		plaqueNarate = true;
+	 }
+	bool GetplaqueNarate()
+	{
+		return plaqueNarate;
+	}
 	//Board 다 내려왔냐?
 	void SetIsBoardDownTrue()
 	{
@@ -381,6 +390,7 @@ private:
 	//MainMenu
 	bool IsClickMainMenu = false;
 	//Chapter1
+	bool plaqueNarate = false;
 	bool IsBoardDown = false;
 	bool IsCreateRaquette = false;
 	bool LopeDownStart = false;

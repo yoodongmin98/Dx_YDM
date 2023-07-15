@@ -47,6 +47,7 @@ void Ball_TitleCube::ProgressCheck()
 	}
 	if (true == ClickCheck(Ball_TitleCubesCollision)&& 5>BallClickCount)
 	{
+		Sound = Play(Sound, "Drag1.wav", 0.1f);
 		++BallClickCount;
 		GetTransform()->AddLocalPosition({ 0,-5*Times,0 });
 		if (BallClickCount > 4)

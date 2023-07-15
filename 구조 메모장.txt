@@ -80,3 +80,18 @@ RigidBody 핀볼에 한번 써보자 ㅇ.ㅇ
 힘의 주는 순간과 방향만 잘 조절하면될듯
 FakeProgramLevel에서의 핀볼은 시간상 포기해야할듯...?
 ----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+Font용
+static bool Play21 = true;
+		if (true == Play21)
+		{
+			LevelStateManager::MG->SetplaqueNarateTrue();
+			Sound = Play(Sound, "Chap01Intro15.wav", 0.1f);
+			Play21 = false;
+		}
+		Font18 = NFontCreate(Font18, "...환불 얘기는 하지 말아주세요. 알겠죠?", GetTransform(), 2.5f);

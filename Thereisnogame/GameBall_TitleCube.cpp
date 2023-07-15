@@ -30,10 +30,12 @@ void GameBall_TitleCube::Start()
 	GameBall_TitleCubesCollisionD = BallCollisionInit(GameBall_TitleCubesCollisionD, { 27,5 }, Position + float4::Down * 24);
 	GameBall_TitleCubesCollisionL = BallCollisionInit(GameBall_TitleCubesCollisionL, { 5,39 }, Position + float4::Left * 17);
 	GameBall_TitleCubesCollisionR = BallCollisionInit(GameBall_TitleCubesCollisionR, { 5,39 }, Position + float4::Right * 17);
+	
 }
 
 void GameBall_TitleCube::Update(float _DeltaTime)
 {
+	SoundAndText(_DeltaTime);
 	InterBoolTime += _DeltaTime;
 	if (InterBoolTime > 0.1f)
 	{
@@ -146,4 +148,19 @@ void GameBall_TitleCube::CubeCrashCheck(G_RigidBody* _Rigids)
 		InterBool = false;
 		_Rigids->ChangeXDir();
 	}
+}
+
+void GameBall_TitleCube::SoundAndText(float _DeltaTime)
+{
+	SoundTime += _DeltaTime;
+	Sound = Play(Sound, "Chap01CasseBrique01.wav", 0.1f);
+	Font = NFontCreate(Font, "내 제목!", GetTransform(), 1.0f);
+	static bool Play24 = true;
+	if (true == Play24)
+	{
+		LevelStateManager::MG->SetplaqueNarateTrue();
+		Sound = Play(Sound, "Chap01Intro15.wav", 0.1f);
+		Play24 = false;
+	}
+	Font18 = NFontCreate(Font18, "...환불 얘기는 하지 말아주세요. 알겠죠?", GetTransform(), 2.5f);
 }

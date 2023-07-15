@@ -146,6 +146,8 @@ void S_ActorBase::Play(GameEngineSoundPlayer _ControlSoundName, const std::strin
 	_ControlSoundName = GameEngineSound::Play(_MusicName);
 	_ControlSoundName.SetVolume(_Volume);
 	_ControlSoundName.SetLoop(0);
+
+	
 }
 
 void S_ActorBase::Pause(GameEngineSoundPlayer _ControlSoundName)

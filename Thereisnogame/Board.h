@@ -26,6 +26,8 @@ public:
 	{
 		return Boards->GetTransform();
 	}
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

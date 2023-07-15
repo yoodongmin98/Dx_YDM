@@ -22,6 +22,7 @@ void Board::Start()
 {
 	Boards = Init(Boards, "Board.png", { 776,422 }, { 0,70,0 });
 	BoardsCollision = CollisionInit(BoardsCollision, { 770,420 }, { 0,70,0 });
+	BoardsCollision->Off();
 }
 
 void Board::Update(float _DeltaTime)
@@ -50,10 +51,14 @@ void Board::BoardMoveCheck()
 			Boardmoves = false;
 		}
 	}
+	if (true == LevelStateManager::MG->GetplaqueNarate())
+	{
+		BoardsCollision->On();
+	}
 	if (false == LevelStateManager::MG->GetIsProgress()
 		&& true == ClickCheck(BoardsCollision))
 	{
-		//여기에 조건추가
+		Sound = Play(Sound, "IronTitleDown.wav", 0.1f);
 		BoardsCollision->Death();
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::DownBoard);
 	}

@@ -9,6 +9,7 @@
 //Actor
 #include "BackCurtain.h"
 #include "Play within a play Level.h"
+#include "LevelStateManager.h"
 
 Plaque::Plaque()
 {
@@ -240,10 +241,92 @@ void Plaque::SoundAndText(float _DeltaTime)
 		static bool Play16 = true;
 		if (true == Play16)
 		{
+			Sound = Play(Sound, "Feuille01.wav", 0.1f);
 			Sound = Play(Sound, "Chap01Intro11.wav", 0.1f);
 			Play16 = false;
 		}
 		Font13 = NFontCreate(Font13, "너무 실망하시진 않길 바라요.", GetTransform(), 2.2f);
+	}
+
+	if (SoundTime > 45.0f)
+	{
+		static bool Play17 = true;
+		if (true == Play17)
+		{
+			Sound = Play(Sound, "Corde01.wav", 0.1f);
+			Sound = Play(Sound, "Chap01Intro12.wav", 0.1f);
+			Play17 = false;
+		}
+		Font14 = NFontCreate(Font14, "TV는 계속 볼 수 있잖아요.", GetTransform(), 1.7f);
+	}
+
+	if (SoundTime > 47.0f)
+	{
+		static bool Play18 = true;
+		if (true == Play18)
+		{
+			Sound = Play(Sound, "Chap01Intro12b.wav", 0.1f);
+			Play18 = false;
+		}
+		Font15 = NFontCreate(Font15, "밖에 좀 나가요.", GetTransform(), 1.2f);
+	}
+
+	if (SoundTime > 48.5f)
+	{
+		static bool Play19 = true;
+		if (true == Play19)
+		{
+			Sound = Play(Sound, "Chap01Intro13.wav", 0.1f);
+			Play19 = false;
+		}
+		Font16 = NFontCreate(Font16, "책도 읽고요.", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 51.0f)
+	{
+		static bool Play20 = true;
+		if (true == Play20)
+		{
+			Sound = Play(Sound, "Chap01Intro14.wav", 0.1f);
+			Play20 = false;
+		}
+		Font17 = NFontCreate(Font17, "네. 여기 게임 없습니다. 당신이랑 나 뿐이에요...", GetTransform(), 3.0f);
+	}
+
+	if (SoundTime > 55.0f)
+	{
+		static bool Play21 = true;
+		if (true == Play21)
+		{
+			LevelStateManager::MG->SetplaqueNarateTrue();
+			Sound = Play(Sound, "Chap01Intro15.wav", 0.1f);
+			Play21 = false;
+		}
+		Font18 = NFontCreate(Font18, "...환불 얘기는 하지 말아주세요. 알겠죠?", GetTransform(), 2.5f);
+	}
+
+	if (SoundTime > 59.0f)
+	{
+		static bool Play22 = true;
+		if (true == Play22)
+		{
+			LevelStateManager::MG->SetplaqueNarateTrue();
+			Sound = Play(Sound, "Chap01Intro25.wav", 0.1f);
+			Play22 = false;
+		}
+		Font19 = NFontCreate(Font19, "제목은 건들지 마세요. 그거 다 수작업한 거예요.", GetTransform(), 3.5f);
+	}
+
+	if (SoundTime > 64.0f)
+	{
+		static bool Play23 = true;
+		if (true == Play23)
+		{
+			LevelStateManager::MG->SetplaqueNarateTrue();
+			Sound = Play(Sound, "Chap01Intro26.wav", 0.1f);
+			Play23 = false;
+		}
+		Font20 = NFontCreate(Font20, "특히 저 느낌표 부분요. 풀이 다 떨어졌거든요.", GetTransform(), 3.5f);
 	}
 }
 
