@@ -68,7 +68,7 @@ void Plaque::SoundAndText(float _DeltaTime)
 		Sound = Play(Sound, "Chap01Intro01.wav", 0.1f);
 		Play1 = false;
 	}
-	Font = NFontCreate(Font, "누가 자꾸 두드리는거야?", GetTransform(), 3);
+	Font = NFontCreate(Font, "누가 자꾸 두드리는거야?", GetTransform(), 2);
 
 	if (SoundTime > 3.0f)
 	{
@@ -81,7 +81,7 @@ void Plaque::SoundAndText(float _DeltaTime)
 		Font2 = NFontCreate(Font2, "뭐야! 사람 있잖아!", GetTransform(), 2);
 	}
 
-	if (SoundTime > 6.0f)
+	if (SoundTime > 5.0f)
 	{
 		static bool Play3 = true;
 		if (true == Play3)
@@ -96,6 +96,7 @@ void Plaque::SoundAndText(float _DeltaTime)
 	{
 		if (true == StateBool)
 		{
+			Sound = Play(Sound, "CurtainClose.wav", 0.1f);
 			PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::CreateBoard);
 			StateBool = false;
 		}
@@ -106,6 +107,7 @@ void Plaque::SoundAndText(float _DeltaTime)
 		static bool Play4 = true;
 		if (true == Play4)
 		{
+			Sound = Play(Sound, "Feuille01.wav", 0.1f);
 			Sound = Play(Sound, "Chap01Intro04.wav", 0.1f);
 			Play4 = false;
 		}
@@ -117,6 +119,7 @@ void Plaque::SoundAndText(float _DeltaTime)
 		static bool Play5 = true;
 		if (true == Play5)
 		{
+			Sound = Play(Sound, "PageTurn.wav", 0.1f);
 			Sound = Play(Sound, "Chap01Intro05.wav", 0.1f);
 			Play5 = false;
 		}
@@ -128,6 +131,7 @@ void Plaque::SoundAndText(float _DeltaTime)
 		static bool Play6 = true;
 		if (true == Play6)
 		{
+			Sound = Play(Sound, "CurtainClose.wav", 0.1f);
 			Sound = Play(Sound, "Chap01Intro06.wav", 0.1f);
 			Play6 = false;
 		}
@@ -153,6 +157,93 @@ void Plaque::SoundAndText(float _DeltaTime)
 			Play8 = false;
 		}
 		Font7 = NFontCreate(Font7, "긴장하지 말자. 긴장하지 말자...", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 23.0f)
+	{
+		static bool Play9 = true;
+		if (true == Play9)
+		{
+			Sound = Play(Sound, "CurtainOpen(Start).wav", 0.1f);
+			Sound = Play(Sound, "ChoraleIntro.wav", 0.1f);
+			Play9 = false;
+		}
+	}
+
+	if (SoundTime > 25.0f)
+	{
+		static bool Play10 = true;
+		if (true == Play10)
+		{
+			Sound = Play(Sound, "Chap01Intro_ChauffeVoix.wav", 0.1f);
+			Play10 = false;
+		}
+	}
+
+	if (SoundTime > 28.0f)
+	{
+		static bool Play11 = true;
+		if (true == Play11)
+		{
+			Sound = Play(Sound, "Chap01Intro07.wav", 0.1f);
+			Play11 = false;
+		}
+		Font8 = NFontCreate(Font8, "안녕하십니까, 유저님!", GetTransform(), 2.2f);
+	}
+
+	if (SoundTime > 30.5f)
+	{
+		static bool Play12 = true;
+		if (true == Play12)
+		{
+			Sound = Play(Sound, "Chap01Intro07b.wav", 0.1f);
+			Play12 = false;
+		}
+		Font9 = NFontCreate(Font9, "프로그램에서 알려드립니다.", GetTransform(), 2.2f);
+	}
+
+	if (SoundTime > 33.0f)
+	{
+		static bool Play13 = true;
+		if (true == Play13)
+		{
+			Sound = Play(Sound, "Chap01Intro08.wav", 0.1f);
+			Play13 = false;
+		}
+		Font10 = NFontCreate(Font10, "안타까운 소식이 있습니다.", GetTransform(), 2.2f);
+	}
+
+	if (SoundTime > 35.5f)
+	{
+		static bool Play14 = true;
+		if (true == Play14)
+		{
+			Sound = Play(Sound, "Chap01Intro09.wav", 0.1f);
+			Play14 = false;
+		}
+		Font11 = NFontCreate(Font11, "사실, 여긴 게임 같은거 없어요.", GetTransform(), 2.2f);
+	}
+
+	if (SoundTime > 38.0f)
+	{
+		static bool Play15 = true;
+		if (true == Play15)
+		{
+			Sound = Play(Sound, "Chap01Intro10.wav", 0.1f);
+			Play15 = false;
+		}
+		Font12 = NFontCreate(Font12, "금융 위기니, 인디게임계의 종말이니, 어쩌고 저쩌고... 뭐 그런 거죠.", GetTransform(), 3.5f);
+	}
+
+	if (SoundTime > 42.0f)
+	{
+		static bool Play16 = true;
+		if (true == Play16)
+		{
+			Sound = Play(Sound, "Chap01Intro11.wav", 0.1f);
+			Play16 = false;
+		}
+		Font13 = NFontCreate(Font13, "너무 실망하시진 않길 바라요.", GetTransform(), 2.2f);
 	}
 }
 

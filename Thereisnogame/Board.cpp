@@ -53,6 +53,7 @@ void Board::BoardMoveCheck()
 	if (false == LevelStateManager::MG->GetIsProgress()
 		&& true == ClickCheck(BoardsCollision))
 	{
+		//여기에 조건추가
 		BoardsCollision->Death();
 		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::DownBoard);
 	}
