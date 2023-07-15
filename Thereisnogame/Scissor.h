@@ -13,6 +13,7 @@ public:
 	Scissor& operator=(const Scissor& _Other) = delete;
 	Scissor& operator=(Scissor&& _Other) noexcept = delete;
 
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

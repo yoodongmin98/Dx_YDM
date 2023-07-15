@@ -51,8 +51,14 @@ public:
 		std::shared_ptr<GameEngineSpriteRenderer> _Render2,
 		std::shared_ptr<GameEngineCollision> _Collision);
 
-	void Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
+	GameEngineSoundPlayer Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+	{
+		_ControlSoundName = GameEngineSound::Play(_MusicName);
+		_ControlSoundName.SetVolume(_Volume);
+		_ControlSoundName.SetLoop(0);
 
+		return _ControlSoundName;
+	}
 	void Pause(GameEngineSoundPlayer _ControlSoundName);
 protected:
 	void Start() override;

@@ -22,6 +22,7 @@ void ScissorDeath::Start()
 {
 	float4 Position = Mouse::MainMouse->GetMousePos();
 	ScissorDeaths = Init(ScissorDeaths, "Scissor_OBJ_Cut.png", { 175,171 }, Position);
+	Sound = Play(Sound, "CordeCut.wav", 0.1f);
 }
 
 void ScissorDeath::Update(float _DeltaTime)

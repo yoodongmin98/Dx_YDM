@@ -24,10 +24,9 @@ void Scissor::Start()
 	Scissors = Init(Scissors, "Scissor_OBJ_Default.png", { 191,173 }, Position);
 	Scissors_overlap = Init(Scissors_overlap, "Scissor_OBJ_Default_Overlap.png", { 210,192 }, { Position.x - 3,Position.y + 3 });
 
-	//¾ê´Â µû·ÎActor·Î¸¸µéÁö °í¹Î.
-	//Scissors_Cut = Init(Scissors_Cut, "Scissor_OBJ_Cut.png", { 175,171 }, Position);
-
 	ScissorsCollision = CollisionInit(ScissorsCollision, { 191,173 }, Position);
+
+	Sound = Play(Sound, "CardDrop.wav", 0.1f);
 }
 
 void Scissor::Update(float _DeltaTime)
