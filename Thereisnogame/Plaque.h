@@ -13,6 +13,7 @@ public:
 	Plaque& operator=(const Plaque& _Other) = delete;
 	Plaque& operator=(Plaque&& _Other) noexcept = delete;
 
+	void SoundAndText(float _DeltaTime);
 	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
@@ -25,5 +26,8 @@ private:
 	int ClickCount = 0;
 
 	std::shared_ptr<class GameEngineFontRenderer> Font;
+
+	bool StartBool = false;
+	float SoundTime = 0.0f;
 };
 

@@ -373,20 +373,21 @@ std::shared_ptr<GameEngineFontRenderer> G_ActorBase::NFontCreate(std::shared_ptr
 	GameEngineTransform* _Transform,
 	float _Time)
 {
-	//Scale과 Position은 보고 세팅하기
-	_FontRender = CreateComponent<GameEngineFontRenderer>(ActorTypeEnum::Font);
-	_FontRender->GetTransform()->SetParent(_Transform);
-	_FontRender->SetFont(Font);
-	_FontRender->SetFontFlag(FW1_CENTER);
-	_FontRender->SetScale(30);
-	_FontRender->SetColor(float4::White);
-	_FontRender->SetText(_Text);
-	_FontRender->GetTransform()->SetWorldPosition({0,330,0});
+	if (nullptr == _FontRender)
+	{
+		_FontRender = CreateComponent<GameEngineFontRenderer>(ActorTypeEnum::Font);
+		_FontRender->GetTransform()->SetParent(_Transform);
+		_FontRender->SetFont(Font);
+		_FontRender->SetFontFlag(FW1_CENTER);
+		_FontRender->SetScale(30);
+		_FontRender->SetColor(float4::White);
+		_FontRender->SetText(_Text);
+		_FontRender->GetTransform()->SetWorldPosition({ 0,330,0 });
+	}
 
 	if (_FontRender->GetLiveTime() > _Time)
 	{
 		_FontRender->Death();
 	}
-	
 	return _FontRender;
 }

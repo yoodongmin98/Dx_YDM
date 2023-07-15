@@ -42,15 +42,32 @@ void Plaque::Update(float _DeltaTime)
 	}
 	if (ClickCount > 5 && true == ClickCheck(PlaquesCollision))
 	{
-		Play(Sound, "Chap01Intro01.wav", 0.1f);
-		Font = NFontCreate(Font, "누가 자꾸 두드리는거야?", GetTransform(), 2);
-		PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::CreateBoard);
+		StartBool = true;
 	}
+	if (true == StartBool)
+	{
+		SoundAndText(_DeltaTime);
+	}
+	
 }
 
 void Plaque::Render(float _Delta)
 {
-
+	PlaywithinaplayLevel::LM->ChangeState(Chap1LevelState::CreateBoard);
 };
 
+
+
+void Plaque::SoundAndText(float _DeltaTime)
+{
+	SoundTime += _DeltaTime;
+	
+	static bool Play1 = true;
+	if (true == Play1)
+	{
+		Sound = Play(Sound, "Chap01Intro01.wav", 0.1f);
+		Play1 = false;
+	}
+	Font = NFontCreate(Font, "누가 자꾸 두드리는거야?", GetTransform(), 2);
+}
 
