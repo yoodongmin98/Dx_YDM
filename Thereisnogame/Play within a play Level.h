@@ -43,6 +43,7 @@ public:
 
 	void ReSetBGM();
 	void StopBGM();
+	GameEngineSoundPlayer Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
 	GameEngineSoundPlayer ChangeBGM(const std::string_view& _MusicName);
 
 	void ChangeState(Chap1LevelState _State);

@@ -43,3 +43,12 @@ GameEngineSoundPlayer PlaywithinaplayLevel::ChangeBGM(const std::string_view& _M
 
 	return MainBGM;
 }
+
+GameEngineSoundPlayer PlaywithinaplayLevel::Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+{
+	_ControlSoundName = GameEngineSound::Play(_MusicName);
+	_ControlSoundName.SetVolume(_Volume);
+	_ControlSoundName.SetLoop(0);
+
+	return _ControlSoundName;
+}

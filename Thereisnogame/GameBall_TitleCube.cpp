@@ -48,6 +48,7 @@ void GameBall_TitleCube::Update(float _DeltaTime)
 
 	if (Chap1LevelState::ClearBoard == PlaywithinaplayLevel::LM->GetLevelState())
 	{
+		Sound = Play(Sound, "BallExplode.wav", 0.1f);
 		Death();
 	}
 }

@@ -380,6 +380,8 @@ void PlaywithinaplayLevel::ClearBoardStart()
 		ChainPtr = nullptr;
 	}
 	//-----------------------------------------------
+	Sound = Play(Sound,"ChainUp.wav",0.1f);
+	Sound = Play(Sound, "Clap.wav", 0.1f);
 	ChainPtr = CreateActor<Chain>();
 	ChainPtr->SetChainLiveTime(7);
 }

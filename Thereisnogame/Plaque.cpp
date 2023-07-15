@@ -127,11 +127,22 @@ void Plaque::SoundAndText(float _DeltaTime)
 		Font5 = NFontCreate(Font5, "아... 여기 있다!", GetTransform(), 2.0f);
 	}
 
+	if (SoundTime > 13.0f)
+	{
+		static bool Play5dot1 = true;
+		if (true == Play5dot1)
+		{
+			PlaywithinaplayLevel::LM->ChangeBGM("ChoraleIntro.wav");
+			Play5dot1 = false;
+		}
+	}
+
 	if (SoundTime > 15.0f)
 	{
 		static bool Play6 = true;
 		if (true == Play6)
 		{
+			PlaywithinaplayLevel::LM->StopBGM();
 			Sound = Play(Sound, "CurtainClose.wav", 0.1f);
 			Sound = Play(Sound, "Chap01Intro06.wav", 0.1f);
 			Play6 = false;
