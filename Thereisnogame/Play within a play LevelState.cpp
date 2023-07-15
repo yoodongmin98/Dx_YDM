@@ -257,13 +257,13 @@ bool BoardCreateBool = true;
 void PlaywithinaplayLevel::CreateBoardStart()
 {
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(7);
+	ChainPtr->SetChainLiveTime(10);
 }
 void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 {
 	CreateBoardTime += _DeltaTime;
 	std::function<void()> Functions;
-	if (ChainPtr->GetLiveTime() < 3.0f || ChainPtr->GetLiveTime() > 5.0f && ChainPtr->GetLiveTime() < 9.0f)
+	if (ChainPtr->GetLiveTime() < 5.0f || ChainPtr->GetLiveTime() > 7.0f && ChainPtr->GetLiveTime() < 15.0f)
 	{
 		if (DebugIntValue == 0) //Debug
 		{
@@ -271,7 +271,7 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 			Functions();
 		}
 	}
-	if (ChainPtr->GetLiveTime() > 3.0f && ChainPtr->GetLiveTime() < 5.0f || ChainPtr->GetLiveTime() > 9.0f && ChainPtr->GetLiveTime() < 15.0f)
+	if (ChainPtr->GetLiveTime() > 5.0f && ChainPtr->GetLiveTime() < 7.0f || ChainPtr->GetLiveTime() > 15.0f && ChainPtr->GetLiveTime() < 21.0f)
 	{
 		if (DebugIntValue == 0) //Debug
 		{
@@ -279,7 +279,7 @@ void PlaywithinaplayLevel::CreateBoardUpdate(float _DeltaTime)
 			Functions();
 		}
 	}
-	if (ChainPtr->GetLiveTime() > 6.0f&& true==BoardCreateBool)
+	if (ChainPtr->GetLiveTime() > 8.0f&& true==BoardCreateBool)
 	{
 		Lope_ChainPtr=CreateActor<Lope_Chain>();
 		Lope_CordePtr=CreateActor<Lope_Corde>();
