@@ -549,6 +549,7 @@ void PlaywithinaplayLevel::TiltBoardUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
 		&&true== BinaryCreateBool)
 	{
+		Play(Sound, "Boom.wav", 0.1f);
 		N_TitleMetalPtr->GetTransform()->SetParent(nullptr);
 		O_TitleMetalPtr->GetTransform()->SetParent(nullptr);
 		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.2f, 700, { -700,300,0 }, { 42,42 });
@@ -661,7 +662,7 @@ void PlaywithinaplayLevel::PopsBalloonStart()
 	}
 	//-----------------------------------------------
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(3);
+	ChainPtr->SetChainLiveTime(5);
 	BalloonParentsPtr.get()->Death();
 	SpeakerPtr.get()->SpeakerCollisionDeath();
 	CreateActor<Cursor>();
@@ -676,6 +677,9 @@ void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
 		&& false == BinaryCreateBool)
 	{
+		Play(Sound, "BalloonPop.wav", 0.2f);
+		Play(Sound, "Boom.wav", 0.1f);
+		Play(Sound, "BoardFall02.wav", 0.1f);
 		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.2f, 700, { -700,300,0 }, { 42,42 });
 		Binary0Ptr2 = CreateActor<Binary0>(); Binary0Ptr2->SetBinary(2.3f, 700, { -780,240,0 }, { 39,39 });
 		Binary0Ptr3 = CreateActor<Binary0>(); Binary0Ptr3->SetBinary(2.7f, 600, { -840,210,0 }, { 44,44 });

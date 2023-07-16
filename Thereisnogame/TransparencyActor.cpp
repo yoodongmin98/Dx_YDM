@@ -44,7 +44,7 @@ void TransparencyActor::SoundAndText(float _DeltaTime)
 	}
 	Font = NFontCreate(Font, "³» °¡À§!", GetTransform(), 1.0f);
 
-	if (SoundTime > 1.0f)
+	if (SoundTime > 1.5f)
 	{
 		static bool Play61 = true;
 		if (true == Play61)
@@ -55,7 +55,7 @@ void TransparencyActor::SoundAndText(float _DeltaTime)
 		Font2 = NFontCreate(Font2, "¾È µÅ!", GetTransform(), 1.5f);
 	}
 
-	if (SoundTime > 1.7f)
+	if (SoundTime > 2.0f)
 	{
 		static bool Play64 = true;
 		if (true == Play64)

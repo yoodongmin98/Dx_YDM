@@ -13,6 +13,7 @@
 #include "LevelStateManager.h"
 #include "TitleMetal.h"
 #include "Cursor.h"
+#include "Play within a play Level.h"
 
 Speaker* Speaker::TM;
 Speaker::Speaker()
@@ -82,7 +83,7 @@ void Speaker::ClickOnOffCheck(float _DeltaTime)
 	if (true == ClickCheck(SpeakersCollision)
 		&& false == LevelStateManager::MG->GetIsClickSpeaker())
 	{
-		Sound = Play(Sound, "Mmm01.wav", 0.1f);
+		Sound = Play(Sound, "MmmNervous.wav", 0.1f);
 		LevelStateManager::MG->SetIsClickSpeakerTrue();
 		BreathBool = true;
 		GetLevel()->CreateActor<Cursor>();
