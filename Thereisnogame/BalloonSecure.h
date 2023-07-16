@@ -18,6 +18,8 @@ public:
 	}
 	void BalloonScaleSet(float _DeltaTime);
 	void BalloonStateDeathCheck();
+
+	GameEngineSoundPlayer Sound;
 protected:
 	void Start();
 	void Update(float _Delta) override;

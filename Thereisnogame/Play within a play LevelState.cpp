@@ -525,15 +525,18 @@ void PlaywithinaplayLevel::TiltBoardStart()
 		Lope_CordePtr = nullptr;
 	}
 	//-----------------------------------------------
-	R_SissorPtr->Death();
-	R_PaperPtr->Death();
-	R_RockPtr->Death();
-	R_EnemySissorPtr->Death();
-	R_EnemyRockPtr->Death();
-	R_EnemyPaperPtr->Death();
-	R_DosPtr->Death();
+	if (nullptr != R_SissorPtr)
+	{
+		R_SissorPtr->Death();
+		R_PaperPtr->Death();
+		R_RockPtr->Death();
+		R_EnemySissorPtr->Death();
+		R_EnemyRockPtr->Death();
+		R_EnemyPaperPtr->Death();
+		R_DosPtr->Death();
+	}
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(4);
+	ChainPtr->SetChainLiveTime(5);
 	TransparencyActorPtr = CreateActor<TransparencyActor>();
 	BoardPtr->GetTransform()->SetParent(TransparencyActorPtr->GetRenderTransform());
 }
