@@ -662,11 +662,12 @@ void PlaywithinaplayLevel::PopsBalloonStart()
 	}
 	//-----------------------------------------------
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(5);
+	ChainPtr->SetChainLiveTime(8);
 	BalloonParentsPtr.get()->Death();
 	SpeakerPtr.get()->SpeakerCollisionDeath();
 	CreateActor<Cursor>();
 	Lope_ChainPtr->GetTransform()->SetParent(TransparencyActorPtr->GetTransform());
+	StopBGM();
 }
 void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 {
@@ -677,7 +678,6 @@ void PlaywithinaplayLevel::PopsBalloonUpdate(float _DeltaTime)
 	if (TransparencyActorPtr->GetRenderTransform()->GetLocalRotation().z < -59.0f
 		&& false == BinaryCreateBool)
 	{
-		Play(Sound, "BalloonPop.wav", 0.2f);
 		Play(Sound, "Boom.wav", 0.1f);
 		Play(Sound, "BoardFall02.wav", 0.1f);
 		Binary0Ptr1 = CreateActor<Binary0>(); Binary0Ptr1->SetBinary(2.2f, 700, { -700,300,0 }, { 42,42 });
@@ -777,6 +777,8 @@ void PlaywithinaplayLevel::SideMapStart()
 	Vis2.get()->VisCollisionOn();
 	Vis3.get()->VisCollisionOn();
 	Vis4.get()->VisCollisionOn();
+	Play(Sound, "SideMapStart.wav", 0.1f);
+	ChangeBGM("Chap01_MusicC.wav");
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 {

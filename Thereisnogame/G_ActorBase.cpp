@@ -1,4 +1,4 @@
-#include "PrecompileHeader.h"
+ #include "PrecompileHeader.h"
 #include "G_ActorBase.h"
 #include "ActorTypeEnum.h"
 #include "Mouse.h"
@@ -383,8 +383,9 @@ std::shared_ptr<GameEngineFontRenderer> G_ActorBase::NFontCreate(std::shared_ptr
 		_FontRender->SetScale(30);
 		_FontRender->SetColor(float4::White);
 		_FontRender->SetText(_Text);
-		_FontRender->GetTransform()->SetWorldPosition({ 0,330,0 });
 	}
+	float4 Pos = GetLevel()->GetMainCamera()->GetTransform()->GetLocalPosition();
+	_FontRender->GetTransform()->SetWorldPosition(float4{ 0,330,0 } + Pos);
 
 	if (_FontRender->GetLiveTime() > _Time)
 	{

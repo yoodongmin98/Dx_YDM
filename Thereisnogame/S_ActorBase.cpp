@@ -154,3 +154,27 @@ void S_ActorBase::Pause(GameEngineSoundPlayer _ControlSoundName)
 {
 	_ControlSoundName.SetPause(true);
 }
+
+std::shared_ptr<GameEngineFontRenderer> S_ActorBase::NFontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender,
+	const std::string_view _Text,
+	GameEngineTransform* _Transform,
+	float _Time)
+{
+	if (nullptr == _FontRender)
+	{
+		_FontRender = CreateComponent<GameEngineFontRenderer>(ActorTypeEnum::Font);
+		_FontRender->GetTransform()->SetParent(_Transform);
+		_FontRender->SetFont(Font);
+		_FontRender->SetFontFlag(FW1_CENTER);
+		_FontRender->SetScale(30);
+		_FontRender->SetColor(float4::White);
+		_FontRender->SetText(_Text);
+	}
+	float4 Pos = GetLevel()->GetMainCamera()->GetTransform()->GetLocalPosition();
+	_FontRender->GetTransform()->SetWorldPosition(float4{ 0,330,0 } + Pos);
+	if (_FontRender->GetLiveTime() > _Time)
+	{
+		_FontRender->Death();
+	}
+	return _FontRender;
+}
