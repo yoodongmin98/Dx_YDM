@@ -30,7 +30,7 @@ void Speaker::Start()
 	Speakers = Init(Speakers, "SpeekerIcon_On.png", { 78,70 }, Position);
 	SpeakersOff = Init(SpeakersOff, "SpeakerIcon_Off.png", { 82,75 }, Position);
 	SpeakersOff->Off();
-	/*SpeakersCollision = CollisionInit(SpeakersCollision, { 78,70 }, Position);*/
+	
 	SpeakersCollision = CreateComponent<GameEngineCollision>(ActorTypeEnum::Speaker);
 	SpeakersCollision->GetTransform()->SetLocalScale({ 78,70 });
 	SpeakersCollision->GetTransform()->SetLocalPosition(Position);
@@ -69,6 +69,12 @@ void Speaker::ClickOnOffCheck(float _DeltaTime)
 	Times += _DeltaTime;
 	if (false==LevelStateManager::MG->GetIsClickSpeaker())
 	{		
+		if (true == BreathBool)
+		{
+			Sound.Stop();
+			Sound = Play(Sound, "Breath.wav", 0.1f);
+			BreathBool = false;
+		}
 		Speakers->On();
 		SpeakersOff->Off();
 	}
@@ -76,7 +82,9 @@ void Speaker::ClickOnOffCheck(float _DeltaTime)
 	if (true == ClickCheck(SpeakersCollision)
 		&& false == LevelStateManager::MG->GetIsClickSpeaker())
 	{
+		Sound = Play(Sound, "Mmm01.wav", 0.1f);
 		LevelStateManager::MG->SetIsClickSpeakerTrue();
+		BreathBool = true;
 		GetLevel()->CreateActor<Cursor>();
 		Speakers->Off();
 		SpeakersOff->On();

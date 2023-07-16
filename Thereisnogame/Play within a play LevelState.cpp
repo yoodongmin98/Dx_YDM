@@ -536,7 +536,7 @@ void PlaywithinaplayLevel::TiltBoardStart()
 		R_DosPtr->Death();
 	}
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(5);
+	ChainPtr->SetChainLiveTime(9);
 	TransparencyActorPtr = CreateActor<TransparencyActor>();
 	BoardPtr->GetTransform()->SetParent(TransparencyActorPtr->GetRenderTransform());
 }

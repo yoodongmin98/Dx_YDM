@@ -36,5 +36,6 @@ private:
 
 
 	float Times = 0.0f;
+	bool BreathBool = true;
 };
 
