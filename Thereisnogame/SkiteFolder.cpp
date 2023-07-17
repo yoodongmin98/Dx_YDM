@@ -69,7 +69,7 @@ void SkiteFolder::BoxCroixDeathCheck()
 		{
 			//오류수정
 			SkiteIconPtr.get()->SkiteProfilPtr.get()->Death();
+			SkiteIconPtr.get()->Death();
 		}
-		SkiteIconPtr.get()->Death();
 	}
 }
