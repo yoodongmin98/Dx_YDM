@@ -72,6 +72,7 @@
 #include "CoffreFortPanel.h"
 #include "CoffreFort.h"
 #include "CoffreFortHandle.h"
+#include "TextActor1.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -903,14 +904,17 @@ bool CoffreCreateBool = true;
 void PlaywithinaplayLevel::CoffreFortStart()
 {
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(4);
+	ChainPtr->SetChainLiveTime(3);
 	PlaqueStartPos = PlaquePtr.get()->GetTransform()->GetLocalPosition();
 	PlaqueEndPos = PlaqueStartPos + float4::Down * 1000;
+	Play(Sound, "BoardDown.wav", 0.1f);
+	CreateActor<TextActor1>();
 }
 void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 {
 	CoffreTime += _DeltaTime;
 	PlaquePtr.get()->GetTransform()->SetLocalPosition(float4::LerpClamp(PlaqueStartPos, PlaqueEndPos, CoffreTime));
+
 	if (CoffreTime > 3.0f && true==CoffreCreateBool)
 	{
 		CreateActor<CoffreFortPanel>();

@@ -36,6 +36,6 @@ private:
 	float LockFallTime = 0.0f;
 	
 
-
+	GameEngineSoundPlayer Sound;
 };
 

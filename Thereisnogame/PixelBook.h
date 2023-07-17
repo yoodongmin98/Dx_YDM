@@ -15,6 +15,7 @@ public:
 	void PageAnimationSet();
 	void CogCreateCheck();
 protected:
+	GameEngineSoundPlayer Sound;
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
@@ -31,5 +32,6 @@ private:
 
 	int AnimationValue = 0;
 	
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

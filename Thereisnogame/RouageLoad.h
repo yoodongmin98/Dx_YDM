@@ -15,6 +15,7 @@ public:
 
 	void RougeDeathandInterCheck();
 protected:
+	GameEngineSoundPlayer Sound;
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;

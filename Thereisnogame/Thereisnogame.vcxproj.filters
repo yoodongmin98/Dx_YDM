@@ -742,6 +742,9 @@
     <ClCompile Include="RightDirectionArrow.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
     </ClCompile>
+    <ClCompile Include="TextActor1.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1467,6 +1470,9 @@
     <ClInclude Include="RightDirectionArrow.h">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
     </ClInclude>
+    <ClInclude Include="TextActor1.h">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1780,6 +1786,9 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\ScreenActor\SoundActor">
       <UniqueIdentifier>{bf19dfb9-3f52-4240-b4cb-0853320a3621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor">
+      <UniqueIdentifier>{45078484-0ec6-491a-adf5-18eb24cc3594}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

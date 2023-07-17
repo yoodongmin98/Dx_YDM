@@ -43,6 +43,8 @@ void PixelBook::Start()
 	PixelBooksCollision = CollisionInit(PixelBooksCollision, { 597,422 }, Position);
 	PixelBooksCogCollision = CollisionInit(PixelBooksCollision, { 15,15 }, Position+float4::Up*135);
 	PixelBooksCogCollision->Off();
+
+	Font = FontCreate(Font, 25, "มฆภÛป็ พฦดิ:", { -1700, 150 ,0 },GetTransform(),2);
 }
 
 void PixelBook::Update(float _DeltaTime)
@@ -61,6 +63,7 @@ void PixelBook::PageAnimationSet()
 	if (true == ClickCheck(PixelBooksCollision)
 		&& 2 > AnimationValue)
 	{
+		Play(Sound, "PageTurn.wav", 0.1f);
 		++AnimationValue;
 		if (1 == AnimationValue)
 		{

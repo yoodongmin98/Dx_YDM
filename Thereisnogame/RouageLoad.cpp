@@ -26,6 +26,7 @@ void RouageLoad::Start()
 	RouageLoads_overlap = Init(RouageLoads_overlap, "RouageLoad_Overlap.png", { 141,141 }, { Position.x - 3,Position.y + 3 });
 
 	RouageLoadsCollision = CollisionInit(RouageLoadsCollision, { 191,173 }, Position);
+	Play(Sound, "Drag1.wav", 0.1f);
 }
 
 void RouageLoad::Update(float _DeltaTime)

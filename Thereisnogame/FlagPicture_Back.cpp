@@ -53,6 +53,7 @@ void FlagPicture::CollisionInterCheck(float _DeltaTime)
 	if (LockCollision->Collision(ActorTypeEnum::Cursor, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&&true==Mouse::MainMouse->IsInteractable())
 	{
+		Play(Sound, "Unlock.wav", 0.1f);
 		LockCollision->Death();
 		F_LockRender->Death();
 		F_LockOpenRender->On();
