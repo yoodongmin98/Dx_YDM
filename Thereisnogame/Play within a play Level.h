@@ -77,6 +77,7 @@ public:
 
 	GameEngineSoundPlayer MainBGM;
 	GameEngineSoundPlayer Sound;
+	GameEngineSoundPlayer EtcSound;
 
 	int GetNarateValue()
 	{

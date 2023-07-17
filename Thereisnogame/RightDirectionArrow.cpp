@@ -9,6 +9,7 @@
 
 //Actor
 #include "LevelStateManager.h"
+#include "Play within a play Level.h"
 
 RightDirectionArrow::RightDirectionArrow()
 {
@@ -30,6 +31,7 @@ void RightDirectionArrow::Update(float _DeltaTime)
 {
 	CameraMoveCheck(_DeltaTime);
 	BlinkArrow(_DeltaTime);
+	SoundAndText(_DeltaTime);
 }
 
 void RightDirectionArrow::Render(float _Delta)
@@ -48,6 +50,7 @@ void RightDirectionArrow::CameraMoveCheck(float _DeltaTime)
 		&& true == LevelStateManager::MG->GetIsCameraMoveCheck()
 		&& true == RightCameraMoveBool)
 	{
+		Sound = Play(Sound, "SwapScreen.wav",0.1f);
 		RightCameraMoveBool = false;
 		LevelStateManager::MG->SetIsCameraMoveCheckFalse();
 		LevelStateManager::MG->SetCameraMoveValuePlus();
@@ -65,5 +68,43 @@ void RightDirectionArrow::CameraMoveCheck(float _DeltaTime)
 			RightCameraMoveBool = true;
 			LevelStateManager::MG->SetIsCameraMoveCheckTrue();
 		}
+	}
+}
+
+
+void RightDirectionArrow::SoundAndText(float _DeltaTime)
+{
+	SoundTime += _DeltaTime;
+	if (SoundTime > 1.0f)
+	{
+		static bool Play72 = true;
+		if (true == Play72)
+		{
+			Sound = PlaywithinaplayLevel::LM->ChangeMainSound("Chap01Navigation01.wav");
+			Play72 = false;
+		}
+		Font = NFontCreate(Font, "좀 나가라고요!", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 3.5f)
+	{
+		static bool Play73 = true;
+		if (true == Play73)
+		{
+			Sound = PlaywithinaplayLevel::LM->ChangeMainSound("Chap01Navigation02.wav");
+			Play73 = false;
+		}
+		Font2 = NFontCreate(Font2, "여긴 개인 공간이에요! 무대 뒤라고요!", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 6.0f)
+	{
+		static bool Play74 = true;
+		if (true == Play74)
+		{
+			Sound = PlaywithinaplayLevel::LM->ChangeMainSound("Chap01Navigation03.wav");
+			Play74 = false;
+		}
+		Font3 = NFontCreate(Font3, "여기 오면 안 돼요. 감기 걸릴 거예요.", GetTransform(), 2.0f);
 	}
 }

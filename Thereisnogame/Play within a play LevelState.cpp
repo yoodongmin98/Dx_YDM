@@ -777,7 +777,7 @@ void PlaywithinaplayLevel::SideMapStart()
 	Vis2.get()->VisCollisionOn();
 	Vis3.get()->VisCollisionOn();
 	Vis4.get()->VisCollisionOn();
-	Play(Sound, "SideMapStart.wav", 0.1f);
+	Play(Sound, "ArrowPop.wav", 0.05f);
 	ChangeBGM("Chap01_MusicC.wav");
 }
 void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
@@ -786,6 +786,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		&&true==Mouse::MainMouse->IsInteractable()
 		&&false==LevelStateManager::MG->GetIsTurnVis())
 	{
+		Play(EtcSound, "VisRotation.wav", 0.1f);
 		VisTurnTime = 0.0f;
 		LevelStateManager::MG->SetIsTurnVisTrue();
 		Vis1Bool = true;
@@ -795,6 +796,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		&& true == Mouse::MainMouse->IsInteractable()
 		&& false == LevelStateManager::MG->GetIsTurnVis())
 	{
+		Play(EtcSound, "VisRotation.wav", 0.1f);
 		VisTurnTime = 0.0f;
 		LevelStateManager::MG->SetIsTurnVisTrue();
 		Vis2Bool = true;
@@ -804,6 +806,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		&& true == Mouse::MainMouse->IsInteractable()
 		&& false == LevelStateManager::MG->GetIsTurnVis())
 	{
+		Play(EtcSound, "VisRotation.wav", 0.1f);
 		VisTurnTime = 0.0f;
 		LevelStateManager::MG->SetIsTurnVisTrue();
 		Vis3Bool = true;
@@ -813,6 +816,7 @@ void PlaywithinaplayLevel::SideMapUpdate(float _DeltaTime)
 		&& true == Mouse::MainMouse->IsInteractable()
 		&& false == LevelStateManager::MG->GetIsTurnVis())
 	{
+		Play(EtcSound, "VisRotation.wav", 0.1f);
 		VisTurnTime = 0.0f;
 		LevelStateManager::MG->SetIsTurnVisTrue();
 		Vis4Bool = true;

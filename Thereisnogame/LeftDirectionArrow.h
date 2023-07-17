@@ -16,6 +16,7 @@ public:
 	void BlinkArrow(float _DeltaTime);
 	void CameraMoveCheck(float _DeltaTime);
 protected:
+	GameEngineSoundPlayer Sound;
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;

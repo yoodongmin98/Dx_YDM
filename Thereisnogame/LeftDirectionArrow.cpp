@@ -49,6 +49,7 @@ void LeftDirectionArrow::CameraMoveCheck(float _DeltaTime)
 		&&true==LevelStateManager::MG->GetIsCameraMoveCheck()
 		&&true== LeftCameraMoveBool)
 	{
+		Sound = Play(Sound, "SwapScreen.wav", 0.1f);
 		LeftCameraMoveBool = false;
 		LevelStateManager::MG->SetIsCameraMoveCheckFalse();
 		LevelStateManager::MG->SetCameraMoveValueMinus();
