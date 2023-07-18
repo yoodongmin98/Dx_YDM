@@ -550,17 +550,6 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 
 	if (ClockTime > 64.0f)
 	{
-		static bool Chap2Play42 = true;
-		if (true == Chap2Play42)
-		{
-			Sound = Play(Sound, "Chap02Whisper10b.wav", 0.1f);
-			Chap2Play42 = false;
-		}
-		ClockFont11 = NFontCreate(ClockFont11, "0이 되면, 당신은 깊은 수면 속으로 빠져듭니다...", GetTransform(), 4.0f);
-	}
-
-	if (ClockTime > 68.5f)
-	{
 		static bool Chap2Play43 = true;
 		if (true == Chap2Play43)
 		{
@@ -570,7 +559,7 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 		ClockFont12 = NFontCreate(ClockFont12, "3", GetTransform(), 1.7f);
 	}
 
-	if (ClockTime > 70.5f)
+	if (ClockTime > 66.0f)
 	{
 		static bool Chap2Play44 = true;
 		if (true == Chap2Play44)
@@ -581,7 +570,7 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 		ClockFont13 = NFontCreate(ClockFont13, "2", GetTransform(), 1.7f);
 	}
 
-	if (ClockTime > 72.5f)
+	if (ClockTime > 68.0f)
 	{
 		static bool Chap2Play45 = true;
 		if (true == Chap2Play45)
@@ -592,7 +581,7 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 		ClockFont14 = NFontCreate(ClockFont14, "1", GetTransform(), 1.7f);
 	}
 
-	if (ClockTime > 74.5f)
+	if (ClockTime > 70.0f)
 	{
 		static bool Chap2Play46 = true;
 		if (true == Chap2Play46)
@@ -604,7 +593,7 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 	}
 
 
-	if (ClockTime > 77.5f)
+	if (ClockTime > 73.5f)
 	{
 		static bool Chap2Play47 = true;
 		if (true == Chap2Play47)
@@ -615,7 +604,7 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 		ClockFont16 = NFontCreate(ClockFont16, "-1?", GetTransform(), 1.7f);
 	}
 
-	if (ClockTime > 79.5f)
+	if (ClockTime > 75.5f)
 	{
 		static bool Chap2Play48 = true;
 		if (true == Chap2Play48)
@@ -626,7 +615,7 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 		ClockFont17 = NFontCreate(ClockFont17, "-2?", GetTransform(), 1.7f);
 	}
 
-	if (ClockTime > 81.5f)
+	if (ClockTime > 77.5f)
 	{
 		static bool Chap2Play49 = true;
 		if (true == Chap2Play49)

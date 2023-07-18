@@ -11,6 +11,7 @@
 #include "LevelStateManager.h"
 #include "Mouse.h"
 #include "SquirrelKey.h"
+#include "Chain.h"
 
 BackSqirrelKey::BackSqirrelKey()
 {
@@ -75,6 +76,8 @@ void BackSqirrelKey::CollisionInteractableCheck()
 	{
 		Play(Sound, "SquirrelEat.wav", 0.1f);
 		LevelStateManager::MG->SetIsGetTheKeyTrue();
+		ChainPtr=GetLevel()->CreateActor<Chain>();
+		ChainPtr.get()->SetChainLiveTime(1);
 		BackSqirrelKeys->ChangeAnimation("FallingKey");
 	}
 	if (BackSqirrelKeys->IsAnimationEnd()

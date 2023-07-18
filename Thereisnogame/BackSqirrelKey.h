@@ -29,6 +29,8 @@ private:
 
 	std::shared_ptr<class SquirrelCloud_Need> SquirrelCloud_NeedPtr;
 
+	std::shared_ptr<class Chain> ChainPtr;
+
 	bool duplication = true;
 	float duplicationTime = 0.0f;
 };

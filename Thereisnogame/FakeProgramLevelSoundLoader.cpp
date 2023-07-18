@@ -39,7 +39,7 @@ GameEngineSoundPlayer FakeProgramLevel::ChangeBGM(const std::string_view& _Music
 	MainBGM.Stop();
 	MainBGM= GameEngineSound::Play(_MusicName);
 	MainBGM.SetVolume(0.1f);
-	MainBGM.SetLoop(0);
+	MainBGM.SetLoop(-1);
 
 	return MainBGM;
 }
