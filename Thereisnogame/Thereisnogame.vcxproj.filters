@@ -748,6 +748,12 @@
     <ClCompile Include="TextActor2.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
     </ClCompile>
+    <ClCompile Include="StartRedPanel.cpp">
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\StartActorPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCroix_StartRedPanel.cpp">
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\StartActorPanel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1479,6 +1485,12 @@
     <ClInclude Include="TextActor2.h">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
     </ClInclude>
+    <ClInclude Include="StartRedPanel.h">
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\StartActorPanel</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCroix_StartRedPanel.h">
+      <Filter>Chapter2.0_Fake Program\Actor\Folder\StartActorPanel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1795,6 +1807,9 @@
     </Filter>
     <Filter Include="Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor">
       <UniqueIdentifier>{45078484-0ec6-491a-adf5-18eb24cc3594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\Folder\StartActorPanel">
+      <UniqueIdentifier>{c059abb5-4801-46f1-beb5-16e0c363e3ac}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

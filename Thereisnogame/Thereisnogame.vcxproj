@@ -396,6 +396,8 @@
     <ClInclude Include="SquirrelKeySmall.h" />
     <ClInclude Include="StartButton.h" />
     <ClInclude Include="StartPictures.h" />
+    <ClInclude Include="StartRedPanel.h" />
+    <ClInclude Include="BoxCroix_StartRedPanel.h" />
     <ClInclude Include="SuperPrivate.h" />
     <ClInclude Include="S_ActorBase.h" />
     <ClInclude Include="H_TitleCube.h" />
@@ -661,6 +663,8 @@
     <ClCompile Include="SquirrelKeySmall.cpp" />
     <ClCompile Include="StartButton.cpp" />
     <ClCompile Include="StartPictures.cpp" />
+    <ClCompile Include="StartRedPanel.cpp" />
+    <ClCompile Include="BoxCroix_StartRedPanel.cpp" />
     <ClCompile Include="SuperPrivate.cpp" />
     <ClCompile Include="S_ActorBase.cpp" />
     <ClCompile Include="H_TitleCube.cpp" />

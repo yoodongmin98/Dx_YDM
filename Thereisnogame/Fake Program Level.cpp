@@ -27,10 +27,9 @@
 #include "ClockFolder.h"
 #include "TrashcanFolder.h"
 #include "TrashcanTop.h"
-
-//Test
-#include "SquirrelKey.h"
-#include "SkiteProfil.h"
+#include "StartRedPanel.h"
+#include "BoxCroix_StartRedPanel.h"
+#include "FolderBackGround.h"
 
 FakeProgramLevel* FakeProgramLevel::FP;
 
@@ -88,6 +87,17 @@ void FakeProgramLevel::Update(float _DeltaTime)
 	{
 		GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
 	}
+
+	StartFunctions(_DeltaTime);
+
+	if (nullptr != BoxCroix_StartRedPanelPtr)
+	{
+		if (true == BoxCroix_StartRedPanelPtr->IsDeath())
+		{
+			StartRedPanelPtr.get()->Death();
+			FolderBackGroundPtr.get()->Death();
+		}
+	}
 }
 
 void FakeProgramLevel::LevelChangeStart()
@@ -107,4 +117,18 @@ void FakeProgramLevel::FolderCreate()
 	CreateActor<ClockFolder>();
 	CreateActor<TrashcanFolder>();
 	CreateActor<TrashcanTop>();
+}
+
+bool StartCreateActorBool = true;
+void FakeProgramLevel::StartFunctions(float _DeltaTime)
+{
+	StartTime += _DeltaTime;
+	if (StartTime > 1.0f &&true== StartCreateActorBool)
+	{
+		StartCreateActorBool = false;
+		LevelStateManager::MG->PlusCollisionValue();
+		FolderBackGroundPtr=CreateActor<FolderBackGround>();
+		StartRedPanelPtr=CreateActor<StartRedPanel>();
+		BoxCroix_StartRedPanelPtr=CreateActor<BoxCroix_StartRedPanel>();
+	}
 }
