@@ -15,6 +15,7 @@ public:
 
 	void SoundAndText(float _DeltaTime);
 	void CallingText(float _DeltaTime);
+	void ClockText(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -22,6 +23,7 @@ protected:
 private:
 	float SoundTime = 0.0f;
 	float CallingTime = 0.0f;
+	float ClockTime = 0.0f;
 	std::shared_ptr<class GameEngineFontRenderer> Font;
 	std::shared_ptr<class GameEngineFontRenderer> Font2;
 	std::shared_ptr<class GameEngineFontRenderer> Font3;
@@ -46,8 +48,29 @@ private:
 	std::shared_ptr<class GameEngineFontRenderer> CallingFont6;
 	std::shared_ptr<class GameEngineFontRenderer> CallingFont7;
 	std::shared_ptr<class GameEngineFontRenderer> CallingFont8;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont9;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont10;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont11;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont12;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont13;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont14;
 
-
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont2;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont3;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont4;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont5;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont6;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont7;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont8;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont9;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont10;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont11;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont12;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont13;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont14;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont15;
 	bool TSDeathBool = true;
+	bool TSDeathBool2 = true;
 };
 

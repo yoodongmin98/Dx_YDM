@@ -25,7 +25,8 @@ void Chap2StartTextActor::Update(float _DeltaTime)
 	{
 		SoundAndText(_DeltaTime);
 	}
-	else
+	else if(true == LevelStateManager::MG->GetIsClickCalling()
+		&& 1 > LevelStateManager::MG->GetClockValue())
 	{
 		if (true == TSDeathBool)
 		{
@@ -48,6 +49,30 @@ void Chap2StartTextActor::Update(float _DeltaTime)
 			TSDeathBool = false;
 		}
 		CallingText(_DeltaTime);
+	}
+
+	if (1 <= LevelStateManager::MG->GetClockValue())
+	{
+		if (true == TSDeathBool2)
+		{
+			if (CallingFont != nullptr) { CallingFont.get()->Death(); }
+			if (CallingFont2 != nullptr) { CallingFont2.get()->Death(); }
+			if (CallingFont3 != nullptr) { CallingFont3.get()->Death(); }
+			if (CallingFont4 != nullptr) { CallingFont4.get()->Death(); }
+			if (CallingFont5 != nullptr) { CallingFont5.get()->Death(); }
+			if (CallingFont6 != nullptr) { CallingFont6.get()->Death(); }
+			if (CallingFont7 != nullptr) { CallingFont7.get()->Death(); }
+			if (CallingFont8 != nullptr) { CallingFont8.get()->Death(); }
+			if (CallingFont9 != nullptr) { CallingFont9.get()->Death(); }
+			if (CallingFont10 != nullptr) { CallingFont10.get()->Death(); }
+			if (CallingFont11 != nullptr) { CallingFont11.get()->Death(); }
+			if (CallingFont12 != nullptr) { CallingFont12.get()->Death(); }
+			if (CallingFont13 != nullptr) { CallingFont13.get()->Death(); }
+			if (CallingFont14 != nullptr) { CallingFont14.get()->Death(); }
+			Sound.Stop();
+			TSDeathBool2 = false;
+		}
+		ClockText(_DeltaTime);
 	}
 }
 
@@ -326,5 +351,178 @@ void Chap2StartTextActor::CallingText(float _DeltaTime)
 			Sound = Play(Sound, "CallingOff.wav", 0.2f);
 			Chap2Play24 = false;
 		}
+	}
+
+
+	if (CallingTime > 35.0f)
+	{
+		static bool Chap2Play25 = true;
+		if (true == Chap2Play25)
+		{
+			Sound = Play(Sound, "Chap02Whisper7.wav", 0.1f);
+			Chap2Play25 = false;
+		}
+		CallingFont8 = NFontCreate(CallingFont8, "당신의 내면이 말하길 태양이 막 폭발했다고 합니다.", GetTransform(), 4.0f);
+	}
+
+	if (CallingTime > 49.5f)
+	{
+		static bool Chap2Play26 = true;
+		if (true == Chap2Play26)
+		{
+			Sound = Play(Sound, "Chap02Whisper7b.wav", 0.1f);
+			Chap2Play26 = false;
+		}
+		CallingFont9 = NFontCreate(CallingFont9, "인생에 남은 8분을 정말로 모니터 앞에서 보내시겠습니까?", GetTransform(), 4.0f);
+	}
+
+	if (CallingTime > 54.0f)
+	{
+		static bool Chap2Play27 = true;
+		if (true == Chap2Play27)
+		{
+			Sound = Play(Sound, "Chap02Whisper7c.wav", 0.1f);
+			Chap2Play27 = false;
+		}
+		CallingFont10 = NFontCreate(CallingFont10, "그거 엄청 시간낭비일 텐데요...", GetTransform(), 2.0f);
+	}
+
+	if (CallingTime > 70.0f)
+	{
+		static bool Chap2Play28 = true;
+		if (true == Chap2Play28)
+		{
+			Sound = Play(Sound, "Chap02Whisper8.wav", 0.1f);
+			Chap2Play28 = false;
+		}
+		CallingFont11 = NFontCreate(CallingFont11, "거 참 안 떠납니까?", GetTransform(), 3.2f);
+	}
+
+	if (CallingTime > 73.5f)
+	{
+		static bool Chap2Play29 = true;
+		if (true == Chap2Play29)
+		{
+			Sound = Play(Sound, "Chap02Whisper8b.wav", 0.1f);
+			Chap2Play29 = false;
+		}
+		CallingFont12 = NFontCreate(CallingFont12, "... 그러니까...", GetTransform(), 1.2f);
+	}
+
+
+	if (CallingTime > 75.0f)
+	{
+		static bool Chap2Play30 = true;
+		if (true == Chap2Play30)
+		{
+			Sound = Play(Sound, "Chap02Whisper8c.wav", 0.1f);
+			Chap2Play30 = false;
+		}
+		CallingFont13 = NFontCreate(CallingFont13, "당신의 내면에서 이 어플리케이션을 종료하라고 제안하고 있습니다.", GetTransform(), 3.2f);
+	}
+
+	if (CallingTime > 78.5f)
+	{
+		static bool Chap2Play31 = true;
+		if (true == Chap2Play31)
+		{
+			Sound = Play(Sound, "Chap02Whisper8d.wav", 0.1f);
+			Chap2Play31 = false;
+		}
+		CallingFont14 = NFontCreate(CallingFont14, "매우 공손하게요. 네.", GetTransform(), 3.2f);
+	}
+}
+
+void Chap2StartTextActor::ClockText(float _DeltaTime)
+{
+	ClockTime += _DeltaTime;
+
+	if (ClockTime > 1.0f)
+	{
+		static bool Chap2Play32 = true;
+		if (true == Chap2Play32)
+		{
+			Sound = Play(Sound, "Chap02ClockUnlocked01.wav", 0.1f);
+			Chap2Play32 = false;
+		}
+		ClockFont = NFontCreate(ClockFont, "내 비밀번호를 알아냈다고?", GetTransform(), 2.0f);
+	}
+
+	if (ClockTime > 3.5f)
+	{
+		static bool Chap2Play33 = true;
+		if (true == Chap2Play33)
+		{
+			Sound = Play(Sound, "Chap02ClockUnlocked02.wav", 0.1f);
+			Chap2Play33 = false;
+		}
+		ClockFont2 = NFontCreate(ClockFont2, "그래도 시스템 시계로 뭘 할 수는 없겠지?", GetTransform(), 2.0f);
+	}
+
+	if (ClockTime > 6.0f)
+	{
+		static bool Chap2Play34 = true;
+		if (true == Chap2Play34)
+		{
+			Sound = Play(Sound, "Chap02ClockUnlocked03.wav", 0.1f);
+			Chap2Play34 = false;
+		}
+		ClockFont3 = NFontCreate(ClockFont3, "또 뭔가 부수지 않으면 좋겠는데...", GetTransform(), 2.0f);
+	}
+
+	if (ClockTime > 20.0f)
+	{
+		static bool Chap2Play35 = true;
+		if (true == Chap2Play35)
+		{
+			Sound = Play(Sound, "Chap02Whisper9.wav", 0.1f);
+			Chap2Play35 = false;
+		}
+		ClockFont4 = NFontCreate(ClockFont4, "업데이트가 다운로드 되었습니다.", GetTransform(), 2.0f);
+	}
+
+	if (ClockTime > 22.5f)
+	{
+		static bool Chap2Play36 = true;
+		if (true == Chap2Play36)
+		{
+			Sound = Play(Sound, "Chap02Whisper9b.wav", 0.1f);
+			Chap2Play36 = false;
+		}
+		ClockFont5 = NFontCreate(ClockFont5, "당신의 내면이 컴퓨터를 재부팅 하라고 권합니다.", GetTransform(), 3.0f);
+	}
+
+
+	if (ClockTime > 26.0f)
+	{
+		static bool Chap2Play37 = true;
+		if (true == Chap2Play37)
+		{
+			Sound = Play(Sound, "Chap02Whisper9c.wav", 0.1f);
+			Chap2Play37 = false;
+		}
+		ClockFont6 = NFontCreate(ClockFont6, "한 2주 동안 쉬다가 오세요.", GetTransform(), 3.0f);
+	}
+
+	if (ClockTime > 29.5f)
+	{
+		static bool Chap2Play38 = true;
+		if (true == Chap2Play38)
+		{
+			Sound = Play(Sound, "Chap02Whisper9d.wav", 0.1f);
+			Chap2Play38 = false;
+		}
+		ClockFont7 = NFontCreate(ClockFont7, "업데이트가 설치되는 동안 말이죠.", GetTransform(), 2.2f);
+	}
+
+	if (ClockTime > 32.0f)
+	{
+		static bool Chap2Play39 = true;
+		if (true == Chap2Play39)
+		{
+			Sound = Play(Sound, "Chap02Whisper9e.wav", 0.1f);
+			Chap2Play39 = false;
+		}
+		ClockFont8 = NFontCreate(ClockFont8, "업데이트는 매주 있습니다.", GetTransform(), 3.0f);
 	}
 }
