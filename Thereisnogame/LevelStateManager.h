@@ -32,6 +32,14 @@ public:
 	}
 	//Chapter2----------------------------------------------------------------------------------------------------------
 	//폴더 몇개열려있냐?
+	void SetIsClickCallingTrue()
+	{
+		IsClickCalling = true;
+	}
+	bool GetIsClickCalling()
+	{
+		return IsClickCalling;
+	}
 	void PlusCollisionValue();
 	void MinusCollisionValue();
 	int GetCollisionValue()
@@ -425,5 +433,6 @@ private:
 	bool IsGetTheKey = false;
 	bool Is18FolderOpen = false;
 	bool IsGetTheCup = false;
+	bool IsClickCalling = false;
 };
 

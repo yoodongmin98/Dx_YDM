@@ -14,13 +14,14 @@ public:
 	Chap2StartTextActor& operator=(Chap2StartTextActor&& _Other) noexcept = delete;
 
 	void SoundAndText(float _DeltaTime);
+	void CallingText(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
 private:
 	float SoundTime = 0.0f;
-
+	float CallingTime = 0.0f;
 	std::shared_ptr<class GameEngineFontRenderer> Font;
 	std::shared_ptr<class GameEngineFontRenderer> Font2;
 	std::shared_ptr<class GameEngineFontRenderer> Font3;
@@ -29,5 +30,24 @@ private:
 	std::shared_ptr<class GameEngineFontRenderer> Font6;
 	std::shared_ptr<class GameEngineFontRenderer> Font7;
 	std::shared_ptr<class GameEngineFontRenderer> Font8;
+	std::shared_ptr<class GameEngineFontRenderer> Font9;
+	std::shared_ptr<class GameEngineFontRenderer> Font10;
+	std::shared_ptr<class GameEngineFontRenderer> Font11;
+	std::shared_ptr<class GameEngineFontRenderer> Font12;
+	std::shared_ptr<class GameEngineFontRenderer> Font13;
+	std::shared_ptr<class GameEngineFontRenderer> Font14;
+	std::shared_ptr<class GameEngineFontRenderer> Font15;
+	
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont2;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont3;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont4;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont5;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont6;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont7;
+	std::shared_ptr<class GameEngineFontRenderer> CallingFont8;
+
+
+	bool TSDeathBool = true;
 };
 
