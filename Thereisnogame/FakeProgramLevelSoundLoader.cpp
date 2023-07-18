@@ -52,3 +52,12 @@ void FakeProgramLevel::BGMPauseOff()
 {
 	MainBGM.SetPause(false);
 }
+
+GameEngineSoundPlayer FakeProgramLevel::Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+{
+	_ControlSoundName = GameEngineSound::Play(_MusicName);
+	_ControlSoundName.SetVolume(_Volume);
+	_ControlSoundName.SetLoop(0);
+
+	return _ControlSoundName;
+}

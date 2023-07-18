@@ -88,6 +88,11 @@ void FakeProgramLevel::Update(float _DeltaTime)
 	{
 		GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
 	}
+	if (GameEngineInput::IsDown("LeftMouse")
+		&&false==LevelStateManager::MG->GetIsProgress())
+	{
+		Play(Sound, "MouseClick.wav", 0.1f);
+	}
 
 	StartFunctions(_DeltaTime);
 
@@ -101,7 +106,7 @@ void FakeProgramLevel::Update(float _DeltaTime)
 			if (true == ChainCreateBool)
 			{
 				ChainPtr=CreateActor<Chain>();
-				ChainPtr.get()->SetChainLiveTime(6);
+				ChainPtr.get()->SetChainLiveTime(10);
 				CreateActor<Chap2StartTextActor>();
 				ChainCreateBool = false;
 			}

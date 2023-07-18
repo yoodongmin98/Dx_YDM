@@ -25,5 +25,9 @@ private:
 	std::shared_ptr<class GameEngineFontRenderer> Font2;
 	std::shared_ptr<class GameEngineFontRenderer> Font3;
 	std::shared_ptr<class GameEngineFontRenderer> Font4;
+	std::shared_ptr<class GameEngineFontRenderer> Font5;
+	std::shared_ptr<class GameEngineFontRenderer> Font6;
+	std::shared_ptr<class GameEngineFontRenderer> Font7;
+	std::shared_ptr<class GameEngineFontRenderer> Font8;
 };
 

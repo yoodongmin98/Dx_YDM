@@ -29,8 +29,10 @@ public:
 
 	void StartFunctions(float _DeltaTime);
 	GameEngineSoundPlayer MainBGM;
-
+	GameEngineSoundPlayer Sound;
 	GameEngineSoundPlayer ChangeBGM(const std::string_view& _MusicName);
+
+	GameEngineSoundPlayer Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
