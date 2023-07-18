@@ -13,10 +13,11 @@ public:
 	CoffreFortPanel& operator=(const CoffreFortPanel& _Other) = delete;
 	CoffreFortPanel& operator=(CoffreFortPanel&& _Other) noexcept = delete;
 	void PanelInterCheck(float _DeltaTime);
-	void RenderOnCheck();
+	void RenderOnCheck(float _DeltaTime);
 protected:
 	GameEngineSoundPlayer Sound1;
 	GameEngineSoundPlayer Sound2;
+	GameEngineSoundPlayer Narate;
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
@@ -44,5 +45,17 @@ private:
 
 	bool CogOnBool = true;
 	bool RougeOnBool = true;
+
+	float SoundTime = 0.0f;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
+	std::shared_ptr<class GameEngineFontRenderer> Font2;
+	std::shared_ptr<class GameEngineFontRenderer> Font3;
+	std::shared_ptr<class GameEngineFontRenderer> Font4;
+	std::shared_ptr<class GameEngineFontRenderer> Font5;
+	std::shared_ptr<class GameEngineFontRenderer> Font6;
+	std::shared_ptr<class GameEngineFontRenderer> Font7;
+	std::shared_ptr<class GameEngineFontRenderer> Font8;
+	std::shared_ptr<class GameEngineFontRenderer> Font9;
 };
 

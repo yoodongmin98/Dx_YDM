@@ -73,6 +73,7 @@
 #include "CoffreFort.h"
 #include "CoffreFortHandle.h"
 #include "TextActor1.h"
+#include "TextActor2.h"
 
 
 void PlaywithinaplayLevel::ChangeState(Chap1LevelState _State)
@@ -917,9 +918,9 @@ void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 
 	if (CoffreTime > 7.5f && true==CoffreCreateBool)
 	{
-		CreateActor<CoffreFortPanel>();
-		CreateActor<CoffreFort>();
-		CreateActor<CoffreFortHandle>();
+		CoffreFortPanelPtr=CreateActor<CoffreFortPanel>();
+		CoffreFortPtr=CreateActor<CoffreFort>();
+		CoffreFortHandlePtr=CreateActor<CoffreFortHandle>();
 		CoffreCreateBool = false;
 	}
 }
@@ -933,10 +934,23 @@ void PlaywithinaplayLevel::CoffreFortEnd()
 void PlaywithinaplayLevel::MemorySetStart()
 {
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(4);
+	ChainPtr->SetChainLiveTime(6);
+	CreateActor<TextActor2>();
 }
 void PlaywithinaplayLevel::MemorySetUpdate(float _DeltaTime)
 {
+	if (ChainPtr->GetLiveTime() > 2.0f)
+	{
+		static bool Soundss = true;
+		if (true == Soundss)
+		{
+			Sound = Play(Sound, "Tremblement.wav", 0.1f);
+			Soundss = false;
+		}
+		CoffreFortPanelPtr->Death();
+		CoffreFortPtr->Death();
+		CoffreFortHandlePtr->Death();
+	}
 	//사운드가 끝나면 다음레벨로 넘어가기
 	if (true == ChainPtr->IsDeath())
 	{

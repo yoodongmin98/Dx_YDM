@@ -745,6 +745,9 @@
     <ClCompile Include="TextActor1.cpp">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
     </ClCompile>
+    <ClCompile Include="TextActor2.cpp">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1471,6 +1474,9 @@
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\DisplayActor</Filter>
     </ClInclude>
     <ClInclude Include="TextActor1.h">
+      <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
+    </ClInclude>
+    <ClInclude Include="TextActor2.h">
       <Filter>Chapter1.0_Play within a play\Actor\Phase2Actor\SoundAndTextActor</Filter>
     </ClInclude>
   </ItemGroup>

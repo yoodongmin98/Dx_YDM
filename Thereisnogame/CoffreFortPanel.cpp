@@ -38,7 +38,7 @@ void CoffreFortPanel::Start()
 void CoffreFortPanel::Update(float _DeltaTime)
 {
 	PanelInterCheck(_DeltaTime);
-	RenderOnCheck();
+	RenderOnCheck(_DeltaTime);
 }
 
 void CoffreFortPanel::Render(float _Delta)
@@ -89,16 +89,31 @@ void CoffreFortPanel::PanelInterCheck(float _DeltaTime)
 	}
 }
 
-void CoffreFortPanel::RenderOnCheck()
+void CoffreFortPanel::RenderOnCheck(float _DeltaTime)
 {
 	if (true == CogOnBool && LevelStateManager::MG->GetIsCogStick())
 	{
+		Sound2 = Play(Sound2, "CogIn.wav", 0.1f);
 		CogRender->On();
 		CogOnBool = false;
 	}
 	if (true == RougeOnBool && LevelStateManager::MG->GetIsRougeStick())
 	{
+		Sound2 = Play(Sound2, "CogIn.wav", 0.1f);
 		RougeRender->On();
 		RougeOnBool = false;
+	}
+
+	if (false == RougeOnBool && false == CogOnBool)
+	{
+		SoundTime += _DeltaTime;
+		
+		static bool Play80 = true;
+		if (true == Play80)
+		{
+			Sound = Play(Sound, "Chap01CloseSafePanel.wav", 0.1f);
+			Play80 = false;
+		}
+		Font = NFontCreate(Font, "어, 느낌 안 좋은데!", GetTransform(), 2.0f);
 	}
 }

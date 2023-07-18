@@ -211,6 +211,13 @@ private:
 	std::shared_ptr<class LeftDirectionArrow> LeftDirectionArrowPtr1;
 	std::shared_ptr<class LeftDirectionArrow> LeftDirectionArrowPtr2;
 
+
+	
+	
+
+	std::shared_ptr<class CoffreFortPanel> CoffreFortPanelPtr;
+	std::shared_ptr<class CoffreFort> CoffreFortPtr;
+	std::shared_ptr<class CoffreFortHandle> CoffreFortHandlePtr;
 	///State
 	void NoneStart();
 	void NoneUpdate(float _DeltaTime);

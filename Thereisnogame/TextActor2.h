@@ -2,16 +2,16 @@
 #include <GameEngineCore/GameEngineActor.h>
 #include "G_ActorBase.h"
 
-class TextActor1 : public G_ActorBase
+class TextActor2 : public G_ActorBase
 {
 public:
-	TextActor1();
-	~TextActor1();
+	TextActor2();
+	~TextActor2();
 
-	TextActor1(const TextActor1& _Other) = delete;
-	TextActor1(TextActor1&& _Other) noexcept = delete;
-	TextActor1& operator=(const TextActor1& _Other) = delete;
-	TextActor1& operator=(TextActor1&& _Other) noexcept = delete;
+	TextActor2(const TextActor2& _Other) = delete;
+	TextActor2(TextActor2&& _Other) noexcept = delete;
+	TextActor2& operator=(const TextActor2& _Other) = delete;
+	TextActor2& operator=(TextActor2&& _Other) noexcept = delete;
 
 	void SoundAndText(float _DeltaTime);
 protected:
