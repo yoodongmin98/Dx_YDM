@@ -386,6 +386,7 @@
     <ClInclude Include="SkiteFolder.h" />
     <ClInclude Include="SkiteIcon.h" />
     <ClInclude Include="SkiteProfil.h" />
+    <ClInclude Include="SoundAndTextActor.h" />
     <ClInclude Include="Speaker.h" />
     <ClInclude Include="squirrel.h">
       <SubType>
@@ -656,6 +657,7 @@
     <ClCompile Include="SkiteFolder.cpp" />
     <ClCompile Include="SkiteIcon.cpp" />
     <ClCompile Include="SkiteProfil.cpp" />
+    <ClCompile Include="SoundAndTextActor.cpp" />
     <ClCompile Include="Speaker.cpp" />
     <ClCompile Include="squirrel.cpp">
       <SubType>

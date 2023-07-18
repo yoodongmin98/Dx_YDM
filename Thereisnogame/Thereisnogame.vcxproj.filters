@@ -763,6 +763,9 @@
     <ClCompile Include="EndingLevelSoundLoader.cpp">
       <Filter>Chapter3.0_Ending\Level</Filter>
     </ClCompile>
+    <ClCompile Include="SoundAndTextActor.cpp">
+      <Filter>Chapter3.0_Ending\Actor\Sound,Text</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1506,6 +1509,9 @@
     <ClInclude Include="EndingLevel.h">
       <Filter>Chapter3.0_Ending\Level</Filter>
     </ClInclude>
+    <ClInclude Include="SoundAndTextActor.h">
+      <Filter>Chapter3.0_Ending\Actor\Sound,Text</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1828,6 +1834,9 @@
     </Filter>
     <Filter Include="Chapter2.0_Fake Program\Actor\SoundActor">
       <UniqueIdentifier>{65ccd26a-9447-49a2-bb55-7c5ee82bbe2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter3.0_Ending\Actor\Sound,Text">
+      <UniqueIdentifier>{76ca12fc-48fc-41a5-9dd3-6814eb064a4e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
