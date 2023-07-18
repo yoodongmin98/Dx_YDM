@@ -29,7 +29,7 @@ private:
 	std::shared_ptr<class GameEngineCollision> SkiteCallingCollision;
 
 	std::shared_ptr<class Chain> ChainPtr;
-	float LiveTime = 3.0f;
+	float LiveTime = 11.0f;
 
 	std::shared_ptr<class GameEngineFontRenderer> Font1;
 	std::shared_ptr<class GameEngineFontRenderer> Font2;

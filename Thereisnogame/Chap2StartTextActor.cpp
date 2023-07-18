@@ -246,31 +246,85 @@ void Chap2StartTextActor::CallingText(float _DeltaTime)
 		static bool Chap2Play17 = true;
 		if (true == Chap2Play17)
 		{
-			Sound = Play(Sound, "Chap02SkiteCall01.wav", 0.1f);
+			Sound = Play(Sound, "Chap02SkiteCall01.wav", 0.2f);
 			Chap2Play17 = false;
 		}
-		CallingFont = NFontCreate(CallingFont, "안녕하세요!", GetTransform(), 1.5f);
+		CallingFont = NFontCreate(CallingFont, "안녕하세요!", GetTransform(), 1.2f);
 	}
 
-	if (CallingTime > 3.0f)
+	if (CallingTime > 2.5f)
 	{
 		static bool Chap2Play18 = true;
 		if (true == Chap2Play18)
 		{
-			Sound = Play(Sound, "Chap02SkiteCall02.wav", 0.1f);
+			Sound = Play(Sound, "Chap02SkiteCall02.wav", 0.2f);
 			Chap2Play18 = false;
 		}
-		CallingFont2 = NFontCreate(CallingFont2, "모르는 사람입니다.", GetTransform(), 2.0f);
+		CallingFont2 = NFontCreate(CallingFont2, "모르는 사람입니다.", GetTransform(), 1.7f);
 	}
 
-	if (CallingTime > 5.5f)
+	if (CallingTime > 4.5f)
 	{
 		static bool Chap2Play19 = true;
 		if (true == Chap2Play19)
 		{
-			Sound = Play(Sound, "Chap02SkiteCall03.wav", 0.1f);
+			Sound = Play(Sound, "Chap02SkiteCall03.wav", 0.2f);
 			Chap2Play19 = false;
 		}
 		CallingFont3 = NFontCreate(CallingFont3, "그리고 제 목소리는 이미 존재하는 그 어떤 프로그램과도 안 닮았어요.", GetTransform(), 3.5f);
+	}
+
+	if (CallingTime > 8.0f)
+	{
+		static bool Chap2Play20 = true;
+		if (true == Chap2Play20)
+		{
+			Sound = Play(Sound, "Chap02SkiteCall04.wav", 0.2f);
+			Chap2Play20 = false;
+		}
+		CallingFont4 = NFontCreate(CallingFont4, "그냥 이 사진들 참 못찍었다고 말하려고요.", GetTransform(), 4.0f);
+	}
+
+	if (CallingTime > 12.5f)
+	{
+		static bool Chap2Play21 = true;
+		if (true == Chap2Play21)
+		{
+			Sound = Play(Sound, "Chap02SkiteCall05.wav", 0.2f);
+			Chap2Play21 = false;
+		}
+		CallingFont5 = NFontCreate(CallingFont5, "당장 정부에 이 게임 분류에 대해서 물어보려고 합니다.", GetTransform(), 4.0f);
+	}
+
+	if (CallingTime > 17.0f)
+	{
+		static bool Chap2Play22 = true;
+		if (true == Chap2Play22)
+		{
+			Sound = Play(Sound, "Chap02SkiteCall06.wav", 0.2f);
+			Chap2Play22 = false;
+		}
+		CallingFont6 = NFontCreate(CallingFont6, "게임 아닌 거 말이에요!", GetTransform(), 1.3f);
+	}
+
+	if (CallingTime > 19.0f)
+	{
+		static bool Chap2Play23 = true;
+		if (true == Chap2Play23)
+		{
+			Sound = Play(Sound, "Chap02SkiteCall07.wav", 0.2f);
+			Chap2Play23 = false;
+		}
+		CallingFont7 = NFontCreate(CallingFont7, "내 것도 아니에요! 친구 거예요.", GetTransform(), 2.0f);
+	}
+
+	if (CallingTime > 21.0f)
+	{
+		static bool Chap2Play24 = true;
+		if (true == Chap2Play24)
+		{
+			Sound = Play(Sound, "CallingOff.wav", 0.2f);
+			Chap2Play24 = false;
+		}
 	}
 }
