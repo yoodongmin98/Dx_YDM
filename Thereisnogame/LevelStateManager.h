@@ -147,7 +147,7 @@ public:
 	bool GetIsLockFolderTouch()
 	{
 		return IsLockFolderTouch;
-	})
+	}
 	//Chapter1----------------------------------------------------------------------------------------------------------
 	// plaque나레이션 다 끝났냐?
 	void SetplaqueNarateTrue()

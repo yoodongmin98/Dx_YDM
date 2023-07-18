@@ -10,6 +10,7 @@
 #include "Play within a play Level.h"
 #include "Fake Program Level.h"
 #include "OpeningLevel.h"
+#include "EndingLevel.h"
 
 ContentsCore::ContentsCore() 
 {
@@ -39,13 +40,13 @@ void ContentsCore::GameStart()
 {
 	ContentsResourcesCreate();
 	
-	new int();
+	new int(); //LeakCheck¿ë
 	GameEngineCore::CreateLevel<OpeningLevel>();
 	GameEngineCore::CreateLevel<MainMenuLevel>();
 	GameEngineCore::CreateLevel<PlaywithinaplayLevel>();
 	GameEngineCore::CreateLevel<ProgramLoadingLevel>();
 	GameEngineCore::CreateLevel<FakeProgramLevel>();
-	//GameEngineCore::CreateLevel<EndingLevel>();
+	GameEngineCore::CreateLevel<EndingLevel>();
 
 	GameEngineCore::ChangeLevel("MainMenuLevel");
 }

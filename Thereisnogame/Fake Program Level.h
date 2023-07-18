@@ -26,7 +26,7 @@ public:
 	void SoundLoad();
 
 	void FolderCreate();
-
+	void KeySetting();
 	void StartFunctions(float _DeltaTime);
 	GameEngineSoundPlayer MainBGM;
 	GameEngineSoundPlayer Sound;

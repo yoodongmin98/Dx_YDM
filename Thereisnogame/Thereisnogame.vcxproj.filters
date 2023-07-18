@@ -757,6 +757,12 @@
     <ClCompile Include="Chap2StartTextActor.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\SoundActor</Filter>
     </ClCompile>
+    <ClCompile Include="EndingLevel.cpp">
+      <Filter>Chapter3.0_Ending\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="EndingLevelSoundLoader.cpp">
+      <Filter>Chapter3.0_Ending\Level</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1496,6 +1502,9 @@
     </ClInclude>
     <ClInclude Include="Chap2StartTextActor.h">
       <Filter>Chapter2.0_Fake Program\Actor\SoundActor</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingLevel.h">
+      <Filter>Chapter3.0_Ending\Level</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

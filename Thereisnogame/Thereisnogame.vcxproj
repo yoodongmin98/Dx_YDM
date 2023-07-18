@@ -210,6 +210,7 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="EndingLevel.h" />
     <ClInclude Include="FlagChain_Back.h" />
     <ClInclude Include="FlagPicture_Back.h" />
     <ClInclude Include="GlitchParticle.h" />
@@ -470,6 +471,8 @@
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
+    <ClCompile Include="EndingLevel.cpp" />
+    <ClCompile Include="EndingLevelSoundLoader.cpp" />
     <ClCompile Include="Excla_TitleCube.cpp" />
     <ClCompile Include="E_TitleCube.cpp" />
     <ClCompile Include="E_TitleMetal.cpp" />

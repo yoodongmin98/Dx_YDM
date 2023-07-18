@@ -80,20 +80,7 @@ void FakeProgramLevel::Start()
 
 void FakeProgramLevel::Update(float _DeltaTime)
 {
-	if (GameEngineInput::IsDown("TestKey1"))
-	{
-		GameEngineCore::ChangeLevel("MainMenuLevel");
-	}
-	if (GameEngineInput::IsDown("TestKey2"))
-	{
-		GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
-	}
-	if (GameEngineInput::IsDown("LeftMouse")
-		&&false==LevelStateManager::MG->GetIsProgress())
-	{
-		Play(Sound, "MouseClick.wav", 0.1f);
-	}
-
+	KeySetting();
 	StartFunctions(_DeltaTime);
 
 	if (nullptr != BoxCroix_StartRedPanelPtr)
@@ -144,5 +131,26 @@ void FakeProgramLevel::StartFunctions(float _DeltaTime)
 		FolderBackGroundPtr=CreateActor<FolderBackGround>();
 		StartRedPanelPtr=CreateActor<StartRedPanel>();
 		BoxCroix_StartRedPanelPtr=CreateActor<BoxCroix_StartRedPanel>();
+	}
+}
+
+void FakeProgramLevel::KeySetting()
+{
+	if (GameEngineInput::IsDown("TestKey1"))
+	{
+		GameEngineCore::ChangeLevel("MainMenuLevel");
+	}
+	if (GameEngineInput::IsDown("TestKey2"))
+	{
+		GameEngineCore::ChangeLevel("PlaywithinaplayLevel");
+	}
+	if (GameEngineInput::IsDown("TestKey4"))
+	{
+		GameEngineCore::ChangeLevel("EndingLevel");
+	}
+	if (GameEngineInput::IsDown("LeftMouse")
+		&& false == LevelStateManager::MG->GetIsProgress())
+	{
+		Play(Sound, "MouseClick.wav", 0.1f);
 	}
 }

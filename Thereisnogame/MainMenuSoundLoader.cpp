@@ -11,7 +11,7 @@ void MainMenuLevel::SoundLoad()
 		SoundDir.MoveParentToDirectory("ThereisnogameResource");
 		SoundDir.Move("ThereisnogameResource");
 		SoundDir.Move("SoundFiles");
-		SoundDir.Move("MainMenus");
+		SoundDir.Move("Main");
 
 		std::vector<GameEngineFile> File = SoundDir.GetAllFile({ ".wav", });
 

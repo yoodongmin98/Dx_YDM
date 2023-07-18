@@ -1,16 +1,16 @@
 #include "PrecompileHeader.h"
-#include "Fake Program Level.h"
+#include "EndingLevel.h"
 #include <GameEnginePlatform/GameEngineSound.h>
 
 
-void FakeProgramLevel::SoundLoad()
+void EndingLevel::SoundLoad()
 {
 	{
 		GameEngineDirectory SoundDir;
 		SoundDir.MoveParentToDirectory("ThereisnogameResource");
 		SoundDir.Move("ThereisnogameResource");
 		SoundDir.Move("SoundFiles");
-		SoundDir.Move("Chapter2(Fake)");
+		SoundDir.Move("Chapter3(Ending)");
 
 		std::vector<GameEngineFile> File = SoundDir.GetAllFile({ ".wav", });
 
@@ -22,38 +22,31 @@ void FakeProgramLevel::SoundLoad()
 	}
 }
 
-void FakeProgramLevel::ReSetBGM()
-{
-	MainBGM = GameEngineSound::Play("Chap02_ElevatorMusic.wav");
-	MainBGM.SetVolume(0.1f);
-	MainBGM.SetLoop(-1);
-}
-
-void FakeProgramLevel::StopBGM()
+void EndingLevel::StopBGM()
 {
 	MainBGM.Stop();
 }
 
-GameEngineSoundPlayer FakeProgramLevel::ChangeBGM(const std::string_view& _MusicName)
+GameEngineSoundPlayer EndingLevel::ChangeBGM(const std::string_view& _MusicName)
 {
 	MainBGM.Stop();
-	MainBGM= GameEngineSound::Play(_MusicName);
+	MainBGM = GameEngineSound::Play(_MusicName);
 	MainBGM.SetVolume(0.1f);
 	MainBGM.SetLoop(-1);
 
 	return MainBGM;
 }
 
-void FakeProgramLevel::BGMPauseOn()
+void EndingLevel::BGMPauseOn()
 {
 	MainBGM.SetPause(true);
 }
-void FakeProgramLevel::BGMPauseOff()
+void EndingLevel::BGMPauseOff()
 {
 	MainBGM.SetPause(false);
 }
 
-GameEngineSoundPlayer FakeProgramLevel::Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
+GameEngineSoundPlayer EndingLevel::Play(GameEngineSoundPlayer _ControlSoundName, const std::string_view& _MusicName, float _Volume)
 {
 	_ControlSoundName = GameEngineSound::Play(_MusicName);
 	_ControlSoundName.SetVolume(_Volume);

@@ -124,6 +124,10 @@ void MainMenuLevel::Update(float _DeltaTime)
 	{
 		GameEngineCore::ChangeLevel("FakeProgramLevel");
 	}
+	if (GameEngineInput::IsDown("TestKey4"))
+	{
+		GameEngineCore::ChangeLevel("EndingLevel");
+	}
 	UpdateState(_DeltaTime);
 }
 

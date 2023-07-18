@@ -14,7 +14,7 @@ void PlaywithinaplayLevel::SoundLoad()
 		SoundDir.MoveParentToDirectory("ThereisnogameResource");
 		SoundDir.Move("ThereisnogameResource");
 		SoundDir.Move("SoundFiles");
-		SoundDir.Move("Chapter1");
+		SoundDir.Move("Chapter1(Play)");
 
 		std::vector<GameEngineFile> File = SoundDir.GetAllFile({ ".wav", });
 
