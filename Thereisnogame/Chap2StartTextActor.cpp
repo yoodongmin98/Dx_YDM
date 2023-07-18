@@ -365,7 +365,7 @@ void Chap2StartTextActor::CallingText(float _DeltaTime)
 		CallingFont8 = NFontCreate(CallingFont8, "당신의 내면이 말하길 태양이 막 폭발했다고 합니다.", GetTransform(), 4.0f);
 	}
 
-	if (CallingTime > 49.5f)
+	if (CallingTime > 39.5f)
 	{
 		static bool Chap2Play26 = true;
 		if (true == Chap2Play26)
@@ -376,7 +376,7 @@ void Chap2StartTextActor::CallingText(float _DeltaTime)
 		CallingFont9 = NFontCreate(CallingFont9, "인생에 남은 8분을 정말로 모니터 앞에서 보내시겠습니까?", GetTransform(), 4.0f);
 	}
 
-	if (CallingTime > 54.0f)
+	if (CallingTime > 44.0f)
 	{
 		static bool Chap2Play27 = true;
 		if (true == Chap2Play27)
