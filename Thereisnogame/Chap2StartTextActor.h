@@ -70,6 +70,11 @@ private:
 	std::shared_ptr<class GameEngineFontRenderer> ClockFont13;
 	std::shared_ptr<class GameEngineFontRenderer> ClockFont14;
 	std::shared_ptr<class GameEngineFontRenderer> ClockFont15;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont16;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont17;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont18;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont19;
+
 	bool TSDeathBool = true;
 	bool TSDeathBool2 = true;
 };

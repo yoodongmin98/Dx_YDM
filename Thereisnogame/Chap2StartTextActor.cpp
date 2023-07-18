@@ -525,4 +525,126 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 		}
 		ClockFont8 = NFontCreate(ClockFont8, "업데이트는 매주 있습니다.", GetTransform(), 3.0f);
 	}
+
+	if (ClockTime > 55.0f)
+	{
+		static bool Chap2Play40 = true;
+		if (true == Chap2Play40)
+		{
+			Sound = Play(Sound, "Chap02Whisper10.wav", 0.1f);
+			Chap2Play40 = false;
+		}
+		ClockFont9 = NFontCreate(ClockFont9, "당신의 내면이 3에서 0까지 숫자를 셀 겁니다.", GetTransform(), 4.0f);
+	}
+
+	if (ClockTime > 59.5f)
+	{
+		static bool Chap2Play41 = true;
+		if (true == Chap2Play41)
+		{
+			Sound = Play(Sound, "Chap02Whisper10b.wav", 0.1f);
+			Chap2Play41 = false;
+		}
+		ClockFont10 = NFontCreate(ClockFont10, "0이 되면, 당신은 깊은 수면 속으로 빠져듭니다...", GetTransform(), 4.0f);
+	}
+
+	if (ClockTime > 64.0f)
+	{
+		static bool Chap2Play42 = true;
+		if (true == Chap2Play42)
+		{
+			Sound = Play(Sound, "Chap02Whisper10b.wav", 0.1f);
+			Chap2Play42 = false;
+		}
+		ClockFont11 = NFontCreate(ClockFont11, "0이 되면, 당신은 깊은 수면 속으로 빠져듭니다...", GetTransform(), 4.0f);
+	}
+
+	if (ClockTime > 68.5f)
+	{
+		static bool Chap2Play43 = true;
+		if (true == Chap2Play43)
+		{
+			Sound = Play(Sound, "Chap02Whisper10c.wav", 0.1f);
+			Chap2Play43 = false;
+		}
+		ClockFont12 = NFontCreate(ClockFont12, "3", GetTransform(), 1.7f);
+	}
+
+	if (ClockTime > 70.5f)
+	{
+		static bool Chap2Play44 = true;
+		if (true == Chap2Play44)
+		{
+			Sound = Play(Sound, "Chap02Whisper10d.wav", 0.1f);
+			Chap2Play44 = false;
+		}
+		ClockFont13 = NFontCreate(ClockFont13, "2", GetTransform(), 1.7f);
+	}
+
+	if (ClockTime > 72.5f)
+	{
+		static bool Chap2Play45 = true;
+		if (true == Chap2Play45)
+		{
+			Sound = Play(Sound, "Chap02Whisper10e.wav", 0.1f);
+			Chap2Play45 = false;
+		}
+		ClockFont14 = NFontCreate(ClockFont14, "1", GetTransform(), 1.7f);
+	}
+
+	if (ClockTime > 74.5f)
+	{
+		static bool Chap2Play46 = true;
+		if (true == Chap2Play46)
+		{
+			Sound = Play(Sound, "Chap02Whisper10f.wav", 0.1f);
+			Chap2Play46 = false;
+		}
+		ClockFont15 = NFontCreate(ClockFont15, "0", GetTransform(), 1.7f);
+	}
+
+
+	if (ClockTime > 77.5f)
+	{
+		static bool Chap2Play47 = true;
+		if (true == Chap2Play47)
+		{
+			Sound = Play(Sound, "Chap02Whisper10g.wav", 0.1f);
+			Chap2Play47 = false;
+		}
+		ClockFont16 = NFontCreate(ClockFont16, "-1?", GetTransform(), 1.7f);
+	}
+
+	if (ClockTime > 79.5f)
+	{
+		static bool Chap2Play48 = true;
+		if (true == Chap2Play48)
+		{
+			Sound = Play(Sound, "Chap02Whisper10h.wav", 0.1f);
+			Chap2Play48 = false;
+		}
+		ClockFont17 = NFontCreate(ClockFont17, "-2?", GetTransform(), 1.7f);
+	}
+
+	if (ClockTime > 81.5f)
+	{
+		static bool Chap2Play49 = true;
+		if (true == Chap2Play49)
+		{
+			Sound = Play(Sound, "Chap02Whisper10i.wav", 0.1f);
+			Chap2Play49 = false;
+		}
+		ClockFont18 = NFontCreate(ClockFont18, "TV에선 먹히던데.", GetTransform(), 1.7f);
+	}
+
+	if (ClockTime > 100.0f)
+	{
+		static bool Chap2Play50 = true;
+		if (true == Chap2Play50)
+		{
+			Sound = Play(Sound, "Chap02Whisper11.wav", 0.1f);
+			Chap2Play50 = false;
+		}
+		ClockFont19 = NFontCreate(ClockFont19, "당신의 내면이 이제 무슨 말을 해야할지 모르겠다고 합니다...", GetTransform(), 4.5f);
+	}
 }
