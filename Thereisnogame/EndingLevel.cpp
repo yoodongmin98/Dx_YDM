@@ -12,7 +12,9 @@
 #include "Mouse.h"
 #include "LevelStateManager.h"
 #include "FadeEffect.h"
-//Folder
+#include "C1_BackGround.h"
+#include "BackCurtain_Ending.h"
+#include "SoundAndTextActor.h"
 
 
 EndingLevel* EndingLevel::EL;
@@ -51,8 +53,16 @@ void EndingLevel::Start()
 
 
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
+
+	//CreateActor<SoundAndTextActor>();
+	CreateActor<C1_BackGround>();
+	BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
 	CreateActor<LevelStateManager>(100);
 	MousePtr = CreateActor<Mouse>();
+
+	ChangeBGM("End_IntroMusic.wav");
+	
+	
 }
 
 void EndingLevel::Update(float _DeltaTime)

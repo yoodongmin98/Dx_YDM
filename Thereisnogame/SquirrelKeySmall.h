@@ -16,6 +16,7 @@ public:
 	SquirrelKeySmall& operator=(const SquirrelKeySmall& _Other) = delete;
 	SquirrelKeySmall& operator=(SquirrelKeySmall&& _Other) noexcept = delete;
 
+	std::shared_ptr<class FadeEffect> FEffect;
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -25,5 +26,8 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> SquirrelKeySmall_overlap;
 
 	std::shared_ptr<class GameEngineCollision> SquirrelKeySmallCollision;
+
+	float LevelChangeTime = 0.0f;
+	bool LevelChangeBool = true;
 };
 

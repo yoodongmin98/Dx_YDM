@@ -168,6 +168,7 @@
     <ClInclude Include="ActorTypeEnum.h" />
     <ClInclude Include="A_TitleCube.h" />
     <ClInclude Include="A_TitleMetal.h" />
+    <ClInclude Include="BackCurtain_Ending.h" />
     <ClInclude Include="BackCurtain_Main.h" />
     <ClInclude Include="BackSqirrelKey.h" />
     <ClInclude Include="BalloonParents.h" />
@@ -429,6 +430,7 @@
   <ItemGroup>
     <ClCompile Include="A_TitleCube.cpp" />
     <ClCompile Include="A_TitleMetal.cpp" />
+    <ClCompile Include="BackCurtain_Ending.cpp" />
     <ClCompile Include="BackCurtain_Main.cpp" />
     <ClCompile Include="BackSqirrelKey.cpp" />
     <ClCompile Include="BalloonParents.cpp" />

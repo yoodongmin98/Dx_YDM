@@ -766,6 +766,9 @@
     <ClCompile Include="SoundAndTextActor.cpp">
       <Filter>Chapter3.0_Ending\Actor\Sound,Text</Filter>
     </ClCompile>
+    <ClCompile Include="BackCurtain_Ending.cpp">
+      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1512,6 +1515,9 @@
     <ClInclude Include="SoundAndTextActor.h">
       <Filter>Chapter3.0_Ending\Actor\Sound,Text</Filter>
     </ClInclude>
+    <ClInclude Include="BackCurtain_Ending.h">
+      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1837,6 +1843,9 @@
     </Filter>
     <Filter Include="Chapter3.0_Ending\Actor\Sound,Text">
       <UniqueIdentifier>{76ca12fc-48fc-41a5-9dd3-6814eb064a4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter3.0_Ending\Actor\BackActor">
+      <UniqueIdentifier>{8de3e13b-2a35-4457-9b95-4ba0f6694395}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

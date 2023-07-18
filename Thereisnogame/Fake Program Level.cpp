@@ -154,3 +154,9 @@ void FakeProgramLevel::KeySetting()
 		Play(Sound, "MouseClick.wav", 0.1f);
 	}
 }
+
+void FakeProgramLevel::LevelChangeEnd()
+{
+	StopBGM();
+	FEffect->FadeIn();
+}

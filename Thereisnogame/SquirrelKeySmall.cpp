@@ -7,6 +7,7 @@
 
 //Actor
 #include "Mouse.h"
+#include "FadeEffect.h"
 
 SquirrelKeySmall::SquirrelKeySmall()
 {
@@ -23,17 +24,32 @@ void SquirrelKeySmall::Start()
 	SquirrelKeySmall_overlap = Init(SquirrelKeySmall_overlap, "SquirrelKey_KeySmall_Overlap.png", { 101,110 }, { Position.x - 3,Position.y + 3 });
 
 	SquirrelKeySmallCollision = CollisionInit(SquirrelKeySmallCollision, { 106,118 }, Position);
+
+	FEffect = GetLevel()->GetLastTarget()->CreateEffect<FadeEffect>();
 }
+
 
 void SquirrelKeySmall::Update(float _DeltaTime)
 {
 	Fall(SquirrelKeySmalls, SquirrelKeySmall_overlap, SquirrelKeySmallCollision, 39.5f, _DeltaTime);
 	CatchCheck(SquirrelKeySmalls, SquirrelKeySmall_overlap, SquirrelKeySmallCollision);
+
 	if (SquirrelKeySmallCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
-		MsgAssert("엔딩까지 도달했습니다 일단 멈추십쇼");
-		Death();
+		LevelChangeBool = false;
+		FEffect->FadeIn();
+		SquirrelKeySmalls->Off();
+		SquirrelKeySmall_overlap->Off();
+		SquirrelKeySmallCollision->Off();
+	}
+	if (false == LevelChangeBool)
+	{
+		LevelChangeTime += _DeltaTime;
+		if (LevelChangeTime > 3.0f)
+		{
+			GameEngineCore::ChangeLevel("EndingLevel");
+		}
 	}
 }
 
