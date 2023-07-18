@@ -39,9 +39,9 @@ void SquirrelKeySmall::Update(float _DeltaTime)
 	{
 		LevelChangeBool = false;
 		FEffect->FadeIn();
-		SquirrelKeySmalls->Off();
-		SquirrelKeySmall_overlap->Off();
-		SquirrelKeySmallCollision->Off();
+		SquirrelKeySmalls->Death();
+		SquirrelKeySmall_overlap->Death();
+		SquirrelKeySmallCollision->Death();
 	}
 	if (false == LevelChangeBool)
 	{

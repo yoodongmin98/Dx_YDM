@@ -15,7 +15,7 @@
 #include "C1_BackGround.h"
 #include "BackCurtain_Ending.h"
 #include "SoundAndTextActor.h"
-
+#include "EndingPlayButton.h"
 
 EndingLevel* EndingLevel::EL;
 
@@ -55,8 +55,10 @@ void EndingLevel::Start()
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 
 	//CreateActor<SoundAndTextActor>();
+	CreateActor<SoundAndTextActor>();
 	CreateActor<C1_BackGround>();
-	BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
+	CreateActor<EndingPlayButton>();
+	//BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
 	CreateActor<LevelStateManager>(100);
 	MousePtr = CreateActor<Mouse>();
 
@@ -68,6 +70,11 @@ void EndingLevel::Start()
 void EndingLevel::Update(float _DeltaTime)
 {
 	KeySetting();
+	LevelTime += _DeltaTime;
+	if (LevelTime > 39.0f)
+	{
+		BackCurtain_EndingPtr.get()->CurtainOpen();
+	}
 }
 
 void EndingLevel::LevelChangeStart()

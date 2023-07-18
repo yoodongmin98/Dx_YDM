@@ -36,5 +36,7 @@ private:
 
 	std::shared_ptr<class Mouse> MousePtr = nullptr;
 	std::shared_ptr<class BackCurtain_Ending> BackCurtain_EndingPtr = nullptr;
+
+	float LevelTime = 0.0f;
 };
 
