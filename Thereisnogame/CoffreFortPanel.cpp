@@ -53,6 +53,14 @@ void CoffreFortPanel::PanelInterCheck(float _DeltaTime)
 	if (true == ClickCheck(CoffreFortPanelsColliision))
 	{
 		PanelOpen = !PanelOpen;
+		if (true == PanelOpen)
+		{
+			Play(Sound1, "CoffrePanelOpen.wav", 0.1f);
+		}
+		else
+		{
+			Play(Sound1, "CoffrePanelClose.wav", 0.1f);
+		}
 		LevelStateManager::MG->SetIsPanelClick();
 		PanelTime = 0.0f;
 		StartPosX = CoffreFortPanels->GetTransform()->GetLocalPosition();

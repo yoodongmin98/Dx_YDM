@@ -16,6 +16,7 @@ public:
 	void HandleRotateCheck(float _DeltaTime);
 	void HandleCheckNextLevel();
 protected:
+	GameEngineSoundPlayer Sound;
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;

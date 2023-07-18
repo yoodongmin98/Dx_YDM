@@ -15,6 +15,8 @@ public:
 	void PanelInterCheck(float _DeltaTime);
 	void RenderOnCheck();
 protected:
+	GameEngineSoundPlayer Sound1;
+	GameEngineSoundPlayer Sound2;
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;

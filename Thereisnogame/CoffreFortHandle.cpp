@@ -24,6 +24,7 @@ void CoffreFortHandle::Start()
 	CoffreFortHandlesShadow = Init(CoffreFortHandlesShadow, "CoffreFortHandleShadow.png", { 218,218 }, { Position.x ,Position.y-25});
 	CoffreFortHandles = Init(CoffreFortHandles, "CoffreFortHandle.png", { 234,234 }, Position);
 	CoffreFortHandlesCollision = CollisionInit(CoffreFortHandlesCollision, { 200,200 }, Position);
+	Sound = Play(Sound, "ImpactIron.wav", 0.1f);
 }
 
 void CoffreFortHandle::Update(float _DeltaTime)
@@ -42,6 +43,9 @@ void CoffreFortHandle::HandleRotateCheck(float _DeltaTime)
 	if (CoffreFortHandlesCollision->Collision(ActorTypeEnum::Mouse, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& false==Mouse::MainMouse->IsInteractable())
 	{
+		Sound.Stop();
+		Sound = Play(Sound, "CoffreHandle.wav", 0.1f);
+		
 		Force = 400.0f;
 	}
 	Force -= _DeltaTime*150.0f;

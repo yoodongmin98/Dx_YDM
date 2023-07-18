@@ -23,10 +23,14 @@ void Cog::Start()
 	Cogs_Overlap = Init(Cogs_Overlap, "Cog_OBJ_Overlap.png", { 220,216 }, { Position.x - 3,Position.y + 3 });
 	Cogs = Init(Cogs, "Cog_OBJ.png", { 190,184 }, Position);
 	CogCollision = CollisionInit(CogCollision, { 190,184,1 }, Position);
+
+	Sound = Play(Sound, "Drag1.wav", 0.1f);
+	Sound = Play(Sound, "Chap1CogCreate.wav", 0.1f);
 }
 
 void Cog::Update(float _DeltaTime)
 {
+	Font = NFontCreate(Font, "Á¤¸» ¹¹ ¸Á°¡¶ß¸®´Â µ¥´Â ¼±¼ö³×¿ä.", GetTransform(), 2);
 	CatchCheck(Cogs, Cogs_Overlap, CogCollision);
 	Fall(Cogs, Cogs_Overlap, CogCollision, 92.0f, _DeltaTime);
 	CogDeathandInterCheck();

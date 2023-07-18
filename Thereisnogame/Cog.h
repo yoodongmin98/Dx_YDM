@@ -18,6 +18,7 @@ public:
 
 	void CogDeathandInterCheck();
 protected:
+	GameEngineSoundPlayer Sound;
 	void Start();
 	void Update(float _Delta) override;
 	void Render(float _Delta) override;
@@ -26,5 +27,7 @@ private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Cogs_Overlap;
 
 	std::shared_ptr<class GameEngineCollision> CogCollision;
+
+	std::shared_ptr<class GameEngineFontRenderer> Font;
 };
 

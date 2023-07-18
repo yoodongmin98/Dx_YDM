@@ -904,7 +904,7 @@ bool CoffreCreateBool = true;
 void PlaywithinaplayLevel::CoffreFortStart()
 {
 	ChainPtr = CreateActor<Chain>();
-	ChainPtr->SetChainLiveTime(3);
+	ChainPtr->SetChainLiveTime(6);
 	PlaqueStartPos = PlaquePtr.get()->GetTransform()->GetLocalPosition();
 	PlaqueEndPos = PlaqueStartPos + float4::Down * 1000;
 	Play(Sound, "BoardDown.wav", 0.1f);
@@ -915,13 +915,12 @@ void PlaywithinaplayLevel::CoffreFortUpdate(float _DeltaTime)
 	CoffreTime += _DeltaTime;
 	PlaquePtr.get()->GetTransform()->SetLocalPosition(float4::LerpClamp(PlaqueStartPos, PlaqueEndPos, CoffreTime));
 
-	if (CoffreTime > 3.0f && true==CoffreCreateBool)
+	if (CoffreTime > 7.5f && true==CoffreCreateBool)
 	{
 		CreateActor<CoffreFortPanel>();
 		CreateActor<CoffreFort>();
 		CreateActor<CoffreFortHandle>();
 		CoffreCreateBool = false;
-		//CameraShaking
 	}
 }
 void PlaywithinaplayLevel::CoffreFortEnd()
