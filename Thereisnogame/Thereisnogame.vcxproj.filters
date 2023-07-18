@@ -754,6 +754,9 @@
     <ClCompile Include="BoxCroix_StartRedPanel.cpp">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\StartActorPanel</Filter>
     </ClCompile>
+    <ClCompile Include="Chap2StartTextActor.cpp">
+      <Filter>Chapter2.0_Fake Program\Actor\SoundActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1491,6 +1494,9 @@
     <ClInclude Include="BoxCroix_StartRedPanel.h">
       <Filter>Chapter2.0_Fake Program\Actor\Folder\StartActorPanel</Filter>
     </ClInclude>
+    <ClInclude Include="Chap2StartTextActor.h">
+      <Filter>Chapter2.0_Fake Program\Actor\SoundActor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -1810,6 +1816,9 @@
     </Filter>
     <Filter Include="Chapter2.0_Fake Program\Actor\Folder\StartActorPanel">
       <UniqueIdentifier>{c059abb5-4801-46f1-beb5-16e0c363e3ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter2.0_Fake Program\Actor\SoundActor">
+      <UniqueIdentifier>{65ccd26a-9447-49a2-bb55-7c5ee82bbe2b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

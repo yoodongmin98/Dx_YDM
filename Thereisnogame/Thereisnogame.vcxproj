@@ -198,6 +198,7 @@
     <ClInclude Include="Box_Conformation_Q.h" />
     <ClInclude Include="Box_Conformation_Yes.h" />
     <ClInclude Include="C1_BackGround.h" />
+    <ClInclude Include="Chap2StartTextActor.h" />
     <ClInclude Include="ClockBranch.h" />
     <ClInclude Include="ClockDayandNight.h" />
     <ClInclude Include="CoffreFort.h" />
@@ -456,6 +457,7 @@
     <ClCompile Include="Box_Conformation_Q.cpp" />
     <ClCompile Include="Box_Conformation_Yes.cpp" />
     <ClCompile Include="C1_BackGround.cpp" />
+    <ClCompile Include="Chap2StartTextActor.cpp" />
     <ClCompile Include="ClockBranch.cpp" />
     <ClCompile Include="ClockDayandNight.cpp" />
     <ClCompile Include="CoffreFort.cpp" />

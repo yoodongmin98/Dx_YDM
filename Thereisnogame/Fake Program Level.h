@@ -42,6 +42,8 @@ private:
 
 	float StartTime = 0.0f;
 
+	std::shared_ptr<class Chain> ChainPtr = nullptr;
+
 	std::shared_ptr<class StartRedPanel> StartRedPanelPtr = nullptr;
 	std::shared_ptr<class BoxCroix_StartRedPanel> BoxCroix_StartRedPanelPtr = nullptr;
 	std::shared_ptr<class FolderBackGround> FolderBackGroundPtr = nullptr;

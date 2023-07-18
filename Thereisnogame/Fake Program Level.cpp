@@ -30,6 +30,7 @@
 #include "StartRedPanel.h"
 #include "BoxCroix_StartRedPanel.h"
 #include "FolderBackGround.h"
+#include "Chap2StartTextActor.h"
 
 FakeProgramLevel* FakeProgramLevel::FP;
 
@@ -96,6 +97,14 @@ void FakeProgramLevel::Update(float _DeltaTime)
 		{
 			StartRedPanelPtr.get()->Death();
 			FolderBackGroundPtr.get()->Death();
+			static bool ChainCreateBool = true;
+			if (true == ChainCreateBool)
+			{
+				ChainPtr=CreateActor<Chain>();
+				ChainPtr.get()->SetChainLiveTime(6);
+				CreateActor<Chap2StartTextActor>();
+				ChainCreateBool = false;
+			}
 		}
 	}
 }
