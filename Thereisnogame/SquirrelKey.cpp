@@ -8,6 +8,7 @@
 //Actor
 #include "Mouse.h"
 #include "SquirrelKeyMiddle.h"
+#include "LevelStateManager.h"
 
 SquirrelKey::SquirrelKey()
 {
@@ -65,11 +66,11 @@ void SquirrelKey::SoundCheck(float _DeltaTime)
 	if (SquirrelKeyBigCollision->Collision(ActorTypeEnum::LockFolder, ColType::AABBBOX2D, ColType::AABBBOX2D)
 		&& true == Mouse::MainMouse->IsInteractable())
 	{
+		LevelStateManager::MG->SetIsLockFolderTouchTrue();
 		if (false == IsPlay)
 		{
 			Play(Sound, "KeysToBig.wav", 0.1f);
 			IsPlay = true;
 		}
 	}
-	
 }

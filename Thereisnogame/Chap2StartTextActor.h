@@ -16,6 +16,7 @@ public:
 	void SoundAndText(float _DeltaTime);
 	void CallingText(float _DeltaTime);
 	void ClockText(float _DeltaTime);
+	void LockFolderText(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -24,6 +25,7 @@ private:
 	float SoundTime = 0.0f;
 	float CallingTime = 0.0f;
 	float ClockTime = 0.0f;
+	float LockFolderTime = 0.0f;
 	std::shared_ptr<class GameEngineFontRenderer> Font;
 	std::shared_ptr<class GameEngineFontRenderer> Font2;
 	std::shared_ptr<class GameEngineFontRenderer> Font3;
@@ -74,6 +76,13 @@ private:
 	std::shared_ptr<class GameEngineFontRenderer> ClockFont17;
 	std::shared_ptr<class GameEngineFontRenderer> ClockFont18;
 	std::shared_ptr<class GameEngineFontRenderer> ClockFont19;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont20;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont21;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont22;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont23;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont24;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont25;
+	std::shared_ptr<class GameEngineFontRenderer> ClockFont26;
 
 	bool TSDeathBool = true;
 	bool TSDeathBool2 = true;

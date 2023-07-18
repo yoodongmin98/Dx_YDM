@@ -74,6 +74,11 @@ void Chap2StartTextActor::Update(float _DeltaTime)
 		}
 		ClockText(_DeltaTime);
 	}
+
+	if (true == LevelStateManager::MG->GetIsLockFolderTouch())
+	{
+		LockFolderText(_DeltaTime);
+	}
 }
 
 void Chap2StartTextActor::Render(float _Delta)
@@ -456,10 +461,10 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 			Sound = Play(Sound, "Chap02ClockUnlocked02.wav", 0.1f);
 			Chap2Play33 = false;
 		}
-		ClockFont2 = NFontCreate(ClockFont2, "그래도 시스템 시계로 뭘 할 수는 없겠지?", GetTransform(), 2.0f);
+		ClockFont2 = NFontCreate(ClockFont2, "그래도 시스템 시계로 뭘 할 수는 없겠지?", GetTransform(), 2.5f);
 	}
 
-	if (ClockTime > 6.0f)
+	if (ClockTime > 6.5f)
 	{
 		static bool Chap2Play34 = true;
 		if (true == Chap2Play34)
@@ -467,7 +472,7 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 			Sound = Play(Sound, "Chap02ClockUnlocked03.wav", 0.1f);
 			Chap2Play34 = false;
 		}
-		ClockFont3 = NFontCreate(ClockFont3, "또 뭔가 부수지 않으면 좋겠는데...", GetTransform(), 2.0f);
+		ClockFont3 = NFontCreate(ClockFont3, "또 뭔가 부수지 않으면 좋겠는데...", GetTransform(), 2.5f);
 	}
 
 	if (ClockTime > 20.0f)
@@ -635,5 +640,42 @@ void Chap2StartTextActor::ClockText(float _DeltaTime)
 			Chap2Play50 = false;
 		}
 		ClockFont19 = NFontCreate(ClockFont19, "당신의 내면이 이제 무슨 말을 해야할지 모르겠다고 합니다...", GetTransform(), 4.5f);
+	}
+}
+
+void Chap2StartTextActor::LockFolderText(float _DeltaTime)
+{
+	LockFolderTime += _DeltaTime;
+	if (LockFolderTime > 1.0f)
+	{
+		static bool Chap2Play51 = true;
+		if (true == Chap2Play51)
+		{
+			Sound = Play(Sound, "Chap02KeyTooBig01.wav", 0.1f);
+			Chap2Play51 = false;
+		}
+		ClockFont20 = NFontCreate(ClockFont20, "다행스럽게도 열쇠가 너무 크네요!", GetTransform(), 2.5f);
+	}
+
+	if (LockFolderTime > 4.0f)
+	{
+		static bool Chap2Play52 = true;
+		if (true == Chap2Play52)
+		{
+			Sound = Play(Sound, "Chap02KeyTooBig02.wav", 0.1f);
+			Chap2Play52 = false;
+		}
+		ClockFont21 = NFontCreate(ClockFont21, "열쇠를 줄일 수 있는 방법은 없어보이는군요.", GetTransform(), 2.5f);
+	}
+
+	if (LockFolderTime > 7.5f)
+	{
+		static bool Chap2Play53 = true;
+		if (true == Chap2Play53)
+		{
+			Sound = Play(Sound, "Chap02KeyTooBig03.wav", 0.1f);
+			Chap2Play53 = false;
+		}
+		ClockFont22 = NFontCreate(ClockFont22, "어, 아마도요...", GetTransform(), 2.5f);
 	}
 }

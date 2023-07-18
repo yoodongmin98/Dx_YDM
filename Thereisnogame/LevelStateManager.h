@@ -139,6 +139,15 @@ public:
 	{
 		return IsGetTheCup;
 	}
+	//LockFolder¿¡ ¿­¼è ´ê¾Ò³Ä?
+	void SetIsLockFolderTouchTrue()
+	{
+		IsLockFolderTouch = true;
+	}
+	bool GetIsLockFolderTouch()
+	{
+		return IsLockFolderTouch;
+	})
 	//Chapter1----------------------------------------------------------------------------------------------------------
 	// plaque³ª·¹ÀÌ¼Ç ´Ù ³¡³µ³Ä?
 	void SetplaqueNarateTrue()
@@ -434,5 +443,6 @@ private:
 	bool Is18FolderOpen = false;
 	bool IsGetTheCup = false;
 	bool IsClickCalling = false;
+	bool IsLockFolderTouch = false;
 };
 
