@@ -16,6 +16,7 @@
 #include "BackCurtain_Ending.h"
 #include "SoundAndTextActor.h"
 #include "EndingPlayButton.h"
+#include "AlphaCircle.h"
 
 EndingLevel* EndingLevel::EL;
 
@@ -58,13 +59,9 @@ void EndingLevel::Start()
 	CreateActor<SoundAndTextActor>();
 	CreateActor<C1_BackGround>();
 	CreateActor<EndingPlayButton>();
-	//BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
+	BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
 	CreateActor<LevelStateManager>(100);
 	MousePtr = CreateActor<Mouse>();
-
-	
-	
-	
 }
 
 void EndingLevel::Update(float _DeltaTime)
@@ -74,6 +71,14 @@ void EndingLevel::Update(float _DeltaTime)
 	if (LevelTime > 39.0f)
 	{
 		BackCurtain_EndingPtr.get()->CurtainOpen();
+		static bool CreateBoolS = true;
+		if (true == CreateBoolS)
+		{
+			Play(Sound, "CurtainOpen(Start).wav", 0.1f);
+			CreateActor<AlphaCircle>();
+			ChangeBGM("Chap01_MusicB.wav");
+			CreateBoolS = false;
+		}
 	}
 }
 

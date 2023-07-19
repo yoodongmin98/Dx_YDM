@@ -24,6 +24,7 @@ protected:
 
 private:
 	std::shared_ptr<class GameEngineSpriteRenderer> Button;
+	std::shared_ptr<class GameEngineCollision> ButtonCollision;
 	
 	std::shared_ptr<class GameEngineFontRenderer> Font;
 };

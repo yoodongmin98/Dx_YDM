@@ -130,6 +130,73 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		}
 		Font9 = NFontCreate(Font9, "음... 안타깝지만, 막이 내려버렸는데...잠시만요.", GetTransform(), 4.0f);
 	}
+
+	if (SoundTime > 45.0f)
+	{
+		static bool EndPlay10 = true;
+		if (true == EndPlay10)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame4.wav", 0.1f);
+			EndPlay10 = false;
+		}
+		Font10 = NFontCreate(Font10, "유저님, 스위치를 누르면 게임이 시작될 거예요.", GetTransform(), 4.0f);
+	}
+
+	if (SoundTime > 49.5f)
+	{
+		static bool EndPlay11 = true;
+		if (true == EndPlay11)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame5.wav", 0.1f);
+			EndPlay11 = false;
+		}
+		Font11 = NFontCreate(Font11, "우리 게임 말이죠. 제작자님이 만드신 우리 게임요.", GetTransform(), 3.5f);
+	}
+
+	if (SoundTime > 53.5f)
+	{
+		static bool EndPlay12 = true;
+		if (true == EndPlay12)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame6.wav", 0.1f);
+			EndPlay12 = false;
+		}
+		Font12 = NFontCreate(Font12, "근데 근데 근데...", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 56.0f)
+	{
+		static bool EndPlay13 = true;
+		if (true == EndPlay13)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame7.wav", 0.1f);
+			EndPlay13 = false;
+		}
+		Font13 = NFontCreate(Font13, "우리가 지나온 이 모든...", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 58.0f)
+	{
+		static bool EndPlay14 = true;
+		if (true == EndPlay14)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame8.wav", 0.1f);
+			EndPlay14 = false;
+		}
+		Font14 = NFontCreate(Font14, "...험하고 험난한 모험을 겪어 봤으니까 해주는 말인데...", GetTransform(), 4.0f);
+	}
+	
+	if (SoundTime > 63.0f)
+	{
+		static bool EndPlay15 = true;
+		if (true == EndPlay15)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame9.wav", 0.1f);
+			EndPlay15 = false;
+		}
+		Font15 = NFontCreate(Font15, "두 번째 기회를 드리죠.", GetTransform(), 2.0f);
+	}
+	//버튼 올라옴(소리)
 }
 
 
