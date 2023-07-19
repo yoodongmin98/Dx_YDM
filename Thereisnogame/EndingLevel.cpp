@@ -54,7 +54,7 @@ void EndingLevel::Start()
 
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 
-	//CreateActor<SoundAndTextActor>();
+	
 	CreateActor<SoundAndTextActor>();
 	CreateActor<C1_BackGround>();
 	CreateActor<EndingPlayButton>();
@@ -62,7 +62,7 @@ void EndingLevel::Start()
 	CreateActor<LevelStateManager>(100);
 	MousePtr = CreateActor<Mouse>();
 
-	ChangeBGM("End_IntroMusic.wav");
+	
 	
 	
 }
@@ -80,6 +80,12 @@ void EndingLevel::Update(float _DeltaTime)
 void EndingLevel::LevelChangeStart()
 {
 	FEffect->FadeOut();
+	ChangeBGM("End_IntroMusic.wav");
+}
+
+void EndingLevel::LevelChangeEnd()
+{
+	MainBGM.Stop();
 }
 
 void EndingLevel::KeySetting()
