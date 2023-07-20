@@ -39,7 +39,12 @@ void EndingDeleteButton::Update(float _DeltaTime)
 	}
 	if (GetLiveTime() > 24.5f)
 	{
-		Buttons->ChangeAnimation("DeleteButton");
+		static bool AniBool2 = true;
+		if (true == AniBool2)
+		{
+			Buttons->ChangeAnimation("DeleteButton");
+			AniBool2 = false;
+		}
 	}
 }
 

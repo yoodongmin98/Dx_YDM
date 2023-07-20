@@ -37,9 +37,13 @@ void EndingPlayButton::Update(float _DeltaTime)
 	}
 	if (GetLiveTime() > 90.0f)
 	{
-		Button->ChangeAnimation("OpenButton");
+		static bool AniBool1 = true;
+		if (true == AniBool1)
+		{
+			Button->ChangeAnimation("OpenButton");
+			AniBool1 = false;
+		}
 	}
-	float asd = GetLiveTime();
 }
 
 void EndingPlayButton::Render(float _Delta)
