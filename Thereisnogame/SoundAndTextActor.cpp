@@ -7,6 +7,7 @@
 //Actor
 #include "LevelStateManager.h"
 #include "EndingDeleteButton.h"
+#include "PlaySmallArrow.h"
 
 SoundAndTextActor::SoundAndTextActor()
 {
@@ -215,7 +216,7 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		static bool EndPlay17 = true;
 		if (true == EndPlay17)
 		{
-			Sound = Play(Sound, "EndGame_Intro WhatGame10", 0.1f);
+			Sound = Play(Sound, "EndGame_Intro WhatGame10.wav", 0.1f);
 			EndPlay17 = false;
 		}
 		Font16 = NFontCreate(Font16, "이 스위치를 누르면 제 소스 코드를 삭제할 수 있어요...", GetTransform(), 3.0f);
@@ -226,18 +227,18 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		static bool EndPlay18 = true;
 		if (true == EndPlay18)
 		{
-			Sound = Play(Sound, "EndGame_Intro WhatGame11", 0.1f);
+			Sound = Play(Sound, "EndGame_Intro WhatGame11.wav", 0.1f);
 			EndPlay18 = false;
 		}
 		Font17 = NFontCreate(Font17, "...현실로 버그가 탈출하는 일이 없게 막아주는 버튼이죠.", GetTransform(), 4.0f);
 	}
 
-	if (SoundTime > 75.5f)
+	if (SoundTime > 76.0f)
 	{
 		static bool EndPlay19 = true;
 		if (true == EndPlay19)
 		{
-			Sound = Play(Sound, "EndGame_Intro WhatGame12", 0.1f);
+			Sound = Play(Sound, "EndGame_Intro WhatGame12.wav", 0.1f);
 			EndPlay19 = false;
 		}
 		Font18 = NFontCreate(Font18, "이제 선택해줘요...친구.", GetTransform(), 3.0f);
@@ -248,9 +249,40 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		static bool EndPlay20 = true;
 		if (true == EndPlay20)
 		{
-			
-			//작은화살표
+			GetLevel()->CreateActor<PlaySmallArrow>();
 			EndPlay20 = false;
+		}
+	}
+
+	if (SoundTime > 80.0f)
+	{
+		static bool EndPlay21 = true;
+		if (true == EndPlay21)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame13.wav", 0.1f);
+			EndPlay21 = false;
+		}
+		Font19 = NFontCreate(Font19, "게임이냐...", GetTransform(), 1.0f);
+	}
+
+	if (SoundTime > 81.5f)
+	{
+		static bool EndPlay22 = true;
+		if (true == EndPlay22)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame14.wav", 0.1f);
+			EndPlay22 = false;
+		}
+		Font20 = NFontCreate(Font20, "...아니면...", GetTransform(), 1.0f);
+	}
+
+	if (SoundTime > 83.5f)
+	{
+		static bool EndPlay23 = true;
+		if (true == EndPlay23)
+		{
+			//Arrow 5개
+			EndPlay23 = false;
 		}
 	}
 }

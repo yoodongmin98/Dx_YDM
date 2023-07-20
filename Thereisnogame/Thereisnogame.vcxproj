@@ -211,6 +211,7 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="DeleteArrow.h" />
     <ClInclude Include="EndingDeleteButton.h" />
     <ClInclude Include="EndingLevel.h" />
     <ClInclude Include="EndingPlayButton.h" />
@@ -228,6 +229,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="PlaySmallArrow.h" />
     <ClInclude Include="PurpleBox.h" />
     <ClInclude Include="RE_TitleMetal.h" />
     <ClInclude Include="Excla_TitleCube.h" />
@@ -476,6 +478,7 @@
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
+    <ClCompile Include="DeleteArrow.cpp" />
     <ClCompile Include="EndingDeleteButton.cpp" />
     <ClCompile Include="EndingLevel.cpp" />
     <ClCompile Include="EndingLevelSoundLoader.cpp" />
@@ -538,6 +541,7 @@
     <ClCompile Include="Plaque.cpp" />
     <ClCompile Include="Play within a play Level SoundLoader.cpp" />
     <ClCompile Include="Play within a play LevelState.cpp" />
+    <ClCompile Include="PlaySmallArrow.cpp" />
     <ClCompile Include="Private18.cpp" />
     <ClCompile Include="AlphaCircle.cpp" />
     <ClCompile Include="Arrow.cpp" />

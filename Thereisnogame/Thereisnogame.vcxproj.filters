@@ -766,14 +766,20 @@
     <ClCompile Include="SoundAndTextActor.cpp">
       <Filter>Chapter3.0_Ending\Actor\Sound,Text</Filter>
     </ClCompile>
-    <ClCompile Include="BackCurtain_Ending.cpp">
-      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    <ClCompile Include="PlaySmallArrow.cpp">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Arrow</Filter>
     </ClCompile>
-    <ClCompile Include="EndingPlayButton.cpp">
-      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    <ClCompile Include="DeleteArrow.cpp">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Arrow</Filter>
+    </ClCompile>
+    <ClCompile Include="BackCurtain_Ending.cpp">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
     </ClCompile>
     <ClCompile Include="EndingDeleteButton.cpp">
-      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
+    </ClCompile>
+    <ClCompile Include="EndingPlayButton.cpp">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1521,14 +1527,20 @@
     <ClInclude Include="SoundAndTextActor.h">
       <Filter>Chapter3.0_Ending\Actor\Sound,Text</Filter>
     </ClInclude>
-    <ClInclude Include="BackCurtain_Ending.h">
-      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    <ClInclude Include="PlaySmallArrow.h">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Arrow</Filter>
     </ClInclude>
-    <ClInclude Include="EndingPlayButton.h">
-      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    <ClInclude Include="DeleteArrow.h">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Arrow</Filter>
+    </ClInclude>
+    <ClInclude Include="BackCurtain_Ending.h">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
     </ClInclude>
     <ClInclude Include="EndingDeleteButton.h">
-      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingPlayButton.h">
+      <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1858,6 +1870,12 @@
     </Filter>
     <Filter Include="Chapter3.0_Ending\Actor\BackActor">
       <UniqueIdentifier>{8de3e13b-2a35-4457-9b95-4ba0f6694395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter3.0_Ending\Actor\BackActor\Arrow">
+      <UniqueIdentifier>{091b711a-3f0e-4b7e-885c-56fb4e18ee24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chapter3.0_Ending\Actor\BackActor\Inter">
+      <UniqueIdentifier>{4d105072-125f-4a6c-8cf3-7bda4f052076}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
