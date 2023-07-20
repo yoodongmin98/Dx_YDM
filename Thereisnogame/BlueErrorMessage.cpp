@@ -23,10 +23,7 @@ void BlueErrorMessage::Start()
 
 void BlueErrorMessage::Update(float _DeltaTime)
 {
-	if (GetLiveTime() > 4.0f)
-	{
-		GameEngineCore::ChangeLevel("MainMenuLevel");
-	}
+	
 }
 
 void BlueErrorMessage::Render(float _Delta)

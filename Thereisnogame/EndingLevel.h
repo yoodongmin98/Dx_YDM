@@ -34,9 +34,9 @@ protected:
 	void LevelChangeStart() override;
 	void LevelChangeEnd() override;
 private:
-
 	std::shared_ptr<class Mouse> MousePtr = nullptr;
 	std::shared_ptr<class BackCurtain_Ending> BackCurtain_EndingPtr = nullptr;
+	std::shared_ptr<class AlphaCircle> AlphaCirclePtr = nullptr;
 
 	float LevelTime = 0.0f;
 };

@@ -14,7 +14,7 @@ public:
 	SoundAndTextActor& operator=(SoundAndTextActor&& _Other) noexcept = delete;
 
 	void SoundAndText(float _DeltaTime);
-
+	void ActorDeathCheck(float _DeltaTime);
 protected:
 	void Start();
 	void Update(float _Delta) override;
@@ -46,5 +46,11 @@ private:
 	std::shared_ptr<class GameEngineFontRenderer> Font22;
 	std::shared_ptr<class GameEngineFontRenderer> Font23;
 	std::shared_ptr<class GameEngineFontRenderer> Font24;
+	
+	std::shared_ptr<class DeleteArrow> DeleteArrowPtr;
+	std::shared_ptr<class PlaySmallArrow> PlaySmallArrowPtr;
+	std::shared_ptr<class EndingDeleteButton> EndingDeleteButtonPtr;
+
+	float LastTime = 0.0f;
 };
 

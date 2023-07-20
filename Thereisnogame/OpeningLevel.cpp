@@ -45,12 +45,15 @@ void OpeningLevel::Start()
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	
-	CreateActor<BlueErrorMessage>();
+	BlueErrorMessagePtr=CreateActor<BlueErrorMessage>();
 }
 
 void OpeningLevel::Update(float _DeltaTime)
 {
-
+	if (BlueErrorMessagePtr.get()->GetLiveTime() > 4.0f)
+	{
+		GameEngineCore::ChangeLevel("MainMenuLevel");
+	}
 }
 
 void OpeningLevel::LevelChangeStart()

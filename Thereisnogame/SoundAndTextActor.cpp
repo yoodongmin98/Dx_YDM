@@ -9,7 +9,8 @@
 #include "EndingDeleteButton.h"
 #include "PlaySmallArrow.h"
 #include "DeleteArrow.h"
-
+#include "BlueErrorMessage.h"
+#include "EndingLevel.h"
 SoundAndTextActor::SoundAndTextActor()
 {
 }
@@ -26,12 +27,73 @@ void SoundAndTextActor::Start()
 void SoundAndTextActor::Update(float _DeltaTime)
 {
 	SoundAndText(_DeltaTime);
+	ActorDeathCheck(_DeltaTime);
 }
 
 void SoundAndTextActor::Render(float _Delta)
 {
 
 };
+bool SoundAndTextActorDeathBool = true;
+void SoundAndTextActor::ActorDeathCheck(float _DeltaTime)
+{
+	if (true == LevelStateManager::MG->GetIsClickPlayButton())
+	{
+		LastTime += _DeltaTime;
+		if (true == SoundAndTextActorDeathBool)
+		{
+			//Hmm하는 Sound
+			DeleteArrowPtr.get()->Death();
+			PlaySmallArrowPtr.get()->Death();
+			EndingDeleteButtonPtr.get()->Death();
+			SoundAndTextActorDeathBool = false;
+		}
+
+		if (LastTime > 6.0f)
+		{
+			static bool EndPlay28 = true;
+			if (true == EndPlay28)
+			{
+				GetLevel()->CreateActor<BlueErrorMessage>();
+				Sound = Play(Sound, "End_ErrorSound.wav", 0.1f);
+				EndPlay28 = false;
+			}
+		}
+		
+		if (LastTime > 8.0f)
+		{
+			static bool EndPlay29 = true;
+			if (true == EndPlay29)
+			{
+				Sound = Play(Sound, "Vinyl.wav", 0.1f);
+				EndPlay29 = false;
+			}
+		}
+
+		if (LastTime > 9.0f)
+		{
+			static bool EndPlay30 = true;
+			if (true == EndPlay30)
+			{
+				EndingLevel::EL->ChangeBGM("End_Credits_Track_A.wav");
+				Sound = Play(Sound, "EndGame_Intro Last IKnewIt.wav", 0.1f);
+				EndPlay30 = false;
+			}
+			Font24 = NFontCreate(Font24, "하ㅋ! 그럴줄 알았지롱!!", GetTransform(), 1.5f);
+		}
+
+		if (LastTime > 11.0f)
+		{
+			static bool EndPlay31 = true;
+			if (true == EndPlay31)
+			{
+				//커튼닫고(LevelState)
+				//Font만들기
+				EndPlay31 = false;
+			}
+		}
+	}
+}
 
 void SoundAndTextActor::SoundAndText(float _DeltaTime)
 {
@@ -207,7 +269,7 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		if (true == EndPlay16)
 		{
 			Sound = Play(Sound, "End_PanelUp.wav", 0.1f);
-			GetLevel()->CreateActor<EndingDeleteButton>();
+			EndingDeleteButtonPtr=GetLevel()->CreateActor<EndingDeleteButton>();
 			EndPlay16 = false;
 		}
 	}
@@ -250,7 +312,7 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		static bool EndPlay20 = true;
 		if (true == EndPlay20)
 		{
-			GetLevel()->CreateActor<PlaySmallArrow>();
+			PlaySmallArrowPtr=GetLevel()->CreateActor<PlaySmallArrow>();
 			EndPlay20 = false;
 		}
 	}
@@ -282,7 +344,7 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		static bool EndPlay23 = true;
 		if (true == EndPlay23)
 		{
-			GetLevel()->CreateActor<DeleteArrow>();
+			DeleteArrowPtr=GetLevel()->CreateActor<DeleteArrow>();
 			EndPlay23 = false;
 		}
 	}

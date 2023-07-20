@@ -15,7 +15,16 @@ public:
 	LevelStateManager(LevelStateManager&& _Other) noexcept = delete;
 	LevelStateManager& operator=(const LevelStateManager& _Other) = delete;
 	LevelStateManager& operator=(LevelStateManager&& _Other) noexcept = delete;
-
+	//Ending
+	//플레이버튼 눌렀냐?
+	void IsClickPlayButtonTrue()
+	{
+		IsClickPlayButton = true;
+	}
+	bool GetIsClickPlayButton()
+	{
+		return IsClickPlayButton;
+	}
 	//MainMenu
 	//한번 클릭했냐?
 	void SetIsClickMainMenuTrue()
@@ -444,5 +453,8 @@ private:
 	bool IsGetTheCup = false;
 	bool IsClickCalling = false;
 	bool IsLockFolderTouch = false;
+
+	//Ending
+	bool IsClickPlayButton = false;
 };
 

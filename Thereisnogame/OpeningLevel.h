@@ -23,5 +23,6 @@ protected:
 	void Update(float _DeltaTime) override;
 	void LevelChangeStart() override;
 private:
+	std::shared_ptr<class BlueErrorMessage> BlueErrorMessagePtr = nullptr;
 };
 

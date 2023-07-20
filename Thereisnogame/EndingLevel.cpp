@@ -82,10 +82,14 @@ void EndingLevel::Update(float _DeltaTime)
 		if (true == CreateBoolS)
 		{
 			Play(Sound, "CurtainOpen(Start).wav", 0.1f);
-			CreateActor<AlphaCircle>();
+			AlphaCirclePtr=CreateActor<AlphaCircle>();
 			ChangeBGM("Chap01_MusicB.wav");
 			CreateBoolS = false;
 		}
+	}
+	if (true == LevelStateManager::MG->GetIsClickPlayButton())
+	{
+		AlphaCirclePtr->Death();
 	}
 }
 
