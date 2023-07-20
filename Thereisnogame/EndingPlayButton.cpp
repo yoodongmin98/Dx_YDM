@@ -23,7 +23,7 @@ void EndingPlayButton::Start()
 		EndingAnimationImageBool = false;
 	}
 
-	Button = NoChangeAnimationInit(Button, "End_BoutonPlay_Opened01.png", { 259,131 }, float4::Up * 50, "OpenButton", "EndingPlayButton", 4, 0.1f, false);
+	Button = NoChangeAnimationInit(Button, "End_BoutonPlay_Closed1.png", { 259,131 }, {-60,50}, "OpenButton", "EndingPlayButton", 4, 0.1f, false);
 
 	ButtonCollision = CollisionInit(ButtonCollision, { 144,131 }, float4::Up * 50);
 	Font = FontCreate(Font, 30, "PLAY", float4::Up * 170, GetTransform(), 1);
@@ -31,7 +31,7 @@ void EndingPlayButton::Start()
 
 void EndingPlayButton::Update(float _DeltaTime)
 {
-	if (true == ClickCheck(ButtonCollision))
+	if (true == ClickCheck(ButtonCollision)) 
 	{
 		Play(Sound, "KnockGlass.wav", 0.1f);
 	}

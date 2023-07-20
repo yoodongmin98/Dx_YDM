@@ -772,6 +772,9 @@
     <ClCompile Include="EndingPlayButton.cpp">
       <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
     </ClCompile>
+    <ClCompile Include="EndingDeleteButton.cpp">
+      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1522,6 +1525,9 @@
       <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
     </ClInclude>
     <ClInclude Include="EndingPlayButton.h">
+      <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingDeleteButton.h">
       <Filter>Chapter3.0_Ending\Actor\BackActor</Filter>
     </ClInclude>
   </ItemGroup>

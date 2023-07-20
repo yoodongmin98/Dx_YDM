@@ -211,6 +211,7 @@
     <ClInclude Include="Cup_Full.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Decapsuleur.h" />
+    <ClInclude Include="EndingDeleteButton.h" />
     <ClInclude Include="EndingLevel.h" />
     <ClInclude Include="EndingPlayButton.h" />
     <ClInclude Include="FlagChain_Back.h" />
@@ -475,6 +476,7 @@
     <ClCompile Include="Cup_Full.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Decapsuleur.cpp" />
+    <ClCompile Include="EndingDeleteButton.cpp" />
     <ClCompile Include="EndingLevel.cpp" />
     <ClCompile Include="EndingLevelSoundLoader.cpp" />
     <ClCompile Include="EndingPlayButton.cpp" />

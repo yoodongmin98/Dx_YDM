@@ -3,8 +3,10 @@
 //Base
 //PlatForm
 //Core
+#include <GameEngineCore/GameEngineLevel.h>
 //Actor
 #include "LevelStateManager.h"
+#include "EndingDeleteButton.h"
 
 SoundAndTextActor::SoundAndTextActor()
 {
@@ -195,6 +197,17 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 			EndPlay15 = false;
 		}
 		Font15 = NFontCreate(Font15, "두 번째 기회를 드리죠.", GetTransform(), 2.0f);
+	}
+
+	if (SoundTime > 65.5f)
+	{
+		static bool EndPlay16 = true;
+		if (true == EndPlay16)
+		{
+			Sound = Play(Sound, "End_PanelUp.wav", 0.1f);
+			//GetLevel()->CreateActor<EndingDeleteButton>();
+			EndPlay16 = false;
+		}
 	}
 	//버튼 올라옴(소리)
 }
