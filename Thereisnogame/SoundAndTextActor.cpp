@@ -106,7 +106,7 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 			Sound = Play(Sound, "EndGame_Intro ThankyouUser.wav", 0.1f);
 			EndPlay1 = false;
 		}
-		Font = NFontCreate(Font, "유저님. 덕분에 재밌는 경험을 했네요. 감사해요.", GetTransform(), 5.0f);
+		Font = NFontCreate(Font, "유저님. 여러모로 평범하지않은 경험을 주시는군요. 참 감사해요...", GetTransform(), 5.0f);
 	}
 
 	if (SoundTime > 9.5f)
@@ -117,7 +117,7 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 			Sound = Play(Sound, "EndGame_Intro ThankyouUser2.wav", 0.1f);
 			EndPlay2 = false;
 		}
-		Font2 = NFontCreate(Font2, "그 고집 덕분이에요.", GetTransform(), 1.5f);
+		Font2 = NFontCreate(Font2, "그 고집 덕분에요.", GetTransform(), 1.5f);
 	}
 
 	if (SoundTime > 11.5f)
