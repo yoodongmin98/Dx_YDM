@@ -35,6 +35,11 @@ void EndingPlayButton::Update(float _DeltaTime)
 	{
 		Play(Sound, "KnockGlass.wav", 0.1f);
 	}
+	if (GetLiveTime() > 90.0f)
+	{
+		Button->ChangeAnimation("OpenButton");
+	}
+	float asd = GetLiveTime();
 }
 
 void EndingPlayButton::Render(float _Delta)

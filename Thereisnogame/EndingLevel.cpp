@@ -62,13 +62,13 @@ void EndingLevel::Start()
 	CreateActor<SoundAndTextActor>();
 	CreateActor<C1_BackGround>();
 	CreateActor<EndingPlayButton>();
-	//BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
+	BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
 	CreateActor<LevelStateManager>(100);
 	MousePtr = CreateActor<Mouse>();
 
-	//Test
-	CreateActor<EndingDeleteButton>();
-	CreateActor<DeleteArrow>();
+	////Test
+	//CreateActor<EndingDeleteButton>();
+	//CreateActor<DeleteArrow>();
 }
 
 void EndingLevel::Update(float _DeltaTime)

@@ -8,6 +8,7 @@
 #include "LevelStateManager.h"
 #include "EndingDeleteButton.h"
 #include "PlaySmallArrow.h"
+#include "DeleteArrow.h"
 
 SoundAndTextActor::SoundAndTextActor()
 {
@@ -276,13 +277,56 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		Font20 = NFontCreate(Font20, "...아니면...", GetTransform(), 1.0f);
 	}
 
-	if (SoundTime > 83.5f)
+	if (SoundTime > 83.0f)
 	{
 		static bool EndPlay23 = true;
 		if (true == EndPlay23)
 		{
-			//Arrow 5개
+			GetLevel()->CreateActor<DeleteArrow>();
 			EndPlay23 = false;
+		}
+	}
+
+	if (SoundTime > 84.5f)
+	{
+		static bool EndPlay24 = true;
+		if (true == EndPlay24)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame15.wav", 0.1f);
+			EndPlay24 = false;
+		}
+		Font21 = NFontCreate(Font21, "...세상의 안전...", GetTransform(), 1.0f);
+	}
+
+	if (SoundTime > 86.0f)
+	{
+		static bool EndPlay25 = true;
+		if (true == EndPlay25)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame16.wav", 0.1f);
+			EndPlay25 = false;
+		}
+		Font22 = NFontCreate(Font22, "지구 전체의 안전...", GetTransform(), 1.0f);
+	}
+
+	if (SoundTime > 87.0f)
+	{
+		static bool EndPlay26 = true;
+		if (true == EndPlay26)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame17.wav", 0.1f);
+			EndPlay26 = false;
+		}
+		Font23 = NFontCreate(Font23, "아니 범 우주적 안정이냐.", GetTransform(), 2.5f);
+	}
+
+	if (SoundTime > 90.0f)
+	{
+		static bool EndPlay27 = true;
+		if (true == EndPlay27)
+		{
+			Sound = Play(Sound, "End_ButtonOpenCase.wav", 0.1f);
+			EndPlay27 = false;
 		}
 	}
 }

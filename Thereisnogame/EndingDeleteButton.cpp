@@ -37,6 +37,10 @@ void EndingDeleteButton::Update(float _DeltaTime)
 		WoodPanel->GetTransform()->AddLocalPosition({ 0,200 * _DeltaTime ,0 });
 		Buttons->GetTransform()->AddLocalPosition({ 0,200 * _DeltaTime ,0 });
 	}
+	if (GetLiveTime() > 24.5f)
+	{
+		Buttons->ChangeAnimation("DeleteButton");
+	}
 }
 
 void EndingDeleteButton::Render(float _Delta)
