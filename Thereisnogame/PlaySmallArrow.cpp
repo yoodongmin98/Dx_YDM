@@ -2,9 +2,7 @@
 #include "PlaySmallArrow.h"
 //PlatForm
 //Core
-#include <GameEngineCore/GameEngineLevel.h>
-#include <GameEngineCore/GameEngineRenderer.h>
-#include <GameEngineCore/GameEngineSpriteRenderer.h>
+
 
 PlaySmallArrow::PlaySmallArrow()
 {
