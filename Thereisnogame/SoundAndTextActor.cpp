@@ -205,11 +205,54 @@ void SoundAndTextActor::SoundAndText(float _DeltaTime)
 		if (true == EndPlay16)
 		{
 			Sound = Play(Sound, "End_PanelUp.wav", 0.1f);
-			//GetLevel()->CreateActor<EndingDeleteButton>();
+			GetLevel()->CreateActor<EndingDeleteButton>();
 			EndPlay16 = false;
 		}
 	}
-	//버튼 올라옴(소리)
+
+	if (SoundTime > 67.5f)
+	{
+		static bool EndPlay17 = true;
+		if (true == EndPlay17)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame10", 0.1f);
+			EndPlay17 = false;
+		}
+		Font16 = NFontCreate(Font16, "이 스위치를 누르면 제 소스 코드를 삭제할 수 있어요...", GetTransform(), 3.0f);
+	}
+	
+	if (SoundTime > 71.0f)
+	{
+		static bool EndPlay18 = true;
+		if (true == EndPlay18)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame11", 0.1f);
+			EndPlay18 = false;
+		}
+		Font17 = NFontCreate(Font17, "...현실로 버그가 탈출하는 일이 없게 막아주는 버튼이죠.", GetTransform(), 4.0f);
+	}
+
+	if (SoundTime > 75.5f)
+	{
+		static bool EndPlay19 = true;
+		if (true == EndPlay19)
+		{
+			Sound = Play(Sound, "EndGame_Intro WhatGame12", 0.1f);
+			EndPlay19 = false;
+		}
+		Font18 = NFontCreate(Font18, "이제 선택해줘요...친구.", GetTransform(), 3.0f);
+	}
+
+	if (SoundTime > 79.0f)
+	{
+		static bool EndPlay20 = true;
+		if (true == EndPlay20)
+		{
+			
+			//작은화살표
+			EndPlay20 = false;
+		}
+	}
 }
 
 

@@ -63,9 +63,6 @@ void EndingLevel::Start()
 	//BackCurtain_EndingPtr=CreateActor<BackCurtain_Ending>();
 	CreateActor<LevelStateManager>(100);
 	MousePtr = CreateActor<Mouse>();
-
-	//Test
-	CreateActor<EndingDeleteButton>();
 }
 
 void EndingLevel::Update(float _DeltaTime)
