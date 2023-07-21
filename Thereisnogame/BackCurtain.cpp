@@ -32,6 +32,7 @@ void BackCurtain::Start()
 	RightCurtain->GetTransform()->SetLocalScale({ 708.0f, 720.0f,1.0f });
 	RightCurtain->GetTransform()->SetLocalPosition({ 290.0f,0.0f,0.0f });
 	RightCurtain->SetFlipX();
+	
 }
 
 void BackCurtain::Update(float _DeltaTime)

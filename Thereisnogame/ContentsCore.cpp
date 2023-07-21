@@ -34,6 +34,7 @@ void ContentsCore::ContentsResourcesCreate()
 	}
 	ResourceInit("FadeShader.hlsl", "Fade");
 	ResourceInit("DebugMeshRender.hlsl", "Meshs");
+	ResourceInit("OldTVShader.hlsl", "OldTV");
 }
 
 void ContentsCore::GameStart() 

@@ -1,7 +1,7 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
 #include "G_ActorBase.h"
-
+#include "DisTortion.h"
 // Ό³Έν :
 class BackCurtain : public G_ActorBase
 {
@@ -19,6 +19,8 @@ public:
 
 	void CurtainOpen();
 	void CurtainClose();
+
+
 	
 protected:
 	void Start();

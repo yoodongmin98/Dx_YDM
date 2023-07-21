@@ -781,6 +781,9 @@
     <ClCompile Include="EndingPlayButton.cpp">
       <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
     </ClCompile>
+    <ClCompile Include="DisTortion.cpp">
+      <Filter>Actor Base\Effect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuLevel.h">
@@ -1541,6 +1544,9 @@
     </ClInclude>
     <ClInclude Include="EndingPlayButton.h">
       <Filter>Chapter3.0_Ending\Actor\BackActor\Inter</Filter>
+    </ClInclude>
+    <ClInclude Include="DisTortion.h">
+      <Filter>Actor Base\Effect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

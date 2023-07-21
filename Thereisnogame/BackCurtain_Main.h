@@ -1,6 +1,7 @@
 #pragma once
 #include <GameEngineCore/GameEngineActor.h>
 #include "G_ActorBase.h"
+#include "DisTortion.h"
 
 // Ό³Έν :
 class BackCurtain_Main : public G_ActorBase
@@ -16,7 +17,7 @@ public:
 	BackCurtain_Main& operator=(const BackCurtain_Main& _Other) = delete;
 	BackCurtain_Main& operator=(BackCurtain_Main&& _Other) noexcept = delete;
 
-
+	std::shared_ptr<class DisTortion> DisTortionEffect;
 	void CurtainOpen();
 	void CurtainClose();
 
@@ -27,8 +28,8 @@ protected:
 
 
 private:
-	std::shared_ptr<class GameEngineSpriteRenderer> LeftCurtain;
-	std::shared_ptr<class GameEngineSpriteRenderer> RightCurtain;
+	std::shared_ptr<class GameEngineUIRenderer> LeftCurtain;
+	std::shared_ptr<class GameEngineUIRenderer> RightCurtain;
 
 };
 

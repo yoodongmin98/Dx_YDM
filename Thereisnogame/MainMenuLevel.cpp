@@ -89,10 +89,13 @@ void MainMenuLevel::Start()
 
 	GetMainCamera()->SetProjectionType(CameraType::Orthogonal);
 	GetMainCamera()->GetTransform()->SetLocalPosition({ 0, 0, -1000.0f });
+
+
+
 	FEffect = GetLastTarget()->CreateEffect<FadeEffect>();
 	{
 		CreateActor<LevelStateManager>();
-		CreateActor<BackCurtain_Main>();
+		CreateActor<BackCurtain_Main>(-1);
 		PanelContinuePtr = CreateActor<Panel_Continue>();
 		PanelBackPtr=CreateActor<Panel_Back>();
 		CreateActor<AlphaCircle>();

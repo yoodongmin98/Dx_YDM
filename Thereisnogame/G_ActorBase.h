@@ -4,6 +4,7 @@
 #include <GameEngineCore/GameEngineCollision.h>
 #include <GameEnginePlatform/GameEngineSound.h>
 #include <GameEngineCore/GameEngineFontRenderer.h>
+#include <GameEngineCore/GameEngineUIRenderer.h>
 
 
 class G_RigidBody;
@@ -123,6 +124,12 @@ public:
 		float _Time);
 	
 	GameEngineSoundPlayer Sound;
+
+	std::shared_ptr<GameEngineUIRenderer> UIInit(
+		std::shared_ptr<GameEngineUIRenderer> _Render,
+		const std::string_view& _ImageName,
+		float4 _Scale,
+		float4 _Position);
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;

@@ -224,6 +224,7 @@
     <ClInclude Include="ME_TitleMetal.h" />
     <ClInclude Include="M_TitleMetal.h" />
     <ClInclude Include="N_TitleMetal.h" />
+    <ClInclude Include="DisTortion.h" />
     <ClInclude Include="O_TitleMetal.h" />
     <ClInclude Include="PixelBook.h">
       <SubType>
@@ -521,6 +522,7 @@
     <ClCompile Include="Nut_Open.cpp" />
     <ClCompile Include="N_TitleCube.cpp" />
     <ClCompile Include="N_TitleMetal.cpp" />
+    <ClCompile Include="DisTortion.cpp" />
     <ClCompile Include="OpeningLevel.cpp" />
     <ClCompile Include="O_TitleCube.cpp" />
     <ClCompile Include="O_TitleMetal.cpp" />

@@ -18,7 +18,7 @@ void GameEngineLevel::LevelCameraInit()
 {
 	MainCamera = CreateNewCamera(0);
 
-	std::shared_ptr<GameEngineCamera> UICamera = CreateNewCamera(100);
+	std::shared_ptr<GameEngineCamera> UICamera = CreateNewCamera(-1);
 	UICamera->SetProjectionType(CameraType::Orthogonal);
 
 	LastTarget = GameEngineRenderTarget::Create(DXGI_FORMAT::DXGI_FORMAT_R32G32B32A32_FLOAT, GameEngineWindow::GetScreenSize(), float4::Null);

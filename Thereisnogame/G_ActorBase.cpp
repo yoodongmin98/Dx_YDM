@@ -15,6 +15,7 @@
 #include <GameEngineCore/GameEngineActor.h>
 #include <GameEngineCore/GameEngineLevel.h>
 #include <GameEngineCore/GameEngineFontRenderer.h>
+#include <GameEngineCore/GameEngineUIRenderer.h>
 
 
 //StaticActor
@@ -79,6 +80,20 @@ std::shared_ptr<GameEngineSpriteRenderer> G_ActorBase::Init(
 	float4 _Position)
 {
 	_Render = CreateComponent<GameEngineSpriteRenderer>(ActorTypeEnum::BackActor);
+	_Render->SetScaleToTexture(_ImageName);
+	_Render->GetTransform()->SetLocalScale(_Scale);
+	_Render->GetTransform()->SetLocalPosition(_Position);
+
+	return _Render;
+}
+
+std::shared_ptr<GameEngineUIRenderer> G_ActorBase::UIInit(
+	std::shared_ptr<GameEngineUIRenderer> _Render,
+	const std::string_view& _ImageName,
+	float4 _Scale,
+	float4 _Position)
+{
+	_Render = CreateComponent<GameEngineUIRenderer>(ActorTypeEnum::BackActor);
 	_Render->SetScaleToTexture(_ImageName);
 	_Render->GetTransform()->SetLocalScale(_Scale);
 	_Render->GetTransform()->SetLocalPosition(_Position);
