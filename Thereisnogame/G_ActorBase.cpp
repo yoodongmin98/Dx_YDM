@@ -409,7 +409,6 @@ std::shared_ptr<GameEngineFontRenderer> G_ActorBase::EndingFontCreate(std::share
 		_FontRender->SetColor(float4::White);
 		_FontRender->SetText(_Text);
 	}
-	_FontRender->GetTransform()->SetWorldPosition(float4{ 0,0,0 });
 
 	if (_FontRender->GetLiveTime() > _Time)
 	{
