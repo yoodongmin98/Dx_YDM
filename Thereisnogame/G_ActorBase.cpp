@@ -393,3 +393,27 @@ std::shared_ptr<GameEngineFontRenderer> G_ActorBase::NFontCreate(std::shared_ptr
 	}
 	return _FontRender;
 }
+
+std::shared_ptr<GameEngineFontRenderer> G_ActorBase::EndingFontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender,
+	const std::string_view _Text,
+	GameEngineTransform* _Transform,
+	float _Time)
+{
+	if (nullptr == _FontRender)
+	{
+		_FontRender = CreateComponent<GameEngineFontRenderer>(ActorTypeEnum::Font);
+		_FontRender->GetTransform()->SetParent(_Transform);
+		_FontRender->SetFont(Font);
+		_FontRender->SetFontFlag(FW1_CENTER);
+		_FontRender->SetScale(45);
+		_FontRender->SetColor(float4::White);
+		_FontRender->SetText(_Text);
+	}
+	_FontRender->GetTransform()->SetWorldPosition(float4{ 0,0,0 });
+
+	if (_FontRender->GetLiveTime() > _Time)
+	{
+		_FontRender->Death();
+	}
+	return _FontRender;
+}

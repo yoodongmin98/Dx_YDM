@@ -77,7 +77,18 @@ void EndingLevel::Update(float _DeltaTime)
 	LevelTime += _DeltaTime;
 	if (LevelTime > 39.0f)
 	{
-		BackCurtain_EndingPtr.get()->CurtainOpen();
+		if (false == LevelStateManager::MG->GetIsCloseCurtain())
+		{
+			BackCurtain_EndingPtr.get()->CurtainOpen();
+		}
+		else if(true== LevelStateManager::MG->GetIsCloseCurtain())
+		{
+			CurtainTime += _DeltaTime;
+			if (CurtainTime > 0.7f)
+			{
+				BackCurtain_EndingPtr.get()->CurtainClose();
+			}
+		}
 		static bool CreateBoolS = true;
 		if (true == CreateBoolS)
 		{

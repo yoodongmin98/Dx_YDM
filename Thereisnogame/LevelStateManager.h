@@ -25,6 +25,15 @@ public:
 	{
 		return IsClickPlayButton;
 	}
+	//커튼 닫아야하냐?
+	void IsCloseCurtainTrue()
+	{
+		IsCloseCurtain = true;
+	}
+	bool GetIsCloseCurtain()
+	{
+		return IsCloseCurtain;
+	}
 	//MainMenu
 	//한번 클릭했냐?
 	void SetIsClickMainMenuTrue()
@@ -456,5 +465,6 @@ private:
 
 	//Ending
 	bool IsClickPlayButton = false;
+	bool IsCloseCurtain = false;
 };
 

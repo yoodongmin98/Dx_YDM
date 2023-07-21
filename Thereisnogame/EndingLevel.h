@@ -39,5 +39,6 @@ private:
 	std::shared_ptr<class AlphaCircle> AlphaCirclePtr = nullptr;
 
 	float LevelTime = 0.0f;
+	float CurtainTime = 0.0f;
 };
 

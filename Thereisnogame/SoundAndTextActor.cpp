@@ -1,5 +1,6 @@
 #include "PrecompileHeader.h"
 #include "SoundAndTextActor.h"
+#include "ActorTypeEnum.h"
 //Base
 //PlatForm
 //Core
@@ -88,9 +89,25 @@ void SoundAndTextActor::ActorDeathCheck(float _DeltaTime)
 			if (true == EndPlay31)
 			{
 				//커튼닫고(LevelState)
-				//Font만들기
+				LevelStateManager::MG->IsCloseCurtainTrue();
 				EndPlay31 = false;
 			}
+			Font24 = EndingFontCreate(Font24, "플레이 해주셔서 감사합니다.", GetTransform(), 2.3f);
+		}
+
+		if (LastTime > 12.5f)
+		{
+			Font25 = EndingFontCreate(Font25, "이제 프로그램을 종료해주셔도 됩니다", GetTransform(), 2.8f);
+		}
+
+		if (LastTime > 15.5f)
+		{
+			Font26 = EndingFontCreate(Font26, "그리고 게임을 플레이 해주세요", GetTransform(), 2.8f);
+		}
+
+		if (LastTime > 18.5f)
+		{
+			Font27 = EndingFontCreate(Font27, "여태까지는 게임이 아니었거든요", GetTransform(), 2.8f);
 		}
 	}
 }

@@ -117,7 +117,11 @@ public:
 		GameEngineTransform* _Transform,
 		float _Time);
 
-
+	std::shared_ptr<GameEngineFontRenderer> EndingFontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender,
+		const std::string_view _Text,
+		GameEngineTransform* _Transform,
+		float _Time);
+	
 	GameEngineSoundPlayer Sound;
 protected:
 	void Start() override;
