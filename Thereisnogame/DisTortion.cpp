@@ -32,8 +32,8 @@ void DisTortion::Effect(GameEngineRenderTarget* _Target, float _DeltaTime)
         OldData.Mouse.z = GameEngineInput::IsPress("EngineMouseLeft");
         OldData.Mouse.w = GameEngineInput::IsPress("EngineMouseLeft");
 
-        OldData.Time.x += _DeltaTime;
-        OldData.Time.y = _DeltaTime;
+        OldData.Time.x += _DeltaTime*0.5f;
+        OldData.Time.y = _DeltaTime*0.5f;
 
        ResultTarget->Clear();
        OldUnit->ShaderResHelper.SetTexture("DiffuseTex", _Target->GetTexture(0));
