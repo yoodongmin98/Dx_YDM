@@ -434,3 +434,29 @@ std::shared_ptr<GameEngineFontRenderer> G_ActorBase::EndingFontCreate(std::share
 	}
 	return _FontRender;
 }
+
+std::shared_ptr<GameEngineFontRenderer> G_ActorBase::CreditFontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender,
+	const std::string_view _Text,
+	GameEngineTransform* _Transform,
+	float _YPos,
+	float _FontScale)
+{
+	if (nullptr == _FontRender)
+	{
+		_FontRender = CreateComponent<GameEngineFontRenderer>(ActorTypeEnum::Font);
+		_FontRender->GetTransform()->SetParent(_Transform);
+		_FontRender->SetFont(Font);
+		_FontRender->SetFontFlag(FW1_CENTER);
+		_FontRender->SetScale(_FontScale);
+		_FontRender->SetColor(float4::White); 
+		_FontRender->SetText(_Text);
+		_FontRender->GetTransform()->SetWorldPosition({0,_YPos,0});
+	}
+
+	float Times = GameEngineTime::GlobalTime.GetDeltaTime();
+	if (_FontRender->GetLiveTime() > 2.0f)
+	{
+		_FontRender->GetTransform()->AddLocalPosition({ 0,70 * Times,0 });
+	}
+	return _FontRender;
+}

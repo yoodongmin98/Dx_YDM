@@ -130,6 +130,13 @@ public:
 		const std::string_view& _ImageName,
 		float4 _Scale,
 		float4 _Position);
+
+	std::shared_ptr<GameEngineFontRenderer> CreditFontCreate(std::shared_ptr<GameEngineFontRenderer> _FontRender,
+		const std::string_view _Text,
+		GameEngineTransform* _Transform,
+		float _YPos,
+		float _FontScale);
+
 protected:
 	void Start() override;
 	void Update(float _DeltaTime) override;
