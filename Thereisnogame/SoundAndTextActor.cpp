@@ -92,7 +92,7 @@ void SoundAndTextActor::ActorDeathCheck(float _DeltaTime)
 				LevelStateManager::MG->IsCloseCurtainTrue();
 				EndPlay31 = false;
 			}
-			Font24 = EndingFontCreate(Font24, "플레이 해주셔서 감사합니다.", GetTransform(), 2.3f);
+			Font24 = EndingFontCreate(Font24, "시청 해주셔서 감사합니다.", GetTransform(), 2.3f);
 		}
 
 		if (LastTime > 12.5f)
@@ -109,11 +109,47 @@ void SoundAndTextActor::ActorDeathCheck(float _DeltaTime)
 		{
 			Font27 = EndingFontCreate(Font27, "여태까지는 게임이 아니었거든요", GetTransform(), 2.8f);
 		}
+
+		if (LastTime > 21.5f)
+		{
+			Font28 = FontCreate(Font28, 35, "게임 아닌 것 제작사", float4::Zero, GetTransform(), 2);
+			Font29 = FontCreate(Font29, 30, "DRAW ME A PIXEL", float4::Zero, GetTransform(), 2);
+			Font30 = FontCreate(Font30, 35, "각본 및 감독", float4::Zero, GetTransform(), 2);
+			Font31 = FontCreate(Font31, 30, "일단 나는 아님", float4::Zero, GetTransform(), 2);
+			Font32 = FontCreate(Font32, 35, "코딩 및 스크립팅\n유동민", float4::Zero, GetTransform(), 2);
+			Font33 = FontCreate(Font33, 30, "유동민", float4::Zero, GetTransform(), 2);
+			Font34 = FontCreate(Font34, 35, "음향 효과 및 추가 음악\n유동민", float4::Zero, GetTransform(), 2);
+			Font35 = FontCreate(Font35, 30, "유동민", float4::Zero, GetTransform(), 2);
+			Font36 = FontCreate(Font36, 35, "특히 감사한분", float4::Zero, GetTransform(), 2);
+			Font37 = FontCreate(Font37, 30, "유저, 당신\n우리 가족\n플레이 테스터 및 만인의 인류들", float4::Zero, GetTransform(), 2);
+			Font38 = FontCreate(Font38, 30, "이 게임 아닌 것에서 그 어떤 프로그램도 다치지 않았습니다.", float4::Zero, GetTransform(), 2);
+
+
+			/*Font28->GetTransform()->AddLocalPosition(0,50,0)*/
+		}
 	}
 }
 
 void SoundAndTextActor::SoundAndText(float _DeltaTime)
 {
+	Font28 = FontCreate(Font28, 35, "게임 아닌 것 제작사", float4::Zero, GetTransform(), 2);
+	Font29 = FontCreate(Font29, 30, "DRAW ME A PIXEL", {0,-50, 0}, GetTransform(), 2);
+	Font30 = FontCreate(Font30, 35, "각본 및 감독", {0,-300,-0}, GetTransform(), 2);
+	Font31 = FontCreate(Font31, 30, "일단 나는 아님", {0,-350,0}, GetTransform(), 2);
+	Font32 = FontCreate(Font32, 35, "코딩 및 스크립팅\n유동민", float4::Zero, GetTransform(), 2);
+	Font33 = FontCreate(Font33, 30, "유동민", float4::Zero, GetTransform(), 2);
+	Font34 = FontCreate(Font34, 35, "음향 효과 및 추가 음악\n유동민", float4::Zero, GetTransform(), 2);
+	Font35 = FontCreate(Font35, 30, "유동민", float4::Zero, GetTransform(), 2);
+	Font36 = FontCreate(Font36, 35, "특히 감사한분", float4::Zero, GetTransform(), 2);
+	Font37 = FontCreate(Font37, 30, "유저, 당신\n우리 가족\n플레이 테스터 및 만인의 인류들", float4::Zero, GetTransform(), 2);
+	Font38 = FontCreate(Font38, 30, "이 게임 아닌 것에서 그 어떤 프로그램도 다치지 않았습니다.", float4::Zero, GetTransform(), 2);
+
+
+	Font28->GetTransform()->AddLocalPosition({ 0, 50* _DeltaTime, 0 });
+	Font29->GetTransform()->AddLocalPosition({ 0, 50 * _DeltaTime, 0 });
+	Font30->GetTransform()->AddLocalPosition({ 0, 50 * _DeltaTime, 0 });
+	Font31->GetTransform()->AddLocalPosition({ 0, 50 * _DeltaTime, 0 });
+
 	SoundTime += _DeltaTime;
 	if (SoundTime > 4.0f)
 	{

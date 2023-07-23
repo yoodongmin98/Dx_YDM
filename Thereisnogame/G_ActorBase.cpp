@@ -366,20 +366,23 @@ std::shared_ptr<GameEngineFontRenderer> G_ActorBase::FontCreate(std::shared_ptr<
 	GameEngineTransform* _Transform,
 	int _Index)
 {
-	_FontRender = CreateComponent<GameEngineFontRenderer>();
-	_FontRender->GetTransform()->SetParent(_Transform);
-	_FontRender->SetFont(Font);
-	_FontRender->SetFontFlag(FW1_CENTER);
-	_FontRender->SetScale(_Scale);
-	_FontRender->SetColor(float4::White);
-	_FontRender->SetText(_Text);
-	if (1 == _Index)
+	if (nullptr == _FontRender)
 	{
-		_FontRender->GetTransform()->SetLocalPosition(_Position);
-	}
-	else
-	{
-		_FontRender->GetTransform()->SetWorldPosition(_Position);
+		_FontRender = CreateComponent<GameEngineFontRenderer>();
+		_FontRender->GetTransform()->SetParent(_Transform);
+		_FontRender->SetFont(Font);
+		_FontRender->SetFontFlag(FW1_CENTER);
+		_FontRender->SetScale(_Scale);
+		_FontRender->SetColor(float4::White);
+		_FontRender->SetText(_Text);
+		if (1 == _Index)
+		{
+			_FontRender->GetTransform()->SetLocalPosition(_Position);
+		}
+		else
+		{
+			_FontRender->GetTransform()->SetWorldPosition(_Position);
+		}
 	}
 	return _FontRender;
 }

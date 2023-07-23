@@ -49,6 +49,18 @@ private:
 	std::shared_ptr<class GameEngineFontRenderer> Font25;
 	std::shared_ptr<class GameEngineFontRenderer> Font26;
 	std::shared_ptr<class GameEngineFontRenderer> Font27;
+	std::shared_ptr<class GameEngineFontRenderer> Font28;
+	std::shared_ptr<class GameEngineFontRenderer> Font29;
+	std::shared_ptr<class GameEngineFontRenderer> Font30;
+	std::shared_ptr<class GameEngineFontRenderer> Font31;
+	std::shared_ptr<class GameEngineFontRenderer> Font32;
+	std::shared_ptr<class GameEngineFontRenderer> Font33;
+	std::shared_ptr<class GameEngineFontRenderer> Font34;
+	std::shared_ptr<class GameEngineFontRenderer> Font35;
+	std::shared_ptr<class GameEngineFontRenderer> Font36;
+	std::shared_ptr<class GameEngineFontRenderer> Font37;
+	std::shared_ptr<class GameEngineFontRenderer> Font38;
+
 	
 	std::shared_ptr<class DeleteArrow> DeleteArrowPtr;
 	std::shared_ptr<class PlaySmallArrow> PlaySmallArrowPtr;

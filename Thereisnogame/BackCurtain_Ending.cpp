@@ -60,11 +60,11 @@ void BackCurtain_Ending::CurtainOpen()
 void BackCurtain_Ending::CurtainClose()
 {
 	float Times = GameEngineTime::GlobalTime.GetDeltaTime() * 200;
-	if (LeftCurtain->GetTransform()->GetLocalPosition().x < -290.0f)
+	if (LeftCurtain->GetTransform()->GetLocalPosition().x < -310.0f)
 	{
 		LeftCurtain->GetTransform()->AddLocalPosition({ 15.0f * Times,0,0 });
 	}
-	if (RightCurtain->GetTransform()->GetLocalPosition().x > 290.0f)
+	if (RightCurtain->GetTransform()->GetLocalPosition().x > 310.0f)
 	{
 		RightCurtain->GetTransform()->AddLocalPosition({ -15.0f * Times,0,0 });
 	}
